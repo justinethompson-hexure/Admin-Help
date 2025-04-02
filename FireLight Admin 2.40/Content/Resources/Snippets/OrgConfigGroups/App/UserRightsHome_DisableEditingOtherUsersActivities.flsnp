@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <strong>Disable Editing Other Users' Activities</strong> checkbox to block the logged in user from editing activities owned by other users. The user is also unable to save the activity, send client fill and sign requests, and perform activity processes, such as locking, unlocking, checking out, and submitting activities. When the read-only access user views the case, any changes to data items that were initiated by a rule being triggered are not saved. When Disable Editing Other Users' Activities is selected and the Enable All Activities User Share option is selected, the user can only have Read Only access to shared activities.</body>
+</html>

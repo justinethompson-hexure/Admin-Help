@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Replace Product list is available only when there is a value in the End field (product expiration date) and a selected Time Zone for the existing product. In the <b class="Bold">Replace Product</b> list, select a  product (from the same line of business) to replace the existing product. If no other product exists for the same line of business, the Replace Product list is blank. On the Sales Agreement for the replacement product, add a Start date for the day following the expiration date of the expiring product and select the same Time Zone as for the expiring product. This will switch an active application over to the new product on the expiration date of the existing product. The user is given a notification that due to expiration of the product, the application is switched to the new product.</body>
+</html>

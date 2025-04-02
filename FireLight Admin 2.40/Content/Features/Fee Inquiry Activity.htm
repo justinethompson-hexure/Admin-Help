@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Setup and usage instructions for the Fee Inquiry activity, which allows users to query the selected product fee values and display them in a dynamic fee worksheet. " />
+    </head>
+    <body>
+        <h1><a name="Top"></a>Fee Inquiry Activity</h1>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Fee Inquiry Activity Feature</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>The fee repository <em>queryfee</em> rule and repository manager are enhanced to support querying fees out of the repository to fill a blank fee worksheet.  This is a new option that is an alternative to querying fees based on a predefined PDF that is tagged with data items for each rider type.  The new query option uses a number attribute (number=”1” for the first fee, “2” for the second fee, etc.) to pull the nth fee in the list and put it in the worksheet.</p>
+                        <p>The Fee Inquiry activity type allows users with access to the Fee Inquiry activity type to query the selected product fee values and display them in a dynamic fee worksheet.  This activity type is available via SSO and through manual selection of the Fee Inquiry activity.  The fee inquiry activity is a one-time view into the fees for the selected product.  The Fee Inquiry is not saved and will not be available in Recent History or All Applications.  The only action available for this inquiry is Print/download.  There are no other actions available, including save, signatures, review, send to client, or submit. The fees can now be pulled based on the order of the data in the PPfA and do not require a static placeholder in the PDF.  Only the fees that are in the PPfA for the selected product are displayed, which creates a more user-friendly fee display.  To do this, the enhancement added a fee attribute called number (number="1" for the first fee, "2" for the second fee, etc.).  The Fees and Expense License or DOL License is required to support the Fee Inquiry activity.  If you are already licensed for the repository, there is not an additional license and there are no transaction fees to use the inquiry. If you are not licensed, please contact your Strategic Account Manager for an addendum to your contract to support the repository. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">FireLight<sup>®</sup> Setup</p>
+                        <ol>
+                            <li>
+                                <p>The Fees and Expense License or DOL License is required to support the new transaction.  If you are already licensed for the repository, there is not an additional license and there are no transaction fees to use the inquiry. If you are not licensed, please contact your Strategic Account Manager for an addendum to your contract to support the repository.</p>
+                            </li>
+                            <li>
+                                <p>Clients can utilize a SSO with 1241 Transaction Type to launch directly into the jurisdiction and product selection for the Fee Inquiry.  In the post-over, add the transaction type 1241 (OLI_TRANS_TRNFEEEXPENSE).  This will bring the user to the jurisdiction and product selection for the Fee Inquiry.  Additionally, clients can include the jurisdiction (optional) and the product type (CUSIP ID) (optional) to the XML request to post over into the Fee Worksheet for the pre-filled product and jurisdiction.</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <ol>
+                            <li>Designer/<MadCap:xref href="../Design/Form Library/Form Library.htm" alt="Form Library">Form Library</MadCap:xref> page: upload the fee inquiry form to be used with the Fee Inquiry transaction. Use the FireLight pretagged form with rules and use the copy fields and rules to finish the form setup. <MadCap:conditionalText MadCap:conditions="General.Online">Click this <a href="../Resources/DesignDocs/161212-FeeInquiryTransactionDesignApproach.pdf" target="_blank" title="Design Document with Sample Queryfee Rules" alt="CMR 161212-2">CMR 161212-2</a> link to  open the design document that contains sample <em>queryfee</em> rules. </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online">Click this <a href="../Resources/DesignDocs/161212-VAFeeInquiry-Sample.pdf" target="_blank" title="Sample Fee Inquiry Form" alt="Sample Fee Inquiry Form">Sample Form</a> link to open a sample form with the tags and rules. </MadCap:conditionalText>The query rules have been enhanced to support a dynamic form pulling all of the fees in the PPfA and CST in the order of the PPfA and not a pretagged static form.  (Please note, clients may elect to have a Fee Inquiry form per product type to eliminate sections that do not apply.  For example, a FA will not need a fund section.)</li>
+                            <li>Product Configuration/<MadCap:xref href="../Product Configuration/Activities.htm" alt="Activities">Activities</MadCap:xref> page: select the <b class="Bold">Fee Inquiry</b> activity. Ensure <b class="Bold">ACORD Type</b> is set to <b class="Bold">Fee Inquiry (1241)</b>. Update the settings for your organization Update the settings for your organization and click <b class="Bold">Save Activity</b>. </li>
+                            <li>
+                                <p>Product Configuration/<MadCap:xref href="../Product Configuration/Products.htm" alt="Products">Products</MadCap:xref> page: select an existing product.  Be sure the CUSIP and Carrier code are defined in the product and match what is loaded in the Fees Profile.</p>
+                            </li>
+                            <li>
+                                <p>Product Configuration/<MadCap:xref href="../Product Configuration/Packages.htm" alt="Packages">Packages</MadCap:xref> page: add a new maintenance service package. In <b>ACORD Type</b>, select <b>Fee Inquiry (1241)</b> and set the form inclusion option to <b>Required</b>. Add the fee inquiry form to the package. (Please note, if clients have a Fee Inquiry form per product type, you will need to correctly associate your packages to the selling agreements.)</p>
+                            </li>
+                            <li>Product Configuration/<MadCap:xref href="../Product Configuration/SalesAgreements.htm" alt="Sales Agreements">Sales Agreements</MadCap:xref> page: add the Fee Inquiry package to the sales agreement for the applicable products.</li>
+                            <li>
+                                <p>Organization Configuration/Groups page, <b class="Bold">Activity Access</b> tab: select the <b>Fee Inquiry</b> checkbox for each role code that will have access to the Fee Inquiry transaction. On the <b class="Bold">Product Access</b> tab, select the applicable product checkboxes.</p>
+                            </li>
+                            <li>
+                                <p>Carriers will have to load the Fees and Expenses into the repository.  See <MadCap:xref href="Fees, Expenses and Commissions Repository.htm" alt="Fees, Expenses and Commissions Repository">Fees, Expenses and Commissions Repository</MadCap:xref> for details on adding fees to the repository.</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <ol>
+                            <li>
+                                <p>Enter FireLight through either a direct login or one of the external services (SSO, New Business, or Alt New Business).</p>
+                                <p>Direct Login</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>Click the <b>New Application</b> button and click <b>Fee Inquiry</b> from the drop-down list.</li>
+                                    <li>
+                                        <p>Select the Jurisdiction and the Product Type to create a Fee Inquiry transaction. </p>
+                                        <p><b>NOTE:</b> The application name dialog does not exist for fee inquiry transactions. </p>
+                                    </li>
+                                </ol>
+                                <p>External Login</p>
+                                <p class="Indent">From the external login, FireLight launches into the edit transaction page or the jurisdiction and product selection page.</p>
+                                <p class="Indent">If the incoming SSO request contains the transaction type 1241 (OLI_TRANS_TRNFEEEXPENSE) and the jurisdiction and the product type (CUSIP ID) are empty, the user is brought to the jurisdiction and product selection for the Fee Inquiry.  Additionally, clients can include the jurisdiction (optional) and the product type (CUSIP ID) (optional) to the XML request to post over into the Fee Worksheet for the pre-filled product and jurisdiction.</p>
+                            </li>
+                            <li>
+                                <p>Click the <b>Display Print PDF</b> button to view or print the fee inquiry form.</p>
+                            </li>
+                        </ol>
+                        <p><b>NOTE:</b> In Fee Inquiry transactions:</p>
+                        <ul>
+                            <li> The Display Print PDF button replaces the Other Actions menu.</li>
+                            <li> The Save button is removed and you are not prompted to save when leaving the fee inquiry.</li>
+                            <li>The fee inquiry transaction does not display in Recent Applications on the Home page or on the All Applications page.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help: </p>
+                        <p class="Indent">Design Documents:  <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 161212 </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/DesignDocs/161212-FeeInquiryDesignApproach.pdf" target="_blank" title="CMR 161212" alt="CMR 161212">CMR 161212</a> with Fee Inquiry transaction information and <a href="../Resources/DesignDocs/161212-FeeInquiryTransactionDesignApproach.pdf" target="_blank" title="Design Document with Sample Queryfee Rules" alt="CMR 161212-2">CMR 161212-2</a> with rules information and sample <em>queryfee</em> rules</MadCap:conditionalText> </p>
+                        <p class="Indent">Sample Fee Query Form: <MadCap:conditionalText MadCap:conditions="General.PDF">Sample Form</MadCap:conditionalText><a href="../Resources/DesignDocs/161212-VAFeeInquiry-Sample.pdf" target="_blank" title="Sample Fee Inquiry Form" alt="Sample Fee Inquiry Form" MadCap:conditions="General.Online"> Sample Form</a></p>
+                        <p class="Indent">For Adding Fees to the Repository: see <MadCap:xref href="Fees, Expenses and Commissions Repository.htm" alt="Fees, Expenses and Commissions Repository">Fees, Expenses and Commissions Repository</MadCap:xref> </p>
+                        <p>User Guide: <em>FireLight Platform User Guide</em>, New Activity section, <MadCap:conditionalText MadCap:conditions="General.PDF">"Fee Inquiry" </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../UserGuide/New Activity/Fee Inquiry.htm" alt="Fee Inquiry">Fee Inquiry [User Instructions]</MadCap:xref> </MadCap:conditionalText>topic </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a name="top"></a><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

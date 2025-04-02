@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>(Optional) This drop-down will filter mask options based on the input type selected. These values will be populated from the org settings. <b class="Bold">NOTE:</b> Placeholder Text will not be shown if a Text Mask is set.</body>
+</html>

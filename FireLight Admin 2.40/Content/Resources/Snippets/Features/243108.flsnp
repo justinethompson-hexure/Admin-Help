@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This enhancement will add an easy access for shared activities that will reside on a tab next to Recent activities. Currently, viewing shared activities in FireLight is confusing and hard to find. FireLight users have requested this enhancement for ease of use and greater visibility for shared activities.</p>
+        <p>With this enhancement, there is greater visibility of shared activities where users can view shared cases without having to search for the activity. Users can easily see when an activity is shared with them and access the shared activity from their dashboard. The All Activities access for shared activities (individual and all) will remain as an alternative for users who wish to continue to access individually shared activities the way they currently do. "All" activities shared by another user will continue to be accessed only through the All Activities page.</p>
+        <p>This was voted important by clients on FireLight Visions with 1 Critical, 7 Important and 5 Nice to Have.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p> FireLight UI</p>
+            </li>
+            <li>
+                <p> Shared Activity(ies) for Individual Share</p>
+            </li>
+            <li>
+                <p>Recent Activities now will have a new tab called "Shared Activity," which is always visible and not dependent on Group settings for share activities</p>
+            </li>
+            <li>
+                <p>All Activities will remain as a way to view All Shared Activities, as well as Individual Shared Activities</p>
+            </li>
+            <li>
+                <p>CSS styling - new CSS class for tab styling of "Recent" and "Shared" Activity tabs</p>
+            </li>
+        </ul>
+    </body>
+</html>

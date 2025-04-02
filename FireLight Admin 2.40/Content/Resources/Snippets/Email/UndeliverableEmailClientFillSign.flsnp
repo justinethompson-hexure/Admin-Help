@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p>When SendGrid is enabled, FireLight handles undeliverable Request Client to Fill App and Request Client to Fill &amp; Sign emails as follows.</p>
+        <ol>
+            <li>
+                <p>The agent creates a new activity. On the Other Actions menu, the agent initiates a Request Client to Fill App or a Request Client to Fill &amp; Sign, enters the information on the request dialog, and clicks Send Email Request with an email address that is undeliverable.</p>
+            </li>
+            <li>
+                <p>SendGrid returns the invalid email. A "Failure delivering email" message is posted to the Message Center.</p>
+                <p>
+                    <img src="../../ImagesUserGuide/New Activity/Capture367.png" alt="" title="" />
+                </p>
+                <p>The agent can click a link to <b class="Bold">Resend this message</b>, <b class="Bold">Send new email to [Agent Name]</b>, or <b class="Bold">Send Passcode to [Agent Name]'s Cell Phone</b>. After clicking a link, the agent can enter a correct email address and resend the message, etc.</p>
+            </li>
+            <li>
+                <p>If the agent has the "Send Message Center Emails" checkbox selected in<MadCap:conditionalText MadCap:conditions="General.PDF"> Preferences</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"> <MadCap:xref href="../../../UserGuide/Preferences/Preferences.htm" title="Preferences" alt="Preferences">Preferences [User Instructions]</MadCap:xref></MadCap:conditionalText>, the agent receives an email with the message information.</p>
+            </li>
+        </ol>
+    </body>
+</html>

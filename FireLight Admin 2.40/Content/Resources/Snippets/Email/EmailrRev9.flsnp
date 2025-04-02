@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body><sup>9</sup> You cannot access the reviewer name in the email template. FireLight puts the reviewer name into the email by using the &lt;MESSAGE&gt; tag that places the text from the approve pop-up into the email along with whatever the template has.</body>
+</html>

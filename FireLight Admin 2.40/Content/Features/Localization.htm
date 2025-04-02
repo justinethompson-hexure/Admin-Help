@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Setup and usage instructions for enabling and using localization for language/locales other than the English (en-us) default language in FireLight." />
+    </head>
+    <body>
+        <h1><a name="top"></a>Localization</h1>
+        <table style="border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Localization Feature</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>Enable localization for languages/locales other than the English (en-us) default language.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">FireLight Setup</p>
+                        <p>Contact your FireLight<sup>®</sup> Strategic Account Manager for the following:</p>
+                        <ul>
+                            <li>Have the FireLight team provide a spreadsheet of the FireLight UI labels, lists, and messages in English and in the initial translation of the localized language. You can update the spreadsheet with your preferred translations and return the spreadsheet to the FireLight team for implementation.</li>
+                            <li>Provide the available jurisdictions for the language/locale. This requires a database update. Several database updates are required for localization.</li>
+                            <li>
+                                <p>Your organization's Provider may also require changes in logic or where it needs to send data. When a product is localized and two different formatted versions of a value (e.g., localized date and currency formats) exist, the integration developer may need to use the Product locale to determine the expected format.</p>
+                                <p>Example Date Time: March 13th 2024 3:19:42 PM</p>
+                                <p class="Indent">en-US - 3/13/2024 3:19:42 PM</p>
+                                <p class="Indent">en-CA - 2024-03-13 3:19:42 PM</p>
+                                <p class="Indent">fr-CA - 2024-03-13 15:19:42</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <ol>
+                            <li>
+                                <p>On the <b class="Bold">Organization Configuration/Organization Settings</b> page:</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li> On the <b class="Bold">Organization</b> tab, click the Localization <b class="Bold">Click to Edit</b> link. In the <strong>Localization</strong> dialog, select the Languages/Locales for your organization and save the organization. The default is English (en-US) and cannot be cleared from the list of approved languages/locales.</li>
+                                    <li>On the <b class="Bold">Activity</b> tab in <b class="Bold">Edit Masks</b>, click the <b class="Bold">Add</b> link and add the date and currency formats for the approved locales if different from the default en-US locale. For example, you could add a mask for the SIN  government identification number  using the SSN edit mask and give it a new name, such as "SIN Edit Mask."</li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>On the <b class="Bold">Designer/Form Library</b> or <b class="Bold">Designer/Wizard Library</b> page:</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li> Upload forms or create wizards in the new language/locale.</li>
+                                    <li>For each form or wizard: add detail, select the States Approved, and save the form or wizard.</li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>On the <b class="Bold">Designer/Form Designer</b> or <b class="Bold">Designer/Wizard Designer</b> page:</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>Design the forms or wizards pages and fields using localized display text.</li>
+                                    <li>Save the forms or wizards.</li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>On the <b class="Bold">Product Configuration/Rule Sets</b> page:</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>Add a new Rule Set for the localized product.</li>
+                                    <li>
+                                        <p> Update the rules for currency, dates, UI messages, etc., that require the localized language and save the rule set.  (Data items are not translated.) </p>
+                                        <p><b class="Bold">NOTE:</b> The rule set can be updated from the Form Designer or Wizard Designer by clicking the Designer/Form Designer, Rules Window link or the Designer/Wizard Designer, Edit Rules link to open a Rules window.</p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>On the <b class="Bold">Product Configuration/Products</b> page: </p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>Add a separate product for the additional locale. For example, for product ABC that is in the English (en-us) language/locale, add a product ABC-fr-CA for the French Canadian locale.</li>
+                                    <li>
+                                        <p>Select the applicable language/locale in the <strong>Product Locale</strong> list.</p>
+                                        <p>
+                                            <img src="../Resources/ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" /> Retain the same CUSIP ID as the product that is in the English (en-US) locale.</p>
+                                    </li>
+                                    <li>Select  the <strong>States Approved</strong>.</li>
+                                    <li>Save the product.</li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>On the <b class="Bold">Product Configuration/Packages</b> page:</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>Add a new package for the new localized product.</li>
+                                    <li>Add the localized forms and rule sets to the package and save the package.</li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>On the <b class="Bold">Product Configuration/Sales Agreements</b> page:</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>Add a new sales agreement, assign the localized package and set <strong>Package Duty</strong> to <strong>Required</strong>.</li>
+                                    <li>Select the <strong>State Approvals</strong> and save the sales agreement.</li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>On the <b class="Bold">Organization Configuration/Email</b> page: </p>
+                                <p>For each email template used by your organization, select the <b>Locale</b> for the template, add the applicable translated text, and save the email template. Do not translate &lt;VARIABLE_NAMES&gt; that appear in brackets. FireLight will match the email template Locale with the Product Locale. </p>
+                            </li>
+                            <li>
+                                <p>On the <b class="Bold">Organization Configuration/Groups</b> page:</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>In the list, select a group. </li>
+                                    <li>On the <b class="Bold">Product Access</b> tab, select the checkbox for the new product to grant group access to the product.</li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>On the <b class="Bold">Deployments</b> page: </p>
+                                <p>Deploy the product, organization, localization and group configurations to the appropriate environment.</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <p><b class="Bold">NOTE:</b> In Other Actions, the Documents dialog used in Wizard activities uses the standard file upload controls, which cannot be localized. An alternative is being developed for v2.19. This will affect clients using Wizards and a language other than English. All other text on the dialog can be localized.</p>
+                        <p>Users can change the language/locale in FireLight.</p>
+                        <ol>
+                            <li>
+                                <p>When you log in to FireLight for the first time, FireLight prompts you to select your preferred language (locale) and changes the user interface (UI) language to the selected locale. The FireLight user interface labels, lists, and messages display in the language associated with the selected Locale.</p>
+                                <p><b class="Bold">NOTE:</b> You can change the default Locale and the Jurisdiction in Preferences.</p>
+                            </li>
+                            <li>
+                                <p> When you create a new activity, FireLight filters the Products list for the Locale on the Create New page. To view other products, you can select a different Locale on the Create New page. FireLight changes to match the locale of the selected product. The Signature process, Review Queue, etc., will use the same locale as the product.</p>
+                            </li>
+                            <li>
+                                <p>FireLight remains in the same locale as the product application until you create an application in a different locale, you change the Locale in Preferences, or you log off FireLight. When you log back on, FireLight reverts to your selected Locale on the Preferences page.</p>
+                                <p><b class="Bold">NOTE:</b> If you copy a localized activity on the All Activities page and make updates to the copy, you may want to update the copy of the activity in the same locale as the original activity to avoid some potential issues with localized dates, currencies, etc.</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help – Design Document: <MadCap:conditionalText MadCap:conditions="General.PDF">current: CMR 218308, original: CMR 148022</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online">current: <a href="../Resources/DesignDocs/218308 Localization Enhancements 2.18 August.pdf" target="_blank" title="CMR 218308" alt="CMR 218308">CMR 218308</a>, original: <a href="../Resources/DesignDocs/148022-FireLight Localization Design.pdf" target="_blank" title="CMR 148022" alt="CMR 148022">CMR 148022</a></MadCap:conditionalText><![CDATA[  ]]></p>
+                        <p>User Guide – <em>FireLight Platform User Guide</em>, FireLight Basics section, <MadCap:conditionalText MadCap:conditions="General.PDF">"Localization" </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../UserGuide/FireLight Basics/Localization.htm" alt="Localization">Localization [User Instructions]</MadCap:xref> </MadCap:conditionalText>topic </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

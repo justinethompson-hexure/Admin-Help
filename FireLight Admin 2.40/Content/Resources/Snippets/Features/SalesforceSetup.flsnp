@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p class="noteTop"><b class="Bold">NOTE:</b> The setup information from Salesforce uses the terms "Client ID" and "Consumer Key" interchangeably and also uses the terms "Client Secret" and "Consumer Secret" interchangeably. Click the following link to view a popular webpage on generating Salesforce API credentials: <a href="https://web.archive.org/web/20180126194907/http://www.calvinfroedge.com/salesforce-how-to-generate-api-credentials/" target="_blank" title="How to generate Salesforce API credentials" alt="How to generate Salesforce API credentials">https://web.archive.org/web/20180126194907/http://www.calvinfroedge.com/salesforce-how-to-generate-api-credentials/</a></p>
+        <p class="noteBottom">Click the following link to view an article with the steps to get authentication working: <br /><a href="https://stackoverflow.com/questions/12794302/salesforce-authentication-failing/29112224#29112224" target="_blank" title="https://stackoverflow.com/questions/12794302/salesforce-authentication-failing/29112224#29112224" alt="https://stackoverflow.com/questions/12794302/salesforce-authentication-failing/29112224#29112224">https://stackoverflow.com/questions/12794302/salesforce-authentication-failing/29112224#29112224</a></p>
+        <ol>
+            <li>Create an account with Salesforce. </li>
+            <li>Log in to Salesforce with your Salesforce account credentials:</li>
+            <ul>
+                <li>user name</li>
+                <li>password + security token in the format <i>testpasswordtestsecuritytoken</i><p><b>Note</b>: A security token is needed only when you access Salesforce from an IP address that is outside of the company’s trusted IP range.</p></li>
+            </ul>
+            <li>If needed, reset your security token. If you have API-only user permission or your admin specifies login IP ranges for your account, you cannot manually reset your security token. To reset your token, contact your admin.</li>
+            <ul>
+                <li>From your personal settings, in the Quick Find box, enter <b>Reset</b>, and then select Reset My Security Token.
+            </li>
+                <li>
+                    <p>Click <b>Reset Security Token</b>. The new security token is sent to the email address in your Salesforce personal settings. You also receive a new security token email when you reset your password.</p>
+                </li>
+            </ul>
+            <li>
+                <p>Salesforce will email a client verification code. Enter your client verification code from Salesforce. (You may need to change your password the first time you log in to Salesforce.)</p>
+            </li>
+            <li>Click the gear icon <img src="../../ImagesAdmin/SFgearIcon.png" alt="Salesforce Gear Icon" title="Salesforce Gear Icon" />  in the upper right of the window and click <b class="Bold">Setup</b>.</li>
+            <li>
+                <p>On the left navigation bar under PLATFORM TOOLS, expand <b class="Bold">Apps</b> and click <b class="Bold">App Manager</b>.</p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../../ImagesAdmin/Salesforce1.png" alt="Salesforce Left Navigation Bar" title="Salesforce Left Navigation Bar" />
+                </p>
+            </li>
+            <li>
+                <p>On the upper right, click <b class="Bold">New Connected App</b>.</p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../../ImagesAdmin/Salesforce2.png" alt="Salesforce New Connected App" title="Salesforce New Connected App" />
+                </p>
+            </li>
+            <li>
+                <p>Enter the following required inputs when creating the FireLight Integration connected app. </p>
+                <p><b class="Bold">Connected App Name</b> = FireLight Integration (or other name of your choice)</p>
+                <p><b>API Name</b> = FireLight_Integration (or other name of your choice)</p>
+                <p><b class="Bold">Contact Email</b> = your Salesforce account username email address </p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../../ImagesAdmin/Capture236.png" alt="New Connected App - Required Fields" title="New Connected App - Required Fields" />
+                </p>
+                <p><b class="Bold">Enable OAuth Settings</b> – select the checkbox.</p>
+                <p><b class="Bold">Callback URL</b> - enter the URL for the callback (e.g., https://localhost).</p>
+                <p><b class="Bold">Selected OAuth Scopes</b> (on the lower right) – ensure <b class="Bold">Full access (full)</b> is selected. </p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../../ImagesAdmin/Capture237.png" alt="API Enable OAuth Settings" title="API Enable OAuth Settings" />
+                </p>
+            </li>
+            <li>
+                <p>At the top of the page, click <b class="Bold">Save</b>. </p>
+            </li>
+            <li>
+                <p>On the next page, click <b class="Bold">Continue</b>. </p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../../ImagesAdmin/Capture238.png" alt="New Connected App - Continue" title="New Connected App - Continue" />
+                </p>
+                <p>The Manage Connected Apps page opens. (Alternatively, on the left toolbar, go to PLATFORM TOOLS &gt; Apps &gt; App Manager &gt; Connected Apps &gt; Manage Connected Apps to open the page.)</p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../../ImagesAdmin/Capture239.png" alt="" title="" />
+                </p>
+            </li>
+            <li>
+                <p>Under the <b class="Bold">API (Enable OAuth Settings)</b> section, below the <b class="Bold">Consumer Key</b>, click <b class="Bold">Copy</b> to copy and paste the Consumer Key to a text file. Next to <b class="Bold">Consumer Secret</b>, click the <b class="Bold">Click to reveal</b> link and click the <b class="Bold">Copy</b> button to copy and paste the Consumer Secret value to a text file. These values is the <b class="Bold">ClientID</b> and the <b class="Bold">ClientSecret</b> values that you will use to set up Salesforce at the organization level in the Third-Party Service Config table in FireLight Admin. You will need these configuration values to set up the <b class="Bold">Consumer Key</b> and <b class="Bold">Consumer Secret</b> values for FireLight integration with Salesforce at the advisor level. </p>
+            </li>
+            <li>
+                <p>Near the top of the page, click the <b class="Bold">Manage</b> button and click <b class="Bold">Edit Policies</b>. </p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>In the <b class="Bold">OAuth Policies</b> section, <b class="Bold">IP Relaxation</b>, change the setting to <b class="Bold">Relax IP Restrictions</b>. </p>
+                    </li>
+                    <li>
+                        <p>Ensure that <b class="Bold">Permitted Users</b> is set to <b class="Bold">All users may self-authorize</b>. </p>
+                    </li>
+                    <li>
+                        <p>Click <b class="Bold">Save</b>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li MadCap:conditions="General.Postpone">
+                <p>On the left under <b class="Bold">SETTINGS &gt; Security &gt; Network Access</b>, next to <b class="Bold">Trusted IP Ranges</b>, click <b class="Bold">New</b>. </p>
+                <p><b class="Bold">NOTE:</b> Reach out to support for the range to include.</p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../../ImagesAdmin/Capture240.png" alt="" title="" />
+                </p>
+                <p>Add the IP ranges and click <b class="Bold">Save</b>.</p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../../ImagesAdmin/Capture241.png" alt="Network Access - Add Trusted IP Ranges" title="Network Access - Add Trusted IP Ranges" /> </p>
+                <p MadCap:conditions="General.Postpone"><b class="Bold">NOTE:</b> Tighten permissions once you have everything working, one at a time, so you can figure out what setting is giving you authentication errors.</p>
+            </li>
+            <li MadCap:conditions="General.Postpone">
+                <p>The following curl call should succeed. </p>
+                <p>On production:</p>
+                <p class="Indent">curl -v https://login.salesforce.com/services/oauth2/token \</p>
+                <p class="Indent2">-d "grant_type=password" \</p>
+                <p class="Indent2">-d "client_id=YOUR_CLIENT_ID_FROM_STEP_9" \</p>
+                <p class="Indent2">-d "client_secret=YOUR_CLIENT_SECRET_FROM_STEP_9" \</p>
+                <p class="Indent2">-d "username=user@wherever.com" -d "password=foo@bar.com"</p>
+                <p>On sandbox or test: </p>
+                <p class="Indent">curl -v https://test.salesforce.com/services/oauth2/token \</p>
+                <p class="Indent2">-d "grant_type=password" \</p>
+                <p class="Indent2">-d "client_id=YOUR_CLIENT_ID_FROM_STEP_9" \</p>
+                <p class="Indent2">-d "client_secret=YOUR_CLIENT_SECRET_FROM_STEP_9" \</p>
+                <p class="Indent2">-d "username=user@wherever.com" -d "password=foo@bar.com"</p>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Magnum Integration, FireLight Magnum Integration, Magnum Underwriting Interview" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Swiss Re Magnum Integration</h1>
+        <p class="note"><b class="Bold">Spotlight Video:</b> See <a href="https://vimeo.com/566699247/f1e7f1d37d" target="_blank" title="Swiss RE Magnum Integration" alt="Swiss RE Magnum Integration">Swiss RE Magnum Integration</a> for a Spotlight feature video about Swiss RE Magnum Underwriting Interview.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Swiss Re Magnum Integration</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p><b class="Bold">NOTE:</b> The Swiss Re Magnum integration is available for Wizard only.</p>
+                        <p>With the Magnum  integration, Firelight<sup>®</sup> leverages the Magnum Pure Engine APIs within an activity to gather underwriting data for life applications.</p>
+                        <p>The Magnum Pure Engine APIs are embedded in FireLight and shown in a dialog when opened by clicking a Custom Action button added to a wizard page in the activity.</p>
+                        <p>When the Magnum interview opens, data passes from the FireLight activity to set up the correct interview questions in Magnum.</p>
+                        <p>When the Magnum interview closes, the data is saved and passed to FireLight, which can be mapped to the appropriate PDF form fields so the data is submitted with the activity.</p>
+                        <p>FireLight queries a Magnum API for a status. Once the data is complete in the Magnum interview the status is set to complete. FireLight leverages the status to recognize when the activity can be set to 100% complete when data entry is finished. After the Magnum interview is complete, it can be reopened and updated prior to activity submittal.</p>
+                        <p>FireLight also retrieves and stores the case level underwriting decision when the interview is complete. Additionally, the full underwriting decision tree is stored in JSON format and made available to the provider for added customizations.</p>
+                        <p>Note that the Magnum setup is handled by the carrier, not the distributor. When a distributor runs a carrier product activity, the carrier custom action button, custom lists and provider are called after the relevant distributor components.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows" MadCap:conditions="">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">FireLight Setup</p>
+                        <p> Contact your <MadCap:variable name="General.ProductName" /> Strategic Account Manager to create an addendum to the contract to support the Swiss Re Magnum integration.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows" MadCap:conditions="">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p>See the <MadCap:conditionalText MadCap:conditions="General.PDF"><em>FireLight Magnum Integration Guide</em></MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/PDFGuides/FireLight Magnum Integration Guide.pdf" target="_blank" title="FireLight Magnum Integration Guide" alt="FireLight Magnum Integration Guide">FireLight Magnum Integration Guide</a> </MadCap:conditionalText>for detailed requirements, setup information, and more.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows" MadCap:conditions="">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <MadCap:snippetBlock src="../Resources/Snippets/Features/MagnumLifeUnderwriting.flsnp" />
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help:</p>
+                        <ul>
+                            <li>
+                                <p>
+                                    <MadCap:conditionalText MadCap:conditions="General.PDF"><em>FireLight Magnum Integration Guide</em>
+                                    </MadCap:conditionalText><a href="../Resources/PDFGuides/FireLight Magnum Integration Guide.pdf" target="_blank" title="FireLight Magnum Integration Guide " alt="FireLight Magnum Integration Guide "><MadCap:conditionalText MadCap:conditions="General.Online">FireLight Magnum Integration Guide </MadCap:conditionalText></a>
+                                </p>
+                            </li>
+                            <li>
+                                <p>Design Document:<MadCap:conditionalText MadCap:conditions="General.PDF"> CMR224601</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/DesignDocs/224601 Magnum Swiss Re Integration with FireLight.pdf" target="_blank" title="CMR 224601" alt="CMR 224601">CMR 224601</a></MadCap:conditionalText></p>
+                            </li>
+                        </ul>
+                        <p>User Guide:</p>
+                        <ul>
+                            <li>
+                                <p><em> FireLight Platform User Guide</em>, New Activity, Data Entry, Action Buttons topic, see "Example: Magnum Underwriting Interview"</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

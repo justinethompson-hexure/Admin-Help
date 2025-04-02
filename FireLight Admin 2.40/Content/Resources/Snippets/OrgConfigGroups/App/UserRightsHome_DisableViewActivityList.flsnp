@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p class="Indent">Select the <strong>Disable View Activity List</strong> checkbox to disable the All Activities page and the ability to view previous activities. The user will not be able to access the All Activities page. The All Activities button  on the navigation bar will not be visible if this option is selected. </p>
+        <p class="Indent" MadCap:conditions="General.Online">
+            <img src="../../../ImagesAdmin/Capture48.png" alt="Disable View Activity List - Navigation Bar" title="Disable View Activity List - Navigation Bar" MadCap:conditions="General.Online" />
+        </p>
+    </body>
+</html>

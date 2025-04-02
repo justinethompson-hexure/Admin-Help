@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p> This maintenance item will provide a scroll bar on the Manage Optional Forms screen, which will enhance user experience when there are multiple forms listed on a page.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>  FL App: Manage Option Forms on the Other Actions menu for an activity.</p>
+            </li>
+        </ul>
+    </body>
+</html>

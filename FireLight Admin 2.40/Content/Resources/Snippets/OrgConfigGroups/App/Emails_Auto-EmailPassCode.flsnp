@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b>Auto-Email PassCode</b> checkbox to enable the auto-generated email with the reviewer Passcode automatically sent to the reviewer associated with the application. This option is for the pre-submission review feature only. It is not for the application submission Review Queue.</body>
+</html>

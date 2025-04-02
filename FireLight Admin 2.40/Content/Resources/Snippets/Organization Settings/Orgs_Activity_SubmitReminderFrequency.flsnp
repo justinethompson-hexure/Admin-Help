@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>In the <b class="Bold">Submit Reminder Frequency</b> list, select the frequency (Never, Daily, Weekly) of a reminder email to submit an activity after reviewer approval in the PreSubmit review queue. See the  auto-generated email template in <MadCap:xref href="../../../Organization Configuration/Email.htm" alt="Email">Email</MadCap:xref>. Submit reminder emails run on the scheduler with the reminder set at intervals from the time of the activity reaching the Approved status. "Daily" frequency emails go out at 6:00 AM UTC. "Weekly" frequency emails go out on Sunday at 7 AM UTC.</body>
+</html>

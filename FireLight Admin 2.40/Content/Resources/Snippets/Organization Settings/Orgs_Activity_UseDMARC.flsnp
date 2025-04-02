@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Use DMARC</b> checkbox to use the email address that is entered in the organization’s Support Email field instead of the Agent’s email address for all outgoing email communications. This option helps avoid email rejection due to DMARC authentication.  The agent email is used as the ‘Reply to’ email address.</body>
+</html>

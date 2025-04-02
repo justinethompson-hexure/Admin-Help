@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Currently, when reviewing an application in the review queue, once review actions are complete, the system returns back to the entire queue removing the search filters that were applied. This enhancement is to maintain the search results when closing the review application to avoid performing the search again to complete the review steps.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>FL App &gt; Manage &gt; Review Queue &gt;Queues (tab)</p>
+            </li>
+        </ul>
+    </body>
+</html>

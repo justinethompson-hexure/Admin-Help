@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>With this enhancement,  FireLight is adding a URL path so users outside of FireLight can access the fillable PDF. This will allow a greater audience to be able to download these forms, and allow clients the ability to have a "one stop shop" approach within FireLight.</p>
+        <p>The current Print Form workflow and upload PDF capability will not be changing.</p>
+        <p>This whole enhancement only apply only to the Print Forms Activity. A Print Forms License will have to be applied before any of these changes are visible.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Admin: Forms Library - URL added to the forms library page to allow the PDF to be downloaded.  The URL will not be authenticated to allow anyone access to the form. A copy icon has been added to conveniently copy the URL.</p>
+            </li>
+        </ul>
+    </body>
+</html>

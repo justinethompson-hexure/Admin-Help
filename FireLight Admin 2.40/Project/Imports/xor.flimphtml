@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HtmlImport
+  KeepSourceLinks="false"
+  ProjectName="FireLightAdmin2.9"
+  ProjectFolder="D:\Documents\My Projects\FireLightAdmin2.9\"
+  AutoSync="false"
+  SourceFolders=""
+  ImportResources="false"
+  ImportResourcesLocation="NoImport"
+  ImportTopics="content"
+  ImportLinkedHtmlFiles="false"
+  LastImport="2017-01-30T15:56:51.0439701-07:00"
+  ImportTopicsLocation="Content/">
+  <Files>
+    <Url
+      Source="../../../../../FireLight/Node Help/Xml-Documentation/dist/condition/xor.html"
+      AbsoluteSource="file:///D:/FireLight/Node Help/Xml-Documentation/dist/condition/xor.html" />
+  </Files>
+  <ExcludedFiles />
+  <CollectedSourceFiles />
+  <SkippedSourceFiles />
+  <GeneratedFiles>
+    <Url
+      Source="../../Content/xor.html"
+      TimeStamp="1/30/2017 3:56:47 PM" />
+    <Url
+      Source="../TOCs/xor.fltoc"
+      TimeStamp="1/30/2017 3:56:50 PM" />
+  </GeneratedFiles>
+</HtmlImport>

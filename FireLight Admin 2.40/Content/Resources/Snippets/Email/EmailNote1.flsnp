@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body><sup>1</sup>If the email address field can be edited, DMARC logic is automatically applied. The From Address is replaced by the organization's email address to avoid email server rejection due to domain mismatch. The reply to address will still be the agent's email. If you do a direct login or you do not send in an email address, we enable the Use DMARC feature automatically and do the replacement. If you send in the email address but have the "Use DMARC" organization setting enabled, we also do the replacement. The only time we do not replace the From address with the organization's email address is when you send in the email address and do not have the "Use DMARC" setting enabled in Organization Configuration/Organization Settings,  Activity tab.</body>
+</html>

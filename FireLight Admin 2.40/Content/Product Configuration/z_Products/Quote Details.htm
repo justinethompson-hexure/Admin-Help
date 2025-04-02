@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Quote Details</h1>
+        <p>
+            <p>On the Product Configuration/Products page, click the <b class="Bold">Quote Details</b> link to open the Quote Details dialog. Use the Quote Detail dialog to add Quote Detail for a product. See <MadCap:xref href="../../Features/Quote.htm">Quote Activity</MadCap:xref> in Features for instructions to set up the Quote activity.</p>
+            <h2>Add Rates</h2>
+            <ol>
+                <li>At the top of the Products page, select a product in the grid.</li>
+                <li>On the lower left, click the <b class="Bold">Quote Details</b> link to open the Quote Details dialog.</li>
+                <li>On the upper left, click <b class="Bold">Upload</b> to open the Upload File dialog.</li>
+                <li>In <b class="Bold">Rate File Name</b>, enter a name for the rate file. The name is for reference only.</li>
+                <li>
+                    <p>in <b class="Bold">Risk Class / Mapping</b>, enter the risk class mappings that correspond to Column C 'Risk Class' in the rate file.</p>
+                    <p>For example, Risk Class 0 might map to Standard Smoker and Risk Class 1 to Preferred Smoker. Seven risk classes are available in Quote to map to your product risk classes. If any Risk Class does not apply, leave the default value of -1 (e.g., if Simplified Issue does not apply to the product, leave both options as -1). Values in the rate file must be positive numeric values.</p>
+                    <p MadCap:conditions="General.Online">
+                        <img src="../../Resources/ImagesAdmin/Capture36.png" alt="Upload File dialog" title="Upload File dialog" MadCap:conditions="General.Online" class="Thumbnail" />
+                    </p>
+                </li>
+                <li>Click <b class="Bold">Browse</b> to open the Choose File to Upload dialog, select a rate file to upload, and click <b class="Bold">Open</b>.</li>
+                <li>Click <b class="Bold">Upload</b>. </li>
+                <li>
+                    <p>On the <b class="Bold">Rates</b> tab, enter a <b class="Bold">Start Date</b> for the uploaded rate file. It defaults to today’s date plus one day. When the rates are updated, upload replacement rates with a later start date to replace the existing rates. Be sure the start date is later than the active rate files.</p>
+                </li>
+                <li>In the <b class="Bold">Jurisdiction</b> column of the grid, click <b class="Bold">Edit</b> to open the <b class="Bold">State / Approved</b> list. By default, all states are approved, including Guam, Puerto Rico, and Virgin Islands. Clear the checkboxes for the states where the product is not approved and click <b class="Bold">Save</b>.</li>
+                <li>(Optional) You can change the Rate File Name.</li>
+                <li>On the Rates tab, click <b class="Bold">Save</b>. </li>
+                <li>Repeat the process for all rate files. For example, you might have rates for all states but New York and separate rates for New York. In this example, upload two rate files—one for New York and one for all the other states.</li>
+                <li>Delete a rate file: click the red <span style="color: #ff0000;">x</span> for file in the right column of the grid.</li>
+                <li>Update rates: upload the new rate file and delete the exiting rate file.</li>
+            </ol>
+            <h2>Add Rules</h2>
+            <ol>
+                <li>In the Quote Details dialog, click the <b class="Bold">Rules</b> tab.</li>
+                <li>Click <b class="Bold">Browse</b> to open the Choose File to Upload dialog, click the applicable rules file (for example, click <b class="Bold">Quote Product Rules Upload Template.xlsm</b>), and click <b class="Bold">Open</b>.</li>
+                <li>On the Rules tab, click <b class="Bold">Upload</b>.</li>
+                <li>Review the rules for accuracy. Pause the mouse over the <b class="Bold">Show</b> option in the Jurisdictions and Table Ratings columns to review the list of options.</li>
+                <li>Update rules: you must replace all of the rules. On the network or PC, open the <b class="Bold">Quote Product Rules Upload Template.xlsm</b> file, make the required changes and save the file. On the Rules tab, click <b class="Bold">Choose File</b>, click the name of the updated rules file and upload it again.</li>
+            </ol>
+            <h2>Add Configuration</h2>
+            <ol>
+                <li>In the Quote Details dialog, click the <b class="Bold">Configuration</b> tab.</li>
+                <li>Add the correct Modal Factors for the product.</li>
+                <li>Add the Annual Policy Fee for the product.</li>
+                <li>Add the Age Calculation method for the product. Valid options are: Last, Nearest, and Next. This is used to calculate issue age for the quotes.</li>
+                <li>Click <b class="Bold">Save</b>.</li>
+                <li>At the end of the Products page, click <b class="Bold">Save Product Config</b>.</li>
+            </ol>
+            <p>(Optional) Add the product documents for each Term Life product:</p>
+            <ol>
+                <li>At the top of the Products page, select a Term Life product in the grid.</li>
+                <li>On the lower left of the Products page, click the <b class="Bold">Product Documents</b> link to open the Product Documents dialog.</li>
+                <li>In <b class="Bold">Document Type</b>, select the type of document to upload (Underwriting Guidelines or Product Guide).</li>
+                <li>Click <b class="Bold">Choose File</b>. Browse to the document location on the PC or network, click the document, and click <b class="Bold">Open</b>.</li>
+                <li>
+                    <p>Click <b class="Bold">Upload</b>.</p>
+                    <p>The chosen file (Underwriting Guidelines or Product Guide) appears at the top of the dialog along with links to <b class="Bold">View</b> or <b class="Bold">Remove</b> the document.</p>
+                </li>
+                <li>At the end of the Products page, click <b class="Bold">Save Product Config</b>.</li>
+            </ol>
+            <p MadCap:conditions="General.Online"><a href="#top">Return to Top</a>
+            </p>
+        </p>
+    </body>
+</html>

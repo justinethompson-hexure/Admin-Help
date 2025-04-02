@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Building on iConnect 263816 (Firm Management - Phase 1)</p>
+        <p>Firms have requested the ability for organizations (Sub Firms/Firm Orgs) to manage their own product availability. These Organizations is setup and managed by Hexure under the firm, upon request. This release will include the following:</p>
+        <ul>
+            <li>
+                <p>Extending of Sales Agreements so that Sales Agreements can be associated with specific Sub Firms</p>
+            </li>
+            <li>
+                <p>Ability for Admin users of a Sub Firm to deploy modifications they have made in Groups (Product activation and state refinement) to higher environments</p>
+            </li>
+            <li>
+                <p>New Organization setting for Auto Deploy. When this is enabled, when new carriers are added to a distributor's environment, Auto Deploy will default to enabled for them</p>
+            </li>
+            <li>
+                <p>Ability to set Packages to be automatically added to specified Role Codes</p>
+            </li>
+        </ul>
+        <p>Impacts:</p>
+        <ul>
+            <li>
+                <p>Product Config -&gt; Sales Agreements</p>
+            </li>
+            <li>
+                <p>Utilities -&gt; Deployments: Sub Firm Admins will have access to the Group Configuration Scope for just their Sub Firm</p>
+            </li>
+            <li>
+                <p>Organization Configuration -&gt; Organization Settings -&gt; Admin tab: New Setting: Enable Auto Deploy</p>
+            </li>
+            <li>
+                <p>Product Config -&gt; Sales Agreements (Auto Deploy)</p>
+            </li>
+            <li>
+                <p>Product Config -&gt; Packages</p>
+            </li>
+        </ul>
+    </body>
+</html>

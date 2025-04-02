@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>FireLight merges an existing list when the Common Tag is added to a field with a list. This adds the common tag list rows to an existing list and merges the applicable rows. All excess common tag rows that do not apply appear at the bottom of the list unchecked, which can be selected for the control.</p>
+        <p>The merge occurs when the user selects the Common Tag Name, and the user clicks OK in the "You are changing the saved list name values do you want to proceed?" warning dialog.  The list order is retained from the list prior to the common tag being added and all excess unchecked common tag rows that do not apply are at the end of the list.</p>
+    </body>
+</html>

@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1><a name="top"></a>ExamOne Paramed Exam Order Integration</h1>
+        <p class="note"><b class="Bold">NOTE:</b> See the <a href="https://vimeo.com/670332352/04de4658d3" target="_blank" title="2.23 Enhancements" alt="2.23 Enhancements">2.23 Enhancements</a> Spotlight feature video for a walkthrough of the ExamOne feature, beginning at 10:53 minutes in the video.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">ExamOne  Paramed Exam Order Integration </caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 761px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1"><b class="TableBlue">Description</b>
+                        </p>
+                        <p>This Integration will allow for a Paramed exam to be scheduled through FireLight by sending basic proposed insured’s demographics and account information to the ExamOne ScheduleNow Paramed online ordering system.  Based on the proposed insured’s demographics and if the insured prefers their exam to be completed at an In-Center (ExamOne Office) or Mobile (Personal Location), it will open up the location(s) availability.  Upon choosing the location, the dates and times calendar will open for the insured to choose the desired slot.  If the desired location, date and time is available, then the appointment is locked in for the insured.  This new functionality is managed via a custom action button within the activity. All clients that want to use this service are required to contract directly with ExamOne. </p>
+                        <p>Impacts: </p>
+                        <ul>
+                            <li>
+                                <p>Activities:  Adding checkbox to enable Paramed ordering </p>
+                            </li>
+                            <li>
+                                <p>Admin:  Third-Party Configuration - Adding a new Service Type</p>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <p>Data Group Properties</p>
+                            </li>
+                            <li>
+                                <p>Email Templates: different statuses on Paramed ordering</p>
+                            </li>
+                            <li>
+                                <p>UI Changes:  Statuses</p>
+                            </li>
+                            <li>
+                                <p>Common Tags:  life insurance-related</p>
+                            </li>
+                            <li>
+                                <p>API Structure:  send required insured data and account info, order ID and availability will open and save in the database.  We will then submit the order to ExamOne with the same tracing ID and lock the order with the schedule</p>
+                            </li>
+                            <li>
+                                <p>Forms: Data Group Properties</p>
+                            </li>
+                            <li>
+                                <p>Reports: Usage</p>
+                            </li>
+                            <li>
+                                <p>Audits: Addition of new codes needed for ACORD 1122</p>
+                            </li>
+                        </ul>
+                        <p><b class="Bold">NOTE:</b> Paramed ordering is currently not available with E-Signature in React for FireLight embedded clients. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">ExamOne Setup</p>
+                        <p>All clients that want to use this service are required to contract directly with ExamOne. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p>See the <em MadCap:conditions="General.PDF">ExamOne Paramed Exam Order Integration Guide</em><a href="../Resources/PDFGuides/ExamOne Paramed Exam Order Integration Guide.pdf" target="_blank" title="ExamOne Paramed Exam Order Integration Guide" alt="ExamOne Paramed Exam Order Integration Guide" MadCap:conditions="General.Online">ExamOne Paramed Exam Order Integration Guide</a> for implementation instructions.</p>
+                        <p MadCap:conditions="General.PDF">In Admin Help, see the <em>ExamOne Paramed Exam Order Integration Guide</em> for implementation instructions and  the a link to the Paramed ExamOne Template Wizard and Rule Set that you can download in a .zip file.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <MadCap:snippetBlock src="../Resources/Snippets/Features/ExamOneUG.flsnp" />
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help:</p>
+                        <ul MadCap:conditions="General.PDF">
+                            <li>
+                                <p MadCap:conditions="General.PDF"> <em>ExamOne Paramed Exam Order Integration Guide</em></p>
+                            </li>
+                        </ul>
+                        <ul MadCap:conditions="General.Online">
+                            <li>
+                                <p MadCap:conditions="General.Online"><a href="../Resources/PDFGuides/ExamOne Paramed Exam Order Integration Guide.pdf" target="_blank" title="ExamOne Paramed Exam Order Integration Guide" alt="ExamOne Paramed Exam Order Integration Guide" MadCap:conditions="General.Online">ExamOne Paramed Exam Order Integration Guide</a> </p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

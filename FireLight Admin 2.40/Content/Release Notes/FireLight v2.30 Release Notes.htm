@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>FireLight v2.30 Release Notes</h1>
+        <h2>June 09, 2023, Production</h2>
+        <h2>Enhancements</h2>
+        <h3>Foundation</h3>
+        <h2>Enhance Pre-Sale Activity to Prevent Multiple App Launches (IC 273402)</h2>
+        <p>This enhancement allows FireLight clients to configure a Pre-Sale activity to generate one or multiple eApplications or other “Next Activities” as part of a workflow. This is similar to the existing functionality that automatically links an FL Illustration to the corresponding generated eApplication. This functionality has been replicated for a Pre-Sale activity and any “Next Activities” that may be generated from that Pre-Sale.</p>
+        <p>This is configurable at the Sales Agreement level to allow customers to define when the Pre-Sale and eApplication/Next Activity linkage requires a 1:1 relationship. When enabled, it prevents users from generating more than one eApplication/subsequent activity from a single Pre-Sale activity. This also allows for the use case where a customer has more than one pre-sale activity configured and will allow flexibility as to how those pre-sale activities interact with available “Next Activities.”</p>
+        <p>Impact:</p>
+        <p>•   FL Admin: New checkbox “Create single activity when Next Activity is selected” added on the Options tab on the Sales Agreement page on the admin tool.</p>
+        <p>•   FL App: Continue/Apply button on the activity navigation.</p>
+        <h1>Foundation</h1>
+        <h2>Enhancement for Share Activity Permission (IC 280428)</h2>
+        <p>This enhancement allows organizations to share activities with users with limited or partial permissions. Previously, when an agent/user shared an activity with another user, they could provide read-only access or full control over that activity. This enhancement provides more control while sharing an activity if another user can complete the activity before data-entry or the signing ceremony.</p>
+        <p>When the new option Share Limited Control is enabled, four control options are available. The user can select to allow the party with whom the activity is shared to complete data entry, complete signing, complete signing without primary agent, or complete pre-signature review. Only one of these options can be selected. When the email is generated for the shared activity, the type of shared functionality is provided.</p>
+        <h2>Impact:</h2>
+        <p>•   FL Admin &gt; Organization Settings &gt; Groups &gt; App (tab) &gt; Share/Transfer (section)</p>
+        <p>•   Two new checkboxes are added:</p>
+        <p>•	Disable Share Full Control</p>
+        <p>•	Allow Share Limited Control</p>
+        <p>•   FL App &gt; Other Actions &gt; Share</p>
+        <p>•   When a user is sharing an activity with another user with limited control, they is able to choose the level of control.</p>
+        <h2>Foundation</h2>
+        <p>Add Product Type Filter for All Activities and Review Queue (IC 276970)</p>
+        <p>With this enhancement, a new "Product Type" filter is added to the advanced search option for Review Queue and All Activities pages so that users can filter their pre-review queue apps by product type (Annuity, Life, etc.).</p>
+        <h2>Impact:</h2>
+        <p>•	FL App: Advanced Search dialog on Review Queue page</p>
+        <p>•	FL App: Advanced Search dialog on All Activities page</p>
+        <h2>Foundation</h2>
+        <p>Option to search in "Replace Form/Wizard/Rule Set in Package" (IC 278324)</p>
+        <p>With this enhancement, users can search for items within the dropdown on the Replace Form/Wizard/Rule Set in Package dialog on the Packages page in the admin tool. It is more user-friendly and similar to the dropdown used on the Copy Fields dialog on the form/wizard designer.</p>
+        <h2>Impact:</h2>
+        <p>•	FL Admin: Dropdowns on Replace Form/Wizard/Rule Set in Package dialog on the Packages page.</p>
+        <h2>Foundation</h2>
+        <p>Masking Passcode Phone Number</p>
+        <p>With this enhancement, organizations can mask the phone number used as part of the one-time passcode functionality (i.e., ###-###-1234) when the email is sent. This is controlled via a new option on the Organization Settings page.</p>
+        <h2>Impact:</h2>
+        <p>•	FL App -&gt; SMS Authentication</p>
+        <p>•	FL Admin -&gt; Organization Settings -&gt; Signature</p>
+        <h2>Foundation</h2>
+        <p>Adding Provider Hook for Pre-Submit Queue</p>
+        <p>Previously, the Provider had access to a hook to pull a Name Value Pair File (NVPs) for activities in the Post-Submit Review Queue. With this enhancement, the Provider also has access to hooks to pull NVPs for activities in the Pre-Submit Review Queue. Each Queue (Pre- and Post-) will have hooks for the Provider: CallBeforeOSJ and CallAfterOSJ.</p>
+        <p>•	A provider hook for CallBeforeOSJ is added before the case transitions to pre- or post-signature review.</p>
+        <p>•	A provider hook for CallAfterOSJ is added after the case is approved and before submission for the post-signature review process. The existing CallBeforeOSJ using a workflow instance is used to preserve the pre-existing functionality.</p>
+        <p>•	A provider hook for CallAfterOSJ is added for the pre-signature review after the approval process and before the case is moved to another review queue or ready for signing state.</p>
+        <h2>Impact:</h2>
+        <p>Provider: Access to data during the Review Queue process.</p>
+        <p>NOTE: Impacted clients need to change the CallBeforeOSJ to a CallAfterOSJ before the move to production.</p>
+        <h2>Foundation</h2>
+        <p>Disable Continue after Pre Signature Review Queue: When no signatures are present (IC 279795)</p>
+        <p>iConnect 267762 previously implemented a new Groups Option feature (Disable Continue after Pre Signature Review Queue). When implemented, it did not account for all potential workflows. With this enhancement, the feature is extended to include activities that have:</p>
+        <p>•	A review queue present</p>
+        <p>•	The review queue bypassed</p>
+        <p>•	No signatures</p>
+        <p>
+            <b>NOTE</b>: This feature works in Wizards and Wizards &amp; Forms, but Forms-only activities may behave differently.</p>
+        <h2>Impacts:</h2>
+        <p>FL App: Wizard and Wizard &amp; Forms UI Activities</p>
+        <h2>Foundation</h2>
+        <h2>DTCC Updates</h2>
+        <p>As part of the DTCC App Sub Initiative, the following changes were made to the DTCCEntityAutoGen Class to bring it to current standards:</p>
+        <p>•	Added New Properties and marked replaced properties as obsolete.</p>
+        <p>•	Added new enumerations and marked replaced enumerations as obsolete.</p>
+        <p>•	Implemented corrections for properties and enumerations.</p>
+        <p>•	Removed obsolete enumerations values.</p>
+        <p>Provider updates are required to access the updates.</p>
+        <p>&#160;</p>
+        <h1>Fixed Defects</h1>
+        <p>•	JIRA: Embedded not working as expected in QA Next.</p>
+        <p>•	iConnect 279938: Admin - Rule Set profile – Rules disappear when saving rule set without updating rules.</p>
+        <p>•	JIRA - 2.30: "Send Email Request" for Signatures is not working.</p>
+        <p>•	JIRA - 2.30: After send request to reviewer, page displays error.</p>
+        <p>•	JIRA - 2.30: Page List or Forms List expand button not displaying properly.</p>
+        <p>•	JIRA: Application could not be rendered – Cannot read properties of undefined (reading ”IsEnabled”).</p>
+        <p>•	JIRA: ACORD eForm is blank, and fields are missing tags.</p>
+        <p>•	JIRA: Wrong submit confirmation message appears on legacy forms UI.</p>
+        <p>•	JIRA - 2.30: After Signature popup message not showing as expected on React UI (QA &amp; QA Next).</p>
+        <p>•	iConnect 280091: Requests dialog – Unable to send or cancel request.</p>
+        <p>•	JIRA - 2.30: Pre-Sale Activity – Correction to Limited Share functionality to ensure that agent cannot Complete Signature for “Complete Data Entry” limited sharing.</p>
+        <p>•	JIRA: In the Firelight Admin tool, Approved States are being cleared if the user unlocks a form that is locked by someone else and saved.</p>
+        <p>•	iConnect 280168: Using the copy with changes functionality to copy an application. while keeping the same state of the application is not created as expected.</p>
+        <p>•	JIRA - 2.29: PreSale Branch – Form/Wizard in package dropdown should be blank by default.</p>
+        <p>•	JIRA - 2.30: Requests option in other actions is throwing "Invalid Model Error."</p>
+        <p>•	JIRA: Ensure OrganizationId is always initialized in SessionModelBase.</p>
+        <p>•	JIRA: System allows invalid email address, which gets stuck in email queue.</p>
+        <p>•	iConnect 275265: Client Signature appears as a box instead of the expected value.</p>
+        <p>•	JIRA - 2.30: QA Next – Unable to launch FireLight through FL Access.</p>
+        <p>•	JIRA - 2.30: With Passcode timeout now explicitly set to 1 minute, we are unable to save other settings on the page.</p>
+        <p>•	JIRA - After submission of an application "Other Actions" hyperlink is not working.</p>
+        <p>•	JIRA - 2.30: Links (Like Other Actions) on popup are now disabled for Completed application.</p>
+        <p>•	JIRA - 2.30: FireLight Admin setting to Restrict Multiple App launches not working when more than one Next Activities are given On Admin Activities.</p>
+        <p>•	JIRA - Reviewer links provided in email are invalid.</p>
+        <p>•	iConnect 280302 iOS Safari not showing mobile number on Email sent for Client fill and sign.</p>
+        <p>•	When a transferred application is opened from the link in email, it skips the Welcome Page and goes straight to the Owner Page.</p>
+        <p>•	Error in Custom Family Copy Feature.</p>
+        <p>•	IOS Console allowing user to sign app without entering mandatory fields on data entry.</p>
+        <p>•	Conditionally triggered forms not appearing as expected in Print PDF Window.</p>
+        <p>•	User unable to submit the account opening type activity when "Disable Continue after Pre-Signature Review" is checked.</p>
+        <p>•	Manage optional forms functionality selects form without clicking Update Forms.</p>
+        <p>•	When Disable Continue after pre-signature review is enabled errors showing when user bypasses pre-signature review.</p>
+        <p>•	Consumer Profile form screen is missing in Suitability pre-check workflow.</p>
+        <p>•	User can submit the application for complete signing when accessing under limited sharing.</p>
+        <p>•	Getting errors on specific activities on Client Protected forms (Review, signature, return to application).</p>
+        <p>•	Uploaded documents remain visible in the background of activities</p>
+        <p>•	Uploaded “voided check” showing only first page</p>
+    </body>
+</html>

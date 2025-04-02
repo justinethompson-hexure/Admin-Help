@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Enable Force Deploy</b> checkbox to cause the Force Deploy option on the Deployments page, Deployment tab to default to selected (checked). See <MadCap:xref href="../../../Utilities/Deployments/Deploy Data.htm" target="_blank" alt="Deploy Data">Deploy Data</MadCap:xref>.</body>
+</html>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Hexure is phasing a project to add more value to the Post Issue Activity.</p>
+        <p>The first phase (set to release in May) includes a post-issue template for contract changes and withdrawals. The template will help guide users through the post-issue activity&#160;for contract changes that include name changes, address changes, SSN and DOB Changes; basic&#160;withdrawals with options for full and partial withdrawals, withdrawals from their free avialable amount, Gross/Net calculations, and many other value add additions; and, RMD Withdrawals.</p>
+        <p>The second phase (set to release in July) will include data retrieval to pre-fill data into the activity.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Post Issue functionality - adding a new generic template for client's use</p>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Current Post-Issue clients - this will impact only Post Issue clients and only future projects moving forward. Clients will need to work with implementation to get this new functionality set up</p>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>In the <b class="Bold">Validation Message Style</b> list, select a message style  (Inline or Pop-Up) to use in the wizard UI. Inline style is where validation messages appear inline in red text with a white background. When the message is too long to fit in the space, an ellipsis (...) appears at the end of the viewable message text. Users can pause the mouse over the validation icon to view the entire message. Pop-Up style is where validation messages appear in red text in pop-ups. The default is Inline.</p>
+        <p>
+            <strong>Spotlight Video:</strong> See the <a href="https://vimeo.com/406910762/47ae0123bd" target="_blank" title="FireLight Validation Message Enhancements" alt="FireLight Validation Message Enhancements">Validation Message Enhancements</a> Spotlight Feature Video for more information.</p>
+    </body>
+</html>

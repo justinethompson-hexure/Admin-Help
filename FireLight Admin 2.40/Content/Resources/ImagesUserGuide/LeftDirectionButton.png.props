@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileProperties>
+    <ImageOverlay Profile="D:\Documents\My Profiles\FireLightUserGuide.capro" ProfileHash="17ab8a245f347468213ad253f12e292d50527913" ScreenRectangle="1230,370,16,16">
+        <OriginalImage Type="Image" ShapeTimeSpan="10000" AutoAdjust="true" DPI="96" medium_print_EnableFormat="true" medium_print_DPI="300" Folder="D:\Documents\My Projects\FireLight Admin 2.18\Content\Resources\ImagesUserGuide" ExportFormat="png" medium_print_ExportFormat="png" BorderColor="#4682b4" Border="solid" FileName="Capture{n}" EnableGrayScaleFormat="false" medium_screen_and__max_width__64_063em__ExportFormat="png" medium_screen_and__max_width__64_063em__DPI="96" medium_screen_and__max_width__40em__ExportFormat="png" Title="Quote Left Directional Arrow Button" Alt="Quote Left Directional Arrow Button" ComputedWidth="16" ComputedHeight="16" medium_print_OutputScaleFactor="3.12" medium_print_ColorDepth="32">SUkqAJgBAACAP+BP8AQWDQeEQmFQuGQ2EQOCQ6Fvl+QkDgSJRmHwONQV2PSCsZvwQJAqCjcQAEAAUBx2HRCJO57QVaNOCL9twQYByClgZgIABcGy6GzCFO56wVZtSCMNuQQMg+ClEX0CdwUBSqiQujQWkUqbABiyMAB4IwUpjCgCkMVuXRB1POCrZqwRit6CQKCicLwUVhmVAGtXqGVmCioMSoOWcAYaEPx+wKRQRRMmCP1/QXBQV9v2CvrPUStAAsjSVEgUyoDRiEP5/QJvu6CrBowRpuaCSyCh3GUKVZCNASgAAfCWVCYLVjRwaIYRwbIALBpbbcADeQUlCugCjkgDOw0B8MHAiC+GixzmQZwO3Z7UANRzwQUX0AWmgCIKW6X+iGuHoFe9xonKggZg8goqBioAMKG/SNqMzDNMGgxvHYgpeGyggQAklQhBMgoCuGiKEPMADNoYiByHggpOGMzLHRM1yCnqfUPpaAAEgKgrXoTHYADIHSgA4CDzoE74AHge6GtGx0exEiQIATGsiSdBsqoygIAAEAD+AAQAAQAAAAAAAAAAAQQAAQAAABAAAAABAQQAAQAAABAAAAACAQMABAAAAF4CAAADAQMAAQAAAAUAAAAGAQMAAQAAAAIAAAARAQQAAQAAAAgAAAAVAQMAAQAAAAQAAAAWAQQAAQAAABAAAAAXAQQAAQAAAI8BAAAaAQUAAQAAAGYCAAAbAQUAAQAAAG4CAAAcAQMAAQAAAAEAAAAoAQMAAQAAAAIAAAA9AQMAAQAAAAIAAABSAQMAAQAAAAIAAAAAAAAACAAIAAgACAAAdwEA6AMAAAB3AQDoAwAA</OriginalImage>
+        <Shapes />
+        <Variables />
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

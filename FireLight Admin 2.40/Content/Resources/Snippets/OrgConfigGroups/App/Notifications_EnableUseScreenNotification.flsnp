@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Enable Use Screen Notification</b> checkbox to enable sending notifications to the agent. For example, when the client signs an application, the agent will receive a pop-up notification of the action.</body>
+</html>

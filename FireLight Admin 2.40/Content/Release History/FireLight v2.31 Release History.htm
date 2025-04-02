@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>FireLight v2.31 Release History</h1>
+        <h2>August 18, 2023, Production</h2>
+        <p>FireLight August 2023 Release – 08/14/2023</p>
+        <h2>Updates</h2>
+        <h3>Active Signer Types: Update to allow Active Signers to be used in rules</h3>
+        <p>A new well known data item is created, FLI_ACTIVE_SIGNER_TYPES. It is a comma delimited string that contains a list of all of the Active Signer Types, and if there are no active signer types, the DataItem is an empty string. The list of possible signers is all of the signer types in the Signer Type Drop down, but the data item will only show those that will complete a signature. The Active Signer Type Names will always be in English, and this DataItem will only work on activities that are Auto Saved.</p>
+        <h3>Add a Data Item to Identify Review Queue Name in Emails</h3>
+        <p>The existing email replacement tag &lt;QUEUE_NAME&gt; for review queue name is made available for Post Submit RQ email templates. This replacement tag is used in the email templates under the category “Review Queue” to identify the review queue referred to when approval/decline emails are sent.</p>
+        <h3>Add Auto Deploy Column to Sales Agreement Admin Report</h3>
+        <p>A new column “Auto Deploy” has been added to Sales Agreement admin report. This column will have value “True” or “False” for each sales agreement in the report.</p>
+        <h3>Address Errors when Running Agent Activity reports.</h3>
+        <p>Update report architecture to prevent “deadlock” issues when running activity reports.   This includes updates that impact the following reports:</p>
+        <ul>
+            <li>
+                <p>AgentFirmPipelineReportProvider</p>
+            </li>
+            <li>
+                <p>AgentSubmissionFirmReportProvider</p>
+            </li>
+            <li>
+                <p>ApplicationReportProvider</p>
+            </li>
+            <li>
+                <p>ANXPendingAppReportProvider</p>
+            </li>
+            <li>
+                <p>GroupEnrollmentReportProvider</p>
+            </li>
+            <li>
+                <p>HMLPipelineReportProvider</p>
+            </li>
+            <li>
+                <p>IllustrationUserDetailReportProvider</p>
+            </li>
+            <li>
+                <p>SAGApplicationSubmissionReportProvider</p>
+            </li>
+        </ul>
+        <h3>Activity Completion Admin Report</h3>
+        <p>A new Activity Report has been added “Activity Completion Report” that will display the completion duration of an activity sent for remote signature.  This report will track the duration from log in to signature completion</p>
+        <p>Non FireLight User Login time stamp is retained when they login using a link.</p>
+        <p>When an External users logins into Firelight via a link for Client Fill and Sign, Client Fill, Remote eSignature or  PreSubmit Review Queue the login timestamp is retained.</p>
+        <h3>Update the Lexis Nexis integration to include Emailage via a custom Action parameter</h3>
+        <p>We are adding "LexisNexis Emailage" as a Custom Action Parameter.   The custom action type will still display as "LexisNexis," but the Action Parameter will allow the user to select "LexisNexisEmailage" in the textbox.</p>
+        <p>Update the Lexis Nexis integration to include InstantID via a custom Action parameter</p>
+        <p>We are adding functionality to support mapping the dobVerified response.</p>
+        <h2>Resolved Defects</h2>
+        <ul>
+            <li>
+                <p>API: ValidateActivityData API is presenting an error when invoked.</p>
+            </li>
+            <li>
+                <p>API:  Application does not unlock after Rejecting Review Request via API Call</p>
+            </li>
+            <li>
+                <p>Audit Report: Viewed On" for Primary Signer is showing as N/A in the Audit Report, when we use "Request Fill and Sign" when we have multiple Signers.</p>
+            </li>
+            <li>
+                <p>Document Upload: Upload of documents is allowed after an activity is complete.</p>
+            </li>
+            <li>
+                <p>Document Upload: In the FireLight app, when creating an application then uploading a document using Other Actions or Custom Actions, the uploaded document cannot be removed.</p>
+            </li>
+            <li>
+                <p>Document Upload: When activity completed then user still able to upload the document from other actions menu.</p>
+            </li>
+            <li>
+                <p>eDelivery: Hiding of Request Print toolbar button in e-Delivery is not honoring group option</p>
+            </li>
+            <li>
+                <p>eSignature: App status stuck in 'In Signatures' after completing signatures with Pre-Signature Review.</p>
+            </li>
+            <li>
+                <p>eSignature: Confirmation message is not appearing as expected when sending the Passcode email (forms only)</p>
+            </li>
+            <li>
+                <p>Enrollment: Unable to upload participants csv file for Enrollment activity.</p>
+            </li>
+            <li>
+                <p>Enrollment: Unable to create Master Agreement for Enrollment Activity.</p>
+            </li>
+            <li>
+                <p>Enrollment: Validation missing for Invalid Product Master CUSIP</p>
+            </li>
+            <li>
+                <p>FL Admin: No message displayed to inform user that loading of deployment information timed out</p>
+            </li>
+            <li>
+                <p>FL Admin: In Organization Settings under Security tab. When using the Add New Supported Service Record, if the name provided is IXN, the record gets added into the Global Certificates list instead of the Supported Service Records list.</p>
+            </li>
+            <li>
+                <p>FL Admin: In the Administrative App, in Organization Settings under the Security tab, deleting a certificate from the Global Certificates list does not work.</p>
+            </li>
+            <li>
+                <p>Forms: Adding a form with the type Signing ceremony only conditional, the form appears always on signing ceremony for all signers without a triggering visibility rule.</p>
+            </li>
+            <li>
+                <p>Forms: Dropdown values in Mutual Fund applications are cleared after answering Yes to question 1 on the Mutual Fund Application form.</p>
+            </li>
+            <li>
+                <p>Forms: Continue button does not work for forms only applications when pre-sign review is on.</p>
+            </li>
+            <li>
+                <p>Forms/Wizard: The red bubble is not disappearing even after filling all mandatory fields on the page. Mandatory fields are showing red highlighted even after filled values.</p>
+            </li>
+            <li>
+                <p>Forms/Wizard: Validation text overlapping the page navigation panel.</p>
+            </li>
+            <li>
+                <p>Illustration: Illustration activity not working as expected due to an erroneous timestamp error.</p>
+            </li>
+            <li>
+                <p>Menu: All Sections are Displayed in Dropdown when Shouldn't be</p>
+            </li>
+            <li>
+                <p>Print PDF:  Conditionally triggered Package forms does not appearing on Document to Print window</p>
+            </li>
+            <li>
+                <p>Print: Showing time stamp error whenever click on print/display button</p>
+            </li>
+            <li>
+                <p>Print Forms: Application Package Wizard: Error when trying to print forms</p>
+            </li>
+            <li>
+                <p>Review Queue: Rejecting a PRE or POST signature review request is not working.</p>
+            </li>
+            <li>
+                <p>Review Queue: Showing "Unknown" text for user name in "Queue History" when reviewer completes reviewer documents</p>
+            </li>
+            <li>
+                <p>Review Queue: Rejecting a case and auto adding to another queue causes exception</p>
+            </li>
+            <li>
+                <p>RGA Integration: Navigates to Top of Section rather than Unanswered Question in Part 2 Interview</p>
+            </li>
+            <li>
+                <p>Unlock Activity: Not Able to Unlock Activity, Getting Time Stamp error upon Unlocking Activity.</p>
+            </li>
+            <li>
+                <p>Wizard: Date Picker – month and year dropdowns not always displayed</p>
+            </li>
+            <li>
+                <p>Wizard: Section breaks are not working as expected with multiple-instance wizards.</p>
+            </li>
+            <li>
+                <p>Wizard: Conditional Wizard not showing until app is refreshed.</p>
+            </li>
+            <li>
+                <p>Wizard:  form/wizard menu not refreshing for rules changes</p>
+            </li>
+            <li>
+                <p>Known Issues with High Priority</p>
+            </li>
+            <li>
+                <p>Create Activity: Occasional product type error when moving from Needs Determination to Application.   Business impact limited to clients with Needs Determination enabled.  NOTE: This is a pre-existing issue that is being actively worked.  EAES-1582</p>
+            </li>
+            <li>
+                <p>eSignature: eSignature is not working as expected when “Allow Not in Good Order Submittal” is used in combination with “React Signature”.  Business Impact limited to embedded clients who allow not in good order submission.    PC-1307</p>
+            </li>
+            <li>
+                <p>Mobile: Custom Action for activity Transfer is not working as expected in iOS Mobile App.  Business impact limited to clients with Needs Determination enabled. NOTE: This is a pre-existing issue that is being actively worked.  EAES-1501</p>
+            </li>
+            <li>
+                <p>Review Queue: Reviewer Passcode email is sent in error when Auto Passcode email is unchecked in the FL Admin.  Impact limited to review queue functionality.   Reviewers should be instructed to ignore this email.    EAES-1465</p>
+            </li>
+        </ul>
+        <h2>Other Known Issues</h2>
+        <ul>
+            <li>
+                <p>Advanced Search: Unable to select names with special characters in advanced search. EAES-1356</p>
+            </li>
+            <li>
+                <p>API: After a share request for a user has been submitted system should validate against additional share requests for that user.  EAES-1347</p>
+            </li>
+            <li>
+                <p>Document Upload: When Uploading Documents during Request Client Fill or Fill and Sign the remaining size field is missing. PC1310/EAES-1494/ EAES-1489</p>
+            </li>
+            <li>
+                <p>Embedded: Error is presented when trying to share an activity in Embedded.</p>
+                <p>PC-1268</p>
+            </li>
+            <li>
+                <p>eSignature: State Signed and Date overlapping when viewing the form after signatures are completed in some circumstances. EAES-1592</p>
+            </li>
+            <li>
+                <p>eSignature: Signatures do not show as expected when viewing the completed application.   Signatures are present and show as expected when Print PDF functionality is used. EAES-1583</p>
+            </li>
+            <li>
+                <p>eSignature: Client Fill and Sign popup is not presented as expected when Localization is enabled. PC-1270/PC-1271</p>
+            </li>
+            <li>
+                <p>eSignature: When Using React Esignature and “User Lexis Nexis is checked Lexis Nexis Emailage service audit is erroneously generated. CR-835</p>
+            </li>
+            <li>
+                <p>eSignature:  When Using MVC Signature and Lexis Nexis Emailagle is checked for a signer, if multiple signer is selected the emailage audit is not generated as expected.   CR-834</p>
+            </li>
+            <li>
+                <p>eSignature: Using React eSignature when the Agent signs first they are then unable to select multi-signer functionality.   EAES-1350</p>
+            </li>
+            <li>
+                <p>FL Access:  In Manage User functionality files that contain SSN with format “xxxxxxxxx” error and cannot be uploaded. PC-1267</p>
+            </li>
+            <li>
+                <p>FL Admin Package tab Occasional error when searching for a Form or Wizard</p>
+                <p>PC-1213</p>
+            </li>
+            <li>
+                <p>Lexis Nexis -emailage report is not showing all data as expected. CR-839</p>
+            </li>
+            <li>
+                <p>Mobile: Trying to check out multiple applications at once errors in the iOS Mobile App. EAES-1590</p>
+            </li>
+            <li>
+                <p>	Multi Application: Continue prompt is showing inappropriately during the Multi Application workflow.   EAES-1561</p>
+            </li>
+            <li>
+                <p>Optional Forms: Optional Template form is not updating as expected when triggered or untriggered by rules.   Refresh is required to see the change.</p>
+                <p>EAES-1565</p>
+            </li>
+            <li>
+                <p>PreSale – Occasionally creating multiple child activities in error.   EAES-1365</p>
+            </li>
+            <li>
+                <p>Review Queue: When using Pre or Post Signature Review and the request of “Send Email Request” an error occurs when used in combination with “React eSignature”. EAES-1556</p>
+            </li>
+            <li>
+                <p>Review Queue: Error in approval process for pre/ post signature review under some circumstances. EAES-1557/ EAES-1594</p>
+            </li>
+            <li>
+                <p>Review Queue:   If the user clicks twice on the Reviewer Document in review Queue and error is generated.  EAES-1455</p>
+            </li>
+            <li>
+                <p>Reports:  Occasionally the Sales Agreement Administration Report cannot be produced.   Error is presented.</p>
+            </li>
+            <li>
+                <p>Transfer Activity:   Attempting to complete a transfer of a deleted activity results in incorrect emails being generated.  EAES-1446</p>
+            </li>
+        </ul>
+        <p>*** Please note that the JIRA ticket numbers are provided for reference.    JIRA tickets are not accessible to users outside Hexure.***</p>
+    </body>
+</html>

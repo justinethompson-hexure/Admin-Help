@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>In the <b class="Bold">Requests Timeout</b> text box, enter the number of days in which the electronic request and associated passcode expires. This is the length of time in days an email request (e.g., signature, client fill &amp; sign, share, etc.) and passcode is valid before the agent must send out a new request.</body>
+</html>

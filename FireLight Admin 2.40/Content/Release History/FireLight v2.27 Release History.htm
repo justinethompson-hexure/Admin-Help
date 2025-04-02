@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight v2.27 Release History</h1>
+        <p><b class="Bold">NOTE: Documentation for this release is currently incomplete and in a "DRAFT" status.</b>
+        </p>
+        <h2 MadCap:conditions="General.Postpone">December 9, 2022 Production Release</h2>
+        <h2 MadCap:conditions="General.Postpone">November 18, 2022 QA Next Release</h2>
+        <h2>2.27 November 11, 2022 QA Next Release</h2>
+        <h2>Enhancements</h2>
+        <h3>Foundation</h3>
+        <p><b class="DRNumberBold">Admin - Reset Copy Rules Search Field When Cleared</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">CMR&#160;269856 </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Abi</MadCap:conditionalText><em>Complete</em>   (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/269856.flsnp" />
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Enrollment Activity - Agent Signing</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/258891 Enrollment Workflow - Agent Signature.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 258891</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Keerti, Abi</MadCap:conditionalText><em>In Development</em>   (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/258891.flsnp" />
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">ExamOneHealthPiQture Integration</b> </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">CMR&#160;272606 </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Lawrence </MadCap:conditionalText><em>In Test</em>   (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/272606.flsnp" />
+                <p MadCap:conditions="General.Postpone">Help: Custom Action and Button in Designer; </p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Signatures - Agent Remote Sign </b> <a href="https://vimeo.com/745526043/48fd821e58" target="_blank" title="Agent Remote Sign" alt="Agent Remote Sign">Video</a></p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/258890 Agent Remote Sign.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 258890</a></b>
+                    <MadCap:conditionalText MadCap:conditions="General.Postpone">Keerti, Abi<span style="background-color: #32cd32;">approved</span></MadCap:conditionalText> <em>In Test</em> (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/258890.flsnp" />
+                <p MadCap:conditions="General.Postpone">Admin Help: Org. Config/Email/Email and Agent Signature Request Email, User Guide: New Activity/Signatures/Agent Signature and E-Sign in React for Embedded Users</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Signatures - Allow Separate Disable Send Email Request Setting for Agent and Client</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/269378 Ability to Disable Send Email for Agent.pdf" target="_blank" title="Design Document" alt="Design Document">CMR&#160;269378</a></b>
+                    <MadCap:conditionalText MadCap:conditions="General.Postpone">Keerti, Abi</MadCap:conditionalText><em>In Test</em>   (Carriers and Distributors) For Agent Remote Sign</p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/269378.flsnp" />
+            </li>
+        </ul>
+        <h3>Work Orders</h3>
+        <p><b class="DRNumberBold">Implement Timeout for Passcodes</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/269829 Implement Timeout for Passcode.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 269829</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Keerti, Abi </MadCap:conditionalText><em>In Development</em> (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/269829.flsnp" />
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Provide "Generate Link Without Email" Option for Client Fill &amp; Sign Requests</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/235394 Generate Link Without Email Functionality.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 235394</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Keerti, Abi </MadCap:conditionalText><em>In Test</em> (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/235394.flsnp" />
+            </li>
+        </ul>
+        <h2>Fixed Defects</h2>
+        <p><b class="DRNumberBold">Admin</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 271019 </b> Error when generating tag list in Download Tag List utility. Problem: When the button to download the Tags was clicked, a null error could happen, but would definitely not do anything else. The download was never properly fired off. The window.open that was supposed to start the download process, would be blocked by popup blocking in the web browser. Resolution: Fixed null value issue, window.open issue (was being blocked), added a spinner to denote that the user must wait for the process to finish. <br />Areas Impacted: Utilities &gt; Download Tag List screen in Admin</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Firm Management</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 272578 </b> User cannot access FireLight when Firm Org is set in Groups. Problem: User with firm id added to the group was not able to create product that should have been allowed according to group settings for accessibility. Resolution: The sales agreement must also have the firm enabled in the Firm Org link.  This link was not being displayed for broker orgs, so it could not be set for the client.  Removed the restriction to allow the option to display for all orgs in the Sales Agreement. <br />Areas Impacted: The Sales Agreement view has a Firm Org hyperlink</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Integration</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 262677 </b> Sporadic Scheduler BackOfficeService Failures due to Collection Modification on Async Waiting. Problem: This issue has resulted in some back office processing to complete but remain as processing in the workflow. Resolution: In Azure the Scheduler process continues to run, which does not require a wait after kicking off the BackOfficeManager.ProcessWorkflows(). Because of this I removed the logic to track the ActiveTasks. This logic looked flawed because there were no locks on this list when it could be modified by different threads. <br />Areas Impacted: Scheduler</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">System Outage</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 272881 </b> Failure to load keys from vault causes system outage. Problem: An outage occurred in Production on 11/4/2022.  A CSR was added to the key vault for UAT.  Because the key vault is shared for the Production region (UAT, Staging, &amp; Production environments), and the added item was in a disabled state, it could not be loaded by the key vault client.  There is logic to retrieve and cache encryption keys from the key vault when they expire out of the cache, but because an exception occurred loading from the vault due to the disabled CSR in the vault, this led to every incoming request attempting to load from the vault but failing, the request failing, and causing FireLight to be unavailable (and also resulted in Azure throttling access to the key vault). Resolution: The CSR was removed from the vault, which resolved the issue, but this prevents the CSR from being configured to address a support issue with VFA mutual cert authentication on outbound transmissions. The following items were implemented: 1) Resiliency of loading of the encryption keys from the vault were improved, so that if an error occurs loading one key, it doesn't bring the system down. 2) Loading of the encryption keys is on-demand instead of preloading all keys.  This could also resolve other issues that have been observed, like 20 seconds to load DTCC Editor and unnecessary overhead starting the app services or when debugging the app locally. 3) Loading of encryption keys  loads only the keys and not any certificates, CSRs, or other items in the vault.<br />Areas Impacted: UAT, Staging, and Production</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Wizards and Forms</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 272931 </b> Allocation screen - not calculating the total until moving to the next screen. Problem: Data Grid fields in columns other than the first were not being correctly receiving updates from rules. Resolution: Fixed <br />Areas Impacted:&#160;Wizard Data Grids</p>
+            </li>
+        </ul>
+        <p MadCap:conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

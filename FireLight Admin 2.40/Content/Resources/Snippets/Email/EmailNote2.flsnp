@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body><sup>2</sup>You can disable preference fields and send with the incoming FireLight<sup MadCap:conditions="General.Online">®</sup> request. If template fields are not disabled, users can also type the From name and Email. There are two ways that the preference fields can be disabled. One is using the Organization Configuration/Groups, <MadCap:xref href="../../../Organization Configuration/Groups/App.htm" alt="App">App</MadCap:xref> tab setting "Disable Edit Preferences." The other is done automatically, similar to the DMARC option. If the user comes in through an external FireLight request, the preference fields are disabled automatically. However, if the Groups, App tab setting "Enable Override SSO" is enabled, it enables the group to still edit the preferences full name and email address even if they come in through a request.</body>
+</html>

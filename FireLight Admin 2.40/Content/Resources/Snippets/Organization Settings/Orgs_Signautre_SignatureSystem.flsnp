@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>In the <b class="Bold">Signature System</b> list, select a signature capture process for the organization. </p>
+        <p><b>FireLight Legacy</b> = the legacy signing process. </p>
+        <p><b class="Bold">FireLight v2</b> = the modern FireLight signature system that uses React. <b>NOTE:</b> This is required when using FireLight's new user interface. </p>
+        <p><b class="Bold">DocuSign</b> = the signing process via DocuSign, which means all signatures for the organization is captured only by DocuSign instead of the FireLight signing process. <b class="Bold">NOTE:</b> If the organization is NOT licensed to use DocuSign then 'DocuSign' will not be available in the Signature System list.</p>
+        <ul>
+            <li>
+                <p>If a carrier has DocuSign enabled, a product from a carrier's environment that is deployed to a distributor's environment will still honor DocuSign within the distributor's environment (who does not have this setting enabled) when using that carrier's products.</p>
+            </li>
+            <li>
+                <p>If a distributor has DocuSign enabled, it is applied to all carrier's products within that distributor's environment.</p>
+            </li>
+            <li>
+                <p>If FLI_DOCUSIGN_ESIGN=true, this dataitem will override the "Use DocuSign Signature" checkbox and the user will need to use DocuSign.</p>
+            </li>
+            <li>
+                <p>If "FLI_DECLINE_ESIGN=true, this dataitem will override the "Use DocuSign Signature" checkbox and the user will need to wet sign.</p>
+            </li>
+        </ul>
+    </body>
+</html>

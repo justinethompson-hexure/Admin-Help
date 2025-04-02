@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b>Enable Form Changes Notifications</b> checkbox to enable viewing of form change notification messages for any of the forms that changed and are included in the application. If the form is active, notification allows the user to see what changes occurred.  If the form is locked, the user has the option to unlock to get latest changes.</body>
+</html>

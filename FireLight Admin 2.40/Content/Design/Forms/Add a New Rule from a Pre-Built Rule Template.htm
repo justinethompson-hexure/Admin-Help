@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Add a New Rule from a Pre-Built Rule Template</h1>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FormLockUnlock.flsnp" />
+        </p>
+        <ol>
+            <li>
+                <p>On the navigation bar, click <b class="Bold">Designer/Form Designer</b>.</p>
+            </li>
+            <li>
+                <p>On the upper left of the Form Designer page, select a form in the list.</p>
+            </li>
+            <li>
+                <p>On the form, click the control (data item) for the rule.</p>
+                <p>For example, click the <b>Owner_DOB</b> control.</p>
+            </li>
+            <li>On the left under <b>Input Control</b>, click <b>Rules Window</b>.</li>
+            <li>In the <b>Filter Rule Sets</b> box, type the name of the rule set if known and click <img src="../../Resources/ImagesAdmin/SearchButton.jpg" alt="Search Button" title="Search Button" />.</li>
+            <li>
+                <p>On the lower right in <b>Selected Control</b> verify the name of the selected control for the new rule. </p>
+                <p>For example, ensure the <b>Owner_DOB</b> control is the selected control in the Rules Window. </p>
+                <p>
+                    <img src="../../Resources/ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" /> To view a list of all the rules associated with the form controls, clear the <b>List only rules for selected control</b> checkbox.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/RulesWindow21.jpg" alt="View a List of All Rules Associated with the Form" title="View a List of All Rules Associated with the Form" />
+                </p>
+            </li>
+            <li>
+                <p>On the upper right, click <b>New</b>.</p>
+            </li>
+            <li>
+                <p>On the left in the <b>New Rule Template</b> window, select a template for the new rule.</p>
+                <p>For example, select <b>Date Valid</b>.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/RulesWindow3.jpg" alt="New Rule Template Window" title="New Rule Template Window" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+            <li>
+                <p>In the New Rule Template window, enter or verify the <b>dataitemid</b> value is set to the correct data item. For example, enter <b>Owner_DOB</b>. Click the <b>Ok</b> button to close the New Rule Template window. </p>
+            </li>
+            <li>
+                <p>On the <b>Rules Window</b> in <b>Rule Name</b>, add a field identifier to the rule. For example, add the field name to the rule, as in <b>Date Valid: Owner_DOB</b>. </p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/RulesWindow24.jpg" alt="Rules Window" title="Rules Window" />
+                </p>
+            </li>
+            <li>
+                <p>In <b>Rule Scope</b>, select an option to indicate when the rule is executed. </p>
+                <MadCap:snippetBlock src="../../Resources/Snippets/Rules/RuleScopes.flsnp" />
+            </li>
+            <li>
+                <p>On the Rules Window, click <b>Update</b> to update the new rule for the control, and lock the rule set for editing.</p>
+                <p>For example, <MadCap:variable name="General.ProductName" /> checks to see whether the owner’s date of birth is a valid date.</p>
+                <p>Click the <b>X</b> on the upper right to close the Rules Window.</p>
+            </li>
+            <li>
+                <p>Click <b>Yes</b> on the<b> Rule Set Changes</b> dialog to save the rule set changes, which unlocks the rule set for editing by other users. </p>
+                <p><b>NOTE:</b> If the <a href="../../Organization Configuration/Organizations/Admin.htm#ValidateRuleNameUniqueness" target="_blank" alt="Validate Rule Name Uniqueness">Validate Rule Name Uniqueness</a> checkbox is selected on the Admin tab in Organization Configuration/Organization Settings, the new rule cannot be saved unless it has a unique name.</p>
+            </li>
+            <li>After adding and saving a rule set, add the rule set to the applicable <MadCap:xref href="../../Product Configuration/Packages.htm" target="_blank" alt="Packages">Packages</MadCap:xref>.</li>
+        </ol>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This new feature enhances usage of data grids and navigating through the rows within the data grids. There is a new XML rule node created to allow writing efficient rules to loop through the rows in data grid and assigning values to another data item in the wizard. Adding this new rule node will reduce the number of lines coded for cases such as funds allocation, making rules management efficient for client's forms development team.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>No UI impact - Add a new XML rule node "&lt;copytabletodirange&gt;" that is available while writing rules (info is added into the Node Help on Rules Window in the admin tool).</p>
+            </li>
+        </ul>
+    </body>
+</html>

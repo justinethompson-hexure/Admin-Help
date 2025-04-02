@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+	<head>
+		<link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h1><a name="top"></a>Add Containers and Fields</h1>
+		<MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/WzdLockUnlock.flsnp" />
+		<p class="note"><strong>NOTE:</strong> See <MadCap:conditionalText MadCap:conditions="General.PDF">the "Common Tags" topic in Admin Help </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../Common Tagging/Common Tags.htm" target="_blank" alt="Common Tags">Common Tags</MadCap:xref></MadCap:conditionalText> for common tags to be used in mapping dataitems. Use of common tags ensures data is mapped correctly throughout the system, for example, inbound data, input controls, CRMs, etc.</p>
+		<ol>
+			<li>
+				<p>On the navigation bar, click <b class="Bold">Designer/Wizard Designer</b> to go to the Wizard Designer page. </p>
+				<p><b class="Bold">NOTE:</b> To lock a wizard to prevent the wizard from being edited by another user while you are working on the wizard, locate the wizard in the grid at the top of the Wizard Library page, and click the <img src="../../Resources/ImagesAdmin/LockButton-Unlocked.jpg" alt="Lock Button - Unlocked" title="Lock Button - Unlocked" />button to lock the wizard. When finished editing the wizard, click the <img src="../../Resources/ImagesAdmin/LockButton-Locked.jpg" alt="Lock Button - Locked" title="Lock Button - Locked" />  button to unlock the wizard. If a user is editing a wizard, FireLight automatically locks the wizard from editing by a second user who attempts to edit the wizard. The second user receives a "User 'UserName' is currently working on the wizard" message on the upper left above the Wizard name. When the first user saves the wizard and exits, the second user can then edit the wizard.</p>
+			</li>
+			<li>
+				<p>On the upper left of the Wizard Designer page, select a wizard in the <b class="Bold">Wizard</b> list. Select a wizard page in the <b class="Bold">Page</b> list or click the <b class="Bold">Add New Page</b> link on the left. See <MadCap:xref href="Add and Delete Pages and Section Breaks.htm" alt="Add and Delete Pages and Section Breaks">Add and Delete Pages and Section Breaks</MadCap:xref> for instructions.</p>
+			</li>
+			<li>
+				<p>Add Panels, Groups, and Fields to the Wizard.</p>
+			</li>
+			<li>
+				<p>On the upper left, click the <b class="Bold">SAVE WIZARD</b> button to save the wizard. </p>
+				<p><b>NOTE:</b> When you save a wizard, if the wizard is not locked and another user has saved changes to the wizard since you began your work,  a <strong>Wizard Changes</strong> dialog opens. Choose one of the following buttons on the dialog: <strong>Overwrite Changes</strong> to overwrite the changes that the other user made and update the wizard with your latest changes, <b> Discard Changes</b> to discard the changes that you made and open the last saved version of the wizard by the other user, or <b>Cancel Save</b> to close the dialog and return to the last active location in the wizard. </p>
+			</li>
+			<li>
+				<p>
+					<MadCap:snippetText src="../../Resources/Snippets/Rules/UpdateRulesWizard.flsnp" />
+				</p>
+			</li>
+		</ol>
+		<h2>Containers</h2>
+		<p>Containers are optional. They are used to group fields together and to assist with complex layouts. You can embed containers within containers if desired.</p>
+		<p>The Wizard page has two types of containers: Group and Panel.  A Group strictly manages the containers and fields within the Group. A Panel is similar to a Group, but has additional properties, such as a section header and help text.</p>
+		<p>Do the following to add and manage containers in a wizard:</p>
+		<ul>
+			<li>Add a container – click and drag a Group or Panel from the right pane onto the wizard surface.</li>
+			<li>
+				<p>Select an existing container – click the container. The container activates and an orange border appears around it.</p>
+				<p MadCap:conditions="General.Online">
+					<img src="../../Resources/ImagesAdmin/Wizard18.png" alt="Group Container" title="Group Container" MadCap:conditions="General.Online" />
+				</p>
+			</li>
+			<li>Edit a container – either double-click the container or click it and click the Edit <img src="../../Resources/ImagesAdmin/Wizard15.png" alt="Wizard Edit Button" title="Wizard Edit Button" /> button on the toolbar above the container.</li>
+			<li>Copy a container – click the container and click the Copy <img src="../../Resources/ImagesAdmin/Wizard16.png" alt="Wizard Toolbar Copy Button" title="Wizard Toolbar Copy Button" /> button toolbar above the container. The copy is placed at the bottom of the current page. The copied container includes all embedded containers and fields.</li>
+			<li>Delete a container – click the container and click the Delete <img src="../../Resources/ImagesAdmin/Wizard17.png" alt="Wizard Toolbar Delete Button" title="Wizard Toolbar Delete Button" /> button toolbar above the container. This deletes the container and its contents, including all embedded containers and fields.</li>
+			<li>
+				<p>Change the size of a container – click the container and increase or decrease the size by clicking the less <img src="../../Resources/ImagesAdmin/Wizard20.png" alt="Wizard Toolbar Decrease Width" title="Wizard Toolbar Decrease Width" /> or greater <img src="../../Resources/ImagesAdmin/Wizard19.png" alt="Wizard Toolbar Increase Width" title="Wizard Toolbar Increase Width" /> button on the toolbar. You can also edit any container and change the width in the field properties (see details in the individual container types).</p>
+				<p><strong>NOTE:</strong> Containers, and fields embedded within a container that is being re-sized, are not adjusted.</p>
+				<p MadCap:conditions="General.Online">
+					<img src="../../Resources/ImagesAdmin/Wizard8.jpg" alt="Adjust Width" title="Adjust Width" MadCap:conditions="General.Online" />
+				</p>
+			</li>
+		</ul>
+		<p><strong>Container Types</strong>
+		</p>
+		<p class="Indent">
+			<MadCap:xref href="Group.htm" alt="Group">Group</MadCap:xref>
+		</p>
+		<p class="Indent">
+			<MadCap:xref href="Panel.htm" alt="Panel">Panel</MadCap:xref>
+		</p>
+		<h2>Fields</h2>
+		<p>Do the following to add and manage fields in a wizard.</p>
+		<ul>
+			<li>Add a field – click and drag an item from the right pane onto the wizard surface.</li>
+			<li>
+				<p>Select an existing field  – click the field. The field is activated and an orange border appears around it with toolbar at the top of the field.</p>
+				<p MadCap:conditions="General.Online">
+					<img src="../../Resources/ImagesAdmin/Wizard14.png" alt="Wizard Toolbar" title="Wizard Toolbar" MadCap:conditions="General.Online" />
+				</p>
+			</li>
+			<li>Edit a field – double-click the field to open the field properties or click the field and click the <b class="Bold">Edit</b> <img src="../../Resources/ImagesAdmin/Wizard15.png" alt="Wizard Edit Button" title="Wizard Edit Button" /> button  on the toolbar above the field.</li>
+			<li>Copy a field – click the field and click the <strong>Copy</strong> <img src="../../Resources/ImagesAdmin/Wizard16.png" alt="Wizard Toolbar Copy Button" title="Wizard Toolbar Copy Button" /> button  on the toolbar above the field. The copy is placed at the bottom of the current page.</li>
+			<li>Delete a field –  click the field and click the <strong>Delete</strong> <img src="../../Resources/ImagesAdmin/Wizard17.png" alt="Wizard Toolbar Delete Button" title="Wizard Toolbar Delete Button" /> button on the toolbar above the field.</li>
+			<li>Change the size of a field –  click the field and increase or decrease the size by clicking the less   <img src="../../Resources/ImagesAdmin/Wizard20.png" alt="Wizard Toolbar Decrease Width" title="Wizard Toolbar Decrease Width" /> or greater  <img src="../../Resources/ImagesAdmin/Wizard19.png" alt="Wizard Toolbar Increase Width" title="Wizard Toolbar Increase Width" /> button on the toolbar. You can also edit any field and change the width in the field properties (see details in the individual field types).</li>
+		</ul>
+		<p><strong>Field Types</strong>
+		</p>
+		<p class="Indent">
+			<MadCap:xref href="Address Autocomplete.htm" alt="Address Autocomplete">Address Autocomplete</MadCap:xref>
+		</p>
+		<p class="Indent">
+			<MadCap:xref href="Check Box.htm" alt="Check Box">Check Box</MadCap:xref>
+		</p>
+		<p class="Indent">
+			<MadCap:xref href="Comment Box.htm" alt="Comment Box">Comment Box</MadCap:xref>
+		</p>
+		<p class="Indent">
+			<MadCap:xref href="Custom Action.htm" alt="Custom Action">Custom Action</MadCap:xref>
+		</p>
+		<p class="Indent">
+			<MadCap:xref href="Data Grid.htm" alt="Data Grid">Data Grid</MadCap:xref>
+		</p>
+		<p class="Indent">
+			<MadCap:xref href="DatePicker.htm" alt="DatePicker">DatePicker</MadCap:xref>
+		</p>
+		<p class="Indent">
+			<MadCap:xref href="Divider.htm" alt="Divider">Divider</MadCap:xref>
+		</p>
+		<p class="Indent">
+			<MadCap:xref href="Dropdown List.htm" alt="Dropdown List">Dropdown List</MadCap:xref>
+		</p>
+		<p class="Indent">
+			<MadCap:xref href="Image.htm" alt="Image">Image</MadCap:xref>
+		</p>
+		<p class="Indent">
+			<MadCap:xref href="Increment Button.htm" alt="Increment Button">Increment Button</MadCap:xref>
+		</p>
+		<p class="Indent">
+			<MadCap:xref href="Navigation Link.htm" alt="Navigation Link">Navigation Link</MadCap:xref>
+		</p>
+		<p class="Indent">
+			<MadCap:xref href="Radio Button.htm" alt="Radio Button">Radio Button</MadCap:xref>
+		</p>
+		<p class="Indent">
+			<MadCap:xref href="Schedule.htm" alt="Schedule">Schedule</MadCap:xref>
+		</p>
+		<p class="Indent">
+			<MadCap:xref href="Slider.htm" alt="Slider">Slider</MadCap:xref>
+		</p>
+		<p class="Indent">
+			<MadCap:xref href="SmartDatePicker.htm">Smart DatePicker</MadCap:xref>
+		</p>
+		<p class="Indent">
+			<MadCap:xref href="Smart Text Box.htm">Smart Text Box</MadCap:xref>
+		</p>
+		<p class="Indent">
+			<MadCap:xref href="Text.htm" alt="Text">Text</MadCap:xref>
+		</p>
+		<p class="Indent">
+			<MadCap:xref href="Text Box.htm" alt="Text Box">Text Box</MadCap:xref>
+		</p>
+		<p MadCap:conditions="General.Online"><a href="../../UserGuide/New Activity/Data Entry/Page Navigation.htm" alt="Return to Top">Return to Top</a>
+		</p>
+	</body>
+</html>

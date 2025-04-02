@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>In the <b>Allowed Override Redirect URLs</b>&#160;text box, enter comma-separated URLs to which users can be directed after form submission. URLs entered here override the default override URL, if specified. Any Form or Wizard with a data item with the field name FLI_SUBMIT_REDIRECT_URL will redirect to the URL(s) specified here following a logout event.</p>
+    </body>
+</html>

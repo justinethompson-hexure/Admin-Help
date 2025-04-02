@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Needs Determination</b> checkbox to provide group access to the Needs Determination activity. <b class="Bold">NOTE:</b> This group code does not need to be enabled for users who SSO into FireLight with a pre-filled needs questionnaire or do not use the Needs Determination activity in FireLight. See <MadCap:xref href="../../../../Features/Needs Determination.htm" target="_blank" alt="Needs Determination">Needs Determination</MadCap:xref> in Features. <MadCap:conditionalText MadCap:conditions="General.Online">See also <MadCap:xref href="../../../../UserGuide/New Activity/Needs Determination.htm" target="_blank" alt="Needs Determination [User Instructions]">Needs Determination [User Instructions]</MadCap:xref>.</MadCap:conditionalText></body>
+</html>

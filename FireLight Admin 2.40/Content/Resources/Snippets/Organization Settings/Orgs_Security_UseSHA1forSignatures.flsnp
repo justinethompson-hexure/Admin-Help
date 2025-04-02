@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Use SHA1 for Signatures</b> checkbox to use SHA1 encryption for signatures in signed PDFs instead of the FireLight standard SHA2 encryption for signatures.</body>
+</html>

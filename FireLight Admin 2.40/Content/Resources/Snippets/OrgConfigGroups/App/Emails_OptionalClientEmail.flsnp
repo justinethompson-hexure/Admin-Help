@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b>Optional Client Email</b>  checkbox to not require a client email address in Client Identification Verification. Without a client email address, the system cannot send an email to the client after application submission with information on how to retrieve the final signed documents for the application. The agent must provide the client with signed copies of the documents through another means. If this checkbox is selected and the email field is left empty in the client verification screen, the user will receive a warning before continuing.</body>
+</html>

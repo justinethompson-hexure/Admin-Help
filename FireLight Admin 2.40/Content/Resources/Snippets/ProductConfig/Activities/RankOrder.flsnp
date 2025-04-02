@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Enter an optional <b class="Bold">Rank Order</b> to define the ranking/presentation order of the activities the organization supports on the FireLight home page. The maximum value is 5 digits.</p>
+        <ul>
+            <li>If no rank order values are entered for any enabled activities, activities is presented in the default order defined by base FireLight.</li>
+            <li>
+                <p>It is not necessary that the rank order given be sequential starting 1, 2, 3, etc. The admin can choose to set the rank order initially as 10, 20, 30, etc. This would allow the admin user to activate an additional activity at a later time and insert it between two existing activities without having to renumber all subsequent activities. For example, a rank order of 25 would be inserted between 20 and 30, and no other numbering changes would be required.</p>
+            </li>
+            <li>If rank order values have been defined for all enabled activities, the activities is presented in a Z order (top to bottom, left to right) from smallest to largest rank order.</li>
+            <li>If rank order values have been defined for some but not all enabled activities, activities with defined rank order is listed first in a Z order (top to bottom, left to right) from smallest to largest rank order. Any enabled activities without a rank order defined will appear in alphabetical order following ranked activities.</li>
+            <li>Multiple activities cannot have the same rank order number. Otherwise a "Cannot save the same rank number twice"&#160;message appears.</li>
+        </ul>
+        <p MadCap:conditions="General.Online">The base FireLight default rank order follows:</p>
+        <p MadCap:conditions="General.Online">
+            <img src="../../../ImagesAdmin/Capture116.png" alt="FireLight Base Default Rank Order" title="FireLight Base Default Rank Order" MadCap:conditions="General.Online" />
+        </p>
+    </body>
+</html>

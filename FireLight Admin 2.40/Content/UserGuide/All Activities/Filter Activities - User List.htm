@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Filter Activities - User List<MadCap:conditionalText MadCap:conditions="General.Online"> [User Instructions]</MadCap:conditionalText></h1>
+        <h2>Filter Activities</h2>
+        <ol>
+            <li>
+                <p>In the area below the toolbar and above the list of activities, do any of the following:</p>
+                <p>
+                    <img src="../../Resources/ImagesUserGuide/All Activities/Capture7.png" alt="" title="" />
+                </p>
+                <ul>
+                    <li>If the group has user sharing enabled, select a user in the <b class="Bold">User</b> list to filter the activities by user. See "User List" below for instructions. "My Activities" is the default.</li>
+                    <li>If the organization has multiple locales enabled, select a <b class="Bold">Locale</b> in the list to filter the activities by locale. "Any" is the default.</li>
+                    <li>In <b class="Bold">Activity Type</b>, select an activity in the list to filter the activities by activity type (PreSale, Application, Illustration, Quote, etc.). "All" is the default.</li>
+                    <li>
+                        <p>In <b class="Bold">Status</b>, select a status from the list (Any, Data Entry, Locked, Signatures, PreSubmit Review, Review Queue, Submit Requested, Complete, Terminated, Purged, etc.) to filter activities by status. For example, select <b class="Bold">Data Entry</b> to view activities that are in the Data Entry status. See <MadCap:xref href="Activity Display Statuses.htm" target="_blank" alt="Activity Display Statuses">Activity Display Statuses [User Instructions]</MadCap:xref> for a list of available statuses.</p>
+                        <p><b class="Bold">NOTE:</b>  Purged applications appear only when you set <b class="Bold">Status</b> to <b class="Bold">Purged</b>. Purged applications are not included in any other Status views.</p>
+                    </li>
+                    <li>
+                        <p>In <b class="Bold">Sort</b>, select a sort option from the list to filter the activities by that option (Date, Activity Name, Product Name).</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Click the numbered navigation buttons at the bottom of the page to move through multiple pages of activity listings.</p>
+            </li>
+        </ol>
+        <h2>Export Filtered Activities</h2>
+        <p>Click the <b class="Bold">Export</b> button on the  toolbar to export the filtered data to a .csv file. See <MadCap:xref href="Export.htm" title="Export" alt="Export">Export</MadCap:xref>.</p>
+        <h2><a name="UserList"></a>User List</h2>
+        <p>When you have visibility into multiple users’ activities, through either a single activity share, global all activities user share, or group case access determined by the Group settings in FireLight<sup MadCap:conditions="General.Online">®</sup> Admin, you can select a user from the User list to view their activities. The User list shows the five most recent users.</p>
+        <p class="Indent"><strong>NOTE:</strong> The Active Agent User List setting in FireLight Admin restricts the list of agents in the User List on the All Activities page to only agents that have had activity since the last purge date. It can have an effect on SSO logins that use "On Behalf Of" in their 1228/103. If an assistant is listed as a user in the 1228 and a different agent user is listed in the 103, and the agent has not created any activities recently, the agent user is not available in the User List, which can cause a permissions error.&#160; </p>
+        <ol>
+            <li>On the navigation bar, click <b>All Activities</b>.</li>
+            <li>
+                <p>In the <b class="Bold">User</b> list, click a <b class="Bold">user ID</b> to view only the selected user’s activities. Click <b class="Bold">My Activities</b> to view only your own activities. The default setting is My Activities.</p>
+                <p><b class="Bold">NOTE:</b> The first time you share a case with a new user, the user may not appear in the User List until you search for the user name. Click the search   <img src="../../Resources/ImagesUserGuide/SearchBtnGray.png" alt="Search Button" title="Search Button" /> button to the right of the <b class="Bold">User</b> list to open the User List dialog. If the user does not appear in the list, enter their user name in the search text box and click the search button to add the user to the dialog. Then click the user name in the dialog to add the user name to the User list on the All Activities page.</p>
+                <p>
+                    <img src="../../Resources/ImagesUserGuide/All Activities/Capture44.png" alt="User List" title="User List" />
+                </p>
+                <p><b class="Bold">NOTE:</b> The All Activities page displays a people   <img src="../../Resources/ImagesUserGuide/PeopleIcon.png" alt="People Icon" title="People Icon" /> icon next to activities that are shared.</p>
+                <p>
+                    <img src="../../Resources/ImagesUserGuide/All Activities/Capture10.png" alt="" title="" />
+                </p>
+                <p>An activity that is linked to another activity, for example, an application that is linked to an illustration, displays a link   <img src="../../Resources/ImagesUserGuide/LinkIcon.png" alt="Linked Activity - Link Icon" title="Linked Activity - Link Icon" /> icon next to the activity.</p>
+                <p>
+                    <img src="../../Resources/ImagesUserGuide/All Activities/Capture12.png" alt="Linked Activity - Link Icon" title="Linked Activity - Link Icon" />
+                </p>
+            </li>
+            <li>
+                <p>To view more users’ activities, click the search   <img src="../../Resources/ImagesUserGuide/SearchBtnGray.png" alt="Search Button" title="Search Button" /> button to the right of the <b class="Bold">User</b> list to open the <b class="Bold">User List</b> dialog and click a user to add to the User list and view their activities. The User list contains up to five additional users in addition to My Activities (your own cases) for a total of 6 users. The additional five users are based on the most recently accessed activities. For example, if you have access to more than five other users, only the five most recently accessed users appear in the list.</p>
+                <p>The list of users that appear in the User List dialog include the following:</p>
+                <ul>
+                    <li>Users in groups with whom you have case access enabled in FireLight Admin</li>
+                    <li>Users with whom you have a global share of all activities and it is enabled in FireLight Admin</li>
+                    <li>Users with whom you have a single activity shared in FireLight and it is enabled in FireLight Admin</li>
+                </ul>
+                <p>
+                    <img src="../../Resources/ImagesUserGuide/All Activities/Capture13.png" alt="User List - Users" title="User List - Users" />
+                </p>
+                <p>FireLight removes a user name from the User list and User List dialog in the following scenarios:</p>
+                <ul>
+                    <li>If an Activity User Share is revoked, unless already there due to global sharing, case access, etc.</li>
+                    <li>If a global All Activities User Share is revoked, unless already there due to activity sharing, case access, etc.</li>
+                    <li>If the Activity is deleted or purged that has an Activity User Share, unless already there due to global sharing, case access, etc.</li>
+                    <li>If Case Access is removed for a group role, unless already there due to activity sharing, global sharing, etc.</li>
+                </ul>
+            </li>
+        </ol>
+        <p><b class="Bold">NOTE:</b> FireLight creates audits in the activity History when an individual activity is shared with another user and also when it is revoked.</p>
+        <p MadCap:conditions="General.Online">Click the browser <b class="Bold">Back</b> button to return to the previous topic.</p>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

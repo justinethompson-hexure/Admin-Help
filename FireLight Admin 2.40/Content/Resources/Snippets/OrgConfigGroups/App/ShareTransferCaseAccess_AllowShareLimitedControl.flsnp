@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Select the <b>Allow Share Limited Control</b> checkbox to enable the user to provide limited share options while sharing an activity with another user/agent, allowing organizations to share activities with users giving limited or partial permissions, providing more control while sharing an activity if another user can complete activity till data-entry or signing ceremony. </p>
+        <p>An administrator can check both group settings to allow full control and limited control to a user group. All four limited share options are available to the user, while only one of the options can be selected for an activity per user, and an Agent is able to revoke limited share access from another user.</p>
+    </body>
+</html>

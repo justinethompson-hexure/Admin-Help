@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p class="Indent">Select the <strong>Disable View Activities</strong> checkbox to disable the ability to view activities.  The Recent Activity list on the home page will only provide the status and date of recent activities in a read-only view.  Clicking an activity in the list will not open the activity. Additionally, on the All Activities page, the View button will not be visible for each activity in the list. The user cannot view the activity from the All Activities page. <MadCap:conditionalText MadCap:conditions="General.Online">See also <MadCap:xref href="../../../../UserGuide/All Activities/All Activities.htm" target="_blank" alt="All Activities [User Instructions]">All Activities [User Instructions]</MadCap:xref>.</MadCap:conditionalText></p>
+        <p MadCap:conditions="General.Online" class="Indent">
+            <img src="../../../ImagesAdmin/Capture47.png" alt="Disable View Activities - Recent Activity List" title="Disable View Activities - Recent Activity List" MadCap:conditions="General.Online" />
+        </p>
+        <p class="Indent" MadCap:conditions="General.Online">
+            <img src="../../../ImagesAdmin/Capture49.png" alt="Disable View Activities - No View Button in All Activities" title="Disable View Activities - No View Button in All Activities" MadCap:conditions="General.Online" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable Request Print</b> checkbox to disable and hide the Request Print button on the eDelivery page at the end of the application. This option appears when e-Delivery is enabled for the selected user group for these activity types: E-Delivery Deliver Only (ACORD Type 121-12123) and/or E-Delivery Sign Only (ACORD Type 121-12122).</body>
+</html>

@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+	<head>
+		<link href="../../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+		<link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h1><a name="top"></a>Check Box</h1>
+		<p>
+			<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WzdLockUnlock.flsnp" />
+		</p>
+		<h2>Purpose</h2>
+		<p class="Indent">Provides selection of a single value within a group of checkbox fields or provides a single checkbox for a true (yes) or false (no) value.</p>
+		<ol>
+			<li>Drag a <b class="Bold">Check Box</b> field from the right pane to the wizard page.</li>
+			<li>On the page, double-click the <b class="Bold">Check Box</b> to open the Check Box Properties dialog.</li>
+			<li>
+				<p>Enter the field properties and click <b class="Bold">OK</b> to save your changes. </p>
+			</li>
+			<li>On the upper left, click <b class="Bold">SAVE WIZARD</b> to save the wizard, which unlocks the wizard for editing by other users. </li>
+			<li>
+				<MadCap:snippetText src="../../Resources/Snippets/Rules/UpdateRulesWizard.flsnp" />
+			</li>
+		</ol>
+		<h2>Properties</h2>
+		<table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+			<caption class="Table"> Check Box Properties </caption>
+			<col style="width: 253px;" class="TableStyle-2017_IT-Simple2-Column-Regular" />
+			<col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+			<thead>
+				<tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+					<th class="TableStyle-2017_IT-Simple2-HeadE-Regular-Header1">Property</th>
+					<th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Place Field on a New Row</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-PlaceFieldOnNewRow.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Field Name</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-DataItemID.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows" MadCap:conditions="">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Common Tag Name</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/FieldProps-CommonTagName.flsnp" />
+						<p>
+							<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WzdCTCBRB.flsnp" />
+						</p>
+						<p MadCap:conditions="General.Online">
+							<img src="../../Resources/ImagesAdmin/Capture155.png" alt="Confirm Dialaog Box" title="Confirm Dialaog Box" MadCap:conditions="General.Online" />
+						</p>
+						<p>If a Common Tag Name is selected, the Edit List Name Values link appears below the Export Value field property. Otherwise, it does not apply.</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Caption</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">The display label text for the checkbox. It is enabled to enter the caption when no Common Tag Name is associated with the field. It is disabled when there is a Common Tag Name associated with the field. To fill the correct value, click the Edit List Name Values link. <MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/WzdCaptionTooltip.flsnp" /></td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Export Value</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p>The export value for the control. This can be a common tag list value or a custom export value. It is enabled to enter the export value when no Common Tag Name is associated with the field. It is disabled when there is a Common Tag Name associated with the field. To fill the correct value, click the <b class="Bold">Edit List Name Values</b> link.</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Edit List Name Values</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<p><b class="Bold">NOTE:</b> A list only appears in a checkbox control if a common tag name has been added to the field.</p>
+						<p>To add a caption and export value when a Common Tag Name is present that is associated with a list, click the <b class="Bold">Edit List Name Values</b> link to open the List Name Values dialog. Only one row can be selected for a checkbox control. This can be a row provided by the selected Common Tag Name or a user-created row.</p>
+						<p>The following tooltips are available in the List Name Values dialog title row:</p>
+						<ul>
+							<li>
+								<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WzdCaptionRulesValueIcon.flsnp" />
+							</li>
+							<li>
+								<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WzdRulesOverrideIcon.flsnp" />
+							</li>
+						</ul>
+						<p>The following examples are for the Owner_Gender common tag. Do one of the following: </p>
+						<ul>
+							<li>
+								<p>If you want a row provided by the selected Common Tag Name, select the checkbox for the applicable common tag row for a List Value and Caption/Rules Value for the checkbox control. Click <b class="Bold">OK</b> to save. When the dialog is closed, the Caption/Rules Value appears in both the Caption and Export Value fields if no Rules Override was entered in the row. If a Rules Override was entered, it appears in the Export Value field.</p>
+								<p MadCap:conditions="General.Online">
+									<img src="../../Resources/ImagesAdmin/Capture190.png" alt="Check Box - List Name Values dialog" title="Check Box - List Name Values dialog" MadCap:conditions="General.Online">
+									</img>
+								</p>
+							</li>
+							<li>
+								<p>If you want to create a new row with different values, scroll down to the last row, select the checkbox for the row, and enter the Caption/Rules Value  and optional Rules Override value for the export value. Tab off the Caption/Rules Value column and click <b class="Bold">OK</b> to save. When the dialog is closed, the Caption/Rules Value appears in both the Caption and Export Value fields if no Rules Override was entered in the row. If a Rules Override was entered, it appears in the Export Value field.</p>
+								<p MadCap:conditions="General.Online">
+									<img src="../../Resources/ImagesAdmin/Capture191.png" alt="List Name Values with User-Created Value" title="List Name Values with User-Created Value" MadCap:conditions="General.Online" />
+								</p>
+								<MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/CopyPasteList.flsnp" />
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Width</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-Width.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Mobile Width</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-MobileWidth.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Error Placement</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p>
+							<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-ErrorPlacement.flsnp" />
+						</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Class Name</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-ClassName.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Help Text</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-HelpText.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Group Name</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows"> The name of the group associated with the checkbox. When set, only a single checkbox within a group can be selected at a time.</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><strong>Display Style </strong>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">The display style of the checkbox. Valid options are Square or Round.</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Label Position</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-LabelPosition.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Data Group</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-DataGroup.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Data Group Property</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsDataGroupProperty.flsnp" />
+						<MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/DataGroupProperty-CRM.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Read Only</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-ReadOnly.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyB-Regular-DarkerRows"><b class="Bold">Office Use Only</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-OfficeUseOnly.flsnp" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<h2>Example: Group of Two Check Boxes for Joint Owner</h2>
+		<ol>
+			<li>
+				<p>Add a Check Box control with the Field Name and Common Tag Name set to JointOwner_Add, the Group Name set to JointOwner, and the Export Value of True. The user selects this checkbox to indicate there is a Joint Owner. </p>
+				<p MadCap:conditions="General.Online">
+					<img src="../../Resources/ImagesAdmin/Capture171.png" alt="Check Box Properties" title="Check Box Properties" MadCap:conditions="General.Online" />
+				</p>
+			</li>
+			<li>
+				<p>Add another Check Box control with the Field Name and Common Tag Name set to Joint_Owner_Add, the Group Name set to JointOwner, and the Export Value set to False (No) and click the <b class="Bold">Update</b> button. The user selects this checkbox to indicate there is no joint owner. </p>
+				<p MadCap:conditions="General.Online">
+					<img src="../../Resources/ImagesAdmin/Capture172.png" alt="Check Box Properties - Export Value False" title="Check Box Properties - Export Value False" MadCap:conditions="General.Online" />
+				</p>
+			</li>
+			<li>
+				<p>Click the <b>SAVE WIZARD</b> button on the upper left of the Wizard Designer page to save the wizard, and unlock the wizard for editing by other users.</p>
+			</li>
+		</ol>
+		<p MadCap:conditions="General.Online"><a href="../../Organization Configuration/Organizations/Admin.htm" alt="Return to Top">Return to Top</a>
+		</p>
+	</body>
+</html>

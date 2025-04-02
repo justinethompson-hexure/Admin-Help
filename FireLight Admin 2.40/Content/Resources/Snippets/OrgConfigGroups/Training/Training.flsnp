@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p class="note"><b class="Bold">IMPORTANT!</b>
+            <br />The number of available training videos is steadily increasing. Be sure to check the Training tab frequently for updates. <br />FireLight<sup MadCap:conditions="General.Online">®</sup> generic videos are available to all clients at no cost on the Vimeo website, <a href="https://vimeopro.com/user47344059/firelight-training" target="_blank" title="FireLight Training Videos" alt="FireLight Training Videos">https://vimeopro.com/user47344059/firelight-training</a>.  However, if you would like your firm’s custom videos included on your site, contact your Strategic Account Manager to submit a work order.  Our training contact can then work with you to incorporate your firm’s training videos into the FireLight Vimeo site and index the videos to appear where you want them in FireLight.</p>
+        <h2>Enable Training Videos for a User Role</h2>
+        <ol>
+            <li>On the <b class="Bold">Organization Configuration/Groups</b> page, select a user role in the grid.</li>
+            <li>On the Groups page, <b class="Bold">App</b> tab under <b class="Bold">Menu Options</b>, select the <b class="Bold">Enable Training</b> checkbox.</li>
+            <li>On the Groups page, <b class="Bold">Training</b> tab, select the checkboxes to enable the selected training videos for the user role in <MadCap:variable name="General.ProductName" /> and click <b class="Bold">Save</b>. The selected training videos is available in FireLight via a Training button on the navigation bar. The videos are indexed and tagged to appear in the appropriate sections of FireLight. <MadCap:conditionalText MadCap:conditions="General.Online">See also <MadCap:xref href="../../../../UserGuide/Training/Training.htm" target="_blank" alt="Training [User Instructions]">Training [User Instructions]</MadCap:xref>.</MadCap:conditionalText></li>
+        </ol>
+    </body>
+</html>

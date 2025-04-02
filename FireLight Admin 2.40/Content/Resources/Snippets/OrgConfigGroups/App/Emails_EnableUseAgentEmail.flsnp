@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b>Enable Use Agent Email</b>  checkbox to enable and show the Use Agent Email for All Communication checkbox on the My Preferences page in <MadCap:variable name="General.ProductName" />. This allows the agent to determine if all assistant actions should use the agent’s email for outgoing communications. The Use Agent Email option is based on the activity owner’s preference, not the current session user’s preference.</body>
+</html>

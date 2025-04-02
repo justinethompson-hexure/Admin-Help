@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight v2.37-p Release History</h1>
+        <h1><![CDATA[    ]]><b style="font-size: 16pt;">New Functionality</b></h1>
+        <p><span style="font-size: 14pt; font-weight: bold; color: #000000;">Removal of Milliman Language from the Pop-Up Message: CR-3742</span>
+        </p>
+        <p>We updated a pop-up message to remove a reference to Milliman. The message now reads "Underwriting Decision Received."</p>
+        <p><b style="font-size: 14pt; color: #000000;">Support for Multi-Level Nodes in DPFA File Needs to Be Accounted for in Comm Netting: CR-3746</b>
+        </p>
+        <p>We updated DPFA file support to account for multi-level nodes/axes, reflecting different rates.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Up to Ten DPFA Files Can Be Uploaded at a Time: CR-3786</b>
+        </p>
+        <p>We updated DPFA file uploading to allow up to but no more than 10 DPFA files to be uploaded at one time.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Verify Customization Buttons in Magnum Interview Display Component: CR-3803</b>
+        </p>
+        <p>We updated Lifestyle Questionnaire buttons to be labeled “Back,” “Save,” and “Continue.”</p>
+        <p><b style="font-size: 14pt; color: #000000;">Enhancements to Pop-Up Messages and Button Labels in Milliman and Magnum Integrations: CR-3838</b>
+        </p>
+        <p>We provided the client with the ability to modify the default pop-up message in Milliman integration, and default button names now appear.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Create a New Report Category as "FTP Only" for Reports That Have PII Data: DIST-3826</b>
+        </p>
+        <p>We have added a new indication with single asterisk "*" in the report dropdown and at the bottom of the page for reports containing PII data and that can be scheduled/delivered via the SFTP method.</p>
+        <p><b style="font-size: 14pt;">M<span style="color: #000000;">odify User Detail Admin Report: DIST-4283</span></b>
+        </p>
+        <p>The current admin report "User Detail" has been modified to display the columns below to make the report usable to requests for lists of users with active accounts who have access to FireLight:</p>
+        <ul>
+            <li>
+                <p>User Creation Date</p>
+            </li>
+            <li>
+                <p>Last Log On Date</p>
+            </li>
+            <li>
+                <p>Disabled</p>
+            </li>
+        </ul>
+        <p><b style="font-size: 12pt; color: #000000;">Impact</b>
+        </p>
+        <ul>
+            <li>
+                <p>FL Admin &gt; Utilities &gt; Reports &gt; User Detail (report)</p>
+            </li>
+        </ul>
+        <p><b style="font-size: 14pt; color: #000000;">Ability to Identify SFTP Use Only Reports on Report Scheduler: DIST-4477</b>
+        </p>
+        <p>Recently a few activity reports have been added that can be delivered only via SFTP method, since these might contain PII data. To identify such reports when scheduling and limit them to be only delivered via SFTP method, these reports will be suffixed with an asterisk "*" and with a note displayed mentioning that these reports are SFTP Use Only Reports.</p>
+        <p><b style="font-size: 12pt; color: #000000;">Impact</b>
+        </p>
+        <ul>
+            <li>
+                <p>FL Admin &gt; Utilities &gt; Report Scheduler &gt; Schedule Detail (tab) &gt; Report (drop-down)</p>
+            </li>
+        </ul>
+        <p><b style="font-size: 14pt; color: #000000;">Finish Legacy Annuity Quoter Code Cleanup: EAES-5125</b>
+        </p>
+        <p>We have fully removed legacy Annuity Quoter code from FireLight.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Make the ALQ Quoter Endpoint Configurable by Firelight Environment: EAES-5162</b>
+        </p>
+        <p>All Firelight environments can now be configured to point to IXN/ALQ endpoints independently of other environments.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Make the AAQ Quoter Endpoint Configurable by FireLight Environment: EAES-5202</b>
+        </p>
+        <p>All Firelight environments can now be configured to point to IXN/AAQ endpoints independently of other environments.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Reduce Clicks Required to Create  a New Quote in FireLight: EAES-5215</b>
+        </p>
+        <p>We streamlined the process for users to navigate from the FireLight App home page directly to the ALQ/AAQ quoter page.</p>
+        <p><b style="font-size: 14pt; color: #000000;">During SSO, Fetch FirmRegistrationNum from 1228 Data and Prefix on Role Code: PC-3222</b>
+        </p>
+        <p>We now allow for dynamic creation of the User Role code when SSOing into the system by combining the Firm ID and the passed-in User Role code.</p>
+        <p><span style="font-size: 16pt; font-weight: bold; color: #000000;">Resolved Issues</span>
+        </p>
+        <p><b style="font-size: 14pt; color: #000000;">DPfA File Name Not Updated When Replacing or Reuploading a DPfA File:CR-3745</b>
+        </p>
+        <p>We resolved an issue where the file name was not being correctly updated when the user indicated that the file was a replacement of an existing file.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Forms and Wizard Are Selected by Default When a User Searches in All Forms/Wizards or Forms/Wizards in Package: DIST-3956</b>
+        </p>
+        <p>We resolved an issue where, on the Forms/Wizards in Package tab, forms and wizards were erroneously highlighted and selected by default. On this tab forms and wizards are no longer highlighted and selected by default.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Pasted Values Are Not Displaying in Wizard and Form History: DIST-4184</b>
+        </p>
+        <p>We resolved an issue where attempting to paste values into Wizard and Form designers was unsuccessful. Pasting values into Wizard and Form designers now works as designed.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Value Added Form Custom List Are Not Displaying Correctly in Form History: DIST-4284</b>
+        </p>
+        <p>We resolved an issue where values appeared incorrectly in Form History. Form History now displays values correctly.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Values Are Not Updated If User Changes the Value: DIST-4288</b>
+        </p>
+        <p>We resolved an issue where values updated in the Organization tab were not being reflected in History. Updated values are now reflected in History as designed.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Smart Text Box and Smart Date Picker Page Not Displaying Required in Forms Expand Menu: DIST-4548</b>
+        </p>
+        <p>We resolved an issue where when creating applications on pages that include the smart text box and smart date picker, the page error icon failed to appear. The page error icon now appears as designed.</p>
+        <p><b style="font-size: 14pt; color: #000000;">All Activities View Is Not Populating Correctly in Conjunction with Rep Code Visibility Logic: EAES-5163</b>
+        </p>
+        <p>We resolved an issue where the All Activities view displayed a count of activities but not the activities themselves. The All Activities view now displays both the count of activities and the activities in that count.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Quote Cannot Be Added to New User Rolecode Group: EAES-5279</b>
+        </p>
+        <p>We resolved an issue where creating a quote failed when performed with a new user rolecode group. Now creating a quote works as designed.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Certificate Validation Failure on Outbound Connections During Workflow Retry: EAES-5300</b>
+        </p>
+        <p>We resolved an issue where certificate validation failed on outbound connections during workflow retry. Certificate validation now works as designed.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Token Service Is Generating Valid Tokens Regardless of Date Header Value: EAES-5378</b>
+        </p>
+        <p>We resolved an issue where the token service failed to validate date header values, resulting in continuous generation of tokens. The token service is now validating data header values as designed, disallowing timestamps more than 30 seconds outside of the current UTC date and time.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Unable to Complete Reviewer Forms Activity Due to Use of Obsolete Browser Events: PC-3016</b>
+        </p>
+        <p>We resolved an issue where document reviewers using Chrome were unable to complete review due to the Complete button failing to appear. The Complete button now appears as designed.</p>
+        <p>&#160;</p>
+        <p>***Please note that the JIRA ticket numbers are provided for reference. JIRA tickets are not accessible to users outside Hexure.***</p>
+        <p data-mc-conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

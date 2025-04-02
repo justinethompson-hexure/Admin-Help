@@ -1,0 +1,989 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/2017-ITPatternedRows2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Summary Activity Reports</h1>
+        <p class="note"><b class="Bold">NOTE:</b> Activity reports do not contain Personally Identifiable Information (PII) because the activity reports are sent to clients via email. Any reports with PII information need to be <MadCap:xref href="Admin Reports.htm" target="_blank" alt="Admin Reports">Admin Reports</MadCap:xref> that are accessed and printed securely via FireLight<sup MadCap:conditions="General.Online">®</sup> Admin. <br /><b class="Bold">Spotlight Video:</b> See the <a href="https://vimeo.com/335249731/d9783c0dce" target="_blank" title="FireLight Reports" alt="FireLight Reports">Reports</a> Spotlight Feature Video for more information.</p>
+        <p>Summary Activity Reports are run on a scheduler through our automated activity reporting tool and do not appear in <MadCap:variable name="General.ProductName" /> Admin.  Each report can be sent in CSV or PDF format and is sent on an automated schedule to an organization email. A distribution email is best as it allows you to change your recipients as needed and allows the report scheduler to run efficiently. </p>
+        <p>The Summary Activity Reports have default data columns.  Some configurations, such as optional columns, are available.  The Summary Activity Reports provide summary data about transaction activity but do not have access to specific form data that is not stored outside of the encrypted form data.</p>
+        <h2>Sample Summary Activity Reports</h2>
+        <p>Following are sample Summary activity reports.<MadCap:conditionalText MadCap:conditions="General.Online"> Click a link to view a sample report.</MadCap:conditionalText></p>
+        <p>&#160;</p>
+        <table style="mc-table-style: url('../../Resources/TableStyles/2017-ITPatternedRows2.css');margin-left: 0;margin-right: auto;mc-caption-repeat: true;" class="TableStyle-2017-ITPatternedRows2" cellspacing="0">
+            <caption><b class="TableBlue">Summary Reporting Options</b>
+            </caption>
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" style="width: 290px;" />
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" style="width: 193px;" />
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" style="width: 228px;" />
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" style="width: 208px;" />
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" style="width: -33px;" />
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" style="width: -18px;" />
+            <thead>
+                <tr class="TableStyle-2017-ITPatternedRows2-Head-Header1">
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Report Name</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Description</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Default Columns</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Options</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Frequency</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadD-Regular-Header1">Format</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p><a href="../../Resources/Reports/PeriodSubmissionSummaryReport.pdf" target="_blank" title="Sample Submission Summary Report" alt="Sample Submission Summary Report" MadCap:conditions="General.Online">FireLight Submission Summary</a><![CDATA[  ]]><b MadCap:conditions="General.PDF">FireLight Submission Summary</b></p>
+                        <p>(TrnPeriodSummary)</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Lists submissions by organization for the time-period specified.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <ul>
+                            <li>
+                                <p>Organization Name</p>
+                            </li>
+                            <li>
+                                <p>Period Total</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p>N/A</p>
+                        <p class="Indent">&#160;</p>
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows" MadCap:conditions="General.Postpone">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p><a href="../../Resources/Reports/SubmissionSummaryCarrierReport.pdf" target="_blank" title="FireLight Submission Summary Activity Report - Carrier" alt="FireLight Submission Summary Activity Report - Carrier">FireLight Submission Summary Activity Report - Carrier</a><b MadCap:conditions="General.PDF" class="Bold">FireLight Submission Summary Activity Report - Carrier</b>
+                        </p>
+                        <p>FireLight Submission Summary Activity Report - Distributor<b MadCap:conditions="General.PDF" class="Bold">FireLight Submission Summary Activity Report - Distributor</b></p>
+                        <p>(SubmissionSummaryActivityReport)</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p>Lists submissions by activity type. Includes activity detail for Month to Date, Year to Date and Life to Date. This report features details by activity level for Month, Year and Life to Date frequencies with the ability to sort by carrier or distributor.</p>
+                        <p>Report display features the Carrier name with indented Distributor names for Carrier View and Distributor name with indented Carrier names for Distributor View. </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <ul>
+                            <li>
+                                <p>Activity</p>
+                            </li>
+                            <li>
+                                <p>Month to Date</p>
+                            </li>
+                            <li>
+                                <p>Year to Date</p>
+                            </li>
+                            <li>
+                                <p>Life to Date</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Report can be run for all organizations or for a single organization.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p><a href="../../Resources/Reports/PeriodSubmissionSummaryProdReport.pdf" target="_blank" title="Sample Period Submission Summary by Product Report" alt="Sample Period Submission Summary by Product Report" MadCap:conditions="General.Online">FireLight Period Submission Summary by Product</a><b MadCap:conditions="General.PDF" class="Bold">FireLight Period Submission Summary by Product</b>
+                        </p>
+                        <p>(TrnPeriodSummaryProd)</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Lists submissions by organization for the time-period specified broken out by product type.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <ul>
+                            <li>
+Organization Name - product type</li>
+                            <li>
+                                <p>Period Total</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/SubmissionSummaryCarrierReport.pdf" target="_blank" title="Sample FireLight Carrier Submission Summary Report" alt="Sample FireLight Carrier Submission Summary Report">FireLight Carrier Submission Summary</a>
+                        </MadCap:conditionalText>
+                        <MadCap:conditionalText MadCap:conditions="General.Online">&#160;</MadCap:conditionalText><b MadCap:conditions="General.PDF">FireLight Carrier Submission Summary</b>
+                        <p>(TrnSummaryByCarrier)</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Lists submissions by organization for the time-period specified broken out by product organization.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <ul>
+                            <li> Product Organization Name</li>
+                            <li>
+                                <p>Period Total</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"> N/A</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><a href="../../Resources/Reports/TrnSummaryDistReport.pdf" target="_blank" title="Sample Submission Summary by Carrier/Distributor Report" alt="Sample Submission Summary by Carrier/Distributor Report" MadCap:conditions="General.Online">FireLight Submission Summary by Carrier/Distributor</a><b MadCap:conditions="General.PDF">FireLight Submission Summary by Carrier/Distributor</b>
+                        <p>(TrnSummaryDist)</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Lists carrier submission totals with distributor totals listed below the carrier.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <ul>
+                            <li> Organization Name</li>
+                            <li>
+                                <p>Month to Date</p>
+                            </li>
+                            <li>
+                                <p>Year to Date</p>
+                            </li>
+                            <li>
+                                <p>Life to Date</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">N/A</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><a href="../../Resources/Reports/StatusSummaryReport.pdf" target="_blank" title="Sample Status Summary Report" alt="Sample Status Summary Report" MadCap:conditions="General.Online">FireLight Status Summary</a><![CDATA[  ]]><b MadCap:conditions="General.PDF">FireLight Status Summary</b><p>(Summary)</p></td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Lists transaction totals for each workflow status.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <ul>
+                            <li>
+Product Type</li>
+                            <li>
+                                <p>Form Entry</p>
+                            </li>
+                            <li>
+                                <p>Signatures</p>
+                            </li>
+                            <li>
+                                <p>Review</p>
+                            </li>
+                            <li>
+                                <p>Submit</p>
+                            </li>
+                            <li>
+                                <p>Complete</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p>
+                            <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/EDeliveryProdNameStatusSummaryReport.pdf" target="_blank" title="Sample E-Delivery Status Summary Report" alt="Sample E-Delivery Status Summary Report">FireLight E-Delivery Status Summary</a> </MadCap:conditionalText><b MadCap:conditions="General.PDF" class="Bold">FireLight E-Delivery Status Summary</b>
+                        </p>
+                        <p>(EDeliveryProdNameStatusSummary)</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Lists transaction totals for each e-Delivery status.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <ul>
+                            <li>
+Product Name</li>
+                            <li>
+                                <p>Data Entry</p>
+                            </li>
+                            <li>
+                                <p>Signatures</p>
+                            </li>
+                            <li>
+                                <p>Review</p>
+                            </li>
+                            <li>
+                                <p>Submit</p>
+                            </li>
+                            <li>
+                                <p>Complete</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">N/A</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p><a href="../../Resources/Reports/SubmissionSummaryReport.pdf" target="_blank" title="Sample Submission Summary Report" alt="Sample Submission Summary Report" MadCap:conditions="General.Online">FireLight Submission Summary</a><b MadCap:conditions="General.PDF">FireLight Submission Summary</b>
+                        </p>
+                        <p>(TrnSummary)</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Lists submissions by organization for the time-period specified.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <ul>
+                            <li> Organization Name</li>
+                            <li>
+                                <p>Month to Date</p>
+                            </li>
+                            <li>
+                                <p>Year to Date</p>
+                            </li>
+                            <li>
+                                <p>Life to Date</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"> N/A</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p><a href="../../Resources/Reports/SubmissionSummaryGroupReport.pdf" target="_blank" title="Sample Group Submission Summary Report" alt="Sample Group Submission Summary Report" MadCap:conditions="General.Online">FireLight Group Submission Summary</a><b MadCap:conditions="General.PDF">FireLight Group Submission Summary</b>
+                        </p>
+                        <p>(TrnSummaryBy Group)</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Lists submissions by organization for the time-period specified broken out by role code.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <ul>
+                            <li>
+Organization Name - Group Name</li>
+                            <li>
+                                <p>Month to Date</p>
+                            </li>
+                            <li>
+                                <p>Year to Date</p>
+                            </li>
+                            <li>
+                                <p>Life to Date</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"> N/A</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p><a href="../../Resources/Reports/SubmissionSummaryProdLineReport.pdf" target="_blank" title="Sample Product Line Submission Summary Report" alt="Sample Product Line Submission Summary Report" MadCap:conditions="General.Online">FireLight Product Line Submission Summary</a><b MadCap:conditions="General.PDF">FireLight Product Line Submission Summary</b>
+                        </p>
+                        <p>(TrnSummaryByProdLine)</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Lists total number of applications submitted by product type. Only new business applications are included. The report does not include other transaction types.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <ul>
+                            <li>
+                                <p>Organization Name</p>
+                            </li>
+                            <li>
+                                <p>Period</p>
+                            </li>
+                            <li>
+                                <p>Year to Date</p>
+                            </li>
+                            <li>
+                                <p>Life to Date</p>
+                            </li>
+                        </ul>
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p><a href="../../Resources/Reports/SubmissionSummaryProdTypeReport.pdf" target="_blank" title="Sample Submission Summary Report by Product" alt="Sample Submission Summary Report by Product" MadCap:conditions="General.Online">FireLight Submission Summary by Product</a><![CDATA[  ]]><b MadCap:conditions="General.PDF">FireLight Submission Summary by Product</b></p>
+                        <p>(TrnSummaryProd)</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Lists total number of applications submitted by product type.  All transaction types are included.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <ul>
+                            <li>
+                                <p>Organization Name</p>
+                            </li>
+                            <li>
+                                <p>Month to Date</p>
+                            </li>
+                            <li>
+                                <p>Year to Date</p>
+                            </li>
+                            <li>
+                                <p>Life to Date</p>
+                            </li>
+                        </ul>
+                        <p><![CDATA[ 
+]]></p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p>N/A</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p><a href="../../Resources/Reports/SubmissionSummaryTransTypeReport.pdf" target="_blank" title="Sample Transaction Type Submission Summary Report" alt="Sample Transaction Type Submission Summary Report" MadCap:conditions="General.Online">FireLight Transaction Type Submission</a><b MadCap:conditions="General.PDF">FireLight Transaction Type Submission</b>
+                        </p>
+                        <p>(TransactionTypeSummary)</p>
+                        <p>&#160;</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Lists submission totals by organization for the time-period specified broken out by transaction type.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <ul>
+                            <li>
+Organization Name - transaction types</li>
+                            <li>
+                                <p>Period</p>
+                            </li>
+                            <li>
+                                <p>Year to Date</p>
+                            </li>
+                            <li>
+                                <p>Life to Date</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">N/A</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p><a href="../../Resources/Reports/SubmissionSummaryProductCodeReport.pdf" target="_blank" title="Sample Submission Product Code Summary Report" alt="Sample Submission Product Code Summary Report" MadCap:conditions="General.Online">FireLight Submission Product Code Summary</a><b MadCap:conditions="General.PDF">FireLight Submission Product Code Summary</b>
+                        </p>
+                        <p>(SummaryProductCode)</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Lists  submission totals by organization for the time-period specified broken out by product CUSIP ID.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <ul>
+                            <li> Organization Name - Product Name</li>
+                            <li>
+                                <p>CUSIP ID</p>
+                            </li>
+                            <li>
+                                <p>Period</p>
+                            </li>
+                            <li>
+                                <p>Year to Date</p>
+                            </li>
+                            <li>
+                                <p>Life to Date</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">N/A</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p MadCap:conditions="General.Online"><a href="../../Resources/Reports/EDeliveryProductSummaryReport.pdf" target="_blank" title="Sample E-Delivery Product Submission Summary Report" alt="Sample E-Delivery Product Submission Summary Report">E-Delivery Product Summary </a>
+                        </p>
+                        <p MadCap:conditions="General.PDF"><b class="Bold">E-Delivery Product Summary</b>
+                        </p>
+                        <p>(EDeliveryProductSummary)</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Lists e-Delivery submission totals by organization for the time-period specified broken out by Product ID. Only parent cases are included in the report.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <ul>
+                            <li> Organization Name - Product Name</li>
+                            <li>
+                                <p>Period</p>
+                            </li>
+                            <li>
+                                <p>Year to Date</p>
+                            </li>
+                            <li>
+                                <p>Life to Date</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">N/A</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p>
+                            <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/CarrierTransactionsByProductType.pdf" target="_blank" title="Sample Carrier Transactions by Product Type" alt="Sample Carrier Transactions by Product Type">FireLight Carrier Transactions by Product Type</a> </MadCap:conditionalText><b MadCap:conditions="General.PDF" class="Bold">FireLight Carrier Transactions by Product Type</b>
+                        </p>
+                        <p>
+(CarrierTransByProductType)
+</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Lists submission totals by organization for the time-period specified broken out by product type.  It is not broken down by distributor. Note that this report only applies to product related transactions: Application, Illustration and e-Delivery. Broken out by product type with a rolling 12-month breakdown and total.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <ul>
+                            <li>Organization Name - Product Type</li>
+                            <li>	Monthly Totals</li>
+                            <li>Total</li>
+                            <li>Average
+</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <ul>
+                            <li>
+                                <p>List All Transaction Types</p>
+                                <p>Limit by Transaction Type:</p>
+                                <ul style="list-style-type: circle;">
+                                    <li>App Only</li>
+                                    <li>Illustration</li>
+                                    <li>E-Delivery</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Exclude organizations:</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p>
+                            <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/DistributorTransactionsByProductType.pdf" target="_blank" title="Sample Distributor Transaction by Product Type Report" alt="Sample Distributor Transaction by Product Type Report">FireLight Distributor Transactions by Product Type</a>
+                            </MadCap:conditionalText> <b MadCap:conditions="General.PDF" class="Bold">FireLight Distributor Transactions by Product Type</b></p>
+                        <p>
+(DistributorTransByProductType)
+</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Lists submission totals by organization for the time-period specified broken out by   activity type, product type and carrier.  Note that this report applies only to product related transactions: Application, Illustration and E-Delivery. Broken out by product type with a rolling 12-month breakdown and total.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <ul>
+                            <li>Activity Type - ACORD Type - Billing Code</li>
+                            <li>Organization Name - Product Type</li>
+                            <li>Monthly Totals</li>
+                            <li>Total</li>
+                            <li>Average
+</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <ul>
+                            <li>
+                                <p>List All Transaction Types</p>
+                                <p>Limit by Transaction Type:</p>
+                                <ul style="list-style-type: circle;">
+                                    <li>App Only</li>
+                                    <li>Illustration</li>
+                                    <li>E-Delivery</li>
+                                </ul>
+                            </li>
+                            <li>Exclude organizations:</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p>
+                            <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/DistributorTransByCarrierReport.pdf" target="_blank" title="Sample Distributor Transactions by Carrier" alt="Sample Distributor Transactions by Carrier">FireLight Distributor Transactions by Carrier</a> </MadCap:conditionalText><b MadCap:conditions="General.PDF" class="Bold">FireLight Distributor Transactions by Carrier</b>
+                        </p>
+                        <p>
+(DistributorTransByCarrier)
+</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Lists submission totals by distributor organization for the time-period specified broken out by activity type and carrier.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <ul>
+                            <li>Activity Type - ACORD Type - Billing Code</li>
+                            <li>Organization Name - Carrier Name</li>
+                            <li>Monthly Totals</li>
+                            <li>Total</li>
+                            <li>Average
+</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <ul>
+                            <li>
+                                <p>List All Transaction Types</p>
+                                <p>Limit by Transaction Type:</p>
+                                <ul style="list-style-type: circle;">
+                                    <li>App Only</li>
+                                    <li>Illustration</li>
+                                    <li>Needs Determination</li>
+                                    <li>Post Issue</li>
+                                    <li>Account Opening</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p>
+                            <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/CarrierTransByDistributorReport.pdf" target="_blank" title="Sample Carrier Transactions by Distributor Report" alt="Sample Carrier Transactions by Distributor Report">FireLight Carrier Transactions by Distributor</a> </MadCap:conditionalText><b MadCap:conditions="General.PDF" class="Bold">FireLight Carrier Transactions by Distributor</b>
+                        </p>
+                        <p>
+(CarrierTransByDistributor)
+</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Lists submission totals by carrier organization for the time-period specified broken out  by activity type and distributor.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <ul>
+                            <li>Activity Type - ACORD Type - Billing Code</li>
+                            <li>Organization Name - <br />Distributor Name</li>
+                            <li>Monthly Totals</li>
+                            <li>Total</li>
+                            <li>Average
+</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <ul>
+                            <li>
+                                <p>List All Transaction Types</p>
+                                <p>Limit by Transaction Type:</p>
+                                <ul style="list-style-type: circle;">
+                                    <li>App Only</li>
+                                    <li>Illustration</li>
+                                    <li>Needs Determination</li>
+                                    <li>Post Issue</li>
+                                    <li>Account Opening</li>
+                                    <li>Other</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p>
+                            <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/CarrierTransByDistributorByProductReport.pdf" title="Sample Carrier Transactions by Distributor by Product Name Report" alt="Sample Carrier Transactions by Distributor by Product Name Report" target="_blank">Carrier Transactions by Distributor by Product Name</a> </MadCap:conditionalText><b MadCap:conditions="General.PDF" class="Bold">Carrier Transactions by Distributor by Product Name</b>
+                        </p>
+                        <p>
+(CarrierTransByDistributorByProduct)</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Lists submission totals for transactions for a carrier broken out by distributor (if applicable), activity type and product name shown with a rolling 12-month breakdown and total. The breakdown by carrier includes the carrier if the organization has direct transactions or only the carrier if it has no distributors.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <ul>
+                            <li>Activity Type - ACORD Type - Billing Code</li>
+                            <li>Organization Name - Product Name</li>
+                            <li>Monthly Totals</li>
+                            <li>Total</li>
+                            <li>Average
+</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <ul>
+                            <li>
+                                <p>List All Transaction Types</p>
+                                <p>Limit by Transaction Type:</p>
+                                <ul style="list-style-type: circle;">
+                                    <li>App Only</li>
+                                    <li>Sub-Pay</li>
+                                    <li>Needs Determination</li>
+                                    <li>Post Issue</li>
+                                    <li>Account Opening</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>InsTech Managed Option</p>
+                                <ul style="list-style-type: circle;">
+                                    <li>None</li>
+                                    <li>Remove InsTech Managed</li>
+                                    <li>InsTech Managed Only</li>
+                                    <li>Denote InsTech Managed<br /></li>
+                                </ul>
+                            </li>
+                            <li>Exclude Organizations:</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><a href="../../Resources/Reports/DeploymentHistoryReport.pdf" title="Sample Carrier Transactions by Distributor by Product Name Report" alt="Sample Carrier Transactions by Distributor by Product Name Report" target="_blank">Deployment History Report</a> <b>Deployment History Report</b> </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Lists history of each Hexure component deployed to Production, such as Form, Wizard, Rule Set, Package, Products, etc.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <ul>
+                            <li>
+                                <p>Source Org</p>
+                            </li>
+                            <li>
+                                <p>Destination Org
+
+Environment</p>
+                            </li>
+                            <li>
+                                <p>
+
+Auto Deploy
+
+</p>
+                            </li>
+                            <li>
+                                <p>Deployment Date
+
+</p>
+                            </li>
+                            <li>
+                                <p>Deployment Scope
+
+</p>
+                            </li>
+                            <li>
+                                <p>Description</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <ul>
+                            <li>
+                                <p>Sync Scope
+
+</p>
+                            </li>
+                            <li>
+                                <p>To Server
+
+</p>
+                            </li>
+                            <li>
+                                <p>To Org
+
+</p>
+                            </li>
+                            <li>
+                                <p>Start Date
+
+</p>
+                            </li>
+                            <li>
+                                <p>End Date</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">CSV</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p>
+                            <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/DistributorTransByCarrierByProductReport.pdf" target="_blank" title="Sample Distributor Transactions by Carrier by Product Name Report" alt="Sample Distributor Transactions by Carrier by Product Name Report">Distributor Transactions by Carrier by Product Name</a> </MadCap:conditionalText><b MadCap:conditions="General.PDF" class="Bold">Distributor Transactions by Carrier by Product Name</b>
+                        </p>
+                        <p>
+(DistributorTransByCarrierByProduct)
+</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Lists submission totals for transactions for a distributor broken out by carrier name, activity type and product name with a rolling 12-month breakdown and total. </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <ul>
+                            <li>Activity Type - ACORD Type - Billing Code</li>
+                            <li>Organization Name - Product Name</li>
+                            <li>Monthly Totals</li>
+                            <li>Total</li>
+                            <li>Average
+</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <ul>
+                            <li>
+                                <p>List All Transaction Types</p>
+                                <p>Limit by Transaction Type:</p>
+                                <ul style="list-style-type: circle;">
+                                    <li>App Only</li>
+                                    <li>Sub-Pay</li>
+                                    <li>Needs Determination</li>
+                                    <li>Post Issue</li>
+                                    <li>Account Opening</li>
+                                </ul>
+                            </li>
+                            <li>Exclude Organizations:</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><a href="../../Resources/Reports/IllustrationUserSummaryReport(24July).pdf" target="_blank" title="Sample Report" alt="Illustration User Summary Sample Report"><MadCap:conditionalText MadCap:conditions="General.Online">Illustration User Summary</MadCap:conditionalText></a><b MadCap:conditions="General.PDF" class="Bold">Illustration User Summary</b>
+                        <p>(IllustrationUserSummaryReport)</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Lists number of unique users and number of user transactions by organization.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <ul>
+                            <li>Organization ID</li>
+                            <li>Organization Name</li>
+                            <li>Agent ID (User ID)</li>
+                            <li>Transactions</li>
+                            <li>Total</li>
+                        </ul>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">&#160;</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p><a href="../../Resources/Reports/ActiveUsersReport.pdf" target="_blank" title="Sample Number of Active Users by Organization Report" alt="Sample Number of Active Users by Organization Report" MadCap:conditions="General.Online">Number of Active Users by Organization</a> <b MadCap:conditions="General.PDF" class="Bold">Number of Active Users by Organization</b></p>
+                        <p>(ActiveUsers)</p>
+                        <p>For Carriers and Distributors</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Lists number of active users by organization over a 12-month rolling monthly view.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">&#160;</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">N/A</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p><a href="../../Resources/Reports/RegisteredUsersForOrganizationReport.pdf" target="_blank" title="Sample Number of Registered Users by Organization ID Report" alt="Sample Number of Registered Users by Organization ID Report" MadCap:conditions="General.Online">Number of Registered Users by Organization ID</a> <b MadCap:conditions="General.PDF" class="Bold">Number of Registered Users by Organization ID</b></p>
+                        <p>
+(RegisteredUsersForOrganization)
+</p>
+                        <p>For Carriers and Distributors
+</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Lists number of registered users by organization over a 12-month rolling monthly view.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">&#160;</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">N/A</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><a href="../../Resources/Reports/SubmitterUsersReport.pdf" target="_blank" title="Sample Number of Users with Submissions by Organization Report" alt="Sample Number of Users with Submissions by Organization Report" MadCap:conditions="General.Online">Number of Users with Submissions by Organization</a> <b MadCap:conditions="General.PDF" class="Bold">Number of Users with Submissions by Organization</b><p>(SubmitterUsers)</p><p>For Carriers and Distributors</p></td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Lists number of users with submissions by organization over a 12-month rolling monthly view.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">&#160;</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">N/A</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p><a href="../../Resources/Reports/OneSubmitterUsersReport.pdf" target="_blank" title="Sample Number of Users with One Submission by Organization Report" alt="Sample Number of Users with One Submission by Organization Report" MadCap:conditions="General.Online">Number of Users with One Submission by Organization</a> <b MadCap:conditions="General.PDF" class="Bold">Number of Users with One Submission by Organization</b></p>
+                        <p>(OneSubmitterUsers)</p>
+                        <p>For Carriers and Distributors</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Lists number of users with only 1 submission in a given month by organization over a 12-month rolling monthly view.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">&#160;</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">N/A</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-LightRows">
+                        <p><a href="../../Resources/Reports/SubmissionSummaryReport.pdf" target="_blank" title="Submissions Summary Report Grouped by Jurisdiction" alt="Submission Summary Report Grouped by Jurisdiction" MadCap:conditions="General.Online">Submission Summary Report Grouped by Jurisdiction</a> <b MadCap:conditions="General.PDF" class="Bold">Submission Summary Report Grouped by Jurisdiction</b></p>
+                        <p>(SubmissionSummaryReportGroupedbyJurisdiction)</p>
+                        <p>Submission Summary Report Grouped by Jurisdiction</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-LightRows">Lists apps data based on Jurisdiction.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-LightRows">
+                        <p>Starting Date</p>
+                        <p>Ending Data</p>
+                        <p>Organization</p>
+                        <p>Period</p>
+                        <p>Year to Date</p>
+                        <p>Life to Date</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-LightRows">N/A</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-LightRows">
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyA-Regular-LightRows">
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top" title="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

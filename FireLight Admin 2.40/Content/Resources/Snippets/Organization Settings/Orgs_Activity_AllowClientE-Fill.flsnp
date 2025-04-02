@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the Allow Client E-Fill checkbox to allow the agent to send an email to request clients to electronically fill in activity forms. The option Request Client to Fill App is visible in the Other Actions menu of the app when this option is enabled.</body>
+</html>

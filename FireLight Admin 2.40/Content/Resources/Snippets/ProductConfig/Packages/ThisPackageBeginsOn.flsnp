@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This Package Begins On field displays  the beginning date of the sales agreement. If blank, the selling agreement is in effect from today until the End date.</p>
+    </body>
+</html>

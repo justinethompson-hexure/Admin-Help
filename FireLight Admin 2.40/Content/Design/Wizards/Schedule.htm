@@ -1,0 +1,1150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+	<head>
+		<link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h1>
+			<a name="top">
+		</a>Schedule</h1>
+		<p>
+			<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WzdLockUnlock.flsnp" />
+		</p>
+		<h2>Schedule Guidelines</h2>
+		<ul>
+			<li>A schedule is a single component with its data stored in JSON format within a single data item.</li>
+			<li>Scheduled data is passed to illustration services endpoints to be included in calculations and reports. </li>
+			<li>Rules control interactions with fields inside and outside of the schedule. </li>
+			<li>Schedule validation is on a per-row basis.</li>
+			<li>Schedules require initialization rules to populate the schedules with data. A message appears beneath the schedule header if data has not been initialized.</li>
+		</ul>
+		<p class="note" MadCap:conditions="General.Online">
+		<b class="Bold">NOTE:</b> Schedules  require a unique implementation approach. Step through the following topics to add a schedule and the associated rules. Expand all Schedule topics by clicking <img src="../../Resources/ImagesAdmin/ExpandCollapseAllButton.jpg" alt="Expand All/Collapse All Button" title="Expand All/Collapse All Button" /> on the upper right of the page. Click the button again to collapse all topics.</p>
+		<p>When finished adding the Schedule:  </p>
+		<ol>
+			<li>Click the <b>Save Wizard</b> button on the upper left of the Wizard Designer page to save any changes that were made to the wizard, which unlocks the wizard for editing by other users. </li>
+			<li>
+				<MadCap:snippetText src="../../Resources/Snippets/Rules/UpdateRulesWizard.flsnp" />
+			</li>
+		</ol>
+		<h2 MadCap:conditions="General.PDF">Schedule Layout, List Controls, and Columns Descriptions</h2>
+		<MadCap:dropDown>
+			<MadCap:dropDownHead>
+				<MadCap:dropDownHotspot MadCap:conditions="General.Online">Schedule Layout, List Controls, and Columns Descriptions</MadCap:dropDownHotspot>
+			</MadCap:dropDownHead>
+			<MadCap:dropDownBody>
+				<p>Following is a layout for a four-part schedule.</p>
+				<p>
+					<img src="../../Resources/ImagesAdmin/Sched5.png" alt="Schedule Layout" title="Schedule Layout" />
+				</p>
+				<p>The following numbered descriptions match the numbered items in the schedule layout image above.</p>
+				<h3>Schedule List Controls</h3>
+				<ol>
+					<li>
+						<p>
+						<b class="Bold">Duration</b> dropdown list selection. Schedules can use two duration types. A duration is indicated by a single row. The duration start year or age shows in the "From" column.</p>
+						<ul>
+							<li>
+							<b class="Bold">Policy Year</b> – Durations on all rows are based on a starting policy year.</li>
+							<li>
+							<b class="Bold">Age</b> – Durations on all rows are based on the age of a participant.</li>
+						</ul>
+					</li>
+					<li>
+						<p>
+						<b class="Bold">Adjustment</b> dropdown list selection. Schedules can use two Adjustment types.  If the user changes the adjustment type, the adjustment amounts on all rows are reset to 0. When validating and running calculations, the schedule expands to one year per row and adjustments are applied per-year.</p>
+						<ul>
+							<li>
+							<b class="Bold">Amount</b> – Adjustments in all years are based on a dollar amount increase or decrease of the value in the previous year.</li>
+							<li>
+							<b class="Bold">Percent</b> – Adjustments on all rows are based on a percentage increase or decrease  of the value in the previous year.</li>
+						</ul>
+					</li>
+				</ol>
+				<h3>Schedule Columns</h3>
+				<ol start="3">
+					<li>
+						<p>
+						<b class="Bold">Error</b> column – There is no header for this column. If any of the columns in a row have error messages, an icon appears in this column along with a tooltip containing the actual message text.</p>
+						<p>
+							<img src="../../Resources/ImagesAdmin/Sched6.png" alt="Schedule Error Icon and Message" title="Schedule Error Icon and Message" />
+						</p>
+					</li>
+					<li>
+					<b class="Bold">From</b> column – Indicates the age or policy year in which the duration/row is scheduled to start. The duration type dropdown list determines whether age or policy year is displayed. This is automatically calculated by the schedule and cannot be adjusted by the user or admin.</li>
+					<li>
+					<b class="Bold">Number of Years</b> column – In any row/duration except the last row, the user can specify the number of policy years in the row. The number of years in the last row of a schedule will always be “End” and is not editable. All FireLight schedules run through End.</li>
+					<li>
+					<b class="Bold">Method</b> column (optional) – The method (generally used for disbursement methods). A two-column custom list is used to create this dropdown list. The first column in the custom list should be the text to display and the second column should be the value to use when the user has selected an option. Rules are used to determine how this field affects and is affected by other fields. Additionally, the entire list can be specified within the rules for the schedule and a custom list will not be used.</li>
+					<li>
+					<b class="Bold">Type</b> column (optional) – The value type. A two-column custom list is used to create this dropdown list. The first column in the custom list should be the text to display and the second column should be the value to use when the user selects an option. Rules are used to determine how this field affects and is affected by other fields. Additionally, the entire list can be specified within the rules for the schedule and a custom list will not be used.</li>
+					<li>
+					<b class="Bold">Amount</b> column (optional) – The specified amount, dollars or percentage, for the duration. This will likely be affected by the selected Type (enabled or disabled) using rules. A mask can be applied to format user input.</li>
+					<li>
+					<b class="Bold">Adjustment</b> column (optional) – The annual adjustment. The Adjustment type dropdown list selection controls whether this value is an amount or a percentage. This column can be enabled only if the Amount column is also enabled. Well-known masks are used for currency (no decimals) and percent (no decimals) to control user input. Decimal precision can be set for decimals.</li>
+					<li>
+					<b class="Bold">Add/Remove</b> Row Buttons – There is no header for this column. These buttons are used to add or remove rows. The first row of a schedule cannot be removed. When a new row is added, the From field is calculated using the previous row’s ending value calculated by the schedule using the From value and number of years entered. The Number of Years field in the new row is defaulted to End, and all other values are copied from the previous row.</li>
+				</ol>
+				<p MadCap:conditions="General.Online">
+					<a href="#top" alt="Return to Top" title="Return to Top">Return to Top</a>
+				</p>
+			</MadCap:dropDownBody>
+		</MadCap:dropDown>
+		<h2 MadCap:conditions="General.PDF">1. Add a Schedule, Configure Schedule Properties, and Add a Mode</h2>
+		<MadCap:dropDown>
+			<MadCap:dropDownHead>
+				<MadCap:dropDownHotspot MadCap:conditions="General.Online">1. Add a Schedule and Configure Schedule Properties</MadCap:dropDownHotspot>
+			</MadCap:dropDownHead>
+			<MadCap:dropDownBody>
+				<h3>Add a Schedule</h3>
+				<p>Add a Schedule control to a page, preferably within a panel so the schedule will have a heading. </p>
+				<ol>
+					<li>Drag a <b class="Bold">Panel</b> container from the right pane to the wizard page.</li>
+					<li>
+						<p>Double-click the <b class="Bold">Panel</b> to open the <b class="Bold">Panel Properties</b> dialog. In <b class="Bold">Field Name</b>, type the data item ID for the panel. Use only letters, numbers, spaces, and brackets. In <b class="Bold">Text</b>, type the display name of the panel. Leave the Width of the panel at 12.</p>
+						<p>For example, in the Name field, type "PremiumPanel" and in the Text field, type "Premium"  for a panel that will include a Premium schedule.</p>
+					</li>
+					<li>Drag a <b class="Bold">Schedule</b> control from the right pane to the wizard page. It will take up the entire width of the panel.</li>
+				</ol>
+				<h3>Configure Schedule Properties</h3>
+				<p>Use the Schedule Properties dialog to configure the generic schedule for the specific schedule type.</p>
+				<p MadCap:conditions="General.Online"> <img src="../../Resources/ImagesAdmin/Sched8.png" alt="Schedule Properties" title="Schedule Properties" MadCap:conditions="General.Online" class="Thumbnail" /> &lt;- <b class="Bold">Click</b> the thumbnail to view Schedule Properties.</p>
+				<ol>
+					<li>On the page, double-click the <b class="Bold">Schedule</b> to open the Schedule Properties dialog. </li>
+					<li>
+						<p>Enter values for the following properties:</p>
+						<ul>
+							<li>
+							<b class="Bold">Place Field on a New Row </b> Select the checkbox to force the schedule to be placed at the beginning of a new row.</li>
+							<li>
+							<b class="Bold">Field Name </b> The name of the data item associated with the schedule. This is the data item ID that rules will use to identify the schedule. Optionally, you may type in search text in the empty search box and select from the list of common tags to autocomplete the field name.</li>
+							<li>
+							<strong>Width</strong> The width of the schedule. The recommended schedule width is 12.</li>
+							<li>
+							<strong>Mobile Width</strong> The width of the field, when displayed on a mobile device. This is currently not active.</li>
+							<li>
+							<strong>Class Name</strong> The custom CSS class associated with the branding file.  This is the class name, if any, the schedule will use. The main purpose of a class name is to control styling within the element. This is an advanced option. Contact your Strategic Account Manager for assistance. <b class="Bold">IMPORTANT!</b> Clients that use the Class name property for custom classes are responsible for thoroughly testing their wizards with every release of FireLight due to FireLight base changes that could potentially affect their custom styles.</li>
+							<li>
+								<p>
+								<b class="Bold">Duration Type Label </b> Schedules can use one of two duration types:</p>
+								<ul style="list-style-type: circle;">
+									<li>Policy Year – Durations on all rows is based on a starting policy year.</li>
+									<li>
+										<p>Age – Durations on all rows is based on the age of the participant. </p>
+										<p>Enter a different label to change from using the default label name.</p>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<p>
+								<b class="Bold">Adjustment Type Label </b> Schedules can use one of two adjustment types. If the adjustment type is changed by the user, the adjustment amounts on all rows is reset to 0.</p>
+								<ul style="list-style-type: circle;">
+									<li>Amount – Adjustments in all years is based on a dollar amount. This will increase or decrease the value in the previous year by the amount specified.</li>
+									<li>Percent – Adjustments on all rows is based on a percentage. This will increase or decrease the value in the previous year by the percentage specified.</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<p>Include Columns: </p>
+						<p>Select the checkboxes for the columns to include. Clear the checkboxes for the columns to remove from the schedule. A schedule must have at least one optional column selected.</p>
+						<p>
+						<b class="Bold">NOTE:</b> The <b class="Bold">From</b> and <b class="Bold">Duration</b> columns are always required (selected by default) and cannot be removed.</p>
+						<ul>
+							<li>
+							<b class="Bold">Method</b> is a dropdown list. A common use of a Method column would be for Disbursements where the user selects a disbursement method option from a list (Loans, Withdrawals, Switch At Basis, etc.).</li>
+							<li>
+							<b class="Bold">ValueType </b> is a dropdown list and is used wherever a "Type" is needed. A ValueType column might be included in a Face Amount schedule where the user selects a type (Specify Amount, Seven Pay Face, Guideline Face, etc.)  on which to base the schedule.</li>
+							<li>
+							<b class="Bold">Value</b> is for a dollar or percentage amount.</li>
+							<li>
+							<b class="Bold">Adjustment</b> is used to modify the Value amount by increasing or decreasing by the Adjustment amount each policy year within the duration row of the schedule.</li>
+						</ul>
+					</li>
+					<li>Change the column captions as applicable. The captions are the column names for each column. You may need to change the name, such as Amount changes to Percent, for a Rate type schedule. When changing captions make sure you are consistent in the column name uses.</li>
+					<li>In the <b class="Bold">Value</b> column, select a <b class="Bold">Text Mask</b> in the list to set the formatting of the amount or percent entered.</li>
+					<li>
+						<p>Set <b class="Bold">Decimal Precision</b> for the <b class="Bold">Value</b> and <b class="Bold">Adjustment</b> columns. This sets the decimal places the values will use.</p>
+						<ul>
+							<li>For currency, use “0.00” for dollars and cents or “0” for whole dollars only.</li>
+							<li>For percentage, use “0” for whole percent, “0.0” for tenths, and “0.00” for one hundredths.</li>
+						</ul>
+					</li>
+					<li>
+						<p>Lists for columns:</p>
+						<ul>
+							<li>
+								<p>Lists are set/selected for the Method and ValueType columns.</p>
+								<ul style="list-style-type: circle;">
+									<li>
+										<p>Only custom lists are used in these selections.</p>
+									</li>
+									<li>
+										<p>Custom Lists cannot change dynamically at run time.</p>
+									</li>
+									<li>
+										<p>Custom lists must be created before they can be used/assigned to a schedule.</p>
+									</li>
+									<li>
+										<p>See <MadCap:xref href="../../Organization Configuration/Custom Lists.htm" alt="Custom Lists">Custom Lists</MadCap:xref> for instructions.</p>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<p>Manually inserted lists are entered in Rules.</p>
+								<ul style="list-style-type: circle;">
+									<li>Manually inserted lists can change during run time.</li>
+									<li>Any time you have a list in a schedule that can be changed during run time, use a manually inserted list.</li>
+									<li>The rules control which list to show.</li>
+									<li>The option “Not Selected” is used whenever manually inserted lists are used.</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ol>
+				<h3>Add the Schedule Mode</h3>
+				<p>The schedule does not include a mode. Mode is applied to the schedule using a dropdown list control. If the mode control is not included, the Illustration Services (Calculation Engine) assumes it is Monthly.</p>
+				<p>In the wizard designer you can add a schedule mode control to a page, preferably within the same panel with the schedule. </p>
+				<ol>
+					<li>
+						<p>Drag the <b class="Bold">Dropdown List</b> control into the panel area and drop it. </p>
+					</li>
+					<li>
+						<p>Double-click the <b class="Bold">Dropdown List</b> control to open the <b class="Bold">Dropdown List Properties</b> dialog. This is where you set the schedule mode list properties. </p>
+						<p>
+						<img src="../../Resources/ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" /> You can also click the control area to highlight the control and get the dropdown list control bar, which has four controls: Width, Edit, Copy and Delete. Click the Edit icon to open the dropdown list properties.</p>
+						<p>
+							<img src="../../Resources/ImagesAdmin/Sched9.png" alt="Dropdown List Control" title="Dropdown List Control" />
+						</p>
+					</li>
+					<li>
+						<p>Enter values for the following properties and click <b class="Bold">OK</b> to save and exit the Dropdown List Properties.</p>
+						<ul>
+							<li>
+							<b class="Bold">Place Field on a New Row </b> Select the checkbox to force the dropdown list to be placed at the beginning of a new row.</li>
+							<li>
+							<b class="Bold">Field Name </b> The name of the data item associated with the mode Dropdown List. This is the data item ID that rules will use to identify the mode. Use any characters except apostrophes.</li>
+							<li>
+							<b class="Bold">Text</b> Enter the name for the dropdown list that will show on the user interface, such as <b class="Bold">Premium Mode</b>. </li>
+							<li>
+							<strong>Width</strong> The width of the dropdown list. Recommend using 6 or less. It needs to be wide enough to display the list items.</li>
+							<li>
+							<strong>Mobile Width</strong> The width of the field, when displayed on a mobile device. This is currently not active.</li>
+							<li>
+							<strong>Class Name</strong> Enter the CSS class associated with the branding file.  This is the class name, if any, the dropdown list will use.</li>
+							<li> <strong>Help Text</strong> Enter the Help text to display, if any. If set, a Help icon appears beside the dropdown list. The user pauses the mouse over or clicks to view the specified text.</li>
+							<li>
+								<p>
+								<b class="Bold">Edit Item Sources</b> In the <b class="Bold">Item Source</b> dialog, enter one option per line for each option to be displayed within the list along with the List Value to be saved with the activity and then click <b class="Bold">OK</b>. The following format should be used: [Option Name]|[List Value]. The standard (common tag) List Values for the following modes are: Annual|1, Semi-Annual|2, Quarterly|3, and Monthly|4. </p>
+								<p>
+									<img src="../../Resources/ImagesAdmin/Sched10.png" alt="List Items with List Values" title="List Items with List Values" />
+								</p>
+							</li>
+						</ul>
+					</li>
+				</ol>
+				<p MadCap:conditions="General.Online">
+					<a href="#top" alt="Return to Top">Return to Top</a>
+				</p>
+			</MadCap:dropDownBody>
+		</MadCap:dropDown>
+		<h2 MadCap:conditions="General.PDF">2. Add Schedule Rules</h2>
+		<p MadCap:conditions="General.Online" class="Indent">
+			<strong>2. Add Schedule Rules</strong>
+		</p>
+		<h3 MadCap:conditions="General.PDF">2.1 Define Variables</h3>
+		<MadCap:dropDown>
+			<MadCap:dropDownHead>
+				<MadCap:dropDownHotspot MadCap:conditions="General.Online">2.1 Define Variables</MadCap:dropDownHotspot>
+			</MadCap:dropDownHead>
+			<MadCap:dropDownBody>
+				<p> The variables you set depend on the schedule columns used and the list options in the lists the schedule will use. A variable is a substitute for the actual value, which is numeric. Names are easier to use than numbers in rules.</p>
+				<ol>
+					<li>
+						<p>List Option Variables</p>
+						<ul>
+							<li>The Name of the variable is what is used in the rules to identify the “Value,” which is numeric.</li>
+							<li>The variable “Value” is the data item content or export value that is represented by the variable name.</li>
+							<li>The type identifies the data type for the “Value.”</li>
+						</ul>
+					</li>
+					<li>
+						<p>List Variable</p>
+						<ul>
+							<li>The Name of the variable is what is used in the rules to identify the “List.”</li>
+							<li>The list type identifies the string as a list of options for a dropdown.</li>
+							<li>Each “value” contains the list option Name and the list option numeric value.</li>
+						</ul>
+					</li>
+				</ol>
+				<p>
+					<big class="bold">Scenario</big>
+				</p>
+				<p>A premium schedule has a ValueType list with 4 options. Five variables are set, one for each option and one for the list.</p>
+				<p>
+					<b class="Bold">Example: Set the list option variables to use in the rules</b>
+				</p>
+				<MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+					<MadCap:codeSnippetCopyButton />
+					<MadCap:codeSnippetCaption>
+						<p>Set the list option variables to use in the rules</p>
+					</MadCap:codeSnippetCaption>
+					<MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;set name="specifyamountValueType"&gt;
+						&lt;const value="-4" type="String" /&gt;
+						&lt;/set&gt;
+						&lt;set name="GuidelineAnnualValueType"&gt;
+						&lt;const value="-5" type="String" /&gt;
+						&lt;/set&gt;
+						&lt;set name="minimumpremiumValueType"&gt;
+						&lt;const value="-6" type="String" /&gt;
+						&lt;/set&gt;
+						&lt;set name="requiredpremiumValueType"&gt;
+						&lt;const value="-7" type="String" /&gt;
+					&lt;/set&gt;</MadCap:codeSnippetBody>
+				</MadCap:codeSnippet>
+				<p>
+					<b class="Bold">Example: Set the list used by ValueType column</b>
+				</p>
+				<MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+					<MadCap:codeSnippetCopyButton />
+					<MadCap:codeSnippetCaption>
+						<p>Set the list used by ValueType column</p>
+					</MadCap:codeSnippetCaption>
+					<MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;set name="valueTypeList"&gt;
+						&lt;list type="String"&gt;
+						&lt;const value="Specify Amount|-4" /&gt;
+						&lt;const value="Guideline Annual|-5" /&gt;
+						&lt;const value="Minimum Premium|-6" /&gt;
+						&lt;const value="Required Premium|-7" /&gt;
+						&lt;/list&gt;
+					&lt;/set&gt;</MadCap:codeSnippetBody>
+				</MadCap:codeSnippet>
+				<p MadCap:conditions="General.Online">
+					<a href="#top" alt="Return to Top">Return to Top</a>
+				</p>
+			</MadCap:dropDownBody>
+		</MadCap:dropDown>
+		<h3 MadCap:conditions="General.PDF">2.2 Set Default Values</h3>
+		<MadCap:dropDown>
+			<MadCap:dropDownHead>
+				<MadCap:dropDownHotspot MadCap:conditions="General.Online">2.2 Set Default Values</MadCap:dropDownHotspot>
+			</MadCap:dropDownHead>
+			<MadCap:dropDownBody>
+				<p>Set defaults for the following schedule properties:</p>
+				<ol>
+					<li>
+					<b class="Bold">DurationType</b> – The default duration type, which must be either PolicyYear or Age.</li>
+					<li>
+					<b class="Bold">StartYear</b> – The year the schedule starts. Generally, this is 1.</li>
+					<li>
+					<b class="Bold">StartAge</b> – The age corresponding with the StartYear.</li>
+					<li>
+					<b class="Bold">EndYear</b> – The final scheduled year.</li>
+					<li>
+					<b class="Bold">Method</b> (optional) – The default method.</li>
+					<li>
+					<b class="Bold">ValueType</b> (optional) – The default value type.</li>
+					<li>
+					<b class="Bold">Value</b> (optional) – The default value.</li>
+					<li>
+					<b class="Bold">Adjustment</b> (optional) – The default adjustment value.</li>
+					<li>
+					<b class="Bold">AdjustmentType</b> (optional) – The default adjustment type.</li>
+				</ol>
+				<p>
+					<b class="Bold">Example of a set default rule that uses a list variable as the default value for ValueType.</b>
+				</p>
+				<MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+					<MadCap:codeSnippetCopyButton />
+					<MadCap:codeSnippetCaption>
+						<p>Set default value for ValueType</p>
+					</MadCap:codeSnippetCaption>
+					<MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;set name="defaultValueType"&gt;
+						&lt;get name="specifyamountValueType" /&gt;
+					&lt;/set&gt;</MadCap:codeSnippetBody>
+				</MadCap:codeSnippet>
+				<p>
+				<b class="Bold">NOTE:</b> No numeric values are used.</p>
+				<p MadCap:conditions="General.Online">
+					<a href="#top" alt="Return to Top">Return to Top</a>
+				</p>
+			</MadCap:dropDownBody>
+		</MadCap:dropDown>
+		<h3 MadCap:conditions="General.PDF">2.3 Initialization of the Schedule and Default First Row Values</h3>
+		<MadCap:dropDown>
+			<MadCap:dropDownHead>
+				<MadCap:dropDownHotspot MadCap:conditions="General.Online">2.3 Initialization of the Schedule and Default First Row Values</MadCap:dropDownHotspot>
+			</MadCap:dropDownHead>
+			<MadCap:dropDownBody>
+				<p>This is where the schedule is Initialized or created in the illustration. It is created when the condition is “isnewapp” (is a new app). This only runs once when the illustration is opened.</p>
+				<p>Note that all of the “get name” statements are for a variable to fill the property name.</p>
+				<MadCap:codeSnippet>
+					<MadCap:codeSnippetCopyButton />
+					<MadCap:codeSnippetCaption>
+						<p>Create a new schedule</p>
+					</MadCap:codeSnippetCaption>
+					<MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: JavaScript;">  &lt;if&gt;
+						&lt;condition&gt;
+						&lt;isnewapp /&gt;
+						&lt;/condition&gt;
+						&lt;!-- Create a new schedule, defaulting values for the first row and general schedule properties --&gt;
+						&lt;settable type="Schedule" dataitemid="Premium_Schedule"&gt;
+						&lt;prop name="ValueType"&gt;
+						&lt;get name="defaultValueType" /&gt;
+						&lt;/prop&gt;
+						&lt;prop name="Value"&gt;
+						&lt;get name="defaultValue" /&gt;
+						&lt;/prop&gt;
+						&lt;prop name="Adjustment"&gt;
+						&lt;get name="defaultAdjustment" /&gt;
+						&lt;/prop&gt;
+						&lt;prop name="AdjustmentType"&gt;
+						&lt;get name="defaultAdjustmentType" /&gt;
+						&lt;/prop&gt;
+						&lt;prop name="DurationType"&gt;
+						&lt;get name="defaultDurationType" /&gt;
+						&lt;/prop&gt;
+						&lt;prop name="StartYear" prop="Value"&gt;
+						&lt;get name="startYear" /&gt;
+						&lt;/prop&gt;
+						&lt;/settable&gt;
+					&lt;/if&gt;</MadCap:codeSnippetBody>
+				</MadCap:codeSnippet>
+				<p>The available names for the prop node are in 2.2 Set Default Values. They can be either column names or properties of the schedule.</p>
+				<p>The prop attribute can be used for default values and are Value, Disabled, or List. The most common one to be used is the Value.</p>
+			</MadCap:dropDownBody>
+		</MadCap:dropDown>
+		<h3 MadCap:conditions="General.PDF">2.4 Set Minimum and Maximum Values for Validation</h3>
+		<MadCap:dropDown>
+			<MadCap:dropDownHead>
+				<MadCap:dropDownHotspot MadCap:conditions="General.Online">2.4 Set Minimum and Maximum Values for Validation</MadCap:dropDownHotspot>
+			</MadCap:dropDownHead>
+			<MadCap:dropDownBody>
+				<p>When the Value and Adjustment columns are used, you need to set the boundaries for each. All you need to do is change the “Values.” Values are not formatted.</p>
+				<MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+					<MadCap:codeSnippetCopyButton />
+					<MadCap:codeSnippetCaption>
+						<p>Set Min and Max Values for Validation</p>
+					</MadCap:codeSnippetCaption>
+					<MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;set name="minValue"&gt;
+						&lt;const value="100" type="Double" /&gt;
+						&lt;/set&gt;
+						&lt;set name="maxValue"&gt;
+						&lt;const value="100000" type="Double" /&gt;
+						&lt;/set&gt;
+						&lt;set name="minAdjustmentAmount"&gt;
+						&lt;const value="0" type="Double" /&gt;
+						&lt;/set&gt;
+						&lt;set name="maxAdjustmentAmount"&gt;
+						&lt;const value="2500" type="Double" /&gt;
+						&lt;/set&gt;
+						&lt;set name="minAdjustmentPercent"&gt;
+						&lt;const value="0" type="Double" /&gt;
+						&lt;/set&gt;
+						&lt;set name="maxAdjustmentPercent"&gt;
+						&lt;const value="1" type="Double" /&gt;
+					&lt;/set&gt;</MadCap:codeSnippetBody>
+				</MadCap:codeSnippet>
+				<p MadCap:conditions="General.Online">
+					<a href="#top" alt="Return to Top">Return to Top</a>
+				</p>
+			</MadCap:dropDownBody>
+		</MadCap:dropDown>
+		<MadCap:pageBreak />
+		<h3 MadCap:conditions="General.PDF">2.5 Rules that Always Run in the Schedule</h3>
+		<MadCap:dropDown>
+			<MadCap:dropDownHead>
+				<MadCap:dropDownHotspot MadCap:conditions="General.Online">2.5 Rules that Always Run in the Schedule</MadCap:dropDownHotspot>
+			</MadCap:dropDownHead>
+			<MadCap:dropDownBody>
+				<ol>
+					<li>If there is cross schedule validation between this schedule and another schedule, this is where the rules for the other schedule data collection go. See the example <a href="#CrossScheduleValidationRules" MadCap:conditions="General.PDF">Cross Schedule Validation Rules</a>.<MadCap:conditionalText MadCap:conditions="General.Online">"Cross Schedule Validation Rules" below.</MadCap:conditionalText></li>
+				</ol>
+			</MadCap:dropDownBody>
+		</MadCap:dropDown>
+		<h3 MadCap:conditions="General.PDF">2.5.1 Load the Current Schedule</h3>
+		<MadCap:dropDown>
+			<MadCap:dropDownHead>
+				<MadCap:dropDownHotspot MadCap:conditions="General.Online">2.5.1 Load the Current Schedule</MadCap:dropDownHotspot>
+			</MadCap:dropDownHead>
+			<MadCap:dropDownBody>
+				<ol start="2">
+					<li>In the table node of the rules the type is set to “schedule,” the name is typically “currentSchedule,” and the dataitemid is the schedule component these rules are for.</li>
+					<li>Initially the start age and end year are set using the variable names that were defined earlier in the rules.</li>
+				</ol>
+				<p>
+					<b class="Bold">Example:</b>
+				</p>
+				<MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+					<MadCap:codeSnippetCopyButton />
+					<MadCap:codeSnippetCaption>
+						<p>Load the current schedule</p>
+					</MadCap:codeSnippetCaption>
+					<MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;table type="Schedule" name="currentSchedule" dataitemid="Premium_Schedule"&gt;
+						&lt;propset name="StartAge" prop="Value"&gt;
+						&lt;get name="currentSchedule" /&gt;
+						&lt;get name="startAge" /&gt;
+						&lt;/propset&gt;
+						&lt;propset name="EndYear" prop="Value"&gt;
+						&lt;get name="currentSchedule" /&gt;
+						&lt;get name="endYear" /&gt;
+						&lt;/propset&gt;
+						&lt;foreach name="row"&gt;
+					&lt;get name="currentSchedule" /&gt;</MadCap:codeSnippetBody>
+				</MadCap:codeSnippet>
+			</MadCap:dropDownBody>
+		</MadCap:dropDown>
+		<h3 MadCap:conditions="General.PDF">2.5.2 Setup for List Variations</h3>
+		<MadCap:dropDown>
+			<MadCap:dropDownHead>
+				<MadCap:dropDownHotspot MadCap:conditions="General.Online">2.5.2 Setup for List Variations</MadCap:dropDownHotspot>
+			</MadCap:dropDownHead>
+			<MadCap:dropDownBody>
+				<ol start="4">
+					<li>If there are things like a value outside the schedule like a Tax Qualification or a Definition of Life Insurance that can affect the schedule list or value this is where to put those rules.  See the example <a href="#CrossFieldListControls" MadCap:conditions="General.PDF" alt="Cross Field List Control Rules">Cross Field List Control Rules</a>.<MadCap:conditionalText MadCap:conditions="General.Online">"Cross Field List Control Rules" below.</MadCap:conditionalText></li>
+					<li>
+						<p>In this example the ValueType list is dependent on the Definition of Life Insurance (DOLI) Value from a dropdown field outside the schedule. If DOLI is set to value "1," show this list, otherwise “else” show that list. This is based on the DOLI numeric value, not the list option name of "CVAT."</p>
+						<ul>
+							<li>It starts with a compare of the DOLI value to the value of “1”.</li>
+							<li>If it is true, the first list is used and if it is false, the second list is used.</li>
+						</ul>
+					</li>
+					<li>
+						<p>Then the rule to set the list.</p>
+						<ul>
+							<li>This is where the table cells are referenced as opposed to a column name.</li>
+						</ul>
+					</li>
+					<li>This runs any time the DOLI setting is changed.</li>
+				</ol>
+				<p>
+					<b class="Bold">Example:</b>
+				</p>
+				<MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+					<MadCap:codeSnippetCopyButton />
+					<MadCap:codeSnippetCaption>
+						<p>Setup for List Variations</p>
+					</MadCap:codeSnippetCaption>
+					<MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;if&gt;
+						&lt;condition&gt;
+						&lt;compare op="=="&gt;
+						&lt;diget dataitemid="DOLI" type="string" /&gt;
+						&lt;const value="1" /&gt;
+						&lt;/compare&gt;
+						&lt;/condition&gt;
+						&lt;set name="valueTypeList"&gt;
+						&lt;list type="String"&gt;
+						&lt;const value="Solve|-7" /&gt;
+						&lt;const value="Specify Amount|-4" /&gt;
+						&lt;const value="Calculate|-6" /&gt;
+						&lt;/list&gt;
+						&lt;/set&gt;
+						&lt;else /&gt;
+						&lt;set name="valueTypeList"&gt;
+						&lt;list type="String"&gt;
+						&lt;const value="Guideline Annual|-5" /&gt;
+						&lt;const value="Solve|-7" /&gt;
+						&lt;const value="Specify Amount|-4" /&gt;
+						&lt;const value="Calculate|-6" /&gt;
+						&lt;/list&gt;
+						&lt;/set&gt;
+						&lt;/if&gt;
+						&lt;!-- Set the list on value type --&gt;
+						&lt;cellset name="ValueType" prop="ItemSource"&gt;
+						&lt;get name="row" /&gt;
+						&lt;get name="valueTypeList" /&gt;
+					&lt;/cellset&gt;</MadCap:codeSnippetBody>
+				</MadCap:codeSnippet>
+			</MadCap:dropDownBody>
+		</MadCap:dropDown>
+		<h3 MadCap:conditions="General.PDF">2.5.3 Set the Value State Based on ValueType</h3>
+		<MadCap:dropDown>
+			<MadCap:dropDownHead>
+				<MadCap:dropDownHotspot MadCap:conditions="General.Online">2.5.3 Set the Value State Based on ValueType</MadCap:dropDownHotspot>
+			</MadCap:dropDownHead>
+			<MadCap:dropDownBody>
+				<ol>
+					<li>The Value and Adjustment cells are enabled or disabled based on the selection made in the ValueType list.</li>
+					<li>
+						<p>If the ValueType is a calculation of any sort, the "Value" and "Adjustment" columns are not used and are disabled and blank. This is the check for the ValueType.</p>
+						<MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+							<MadCap:codeSnippetCopyButton />
+							<MadCap:codeSnippetCaption>
+								<p>Check for ValueType</p>
+							</MadCap:codeSnippetCaption>
+							<MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;if&gt;
+								&lt;condition&gt;
+								&lt;or&gt;
+								&lt;compare op="=="&gt;
+								&lt;cellget name="ValueType" prop="Value"&gt;
+								&lt;get name="row" /&gt;
+								&lt;/cellget&gt;
+								&lt;get name="calculateValueType" /&gt;
+								&lt;/compare&gt;
+								&lt;compare op="=="&gt;
+								&lt;cellget name="ValueType" prop="Value"&gt;
+								&lt;get name="row" /&gt;
+								&lt;/cellget&gt;
+								&lt;get name="GuidelineAnnualValueType" /&gt;
+								&lt;/compare&gt;
+								&lt;/or&gt;
+							&lt;/condition&gt;</MadCap:codeSnippetBody>
+						</MadCap:codeSnippet>
+					</li>
+					<li>If any of these are true, then Value and Adjustment Disabled = true.</li>
+					<li>If none are true, then the Value and Adjustment are enabled.</li>
+					<li>At this point the schedule is ready to operate.</li>
+				</ol>
+			</MadCap:dropDownBody>
+		</MadCap:dropDown>
+		<h3 MadCap:conditions="General.PDF">2.5.4 Expand the Schedule for Validation</h3>
+		<MadCap:dropDown>
+			<MadCap:dropDownHead>
+				<MadCap:conditionalText MadCap:conditions="General.Online">
+					<MadCap:dropDownHotspot>2.5.4 Expand the Schedule for Validation</MadCap:dropDownHotspot>
+				</MadCap:conditionalText>
+			</MadCap:dropDownHead>
+			<MadCap:dropDownBody>
+				<ol>
+					<li>Schedule validation should be performed using a table rule node with a type of ExpandedSchedule.</li>
+					<li>The expanded schedule differs from the standard Schedule in that each row in the schedule represents a single year.</li>
+					<li>If the user has entered adjustments in the schedule, the values for each year will automatically be modified by the adjusted amount.</li>
+					<li>
+						<p>Now initialize the expanded premium schedule to perform validation in all rows of the expanded schedule policy year one through maturity.</p>
+						<MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+							<MadCap:codeSnippetCopyButton />
+							<MadCap:codeSnippetCaption>
+								<p>Expand the schedule to run validations</p>
+							</MadCap:codeSnippetCaption>
+							<MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;!-- Expand the schedule to run validations on a year-by-year basis --&gt;
+								&lt;table type="ExpandedSchedule" name="currentSchedule" dataitemid="Premium_Schedule"&gt;
+								&lt;!-- Depending on the schedule's duration type, get the maximum duration. --&gt;
+								NOTE: There should not be a reason to make changes to this block of rules.
+								&lt;set name="endYear"&gt;
+								&lt;propget name="EndYear" prop="Value" type="Int32"&gt;
+								&lt;get name="currentSchedule" /&gt;
+								&lt;/propget&gt;
+								&lt;/set&gt;
+								&lt;set name="maxDuration"&gt;
+								&lt;get name="endYear" /&gt;
+								&lt;/set&gt;
+								&lt;if&gt;
+								&lt;condition&gt;
+								&lt;compare op="=="&gt;
+								&lt;propget name="DurationType" prop="Value"&gt;
+								&lt;get name="currentSchedule" /&gt;
+								&lt;/propget&gt;
+								&lt;const value="Age" type="String" /&gt;
+								&lt;/compare&gt;
+								&lt;/condition&gt;
+								&lt;set name="maxDuration"&gt;
+								&lt;get name="maxAge" /&gt;
+								&lt;/set&gt;
+								&lt;/if&gt;
+								&lt;!-- Depending on the schedule's adjustment type, get the min, max, and error message for adjustments. --&gt;
+								NOTE: There should not be a reason to make changes to this block of rules.
+								&lt;set name="minAdjustment"&gt;
+								&lt;get name="minAdjustmentAmount" /&gt;
+								&lt;/set&gt;
+								&lt;set name="maxAdjustment"&gt;
+								&lt;get name="maxAdjustmentAmount" /&gt;
+								&lt;/set&gt;
+								&lt;set name="adjustmentErrorMessage"&gt;
+								&lt;format format="The annual adjustment must be between {0:C0} and {1:C0}."&gt;
+								&lt;get name="minAdjustment" /&gt;
+								&lt;get name="maxAdjustment" /&gt;
+								&lt;/format&gt;
+								&lt;/set&gt;
+								&lt;if&gt;
+								&lt;condition&gt;
+								&lt;compare op="=="&gt;
+								&lt;propget name="AdjustmentType" prop="Value"&gt;
+								&lt;get name="currentSchedule" /&gt;
+								&lt;/propget&gt;
+								&lt;const value="Percent" type="String" /&gt;
+								&lt;/compare&gt;
+								&lt;/condition&gt;
+								&lt;set name="minAdjustment"&gt;
+								&lt;get name="minAdjustmentPercent" /&gt;
+								&lt;/set&gt;
+								&lt;set name="maxAdjustment"&gt;
+								&lt;get name="maxAdjustmentPercent" /&gt;
+								&lt;/set&gt;
+								&lt;set name="adjustmentErrorMessage"&gt;
+								&lt;format format="The annual adjustment must be between {0:P0} and {1:P0}."&gt;
+								&lt;get name="minAdjustment" /&gt;
+								&lt;get name="maxAdjustment" /&gt;
+								&lt;/format&gt;
+								&lt;/set&gt;
+								&lt;/if&gt;
+								&lt;set name="rowIndex"&gt;
+								&lt;const value="0" type="Int32" /&gt;
+								&lt;/set&gt;
+								&lt;foreach name="row"&gt;
+							&lt;get name="currentSchedule" /&gt;</MadCap:codeSnippetBody>
+						</MadCap:codeSnippet>
+					</li>
+				</ol>
+			</MadCap:dropDownBody>
+		</MadCap:dropDown>
+		<h3 MadCap:conditions="General.PDF">2.5.5 Set Row Values</h3>
+		<MadCap:dropDown>
+			<MadCap:dropDownHead>
+				<MadCap:conditionalText MadCap:conditions="General.Online">
+					<MadCap:dropDownHotspot>2.5.5 Set Row Values</MadCap:dropDownHotspot>
+				</MadCap:conditionalText>
+			</MadCap:dropDownHead>
+			<MadCap:dropDownBody>
+				<MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+					<MadCap:codeSnippetCopyButton />
+					<MadCap:codeSnippetCaption>
+						<p>Set row values</p>
+					</MadCap:codeSnippetCaption>
+					<MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;!-- Set row-level variables so we only have to parse values once --&gt;
+						NOTE: There should not be a reason to make changes to this block of rules.
+						&lt;set name="rowFrom"&gt;
+						&lt;cellget name="From" prop="Value" type="Int32"&gt;
+						&lt;get name="row" /&gt;
+						&lt;/cellget&gt;
+						&lt;/set&gt;
+						&lt;set name="rowValueType"&gt;
+						&lt;cellget name="ValueType" prop="Value" type="Int32"&gt;
+						&lt;get name="row" /&gt;
+						&lt;/cellget&gt;
+						&lt;/set&gt;
+						&lt;set name="rowValue"&gt;
+						&lt;cellget name="Value" prop="Value" type="Double" failvalue="0" parseformatting="true"&gt;
+						&lt;get name="row" /&gt;
+						&lt;/cellget&gt;
+						&lt;/set&gt;
+						&lt;set name="rowAdjustment"&gt;
+						&lt;cellget name="Adjustment" prop="Value" type="Double" failvalue="0" parseformatting="true"&gt;
+						&lt;get name="row" /&gt;
+						&lt;/cellget&gt;
+					&lt;/set&gt;</MadCap:codeSnippetBody>
+				</MadCap:codeSnippet>
+			</MadCap:dropDownBody>
+		</MadCap:dropDown>
+		<h3 MadCap:conditions="General.PDF">2.5.6 Run Validation Rules</h3>
+		<MadCap:dropDown>
+			<MadCap:dropDownHead>
+				<MadCap:conditionalText MadCap:conditions="General.Online">
+					<MadCap:dropDownHotspot>2.5.6 Run Validation Rules</MadCap:dropDownHotspot>
+				</MadCap:conditionalText>
+			</MadCap:dropDownHead>
+			<MadCap:dropDownBody>
+				<MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+					<MadCap:codeSnippetCopyButton />
+					<MadCap:codeSnippetCaption>
+						<p>Run validation rules</p>
+					</MadCap:codeSnippetCaption>
+					<MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;!-- Check max duration --&gt;
+						NOTE: There should not be a reason to make changes to this block of rules.
+						&lt;if&gt;
+						&lt;condition&gt;
+						&lt;compare op="&amp;gt;"&gt;
+						&lt;get name="rowFrom" /&gt;
+						&lt;get name="maxDuration" /&gt;
+						&lt;/compare&gt;
+						&lt;/condition&gt;
+						&lt;cellset name="Duration" prop="Message"&gt;
+						&lt;get name="row" /&gt;
+						&lt;format format="Values cannot be scheduled after Age 0 (Policy Year 1)."&gt;
+						&lt;get name="maxAge" /&gt;
+						&lt;get name="endYear" /&gt;
+						&lt;/format&gt;
+						&lt;/cellset&gt;
+						&lt;/if&gt;
+						NOTE: There should not be a reason to make changes to this block of rules.
+						&lt;!-- Check min and max value --&gt;
+						&lt;if&gt;
+						&lt;condition&gt;
+						&lt;and&gt;
+						&lt;compare op="=="&gt;
+						&lt;get name="rowValueType" /&gt;
+						&lt;get name="amountValueType" /&gt;
+						&lt;/compare&gt;
+						&lt;or&gt;
+						&lt;compare op="&amp;lt;"&gt;
+						&lt;get name="rowValue" /&gt;
+						&lt;get name="minValue" /&gt;
+						&lt;/compare&gt;
+						&lt;compare op="&amp;gt;"&gt;
+						&lt;get name="rowValue" /&gt;
+						&lt;get name="maxValue" /&gt;
+						&lt;/compare&gt;
+						&lt;/or&gt;
+						&lt;/and&gt;
+						&lt;/condition&gt;
+						&lt;cellset name="Value" prop="Message"&gt;
+						&lt;get name="row" /&gt;
+						&lt;format format="The annual payment amount must be between {0:C0} and {1:C0}."&gt;
+						&lt;get name="minValue" /&gt;
+						&lt;get name="maxValue" /&gt;
+						&lt;/format&gt;
+						&lt;/cellset&gt;
+						&lt;/if&gt;
+						&lt;!-- Check min and max adjustment --&gt;
+						NOTE: There should not be a reason to make changes to this block of rules.
+						&lt;if&gt;
+						&lt;condition&gt;
+						&lt;and&gt;
+						&lt;compare op="=="&gt;
+						&lt;get name="rowValueType" /&gt;
+						&lt;get name="amountValueType" /&gt;
+						&lt;/compare&gt;
+						&lt;or&gt;
+						&lt;compare op="&amp;lt;"&gt;
+						&lt;get name="rowAdjustment" /&gt;
+						&lt;get name="minAdjustment" /&gt;
+						&lt;/compare&gt;
+						&lt;compare op="&amp;gt;"&gt;
+						&lt;get name="rowAdjustment" /&gt;
+						&lt;get name="maxAdjustment" /&gt;
+						&lt;/compare&gt;
+						&lt;/or&gt;
+						&lt;/and&gt;
+						&lt;/condition&gt;
+						&lt;cellset name="Adjustment" prop="Message"&gt;
+						&lt;get name="row" /&gt;
+						&lt;get name="adjustmentErrorMessage" /&gt;
+						&lt;/cellset&gt;
+					&lt;/if&gt;</MadCap:codeSnippetBody>
+				</MadCap:codeSnippet>
+			</MadCap:dropDownBody>
+		</MadCap:dropDown>
+		<h3 MadCap:conditions="General.PDF">2.5.7 Run Additional Validation Rules</h3>
+		<MadCap:dropDown>
+			<MadCap:dropDownHead>
+				<MadCap:conditionalText MadCap:conditions="General.Online">
+					<MadCap:dropDownHotspot>2.5.7 Run Additional Validation Rules</MadCap:dropDownHotspot>
+				</MadCap:conditionalText>
+			</MadCap:dropDownHead>
+			<MadCap:dropDownBody>
+				<ol>
+					<li>This is where any additional validation for the schedule would be added.</li>
+					<li>The additional custom validation rules are typically cross schedule validation or validation between the schedule and another data field in the illustration.</li>
+					<li>See the examples in <MadCap:conditionalText MadCap:conditions="General.PDF"><a href="#CrossFieldValidationRules" alt="Cross Field Validation Rules">Cross Field Validation Rules</a> and <a href="#CrossScheduleValidationRules" alt="Cross Schedule Validation Rules">Cross Schedule Validation Rules</a>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online">"Cross Field Validation Rules" and Cross "Schedule Validation Rules" below.</MadCap:conditionalText></li>
+				</ol>
+				<p>
+					<b class="Bold">Example: Rule for looping through the expanded schedule policy years.</b>
+				</p>
+				<MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+					<MadCap:codeSnippetCopyButton />
+					<MadCap:codeSnippetCaption>
+						<p>Rule for looping through the expanded schedule policy years</p>
+					</MadCap:codeSnippetCaption>
+					<MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">This follows the last validation &lt;if&gt; node.
+						&lt;set name="rowIndex"&gt;
+						&lt;math op="+"&gt;
+						&lt;get name="rowIndex" /&gt;
+						&lt;const value="1" /&gt;
+						&lt;/math&gt;
+					&lt;/set&gt;</MadCap:codeSnippetBody>
+				</MadCap:codeSnippet>
+				<p MadCap:conditions="General.Online">
+					<a href="#top" alt="Return to Top">Return to Top</a>
+				</p>
+			</MadCap:dropDownBody>
+		</MadCap:dropDown>
+		<h2 MadCap:conditions="General.PDF">
+			<a name="CrossScheduleValidationRules">
+		</a>Cross Schedule Validation Rules</h2>
+		<MadCap:dropDown>
+			<MadCap:dropDownHead>
+				<MadCap:conditionalText MadCap:conditions="General.Online">
+					<MadCap:dropDownHotspot>Cross Schedule Validation Rules</MadCap:dropDownHotspot>
+				</MadCap:conditionalText>
+			</MadCap:dropDownHead>
+			<MadCap:dropDownBody>
+				<p>These rules to run validation across two different schedules is not common enough to have in the Rule Templates but is worth an explanation for how to add them into a template set of rules.</p>
+				<ol>
+					<li>The rules are placed in the schedule that the Error Message is to show in. If the Face Amount schedule and the Premium schedule have a validation check for the ValueType and the error is to show in the Premium schedule, that is where the rules are added.</li>
+					<li>
+						<p>The rules used are divided into two parts:</p>
+						<ul>
+							<li>The first part collects the required information (Data) from the other schedule for the validation.</li>
+							<li>The second part runs the compare operation for the validation.</li>
+						</ul>
+					</li>
+					<li>Each part is located in a different area of the schedule rules.</li>
+				</ol>
+				<p class="note">The scenario for the following example is that between the Face Amount schedule and Premium schedule one must contain a dollar value in year one. Therefore, if the ValueType of both schedules is set to a calculation, the error message is displayed in the Premium schedule.</p>
+				<p>
+					<b class="Bold">Part 1 is placed in the section “Rules that Always Run”.</b>
+				</p>
+				<ol>
+					<li>The face amount schedule table is loaded first to get the ValueType information for the comparison that will take place in validation.</li>
+					<li>
+						<p>This is necessary because the other schedule contains the essential information for the compare, namely the ValueType “value” needed for comparison.</p>
+						<MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+							<MadCap:codeSnippetCopyButton />
+							<MadCap:codeSnippetCaption>
+								<p>Cross Schedule Validation Rules Part 1</p>
+							</MadCap:codeSnippetCaption>
+							<MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;block&gt;
+								&lt;set name="schedule1HasConflictingYear1"&gt;   Creates the variable
+								&lt;const value="false" type="Boolean" /&gt;   Sets the Boolean variable field to “false”
+								&lt;/set&gt;
+								&lt;table type="Schedule" name="schedule1" dataitemid="FaceAmount_Schedule"&gt;   Opens the face amount schedule.
+								&lt;foreach name="row"&gt;
+								&lt;get name="schedule1" /&gt;
+								&lt;if&gt;
+								&lt;condition&gt;
+								&lt;compare op="=="&gt;
+								&lt;cellget name="ValueType" prop="Value"&gt;   Gets the value from the face amount schedule ValueType which in this scenario is a calculation type option with a value of “1”.
+								&lt;get name="row" /&gt;
+								&lt;/cellget&gt;
+								&lt;const value="1" type="string" /&gt; this value “1” represents a calculation option for Face Amount for the compare.
+								&lt;/compare&gt;
+								&lt;/condition&gt;   The compare result is “true”, set the variable to “true”
+								&lt;set name="schedule1HasConflictingYear1"&gt;
+								&lt;const value="true" type="boolean" /&gt;
+								&lt;/set&gt;
+								&lt;/if&gt;
+								&lt;/foreach&gt;
+							&lt;/table&gt;</MadCap:codeSnippetBody>
+						</MadCap:codeSnippet>
+					</li>
+					<li>This captured the Face Amount schedule ValueType "Value" of "1" which is a calculation and sets the conflict variable to true. If it is not a calculation such as Specify Amount, other than "1" it returns false.</li>
+					<li>The table closes and the variable "schedule1hasConflictingYear1" is set to true and stored.</li>
+					<li>
+						<p>This is used during validation in part 2 of the cross validation rules.</p>
+					</li>
+				</ol>
+				<p>
+					<b class="Bold">Part 2 is placed in the section "Run Additional Validation Rules."</b>
+				</p>
+				<ol start="6">
+					<li>
+						<p>Here is where the cross schedule validation takes place. The “And” node starts by getting the result from part 1, the variable "schedule1hasConflictingYear1" set to “true”.</p>
+					</li>
+					<li>Compare it to the <b class="Bold">ValueType</b> in the premium schedule.</li>
+					<li>
+						<p>If premium <b class="Bold">ValueType</b> is calculated, we have two “true” statements in the “And” node to get a “true” output from the condition node and generate the validation error message.</p>
+						<MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+							<MadCap:codeSnippetCopyButton />
+							<MadCap:codeSnippetCaption>
+								<p>Run Additional Validation Rules Part 2</p>
+							</MadCap:codeSnippetCaption>
+							<MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;!--  Run Additional Validation Rules  &gt;
+								&lt;!-- Cross validation of multiple schedule Value Types  --&gt;
+								&lt;if&gt;
+								&lt;condition&gt;
+								&lt;and&gt;
+								&lt;get name="schedule1HasConflictingYear1" /&gt;   This is from the face amount schedule and is “true” in this scenario.
+								&lt;compare op="=="&gt;
+								&lt;cellget name="ValueType" prop="Value"&gt;   This is from the premium schedule and is also “true” in this scenario when compared to “calculateValueType”.
+								&lt;get name="row" /&gt;
+								&lt;/cellget&gt;
+								&lt;get name="calculateValueType" /&gt;
+								&lt;/compare&gt;
+								&lt;/and&gt;
+								&lt;/condition&gt;   True + True = “true”, Trigger the error message.
+								&lt;cellset name="ValueType" prop="Message"&gt;
+								&lt;get name="row" /&gt;
+								&lt;const value="The schedules have conflicting value types in year 1." type="String" /&gt;
+								&lt;/cellset&gt;
+							&lt;/if&gt;</MadCap:codeSnippetBody>
+						</MadCap:codeSnippet>
+					</li>
+				</ol>
+				<p MadCap:conditions="General.Online">
+					<a href="#top" alt="Return to Top">Return to Top</a>
+				</p>
+			</MadCap:dropDownBody>
+		</MadCap:dropDown>
+		<h2 MadCap:conditions="General.PDF">
+			<a name="CrossFieldValidationRules">
+		</a>Cross Field Validation Rules</h2>
+		<MadCap:dropDown>
+			<MadCap:dropDownHead>
+				<MadCap:conditionalText MadCap:conditions="General.Online">
+					<MadCap:dropDownHotspot>Cross Field Validation Rules</MadCap:dropDownHotspot>
+				</MadCap:conditionalText>
+			</MadCap:dropDownHead>
+			<MadCap:dropDownBody>
+				<p>These rules to run validation across a schedule and an illustration field are not common enough to have in the Rule Templates, but are worth an explanation for how to add them into a template set of rules.</p>
+				<ol>
+					<li>The rules are placed in the schedule that the Error Message is to show in.</li>
+					<li>
+						<p>The rules used are divided into two functions:</p>
+						<ul>
+							<li>The first function collects the required information (Data) from the Avoid_MEC field for the validation.</li>
+							<li>The second function runs the compare operation for the validation.</li>
+						</ul>
+					</li>
+					<li>	Each function is located in the validation area of the schedule rules.</li>
+				</ol>
+				<p class="note">In this scenario the MEC Avoidance “Avoid_MEC” field List option and the Premium schedule ValueType have a validation check and the error is to show in the Premium schedule, that is where the rules are added. The Premium ValueType of “1” (Minimum Premium) is not allowed with the MEC Avoidance option of “Yes – Adjust Face” value = “2”.</p>
+				<p>
+					<b class="Bold">Function 1 and 2 are placed in the section “Run Additional Validation Rules”</b>
+				</p>
+				<p class="Indent2">&lt;!-- Expand the schedule to run validations on a year-by-year basis --&gt;</p>
+				<p class="Indent2">&lt;table type="ExpandedSchedule" name="currentSchedule" dataitemid="Premium_Schedule"&gt;</p>
+				<p class="Indent2">&lt;!--  Run Additional Validation Rules  &gt;</p>
+				<p class="Indent2">&lt;!-- Cross validation of illustration field data and schedule Value Type  --&gt;</p>
+				<ol start="4">
+					<li>The“Avoid_MEC” field List option is added first to get the illustration field information for the comparison.</li>
+					<li>
+						<p>Here is where the cross validation takes place. The “And” node starts by comparing the actual “Avoid_MEC” value to the known Error value of “2”.</p>
+						<MadCap:codeSnippet>
+							<MadCap:codeSnippetCopyButton />
+							<MadCap:codeSnippetCaption>
+								<p>Cross validation</p>
+							</MadCap:codeSnippetCaption>
+							<MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;if&gt;
+								&lt;condition&gt;
+								&lt;and&gt;
+								&lt;compare op="=="&gt;
+								&lt;diget dataitemid="Avoid_MEC" /&gt;
+								&lt;const value="2" /&gt; The actual value is compared to the compare value of “2”. 
+								In this scenario the compare results in “true”.
+							&lt;/compare&gt;</MadCap:codeSnippetBody>
+						</MadCap:codeSnippet>
+					</li>
+					<li>The compare results in a “true”.</li>
+					<li>
+						<p>Here the schedule ValueType is compared to the known error value of “1”.</p>
+						<MadCap:codeSnippet>
+							<MadCap:codeSnippetCopyButton />
+							<MadCap:codeSnippetCaption>
+								<p>ValueType is compared to the known error value of “1”</p>
+							</MadCap:codeSnippetCaption>
+							<MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">            &lt;compare op="=="&gt;
+								&lt;cellget name="ValueType" prop="Value" type="Int32"&gt;
+								&lt;get name="row" /&gt;
+								&lt;/cellget&gt;
+								&lt;const value="1" /&gt; The schedule ValueType actual value is compared to the 
+								compare value of “1”. In this scenario the compare results in “true”.
+								&lt;/compare&gt;
+								&lt;/and&gt;
+							&lt;/condition&gt;</MadCap:codeSnippetBody>
+						</MadCap:codeSnippet>
+					</li>
+					<li>
+						<p>The premium <b class="Bold">ValueType</b> is Minimum Premium, value = “1” which produces a compare “true”. There are two “true” statements in the “And” node to get a “true” output from the condition node and generate the validation error message.</p>
+						<MadCap:codeSnippet>
+							<MadCap:codeSnippetCopyButton />
+							<MadCap:codeSnippetCaption>
+								<p>Compare and generate the validation message</p>
+							</MadCap:codeSnippetCaption>
+							<MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">            &lt;cellset name="ValueType" prop="Message"&gt;
+								&lt;get name="row" /&gt;
+								&lt;const value="The selected MEC Avoidance method is not valid with the selected Premium 
+								option." type="String" /&gt;
+								&lt;/cellset&gt;
+								&lt;/if&gt;
+								&lt;/foreach&gt;
+							&lt;/table&gt;</MadCap:codeSnippetBody>
+						</MadCap:codeSnippet>
+					</li>
+				</ol>
+				<p MadCap:conditions="General.Online">
+					<a href="#top" alt="Return to Top">Return to Top</a>
+				</p>
+			</MadCap:dropDownBody>
+		</MadCap:dropDown>
+		<h2 MadCap:conditions="General.PDF">
+			<a name="CrossFieldListControls">
+		</a>Cross Field List Control Rules</h2>
+		<MadCap:dropDown>
+			<MadCap:dropDownHead>
+				<MadCap:conditionalText MadCap:conditions="General.Online">
+					<MadCap:dropDownHotspot>Cross Field List Control Rules</MadCap:dropDownHotspot>
+				</MadCap:conditionalText>
+			</MadCap:dropDownHead>
+			<MadCap:dropDownBody>
+				<p>If there are things like a value outside the schedule like a Tax Qualification or a Definition of Life Insurance that can affect the schedule list or value this is where to put those rules.</p>
+				<p>
+				<b class="Bold">IMPORTANT NOTE:</b>  A custom list will not work for lists that change dynamically at run time.</p>
+				<ol>
+					<li>
+						<p>In this example, the ValueType list is dependent on the Definition of Life Insurance (DOLI) Value from a dropdown list field outside the schedule. If DOLI is set to value "1," show this list, otherwise “else” show that list. This is based on the DOLI numeric value, not the list option name of "CVAT."</p>
+						<ul>
+							<li>It starts with a compare of the DOLI value to the value of “1”.</li>
+							<li>If it is true, the first list is used and if it is false the second list is used.</li>
+						</ul>
+					</li>
+					<li>
+						<p>Then the rule to set the list.</p>
+						<ul>
+							<li>This is where the table cells are referenced as opposed to a column name.</li>
+						</ul>
+					</li>
+					<li>This runs any time the DOLI setting is changed.</li>
+				</ol>
+				<p class="note">
+				<b>Important Procedure!</b>  The list values, name, and numeric must be set in the Variables.</p>
+				<p>
+					<b class="Bold">List variables are placed in the section “Define Variables”</b>
+				</p>
+				<MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+					<MadCap:codeSnippetCopyButton />
+					<MadCap:codeSnippetCaption>
+						<p>List Variables</p>
+					</MadCap:codeSnippetCaption>
+					<MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;set name="amountValueType"&gt;
+						&lt;const value="-4" type="String" /&gt;
+						&lt;/set&gt;
+						&lt;set name="GuidelineAnnualValueType"&gt;
+						&lt;const value="-5" type="String" /&gt;
+						&lt;/set&gt;
+						&lt;set name="calculateValueType"&gt;
+						&lt;const value="-6" type="String" /&gt;
+						&lt;/set&gt;
+						&lt;set name="solveValueType"&gt;
+						&lt;const value="-7" type="String" /&gt;
+						&lt;/set&gt;
+						&lt;set name="valueTypeList"&gt;
+						&lt;list type="String"&gt;
+						&lt;const value="Amount|-4" /&gt;
+						&lt;/list&gt;
+					&lt;/set&gt;</MadCap:codeSnippetBody>
+				</MadCap:codeSnippet>
+				<p>
+					<b class="Bold">List Rules are placed in the section “Setup for List Variations”</b>
+				</p>
+				<MadCap:codeSnippet>
+					<MadCap:codeSnippetCopyButton />
+					<MadCap:codeSnippetCaption>
+						<p>List Rules for Setup for List Variations</p>
+					</MadCap:codeSnippetCaption>
+					<MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;if&gt;
+						&lt;condition&gt;
+						&lt;compare op="=="&gt;
+						&lt;diget dataitemid="DOLI" type="string" /&gt;
+						&lt;const value="1" /&gt;
+						&lt;/compare&gt;  The illustration field name “DOLI” value is compared to the set value of “1”. This 
+						represents the CVAT selection and when the actual value is “1” returns a “true” for the condition.
+						&lt;/condition&gt;
+						&lt;set name="valueTypeList"&gt;  When the compare returns a “true” use this list.
+						&lt;list type="String"&gt;
+						&lt;const value="Solve|-7" /&gt;
+						&lt;const value="Specify Amount|-4" /&gt;
+						&lt;const value="Calculate|-6" /&gt;
+						&lt;/list&gt;
+						&lt;/set&gt;
+						&lt;else/&gt;
+						&lt;set name="valueTypeList"&gt;  When the compare returns a “false” use this list.
+						&lt;list type="String"&gt;
+						&lt;const value="Guideline Annual|-5" /&gt;
+						&lt;const value="Solve|-7" /&gt;
+						&lt;const value="Specify Amount|-4" /&gt;
+						&lt;const value="Calculate|-6" /&gt;
+						&lt;/list&gt;
+						&lt;/set&gt;
+						&lt;/if&gt;
+						&lt;!-- Set the list on value type --&gt;
+						&lt;cellset name="ValueType" prop="ItemSource"&gt;
+						&lt;get name="row" /&gt;
+						&lt;get name="valueTypeList" /&gt;  Sets the list to use as the compare result
+					&lt;/cellset&gt;</MadCap:codeSnippetBody>
+				</MadCap:codeSnippet>
+			</MadCap:dropDownBody>
+		</MadCap:dropDown>
+		<p MadCap:conditions="General.Online">
+			<a href="#top" alt="Return to Top">Return to Top</a>
+		</p>
+	</body>
+</html>

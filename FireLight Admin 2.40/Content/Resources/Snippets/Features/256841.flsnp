@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Distribution partners often receive questions from their financial advisors or carriers regarding what was selected in the Wizard on the FireLight UI. Once an activity is locked for review or submission, the data entered is no longer visible to the distributor.</p>
+        <p>Clients would like the ability to be able to keep Wizard screens viewable beyond the lock of the application. Allowing the Wizard data to remain visible will provide clients the ability to view the selections made by the user for troubleshooting purposes. This is a FireLight feature available to all users with a Wizard; there will not be an Organization or Group setting to control this enhancement.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>FireLight UI</p>
+            </li>
+            <li>
+                <p>FireLight Wizards in locked activities</p>
+            </li>
+            <li>
+                <p>Lock icon next to activity name when viewing wizard in read-only/after locked</p>
+            </li>
+        </ul>
+    </body>
+</html>

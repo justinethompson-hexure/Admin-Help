@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+	<head>
+		<link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h1><a name="top"></a>Create a Wizard Workflow</h1>
+		<p class="noteTop"><b>NOTE:</b> Hexure provides a Template Wizard (Annuity) and associated Rule Set that you can download from Admin Help and use as a starting point for creating a wizard of your own. See <MadCap:xref href="../Wizard Library/Add a Template Wizard and Rule Set.htm" target="_blank" alt="Add a Template Wizard and Rule Set">Add a Template Wizard and Rule Set</MadCap:xref> for instructions.</p>
+		<p class="noteBottom"><b class="Bold">Maximum Wizard Size:</b> The maximum size for a single wizard is 10MB.</p>
+		<p>Create a wizard workflow in FireLight<sup MadCap:conditions="General.Online">®</sup>. The wizard facing presentation layer is in addition to the existing form-based solution, creating an alternative experience for the agent. Using this workflow, the PDFs do not display to the end user during data collection, but are filled out based on the wizard entry presented during the signing ceremony.  Using the Admin wizard designer, firms are able to adjust the wizard real-time. <b class="Bold">NOTE:</b> Wizards are not available on the FireLight Console.</p>
+		<ol>
+			<li>
+				<p>Create the wizards for the product. Create a wizard for each navigation stop in the wizard workflow. For example, you may want to create wizards for personal information, beneficiary, coverage options, health questionnaire, etc., for a Term Life product. See <MadCap:xref href="../Wizard Library/Wizard Library.htm" alt="Wizard Library">Wizard Library</MadCap:xref> topics for more detailed information.</p>
+				<ol style="list-style-type: lower-alpha;">
+					<li>On the upper left of the <b class="Bold">Designer/Wizard Library</b> page, click <b class="Bold">Create Wizard</b>. </li>
+					<li>On the <b class="Bold">Wizard Detail</b> tab, fill in the <b class="Bold">Wizard Number</b> and <b class="Bold">Wizard Name</b>, select the <b class="Bold">States Approved</b>, and fill in any additional wizard details. Click <b class="Bold">Save</b> at the bottom of the tab.</li>
+					<li>When finished creating the wizards, click <b class="Bold">Wizard Designer</b> at the bottom of the tab.</li>
+				</ol>
+			</li>
+			<li>
+				<p>Add pages, section breaks, containers, and fields to the wizards. See the <MadCap:xref href="Add and Delete Pages and Section Breaks.htm" alt="Add and Delete Pages and Section Breaks">Add and Delete Pages and Section Breaks</MadCap:xref> and <MadCap:xref href="Add Containers and Fields.htm" alt="Add Containers and Fields">Add Containers and Fields</MadCap:xref>  topics for  more detailed information.</p>
+				<ol style="list-style-type: lower-alpha;">
+					<li>Near the top of the left pane of the <b class="Bold">Designer/Wizard Designer</b> page, select a <b class="Bold">Wizard</b> in the list.</li>
+					<li>In the left pane, click <b class="Bold">Add New Page</b>, enter the <b class="Bold">Name</b>, <b class="Bold">Title</b>, <b class="Bold">Subtitle</b>, and <b class="Bold">Navigation Text</b> for the page and click <b class="Bold">OK</b>. The Name uniquely identifies the page for usage in rules. The Title and Subtitle are displayed when the wizard is rendered. Add all applicable pages to the Wizard. For example, add an owner page and an insured page to the personal information wizard for a Term Life product.</li>
+					<li>To group fields together, drag a container (panel or group) from the <b class="Bold">Add Field</b> pane on the right to the wizard page. Double-click the container to set the properties.</li>
+					<li>Drag fields from the <b class="Bold">Add Field</b> pane to the container or page. Double-click each field and set the field properties.</li>
+					<li>(Optional) Add one or more section breaks to the pages.On the left, click <b class="Bold">Set Page Workflow</b>. In the Page Workflow dialog, click <b class="Bold">ADD SECTION BREAK</b>. Drag the <b class="Bold">Section Break</b>  icon to the desired location among the pages in the wizard.  A section break requires that all previous fields must be 100% complete before the user can proceed to the next page in the activity. </li>
+					<li>When finished adding containers and fields, click <b class="Bold">Save Wizard</b> on the upper left.</li>
+				</ol>
+			</li>
+			<li>
+				<p>Add or edit rule sets for the wizards. See <MadCap:xref href="../../Product Configuration/Rule Sets.htm" alt="Rule Sets">Rule Sets</MadCap:xref> topics for more detailed information.</p>
+				<p><b class="Bold">NOTE:</b> You can use the same rule set for the wizard that you use for the associated form. Use the following instructions if you would like to add wizard-specific rules, such as hiding or showing a panel based on a selection made by the user.</p>
+				<ol style="list-style-type: lower-alpha;">
+					<li>In the Wizard Designer, select a field on the wizard page and click <b class="Bold">EDIT RULES</b> in the left pane.</li>
+					<li>On the upper left of the Rules window in <b class="Bold">Filter Rule Sets</b>, begin typing the first letters of the rule set for the wizard and click the rule set name in the filtered list to open the rule set.</li>
+					<li>On the upper right of the Rules window, click <b class="Bold">NEW RULE</b>.</li>
+					<li>Enter a <b class="Bold">Rule Name</b>, select a <b class="Bold">Rule Scope</b> and select a pre-built rule <b class="Bold">Template</b> from the list. Click <b class="Bold">CREATE RULE</b> on the upper right.</li>
+					<li>On the Rules window, click <b class="Bold">SAVE RULE SET</b> on the lower right.</li>
+				</ol>
+			</li>
+			<li>To view whether a field has Required or Validate Input properties checked, select the field and then click <b>AutoGen&#160;Rules</b>. Clicking <b>AutoGen Rules</b> without any field selected lists system-generated rules for all wizard data items with the Required and/or Validate property checked.</li>
+			<li>
+				<p>Add the product for the wizards and associated forms. See <MadCap:xref href="../../Product Configuration/Products.htm" alt="Products">Products</MadCap:xref> topics for more detailed information.</p>
+				<ol style="list-style-type: lower-alpha;">
+					<li>On the navigation bar, click <b class="Bold">Product Config/Products</b>. </li>
+					<li>On the upper left of the Products page, click <b class="Bold">Add New Product</b>.</li>
+					<li>Enter the <b class="Bold">Product Name</b>, select the <b class="Bold">Product Type</b>, select the <b class="Bold">Product Category</b> if the product is a Non-Insurance Product, select the applicable <b class="Bold">State Approved</b> checkboxes. Enter any additional product information and click <b class="Bold">Save Product Config</b>.</li>
+				</ol>
+			</li>
+			<li>
+				<p>Add the package for the product, forms, wizards and rule sets. See <MadCap:xref href="../../Product Configuration/Packages.htm" alt="Packages">Packages</MadCap:xref> for more detailed information.</p>
+				<ol style="list-style-type: lower-alpha;">
+					<li>On the navigation bar, click <b class="Bold">Product Config/Packages</b>.</li>
+					<li>On the upper left, click <b class="Bold">Add New Package</b>.</li>
+					<li>On the <b class="Bold">Package Detail</b> tab, enter the <b class="Bold">Package Name</b> and select an <b class="Bold">ACORD Type</b> and <b class="Bold">Area Type</b> for the wizards and forms. If the package is available for only specific role codes, enter the role codes in <b class="Bold">Role Codes</b>.</li>
+					<li>On the <b class="Bold">Forms/Wizards In Package</b> tab under <b class="Bold">All Forms/Wizards</b>, press and hold the Ctrl key and select the wizards to include in the package along with the associated forms in the package. Click the right arrow to move the wizards to the <b>Forms/Wizards in Package</b> list. Use the up and down arrows to move the wizards into the display order.</li>
+					<li>On the <b class="Bold">Rule Sets In Package</b> tab under All Rule Sets, select one or more rule sets for the package. These rule sets contain the rules for the wizards and forms.</li>
+					<li>Click <b class="Bold">Save Package</b>.</li>
+				</ol>
+			</li>
+			<li>
+				<p>Add a sales agreement for the package. See <MadCap:xref href="../../Product Configuration/SalesAgreements.htm" alt="Sales Agreements">Sales Agreements</MadCap:xref> for more detailed information.</p>
+				<ol style="list-style-type: lower-alpha;">
+					<li>On the navigation bar, click <b class="Bold">Product Config/Sales Agreements</b>.</li>
+					<li>Select a <b class="Bold">Product</b> in the <b>Product Agreement</b> grid.</li>
+					<li>Select a <b class="Bold">Selling Org</b> and select the <b class="Bold">States Approved</b> checkboxes.</li>
+					<li>In the <b class="Bold">Available Packages</b> list, select the package for the product with wizards and forms and click the right arrow to move it into the <b class="Bold">Assigned Packages</b> list for the product.</li>
+					<li>Click <b class="Bold">Save Sales Agreement</b>.</li>
+				</ol>
+			</li>
+			<li>
+				<p>Grant access to the product. See <MadCap:xref href="../../Organization Configuration/Groups/Product Access.htm" alt="Product Access">Product Access</MadCap:xref> in Organization Configuration/Groups for more detailed information.</p>
+				<ol style="list-style-type: lower-alpha;">
+					<li>On the navigation bar, click <b class="Bold">Organization Config/Groups</b>.</li>
+					<li>In the grid, select a <b class="Bold">TC Role Code</b>.</li>
+					<li>On the <b class="Bold">Product Access</b> tab, select the checkbox for the new Product.</li>
+					<li>Click <b class="Bold">Save</b> at the bottom of the Groups page.</li>
+				</ol>
+			</li>
+			<li>
+				<p>Deploy the product to the applicable environments. See <MadCap:xref href="../../Utilities/Deployments/Deploy Data.htm" alt="Deploy Data">Deploy Data</MadCap:xref> for more detailed information.</p>
+				<ol style="list-style-type: lower-alpha;">
+					<li>On the navigation bar, click <b class="Bold">Utilities/Deployments</b>.</li>
+					<li>In <b class="Bold">Synchronization Scope</b>, select <b class="Bold">All Configuration</b>.</li>
+					<li>In <b class="Bold">Reason</b>, type a reason for the deployment, for example, type <b class="Bold">New Product</b> or <b class="Bold">New Wizard</b>.</li>
+					<li>In the list, select the checkbox for the product. </li>
+					<li>Click <b class="Bold">Deploy Now</b>.</li>
+				</ol>
+			</li>
+		</ol>
+		<p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+		</p>
+	</body>
+</html>

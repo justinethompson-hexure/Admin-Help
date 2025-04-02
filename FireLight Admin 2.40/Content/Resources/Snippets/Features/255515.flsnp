@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Custom lists currently does not support comma characters within the tab delimited file that is used at the time of importing data. Commas used in the fields get replaced by a space. With this feature, FireLight base will support adding commas in the file and saving into the system as they are. </p>
+        <p>Impacts: </p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Upload custom list (tab delimited file) process is updated.  When the txt file is uploaded with commas within the text fields, commas will not be replaced with a space. </p>
+            </li>
+        </ul>
+    </body>
+</html>

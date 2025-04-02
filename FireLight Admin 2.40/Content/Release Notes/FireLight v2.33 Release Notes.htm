@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <a name="top">
+            </a>FireLight v2.33 Release Note</h1>
+        <h2>January 2024 Release—1/19/2024 Production</h2>
+        <h2>Enhancements</h2>
+        <h3>Review Queue – Reviewer Notification When Attachment Added to Locked Activity: DIST-1986</h3>
+        <p>This feature will notify a reviewer who has locked an activity for review if the agent adds/removes an attachment/document to the app. The notification is sent via email.</p>
+        <h4>Impact</h4>
+        <ul>
+            <li>Create a new email template to notify reviewer about document update in the activity. This email template is added under the email category “Review Queue” the “Email Template” page under the Org Config menu.</li>
+            <li>Send email to reviewer when document is updated for the activity locked in review.</li>
+        </ul>
+        <h3>Firelight Administration Tool - Changes for Ease-of-Use DIST-1896</h3>
+        <p>This enhancement updates commonly used administration tool functionality to improve usability. This will enhance efficiency for users of the FireLight Administration tool.</p>
+        <h4>Impact</h4>
+        <ul>
+            <li>Add links to directly access forms/wizards on the list boxes on page - FLAdmin &gt; Packages &gt; Forms/Wizards in Package (tab)</li>
+            <li>Add links to directly access rule sets on the list boxes on page - FLAdmin &gt; Packages &gt; Rule Sets in Package (tab)</li>
+            <li>Add a column for ACORD value in the grid on page - FLAdmin &gt; Packages &gt; Package Detail (tab)</li>
+            <li>Add links to directly access packages on the list boxes on page - FLAdmin &gt; Sales Agreements &gt; Sales Agreement Details (tab) &gt; Packages (list box)</li>
+            <li>Add a column for CUSIP value in the grid on page - FLAdmin &gt; Sales Agreements &gt; Sales Agreement Details (tab) &gt; Product (grid)</li>
+            <li>Add a column for CUSIP value in the grid on page - FLAdmin &gt; Products &gt; Product Details (tab) &gt; Product (grid)</li>
+            <li>Display alert when duplicate package is created using Duplicate link - FLAdmin &gt; Packages &gt; Package Detail (tab)</li>
+            <li>Display alert when duplicate rule set is created using Duplicate link - FLAdmin &gt; Rule Sets</li>
+        </ul>
+        <h3>Review Queue - Add New Filter Option to List All Unlocked Activities DIST-2072</h3>
+        <p>Provide ability to filter review queues on two more options, such as, activities that are unlocked currently and activities that were not locked by any reviewer yet. Both these options/filters is available on all the queues and on Advanced Search dialog.</p>
+        <h4>Impact</h4>
+        <p>Added two more filters on the statuses dropdown on Review Queue and Advanced Search dialog to allow searching:</p>
+        <ul>
+            <li>Unassigned Orders - Landed in the queue and not locked by any reviewer yet</li>
+            <li>Unlocked Orders - Was locked by a reviewer at least once and not locked currently</li>
+        </ul>
+        <h3>DTCC Fall Update Enhancements CR-906</h3>
+        <p>These enhancements update APP/SUB to add new fields and cycles in accordance with the 2023 DTCC Fall Update.</p>
+        <h4>Impact</h4>
+        <ul>
+            <li>Add additional PSE output cycle to APP/SUB</li>
+            <li>APP/SUB Record Layout updated to match September update.</li>
+            <li>Add new fields to match ACORD 951e form.</li>
+        </ul>
+        <h3>LexisNexis Instant ID Enhancements CR-1226</h3>
+        <p>These enhancements allow LexisNexis Instant ID and Instant ID Q&amp;A integrations to be called independently and to be included in the same workflow.</p>
+        <h4>Impact</h4>
+        <ul>
+            <li>Add unique data group properties/response types for Wizards/Forms Designers.</li>
+            <li>Add custom action parameter for OTP confirmation button.</li>
+        </ul>
+        <h3>Map User First/Middle/Last 
+Name in SSO to Agent Preference DIST-1216</h3>
+        <p>This enhancement will map agent first, middle, and last name value from SSO login to the agent preference fields. Currently, when agent logs in using SSO, only the full name is mapped. With this enhancement agent first, middle, and last name will also be mapped to the system data items.</p>
+        <h4>Impact</h4>
+        <ul>
+            <li>Agent name fields on preferences section in the FL App.</li>
+            <li>Fields with the values from 1228 file is populated in below data items:</li>
+            <ul>
+                <li>Agent_FirstName</li>
+                <li>Agent_MiddleName</li>
+                <li>Agent_LastName</li>
+            </ul>
+        </ul>
+        <h3>Activity Reports - Changes to Abandoned Activity Admin Report DIST-879</h3>
+        <p>Four new columns will now be available to the existing admin report "Abandoned Activity Report." These new columns can be enabled for clients who request them.</p>
+        <h4>Impact:</h4>
+        <ul>
+            <li>Below columns can now be made available to Abandoned Activity Admin Report, in the CSV format.</li>
+            <ul>
+                <li>Agent Carrier ID (Data Item ID - Agent_CarrierID)</li>
+                <li>Agent Full Name (Data Item ID - Agent_Full_Name)</li>
+                <li>Percent Complete (Data Item ID - FLI_PERCENT_COMPLETE)</li>
+                <li>Is Deleted</li>
+            </ul>
+        </ul>
+        <h3>Visualization</h3>
+        <p>The new Visualization tool interface optimizes the use of viewable areas for the graphical presentation of policy values in individual product and product comparison scenarios to enhance communication in the sales process and facilitate client decision-making.</p>
+        <ul>
+            <li>Provide the ability to compare a set of user-selected products graphically based on various presentations of Premium, Cash Value, Death   Benefit, IRR, etc.</li>
+            <li>Continue to allow clients to leverage existing product presentations. When an individual product is selected, any proprietary presentation materials/graphics is accessible in the new visualization interface.</li>
+            <li>Provide for an easy transition to comparisons with competing/ complementary products.</li>
+        </ul>
+        <h3>Firelight Administration Tool -Package Effective Date EAES-2111</h3>
+        <p>The Package Detail screen includes an ability to specify the start and end date of the package. It will behave like the start and end dates for Products, Rule Sets, Forms, Wizards, and Sales Agreements. If nothing is entered for the start date or end dates, the defaults is the same as the defaults for their respective dates on Products (e.g., 1Jan1900 / 31Dec9999)</p>
+        <h3>Embedded - Case Sharing EAES-1043</h3>
+        <p>Firelight embedded experience is enhanced so that the features for Case Sharing are implemented as well. This will include the following:</p>
+        <ul>
+            <li>Single Activity Share</li>
+            <li>Share Request Users</li>
+            <li>Share Control Request</li>
+            <li>Delete Share Control</li>
+            <li>Share All Control</li>
+        </ul>
+        <h3>Embedded - Copy Activities EAES-1117</h3>
+        <p>Firelight embedded experience is enhanced to include the Copy As Is / Copy with Changes features that are available in native FireLight. Copy As Is / Copy With Changes is implemented via FireLight’s REST API.</p>
+        <h3>Embedded - Optional Forms EAES-1045</h3>
+        <p>Firelight embedded experience is enhanced to include the Optional Forms features that are available in native FireLight. Copy As Is / Copy With Changes is implemented via FireLight’s REST API.</p>
+        <h3>Embedded - Pre-Submit Review Queue EAES-1046</h3>
+        <p>Firelight embedded experience is enhanced to include an option, if enabled, to allow Cases to be automatically submitted to a Pre-Submit Review Queue prior to submission.  Functionality includes the ability to specify the reviewer.</p>
+        <h3>Passcode Updates EAES - 811</h3>
+        <p>Several enhancements to Passcodes</p>
+        <ul>
+            <li>Passcodes will show an 8-digit code</li>
+            <li>Passcodes will show numbers only</li>
+            <li>All Passcodes is the same, regardless of delivery medium.</li>
+        </ul>
+        <h2>Resolved Issues</h2>
+        <ul>
+            <li>
+                Firelight Administration Tool - Application Audit Report- corrected a misalignment in the LexisNexisDDP Section- Response details from Phone Finder Service CR-1059
+            </li>
+            <li>
+                Lexis Nexis Emailage - Corrected an issue when "Use Lexis Nexis Emailage" checked for any signer that was preventing the user from proceeding for signing CR-1160
+            </li>
+            <li>
+                RGA Disclosure Engine Integration - Request XML: Corrected an issue so that Tag Values display ACORD description instead of ACORD name CR-1198
+            </li>
+            <li>
+                DTCC Integration - corrected an issue with DTCC App Sub data scrubbing not working properly for some fields causing files to be rejected. CR-1392
+            </li>
+            <li>
+                DTCC Integration - Corrected an issue with missing validation on the DTCC app/sub contract entity record CR-1467
+            </li>
+            <li>
+                LexisNexis Emailage - Corrected an issue when Lexis Nexis Emailage option is checked for a signer and multiple signers are selected, the emailage audit is not generating in history CR-834
+            </li>
+            <li>
+                FireLight Administration Tool - Corrected an issue where loading deployment view fails if there are sales agreements for deleted organizations DI-1019
+            </li>
+            <li>
+                FireLight Administration Tool – Update to present an error message when there is an error loading form/wizard/ruleset instead of returning empty DI-1065
+            </li>
+            <li>
+               Application – Corrected an issue where submission was prevented due to an empty application document and no error was generated. DI-1134
+            </li>
+            <li>
+                DTCC Integration - Corrected an App/Sub Column order issue due to NO-BREAK SPACE in Asciify method not being handled correctly.  Also modified FilterString method to convert invalid characters to space DI-1246
+            </li>
+            <li>
+                FireLight Administration Tool – Update to auto deploy logic to reduce confusion. Organization Level Settings will take precedence over OrganizationSync settings. DI-930
+            </li>
+            <li>
+                Review Queue – Corrected an issue where an empty "More Info" in Review Request disabled all the Approve, Unlock and Reject Button DIST-1676
+            </li>
+            <li>
+                eSignature – Updated client fill and sign request logic to include an invalid request message when an expired link is used DIST-1919
+            </li>
+            <li>
+                Advanced Search – Corrected an issue in the advanced search for All Activities so that the duration filter works correctly when used in combination with the text box search feature. DIST-2004
+            </li>
+            <li>
+                FireLight Administration Tool - Corrected formatting issues on the View all Scheduled Deployments page where the Items list was not showing properly DIST-2092
+            </li>
+            <li>
+                Review Queue Corrected an issue where data is occasionally blanked out on the Reviewer Document after moving the application from one Queue to Another DIST-2148
+            </li>
+            <li>
+                FireLight Administration Tool - Corrected an issue when using Replace Form/Wizard/Rule Set in Package. Tool Tips were not displaying correctly. DIST-2149
+            </li>
+            <li>
+                Protection – Corrected an issue that was allowing the Agent to view an addendum generated for a client protected form DIST-2153
+            </li>
+            <li>
+                Document Upload – Corrected an issue where the Remove link was not showing in Documents section when activity locked by the reviewer. DIST-2340
+            </li>
+            <li>
+                Review Queue - Corrected an issue where the application is not sent to PreSubmit Queue as expected when a custom Queue has been defined. DIST-2419
+            </li>
+            <li>
+                Upload Documents – Corrected an issue where the “remove” button is missing when user has uploaded documents and then created child and returned to Upload Documents from the  "Linked Child Activity" DIST-2444
+            </li>
+            <li>
+                Embedded Corrected an issue where the "Remove" link for the uploaded Documents was not visible to the user before submitting the Activity DIST-2445
+            </li>
+            <li>
+                FireLight Administration Tool – Corrected an issue where the Search Icon on Admin's Package page was not working correctly For FL Access Carriers DIST-2446
+            </li>
+            <li>
+                FireLight Administration Tool Corrected an issue where user was unable to select a single copy of a Wizard or form when multiple copies were present. DIST-2465
+            </li>
+            <li>
+                FireLight Workflow- Corrected an error in the workflow when there are no signers present and presignature review is enabled. EAES-1030
+            </li>
+            <li>
+                Masked Fields - Corrected an issue where Masked Fields with Extension (ex Zip Code) were not retaining the whole string when data was copied from a non-masked field via Rule set. EAES-119
+            </li>
+            <li>
+                Embedded/Web API Sharing Corrected an issue that was allowing multiple share requests for the same user. EAES-1347
+            </li>
+            <li>
+                Embedded/Web API:  Corrected an issue where an invalid share request was showing as successful. If user request an Invalid Share type in request body or an invalid user, then that request response should not be successful EAES-1348
+            </li>
+            <li>
+                Embedded API Corrected an issues where Limited share was erroneously returned as successful for “all activity share.”   This is not a combination that is supported. EAES-1358
+            </li>
+            <li>
+               Multi-Application - Corrected an issue where the prompt to continue was presented erroneously within MultiApp input. EAES-1561
+            </li>
+            <li>
+               Embedded - Updated the system to ensure that when group setting is off for “all activity share” activities cannot be shared via the embedded web API. EAES-1608
+            </li>
+            <li>
+                Embedded API Updated the embedded API to support copy with changes with differing jurisdiction EAES-1609
+            </li>
+            <li>
+                Embedded API Copy Activity: Corrected an issue with Copy with changes to e-delivery product so that it will correctly return “copy with changes disabled for current ACORD type” and not the incorrect product not found error. EAES-1611
+            </li>
+            <li>
+               Embedded API - Copy Activity was updated to allow the user to copy an activity to which they have shared access. EAES-1615
+            </li>
+            <li>
+                Embedded Web API Updated the Product Availability Service so that it does not return duplicate jurisdictions EAES-1688
+            </li>
+            <li>
+                Documents – Corrected an issue where the user was able to remove documents from completed activities via the “other Actions” menu. EAES-1698
+            </li>
+            <li>
+                Wizard – Corrected an issue with a Custom Action activity transfer button not working in iOS/Safari EAES-1729
+            </li>
+            <li>
+                eSignature -Updates to the Client Fill and Sign logic to correct inconsistent behavior when multiple signers are present. EAES-180
+            </li>
+            <li>
+                eSignature - Updates to the Client Fill and Sign logic to correct sporadic issues with external signing EAES-1807
+            </li>
+            <li>
+                FireLight Administration Tool - Update to message logic to ensure that activity specific messages override the default messages. EAES-1865
+            </li>
+            <li>
+                eSignature – Corrected an issue where user was not able to proceed to signatures if signatures were previously declined and the application was unlocked. (Forms Only) EAES-1935
+            </li>
+            <li>
+                Passcode Functionality - Bug Client is not Receiving the "Passcode Email" to enable them to Print or download the signed Application after completing the Signatures when “Passcode Only Validation” is enabled. (REACT SIGNATURES) EAES-2002
+            </li>
+            <li>
+                Activity Sharing - sharing logic was updated to ensure that read only share with multi activities does not allow the shared user to update or add child activities. EAES-2094
+            </li>
+            <li>
+                Activity Sharing – Sharing logic was updated to ensure that for Read Only Sharing the shared user is not allowed to edit activity name EAES-2095
+            </li>
+            <li>
+               React ESignature – Update the logic to allow for signers with multiple signatures. External signers with multiple signatures were getting a “Request not Valid” message in some circumstances. EAES-2109
+            </li>
+            <li>
+                Rename Activity – Updated the Rename activity logic to ensure “required” validation is working as expected. EAES-2126
+            </li>
+            <li>
+                Work Groups – A change was made to fix duplication of call for Work Group cc list in emails EAES-2128
+            </li>
+            <li>
+                Audit Messages -And update was made to ensure that &lt;SignerType&gt; is always being replaced with actual signer type in audit messages. In limited circumstance the Signer type was not being displayed as expected. EAES-2129
+            </li>
+            <li>
+                Work Groups - Workgroup scheduler reminder emails were not working as expected in some particular cases. Update was made to ensure all workgroup members are cc’d on the reminder email as expected. EAES-2134
+            </li>
+            <li>
+               Passcode Only Validation – Update email logic to ensure that only one email with a valid passcode is produced. When there are multiple signers for an application, in some cases two emails were being produced. One of these emails contained a valid passcode, while the other one contained an invalid passcode. EAES-2135
+            </li>
+            <li>
+               Multi Data AutoFill – Updated auto fill logic to only set required fields that are auto filled to read only. Required fields that are not auto filled should be editable so data entry can be completed. EAES-2141
+            </li>
+            <li>
+               Document Upload – Update to correct client defined pop up message not triggering with Document Upload template as expected EAES-2233
+            </li>
+            <li>
+                Audit - Updated logic for including the username on create activity audits for non-e-delivery activities to ensure the username is included. EAES-2367
+            </li>
+            <li>
+               Review Queue Corrected an issue where the status was not being set correctly after an External Review Request was sent. Status is now correctly showing Pending Pre-submit Review. EAES-2397
+            </li>
+            <li>
+                eSignature Corrected an issue with the Contact Agent functionality where the agent was not receiving the correct email based on the client template. EAES-2406
+            </li>
+            <li>
+               eSignature – Corrected an issue where the "Sign Application" Button was missing from the External Link of "Request Client Fill &amp; Sign Now" in some cases. EAES-2457
+            </li>
+            <li>
+                eDelivery – Corrected an issue that prevented e-delivery cases from being submitted in isolated circumstances. EAES-2476
+            </li>
+            <li>
+                eDelivery Updated logic to prevent users from cancelling a child activity. Activity can only be cancelled from the parent activity. EAES-2477
+            </li>
+            <li>
+                FireLight Administration Tool – Updated the logic for package saving to ensure that begin date and end date are set before saving. EAES-2484
+            </li>
+            <li>
+                eSignature – Corrected the placement of pop-up message that is presented when the use navigates from Signatures back to the activity. They should see the pop-up message "Agent and Client signatures are needed." EAES-2540
+            </li>
+            <li>
+                FireLight Administration Tool Corrected an issue where the "Generate Package Tag List" button is disabled when only one package has been selected. PC-1560
+            </li>
+            <li>
+                Third-Party Library update – JQuery Library was updated to the latest version PC-1585
+            </li>
+            <li>
+                Pop Up Dialog – Updated formatting to ensure Tool tip is not displayed over the close button of various popup window. PC-1723
+            </li>
+            <li>
+                Pop Up Dialog- Corrected Formatting on Advanced Search's Save/Delete button and Copy popup's Buttons for better readability due to CSS changes on All Activities &amp; Review Queue page PC-1725
+            </li>
+            <li>
+                Pop Up Dialog – Corrected Formatting on Delete Confirmation pop on various pages of FL Admin for better readability. PC-1726
+            </li>
+            <li>
+                Embedded – Updated eSignature decline logic to be consistent with non-embedded logic. PC-1756
+            </li>
+            <li>
+                FireLight Administration Tool – Corrected an issue where the last selected form or Wizard was not displayed as expected the Rule sets workflow. PC-535
+            </li>
+        </ul>
+        <p>*** Please note that the JIRA ticket numbers are provided for reference. JIRA tickets are not accessible to users outside Hexure.***</p>
+        <p data-mc-conditions="General.Online">
+            <a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

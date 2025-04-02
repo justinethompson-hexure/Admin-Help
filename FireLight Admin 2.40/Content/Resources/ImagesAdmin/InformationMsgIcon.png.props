@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileProperties>
+    <ImageOverlay>
+        <OriginalImage ComputedWidth="16" ComputedHeight="16" Format="png" Alt="Informational Message Icon" Title="Informational Message Icon" Type="Image" ShapeTimeSpan="10000" EnableGrayScaleFormat="false" ExportFormat="png" DPI="96" medium_print_ExportFormat="png" medium_screen_and__max_width__64_063em__ExportFormat="png" medium_screen_and__max_width__40em__ExportFormat="png" medium_print_EnableFormat="true" medium_print_DPI="300" medium_print_OutputScaleFactor="3.12" medium_print_ColorDepth="32" medium_screen_and__max_width__64_063em__OutputScaleFactor="1" medium_screen_and__max_width__64_063em__DPI="96">iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAACMVBMVEX////5+fnCzuKHoMpZfrk3Y600YqlWerGFnsXM1ubf5e2Hocs2Z7ItYbIuYbQtYrMtYLAsX64qW6czXqKQp8ve5O12lsswZbwxaL8xZ74wZ70xZbovY7ctYbMsXqspWKB+msWJptMya8Uzbco0bsovZrsuYrUsXqwoWKChtdTAzuQ9dcs2dNM2ddY3ddc3dNZsmN9plNcyasMuY7UrXapCaquKqds4edw6e+I6e+M6fOM5euJvnehsmN40b8wza8QwZ7wuYrEtXaaoudVik+A8f+s+gu8+g/I/hPE9gu5xo/BunOU2dNU1cMwyasUvZrksXatujLpHh+xAh/lBivtBi/1Ci/1BivxyqPtvoO04ed4xaMAtX7BJcKtKjvdEj/9Ekv9Fk/91rv9xpPU7fuc2c9MybMZZfLVrpPpHlv9Jmv9Km/9Jm/90qfs+g/A6feQ4d9k0bssrXauLpcyZwfdMof9No/9NpP9usf/O5P/O4/9ppf8/hvg8f+w5ed01bskrW6fCz+LQ4PZXrP9Qq/9RrP9Rrf9Qqv9Opf9MoP9Imv9Biv09gvE5ed8yacBRd7Tu8PSezPlVtf9Vs/9Us/9UsP+Awf93sf9Djv4+hfQsX6zG0eKVz/tZvf9Xuf9WtP91vv/Q6P/P5v9srf9Dj/88gOk4a7+yw9z4+Pir1vdhwv9avv9Pqv9Mov9GlP1Ehu9ejdTG0ub39/je6vWy1POBvfVbqftgpv+MtvXB0u3r7vS1oO6nAAABCElEQVR4nGNgAILNW7Zu275j5y4GKFi5avWkNWvXrd+wcROYP2fuvPkLFi5avGTpsuUrgPyJkyZPmTqNgWH6jJl6s2YzMDQ1t7S2tXd0diV09/T29U9gKCktKy8vraisqq6pratvaGTIyMzKzskCas3Nyy8oLCpmiItPSExMSGJgSE4xT00TSGcICg4JDQuPYGCIjPKxi46JZXBxdXP38PRiYPD28fXzDwhkMDO3sLSytmFgsLWzd3B0cmbQ0tbR1dM3YGAwNJIyNjEVZWBUVFJWUQG5WFVNXUOTgYFRVExcQkJSSlpGVk5eASjOyMjFzcPLxy8gKCQswgAWYGRkYmZhZWPn4ATxAWZaSGon85xcAAAAAElFTkSuQmCC</OriginalImage>
+        <Shapes />
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <Variables />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

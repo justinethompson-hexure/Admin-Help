@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PageStyles>
+    <Page Width="800" Height="800" Padding="1in" PageSize="Letter" PaddingLeft="0.23in" PaddingRight="0.25in" PaddingTop="0.25in" PaddingBottom="0.25in" PageType="title" Name="Title" BackgroundImage="none" BackgroundPositionX="center" BackgroundPositionY="center">
+        <Frame X="-21px" Y="-24px" Width="8.489583in" Height="10.98958in" Flow="body" Right="-24px" Bottom="-23px" Anchors="" BorderTopStyle="solid" BorderTopWidth="0px" BorderBottomStyle="solid" BorderBottomWidth="0px" BackgroundImage="../../Images/HexureTitleBackground.png" />
+        <Frame X="38px" Y="30px" Width="170px" Height="52px" Flow="decoration0" Right="562px" Bottom="926px" BackgroundImage="../../Images/HexureTitlePgLogoRev.png" BackgroundRepeat="stretch" Anchors="" />
+    </Page>
+</PageStyles>

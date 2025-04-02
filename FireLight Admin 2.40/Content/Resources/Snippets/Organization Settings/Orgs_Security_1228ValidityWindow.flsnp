@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>In the <b class="Bold">1228 Validity Window</b> text box, enter the number of minutes for the 1228 validity window to remain valid. This is the length of time (plus or minus) we will allow a SSO request’s timestamp to differ from the server.  For example, if you send over a SSO with a timestamp of 8:00 and it reaches the server at 8:05 (server times may not align perfectly) and the validity window is 2 minutes, we would not accept the request. When using Enhanced Security, this is the clock skew window (in minutes) to use when verifying the authentication request.</body>
+</html>

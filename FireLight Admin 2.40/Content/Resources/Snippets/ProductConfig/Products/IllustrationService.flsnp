@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Once a new Illustration Service is set up in Organizations, it becomes available as a selection in the Illustration Service list. Select the name of the product <b class="Bold">Illustration Service</b> in the list to create the link between the Product and calling the associated Illustration API.  See <MadCap:xref href="../../../../Organization Configuration/Organizations/External Integrations.htm" title="External Integrations" alt="External Integrations">External Integrations</MadCap:xref> in Organization Settings for details on how to set up an Illustration Service.</body>
+</html>

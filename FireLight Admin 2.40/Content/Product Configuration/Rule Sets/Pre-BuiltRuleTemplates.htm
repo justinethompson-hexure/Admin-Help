@@ -1,0 +1,1146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="rule templates" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Pre-Built Rule Templates<a name="top"></a></h1>
+        <h2 MadCap:conditions="General.PDF">Age:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Age:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Calculates how many full years have passed between a past date and now. Useful for setting an age field from a date of birth field.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid_date</b> The name of the control containing a string representation of a birth date in “mm/dd/yyyy” format</p>
+                <p class="Indent"><b>dataitemid_age</b> The name of the control where the calculated age is stored</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Calculate the attained age of a person from a date of birth</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Age Nearest Birthday:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Age Nearest Birthday:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Calculates the age based on which birthday is closer. Calculates how many days have passed between the birthday and now and then divides by 365.25 days per year. If today is exactly halfway between the two birthdays then it will round up to the next birthday.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid_date</b> The name of the control containing a string representation of a birth date in “mm/dd/yyyy” format</p>
+                <p class="Indent"><b>dataitemid_age</b> The name of the control where the calculated age is stored</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Calculate the insured age rather than the attained age from a date of birth</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Alpha-Special Chars:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Alpha-Special Chars:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If the field is not blank then this rule uses a regex to check if the field contains only capital letters, lowercase letters, the single quote mark, commas, periods, and dashes. This rule is useful for validating name fields.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>Dataitemid</b> The name of the control that can contain only alpha or special characters</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Validate a name field to ensure no strange characters are entered</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Calculate Age Nearest</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Calculate Age Nearest</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Calculates the age of a person from a field containing the birth date of the individual.  The rule uses the following logic: </p>
+                <ol>
+                    <li>
+                        <p>If the current date is within 6 months of the last birthday, the rule will report the user’s age on their previous birthday. </p>
+                    </li>
+                    <li>
+                        <p>If the current date is within 6 months of their next birthday, the rule will provide the user’s age at their upcoming birthday.</p>
+                    </li>
+                </ol>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>Dataitemid_dob</b> The name of the control containing a string representation of a birth date in “mm/dd/yyyy” format</p>
+                <p class="Indent"><strong>Dataitemid_age</strong> The name of the control where the calculated age is stored</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p>Calculate the insured age rather than the attained age from a date of birth.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Calculate Attained Age:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Calculate Attained Age:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Calculates Age on DataItem with current DateTime. Useful for setting an age field from a date of birth field.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>DataItemID_DOB_Month</b> The name of the control containing a string representation of a birth month</p>
+                <p class="Indent"><b>DataItemID_DOB_Day</b> The name of the control containing a string representation of a birth day</p>
+                <p class="Indent"><b>DataItemID_DOB_Year</b> The name of the control containing a string representation of a birth year</p>
+                <p class="Indent"><b>DataItemID_Calculated_Age</b> The name of the control where the calculated age is stored</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Calculate the attained age of a person  </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Combined Names</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Combined Names</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>DataItemID_InsuredFirstName</b> The insured's first name</p>
+                <p class="Indent"><b>DataItemID_InsuredMiddleName</b> The insured's middle name</p>
+                <p class="Indent"><b>DataItemID_InsuredLastName</b> The insured's last name</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Combine the first, middle, and last names of an insured</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Combo Items (Blank):</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Combo Items (Blank):</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Sets the available dropdown items in a combobox if another field is not blank.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid_on</b> The name of the field which triggers a change in the combo items of another field</p>
+                <p class="Indent"><b>dataitemid</b> The name of the field which will have its combo items modified</p>
+                <p class="Indent"><b>value_1</b> The first combo item in the new list of combo items</p>
+                <p class="Indent"><b>value_2</b>  The second combo items in the new list of combo items. More items can be added to this list under this second value.</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Change the list of options presented to the user depending on whether or not a radio button is selected</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Combo Items (Value):</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Combo Items (Value):</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Sets the available dropdown items in a combobox if another field has a specific value.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid_on</b> The name of the field which triggers a change in the combo items of another field</p>
+                <p class="Indent"><b>value</b> The value dataitemid_on must contain to trigger the change in the combo items</p>
+                <p class="Indent"><b>dataitemid</b> The name of the field which will have its combo items modified</p>
+                <p class="Indent"><b>value_1</b> The first combo item in the new list of combo items</p>
+                <p class="Indent"><b>value_2</b> The second combo items in the new list of combo items. More items can be added to this list under this second value.</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Change the list of options presented to the user depending on a previously chosen value</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Concat:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Concat:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Concatenates two or more fields together and sets the result into another field. The const value is the HTML entity for a line feed character. This is useful if you wish to set the value of several fields into a multiline textbox.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid_to</b> The name of the field to set the resulting value into</p>
+                <p class="Indent"><b>dataitemid_1</b> The name of the first dataitem to concatenate</p>
+                <p class="Indent"><b>dataitemid_2</b> The name of the second dataitem to concatenate</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Join many fields together into a single field to produce a summary of the product</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Concat Full Name:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Concat Full Name:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Combines the first, middle, and last, names together and puts it into another field. Useful for filling out full name fields from first name, middle name, and last name fields.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>person</b> 	The person is the first part of the dataitem ids. For example: “Owner”, “Annuitant”, “Agent”</p>
+                <p class="Indent"><b>dataitemid</b> The “_FullName” field to set the resulting name into</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Take a name broken up across three field and combine them into a single field</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Date Future:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Date Future:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If the field is not blank, contains a valid date, and is not in the future then this rule will post an error message.  This is useful for expiration date fields and other dates that must happen in the future. Use with the date mask and the Date Valid rule.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>Dataitemid</b> The name of the date field to validate</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Ensure that an expiration date has not already come to pass</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Date Past:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Date Past:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If the date is not blank, a properly formatted date, and not in the  past then this rule posts an error message. Will also allow the current date. This is useful for Date of Birth fields, issue date fields, and other date fields that should contain a date in the past. Use with the date mask and the Date Valid rule.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>Dataitemid</b> The name of the date field to validate</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Ensure that a date of birth is in the past</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Date Valid:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Date Valid:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If this field is not blank, this rule checks to see if the date is valid. This field may also be combined with Date Future and Date Past rules. Use with the date mask and the Date Valid rule.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>Dataitemid</b> The name of the date field to validate</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Ensure that the agent actually entered a valid date instead of something like “12/56/1953”</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Date Within:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Date Within:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If the field is not blank, is a valid date, and is not within {days} days from the present, then this rule posts an error message. If you want to restrict the date to the past or the future, add a Date Past or Date future rule to the field as well. Use with the date mask and the Date Valid rule.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>days</b> How many days from the present this date is allowed to be within</p>
+                <p class="Indent"><b>dataitemid</b> The name of the date field to validate</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Check to see if the transfer of funds will take place within a 90-day limit</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Diset Children Const (Blank):</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Diset Children Const (Blank):</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If a field is not blank, then sets the children of another panel or group with a constant value. </p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b class="Bold">dataitemid_on</b> The name of the field that when not blank triggers this rule </p>
+                <p class="Indent"><b>dataitemid_to</b> The name of the field to set the value into</p>
+                <p class="Indent"><b>value_1</b> The constant to set into the field</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">This is useful for clearing all fields of a panel or group based on another field.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Diset Children Const (Value):</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Diset Children Const (Value):</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <p>If a field has the right value then sets the children of another panel or group with another value.</p>
+            <MadCap:dropDownBody>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b class="Bold">dataitemid_on</b> The name of the field that when it has the right value will trigger this rule</p>
+                <p class="Indent"><b class="Bold">value_on</b> The constant value that if it matches the value in the field will trigger this rule</p>
+                <p class="Indent"><b>dataitemid_to</b> The name of the field to set the value into</p>
+                <p class="Indent"><b>value_1</b> The constant to set into the field</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">This is useful for clearing all fields of a panel or group based on another field.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Diset Children Const:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Diset Children Const:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Gives the children of a panel or group a permanent, constant value.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid_to</b> The name of the field to set the value into</p>
+                <p class="Indent"><b>value</b> The constant to set into the field</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Gives the children of a panel or group a permanent, constant value.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Diset Const:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Diset Const:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Gives a field a permanent, constant value.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid_to</b> The name of the field to set the value into</p>
+                <p class="Indent"><b>value</b> The constant to set into the field</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Always set a field to a value because it is the only option available for the product</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Diset Const (Blank):</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Diset Const (Blank):</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If a field is not blank, then sets another field with a constant value. This is useful for checking radio buttons based on another field.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid_on</b> The name of the field that when not blank triggers this rule</p>
+                <p class="Indent"><b>dataitemid_to</b> The name of the field to set the value into</p>
+                <p class="Indent"><b>value_1</b> The constant to set into the field</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Automatically select a value for the user based on if a radio button is selected or not</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Diset Const (Value):</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Diset Const (Value):</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If a field has the right value then sets another field with another value. This is useful for checking radio buttons based on another field.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid_on</b> The name of the field that when containing a specific value triggers this rule</p>
+                <p class="Indent"><b>value_on</b> The specific value to compare</p>
+                <p class="Indent"><b>dataitemid_to</b> The name of the field to set the value into</p>
+                <p class="Indent"><b>value_1</b> The constant to set into the field</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Automatically select a value for the user based on a previously selected value</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Diset Copy:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Diset Copy:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Copies the value from one field to another field.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid_to</b> The name of the field to copy into</p>
+                <p class="Indent"><b>dataitemid_from</b> The name of the field to copy from</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Copy the product name onto the form</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Diset Copy (Blank):</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Diset Copy (Blank):</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If a field is not blank, then this rule copies the value in one field to another field.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid_on</b> The name of the field that when not blank triggers this rule</p>
+                <p class="Indent"><b>dataitemid_to</b> The name of the field to copy into</p>
+                <p class="Indent"><b>dataitemid_from</b> The name of the field to copy from</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Copy the Owner name to the Annuitant Name field if the user selected “Annuitant is the same as the Owner”</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Diset Copy (Value):</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Diset Copy (Value):</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If a field contains a specific value, then this rule copies the value in one field to another field.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid_on</b> The name of the field that when containing a specific value triggers this rule</p>
+                <p class="Indent"><b>value_on</b> The specific value to compare</p>
+                <p class="Indent"><b>dataitemid_to</b> The name of the field to copy into</p>
+                <p class="Indent"><b>dataitemid_from</b> The name of the field to copy from</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Copy the Initial Premium field to the Electronic Fund Transfer Form if Non-Qualified is selected as the funding type</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Email:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Email:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If the field is not blank then this rule checks to see if the field contains a proper email address.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid</b> The name of the email field to validate</p>
+                <p class="Indent"><b>2,63</b> This parameter is part of the email validation regex and should not be changed</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Check to make sure that there are no obvious typos in the email address</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Enable (Blank):</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Enable (Blank):</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Enables a field if another field is not blank, otherwise disables the field.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid</b> The name of the field to enable or disable</p>
+                <p class="Indent"><b>dataitemid_on</b> The name of the field that enables or disables the other field</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Disable the Joint Owner fields if it was indicated that there is no Joint Owner</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Enable (Value):</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Enable (Value):</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Enables a field if another field has the appropriate value, otherwise disables the field.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid</b> The name of the field to enable or disable</p>
+                <p class="Indent"><b>dataitemid_on</b> The name of the field that enables or disables the other field</p>
+                <p class="Indent"><b>value</b> The specific value to compare</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Disable the SSN field and enable the TIN field if the Owner is a trust</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Form Enable (Blank):</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Form Enable (Blank):</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Triggers a form if a field is not blank. All Form Enable rules should be placed on their own Form Trigger sheet.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>form_number</b> The number (not the name) of the form to trigger as listed in FireLight<sup MadCap:conditions="General.Online">®</sup></p>
+                <p class="Indent"><b>dataitemid_on</b> The name of the field that when not blank triggers the form</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Display the 401K transfer form if the user selects 401K as a funding type</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Form Enable (Blank, Name):</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Form Enable (Blank, Name):</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Triggers a form if a field is not blank based on the form name - not the form number. It is preferable to set form state by form number when possible.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>form_name</b> The form name of the form to trigger as listed in FireLight</p>
+                <p class="Indent"><b>dataitemid_on</b> The name of the field that when not blank triggers the form</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Display a replacement form when the user indicates they is replacing an annuity if all of the replacement forms have the same form number</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Form Enable (Value):</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Form Enable (Value):</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Triggers a form if a field takes on a specific value. All Form Enable rules should be placed on their own Form Trigger sheet.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>form_number</b> The form number of the form to trigger as listed in FireLight</p>
+                <p class="Indent"><b>dataitemid_on</b> 	The name of the field that triggers the form when containing a specific value</p>
+                <p class="Indent"><b>value</b> The specific value to compare</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Display the smoker health questionnaire if the owner is a smoker</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Form Enable (Value, Name):</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Form Enable (Value, Name):</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Triggers a form if a field has a specific value based on the form name – not the form number. It is preferable to set form state by form number when possible.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>form_name</b> The form name of the form to trigger as listed in FireLight</p>
+                <p class="Indent"><b>dataitemid_on</b> The name of the field that triggers the form when containing a specific value</p>
+                <p class="Indent"><b>value</b> The specific value to compare</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Display one of the 1035 exchange forms if all of the 1035 exchange forms have the same form number</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Format Currency ($):</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Format Currency ($):</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Formats the field with a $0.00 format if the field is not blank and is a number.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid</b> The name of the field that must be formatted as a dollar amount</p>
+                <p class="Indent"><b>0</b> This parameter is part of the currency format and should not be changed</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Format the initial premium with a dollar sign, commas, and two decimal points</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Format Decimal:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Format Decimal:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Formats the field with a 0.00 format if the field is not blank and is a number.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid</b> The name of the field that must be formatted as a number</p>
+                <p class="Indent"><b>0</b> This parameter is part of the decimal format and should not be changed</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Format the face value with commas and two decimal points – a dollar sign is already printed on the form.</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Format SSN or TIN:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Format SSN or TIN:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Formats the field as either a SSN (###-##-####) or as a TIN (##-#######) depending on the value of another field. Meant to be used with the SSN or TIN validation rule. This rule will assume the field is a SSN unless a field has a specific value.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid</b> The name of the field that will either be a TIN or an SSN</p>
+                <p class="Indent"><b>dataitemid_on</b> The name of the field that determines if this field is a TIN or a SSN</p>
+                <p class="Indent"><b>value</b> The specific value to compare</p>
+                <p class="Indent"><b>9</b> This parameter is part of the SSN/TIN format and should not be changed</p>
+                <p class="Indent"><b>0</b> This parameter is part of the SSN/TIN format and should not be changed</p>
+                <p class="Indent"><b>1</b> This parameter is part of the SSN/TIN format and should not be changed</p>
+                <p class="Indent"><b>2</b> This parameter is part of the SSN/TIN format and should not be changed</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Ensure the correct format for the Owner’s Tax ID if the Owner is a trust or a natural person</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Length</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead MadCap:conditions="General.Online">
+                <MadCap:dropDownHotspot>Length</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If the field is not blank and is a number then this rule checks to see how many digits there are. If the field does not have the right number of digits then it posts an error message. Useful for validating fixed-length numbers.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>length</b> The maximum allowable length for the number</p>
+                <p class="Indent"><b>dataitemid</b> The name of the field to validate</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Ensure that the Agent’s internal ID number is exactly six digits long</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Number</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Number:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Throws an error message if the field does not contain a valid number. Will allow for numbers with dollar signs, commas, percent signs, and decimal points.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid</b> The name of the field to validate as a number</p>
+                <p class="Indent"><b>1,3</b> This parameter is part of the number validation regex and should not be changed</p>
+                <p class="Indent"><b>3</b> This parameter is part of the number validation regex and should not be changed</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Check to make sure that the agent typed in a number in the initial premium field</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Number Between:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Number Between:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>If the field is not blank and if the field is a number then this rule will post a error if the field's value is not between the two specified values.<p><b class="DRNumberBoldItalics">Template Parameters:</b></p><p class="Indent"><b>max</b> The maximum value the field can contain</p><p class="Indent"><b>min</b> The minimum value the field can contain</p><p class="Indent"><b>dataitemid</b> The name of the field to validate</p><p><b class="DRNumberBoldItalics">Use Case:</b> </p><p class="Indent">Restrict the initial premium to between $25,000 and $1,000,000</p><p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a></p></MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Number Greater Than:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Number Greater Than:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If the field is not blank and is a number, then this rule will check to see if the number is greater than or equal to the given value, and post a error if it is not.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>min</b> The minimum value the field can contain</p>
+                <p class="Indent"><b>dataitemid</b> The name of the field to validate</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Check that the owner is older than 18</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Number Integer:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Number Integer:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If the field is not blank then this rule checks to make sure that the field's value contains only number characters - no decimal points, commas, or letters allowed.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid</b> The name of the field to validate as a whole number</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Ensure that the Agent’s internal ID number has no non-digit characters</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Number Less Than:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Number Less Than:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If the field is not blank, and is a number then this rule will check to see if the number is less than or equal to the given value, and posts a error if it is not.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>max</b> The maximum value the field can contain</p>
+                <p class="Indent"><b>dataitemid</b> The name of the field to validate</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Restrict sale of the product if the Annuitant is older than 85</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Percent:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Percent:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If the field is not blank and is a number then checks to make sure the value is between 0 and 100. Will work even if there is a % sign on the end of the number.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>Dataitemid</b> The name of the field to validate as a percentage</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Check the investment fund selection to make sure it is a number between 0 and 100</p>
+                <p MadCap:conditions="General.Online"><a href="#top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Percent Format:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Percent Format:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If the field is a number then formats the result with no decimal points and a percent sign - like 23%.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid</b> The name of the field that must be validated as a percent</p>
+                <p class="Indent"><b>0</b> This parameter is part of the percent format and should not be changed</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Format the investment fund selection percentage as a whole number with a percent sign</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Phone:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Phone:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If this field is not blank then this rule checks to make sure that this field contains a phone number with an area code.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid</b> The names of the field to validate as a U.S. Phone Number</p>
+                <p class="Indent"><b>3</b> This parameter is part of the phone regex and should not be changed</p>
+                <p class="Indent"><b>4</b> This parameter is part of the phone regex and should not be changed</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Validate the Owner’s phone number to make sure is it a proper US 10-digit phone number</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">PO Box:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">PO Box:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If the field is not blank then this rule ensures that the user cannot enter a P.O. box as an address.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>Dataitemid</b> The name of the field than cannot contain a PO Box</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Prevent the Owner’s residential address from being a PO Box</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Popup (Blank):</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Popup (Blank):</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Displays a popup if a field is not blank. It is recommended to set the rule-scope on all Popup rules to "PropertyChange." That way  multiple popups will not appear when loading an application from save.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid_on</b> The name of the field to trigger the popup on</p>
+                <p class="Indent"><b>dataitemid_to</b> The name of the field in which the clicked button’s value is set into</p>
+                <p class="Indent"><b>title</b> The title of the popup box</p>
+                <p class="Indent"><b>button_1</b> The value of the first button in the popup box</p>
+                <p class="Indent"><b>button_2</b> The value of the second button in the popup box</p>
+                <p class="Indent"><b>text</b> The contents of the popup box</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Alert the Agent that the client will need to provide additional documentation for the options selected</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Popup (Value):</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Popup (Value):</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Displays a popup if a field contains a specific value. It is recommended to set the rule-scope on all Popup rules to "PropertyChange." That way multiple popups will not appear when loading an application from a previous save.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid_on</b> The name of the field to trigger the popup on</p>
+                <p class="Indent"><b>value</b> The specific value to trigger the popup box on</p>
+                <p class="Indent"><b>dataitemid_to</b> The name of the field in which the clicked button’s value is set into</p>
+                <p class="Indent"><b>title</b> The title of the popup box</p>
+                <p class="Indent"><b>button_1</b> The value of the first button in the popup box</p>
+                <p class="Indent"><b>button_2</b> The value of the second button in the popup box</p>
+                <p class="Indent"><b>text</b> The contents of the popup box</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Remind the agent to upload an additional document into FireLight based on the values indicated</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Read Only (Blank):</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Read Only (Blank):</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Sets a field as read only if another field is not blank.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid</b> The name of the field to make read-only</p>
+                <p class="Indent"><b>dataitemid_on</b> The name of the field to make the other field read only on</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Make the new-money box non-editable if the Check or Wire Transfer box is selected</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Read Only (Value):</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Read Only (Value):</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Sets the field as read only if another field has a specific value.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid</b> The name of the field to make read-only</p>
+                <p class="Indent"><b>dataitemid_on</b> The name of the field to make the other field read only on</p>
+                <p class="Indent"><b>value</b> The specific value to compare</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Together with a Diset (copy) rule, copy the Owner date of birth to the Annuitant date of birth and make the Annuitant date of birth read-only if the Annuitant is the same as the owner</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Required:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Required:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Throws an error message on the field if the field is blank.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>Dataitemid</b> The name of the field that must be filled out</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Enforce that the Owner’s first name is completed</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:pageBreak />
+        <h2 MadCap:conditions="General.PDF">Required Conditional:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Required Conditional:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If one field has a specific value then another field must be filled out.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid_on</b> The name of the field to make this field required on</p>
+                <p class="Indent"><b>value</b> The specific value to compare</p>
+                <p class="Indent"><b>dataitemid</b> The field to make conditionally required</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Force the user to enter spouse information if the spouse rider is selected</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Required Field Date Formatted</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Required Field Date Formatted</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If Field does not contain a value, posts a message when false and removes it when true. Formats the date in MM/DD/YYYY format.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid</b> The name of the DataItem ID of the field that must be filled out</p>
+                <p class="Indent"><b class="Bold">formatstring</b> The format of the date, e.g., MM/dd/yyyy</p>
+                <p class="Indent"><b class="Bold">Message</b> The message text, e.g., "This is a required field."</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Require a data of birth entry and set to the correct date format.</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Required Multiple:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Required Multiple:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>At least one field must not be blank, otherwise this rule will throw an error on both fields. Designed for radio buttons with different dataitemids.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid_1</b> The name of the first field that must be filled out</p>
+                <p class="Indent"><b>dataitemid_2</b> The name of the second field that must be filled out</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Require either a transfer amount or a percent to transfer be filled out</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">SSN:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">SSN:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If the field is not blank then this rule checks to make sure the field is a properly formatted SSN.</p>
+                <p>Invalid SSNs considered by this rule:</p>
+                <p class="Indent">219-09-9999 (published by the Social Security Agency in 1940).</p>
+                <p class="Indent">078-05-1120 (in 1938 a wallet manufacturer used this number to show how a SSN card fits into one of their wallets).</p>
+                <p class="Indent">Numbers that start with 666 or 000 (invalid SSNs).</p>
+                <p class="Indent">Numbers that start with 9XX are Individual Taxpayer Identification Numbers – not Social Security Numbers.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid</b> The name of the field that must contain a SSN</p>
+                <p class="Indent"><b>2</b> This parameter is part of the SSN regex and should not be changed</p>
+                <p class="Indent"><b>3</b> This parameter is part of the SSN regex and should not be changed</p>
+                <p class="Indent"><b>4</b> This parameter is part of the SSN regex and should not be changed</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Validate the Joint Owner’s Social Security Number</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">SSN or TIN:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">SSN or TIN:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If the field is not blank, then this rule checks to make sure the field contains either a SSN or a TIN.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid</b> The name of the field that must contain a SSN or a TIN</p>
+                <p class="Indent"><b>2</b> This parameter is part of the SSN/TIN regex and should not be changed</p>
+                <p class="Indent"><b>3</b> This parameter is part of the SSN/TIN regex and should not be changed</p>
+                <p class="Indent"><b>4</b> This parameter is part of the SSN/TIN regex and should not be changed</p>
+                <p class="Indent"><b>1</b> This parameter is part of the SSN/TIN regex and should not be changed</p>
+                <p class="Indent"><b>7</b> This parameter is part of the SSN/TIN regex and should not be changed</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Validate the Owner SSN field if the Owner is either a natural person or a trust</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Sum:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Sum:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Adds multiple fields together and sets the result as the value of another field. If all fields are blank then it will set the field to zero.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid_to</b> The name of the field to set the resulting sum into</p>
+                <p class="Indent"><b>dataitemid_1</b> The name of the first field to add to the sum</p>
+                <p class="Indent"><b>dataitemid_2</b> The name of the second field to add to the sum</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Calculate total of all fund choice percentages</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">TIN:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">TIN:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If the field is not blank then this rule checks to make sure the inputted value is a properly-formatted Employer Identification Number.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid</b> The name of the field that must contain a Taxpayer Identification Number</p>
+                <p class="Indent"><b>1</b> This parameter is part of the TIN regex and should not be changed</p>
+                <p class="Indent"><b>7</b> This parameter is part of the TIN regex and should not be changed</p>
+                <p class="Indent"><b>2</b> This parameter is part of the TIN regex and should not be changed</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Validate the trust’s Employer Identification Number</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Visibility (Blank):</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Visibility (Blank):</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Sets a field to invisible if another field is not blank.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid</b> The name of the field to make invisible</p>
+                <p class="Indent"><b>dataitemid_on</b> The name of the field to set the other field invisible on</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Display a list of countries if the Owner is not a US citizen</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Visibility (Const):</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Visibility (Const):</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Sets a field as permanently invisible. This is useful for hiding fields required for testing or that contain intermediate values.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid</b> The name of the field to make always invisible</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Use a textbox to display values to help build the forms, and then hide the textbox permanently once the form is built</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Visibility (Value):</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Visibility (Value):</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Sets a field as invisible if another field takes on specific value.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid</b> The name of the field to make invisible</p>
+                <p class="Indent"><b>dataitemid_on</b> The name of the field to set the other field invisible on</p>
+                <p class="Indent"><b>value</b> The specific value to compare</p>
+                <p><b class="DRNumberBoldItalics">Use Case:</b> </p>
+                <p class="Indent">Display a textbox asking what the Beneficiary’s relationship to the Owner is if the Beneficiary’s relationship has been indicated as “Other”</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Zip:</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Zip:</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>If the field is not blank, then this rule checks to make sure there is a proper five-digit U.S. ZIP code with optional four-digit route number.</p>
+                <p><b class="DRNumberBoldItalics">Template Parameters:</b>
+                </p>
+                <p class="Indent"><b>dataitemid</b> The name of the field that must contain a zipcode</p>
+                <p class="Indent"><b>5</b> This parameter is part of the Zip regex and should not be changed</p>
+                <p class="Indent"><b>4</b> This parameter is part of the Zip regex and should not be changed</p>
+                <p><b class="DRNumberBoldItalics">Use Case: </b>
+                </p>
+                <p class="Indent">Validate the Owner’s residential address ZIP code</p>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h1>Examples Using Multiple Rule Templates</h1>
+        <h2 MadCap:conditions="General.PDF">Currency Example</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Currency Example</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p><b>Scenario:</b> The Initial Premium for the product must be between $25,000 and $1,000,000 with a properly formatted “$” before the number.</p>
+                <p><b class="DRNumberBoldItalics">Apply the following rules:</b>
+                </p>
+                <ul>
+                    <li><b>Required</b> Ensures that the field is filled out</li>
+                    <li><b>Number</b> Makes sure that the field has a valid number</li>
+                    <li><b>Number Between</b> Ensures that the numeric value is between $25,000 and $1,000,000.</li>
+                    <li><b>Format Currency</b> Automatically adds a “$”</li>
+                </ul>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Date of Birth Field Example</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Date of Birth Field Example</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p><b>Scenario:</b> A DOB field that must contain a valid date in the past.</p>
+                <p><b class="DRNumberBoldItalics">Apply the following rules:</b>
+                </p>
+                <ul>
+                    <li><b>Required</b> Ensures that the field is filled out</li>
+                    <li><b>Date Valid</b> Makes sure the date is valid</li>
+                    <li><b>Date Past</b> Makes sure the date is in the past</li>
+                </ul>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Percent Example</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Percent Example</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p><b>Scenario:</b> The user may enter a percentage in the field or they may leave it blank. A percent sign is not required.</p>
+                <p><b class="DRNumberBoldItalics">Apply the following rules:</b>
+                </p>
+                <ul>
+                    <li><b>Number</b> Ensures that the field is a proper number</li>
+                    <li><b>Percent</b> Makes sure the percentage is between 0 and 100</li>
+                </ul>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">ZIP Code Example</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">ZIP Code Example</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p><b>Scenario:</b> A proper ZIP code must be entered as part of an address.</p>
+                <p><b class="DRNumberBoldItalics">Apply the following rules:</b>
+                </p>
+                <ul>
+                    <li><b>Required</b> Ensures that the field is filled out</li>
+                    <li><b>Zip</b> Makes sure that the ZIP code has a proper format</li>
+                </ul>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown><a href="#top" alt="Return to Top">Return to Top</a>
+    </body>
+</html>

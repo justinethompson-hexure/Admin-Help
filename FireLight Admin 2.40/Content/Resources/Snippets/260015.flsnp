@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This enhancement will create a new group setting to control the display of "Request Print" button for eDelivery activities. Currently the button "Request Print" displays for the "E-Delivery Deliver Only" and "E-Delivery Sign Only" activities. "Request Print" does not print the file locally and sends an 1122 file back to the carrier for printing. With this new group setting, clients can control the display of this button and control the functionality for each user group. </p>
+        <p>Impacts: FL Admin: </p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>FL Admin: New group setting "Disable Request Print" for eDelivery activity under "Activity Access" tab on the Groups page.</p>
+            </li>
+            <li>
+                <p>FL App: Impact the display of button "Request Print" for eDelivery activities based on the group setting.</p>
+            </li>
+        </ul>
+    </body>
+</html>

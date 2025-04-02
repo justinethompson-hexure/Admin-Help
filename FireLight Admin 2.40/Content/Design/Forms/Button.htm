@@ -1,0 +1,600 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Button</h1>
+        <p class="note" MadCap:conditions="General.Postpone"><b class="Bold">IMPORTANT!</b> In parent/child activities, you may need to write a rule to disable the use of custom action buttons that could change data in the child activity when coming from a pre-sale activity.</p>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FormLockUnlock.flsnp" />
+        </p>
+        <p>Use the Button control to add a custom action to a form. The Action Type field property determines the action the Button control initiates on the form. For example, when Action Type is set to Custom List, clicking the button opens a selection list.</p>
+        <p>FireLight<sup MadCap:conditions="General.Online">®</sup> supports Custom Action Print and Upload buttons on template forms. FireLight validates whether the template is uploaded before the user data entry can reach 100%. The template appears in the Open list to provide instructions. The template form can include the Custom Action Upload and Custom Action Print in Button controls to provide clear instructions with easy links to complete the template requirement. </p>
+        <p>FireLight supports triggering a custom action call from any page within the same package, regardless of whether the button or fields to trigger that call are on that same page. The call can occur only when a custom action button is enabled. If the button is disabled, the call cannot occur. Additionally, a call can occur only on a single activity, meaning that the call cannot occur from a presale when the custom action button is in an application. The <a href="../../Product Configuration/Rule Sets/AdvancedRulesCategoryElementDefinitionsReference.htm#clickcustomaction" target="_blank" title="clickcustomaction" alt="clickcustomaction">clickcustomaction</a> rule can reside on any form or wizard in the package and trigger a custom action button. </p>
+        <p>A Button control and associated input controls often belong to a unique Data Group. The Button control initiates an action, such as opening a custom list, uploading a custom file, opening a CRM, or initiating a carrier-specific custom action. Associated input controls display the results of the action such as custom list column data.</p>
+        <p><b class="Bold">NOTE:</b> The value of the Button click count is incremented with each click. See "Add a Rule to Disable a Custom Action Button After Three Attempts" below for a sample rule to control the number of times the Button can be clicked.</p>
+        <h2> Add a Button Control</h2>
+        <ol>
+            <li>On the left of the Form Designer page under <b>Add Control to Form</b>, click <b>Button</b>.</li>
+            <li>
+                <p>Drag the <b>Button</b> control <img src="../../Resources/ImagesAdmin/ButtonControl-Button.jpg" alt="Button Control" title="Button Control" /> from the upper left of the form to the button area on the form. If applicable, expand the button control to add a name to the button.</p>
+            </li>
+            <li>
+                <p>On the left under <b>Input Control</b>, click <b>Field Properties</b>.</p>
+            </li>
+            <li>
+                <p>Enter or change settings in Field Properties.</p>
+                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+                    <caption class="Table">Button Field Properties </caption>
+                    <col style="width: 192px;" class="TableStyle-2017_IT-Simple2-Column-Regular" />
+                    <col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                            <th class="TableStyle-2017_IT-Simple2-HeadE-Regular-Header1">Field Property</th>
+                            <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Field Name</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <p>
+                                    <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsFieldName.flsnp" /> </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Top, Left</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsTopLeft.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Width, Height</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsWidthHeight.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b>Tab Index </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsTabIndex.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b>Font Size </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Type the font size for the control if different from the default.</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b>Font Family </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Select the font family for the control if different from the default.</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b>Font Color </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Select the font color for the control if different from the default.</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b>Text </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Type the display text for the button name.</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b>Help Text </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsToolTip.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b>Error Placement </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsErrorPlacement.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Protection</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/ProtectionFieldPpty.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Global Scope</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsGlobalScope.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b>Exclude from PDF </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsExcludeFromPDF.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Passcode Only Validation</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FormsPasscodeOnlyVal.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Office Use Only</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsOfficeUseOnly.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Z Order</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsZOrder1.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b>Data Group </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <p>In the list, select a Data Group for the button and associated controls that require a Data Group. For example, when Action Type is set to CRM, set Data Group to the type of party (Owner, Annuitant, Beneficiary, etc.) and set the CRM Type to define the CRM from which to pull the data. Set the Data Group and Data Group Property values in each field that is associated with a CRM, Custom List, or GIACT custom action button to the same values as the button settings. <b>NOTE:</b> Custom File Upload does not require a Data Group selection.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="TableBlue">Action Type</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows"><b class="TableBlue">In the list, select the type of action for the button.</b>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">
+                                <p class="Indent"><b>CRM </b>
+                                </p>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <p>
+                                    <p>Set the button to open a Customer Relationship Management (CRM) program, such as Redtail, Salesforce, Whitepages, etc., or a custom CRM from your organization. See <MadCap:xref href="../../Features/Features.htm" target="_blank" alt="Features">Features</MadCap:xref> for individual CRM setup instructions. </p>
+                                    <p>You must select a Data Group and a CRM Type.</p>
+                                    <ul>
+                                        <li>
+                                            <p>Select a <b class="Bold">Data Group</b> for the type of party (e.g., Owner, Annuitant, Beneficiary, etc.) and set the CRM Type to define the CRM (Redtail, Salesforce, etc.) from which to pull the data.</p>
+                                            <p>For Cooperative Technologies 1035 YellowPages, set Data Group to the 1035 Exchange Ceding Company {#} number (1035 Exchange Ceding Company 1, 1035 Exchange Ceding Company 2, etc.).</p>
+                                        </li>
+                                        <li>
+                                            <p>Select a <b class="Bold">CRM Type</b> option in the list: <b class="Bold">Preferences </b>(pulls data from the CRM set up on the user's Preferences page in FireLight), <b class="Bold">Redtail</b>, <b class="Bold">Salesforce</b>, <b class="Bold">Whitepages</b>, <b class="Bold">1035YellowPages</b> (Cooperative Technologies 1035 YellowPages), <b class="Bold">Custom</b>, or <b class="Bold">NPIS</b> (National Provider Identifier Standard database for looking up a health care provider or office).</p>
+                                        </li>
+                                    </ul>
+                                    <p>Set Data Group and Data Group Property values in each field that is associated with a CRM.</p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">
+                                <p class="Indent"><b>Custom Action </b>
+                                </p>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <p> Set the button to initiate a custom action on the form. Some Custom Actions are coded by the provider specifically for your organization. You must select a Custom Action Type and then enter one or more parameters in Action Parameter when applicable. <b class="Bold">NOTE: </b> The clickcustomaction rule can reside on any form or wizard in the package and trigger a custom action button.</p>
+                                <p><b>Custom Action Type</b> – select a custom action type in the list:</p>
+                                <ul>
+                                    <li><b>Regular Provider Action</b> initiates a custom provider action that allows the Provider to  send the binary PDF data as well as the document tag associated with the PDF to add a document or replace an existing uploaded PDF during the data entry process. You must enter a  value in Custom Action Parameter for the action (Upload) and a document tag value (e.g., Sample Doc) that is provider specific for your organization. Audit history displays the initial addition and when changes occurred to the document. <b class="Bold">NOTE:</b> To add this ability to your organization's Provider, contact your Strategic Account Manager.</li>
+                                    <li><b>Print</b> initiates a print action. See Action Parameter for Print options.</li>
+                                    <li><b class="Bold">GIACT</b> initiates a web service call to GIACT Systems for banking account verification and authentication. You must enter <b class="Bold">GIACT</b> In <b class="Bold">Action Parameter</b>. See <MadCap:xref href="../../Features/GIACT Services Integration.htm" target="_blank" alt="GIACT Services Integration">GIACT Services Integration</MadCap:xref> in Features for setup instructions.</li>
+                                    <li><b class="Bold">LexisNexis</b> initiates a web service call to LexisNexis for client identity validation or for risk classifier information. For client identity validation, enter <b class="Bold">LexisNexis</b> in <b class="Bold">Action Parameter</b>. For risk classifier information, enter <b class="Bold">LexisNexisRisk</b> in Action Parameter. See <MadCap:xref href="../../Features/LexisNexis Client Identification Verification Integration.htm" target="_blank" alt="LexisNexis Client Identification Verification During E-Signature">LexisNexis Client Identification Verification During E-Signature</MadCap:xref> and <MadCap:xref href="../../Features/LexisNexis Risk Classifier Integration.htm" target="_blank" alt="LexisNexis Risk Classifier Integration">LexisNexis Risk Classifier Integration</MadCap:xref> in Features for setup instructions and feature information.</li>
+                                    <li><b class="Bold">Multiple Action</b>    –  set the button to initiate a sequence of actions. You must enter parameters in <b class="Bold">Action Parameter</b>. See <MadCap:xref href="../../Features/Create User, Transfer, Email Custom Action (Concierge Paper Workflow).htm" target="_blank" alt="Create User, Transfer, Email Custom Action (Concierge Paper Workflow)">Create User, Transfer, Email Custom Action (Concierge Paper Workflow)</MadCap:xref> for detailed information.</li>
+                                    <li><b class="Bold">APPS</b> initiates a web service call to the APPS Scheduled4Real paramed online ordering system. Enter the applicable Custom Action Parameter for the action taken by the APPS custom action button: <b class="Bold">APPSCheckAvailability</b>, <b class="Bold">APPSMakeReservation</b>, or <b class="Bold">SubmitParamedOrder</b>. Ensure Data Group is set to Insured or Other Insured as applicable.</li>
+                                    <li><b class="Bold">ExamOne</b> initiates a web service call to the ExamOne ScheduleNow paramed online ordering system.   Enter the applicable Action Parameter for the action taken by the ExamOne button: <b class="Bold">ExamOneGetMobileTimes</b>, <b class="Bold">ExamOneConfirmMobileTimes</b>, <b class="Bold">ExamOneGetInCenterLocations</b>, <b class="Bold">ExamOneGetInCenterTimes</b>, <b class="Bold">ExamOneConfirmInCenterTime</b>, <b class="Bold">SubmitParamedOrder</b> or <b class="Bold">SubmitHealthPiQtureOrder</b>. Ensure Data Group is set to Insured or Other Insured as applicable.</li>
+                                    <li MadCap:conditions="General.Postpone">
+                                        <MadCap:conditionalText MadCap:conditions="General.Postpone"><strong>Launch Morningstar</strong> initiates a call to Morningstar Intelligence Tool.</MadCap:conditionalText>
+                                    </li>
+                                    <li><b>Data Entry Review</b> initiates the data entry pre-signature review process. This custom action type requires an organization to have an API set up to perform the call and is designed to be used only in instances where the organization requires a data entry review prior to the client fill and sign process.</li>
+                                </ul>
+                                <p><b class="Bold">Action Parameter</b>  – Add an action parameter for the selected Custom Action Type.</p>
+                                <ul>
+                                    <li>
+                                        <p class="Indent"><b class="Bold">Regular Provider Action</b> – When Custom Action Type is set to Regular Provider Action, enter the action and the document tag that is in the provider for your organization in Action Parameter. For example, enter <b class="Bold">Upload Sample Doc</b>.</p>
+                                    </li>
+                                    <li>
+                                        <p class="Indent"><b class="Bold">Print</b>  – When Custom Action Type is set to Print, leave Action Parameter blank to print all forms. Type <b>Print</b> in Action Parameter to print all forms with the same Attachment TC type as the current form (this is the Attachment TC setting on the form in the Form Library). To print only forms with a specific Attachment TC type, type <b class="Bold">Print|[Attachment TC type]</b>. For example, to print forms in the Form Library with an Attachment TC type of 73 (in ACORD 1035 Exchange Forms, Attachment TC type = 73 in the Form Library), type <b>Print|73</b>.  For an example, see the <MadCap:xref href="../../Features/Cooperative Technologies 1035 Yellow Pages.htm" target="_blank" alt="Cooperative Technologies 1035Yellow Pages">Cooperative Technologies 1035Yellow Pages</MadCap:xref> topic. The custom action print button follows the same print restrictions set at the organization level as the print TC and the Display/Print PDF. </p>
+                                    </li>
+                                    <li>
+                                        <p class="Indent"><b class="Bold">GIACT</b>   – When Custom Action Type is set to GIACT, type <b class="Bold">GIACT</b> in Action Parameter. </p>
+                                    </li>
+                                    <li>
+                                        <p class="Indent"><b class="Bold">LexisNexis</b>   – When Custom Action Type is set to LexisNexis, type <b class="Bold">LexisNexis</b>  in Action Parameter for the LexisNexis client identity verification.</p>
+                                    </li>
+                                    <li>
+                                        <p class="Indent"><b class="Bold">LexisNexisRisk</b>    – When Custom Action Type is set to LexisNexis, type <b class="Bold">LexisNexisRisk</b>  in Action Parameter for the LexisNexis risk classifier information.</p>
+                                    </li>
+                                    <li>
+                                        <p class="Indent"><b class="Bold">Multiple Action</b> - When Custom Action Type is set to Multiple Action, select or enter the applicable action parameters. The format for entering parameters is "parameter 1," "parameter 2," etc. As the sample naming implies, the parameters identify the action and the entry order identifies the action sequence. It is not necessary to number parameters (e.g., CreateUser, TransferActivity, EmailUser). See the <MadCap:xref href="../../Features/Create User, Transfer, Email Custom Action (Concierge Paper Workflow).htm" target="_blank" alt="Create User, Transfer, Email Custom Action (Concierge Paper Workflow)">Create User, Transfer, Email Custom Action (Concierge Paper Workflow)</MadCap:xref> topic in Features for detailed information.</p>
+                                    </li>
+                                    <li>
+                                        <p><b class="Bold">APPSCheckAvailability</b>  – When Custom Action Type is set to APPS, enter APPSCheckAvailability in Action Parameter for the button that checks for paramed exam availability.</p>
+                                    </li>
+                                    <li>
+                                        <p><b class="Bold">APPSMakeReservation</b>  – When Custom Action Type is set to APPS, enter APPSMakeReservation in Action Parameter for the button that makes the paramed exam reservation.</p>
+                                    </li>
+                                    <li>
+                                        <p><b class="Bold">ExamOneGetMobileTimes</b> – When Custom Action Type is set to ExamOne, ensure ExamOneGetMobileTimes is in the Action Parameter for the  button that gets the times available for mobile paramed exams.</p>
+                                    </li>
+                                    <li>
+                                        <p><b class="Bold">ExamOneConfirmMobileTimes</b> –  When Custom Action Type is set to ExamOne, enter ExamOneConfirmMobileTimes in the Action Parameter for the button that confirms the time available for the ExamOne mobile paramed exam.</p>
+                                    </li>
+                                    <li>
+                                        <p><b class="Bold">ExamOneGetInCenterLocations</b> – When the Custom Action Type is set to Exam One, enter ExamOneGetInCenterLocations in the Action Parameter for the available ExamOne In Center locations.</p>
+                                    </li>
+                                    <li>
+                                        <p><b class="Bold">ExamOneGetInCenterTimes</b> – When the Custom Action Type is set to Exam One, enter ExamOneGetInCenterTimes in the Action Parameter for the available ExamOne In Center times.</p>
+                                    </li>
+                                    <li>
+                                        <p><b class="Bold">ExamOneConfirmInCenterTime</b> – When the Custom Action Type is set to Exam One, enter ExamOneConfirmInCenterTimes in the Action Parameter for confirmation of the ExamOne In Center paramed exam time.</p>
+                                    </li>
+                                    <li>
+                                        <p><b class="Bold">SubmitParamedOrder</b> – When the Custom Action Type is set to APPS or ExamOne, enter SubmitParamedOrder in the Custom Action Parameter for the custom action button that submits the paramed exam order.</p>
+                                    </li>
+                                    <li>
+                                        <p><b class="Bold">SubmitHealthPiQtureOrder</b> – When the Custom Action Type is set to ExamOne, enter SubmithealthPiQtureOrder in the Custom Action Parameter for the custom action button that submits the HealthPiQture order.</p>
+                                    </li>
+                                    <li>
+                                        <p MadCap:conditions="General.Postpone" class="Indent">
+                                            <MadCap:conditionalText MadCap:conditions="General.Postpone">For Morningstar custom action button, set Action Parameter to <b>Morningstar</b>. See <MadCap:xref href="../../Features/Morningstar Integration.htm" target="_blank" alt="Morningstar Integration">Morningstar Integration</MadCap:xref> in Features for setup instructions.</MadCap:conditionalText>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">
+                                <p class="Indent"><b>Custom File Upload </b>
+                                </p>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <p> Set the button to launch a Documents dialog in <MadCap:variable name="General.ProductName" />. In Documents, if the document type is not found in the Document Type list, it is automatically enabled regardless of the Admin setting. Also use the Custom File Upload setting to upload image files to the Documents dialog if image files are allowed. <MadCap:conditionalText MadCap:conditions="General.Online">See the <MadCap:xref href="../../UserGuide/FireLight Basics/Other Actions/Documents.htm" title="Documents" alt="Documents">Documents [User Instructions]</MadCap:xref> dialog in Other Actions for user instructions.</MadCap:conditionalText></p>
+                                <p>Enter the <b class="Bold">Type of Doc to Upload</b> and determine whether to select the following options:</p>
+                                <ul>
+                                    <li>
+                                        <p><b>Allow Non-PDF File</b> –  If non-pdf image files and .xps document files are allowed, select this checkbox. The following image file types are allowed: .jpg, .tiff, .png, .gif, and .bmp. After upload, the image files are converted into .pdf files and stored the same as other files.</p>
+                                    </li>
+                                    <li>
+                                        <p><b>Disable Change Doc Type</b>  – Select the checkbox to not allow the agent to change the Document Type. Clear the checkbox to allow the agent to change the Document Type.</p>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">
+                                <p class="Indent"><strong>Custom List</strong>
+                                </p>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <p> Set the button to access a custom list that was uploaded for your organization. You must select a custom list number in Data Group and a custom list name in Custom List. </p>
+                                <ul>
+                                    <li>
+                                        <p><b class="Bold">Data Group</b> – Select the <b class="Bold">Custom List {#}</b> number (Custom List 1, Custom List 2, etc.).</p>
+                                    </li>
+                                    <li>
+                                        <p><b class="Bold">Custom List</b> – Select a custom list name for the button to open. The list options are the names of the custom lists that exist on the Custom Lists page in Organization Configuration. </p>
+                                    </li>
+                                </ul>
+                                <p>You can add up to nine Control fields for displaying custom list column data. See <MadCap:xref href="../../Organization Configuration/Custom Lists.htm" target="_blank" alt="Custom Lists">Custom Lists</MadCap:xref> in Organization Configuration for guidelines and instructions to add, update and delete custom lists in <MadCap:variable name="General.ProductName" />. </p>
+                                <p><b class="Bold">NOTE:</b> The  associated fields (e.g., text boxes) that receive the data from the custom list columns, must select a column name from the custom list in the Data Group Property in the field properties and use the same Custom List number in Data Group as in the button control. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">
+                                <p class="Indent"><strong>Multiple Activities Auto-Fill</strong>
+                                </p>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <p>Set the button to designate a Party role for a pre-sale Multi-App activity that collects Party information of individuals and entities (trusts) that may be associated with specific roles in the multiple product applications that may be generated from a pre-sale Multi-App activity.  Create a separate Custom Action button for each Party role (Owner, Joint Owner, Insured, Joint Insured, Trust, etc.). This Button can be associated with role-specific fields through selection or entry of a role prefix. </p>
+                                <p>FireLight requires a Party role entry in the <b class="Bold">Auto-Fill Prefix</b> field property, which auto-completes the entry as you type if the entry is a common tag.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows" MadCap:conditions="">
+                            <td class="TableStyle-2017_IT-Simple2-BodyB-Regular-DarkerRows">
+                                <p class="Indent"><strong>Upload Provider Document</strong>
+                                </p>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">Set the button to allow upload of a Provider document. <p>Enter the <b class="Bold">Type of Doc to Upload</b> and determine whether to select the following options:</p><ul><li><p><b>Allow Non-PDF File</b> –  If non-PDF image files and .xps document files are allowed, select this checkbox. The following image file types are allowed: .jpg, .tiff, .png, .gif, and .bmp. After upload, the image files are converted into .pdf files and stored the same as other files.</p></li><li><p><b>Disable Change Doc Type</b>  – Select the checkbox to not allow the agent to change the Document Type. Clear the checkbox to allow the agent to change the Document Type.</p></li></ul></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsZOrder4.flsnp" />
+                </p>
+            </li>
+            <li>Click the <b>Update</b> button to update the field properties and lock the form for editing.</li>
+            <li>Click the <b>Close</b> button to close the Field Properties dialog.</li>
+            <li>Click the <b>SAVE</b> button on the upper left of the Form Designer page to save the form, which unlocks the form for editing by other users. <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FormSaveOtherUser.flsnp" /></li>
+            <li>
+                <MadCap:snippetText src="../../Resources/Snippets/Rules/UpdateRuleSetsDB.flsnp" />
+            </li>
+        </ol>
+        <p MadCap:conditions="General.PDF">
+            <img src="../../Resources/ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" /> See the Admin Help for examples of Button controls.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Add a Rule to Require a Button to Be Clicked</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">Add a Rule to Require a Button to Be Clicked</h2>
+                <p>The following sample rule is for a text box field (with the same data item ID in the Name field property as the Button) that displays the number of times that the button has been clicked. The rule requires the button to be clicked at least once.</p>
+                <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+                    <MadCap:codeSnippetCopyButton />
+                    <MadCap:codeSnippetCaption>
+                        <p>Require a button to be clicked</p>
+                    </MadCap:codeSnippetCaption>
+                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;!-- Used "Required Field" default template. --&gt;
+						&lt;if&gt;
+						&lt;condition&gt;
+						&lt;not&gt;
+						&lt;isnullorwhitespace&gt;
+						&lt;diget dataitemid="ButtonName" /&gt;
+						&lt;/isnullorwhitespace&gt;
+						&lt;/not&gt;
+						&lt;/condition&gt;
+						&lt;removemessage dataitemid="ButtonName" /&gt;
+						&lt;else /&gt;
+						&lt;postmessage dataitemid="ButtonName"&gt;
+						&lt;const value="You must click the ButtonName at least once." /&gt;
+						&lt;/postmessage&gt;
+					&lt;/if&gt;</MadCap:codeSnippetBody>
+                </MadCap:codeSnippet>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Add a Rule to Disable a Custom Action Button After Three Attempts</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <h2 MadCap:conditions="General.PDF">Add a Rule to Disable a Custom Action Button after Three Attempts</h2>
+            <MadCap:dropDownBody>
+                <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+                    <MadCap:codeSnippetCopyButton />
+                    <MadCap:codeSnippetCaption>
+                        <p>Disable a custom action button after three attempts</p>
+                    </MadCap:codeSnippetCaption>
+                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;block&gt;
+						&lt;setcontrolstate dataitemid="{ButtonID}"&gt;
+						&lt;compare op="!="&gt;
+						&lt;const value="3" type="String" /&gt;
+						&lt;diget dataitemid="{ButtonID}" /&gt;
+						&lt;/compare&gt;
+						&lt;/and&gt;
+						&lt;/setcontrolstate&gt;
+						&lt;if&gt;
+						&lt;condition&gt;
+						&lt;and&gt;
+						&lt;compare op="=="&gt;
+						&lt;const value="EFT" type="String" /&gt;
+						&lt;diget dataitemid="FundingSource" /&gt;
+						&lt;/compare&gt;
+						&lt;compare op="=="&gt;
+						&lt;const value="3" type="String" /&gt;
+						&lt;diget dataitemid="{ButtonID}" /&gt;
+						&lt;/compare&gt;
+						&lt;/and&gt;
+						&lt;/condition&gt;
+						&lt;postmessage dataitemid="{Dataitem}"&gt;
+						&lt;const value="Maximum LexisNexis calls for this party have been reached." /&gt;
+						&lt;/postmessage
+						&lt;else /&gt;
+						&lt;removemessage dataitemid="FundingSource" /&gt;
+						&lt;/if&gt;
+					&lt;/block&gt;</MadCap:codeSnippetBody>
+                </MadCap:codeSnippet>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>CRM Button Guidelines</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">CRM Button Guidelines</h2>
+                <p>The following information is for using data groups in CRM integrations, such as Cooperative Technologies 1035 Yellow Pages, Redtail, Salesforce, and Whitepages.com.</p>
+                <p>This concept works well for the CRM data integrations because all you have to do is set the Data Group and the Data Group Property to the field being mapped. Because the field names do not matter, you can set this up one time for Whitepages.com and Redtail and do not have to do anything different other than set the configurations and set the Data Group in the custom action buttons. </p>
+                <p>
+                    <ol>
+                        <li>
+                            <p>In the Button control, set the Action Type to CRM, set the CRM Type to the CRM call associated with the custom action, and set the Data Group for that specific set of data.</p>
+                            <p> For example, in the Get Client Info button field properties, set the Action Type to <b>CRM</b>, set the CRM Type to <b>Redtail</b>, and set the Data Group to <b>Owner</b>.</p>
+                            <p MadCap:conditions="General.Online">
+                                <img src="../../Resources/ImagesAdmin/Button-CRM4.png" alt="Redtail CRM Button Field Properties" title="Redtail CRM Button Field Properties" MadCap:conditions="General.Online" />
+                            </p>
+                        </li>
+                        <li>
+                            <p>In the form fields that receive data from the CRM, select the Data Group and Data Group Property.</p>
+                            <p>For example, in the Owner_FirstName field, set the Data Group to Owner, which tells the system to pull back the owner  detail from the call to the CRM, and set the Data Group Property to FirstName, which tells the system to put the first name of the owner in this field. Repeat this process for each field that receives data from the CRM call.</p>
+                            <p MadCap:conditions="General.Online">
+                                <img src="../../Resources/ImagesAdmin/Button-CRM5.png" alt="Data Group and Data Group Property" title="Data Group and Data Group Property" MadCap:conditions="General.Online" />
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown MadCap:conditions="General.Online">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>EXAMPLE: Button Control for CRM</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p MadCap:conditions="General.Online">In the following example, <b class="Bold">Data Group</b> is set to <b class="Bold">Owner</b> for the button control and for the associated text box controls. <b class="Bold">Action Type</b> is set to <b class="Bold">CRM</b>, and the <b class="Bold">CRM Type</b> is set to <b class="Bold">Redtail</b>. Clicking this button initiates a call to Redtail.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/Redtail1.jpg" alt="Redtail CRM Button Control and Field Properties" title="Redtail CRM Button Control and Field Properties" MadCap:conditions="General.Online" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown MadCap:conditions="General.Online">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Button Control for CRM  1035 Exchange Ceding Company</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p MadCap:conditions="General.Online">In the following example, <b class="Bold">Data Group</b> is set to <b class="Bold">1035 Exchange Ceding Company 1</b> for the button control and for the associated text box controls. <b class="Bold">Action Type</b> is set to <b class="Bold">CRM</b>, and the <b class="Bold">CRM Type</b> is set to <b class="Bold">1035YellowPages</b>. Clicking this button initiates a call to Cooperative Technologies  1035YellowPages.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/Button-1035CRM.jpg" alt="Button Control for 1035 Exchange Ceding Company" title="Button Control for 1035 Exchange Ceding Company" MadCap:conditions="General.Online" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown MadCap:conditions="General.Online">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>EXAMPLE: Button Control for Regular Provider Action</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>In the following example, <b class="Bold">Action Type</b> is set to <b class="Bold">Custom Action</b>, <b class="Bold">Custom Action Type</b> is set to <b class="Bold">Regular Provider Action</b>, and <b class="Bold">Action Parameter</b> is set to <b class="Bold">Upload Sample Doc</b>. The Action Parameter setting (e.g., Upload Sample Doc) indicates the action (Upload) and the document tag (Sample Doc) that is in the provider for the organization. </p>
+                <p>Clicking this button initiates a custom provider action that allows the Provider to  send the binary PDF data as well as the document tag associated with the PDF to add a document or replace an existing uploaded PDF during the data entry process. Audit history displays the initial addition and when changes occurred to the document. </p>
+                <p>
+                    <img src="../../Resources/ImagesAdmin/Capture59.png" alt="Button Field Properties for Upload Provider PDF " title="Button Field Properties for Upload Provider PDF " MadCap:conditions="General.Online" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown MadCap:conditions="General.Online">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>EXAMPLE: Button Control for Custom Action Print</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p MadCap:conditions="General.Online">In the following example, <b class="Bold">Action Parameter</b> is set to <b class="Bold">Print|73</b> in the button control on a replacement instruction page. This is set to print only forms with the  TC Type of 73 in the application(i.e., TC = 73 for ACORD 951).</p>
+                <p MadCap:conditions="General.Online"><b class="Bold">NOTE:</b> Type <b>Print</b> in Action Parameter to print all forms with the same Attachment TC type as the current form (this is the Attachment TC setting on the form in the Form Library). To print only forms with a specific Attachment TC type, type <b class="Bold">Print|[Attachment TC type]</b>. For example, to print forms in the Form Library with an Attachment TC type of 73 (in ACORD 1035 Exchange Forms, Attachment TC type = 73 in the Form Library), type <b>Print|73</b>.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/Designer1.jpg" alt="Exchange Form with ACORD Type Code TC=73" title="Exchange Form with ACORD Type Code TC=73" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown MadCap:conditions="General.Online">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>EXAMPLE: Button Control for Custom Action GIACT</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>In the following example, <b class="Bold">Action Type</b> is set to <b class="Bold">Custom Action</b>, <b class="Bold">Custom Action Type</b> is set to <b class="Bold">GIACT</b>, and <b class="Bold">Action Parameter</b> is set to <b class="Bold">GIACT</b>.</p>
+                <p>Clicking the button initiates a web service call to GIACT Systems for banking account verification and authentication. </p>
+                <p>
+                    <img src="../../Resources/ImagesAdmin/Capture61.png" alt="Sample GIACT Button Field Properties" title="Sample GIACT Button Field Properties" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown MadCap:conditions="General.Online">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>EXAMPLE: Button Control for Sample Custom File Upload</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p MadCap:conditions="General.Online">Use the Custom File Upload action to support a custom action button that allows upload of documents, or other file types than PDF, to the Documents dialog. Set <b class="Bold">Action Type</b> to <b class="Bold">Custom File Upload</b> and select the <b class="Bold">Allow Non-PDF</b> file checkbox for image files. For image files, FireLight creates a PDF and adds the uploaded image to the PDF.  The stored image is a PDF and the output to the client is a PDF. <MadCap:conditionalText MadCap:conditions="General.Online">See the <MadCap:xref href="../../UserGuide/FireLight Basics/Other Actions/Documents.htm" title="Documents" alt="Documents">Documents [User Instructions]</MadCap:xref> dialog in Other Actions for user instructions.</MadCap:conditionalText></p>
+                <p MadCap:conditions="General.Online">In this example, a button control is added for uploading photos in .jpg, .tiff, .png, .gif, or .bmp formats. In the Field Properties for the button control, Text is set to Upload Photo, Action Type is set to Custom File Upload, Data Group is set to None, Type of Doc to Upload is a text box with a description of the custom file (Image), Allow Non-PDF file checkbox is selected, and Disable Change Doc Type checkbox is cleared.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/Button-SampleCustomFileUpload.jpg" alt="Sample Custom File Upload" title="Sample Custom File Upload" MadCap:conditions="General.Online" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown MadCap:conditions="General.Online">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>EXAMPLE: Button Control for Sample Custom List</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p MadCap:conditions="General.Online"><b class="Bold">NOTE:</b> You must first add a custom list to the Custom Lists page in Organization Configuration before you add the button control. See <b class="Bold"><MadCap:xref href="../../Organization Configuration/Custom Lists.htm" target="_blank" alt="Custom Lists" style="color: #ffffff;">Custom Lists</MadCap:xref></b> for guidelines and instructions for adding a custom list to Admin. For this example, a "Peak Life - Occupations" custom list with two columns named "Letter" and "Occupation" was added to the Custom Lists page.</p>
+                <ol>
+                    <li>
+                        <p MadCap:conditions="General.Online">Add a button control for the custom list named “Peak Life - Occupations.” </p>
+                        <p MadCap:conditions="General.Online">In the Field Properties for the button control in this example:</p>
+                        <p MadCap:conditions="General.Online"><b class="Bold">Text</b> is set to <b class="Bold">SELECT OCCUPATION</b> (display name of the button on the form)<br /><b class="Bold">Action Type</b> is set to <b class="Bold">Custom List</b> (type of action for the button control)<br /><b class="Bold">Data Group</b> is set to <b class="Bold">Custom List 1</b> (indicates that this is the first custom list button set up on the form—each custom list button control needs to have a unique Custom List number)<br /><b class="Bold">Custom List</b> is set to <b class="Bold">Peak Life - Occupations</b> (name of the custom list)</p>
+                        <p MadCap:conditions="General.Online">
+                            <img src="../../Resources/ImagesAdmin/Capture51.png" alt="Custom List Button Field Properties" title="Custom List Button Field Properties" MadCap:conditions="General.Online" />
+                        </p>
+                    </li>
+                    <li MadCap:conditions="General.Online">
+                        <p>Add an associated text box control to pre-fill data from the custom list. </p>
+                        <p MadCap:conditions="General.Online"> In the Field Properties for the text box control in this example:</p>
+                        <p MadCap:conditions="General.Online"><b class="Bold">Data Group</b> is set to <b class="Bold">Custom List 1</b> (must match the Data Group setting in the button control)<br /><b class="Bold">Custom List</b> is set to <b class="Bold">Peak Life - Occupations</b> (must match the Custom List setting in the button control)<br /><b class="Bold">Data Group Property</b> is set to <b class="Bold">Occupation</b> (Data Group Property list contains the column heading names of the selected Custom List—in this example, it is set to the "Occupation" column name)</p>
+                        <p MadCap:conditions="General.Online">
+                            <img src="../../Resources/ImagesAdmin/Capture52.png" alt="Text Box Field Properties for Custom List Button" title="Text Box Field Properties for Custom List Button" MadCap:conditions="General.Online" />
+                        </p>
+                    </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown MadCap:conditions="General.Online">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>EXAMPLE: Button Controls with Multiple Rows for Custom Lists</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p MadCap:conditions="General.Online">You can use multiple rows of controls together to provide input for multiple selections from a Custom List. This example provides three Custom Lists for selecting medication conditions and medication names. A separate row of button and text box controls are added for each row of data. The button and associated text box controls in each row are in a unique Data Group for that row. </p>
+                <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;">
+                    <caption class="Table">Button Controls with Multiple Rows for Custom Lists</caption>
+                    <col style="width: 87px;" />
+                    <col />
+                    <thead>
+                        <tr>
+                            <th>Row</th>
+                            <th>Field Properties</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b class="Bold">Row 1:</b>
+                            </td>
+                            <td>(Requires a unique Name and unique custom list number in Data Group)</td>
+                        </tr>
+                        <tr>
+                            <td>&#160;</td>
+                            <td><b class="Bold">Button</b> properties: <br /><b class="Bold">Name</b> = <b class="Bold">Medication1_Button</b> (dataitem name of the button)<br /><b class="Bold">Text</b> = <b class="Bold">MEDICATION 1</b> (display name of the button)<br /><b class="Bold">Action Type</b> = <b class="Bold">Custom List</b> (type of action for the button control)<br /><b class="Bold">Data Group</b> = <b class="Bold">Custom List 3</b> (indicates this is the third custom list on the form—each custom list button control needs to have a unique Custom List number in Data Group)<br /><b class="Bold">Custom List</b> = <b class="Bold">Peak Life - Medications</b> (name of the custom list)</td>
+                        </tr>
+                        <tr>
+                            <td>&#160;</td>
+                            <td><b class="Bold">Text Box</b> properties:<br /><b class="Bold">Name</b> = <b class="Bold">Insured_MedicalHistory_MedicationCondition1</b> (common tag)<br /><b class="Bold">Data Group</b> = <b class="Bold">Custom List 3</b> (must match the button Data Group)<br /><b class="Bold">Custom List</b> = <b class="Bold">Peak Life - Medications</b> (must match the button Custom List)<br /><b class="Bold">Data Group Property</b> = <b class="Bold">Condition</b> (Data Group Property list contains the column heading names of the selected Custom List—in this example, it is set to the "Condition" column name)</td>
+                        </tr>
+                        <tr>
+                            <td>&#160;</td>
+                            <td><b class="Bold">Text Box</b> properties:<br /><b class="Bold">Name</b> = <b class="Bold">Insured_MedicalHistory_MedicationName1</b> (common tag)<br /><b class="Bold">Data Group</b> = <b class="Bold">Custom List 3</b>  (matches the button setting)<br /><b class="Bold">Custom List</b> = <b class="Bold">Peak Life - Medications</b> (matches the button setting)<br /><b class="Bold">Data Group Property</b> = <b class="Bold">Drug Name</b> (name of the custom list column)<br /></td>
+                        </tr>
+                        <tr>
+                            <td><b class="Bold">Row 2:</b>
+                            </td>
+                            <td>(Requires a unique Name and custom list number in Data Group)</td>
+                        </tr>
+                        <tr>
+                            <td>&#160;</td>
+                            <td><b class="Bold">Button</b> properties:  <br /><b class="Bold">Name</b> = <b class="Bold">Medication2_Button</b><![CDATA[  ]]><br /> <b class="Bold">Text</b> = <b class="Bold">MEDICATION 2</b><br /> <b class="Bold">Action Type</b> = <b class="Bold">Custom List</b><br /> <b class="Bold">Data Group</b> = <b class="Bold">Custom List 4</b> <br /> <b class="Bold">Custom List</b> = <b class="Bold">Peak Life - Medications</b></td>
+                        </tr>
+                        <tr>
+                            <td>&#160;</td>
+                            <td><b class="Bold">Text Box</b> properties:<br /><b class="Bold">Name</b> = <b class="Bold">Insured_MedicalHistory_MedicationCondition_2</b><br /><b class="Bold">Data Group</b> = <b class="Bold">Custom List 4</b><br /><b class="Bold">Custom List</b> = <b class="Bold">Peak Life - Medications</b><br /><b class="Bold">Data Group Property</b> = <b class="Bold">Condition</b></td>
+                        </tr>
+                        <tr>
+                            <td>&#160;</td>
+                            <td><b class="Bold">Text Box</b> properties:<br /><b class="Bold">Name</b> = <b class="Bold">Insured_MedicalHistory_MedicationName_2</b><br /><b class="Bold">Data Group</b> = <b class="Bold">Custom List 4</b><br /><b class="Bold">Custom List</b> = <b class="Bold">Peak Life - Medications</b><br /><b class="Bold">Data Group Property</b> = <b class="Bold">Drug Name</b></td>
+                        </tr>
+                        <tr>
+                            <td><b class="Bold">Row 3:</b>
+                            </td>
+                            <td>(Requires a unique Name and unique custom list number in Data Group)</td>
+                        </tr>
+                        <tr>
+                            <td>&#160;</td>
+                            <td><b class="Bold">Button</b> properties:<br /><b class="Bold">Name</b> = <b class="Bold">Medication3_Button</b><br /><b class="Bold">Text</b> = <b class="Bold">MEDICATION 3</b><br /><b class="Bold">Action Type</b> = <b class="Bold">Custom List</b><br /><b class="Bold">Data Group</b> = <b class="Bold">Custom List 5</b><br /><b class="Bold">Custom List</b> = <b class="Bold">Peak Life - Medications</b></td>
+                        </tr>
+                        <tr>
+                            <td>&#160;</td>
+                            <td><b class="Bold">Text Box</b> properties:<br /><b class="Bold">Name</b> = <b class="Bold">Insured_MedicalHistory_MedicationCondition_3</b><br /><b class="Bold">Data Group</b> = <b class="Bold">Custom List 5</b><br /><b class="Bold">Custom List</b> = <b class="Bold">Peak Life - Medications</b><br /><b class="Bold">Data Group Property</b> = <b class="Bold">Condition</b></td>
+                        </tr>
+                        <tr>
+                            <td>&#160;</td>
+                            <td><b class="Bold">Text Box</b> properties:<br /><b class="Bold">Name</b> = <b class="Bold">Insured_MedicalHistory_MedicationName_3</b><br /><b class="Bold">Data Group</b> = <b class="Bold">Custom List 5</b><br /><b class="Bold">Custom List</b> = <b class="Bold">Peak Life - Medications</b><br /><b class="Bold">Data Group Property</b> = <b class="Bold">Drug Name</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p MadCap:conditions="General.Online">The following image outlines the custom list field properties for the first row of the SELECT MEDICATION button and the text boxes that receive the medication condition and drug name custom list data when the user clicks the button and makes a selection from the list.<MadCap:conditionalText MadCap:conditions="General.Postpone"> [See PIIPreSaleForm1]</MadCap:conditionalText></p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/Capture243.png" alt="Multiple Medication Selection Buttons with Text Fields" title="Multiple Medication Selection Buttons with Text Fields" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

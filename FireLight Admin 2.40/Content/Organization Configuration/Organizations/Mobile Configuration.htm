@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Mobile Configuration</h1>
+        <p>Step through the following to find instructions for entering settings for your organization.</p>
+        <ol>
+            <li>
+                <p>On the Organization Settings page, click the <b>Mobile Configuration</b> link to open the Mobile Configuration dialog. This is where you configure access parameters for <MadCap:variable name="General.ProductName" /><sup MadCap:conditions="General.Online">®</sup> Console (disconnected) users.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/MobileConfiguration-DB.jpg" alt="Mobile Configuration dialog" title="Mobile Configuration dialog" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+            <li>
+                <p>Add and edit mobile configuration information.</p>
+                <p class="hangingindent"><b>Max Check-Out Applications</b> Maximum number of applications that can be offline (checked out) at one time per device. The default is 10 applications. If no maximum, type 0.</p>
+                <p class="hangingindent"><b>Max Check-Out Days</b> Maximum number of days the application can be kept offline (checked out). When an application expires all data associated with the application is removed from the device; 24 hours prior to expiration the application is highlighted to notify the user it is about to expire. The default is 14 days. If no maximum, type 0.</p>
+                <p class="hangingindent"><b>Max Devices per Organization</b> Maximum number of mobile devices that can be added per Organization for each user account. The default number of devices is 2.</p>
+                <p class="hangingindent"><b>Heartbeat Check (Seconds)</b> Number of seconds between each heartbeat check. The heartbeat check executes only when the Console has access to the web server. During the heartbeat, mobile configuration settings are updated and Password Reset as well as Device Deactivation commands are handled. To prevent too much unnecessary network traffic, the minimum is 300 seconds. The default is 600 seconds.</p>
+                <p class="hangingindent"><b>Access PIN Duration (Days)</b> Number of days until the Console Access PIN expires. The minimum is 1 day. The default is 7 days.</p>
+                <p class="hangingindent"><a name="OfflineEnabled"></a><b>Offline Enabled</b> Select the checkbox to enable offline console support for the organization. The default is cleared (unchecked).</p>
+                <p class="hangingindent"><b>Disable Check for Topaz Pad</b> Select the checkbox to disable the Console from checking for the presence of a Topaz signature pad.  </p>
+                <p class="hangingindent"><b>Type of Username</b> Select the type of Username to be required along with the Password when logging into the <MadCap:variable name="General.ProductName" /> Console:</p>
+                <p class="Indent"><b>None</b> (Default) Only the password is required.</p>
+                <p class="Indent"><b>External ID</b> The Username must match the External ID provided in the SSO NameIdentifier assertion.</p>
+                <p class="Indent"><b>Custom</b> The user provides a Username during the activation process.<br /></p>
+                <p><b>Min Password Length</b> Length of the password. The minimum is 1.</p>
+                <p class="hangingindent"><b>Password Expires in (Days)</b> Maximum number of days until a new Password is required. The minimum is 1 day.</p>
+                <p class="hangingindent"><b>Min Numbers in Password</b> Minimum numbers required in the Password. (The default is the same as Minimum Password Length for backwards compatibility.)</p>
+                <p class="hangingindent"><b>Min Symbols in Password</b> Minimum symbols required in the Password. (The default is 0 for backwards compatibility.)</p>
+                <p class="hangingindent"><b>Login Attempts Window (Seconds)</b> The number of seconds allowed for authentication attempts. If the Max Login Attempts is exceeded within this time frame, the Wipe On Failed Login setting is checked to determine if the data should be deleted from the mobile device. If the Wipe On Failed Login is not set, the console is locked from entering a Password for the Authentication Window duration. The default is 180 seconds. The minimum is 60 seconds. If no maximum, type 0.</p>
+                <p class="hangingindent"><b>Max Login Attempts</b> Maximum number of Password entry attempts before the application is locked or wiped clean. The default is 3 attempts. The minimum is 1 attempt. If no maximum, type 0.</p>
+                <p class="hangingindent"><b>Wipe On Failed Login</b> Select the checkbox to wipe the <MadCap:variable name="General.ProductName" /> data from the device if the number of failed login attempts is exceeded. The default is cleared (unchecked).</p>
+                <p class="hangingindent"><b>Idle Timeout (Seconds)</b> Number of seconds of idle time before the Console is locked and the user is required to type a Password to re-log in to the Console. The default is 300 seconds. If no maximum, type 0.</p>
+            </li>
+            <li>Click the <b>Save</b> button to save your entries.</li>
+            <li>Click the <b>X</b> on the upper right to close the dialog.</li>
+            <li>On the Organization Settings page, click the <b>Save Organization</b> button.</li>
+        </ol>
+        <p><b class="Bold">See Also:</b> </p>
+        <ul>
+            <li>
+                <MadCap:conditionalText MadCap:conditions="General.PDF"><em>FireLight Console for Windows Guide</em> in Admin Help</MadCap:conditionalText><a href="../../Resources/PDFGuides/FireLight_Console_for_Windows_Guide.pdf" target="_blank" MadCap:conditions="General.Online" alt="FireLight Console for Windows Guide">FireLight Console for Windows Guide</a>
+            </li>
+            <li>
+                <MadCap:conditionalText MadCap:conditions="General.PDF"><em>eApp™ for iPad Guide</em> in Admin Help</MadCap:conditionalText><a href="../../Resources/PDFGuides/FireLight_eApp_for_iPad_Guide_v2.pdf" target="_blank" alt="eApp™ for iPad Guide" title="eApp™ for iPad Guide">eApp™ for iPad Guide</a>
+            </li>
+            <li MadCap:conditions="General.Online">"Mobile Access" in <MadCap:xref href="../../UserGuide/Preferences/Preferences.htm" target="_blank" alt="Preferences [User Instructions]">Preferences [User Instructions]</MadCap:xref></li>
+        </ul>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

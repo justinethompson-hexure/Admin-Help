@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b>Enable Cc Sender in All Requests</b> checkbox to enable automatic CC of the sender for any agent generated email (for example, Client App Fill Request, Sign Later Signature Request, Reviewer email). </body>
+</html>

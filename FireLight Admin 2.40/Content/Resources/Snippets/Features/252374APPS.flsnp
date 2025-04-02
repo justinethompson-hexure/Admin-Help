@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The paramed exam scheduling has been completed.  The addition of the pending case status updates into FireLight is completed. All clients that want to use this service are required to contract directly with APPS. </p>
+        <p>Impacts: </p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Activities:  Adding checkbox to enable Paramed ordering</p>
+            </li>
+            <li>
+                <p>Admin:  Third-Party Configuration - Adding a new Service Type</p>
+            </li>
+            <li>
+                <p>Data Group Properties</p>
+            </li>
+            <li>
+                <p>Email Templates: different statuses on Paramed ordering</p>
+            </li>
+            <li>
+                <p>UI Changes:  Statuses</p>
+            </li>
+            <li>
+                <p>Common Tags:  life insurance related</p>
+            </li>
+            <li>
+                <p>API Structure:  send required insured data and account info, order ID and availability will open and save in the database.  We will then submit the order to ExamOne with the same tracing ID and lock the order with the schedule</p>
+            </li>
+            <li>
+                <p>Forms: Data Group Properties</p>
+            </li>
+            <li>
+                <p>Reports: Usage</p>
+            </li>
+            <li>
+                <p>Audits</p>
+            </li>
+        </ul>
+    </body>
+</html>

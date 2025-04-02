@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Description and instructions for setup and usage of the Lob.com Address Validation API to accomplish address validation on a set of fields." />
+    </head>
+    <body>
+        <h1><a name="top"></a>Address Validation</h1>
+        <p class="note"><b class="Bold">Spotlight Video:</b> See <a href="https://vimeo.com/330088465/a7229929aa" target="_blank" title="FireLight Address Autocomplete, Address Validation, and Dr. Lookup" alt="FireLight Address Autocomplete, Address Validation, and Dr. Lookup">FireLight Address Autocomplete, Address Validation, and Dr. Lookup</a> for a Spotlight feature video about Address Validation.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Address Validation - Lob.com API Integration</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p class="note"><b class="Bold">NOTE:</b> This service is not Health Insurance Portability and Accountability Act (HIPAA) compliant. </p>
+                        <p>This feature integrates FireLight with the Lob.com address validation API to accomplish address validation on a set of fields without the user needing to trigger the validation via a button, etc. </p>
+                        <p><b class="Bold">NOTE:</b> Only the Production environment uses the live instance. Our LOB.com account has a key and endpoint defined for a test region and a live region.  Production is the only environment that uses the live environment.</p>
+                        <p MadCap:conditions="General.Postpone">The API to be used is described at <a href="https://lob.com/docs/java#us_verifications" target="_blank" alt="https://lob.com/docs/java#us_verifications">https://lob.com/docs/java#us_verifications</a>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Admin Setup</p>
+                        <ol>
+                            <li>
+                                <p>Designer/<MadCap:xref href="../Design/Forms/Form Designer.htm" alt="Form Designer">Form Designer</MadCap:xref> or Designer/<MadCap:xref href="../Design/Wizards/Wizard Designer.htm" alt="Wizard Designer">Wizard Designer</MadCap:xref> page: On the forms or wizards, add the data items that will capture the information needed for the rule: Line 1, Line 2 (optional), City, State, and Zip (first 5 characters) address input fields and a field to display address validation error or warning message text (e.g., lob_Warning_Text data item). Save the forms and wizards.</p>
+                            </li>
+                            <li>
+                                <p>Product Configuration/<MadCap:xref href="../Product Configuration/Rule Sets.htm" alt="Rule Sets">Rule Sets</MadCap:xref> page: Add the rule for the address validation. See the <a href="../Product Configuration/Rule Sets/AdvancedRulesCategoryElementDefinitionsReference.htm#AddressValidation" target="_blank" alt="AddressValidation">AddressValidation</a> rule node help for a sample rule. Save the rule set.</p>
+                                <p>The rule returns a string value so that any resulting behavior can be set up in response. For example, the resulting behavior can be an error/validation message, forcing the user to correct the issue before being able to submit the activity, or it could be a warning/validation message instead.</p>
+                            </li>
+                            <li>Product Configuration/<MadCap:xref href="../Product Configuration/Packages.htm" alt="Packages">Packages</MadCap:xref> page: Add the rule set with the address validation rule to the applicable packages that contain the forms and wizards that will use the address validation. Save the packages.</li>
+                            <li>Utilities/<MadCap:xref href="../Utilities/Deployments/Deployments.htm" alt="Deployments">Deployments</MadCap:xref> page: Deploy the Forms/Wizards, Rule Sets, and Packages changes to the applicable environments.  </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">User Experience</p>
+                        <p><b class="Bold">NOTE:</b> Requests made in the test environment always validate request arguments, simulate live environment behavior, and enforce rate limits. <b class="Bold">They never print, mail nor, for verification services, verify addresses.</b> Using this feature in any FireLight test environments must follow the input rules specified at <a href="https://docs.lob.com/#us-verification-test-environment" target="_blank" title="https://docs.lob.com/#us-verification-test-environment" alt="https://docs.lob.com/#us-verification-test-environment">https://docs.lob.com/#us-verification-test-environment</a>.</p>
+                        <ol>
+                            <li>Create a new activity that includes address validation on the form or wizard.</li>
+                            <li>Alerts could appear for fields that have the address validation rule applied. For example, click  <b class="Bold">Alerts</b> to display a "Please enter a full address" alert message.</li>
+                            <li>Fill in the applicable address fields for the address validation rule.</li>
+                            <li>If an address field is not complete or the data entry does not match a USPS valid address, an Address Validation popup message appears with a corrected address. Click <b class="Bold">Accept</b> to accept the corrected address or click <b class="Bold">Decline</b> to decline the corrected address.</li>
+                            <li>Continue with data entry.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help – Design Document:<MadCap:conditionalText MadCap:conditions="General.PDF"> CMR 186362</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"> <a href="../Resources/DesignDocs/186362 Address Validation Design Doc - 11-26-18.pdf" target="_blank" title="CMR 186362" alt="CMR 186362">CMR 186362</a></MadCap:conditionalText></p>
+                        <p>Spotlight Feature Video  – <a href="https://vimeo.com/330088465/a7229929aa" target="_blank" title="FireLight Address Autocomplete, Address Validation, and Dr. Lookup" alt="FireLight Address Autocomplete, Address Validation, and Dr. Lookup">FireLight Address Autocomplete, Address Validation, and Dr. Lookup</a></p>
+                        <p>User Guide  – <em>FireLight Platform User Guide</em>, New Activity section, Data Entry Step, <MadCap:conditionalText MadCap:conditions="General.PDF">"Address Validation" </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="Address Validation.htm" alt="Address Validation">Address Validation [User Instructions]</MadCap:xref> </MadCap:conditionalText>topic.</p>
+                        <p>Lob.com Helpful Links: </p>
+                        <ul>
+                            <li>
+                                <p><a href="https://docs.lob.com/#test-and-live-environments" target="_blank" title="https://docs.lob.com/#test-and-live-environments" alt="https://docs.lob.com/#test-and-live-environments">https://docs.lob.com/#test-and-live-environments</a>
+                                </p>
+                            </li>
+                            <li>
+                                <p><a href="https://docs.lob.com/#us_verifications_create" target="_blank" title="https://docs.lob.com/#us_verifications_create" alt="https://docs.lob.com/#us_verifications_create">https://docs.lob.com/#us_verifications_create</a>
+                                </p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

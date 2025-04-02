@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Production support ran into an issue with a carrier and distributor both setting a common tag name on a data item field name and the distributor has rules for that data item.&#160; The field was incorrectly cleared by the distributor rule. An organization level flag is added to enable and disable common tags to control when common tags are set for a data item and when the common tags are ignored.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Organizational Settings:  Adding a Check box under the "Activity" tab in Organization Settings. Check box is listed as "Enable Common Tags." When this is implemented, the default setting for this setting is "unchecked."  If an organization as already utilizing the Common Tag functionality, this will need to be updated and the box "checked."</p>
+            </li>
+        </ul>
+    </body>
+</html>

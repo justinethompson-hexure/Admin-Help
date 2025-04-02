@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1978" MadCap:lastWidth="957">
+    <head>
+        <link href="../Resources/Stylesheets/MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Release History</h1>
+        <p>View the release notes and design documents to see what's new in <MadCap:variable name="General.ProductName" /> for each release.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>FireLight v2.8 Release </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h1 class="Heading1">FireLight v2.8 Release Notes</h1>
+                <h2 class="Heading2">April 1, 2016 Staging Release</h2>
+                <p class="note" MadCap:autonum="&lt;b&gt;&lt;span style=&quot;color: #ffffff;&quot; class=&quot;mcFormatColor&quot;&gt;Note: &lt;/span&gt;&lt;/b&gt;">If a design document is associated with an enhancement, click the link in the iConnect number to open the design document.</p>
+                <h3 class="Heading3">Client Designated Enhancements</h3>
+                <ul>
+                    <li><b class="DRnumber">[<a href="../../../DesignDocs/84044-Visability-IConnect-84044.pdf" target="_blank" title="Design Document" alt="Design Document">84044</a>]</b> Set the hide/show visibility of field controls based on business rules – </li>
+                    <li>
+                        <p><b class="DRnumber">[88157]</b> Add support for Hyperlink label functionality for use within step 1 of the FireLight workflow – </p>
+                    </li>
+                    <li>
+                        <p><b class="DRnumber">[116962]</b> Birth Date format during signing ceremony –</p>
+                    </li>
+                    <li>
+                        <p><b class="DRnumber">[<a href="../../../DesignDocs/117395-FireLight_Design_Approach.pdf" target="_blank" title="Design Document" alt="Design Document">117395</a>]</b>
+                            <MadCap:expanding>
+                                <MadCap:expandingHead>Keep a history of changes on Form Design in the Admin Tool – </MadCap:expandingHead>
+                                <MadCap:expandingBody>Added a Form History dialog box on the Admin form design page. Use the dialog box to view a history of form changes. Form history is updated when form changes are made and the form is saved.</MadCap:expandingBody>
+                            </MadCap:expanding>
+                        </p>
+                    </li>
+                    <li>
+                        <p><b class="DRnumber">[<a href="../../../DesignDocs/122279-ApplicationTransfer.pdf" target="_blank" title="Design Document" alt="Design Document">122279</a>]</b> Building on User Sharing –</p>
+                    </li>
+                    <li>
+                        <p><b class="DRnumber">[<a href="../../../DesignDocs/125234-allowReviewerToFillFormsDuringReview-DRAFT 3.pdf" target="_blank" title="Design Document" alt="Design Document">125234</a>]</b> Allow Reviewer to fill forms during review–</p>
+                    </li>
+                    <li>
+                        <p><b class="DRnumber">[125434]</b> Build functionality to notify all e-signing parties of opportunity timeout or opt-out –</p>
+                    </li>
+                    <li>
+                        <p><b class="DRnumber">[126176]</b> Need the ability to create carrier-specific email templates –</p>
+                    </li>
+                    <li>
+                        <p><b class="DRnumber">[<a href="../../../DesignDocs/127011-FireLight_Design_Approach_Template.pdf" target="_blank" title="Design Document" alt="Design Document">127011</a>]</b> Provide a carrier controlled message that a form has been updated - both before and after lock down </p>
+                    </li>
+                    <li>
+                        <p><b class="DRnumber">[<a href="../../../DesignDocs/127480-HTMLcodeCannotBePutIntoRules-CodeMustBeEncoded.pdf" target="_blank" title="Design Document" alt="Design Document">127480</a>]</b> Popups –</p>
+                    </li>
+                    <li>
+                        <p><b class="DRnumber">[<a href="../../../DesignDocs/127589-DriverLicenseUpload.pdf" target="_blank" title="Design Document" alt="Design Document">127589</a>]</b> Add Driver’s License Verification during the Sign Now Ceremony –</p>
+                    </li>
+                    <li>
+                        <p><b class="DRnumber">[<a href="../../../DesignDocs/127681-ApplicationTransfer.pdf" target="_blank" title="Design Document" alt="Design Document">127681</a>]</b> Use FireLight to aid in correction of NIGO info for Paper Apps input by Home Office –</p>
+                    </li>
+                    <li>
+                        <p><b class="DRnumber">[<a href="../../../DesignDocs/127714-DesignApproachForSignaturePadFont.pdf" target="_blank" title="Design Document" alt="Design Document">127714</a>]</b> Signature pad font –</p>
+                    </li>
+                </ul>
+                <h3 class="Heading3">Other Enhancements</h3>
+                <ul>
+                    <li>
+                        <p><b class="DRnumber">[127482]</b>
+                            <MadCap:expanding>
+                                <MadCap:expandingHead>FireLight Admin: Tabbing Order enhancement – </MadCap:expandingHead>
+                                <MadCap:expandingBody>In Admin, added the ability to set tab order vertically.</MadCap:expandingBody>
+                            </MadCap:expanding>
+                        </p>
+                    </li>
+                    <li>
+                        <p><b class="DRnumber">[127509]</b>
+                            <MadCap:expanding>
+                                <MadCap:expandingHead>FireLight Admin: Moving multiple fields – </MadCap:expandingHead>
+                                <MadCap:expandingBody>In Admin, added the ability to move multiple fields at the same time using the mouse.</MadCap:expandingBody>
+                            </MadCap:expanding>
+                        </p>
+                    </li>
+                    <li>
+                        <p><b class="DRnumber">[127510]</b>
+                            <MadCap:expanding>
+                                <MadCap:expandingHead>FireLight Admin: Display all tag names – </MadCap:expandingHead>
+                                <MadCap:expandingBody>In Admin, added the ability to display all tag names on a page.</MadCap:expandingBody>
+                            </MadCap:expanding>
+                        </p>
+                    </li>
+                    <li><b class="DRnumber">[127594]</b>
+                        <MadCap:expanding>
+                            <MadCap:expandingHead>Firelight Admin: Copy Fields and Rules Update – </MadCap:expandingHead>
+                            <MadCap:expandingBody>In the Admin form designer Copy Fields or Rules feature, added the ability to search for forms by Name, Number, or Edition in the Copy From list.</MadCap:expandingBody>
+                        </MadCap:expanding>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p><b class="DRnumber">[128373]</b>
+                            <MadCap:expanding>
+                                <MadCap:expandingHead>FireLight Admin: Select page option in Copy Fields and Rules window – </MadCap:expandingHead>
+                                <MadCap:expandingBody>In the Admin form designer Copy Fields or Rules feature, added the ability to filter fields by name or page number in the Search field.</MadCap:expandingBody>
+                            </MadCap:expanding>
+                        </p>
+                    </li>
+                    <li>
+                        <p><b class="DRnumber">[129530]</b>
+                            <MadCap:expanding>
+                                <MadCap:expandingHead>FireLight Admin: Search Fields or Rule in Package – </MadCap:expandingHead>
+                                <MadCap:expandingBody>In the Admin Copy Fields or Rules feature on the Forms page, added the ability to select and search a specific form or all forms. Also added the ability to export rules to a spreadsheet in CSV format.</MadCap:expandingBody>
+                            </MadCap:expanding>
+                        </p>
+                    </li>
+                    <li>
+                        <p><b class="DRnumber">[129532]</b>
+                            <MadCap:expanding>
+                                <MadCap:expandingHead>FireLight Admin:  Forms Package Report – </MadCap:expandingHead>
+                                <MadCap:expandingBody>In Admin, added a new Package Forms Report that lists the information for each form in the selected packages.</MadCap:expandingBody>
+                            </MadCap:expanding>
+                        </p>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p><b class="DRnumber">[<a href="../../../DesignDocs/127726-FireLight-2.8-DeploymentWorkflow-v2.pdf" target="_blank" title="Design Document" alt="Design Document">127726</a>]</b> Additional Dev development environment that can deployed to staging as an enhancement to version control.  (Merged with 127642 FireLight Admin enhancement: Multiple versions / branching feature for product deployments) – Added a new UAT environment that is used for client testing before deployment to staging and production.</p>
+                    </li>
+                    <li>
+                        <p><b class="DRnumber">[127727]</b> Create an Admin dashboard –</p>
+                    </li>
+                    <li>
+                        <p><b class="DRnumber">[127728]</b> Technology update –</p>
+                    </li>
+                    <li>
+                        <p><b class="DRnumber">[127730]</b> Multi-Distributor, B/D SSO Solution –</p>
+                    </li>
+                </ul>
+                <p>&#160;</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p>&#160;</p>
+        <p>FireLight v2.7 Release Notes </p>
+        <h1 class="Heading1">FireLight v2.8 Release Notes</h1>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

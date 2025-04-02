@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+	<head>
+	</head>
+	<body>
+		<h1><a name="top"></a>Copy Fields to a Wizard from a Wizard</h1>
+		<p>
+			<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WzdLockUnlock.flsnp" />
+		</p>
+		<h2>Copy Fields to a Wizard from a Wizard</h2>
+		<p>In the Page Options section of the Wizard Designer, use the Copy Wizard Fields feature to copy fields to a wizard from a wizard. </p>
+		<ol>
+			<li>
+				<p>Go to the <b class="Bold">Designer/Wizard Designer</b> page. </p>
+			</li>
+			<li>
+				<p>In the lists, select a <b class="Bold">Wizard</b> and select a <b>Page</b>.</p>
+			</li>
+			<li>
+				<p>On the lower left of the wizard page in the <b class="Bold">Page Options</b> section of the page, click the <b class="Bold">Copy Wizard Fields</b> link to open the <b class="Bold">Wizard Copy Fields</b> dialog. </p>
+				<p>Search for a wizard and field name.</p>
+				<ol style="list-style-type: lower-alpha;">
+					<li>
+						<p>On the upper left of the dialog under <b class="Bold">Copy From</b>, type a search word or phrase for a wizard name. For example, type "Annuity" to search for wizards with the word "Annuity" in the wizard name.</p>
+					</li>
+					<li>
+						<p>In the list of wizard names, click the name of a wizard.</p>
+					</li>
+					<li>
+						<p>Below the title row of the grid, enter any or all of the following wizard data: Field Name, Page Name, Field Type, and Data Item ID to further filter the fields on the selected wizard.</p>
+					</li>
+				</ol>
+				<p MadCap:conditions="General.Online">
+					<img src="../../Resources/ImagesAdmin/CopyFieldsFromWizardDialog.png" alt="Wizard Copy Fields dialog" title="Wizard Copy Fields dialog" MadCap:conditions="General.Online" style="width: 5in;" />
+				</p>
+			</li>
+			<li>
+				<p>Select the checkboxes for the individual wizard fields to copy to the wizard. Or, select the checkbox in the title row of the <b class="Bold">Wizard Copy Fields</b> dialog to select all the fields displayed on the dialog to copy to the wizard. </p>
+				<ul style="list-style-type: circle;">
+					<li>
+						<p>When mapping from a source wizard to a destination wizard page, if data items from the source wizard are not located anywhere within the destination wizard, the checkbox column on the Wizard Copy Fields dialog adjacent to the "Field Name" is checked and the checkboxes in the "Already Exists" column is not checked.</p>
+					</li>
+					<li>
+						<p>If a data item on the source wizard already exists in the destination wizard, the checkbox column adjacent to the "Field Name" is unchecked and the checkboxes in the "Already Exists" column are checked. This is the case even when a copy from a source wizard to a destination wizard has been completed but the wizard has not yet been saved. The copy process sees that these fields already exist on the destination wizard. They can be copied again but the boxes have to be checked as they are not auto selected for mapping.</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>Select either the <b>Copy All Selected Fields To The Active Page</b> checkbox to copy just the selected fields from the source wizard to the active page or select <b>Copy All Selected Fields and Pages</b> checkbox to copy the selected fields and the pages the selected fields exist on to the destination wizard.</p>
+			</li>
+			<li>
+				<p>On the lower right, click the <b class="Bold">Copy Selected Fields</b> button. FireLight copies the selected wizard fields to the open wizard page in the Wizard Designer.</p>
+			</li>
+			<li>
+				<p>On the upper left of the wizard, click the <b class="Bold">Save Wizard</b> button to save the wizard.</p>
+			</li>
+		</ol>
+		<h2>System Rules for the Copy Wizard Fields Feature</h2>
+		<ol>
+			<li>
+				<p>All fields present at the root level of the source wizard can be copied over to the destination wizard. Parent controls such as Panel and Group that hold other controls in them are copied along with all their child controls. The child controls are not listed while copying. </p>
+			</li>
+			<li>
+				<p>The following form controls are not available for copying from a wizard to a wizard: Signature Box, Signature Initials, and BarCode.</p>
+			</li>
+			<li>
+				<p>When a "Copy Wizard Fields" process completes, the source wizard fields display on the destination wizard as follows: </p>
+				<ol style="list-style-type: lower-alpha;">
+					<li>
+						<p>The size of the fields copied to the destination wizard is the same as from the source wizard.</p>
+					</li>
+					<li>
+						<p>All copied source wizard fields land on the destination wizard page beginning at the top left of the wizard, moving left to right across the page, and then down to the next line until all fields selected for copying are listed on the current wizard page. </p>
+					</li>
+					<li>
+						<p>Where there is a one-to-one relationship between destination wizard data field properties and source wizard data field properties, the data field is to retain the same field properties on the destination wizard as they existed on the data item from the source wizard. </p>
+					</li>
+				</ol>
+			</li>
+			<li>
+				<p>When mapping from a source wizard to a destination wizard page, if data items from the source form are not located anywhere within the destination wizard, the checkbox column on the Wizard Copy Fields dialog adjacent to the "Field Name" are checked and the checkboxes in the "Already Exists" column are not checked.</p>
+			</li>
+		</ol>
+		<p><b class="Bold">See Also:</b> <MadCap:xref href="../Forms/Copy Fields to Form from Form or Wizard.htm" title="Copy Fields to a Form from a Form or Wizard" alt="Copy Fields to a Form from a Form or Wizard">Copy Fields to a Form from a Form or Wizard</MadCap:xref></p>
+		<p MadCap:conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+		</p>
+	</body>
+</html>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="General.Postpone">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Morningstar Integration</h1>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Morningstar Integration Feature</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>FireLight can integrate with Morningstar to pull the Annuity Intelligence (AI) report and the contents back into Firelight from Morningstar. This workflow includes the old and new contract fees and can help firms remain compliant with FINRA requirements to ensure surrendering a contract is a suitable decision.</p>
+                        <ul>
+                            <li>FireLight clients contract directly with Morningstar to obtain their user name and password. </li>
+                            <li>Common tags are given to the data points from Morningstar. This allows the Morningstar AI data to populate any forms by leveraging common tags. See the Design Document under "Additional Information" below for a list of standard common tags used with Morningstar.</li>
+                            <li>You may want to force the upload of the Annuity Intelligence Report before reaching 100%.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Admin Setup</p>
+                        <ol>
+                            <li>
+                                <p>Set up the Morningstar credentials in Organization Configuration on the Organization Settings page, <MadCap:xref href="../Organization Configuration/Organizations/Admin.htm" alt="Admin">Admin</MadCap:xref> tab. </p>
+                                <p>
+                                    <img src="../Resources/ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" /> The following inputs are case sensitive.</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>
+                                        <p>Click the <b>Click to Edit</b> link next to <b>Third-Party Service Config</b>.</p>
+                                    </li>
+                                    <li>Click the <b>Add New link</b> at the top of the dialog. </li>
+                                    <li>
+                                        <p>In <b>Config Name</b>, type <b>Username</b>. In <b>Config Value</b>, type the Username Morningstar provided for your organization. In <b>Service Type</b>, select <b>Morningstar</b> and click the <b>Add Config</b> button.</p>
+                                        <p MadCap:conditions="General.Online">
+                                            <img src="../Resources/ImagesAdmin/Features5.png" alt="Morningstar Third Party Service Configuration" title="Morningstar Third Party Service Configuration" MadCap:conditions="General.Online" />
+                                        </p>
+                                    </li>
+                                    <li>Click the <b>Save Organization</b> button on the Organization Configuration/Organization Settings page.</li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>In the Form Designer, add a custom action button control to the surrender contract comparison forms. You will need to configure when the button appears.</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>Open the form.</li>
+                                    <li> Add a Button control to the form.</li>
+                                    <li>In the Field Properties, type <strong>Launch Morningstar</strong> in <strong>Text</strong>, select <b>Custom Action</b> in <b>Action Type</b>, and ensure <strong>Morningstar</strong> is the <b>Action Parameter</b>.</li>
+                                </ol>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/Features4.png" alt="Morningstar Custom Action Button" title="Morningstar Custom Action Button" MadCap:conditions="General.Online" />
+                                </p>
+                            </li>
+                            <li>In Product Configuration on the  <MadCap:xref href="../Product Configuration/Packages.htm" alt="Packages">Packages</MadCap:xref> page, add the forms with the new button and data mapping to the applicable product packages.</li>
+                        </ol>
+                        <p MadCap:conditions="General.PDF">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">User Experience</p>
+                        <ol>
+                            <li>Begin an application.</li>
+                            <li>On the surrender contract comparison form, click the <b>Launch Morningstar</b> button.</li>
+                            <li>
+                                <p>In the <strong>Morningstar</strong> dialog, fill in the applicable information and click <strong>Generate XML</strong>.</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/Features6.png" alt="Morningstar dialog" title="Morningstar dialog" MadCap:conditions="General.Online" />
+                                </p>
+                            </li>
+                            <li>Morningstar generates the report and sends the details back to FireLight by populating the common tag mapped fields on the surrender contract comparison form.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help – Design Document: <MadCap:conditionalText MadCap:conditions="General.PDF"> CMR 125238</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/DesignDocs/125238-MorningstarDesignApproach.pdf" target="_blank" title="CMR 125238" alt="CMR 125238">CMR 125238</a></MadCap:conditionalText> </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

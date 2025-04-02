@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Testing Process<a name="top"></a></h1>
+        <h2>Guidelines</h2>
+        <ul>
+            <li>
+                <p>To avoid accidentally overwriting work in Staging, it is imperative that you always deploy from left (UAT) to right (Staging and then Production).</p>
+                <p>
+                    <img src="../../Resources/ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" /> This ensures that the product changes you test and approve are not accidentally overwritten when a product is deployed from UAT to Staging.</p>
+            </li>
+            <li>Deploy and test all products and development changes in UAT.</li>
+            <li>Promote from UAT to Staging.</li>
+            <li>Promote from Staging to Production.</li>
+        </ul>
+        <p class="note"><b>NOTE:</b> When logged in to the UAT or Staging environment in FireLight<sup MadCap:conditions="General.Online">®</sup> Admin, the environment name appears at the top of each page to the left of the navigation bar.</p>
+        <h2>Distributor Testing Options</h2>
+        <h3>Test Carrier Products in UAT</h3>
+        <p>To test the carrier products, you can clear the Auto Deploy checkbox in UAT.  Doing this stops carrier changes from being auto deployed (promoted) from UAT to Staging and allows the distributor to test carrier changes in UAT.   When the distributor has completed their testing in UAT, the distributor must manually promote to Staging.  If you want to force that change to Production at the same time, select the Force Deploy checkbox during the deployment.  Doing this allows the product changes to move to Staging and to Production in one step.</p>
+        <h3>No Testing for Carrier Products</h3>
+        <p>Select the Auto Deploy checkbox in UAT and Staging.  If enabled in both UAT and Staging, a carrier deployment to that distributor’s UAT deploys to the distributor’s UAT, Staging, and Production environments with one step and requires no manual promotion.</p>
+        <h2>Carrier Testing Options</h2>
+        <p>There are three configurations for carriers. To support the various configuration options, we have deployment scopes that are used to support configuration 1 (carrier-to-carrier) deployments and separate scopes to support deployment to isolated distributor environments, configuration 2 (carrier-to-distributor).  If a carrier falls under configuration  2, they  have to deploy once using a carrier-to-distributor scope and deploy a second time using a carrier-to-carrier scope.</p>
+        <h3>Support Carrier Instance of FireLight Only</h3>
+        <p>If your organization does not promote products to distributor instances of <MadCap:variable name="General.ProductName" />, follow the options in this section.</p>
+        <ul>
+            <li><b class="Bold">Option 1: Test your products in UAT Only.</b> When you are done testing your products in UAT, you can deploy the changes to your Staging and Production environments by using a carrier-to-carrier scope and selecting the Force Deploy checkbox. This promotes your changes from your UAT environment to both your Staging and your Production environments in one step.</li>
+            <li><b class="Bold">Option 2: Test your products in UAT and Staging.</b> You have the option to test your products first in UAT and then in Staging. We do ask that you always start in UAT so that your products do not accidentally get overwritten.  Use a carrier-to-carrier scope and clear the Force Deploy checkbox.</li>
+        </ul>
+        <h3>Support Distributor Instance of <MadCap:variable name="General.ProductName" /> Only</h3>
+        <p>If your organization promotes products to distributor instances of <MadCap:variable name="General.ProductName" /> only, follow the options  in this section.</p>
+        <ul>
+            <li><b class="Bold">Option 1: Test carrier products in UAT.</b>  Test all of your changes within your UAT environment.  When testing is complete, you promote your changes to the distributor’s instance of <MadCap:variable name="General.ProductName" /> using a carrier-to-distributor scope.  This promotes all of your changes to either the distributor’s UAT environment, the distributor's UAT and Staging environments, or the distributor’s UAT, Staging and Production environments.  The environments updated depend on how the distributor sets the Auto Deploy checkbox within the environment.  If the Auto Deploy checkbox is selected, the deployment updates the current environment and automatically updates the next environment (e.g., Staging, Production).</li>
+            <li><b class="Bold">Option 2: Test carrier products in the distributor environment.</b>  To test your changes in a distributor environment requires you to obtain a login to the distributor’s instance of <MadCap:variable name="General.ProductName" />.</li>
+        </ul>
+        <h3>Support Carrier Instance and Distributor Instances of FireLight</h3>
+        <p>If your organization promotes products to both your instance of <MadCap:variable name="General.ProductName" /> and distributor instances of <MadCap:variable name="General.ProductName" />, follow the options  in this section.</p>
+        <ul>
+            <li>
+                <p><b class="Bold">Option 1: Test your products in UAT.</b>  Test all of your changes within your UAT environment.  When testing is complete, you promote your changes to the distributor’s instance of <MadCap:variable name="General.ProductName" /> using a carrier-to-distributor scope.  This promotes all of your changes to the distributor’s UAT environment, the distributor's UAT and Staging environments, or the distributor’s UAT, Staging and Production environments.  The environments updated dependent on the distributor sets the Auto Deploy checkbox within the environment.  If the Auto Deploy checkbox is selected, the deployment updates the current environment and automatically updates the next environment (e.g., Staging, Production).</p>
+                <p>You also need to use a carrier-to-carrier deployment to promote your changes to your instance of Staging, or Staging and Production.  Check the “Force Deploy” option to promote the changes to both Staging and Production at the same time.</p>
+            </li>
+        </ul>
+        <ul>
+            <li><b class="Bold">Option 2: Test your products in the distributor environment.</b>  To test your changes in a distributor environment requires you to obtain a login to the distributor’s instance of <MadCap:variable name="General.ProductName" />.  Follow option 1, then test using the distributor login within their environment.</li>
+            <li>
+                <p><b class="Bold">Option 3: Test your products for distribution in UAT, and test your products for your instance in UAT and Staging.</b>  Promote your changes to the distributor’s instance of <MadCap:variable name="General.ProductName" /> using a carrier-to-distributor scope.  This promotes all of your changes to the distributor’s UAT environment, the distributor's UAT and Staging environments, or the distributor’s UAT, Staging, and Production environments.  The environments updated dependent on the distributor sets the Auto Deploy checkbox within the environment.  If the Auto Deploy checkbox is selected, the deployment updates the current environment and automatically updates the next environment (e.g., Staging, Production).</p>
+                <p>Promote the changes to your Staging environment by using a carrier-to-carrier scope and clearing the Force Deploy checkbox.</p>
+            </li>
+        </ul>
+        <h2>Hot Fixes</h2>
+        <p>Hot fix testing is permitted in Staging.  Because all normal testing is occurring in UAT, Staging is a clean environment that mirrors production. Please note that any product changes that are done directly in Staging need to be redone in UAT.</p>
+        <p>If the distributor does not want to test the hot fix changes, they should set Auto Deploy in Staging.  When a carrier deploys a new product into the distributor's Staging environment, it deploys to Staging and also deploy to Production.   This scenario should occur only for hot fix testing.</p>
+        <p class="note"><b>NOTE:</b> Any hot fix made to Staging that is deployed to Production requires the change to be done manually to the UAT environment. This ensures that when UAT is deployed to Staging, any hot fix in Staging and Production is not overwritten.</p>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

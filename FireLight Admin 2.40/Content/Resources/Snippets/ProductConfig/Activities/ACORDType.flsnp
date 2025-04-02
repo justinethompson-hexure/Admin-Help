@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>In <b class="Bold">ACORD Type</b>, select the ACORD type for the Activity in the list. This is the ACORD TypeCode used in ACORD Transactions coming into FireLight. Use it to select an ACORD Type for a new Activity. Some ACORD Types have a TransSubType typecode appended. </p>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content=" Setup information for implementing the database and DTCC file changes required to support DTCC money settlement in FireLight." />
+    </head>
+    <body>
+        <h1><a name="Top"></a>DTCC Money Settlement Support</h1>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="General.Online">See <a href="../Resources/PDFGuides/Money Settlement Carrier Mapping_V2.pdf" target="_blank" title="Money Settlement Carrier Mapping" alt="Money Settlement Carrier Mapping" MadCap:conditions="General.Online">Money Settlement Carrier Mapping</a> for additional information.</MadCap:conditionalText>
+        </p>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">DTCC Money Settlement Support Feature</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>The DTCC Money Settlement feature implements the database and DTCC file changes required to support DTCC money settlement, including adding indicators in the Admin Selling Agreement to denote who is a DTCC settling firm and adding checks to ensure the submitting firm and the settling carrier both are a DTCC NSCC Settling firm. This feature can be used for initial applications and for subsequent premium payments.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">DTCC NSCC / FireLight Setup</p>
+                        <ol>
+                            <li>Carriers and submitting firms must first be approved as Full Settling Members by the DTCC.</li>
+                            <li>
+                                <p>Contact your FireLight<sup>®</sup> Strategic Account Manager to submit a Work Order to ensure the necessary file changes are made to your outbound feeds. </p>
+                                <p><MadCap:variable name="General.ProductName" /> will need to update the Premium record mapping to correctly map the settling amount and  will need to change the way the submitting record is sent.</p>
+                                <p>Clients need to work with the integration team to change their DTCC file to support the DTCC file changes.</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p>Organization Configuration/<MadCap:xref href="../Organization Configuration/Organization Settings.htm" alt="Organization Settings">Organization Settings</MadCap:xref> page: enter/verify your <b>DTCC Member ID</b> is correct and select the <b>Full Settling DTCC Member</b> checkbox. This indicates you are a full settling member firm.  FireLight validates the DTCC information for the carrier and for the distributor before sending money settlement detail to the DTCC.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Change Request: CMR 134970</p>
+                        <p>Admin Help – Related Design Document: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 136175 (Subsequent Payment) </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/DesignDocs/136175-DesignApproachSubpay_v3.pdf" target="_blank" title="CMR 136175" alt="CMR 136175">CMR 136175</a> (Subsequent Payment)</MadCap:conditionalText>, Associated Document: <a href="../Resources/DesignDocs/Money Settlement Process and FL changes.pdf" target="_blank" title="Money Settlement Process and FireLight Changes" alt="Money Settlement Process and FireLight Changes" MadCap:conditions="General.Online">Money Settlement Process and FL changes.pdf</a> <MadCap:conditionalText MadCap:conditions="General.PDF">Money Settlement Process and FL Changes.pdf in Admin Help</MadCap:conditionalText></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a name="top"></a><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

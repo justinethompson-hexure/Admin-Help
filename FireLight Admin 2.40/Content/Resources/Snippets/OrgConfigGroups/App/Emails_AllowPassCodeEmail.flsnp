@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Allow PassCode Email</b> checkbox to automatically send a separate email containing the Passcode for any request to the recipient. The passcode email option will also be available in the Outstanding Requests dialog, as well as in the pre-submission reviewer requests page.</body>
+</html>

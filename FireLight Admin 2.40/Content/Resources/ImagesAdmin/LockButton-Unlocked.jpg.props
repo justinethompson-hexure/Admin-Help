@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileProperties>
+    <ImageOverlay Profile="D:\Documents\My Profiles\FireLightHighQualityPRINTProfile.capro" ProfileHash="6981a94e61f64a7b2b46f4faf7db1616a78b9a05" ScreenRectangle="3074,349,23,19">
+        <OriginalImage ImageBlurFactor="2" ImageShadeFactor="5" DPI="96" ExportFormat="jpg" JPEGQuality="100" Folder="D:\Documents\My Projects\FireLightAdmin-TopNavigation\Content\Resources\Images" FileName="" BorderWidth="2" BorderColor="#000000" PaddingLeft="0" PaddingRight="0" PaddingTop="0" PaddingBottom="0" Border="none" medium_print_EnableFormat="true" Type="Image" ShapeTimeSpan="10000" AutoAdjust="true" EnableGrayScaleFormat="false" medium_print_ExportFormat="bmp" medium_print_DPI="96" Title="Lock Button - Unlocked" Alt="Lock Button - Unlocked" ComputedWidth="23" ComputedHeight="19" Format="tiff">SUkqAC4CAACAP+BP8AQWDQeEQmFQuGQ2HQ+GwOCRCKRWLReHxKMRuOR2IwOPSGRRuNSOMPSUABQysANmXAADTEAFKaAAdTeOyWTQ9jz0AIhFI0AHg8nkABwNhoAPumABcLhdABgL5dgBUqlUAAA1uITqdwl52EAFYrlsAINDokAIxEogAM5mMkAAK6ABBIZFAB8Ph8gBxN5rgA+YOuyCvwpbYkANJsN4ANZqNQAHc5m0ACvMQgplMqAAvmc3ABJo23LtcrbCwKHv7WAB768AYaHStQgB+AQGgBbLFWABVqhSAAHcOELBYLEAOV2vUAK9VKYALxcrTUxOGnI3l4APl5q6tAHrQ1++MAFAqFkAMxkMUANVrvIAI9LNEABf7ADjchfMVm+ljmEABjGIYDqoeOIwAY+I4nu2Lwoq6wAoKdp5oKaZ9lwAAgiEIq/HEcSpGBAgBxGAAtxNAqHDmLQFrWNEGNihJ/gEgp8wiAAEH6hp3QoxYFFzDMNsOryFjmLEWEYM58IKfyEmSa4CgANJJH2ABnkzCJ/n9Bx3HogppAbDENQ4r8hoUOQqNyRoxn1BqEnufEZkgVMZjyL5+IYdp4oKagLupMUhNkhg4icCIAEaMUqSZB0YNifYBrmA0cwggx2HbR5rBAVsMiHMadzKhIzCMDIAEWKsqK0kxwnQgp4h9TQeh8H9ANUhxel8XwAFmWBXsOCAIgkwQ+j6AACWLWdFsPZKQ0/ZVmowgIAAEAD+AAQAAQAAAAAAAAAAAQQAAQAAABcAAAABAQQAAQAAABMAAAACAQMABAAAAPQCAAADAQMAAQAAAAUAAAAGAQMAAQAAAAIAAAARAQQAAQAAAAgAAAAVAQMAAQAAAAQAAAAWAQQAAQAAABMAAAAXAQQAAQAAACUCAAAaAQUAAQAAAPwCAAAbAQUAAQAAAAQDAAAcAQMAAQAAAAEAAAAoAQMAAQAAAAIAAAA9AQMAAQAAAAIAAABSAQMAAQAAAAIAAAAAAAAACAAIAAgACAAAdwEA6AMAAAB3AQDoAwAA</OriginalImage>
+        <Shapes />
+        <Variables />
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

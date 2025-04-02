@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+		<h1><a name="top"></a>Commissions<a name="top">
+		</a></h1>
+        <p>On the navigation bar, click <b>Product Config</b> and click <b>Commissions</b> to go to the Commission Netting page.</p>
+        <p>Use the Commission Netting page to import commission netting files (DPfAs) into FireLight<sup MadCap:conditions="General.Online">®</sup>. DPfAs are in .xml format.</p>
+        <h2>Add a Commission Netting File</h2>
+        <MadCap:snippetBlock src="../Resources/Snippets/Features/AddEditDistributionAgmnt.flsnp" />
+        <h2>Delete a Commission Netting File</h2>
+        <p>In the upper grid, locate the commission netting DBfA file to delete and click the red <b>X</b> on the far right of the row.</p>
+        <p MadCap:conditions="General.Online">
+            <img src="../Resources/ImagesAdmin/AddDistributionAgreement.jpg" alt="Delete a Distribution Agreement" title="Delete a Distribution Agreement" MadCap:conditions="General.Online" />
+        </p>
+        <h2>Upload DPfA Files</h2>
+        <ol>
+            <li>
+                <p>On the navigation bar, click <b>Product Config</b> and click <b>Commissions</b> to view the Commission Netting page.</p>
+            </li>
+            <li>Click the <b>Upload New 1204</b> button.</li>
+            <li>Use Choose File to browse for one or several DPfA files.</li>
+            <p>
+                <img src="../Resources/ImagesAdmin/ComNetUploadNewFile.png" />
+            </p>
+            <li>To begin the upload process, click the <b>Upload</b> button.</li>
+            <li>By default, the Start Date is set to the current date. To stage the files before they go live, enter the needed Start Date manually.</li>
+            <p>At the end of the upload, the result is displayed.</p>
+            <p>
+                <img src="../Resources/ImagesAdmin/ComNetUploadNewFile.png" />
+            </p>
+        </ol>
+        <h2>Replace an Existing DPfA File</h2>
+        <p>1.	On the navigation bar, click <b>Product Config</b> and click <b>Commissions</b> to view the Commission Netting page.</p>
+        <p>2.	Click the <b>Upload New 1204</b> button.</p>
+        <p>3.	Use Choose File to browse for one or several DPfA files. To begin the upload process, click the <b>Upload</b> button.</p>
+        <p>4.	When a DPfA file provides commission information for an existing carrier/distributor combination, the user will be prompted to confirm that they want to overwrite the existing file.</p>
+        <p>
+            <img src="../Resources/ImagesAdmin/ComNetConfirmOverwrite.png" />
+        </p>
+        <p>5.	Click the <b>Confirm</b> button to overwrite the existing file.</p>
+        <p>6.	After confirmation, the result is displayed.</p>
+        <p>
+            <img src="../Resources/ImagesAdmin/ComNetPostConfirmResult.png" />
+        </p>
+        <h2>Delete DPfA File</h2>
+        <ol>
+            <li>
+                <p>On the navigation bar, click <b>Product Config</b> and click <b>Commissions</b> to view the Commission Netting page.</p>
+            </li>
+            <li>
+                <p>Click the "x" icon to delete the appropriate DPfA file.</p>
+            </li>
+            <li>
+                <p>On the Delete Confirmation dialog box, click <b>OK</b>.</p>
+            </li>
+        </ol>
+        <p>
+            <img src="../Resources/ImagesAdmin/ComNewDeleteConfirm.png" />
+        </p>
+        <p>Be aware that the Upload New 1204 button and the ability to delete a previously uploaded DPfA will be disabled for distributors.</p>
+        <p>
+            <img src="../Resources/ImagesAdmin/ComNetITBrokers.png" />
+        </p>
+        <h2>Deploying DPfA Files</h2>
+        <p>Once the DPfA is uploaded, tested, and ready for use in the Staging and/or Production environments, it can be deployed to those environments. In the Admin Deployments view, a new Synchronization Scope has been added for Commission Netting – Commission Netting Configuration. Select this scope and click Load Deployment Information to view and deploy DPfA files.</p>
+        <p>
+            <img src="../Resources/ImagesAdmin/ComNetLoadDeployment.png" />
+        </p>
+        <h2>Calculating the Net Commission</h2>
+        <p>The first step is finding the XTbML by table identity (obtained via data item Commission_XTBML_Identity) or by parameters:</p>
+        <ul>
+            <li>
+                <p>CarrierCode</p>
+            </li>
+            <li>
+                <p>CarrierCommCode</p>
+            </li>
+            <li>
+                <p>ProductCode</p>
+            </li>
+            <li>
+                <p>Sub Distributor (obtained via data item FLI_SUB_FIRM_ID)</p>
+            </li>
+            <li>
+                <p>Jurisdiction (obtained via data item FLI_ISSUED_STATE_CODE)</p>
+            </li>
+            <li>
+                <p>CommOption/CommCode</p>
+            </li>
+            <li>
+                <p>One or several CommEvents</p>
+            </li>
+            <li>
+                <p>Commissions Netting is allowed (this check is disabled by default)</p>
+            </li>
+        </ul>
+        <p>The next step is traversing the table to find the rate value.</p>
+        <p>Depending on the found XTbML, three use cases are possible:</p>
+        <ol>
+            <li>
+                <p>No banding uses the table that does not have any axis but provides the value itself.</p>
+            </li>
+            <li>
+                <p>Keys banding is used when commissions banding is done with non-ordered items. These key values are obtained via the data item Commission_Key_Code.</p>
+            </li>
+            <li>
+                <p>Axis banding is used when banding is done around typed values. The available types are Dates, Duration, Age, and Currency. The Axis values are used to look up the banding information. The values can be obtained via special data items Commission_Date, Commission_Duration, Commission_Age, and Commission_Amount or a rule if it is calculated.</p>
+            </li>
+        </ol>
+		<a href="#top" alt="Return to Top">Return to Top</a>
+        <MadCap:pageBreak />
+    </body>
+</html>

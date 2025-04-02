@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <strong>Disable Continue at 100%</strong> checkbox to  disable locking an activity when it reaches 100% so it cannot proceed to e-Signature or the PreSubmit review queue. Disable Continue at 100% option and Enable HTTP Redirect on Submit option cannot both be selected at the same time.</body>
+</html>

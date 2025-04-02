@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>We have enhanced FireLight to leverage the Magnum Pure Engine Cloud-Based APIs within a FireLight application to gather underwriting data for life applications.  The current integrated Magnum version is an on-premise solution.</p>
+        <p>The Magnum Pure Engine Cloud-Based APIs is embedded in FireLight and shown in a dialog when opened by clicking on a Custom Action button added to a wizard page in the application.</p>
+        <p>When Magnum is opened, data is passed in the process from the FireLight application to set up the correct interview questions in Magnum.</p>
+        <p>When Magnum is closed, the data is saved and passed to FireLight, which can be mapped to the appropriate PDF form fields, so the data is submitted with the application.</p>
+        <p>FireLight will query the Magnum API for a status. Once the data is complete in the Magnum interview the status is set to complete.  FireLight will leverage the status to recognize when the application can be set to 100% complete when data entry is finished. After the Magnum interview is complete, it can be reopened and updated prior to the application submittal.</p>
+        <p>FireLight will also retrieve and store the case-level underwriting decision when the interview is complete.  Additionally, the full underwriting decision tree is stored in JSON format and made available to the provider for added customizations.</p>
+        <p>Multiple insured interviews are supported in the cloud-based version of Magnum.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Test on-premise AMA version of Magnum.</p>
+            </li>
+            <li>
+                <p>Admin, Custom Action Properties</p>
+            </li>
+            <li>
+                <p>Admin, Organization Settings, 3rd Party Service Config</p>
+            </li>
+            <li>
+                <p>App: Dialog appears when the Magnum Custom Action button is clicked with the Magnum interview underwriting questions.</p>
+            </li>
+            <li>
+                <p>App: Magnum Case ID is created the first time the Magnum Custom Action button is clicked in an application.</p>
+            </li>
+            <li>
+                <p>App: The Magnum Case ID is never replaced on an application where the Case ID has already been generated.</p>
+            </li>
+            <li>
+                <p>App: The Case ID is attached to the application and passed when the application is submitted to the backend admin system at the carrier.</p>
+            </li>
+            <li>
+                <p>App: FireLight application will not be 100% complete until the Magnum case status is complete.</p>
+            </li>
+            <li>
+                <p>App: Magnum dialog can be opened and data updated any time after it is completed prior to the FireLight application submittal.</p>
+            </li>
+            <li>
+                <p>App: Data entered in Magnum is saved when a user clicks the dialog Close button or clicks off the dialog and it closes.</p>
+            </li>
+            <li>
+                <p>App: Outbound Mapping List data is passed to Magnum from FireLight when Magnum is opened.</p>
+            </li>
+            <li>
+                <p>App: Updated Outbound Mapping List data is passed to Magnum from FireLight when Magnum is opened on an existing application with an assigned Case ID.</p>
+            </li>
+            <li>
+                <p>App: Inbound Mapping List data is passed to FireLight from Magnum when the Magnum dialog is closed.</p>
+            </li>
+            <li>
+                <p>App: Inbound Mapping List Magnum data is mapped to applicable FireLight form field data items.</p>
+            </li>
+            <li>
+                <p>App: Underwriting case decision is retrieved from Magnum and added to a data item in FireLight when the interview is finished.</p>
+            </li>
+            <li>
+                <p>App: Multiple interviews for multiple insureds can be launched from a single application. Cloud-based only.</p>
+            </li>
+            <li>
+                <p>App: All Magnum data is cleared in a copied activity.</p>
+            </li>
+            <li>
+                <p>App: Entries appear in the audit each time the Web service is called to open and close the dialog.</p>
+            </li>
+            <li>
+                <p>App: A single record appears in the service request table containing the case ID and the JSON returned from Magnum. A single record appears in the service request table containing the full case decision JSON returned from the Magnum decision service.</p>
+            </li>
+            <li>
+                <p>App: An error message appears if the Magnum dialog attempts to open and the Web service is unavailable.</p>
+            </li>
+            <li>
+                <p>App: Magnum CSS is branded to match FireLight.</p>
+            </li>
+        </ul>
+    </body>
+</html>

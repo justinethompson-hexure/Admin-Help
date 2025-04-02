@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <h4>Import Drop-Down Values from Text File</h4>
+        <p>Import list name values from a tab separated text file by following the steps below.</p>
+        <ol>
+            <li>
+                <p>On the List Name Values dialog, click <b>Import</b>.</p>
+                <p>
+                    <img src="../../ImagesAdmin/ListNameValuesImportButton.png" style="width: 4in;" /> </p>
+            </li>
+            <li>
+                <p>On the Confirm dialog that appears, click <b>OK</b> to import the values (or click <b>Cancel</b> to stop the procedure).</p>
+                <p>
+                    <img src="../../ImagesAdmin/ConfirmChangeListValues.png" style="width: 3in;" />
+                </p>
+            </li>
+            <li>
+                <p>In the browse dialog that appears, navigate to and select the .txt file to import, and then click <b>Open</b>.</p>
+                <p>The values from the .txt file populate the List Name Values dialog.</p>
+            </li>
+        </ol>
+        <h4>Import Drop-Down List Values from a Custom List</h4>
+        <p>You can now use stored custom lists to populate list name values.</p>
+        <p>1.	From the dropdown at the bottom left select a stored custom list.</p>
+        <p>
+            <img src="../../ImagesAdmin/SaveCustomListWzrdDesigner2.jpg" style="width: 4in;" /> </p>
+        <p>A confirm dialog appears.</p>
+        <p>
+            <img src="../../ImagesAdmin/LoavValuesViewOnlyWzrdDesigner.jpg" style="width: 3in;" />
+        </p>
+        <p>To load custom list values without changes (view-only mode):</p>
+        <p>a.	Click <b>OK</b> on the Confirm dialog to have the values from the custom list populate the dialog. The values from the custom list populate the dialog</p>
+        <p>To edit custom list values before loading them:</p>
+        <ol style="list-style-type: lower-alpha;">
+            <li>
+                <p>Click <b>Edit</b> to the right of the Custom List dropdown.</p>
+                <p> <img src="../../ImagesAdmin/ListNameValuesEditWD.png" style="width: 4in;" /></p>
+            </li>
+            <li>
+                <p>Edit the values and then click <b>OK</b>. The edited values populate the dialog.</p>
+            </li>
+        </ol>
+    </body>
+</html>

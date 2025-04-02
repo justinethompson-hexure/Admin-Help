@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="124" MadCap:lastWidth="988">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p><b>Font Size </b> – type the font size for the control if different from the default.</p>
+        <p><b>Font Family </b> – select the font family for the control if different from the default.</p>
+        <p><b>Font Color </b> – select the font color for the control if different from the default.</p>
+    </body>
+</html>

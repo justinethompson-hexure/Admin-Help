@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Client Fill and Sign setup and user instructions that allows the agent to fill in required agent information and then send a request for the client to fill in missing information and sign the application in one step." />
+    </head>
+    <body>
+        <h1><a name="Top"></a>Client Fill and Sign</h1>
+        <p class="note"><a name="top"></a><b class="Bold">Spotlight Videos:</b> See <a href="https://vimeo.com/330049864/a6d508f2a1" target="_blank" title="FireLight Client Fill and Sign" alt="FireLight Client Fill and Sign">Client Fill and Sign</a> and <a href="https://vimeo.com/644133423/1c35cad98a" target="_blank" title="Client Fill and Sign - Wizards - Post Issue" alt="Client Fill and Sign - Wizards - Post Issue">Client Fill and Sign - Wizards - Post Issue</a> for Spotlight feature videos about Client Fill and Sign. </p>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Client Fill &amp; Sign Feature</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>Client Fill &amp; Sign feature allows the agent to fill in required agent information and then send a request for the client to fill in missing information and sign the application in one step.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Admin Setup</p>
+                        <ul>
+                            <li>On the <b>Organization Configuration/Organization Settings</b> page <b class="Bold">Activity</b> tab, select the <b>Allow Client Fill &amp; Sign</b> checkbox.</li>
+                            <li>
+                                <p>On the <b>Designer/Form Designer</b> page, select the <b>Office Use Only</b> checkbox in the  Properties for all required agent entry fields. Add a Required rule to each of the required agent entry fields. </p>
+                                <p><b class="Bold">NOTE:</b> In the Form Designer, <b class="Bold">Form Properties</b> dialog in the <b class="Bold">Protection</b> list, select <b class="Bold">Agent</b> to require the agent to fill in all required fields on the form before the Request Client Fill &amp; Sign option will appear in the Other Actions menu. This feature is not available in wizards.</p>
+                            </li>
+                            <li>On the <b>Designer/Wizard Designer</b> page, select the <b>Office Use Only</b> checkbox in the Properties for all required agent entry fields. Add a Required rule to each of the required agent entry fields.</li>
+                        </ul>
+                        <p><b class="Bold">IMPORTANT:</b>
+                        </p>
+                        <p>The Request Client to Fill &amp; Sign option is not available on the Other Actions menu in FireLight if any of the following options are enabled in Admin:</p>
+                        <ul>
+                            <li>
+                                <p>"Allow Pre-Signature Review" option on the Product Configuration/<MadCap:xref href="../Product Configuration/Activities.htm" title="Activities" alt="Activities">Activities</MadCap:xref> tab </p>
+                            </li>
+                            <li>
+                                <p>"Disable View Requests" option on the Organization Configuration/Groups/<MadCap:xref href="../Organization Configuration/Groups/App.htm" title="App" alt="App">App</MadCap:xref> tab, Other Actions section</p>
+                            </li>
+                        </ul>
+                        <p><b>NOTE</b>: The EXTERNAL role code governs the behavior of the signing ceremony for the signature request. The DEFAULT role code will be in effect for agents coming in a) without a role code, or b) with an invalid role code.</p>
+                        <h4>Data Entry Review</h4>
+                        <p>Data Entry Review allows for an incomplete PDF package to be sent, along with metadata, prior to Client Fill and Sign, meaning the activity and documents will not be at 100% before going through the established Pre-Signature/Pre-Submit Review Queue. Any clients who choose to implement data entry review may require provider setup and should consult their project manager.</p>
+                        <p>A new custom action type will be created in Admin to support the call to the new pre-signature review process via API. The new custom action type, "Send to Data Entry Review," is created to start the new data entry pre-signature review process. Adding this custom action type requires the organization to have an API set up to perform the call and is designed only to be used in instances where the organization requires data entry review prior to the Client Fill and Sign process.</p>
+                        <p>The existing review queue API “ReviewQueue.UpdateReviewQueueState API” will be used to approve/reject the application for an external data entry review request. This includes all appropriate auditing, and this API is extended to handle data entry review applications:</p>
+                        <ul>
+                            <li>
+                                <p> Recognize that the application is a “Data Entry Review” application</p>
+                            </li>
+                            <li>
+                                <p>When an “Approve” response is received from the API, the application will be unlocked, the display status will be set as “In Data Entry,” and the activity will be removed from Pre-Submit review queue</p>
+                            </li>
+                            <li>
+                                <p>When a “Correction” response is received from the API, the application will be unlocked, and the activity will be removed from the Pre-Submit review queue</p>
+                            </li>
+                            <li>
+                                <p>The FLI_EXTERNAL_REVIEW_STATUS will be updated to ApplicationPendingData</p>
+                            </li>
+                        </ul>
+                        <h5>Submit Application to Data Entry Review on Custom Action Call</h5>
+                        <ul>
+                            <li>
+                                <p>When the custom action Data Entry Review is clicked, the data entry review process begins.</p>
+                            </li>
+                            <li>
+                                <p>The application PDF, documents, and corresponding metadata are available for the provider to send.</p>
+                            </li>
+                            <li>
+                                <p>Application is shown in READ ONLY mode.</p>
+                            </li>
+                            <li>
+                                <p>The application enters the Pre-Submit Review Queue.</p>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <p>During Data Entry Review, the following are not available from the Other Actions menu:</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>
+                                        <p>Request Client to Fill App</p>
+                                    </li>
+                                    <li>
+                                        <p>Request Client to Fill &amp; Sign</p>
+                                    </li>
+                                    <li>
+                                        <p>Unlock</p>
+                                    </li>
+                                    <li>
+                                        <p>Share</p>
+                                    </li>
+                                    <li>
+                                        <p>Transfer</p>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ul>
+                        <p>The Delete Button on the All Activities page is hidden while the application is in Data Entry Review.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">User Experience</p>
+                        <p><b>Agent</b>
+                        </p>
+                        <ol>
+                            <li>Click the <b>Data Entry</b> tab percentage complete indicator and view the validation list to find form or wizard pages with required agent entry fields indicated by a green background and "(OFFICE USE ONLY) at the end of the form or wizard name. </li>
+                            <li>Fill in the application with known information and fill in all required agent entry fields, which have a green background.</li>
+                            <li>Click <b>Other Actions</b> menu and click <b>Request Client to Fill &amp; Sign</b> (option becomes available after all required agent fields are filled) to initiate the client fill and sign request. </li>
+                            <li>On the <b class="Bold">Request Clients to Complete Filling and Signing Application</b> dialog, fill in the client information for the signers and click the <b>Send Email</b> button. Only the primary signer receives an email.</li>
+                            <li>On the <b class="Bold">Request Sent</b> dialog, click <b>OK</b>.</li>
+                            <li>A <b class="Bold">Pending Requests</b> dialog displays the request type and recipient information on the left and links to send a reminder to the client, send passcode to the client, and to cancel the request. Click one of the links to initiate the associated action or click <b class="Bold">Close</b> to close the dialog.</li>
+                        </ol>
+                        <p><b>Client</b>
+                        </p>
+                        <ol>
+                            <li>The client (primary signer) receives the standard Client Fill Request email, clicks the URL, logs in, and fills in the missing information on the application.</li>
+                            <li>Clicks <b>CONTINUE</b> on the <b class="Bold">Data Entry has met the requirements</b> dialog.</li>
+                            <li>Clicks <b>OK</b> on the Lock Application dialog.</li>
+                            <li> Clicks the <b>Sign Application</b> button, click <b class="Bold">OK</b> (forms) or <b class="Bold">Lock Activity</b> (wizards) on the <b class="Bold">Lock Activity</b> dialog, and proceeds with the standard signature capture process.</li>
+                            <li>Clicks <b>OK</b> on the Congratulations dialog to log off <MadCap:variable name="General.ProductName" />.</li>
+                            <li>
+                                <p>When the primary signer completes the information and signs the application, FireLight sends client sign requests for the remaining signers. Secondary signers cannot add information to the forms.</p>
+                            </li>
+                        </ol>
+                        <p><b class="TableBlue">Undeliverable Emails</b>
+                        </p>
+                        <MadCap:snippetBlock src="../Resources/Snippets/Email/UndeliverableEmailClientFillSign.flsnp" />
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help  – Design Document: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 116245 </MadCap:conditionalText><a href="../Resources/DesignDocs/116245-DesignApproach-Client-Fill-and-Sign.pdf" target="_blank" title="CMR 116245" alt="CMR 116245" MadCap:conditions="General.Online">CMR 116245</a></p>
+                        <p>Spotlight Feature Video: <a href="https://vimeo.com/330049864/a6d508f2a1" target="_blank" title="FireLight Client Fill and Sign" alt="FireLight Client Fill and Sign">Client Fill and Sign</a></p>
+                        <p class="hangingindent">Admin Guide and Help: Designer/Form Designer/<MadCap:xref href="../Design/Forms/Add Fields to a Form.htm" alt="Add Controls to a Form">Add Controls to a Form</MadCap:xref> topics, Designer/Wizard Designer/<MadCap:xref href="../Design/Wizards/Add Containers and Fields.htm" alt="Add Containers and Fields">Add Containers and Fields</MadCap:xref> topics, and Organization Configuration/Organization Settings/<MadCap:xref href="../Organization Configuration/Organizations/Activity.htm" alt="Activity">Activity</MadCap:xref> topic</p>
+                        <p>User Guide  – <em>FireLight Platform User Guide</em>, FireLight Basics section, Other Actions Menu, <MadCap:conditionalText MadCap:conditions="General.PDF">"Request Client to Fill and Sign" </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../UserGuide/FireLight Basics/Other Actions/Request Client to Fill and Sign.htm" alt="Request Client to Fill &amp; Sign">Request Client to Fill &amp; Sign [User Instructions]</MadCap:xref> </MadCap:conditionalText>topic </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

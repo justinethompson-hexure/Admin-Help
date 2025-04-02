@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Description and setup and usage instructions for support of post submission status changes and post submission agent notifications of the status change in FireLight. " />
+    </head>
+    <body>
+        <h1><a name="top"></a>Post Submission Status Workflow</h1>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Post Submission Status Workflow</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>FireLight<sup>®</sup> supports post submission status changes and post submission agent notifications of the status change. The workflow includes the Provider polling an outside source to return the current status  (e.g., "1035 Exchange Initiated," "1035 Exchange Outstanding," "1035 Exchange Complete," "Contract Issued," etc.). The system first looks to the distributor's Provider and if there is no code for polling, it will then look to the carrier's Provider. </p>
+                        <p> FireLight updates the Display status and External status in the Recent Activities and All Activities and notifies the agent of the status change. Notification to the agent occurs with the status change via an onscreen icon, message center update, and an email with the details of the status.</p>
+                        <p><b class="Bold">NOTE:</b> Review queue statuses reside in the Display Status reflecting if the activity has been approved, declined, or needing additional information.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Provider Setup</p>
+                        <p>Contact your Strategic Account Manager to arrange for the necessary Provider setup work to add Provider polling to bring back post-submission statuses for the post submission workflow.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p>In Organization Configuration on the <MadCap:xref href="../Organization Configuration/Email.htm" alt="Email">Email</MadCap:xref> page in the System category, review and update the Post Submission Pending Case Status email template as applicable for your organization.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <ol>
+                            <li>The agent completes the required application data entry and submits the application to the carrier for processing.</li>
+                            <li>
+                                <p>Behind the scenes, the integration Provider polls an outside source to return the  current status  (e.g., "1035 Exchange Initiated," "1035 Exchange Outstanding," "1035 Exchange Complete," "Contract Issued," etc.).</p>
+                            </li>
+                            <li>
+                                <p>When a notification comes through the Provider polling call, a message center "envelope" <img src="../Resources/ImagesAdmin/Capture84.png" alt="Post Submission Message Icon" title="Post Submission Message Icon" /> icon displays next to the post-submission activity on the Home page in the Recent Activity list and on the All Activities page in the activities list. If you have the Send Message Center Emails checkbox selected in Preferences, you also receive the message via email.</p>
+                                <p> The following post-submission statuses display according to the polling call: In Carrier Review, Carrier Review Complete, Approved (Carrier status), Declined (Carrier status), and Further Review  (Carrier status). </p>
+                            </li>
+                            <li>
+                                <p>Click the <img src="../Resources/ImagesAdmin/Capture84.png" alt="Post Submission Message Icon" title="Post Submission Message Icon" /> icon to go directly to the message in the FireLight message center. After you review the message, the icon changes to <img src="../Resources/ImagesAdmin/Capture87.png" alt="Message Icon Post Review" title="Message Icon Post Review" />to indicate the message was reviewed. </p>
+                                <p><b class="Bold">NOTE:</b> The messages can also be accessed by the Message Center icon on the FireLight navigation bar. However, this will show all messages related to that user.</p>
+                                <p>The post submission message contains the agent name, case name, status, and carrier along with any Provider specific information, such as instructions for the agent.</p>
+                            </li>
+                            <li>
+                                <p> To review the post submission Audit History for the activity: open the activity and click <b class="Bold">History</b> on the <b class="Bold">Other Actions</b> menu, or go to the activity in <b class="Bold">All Activities</b> and click the display status (e.g., click <b class="Bold">In Carrier Review</b>) or click the <b class="Bold">View History</b> link to open the History dialog. </p>
+                                <p>The History dialog displays the post submission audit history, which includes any polling comments listed within the status change, such as time stamps and additional details pertinent to the audit from the post-submission polling call. <b class="Bold">NOTE:</b> Any references to the Provider are shown as "Back Office."</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help – Design Document: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 204819</MadCap:conditionalText><b class="DRnumber" MadCap:conditions="General.Online"><a href="../Resources/DesignDocs/204819 Post Submission Status.pdf" target="_blank" title="CMR 204819" alt="CMR 204819">CMR 204819</a></b></p>
+                        <p>User Guide –  <em>FireLight Platform User Guide</em>, FireLight Basics section in Recent Activity, see the <MadCap:conditionalText MadCap:conditions="General.PDF">"Post Submission Icon" </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../UserGuide/FireLight Basics/Recent Activity.htm#PostSubmissionIcon" title="Post Submission Icon" alt="Post Submission Icon">Post Submission Icon</a> </MadCap:conditionalText>topic.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

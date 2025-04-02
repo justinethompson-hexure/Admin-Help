@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileProperties>
+    <ImageOverlay Profile="D:\Documents\My Profiles\FireLight2.18HighQualityPRINTProfile.capro" ProfileHash="b5ecb2a5462bd14c8192816eaa1d51161a51a637" ScreenRectangle="1300,563,25,24">
+        <OriginalImage Type="Image" ShapeTimeSpan="10000" AutoAdjust="true" DPI="96" medium_print_EnableFormat="true" medium_print_DPI="300" Folder="D:\Documents\My Projects\FireLight Admin 2.18\Content\Resources\Images" ExportFormat="png" medium_print_ExportFormat="png" BorderColor="#4682b4" Border="solid" EnableGrayScaleFormat="false" medium_screen_and__max_width__64_063em__ExportFormat="png" medium_screen_and__max_width__64_063em__DPI="96" medium_screen_and__max_width__40em__ExportFormat="png" Title="Collapse Button" Alt="Collapse Button" OutputScaleFactor="0.9" medium_print_OutputScaleFactor="3" medium_print_ColorDepth="32" ComputedWidth="25" ComputedHeight="24">SUkqAMAAAACAP+BP8AQWDQeEQmFQuGQ2HQ+IQiBwSIxWLReMRWJxmOR2PRGNx+RSOPyGSSeURCTSmWS2DSuXTGTzCZTWPRteLyCvF4zaZDYbQUOh2VHM5wRGo2fT4HA6CtRqUKiQt/jsdwRisWl1sAKxWQUplOGVWrgCs1yl16wWKqUakUq0S6m0+ogCh2OBgCczue3GT0CpSq837CVTB4XES/D4nETTGXHHY+uZHJUvKZWbZfMTLNZuXZ3PSyAgEAD+AAQAAQAAAAAAAAAAAQQAAQAAABkAAAABAQQAAQAAABgAAAACAQMABAAAAIYBAAADAQMAAQAAAAUAAAAGAQMAAQAAAAIAAAARAQQAAQAAAAgAAAAVAQMAAQAAAAQAAAAWAQQAAQAAABgAAAAXAQQAAQAAALgAAAAaAQUAAQAAAI4BAAAbAQUAAQAAAJYBAAAcAQMAAQAAAAEAAAAoAQMAAQAAAAIAAAA9AQMAAQAAAAIAAABSAQMAAQAAAAIAAAAAAAAACAAIAAgACAAAdwEA6AMAAAB3AQDoAwAA</OriginalImage>
+        <Shapes />
+        <Variables />
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

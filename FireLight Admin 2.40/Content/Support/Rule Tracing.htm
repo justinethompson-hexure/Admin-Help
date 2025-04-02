@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+		<h1>Rule Tracing<a name="top">
+		</a></h1>
+        <p class="note">
+            <b class="Bold">Spotlight Video:</b> See the <a href="https://vimeo.com/456264197/77e2f0aa32" target="_blank" title="https://vimeo.com/456264197/77e2f0aa32" alt="https://vimeo.com/456264197/77e2f0aa32">Rule Tracing</a> Spotlight feature video for a demo of setting up and using Rule Tracing.</p>
+        <p>On the Home page or navigation bar, go to <b class="Bold">Support</b> and click <b class="Bold">Rule Tracing</b> to open the Rule Tracing page.</p>
+        <p>Use the Rule Tracing support tool to provide visibility into the rules engine for debugging and troubleshooting rules.</p>
+        <p>
+            <b class="Bold">NOTE:</b> Follow the instructions below to enable and use the Rule Tracing support tool. </p>
+        <h2>Guidelines</h2>
+        <ul>
+            <li>Rule tracing is on a per session basis. This means FireLight<sup MadCap:conditions="General.Online">®</sup> users that have rule tracing enabled need to select the rule tracing option in Preferences after they log on to FireLight. The option does not remain selected from session to session.</li>
+            <li>
+                <p>When you enter an activity, FireLight saves the initial load of the rules and then will save any subsequent rule runs.  When you re-enter the activity, it will clear any previous rule traces.</p>
+            </li>
+            <li>Rule tracing data is purged from the database every 7 days. </li>
+            <li>
+                <p>The following rule data points are captured and stored:</p>
+                <ul style="list-style-type: circle;">
+                    <li>What caused the rules to execute (load, data item change, form addition/removal, etc.).</li>
+                    <li>Order of execution, what rule ran.</li>
+                    <li>What data items were changed.</li>
+                    <li>What rules were triggered from this data change.</li>
+                    <li>Previous / New value for data item changes.</li>
+                    <li>Timing per rule not per node.</li>
+                    <li>View parameter information around nodes. This could be helpful for call external.</li>
+                    <li>List of rules that were not loaded for any reason. This could be because data items in them did not exist, etc.</li>
+                    <li>Rules that threw exceptions.</li>
+                    <li>What forms/wizard/packages and what state they are in.</li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Enable Rule Tracing in Admin</h2>
+        <ol>
+            <li>In Admin, go to the <b class="Bold">Organization Configuration/Groups</b> page, <MadCap:xref href="../Organization Configuration/Groups/Debugging Tools.htm" target="_blank" alt="Debugging Tools">Debugging Tools</MadCap:xref> tab.</li>
+            <li>
+                <p>Select the <b class="Bold">Enable Creation of Rule Traces</b> option for the applicable user roles to enable the ability to create rule traces in FireLight<sup>®</sup>. You may want to enable rule tracing for specific roles such as test users.</p>
+            </li>
+            <li> Select the <b class="Bold">Enable Viewing of Rule Traces</b> for the applicable Admin user roles to enable the ability to view the rule traces in Admin.</li>
+        </ol>
+        <h2>Create Rule Trace Data in FireLight</h2>
+        <p>FireLight users with the  'Enable Creation of Rule Traces' group access option selected in Admin can create the rule trace data for the current session.</p>
+        <ol>
+            <li>Log in to FireLight.</li>
+            <li>In <b class="Bold">Preferences</b>, select the <b class="Bold">Enable Rule Tracing For Session</b> checkbox to create rule traces for the current session. You need to select the checkbox each time you log in and want to create rule tracing.</li>
+            <li>When you create or edit an activity, a <img src="../Resources/ImagesAdmin/Capture45.png" alt="Tracing Rules Pause Button" title="Tracing Rules Pause Button" /> button appears at the top of the screen near the activity name. Click the red pause button to pause the rule trace. To resume the rule trace, click the  <img src="../Resources/ImagesAdmin/Capture46.png" alt="Continue Rule Trace" title="Continue Rule Trace" /> green continue button.</li>
+            <li>Copy the activity ID: click the <b class="Bold">Copy</b> button to the right of the red pause button or green continue button. (Optional) If an Internet Explorer security dialog appears, click <b class="Bold">Allow access</b> on the security dialog. Click <b class="Bold">OK</b> on the Alert dialog. Provide the ID to the Admin user who will view the rule trace data.  </li>
+            <li>Rule tracing will automatically end when you log out of FireLight.</li>
+        </ol>
+        <h2>View Rule Trace Data</h2>
+        <ol>
+            <li>Log in to FireLight Admin.</li>
+            <li>On the Home page or navigation bar in the <b class="Bold">Support</b> section, click <b class="Bold">Rule Tracing</b>.</li>
+            <li>
+                <p>On the upper left in the <b class="Bold">Activity ID</b> field, paste the <b class="Bold">Activity ID</b> that was copied from the recorded rule trace in FireLight and click <b class="Bold">LOAD</b>.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../Resources/ImagesAdmin/Capture42.png" alt="Activity ID - AppGuid" title="Activity ID - AppGuid" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+            <li>
+                <p>The rule Trace Results appear on the right. </p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../Resources/ImagesAdmin/Capture43.png" alt="Rule Trace Results" title="Rule Trace Results" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+            <li>
+                <p>Select a <b class="Bold">Trace</b> in the list to view the results on the right. The traces appear in descending chronological order within the list.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../Resources/ImagesAdmin/Capture44.png" alt="Select a Trace" title="Select a Trace" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+            <li>
+                <p>Step through the traces as applicable. </p>
+                <ul>
+                    <li>
+                        <p>Any rules that are specifically concerning appear at the top of the trace results. These include: rules that cannot run due to exceptions or errors, rules  that are stopped due to recursion issues (rules that call themselves either directly or due to other rule dependencies), and rules that exceed the recommended threshold for running time (10ms). These rules do not necessarily need to be changed, but it is a good starting point for performance improvements and determining why rules aren’t executing as expected.</p>
+                        <p MadCap:conditions="General.Online">
+                            <img src="../Resources/ImagesAdmin/Capture64.png" alt="Rules of Potential Concern" title="Rules of Potential Concern" MadCap:conditions="General.Online" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>The display of trace results is limited to 5000 rule nodes at a time for performance reasons. Displaying more than this can cause the UI to be choppy or completely lock up the browser window. If a trace contains more than 5000 nodes, a third dropdown appears on the left side of the screen that allows the user to load the various parts of the trace.</p>
+                    </li>
+                    <li>
+                        <p>Rule names appear in bold blue. Pausing the mouse over a rule name displays the following:</p>
+                        <ul style="list-style-type: circle;">
+                            <li>Source – The source of the rule run (Initial load of the activity, Field update, Package update, Template update).</li>
+                            <li>Trigger – The data item ID that triggered the rule to run, if applicable.</li>
+                            <li>Timing – The time, in milliseconds, that the system took to run the rule.</li>
+                        </ul>
+                        <p MadCap:conditions="General.Online" class="Indent">
+                            <img src="../Resources/ImagesAdmin/Capture62.png" alt="Trace Results: Source, Trigger, and Timing" title="Trace Results: Source, Trigger, and Timing" MadCap:conditions="General.Online" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>The nodes that were executed within the rule appear under the rule name. Note that block nodes are not displayed. Pausing the mouse over a rule node displays the result of the execution of the node and its children. This is useful for determining why a value isn’t getting set as expected. Some nodes, such as “if” will display a result of null. This is expected because those nodes have no return value.</p>
+                        <p MadCap:conditions="General.Online">
+                            <img src="../Resources/ImagesAdmin/Capture63.png" alt="Result of the Execution of the Node" title="Result of the Execution of the Node" MadCap:conditions="General.Online" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>If the execution of a rule changes a data item that a different rule depends upon, a red message will appear indicating that the dependent rule is being executed as a result. Nodes executed as a part of this process is nested and appear beside a red line. This provides a visualization that can help determine why certain rules may be unexpectedly running. Seeing many levels of nesting can indicate issues with too many rules having dependencies on each other.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>Close the Rule Tracing page when finished.</li>
+        </ol>
+		<p MadCap:conditions="General.Online">
+			<a href="#top" alt="Return to Top">Return to Top</a>
+		</p>
+    </body>
+</html>

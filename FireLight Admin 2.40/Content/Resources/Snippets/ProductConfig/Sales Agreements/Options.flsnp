@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The Options tab contains the following options for the sales agreement.</p>
+        <ul>
+            <li>
+                <p>
+                    <b>Enable Resident State</b> checkbox enables the Solicitation Jurisdiction and Resident Jurisdiction selection lists after product selection on the Create a New Application page. This is useful when the solicitation jurisdiction might be different from the resident jurisdiction. For example, enable this option when the solicitation jurisdiction is District of Columbia and the resident jurisdiction might be Maryland or Virginia. The Resident Jurisdiction list is limited to the jurisdictions passed in the TX 1228 if the 1228 contains jurisdiction restrictions. This limits the Resident Jurisdiction list to only those states in which the agent is licensed to sell the selected product. <b>NOTE:</b> Select the State Match Warning checkbox in the applicable Signature Box controls in the form Designer page for the application to warn of resident state and signing state mismatch for each signer type. This needs to be set one time for each applicable Signer Type to warn the agent about state mismatch. If multiple documents within the application package has the same signer type (Owner, Joint Owner, etc.), then only one Signature control for each signer type needs to be set.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>
+                    <b>Use Resident State in Form Selection</b> checkbox enables form/wizard selection based on the selection in the Resident Jurisdiction list on the Create New Application page. If this option is not selected, form/wizard selection is based on the issue jurisdiction. If selecting this option, also select the Enable Resident State option.</p>
+            </li>
+            <li>
+                <p>
+                    <b>Create Single Activity When Next Activity Is Selected</b> checkbox provides clients the ability to configure when a Pre-Sale activity can generate one or multiple eApplications or other "Next Activities" as part of a workflow. </p>
+            </li>
+            <li>
+                <p>
+                    <b class="Bold">Tele-Sign Script</b> list: If the organization enabled Tele-Sign for this product, select a <b class="Bold">Tele-Sign Script</b> in the list for the sales agreement. See <MadCap:xref href="../../../../Features/Tele-Sign.htm" target="_blank" alt="Tele-Sign">Tele-Sign</MadCap:xref> in Features for setup instructions.</p>
+            </li>
+        </ul>
+    </body>
+</html>

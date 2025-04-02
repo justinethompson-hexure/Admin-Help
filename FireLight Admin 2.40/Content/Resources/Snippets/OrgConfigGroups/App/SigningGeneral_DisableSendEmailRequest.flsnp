@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable Send Email Request for Client</b> checkbox to  disable the Send Email Request option for the client signer, which bypasses the Client Signature Choice page, so signers go directly from the List of Required Signers page to the Client Identification Verification page. E-signature capture can only be done through the Sign Now process.  The base ForeSight tag FLI_DISABLE_SIGN_LATER is available for  client remote signing. A value of "true" will disable the sign later option and "false" will allow sending email requests for remote signature.</body>
+</html>

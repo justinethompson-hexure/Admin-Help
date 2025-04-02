@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The FireLight system automatically locks a rule set for the first user who starts to make changes to the rule set. </p>
+        <p> For other users who attempt to open the rule set while it is locked by the first user, the system displays:  "User &lt;username&gt; is currently working on the Rule Set" and disables the NEW RULE, DELETE ALL, and SAVE RULE SET action buttons.  Other users can only view and export rules or close the window while the rule set is locked. </p>
+        <p>If two users attempt to edit the rule set at the same time, the time lapse when both users start to make changes could be in microseconds, hence the system ensures that no two users lock the rule set together, and there is no edit lock entry already there for the rule set.</p>
+        <p>Example: Default lock time is one hour (based on what is set in the organization's database). </p>
+        <ul>
+            <li>
+                <p> When the user clicks the SAVE RULE SET button, the system releases the lock.</p>
+            </li>
+            <li>
+                <p>After 55 minutes of lock time, when the user continues to make changes to the rule set, without saving the rule set in between,  the system automatically extends the lock time to one more hour.</p>
+            </li>
+            <li>
+                <p>After 55 minutes of lock time, when the user is not continuing to make changes to the rule set, the system alerts the user (5 minutes before the lock time expires) to save their work. The alert message is: "Edit lock will release automatically after 5 mins. Save your changes to avoid losing work. Saving will reset lock time for another hour."</p>
+                <p>On the alert box, the user can do any of the following:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p> Click the SAVE NOW button to save changes and unlock the rule set after 5 minutes (i.e., after one hour lock timeout). </p>
+                    </li>
+                    <li>
+                        <p>Click the EXTEND button to extend the lock time to one more hour. </p>
+                    </li>
+                </ul>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Do not click a button. After 5 minutes of prompt, the system releases the lock without saving any changes, the lock icon turns gray, and the following text appears below the lock icon: "The application is inactive."</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>When the user closes the Rules Window, an alert prompts the user to Save Changes. On the confirmation box, the user can:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Click "Yes" on  to save the changes and release the lock from the rule set. </p>
+                    </li>
+                    <li>
+                        <p>Click "No" to release the lock without saving any changes.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>When the user loads another page from the menu, a confirmation box appears. On the confirmation box, the user can:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Click "Leave" to release the lock from the Rule Set and load the selected page without saving any changes to that Rule Set. </p>
+                    </li>
+                    <li>
+                        <p>Click "Cancel" to have the current rule set remain loaded as-it-is.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>When edit lock on the rule set is released by the first user, the user who has the Rules Window already open for edit is alerted to reload the window if they attempt to lock the Rule Set. An Alert message displays: "This Rule Set is changed since this window is opened. Reload Rules Window to view latest version of the Rule Set."</p>
+            </li>
+        </ul>
+    </body>
+</html>

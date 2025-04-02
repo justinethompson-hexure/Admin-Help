@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>When multiple users attempt to work on the same Rule Set, Form or Wizard, there is not a way to know multiple users are making edits at the same time. This results in a loss of work or edits that override work by another user. This platform enhancement will provide notification when multiple users attempt to work on the same Rule Set, Form or Wizard. A new temporary lock mechanism is introduced to prevent multiple users from editing a form, wizard, or rule set at the same time which will eliminate overwriting work of other users. When a user starts to edit a Rule Set, Form or a Wizard, the system will lock the rule, form or wizard for the user and alert other users if they try to edit that entity at the same time. Once the changes are saved and the lock is released, FireLight will show an alert to the other users who wish to edit that Rule Set, Form or Wizard. They will also be notified to reload the entity with new changes to avoid any overwriting. </p>
+        <p>Impacts: </p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Multi-user edit changes for Rule Set, Form and Wizard screens. Lock info will appear on the screen in case it is locked by a user, along with login of that user.</p>
+                <ol>
+                    <li>
+                        <p> Product Config -&gt; Rule Sets -&gt; Rule Set Detail (tab) -&gt; Rules Window (link)</p>
+                    </li>
+                    <li>
+                        <p>Designer -&gt; Form Designer -&gt; Rules Window (link)</p>
+                    </li>
+                    <li>
+                        <p>Designer -&gt; Wizard Designer -&gt; Rules Window (link)</p>
+                    </li>
+                    <li>
+                        <p>Designer -&gt; Form Designer</p>
+                    </li>
+                    <li>
+                        <p>Designer -&gt; Wizard Designer</p>
+                    </li>
+                </ol>
+            </li>
+        </ul>
+    </body>
+</html>

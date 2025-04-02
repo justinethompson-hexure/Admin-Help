@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <h2>Have a New Activity Report Delivered via SFTP</h2>
+        <ol>
+            <li>
+                <p>Client provides the following SFTP information to the Strategic Account Manager.</p>
+                <p>Host Address/IP Address</p>
+                <p>Port</p>
+                <p>Username</p>
+                <p>Password</p>
+                <p>Directory to Upload to:	[if any, default is just “/”]</p>
+            </li>
+            <li>The Strategic Account Manager creates a new JIRA&#160;ticket with Network Services to whitelist the Host address/IP Address and port on the UAT/ Production firewall.</li>
+            <li>Once the whitelist has been adjusted, the Strategic Account Manager creates an activity report JIRA&#160;ticket as normal, specifies in the JIRA ticket that the report should be delivered via SFTP, and includes the host address/IP address, port, and directory (NOT the username or password).</li>
+            <li>The developer contacts the Strategic Account Manager to receive the username and password outside of the JIRA&#160;ticket.</li>
+        </ol>
+    </body>
+</html>

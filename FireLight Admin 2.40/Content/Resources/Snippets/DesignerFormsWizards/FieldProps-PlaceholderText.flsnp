@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p>(Optional) Enter placeholder text for the control. This text will display within the field as a prompt to the user. For example, enter "First Name" in Placeholder Text for the Owner_FirstName field on the form or wizard. This could potentially eliminate the need for adding Label controls to forms and wizards. Placeholder text will not appear on the printed/PDF version of the forms and wizards. <b class="Bold">NOTE:</b> Placeholder Text will not be shown if a Text Mask is set.</p>
+    </body>
+</html>

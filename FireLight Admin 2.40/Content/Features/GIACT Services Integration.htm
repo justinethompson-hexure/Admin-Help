@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Setup and usage instructions for the FireLight integration with GIACT Systems, LLC full service payment solutions services for  banking account verification and authentication." />
+    </head>
+    <body>
+        <h1><a name="top"></a>GIACT Services Integration</h1>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">GIACT Services Integration</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 800px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p style="page-break-after: avoid;">FireLight<sup>®</sup> can integrate with GIACT Systems, LLC full service payment solutions services for  banking account verification and authentication. These services can be used for one-time and recurring ACH payments.</p>
+                        <p>gVerify is GIACT’s bank account verification service that verifies the status of bank accounts in real time and reports any negative history associated with the account. Inquiries on currently assigned routing numbers will return the bank name assigned to the routing number.</p>
+                        <p>The gVerify service verifies the account and returns an account response code indicating:</p>
+                        <ul>
+                            <li>Open and valid account</li>
+                            <li>Account in NSF status or excessive returns</li>
+                            <li>Closed or frozen account</li>
+                            <li>Account not located</li>
+                            <li>Non-demand deposit account that does not allow posting of ACH debits</li>
+                            <li>
+                                <p>Special routing numbers like Government institutions</p>
+                            </li>
+                            <li>
+                                <p>American Express Travelers Cheque accounts</p>
+                            </li>
+                            <li>
+                                <p>Stop payment orders on a specific check number or check number range</p>
+                            </li>
+                        </ul>
+                        <p>gAuthenticate is GIACT’s bank account authentication service that takes the gVerify one step further to authenticate the customer data against the account. This service works with both personal and business bank accounts.</p>
+                        <p>The gAuthenticate service will authenticate:</p>
+                        <ul>
+                            <li>Person name or business name</li>
+                            <li>Tax ID Number (SSN/ITIN/EIN)</li>
+                            <li>Date of Birth</li>
+                            <li>Address</li>
+                            <li>Phone Number</li>
+                        </ul>
+                        <p>The information returned from GIACT's services is available to be leveraged in the FireLight rules engine for additional configuration of the service. For example, clients can  write rules to limit the number of attempts to validate the account before enforcing another form of payment. Clients can configure that after three attempts an error message that requires the user to select a different funding source is presented.</p>
+                        <p>Clients will contract directly with GIACT to use their services. </p>
+                        <p>GIACT provides the gVerify and gAuthenticate response codes. See the "Additional Information" section at the end of this topic for the Design Document, Report, and Test resources that are available in Admin Help.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">FireLight Setup</p>
+                        <p>There is no additional cost within FireLight. Time and materials for implementation specific rules still apply.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <ol>
+                            <li>
+                                <p>Organization Configuration/Organization Settings page, <MadCap:xref href="../Organization Configuration/Organizations/Admin.htm" alt="Admin">Admin</MadCap:xref> tab:  set up the Third-Party Service Config.</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>To the right of <b>Third-Party Service Config</b>, click the <b>Click to Edit</b> link to open the Third-Party Service Configuration dialog.</li>
+                                    <li>
+                                        <p>Click the <b>Add New</b> link at the top of the dialog. </p>
+                                        <ol style="list-style-type: lower-roman;">
+                                            <li>In <b>Config Name</b>, enter <b class="Bold">Password</b>. </li>
+                                            <li>In <b>Config Value</b> enter the password provided by GIACT. </li>
+                                            <li>Select <b>GIACT</b> in <b>Service Type</b> and click the <b>Add Config</b> button.</li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <p>Click the <b>Add New</b> link at the top of the dialog.</p>
+                                        <ol style="list-style-type: lower-roman;">
+                                            <li>In <b>Config Name</b>, enter <b class="Bold">Username</b>. </li>
+                                            <li>In <b>Config Value</b> enter the username provided by GIACT. </li>
+                                            <li>
+                                                <p>Select <b>GIACT</b> in <b>Service Type</b> and click the <b>Add Config</b> button. </p>
+                                                <p><b class="Bold">NOTE:</b> Config Group is an optional configuration used by the <MadCap:xref href="DocuSign.htm" alt="DocuSign Integration">DocuSign Integration</MadCap:xref> integration.</p>
+                                                <p>Examples:</p>
+                                                <p MadCap:conditions="General.Online">
+                                                    <img src="../Resources/ImagesAdmin/Capture144.png" alt="Add New GIACT Config Name and Value" title="Add New GIACT Config Name and Value" MadCap:conditions="General.Online" />
+                                                </p>
+                                                <p MadCap:conditions="General.Online">
+                                                    <img src="../Resources/ImagesAdmin/Capture143.png" alt="Third Party Configuration Values for GIACT Services" title="Third Party Configuration Values for GIACT Services" MadCap:conditions="General.Online" />
+                                                </p>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li>Close the Third-Party Service Configuration dialog.</li>
+                                    <li>Click the <b>Save Organization</b> button on the Organization Settings page.</li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>Design/<MadCap:xref href="../Design/Forms/Form Designer.htm" alt="Form Designer">Form Designer</MadCap:xref> or <MadCap:xref href="../Design/Wizards/Wizard Designer.htm" alt="Wizard Designer">Wizard Designer</MadCap:xref> page: do the following to set up a custom action button control and data items on the form or wizard.</p>
+                                <p><b>IMPORTANT!</b>  FireLight now supports triggering a custom action call from any page within the same package, regardless of whether the button or fields to trigger that call are on that same page.  See <MadCap:xref href="../Design/Forms/Add Multiple Copies of a Form.htm" alt="Add Multiple Copies of a Form">Add Multiple Copies of a Form</MadCap:xref> for use on multiple-instance forms (forms only—not wizards). </p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>
+                                        <p>Add a <b class="Bold">Button</b> control to the form or add a <b class="Bold">Custom Action</b> button to the wizard. Be sure to name it something that you can easily identify in rules. In the Field Properties: </p>
+                                        <p class="Indent">Forms:</p>
+                                        <ol style="list-style-type: lower-roman;">
+                                            <li>In <b>Action Type</b>, select <b>Custom Action</b>. </li>
+                                            <li>In <b class="Bold">Action Parameter</b>, type <b class="Bold">GIACT</b>. </li>
+                                            <li>In <b class="Bold">Data Group</b>, select an <b class="Bold">EFT Validation</b>  property for the button to map to the GIACT web service. For example, select the <b class="Bold">EFT Validation 1</b> option if this the first EFT information validation section  on the form. </li>
+                                        </ol>
+                                        <p class="Indent2" MadCap:conditions="General.Online">
+                                            <img src="../Resources/ImagesAdmin/Capture40.png" alt="GIACT Button Field Properties" title="GIACT Button Field Properties" MadCap:conditions="General.Online" /> </p>
+                                        <p class="Indent">Wizards:</p>
+                                        <ol style="list-style-type: lower-roman;">
+                                            <li>In <b class="Bold">Custom Action</b>, select <b class="Bold">Custom Action</b>.</li>
+                                            <li>In <b>Custom Action Type</b>,  select <b class="Bold">GIACT</b>. </li>
+                                            <li>In <b class="Bold">Custom Action Parameter</b>, enter <b class="Bold">GIACT</b>.</li>
+                                            <li>In <b class="Bold">Data Group</b>, select an <b class="Bold">EFT Validation</b>  property for the button to map to the GIACT web service. For example, select <b class="Bold">EFT Validation 1</b> if this is the first EFT information validation section  on the wizard.</li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <p>In the fields that will receive the data, open the Field Properties and select the <b>Data Group</b> that matches the Data Group for the GIACT button. </p>
+                                        <p>For example, set <b class="Bold">Data Group</b> to <b class="Bold">EFT Validation 1</b>. Then select the <b>Data Group Property</b> that matches the field entry. For example, select <b>FirstName</b> in <b>Data Group Property</b> for the account holder's First Name field. Ensure that Data Group and Data Group Property are selected on all fields that need to be filled in with GIACT.</p>
+                                        <p>When you set Data Group to an EFT Validation option, the available Data Group Property list contains options that are specifically for GIACT. Create the applicable form or wizard controls for the following Data Group Property options. </p>
+                                        <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;">
+                                            <caption class="Table">Data Group Property Options for GIACT</caption>
+                                            <col />
+                                            <col />
+                                            <thead>
+                                                <tr>
+                                                    <th colspan="2">GIACT Button Data Group Properties</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td colspan="2"><b class="Bold">*</b>Indicates fields that are <b class="Bold">required</b> for the GIACT button to be enabled.</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <ul>
+                                                            <li>Routing Number<b class="Bold">*</b><![CDATA[	]]></li>
+                                                            <li>Account Number<b class="Bold">*</b><![CDATA[	]]></li>
+                                                            <li>First Name<b class="Bold">*</b></li>
+                                                            <li>Last Name<b class="Bold">*</b></li>
+                                                            <li>Business Name<b class="Bold">*</b><![CDATA[	]]></li>
+                                                            <li>gVerify Account Response Code</li>
+                                                            <li>gVerify Verification Response</li>
+                                                            <li>Bank Name	</li>
+                                                            <li>Bank Account Added Date	</li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>
+                                                        <ul>
+                                                            <li>Bank Account Last Updated Date	</li>
+                                                            <li>Bank Account Closed Date	</li>
+                                                            <li>Check Number</li>
+                                                            <li>gAuthenticate Customer Response Code</li>
+                                                            <li>gAuthenticate Verification Response</li>
+                                                            <li>Tax ID Number (SSN/ITIN/EIN)</li>
+                                                            <li>Date of Birth</li>
+                                                            <li>Address</li>
+                                                            <li>Phone Number</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <p class="Indent">*Business Name is required only if not providing the First Name and Last Name.</p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>Add the Rule Set for GIACT. Create a GIACT rule set on the <MadCap:xref href="../Product Configuration/Rule Sets.htm" alt="Rule Sets">Rule Sets</MadCap:xref> page and then add the GIACT rules to it. The rule set can then be used across multiple packages. </p>
+                                <p><b class="Bold">NOTE:</b> <MadCap:conditionalText MadCap:conditions="General.PDF">In the Admin help, click the <b class="Bold">GIACT.zip</b></MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.Online">Click this <a href="../Resources/PDFGuides/GIACT.zip" target="_blank" alt="GIACT.zip">GIACT.zip</a> </MadCap:conditionalText>link to download a .zip file with sample GIACT rules. Be sure to change the dataitem names to match the ones for the fields and GIACT button on your form/wizard. See "Copy Rules from an Exported Rule Set to a New Rule Set" in the <MadCap:xref href="../Product Configuration/Rule Sets/Import-View All Rule Definitions.htm" alt="Import/View All Rule Definitions" title="Import/View All Rule Definitions">Import/View All Rule Definitions</MadCap:xref> topic for instructions.</p>
+                                <p>Some Individual Rules for GIACT follow.</p>
+                                <MadCap:dropDown>
+                                    <MadCap:dropDownHead>
+                                        <MadCap:dropDownHotspot>Require GIACT! Button to Be Clicked.</MadCap:dropDownHotspot>
+                                    </MadCap:dropDownHead>
+                                    <MadCap:dropDownBody>
+                                        <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+                                            <MadCap:codeSnippetCopyButton />
+                                            <MadCap:codeSnippetCaption>
+                                                <p>Require GIACT button to be clicked</p>
+                                            </MadCap:codeSnippetCaption>
+                                            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;!-- Used "Required Field" default template. --&gt;
+&lt;if&gt;
+    &lt;condition&gt;
+        &lt;not&gt;
+            &lt;isnullorwhitespace&gt;
+                &lt;diget dataitemid="GIACT!" /&gt;
+            &lt;/isnullorwhitespace&gt;
+        &lt;/not&gt;
+    &lt;/condition&gt;
+    &lt;removemessage dataitemid="GIACT!" /&gt;
+    &lt;else /&gt;
+    &lt;postmessage dataitemid="GIACT!"&gt;
+        &lt;const value="You must run the GIACT service at least once." /&gt;
+    &lt;/postmessage&gt;
+&lt;/if&gt;</MadCap:codeSnippetBody>
+                                        </MadCap:codeSnippet>
+                                    </MadCap:dropDownBody>
+                                </MadCap:dropDown>
+                                <MadCap:dropDown>
+                                    <MadCap:dropDownHead>
+                                        <MadCap:dropDownHotspot>Ensure the Service Call Succeeded (gVerify Response Error).</MadCap:dropDownHotspot>
+                                    </MadCap:dropDownHead>
+                                    <MadCap:dropDownBody>
+                                        <MadCap:codeSnippet>
+                                            <MadCap:codeSnippetCopyButton />
+                                            <MadCap:codeSnippetCaption>
+                                                <p>Ensure the service call succeeded (gVerify Response Error)</p>
+                                            </MadCap:codeSnippetCaption>
+                                            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;if&gt;
+    &lt;condition&gt;
+        &lt;isnullorwhitespace&gt;
+            &lt;diget dataitemid="gVerifyResponse" /&gt;
+        &lt;/isnullorwhitespace&gt;
+    &lt;/condition&gt;
+    &lt;removemessage dataitemid="gVerifyResponse" /&gt;
+    &lt;else /&gt;
+    &lt;postmessage dataitemid="gVerifyResponse"&gt;
+        &lt;const value="We are unable to process this account at this time.  Please provide alternate 
+        account or select a different funding source." /&gt;
+    &lt;/postmessage&gt;
+&lt;/if&gt;</MadCap:codeSnippetBody>
+                                        </MadCap:codeSnippet>
+                                    </MadCap:dropDownBody>
+                                </MadCap:dropDown>
+                                <MadCap:dropDown>
+                                    <MadCap:dropDownHead>
+                                        <MadCap:dropDownHotspot>Ensure the Service Call Succeeded (gAuthenticate Response Error).</MadCap:dropDownHotspot>
+                                    </MadCap:dropDownHead>
+                                    <MadCap:dropDownBody>
+                                        <MadCap:codeSnippet>
+                                            <MadCap:codeSnippetCopyButton />
+                                            <MadCap:codeSnippetCaption>
+                                                <p>Ensure the service call succeeded (gAuthenticate Response Error)</p>
+                                            </MadCap:codeSnippetCaption>
+                                            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;if&gt;
+    &lt;condition&gt;
+        &lt;isnullorwhitespace&gt;
+            &lt;diget dataitemid="gAuthenticateResponse" /&gt;
+        &lt;/isnullorwhitespace&gt;
+    &lt;/condition&gt;
+    &lt;removemessage dataitemid="gAuthenticateResponse" /&gt;
+    &lt;else /&gt;
+    &lt;postmessage dataitemid="gAuthenticateResponse"&gt;
+        &lt;const value="We are unable to process this account at this time.  Please provide alternate 
+        account or select a different funding source." /&gt;
+    &lt;/postmessage&gt;
+&lt;/if&gt;</MadCap:codeSnippetBody>
+                                        </MadCap:codeSnippet>
+                                    </MadCap:dropDownBody>
+                                </MadCap:dropDown>
+                                <MadCap:dropDown>
+                                    <MadCap:dropDownHead>
+                                        <MadCap:dropDownHotspot>Clear Error Messages on Service Call Response</MadCap:dropDownHotspot>
+                                    </MadCap:dropDownHead>
+                                    <MadCap:dropDownBody>
+                                        <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+                                            <MadCap:codeSnippetCopyButton />
+                                            <MadCap:codeSnippetCaption>
+                                                <p>Clear error messages on service call response</p>
+                                            </MadCap:codeSnippetCaption>
+                                            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;if&gt;
+    &lt;condition&gt;
+        &lt;and&gt;
+            &lt;or&gt;
+                &lt;compare op="!="&gt;
+                &lt;const value="" type="String" /&gt;
+                    &lt;diget version="Current" dataitemid="BankAcctAddedDate" /&gt;
+                &lt;/compare&gt;
+                &lt;compare op="!="&gt;
+                &lt;const value="" type="String" /&gt;
+                    &lt;diget version="Current" dataitemid="BankAcctLastUpdatedDate" /&gt;
+                &lt;/compare&gt;
+            &lt;/or&gt;
+            &lt;or&gt;
+                &lt;compare op="!="&gt;
+                    &lt;diget version="Original" dataitemid="BankAcctAddedDate" /&gt;
+                    &lt;diget version="Current" dataitemid="BankAcctAddedDate" /&gt;
+                &lt;/compare&gt;
+                &lt;compare op="!="&gt;
+                    &lt;diget version="Original" dataitemid="BankAcctLastUpdatedDate" /&gt;
+                    &lt;diget version="Current" dataitemid="BankAcctLastUpdatedDate" /&gt;
+                &lt;/compare&gt;
+            &lt;/or&gt;
+        &lt;/and&gt;
+    &lt;/condition&gt;
+    &lt;removemessage dataitemid="GIACT!" /&gt;
+    &lt;setcontrolstate dataitemid="GIACT!"&gt;
+        &lt;const value="false" type="Boolean" /&gt;
+    &lt;/setcontrolstate&gt;
+&lt;/if&gt;</MadCap:codeSnippetBody>
+                                        </MadCap:codeSnippet>
+                                    </MadCap:dropDownBody>
+                                </MadCap:dropDown>
+                                <MadCap:dropDown>
+                                    <MadCap:dropDownHead>
+                                        <MadCap:dropDownHotspot>Require GIACT! Button Click Again When Data Changes</MadCap:dropDownHotspot>
+                                    </MadCap:dropDownHead>
+                                    <MadCap:dropDownBody>
+                                        <MadCap:codeSnippet>
+                                            <MadCap:codeSnippetCopyButton />
+                                            <MadCap:codeSnippetCaption>
+                                                <p>Require GIACT button click again when data changes</p>
+                                            </MadCap:codeSnippetCaption>
+                                            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;if&gt;
+    &lt;condition&gt;
+        &lt;or&gt;
+            &lt;compare op="!="&gt;
+                &lt;diget version="Original" dataitemid="giactAccountNum" /&gt;
+                &lt;diget version="Current" dataitemid="giactAccountNum" /&gt;
+            &lt;/compare&gt;
+            &lt;compare op="!="&gt;
+                &lt;diget version="Original" dataitemid="giactRoutingNum" /&gt;
+                &lt;diget version="Current" dataitemid="giactRoutingNum" /&gt;
+            &lt;/compare&gt;
+            &lt;compare op="!="&gt;
+                &lt;diget version="Original" dataitemid="FirstName" /&gt;
+                &lt;diget version="Current" dataitemid="FirstName" /&gt;
+            &lt;/compare&gt;
+            &lt;compare op="!="&gt;
+                &lt;diget version="Original" dataitemid="LastName" /&gt;
+                &lt;diget version="Current" dataitemid="LastName" /&gt;
+            &lt;/compare&gt;
+            &lt;compare op="!="&gt;
+                &lt;diget version="Original" dataitemid="BusinessName" /&gt;
+                &lt;diget version="Current" dataitemid="BusinessName" /&gt;
+            &lt;/compare&gt;
+        &lt;/or&gt;
+    &lt;/condition&gt;
+    &lt;postmessage dataitemid="GIACT!"&gt;
+        &lt;const value="Changing routing number, account number, first name, last name, or business name 
+        requires the EFT button be selected to run the call again." /&gt;
+    &lt;/postmessage&gt;
+    &lt;setcontrolstate dataitemid="GIACT!"&gt;
+        &lt;const value="true" type="Boolean" /&gt;
+    &lt;/setcontrolstate&gt;
+    &lt;else /&gt;
+    &lt;removemessage dataitemid="GIACT!" /&gt;
+    &lt;setcontrolstate dataitemid="GIACT!"&gt;
+        &lt;const value="false" type="Boolean" /&gt;
+    &lt;/setcontrolstate&gt;
+&lt;/if&gt;</MadCap:codeSnippetBody>
+                                        </MadCap:codeSnippet>
+                                    </MadCap:dropDownBody>
+                                </MadCap:dropDown>
+                                <MadCap:dropDown>
+                                    <MadCap:dropDownHead>
+                                        <MadCap:dropDownHotspot>Disable EFT Button After Three Attempts</MadCap:dropDownHotspot>
+                                    </MadCap:dropDownHead>
+                                    <MadCap:dropDownBody>
+                                        <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+                                            <MadCap:codeSnippetCopyButton />
+                                            <MadCap:codeSnippetCaption>
+                                                <p>Disable EFT button after three attempts</p>
+                                            </MadCap:codeSnippetCaption>
+                                            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;block&gt;
+    &lt;setcontrolstate dataitemid="GetFunding"&gt;
+        &lt;and&gt;
+        &lt;compare op="=="&gt;
+            &lt;const value="EFT" type="String" /&gt;
+            &lt;diget dataitemid="FundingSource" /&gt;
+        &lt;/compare&gt;
+        &lt;compare op="!="&gt;
+            &lt;const value="3" type="String" /&gt;
+            &lt;diget dataitemid="GetFunding" /&gt;
+        &lt;/compare&gt;
+        &lt;/and&gt;
+    &lt;/setcontrolstate&gt;
+    &lt;if&gt;
+        &lt;condition&gt;
+            &lt;and&gt;
+                &lt;compare op="=="&gt;
+                    &lt;const value="EFT" type="String" /&gt;
+                    &lt;diget dataitemid="FundingSource" /&gt;
+                &lt;/compare&gt;
+                &lt;compare op="=="&gt;
+                    &lt;const value="3" type="String" /&gt;
+                    &lt;diget dataitemid="GetFunding" /&gt;
+                &lt;/compare&gt;
+            &lt;/and&gt;
+        &lt;/condition&gt;
+        &lt;postmessage dataitemid="FundingSource"&gt;
+            &lt;const value="Maximum EFT attempts reached. Please select a different funding source." /&gt;
+        &lt;/postmessage&gt;
+&#160;
+        &lt;else /&gt;
+        &lt;removemessage dataitemid="FundingSource" /&gt;
+    &lt;/if&gt;
+&lt;/block&gt;</MadCap:codeSnippetBody>
+                                        </MadCap:codeSnippet>
+                                    </MadCap:dropDownBody>
+                                </MadCap:dropDown>
+                            </li>
+                            <li>Add the form/wizard with the GIACT fields to a product package. For instructions, see "Add and Edit a Package" in <MadCap:xref href="../Product Configuration/Packages.htm" alt="Packages">Packages</MadCap:xref>. </li>
+                            <li>Add the package to a sales agreement. For instructions, see "Add and Edit Sales Agreements" in <MadCap:xref href="../Product Configuration/SalesAgreements.htm" alt="Sales Agreements">Sales Agreements</MadCap:xref>.</li>
+                            <li>Deploy the product/package/sales agreement to the applicable environments using the All Configuration synchronization scopes. See <MadCap:xref href="../Utilities/Deployments/Deploy Data.htm" alt="Deploy Data">Deploy Data</MadCap:xref> for instructions.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <ol>
+                            <li>Begin an application or other activity.</li>
+                            <li>
+                                <p>Fill in information for the following required fields for GIACT:</p>
+                                <ul>
+                                    <li>First Name</li>
+                                    <li>Last Name</li>
+                                    <li>Business Name (required only when not providing First Name and Last Name)</li>
+                                    <li>Account Number</li>
+                                    <li>Routing Number</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p> Click the <b>GIACT</b> custom action button.</p>
+                                <p>When the web services calls complete, the GIACT information populates the appropriate fields on the form or wizard:</p>
+                                <ul>
+                                    <li>gVerify Account Response Code</li>
+                                    <li>gVerify Verification Response</li>
+                                    <li>Bank Name</li>
+                                    <li>Bank Account Added Date</li>
+                                    <li>Bank Account Last Updated Date</li>
+                                    <li>Bank Account Closed Date (if applicable)</li>
+                                    <li>gAuthenticate Customer Response Code</li>
+                                    <li>gAuthenticate Verification Response</li>
+                                </ul>
+                            </li>
+                            <li>Continue with the application or other activity.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help:</p>
+                        <ul>
+                            <li>
+                                <p>Design Document – <MadCap:conditionalText MadCap:conditions="General.PDF"> CMR 189466</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"> <a href="../Resources/DesignDocs/189466 EFT Validation using GIACT's gVerify and gAuthenticate.pdf" target="_blank" title="CMR 189466" alt="CMR 189466">CMR 189466</a></MadCap:conditionalText> </p>
+                            </li>
+                            <li>
+                                <p>Report – <em>GIACT Web Service Detailed Report</em> (see <MadCap:xref href="../Utilities/Reports/Detail Reports.htm" alt="Detailed Activity Reports">Detailed Activity Reports</MadCap:xref>)</p>
+                            </li>
+                            <li>
+                                <p>GIACT Testing Guide (Check with GIACT for the most current information) – <em MadCap:conditions="General.PDF">Verification Services API - Testing Guide</em><a href="../Resources/DesignDocs/Verification_Services_API_-_Testing_Guide.pdf" target="_blank" title="Verification Services API - Testing Guide" alt="Verification Services API - Testing Guide" MadCap:conditions="General.Online">Verification Services API - Testing Guide</a></p>
+                            </li>
+                            <li>
+                                <p>Spreadsheet (Check with GIACT for the most current information) – <MadCap:conditionalText MadCap:conditions="General.PDF">GIACT Fields and Responses.xlsx</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/DesignDocs/GIACT Fields and Responses.xlsx" target="_blank" title="GIACT Fields and Responses.xlsx" alt="GIACT Fields and Responses.xlsx">GIACT Fields and Responses.xlsx</a></MadCap:conditionalText> contains sample gVerify and gAuthenticate response codes.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:pageBreak />
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

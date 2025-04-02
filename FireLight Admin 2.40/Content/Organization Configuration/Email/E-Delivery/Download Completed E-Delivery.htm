@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="General.Online">
+	<head>
+		<link href="../../../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+		<link href="../../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h1><a name="top"></a>Download Completed E-Delivery</h1>
+		<p>
+			<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailColumnDesc.flsnp" />
+		</p>
+		<table style="border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;mc-table-style: url('../../../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+			<caption class="Table">Download Completed E-Delivery </caption>
+			<col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+			<thead>
+				<tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+					<th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Action, To Name/Email, From Name/Email, CC Address, Available Tags, and Notes</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">Action</p>
+						<p>This email is sent for the child cases when they are complete for Fill and Sign and Sign Only workflows for E-delivery. This email template is not sent for Delivery Only workflow because they already received the Download email. The Download Completed e-Delivery is sent two times if there is an agent signer on the child package.</p>
+						<ul>
+							<li>
+								<p>Leave behind – send Download Completed e-Delivery immediately so the insured or owner gets their completed forms immediately upon signing completion.  This will not have the agent signatures because they are not done yet.  The agent signs one time for all packages.</p>
+							</li>
+							<li>
+								<p>Completed email – send to the child recipients after agent signs, which is when the entire package is complete.  Send the Download Completed e-Delivery email again only if there are agent signatures. That means we send this email when the owner and insured and any agent signing are done and the entire package is marked eDelivery Complete.  Suppress this email if there are no agent signatures on the child package.</p>
+							</li>
+						</ul>
+						<p>Template Name: Download Completed E-Delivery </p>
+						<p>Email Subject Line: Print or download your &lt;ACTIVITY_NAME&gt;.</p>
+						<p>Message:</p>
+						<p class="Indent2">Dear &lt;CLIENT_NAME&gt;,</p>
+						<p class="Indent2">Thank you for applying for '&lt;PRODUCT_NAME&gt;' of &lt;COMPANY_NAME&gt;.</p>
+						<p class="Indent2">To download or print the completed &lt;ACTIVITY_NAME&gt;, please click on the link at the bottom of the email. You is asked for your birth date and the last 4 digits of your social security number.</p>
+						<p class="Indent2">If you have questions, please contact your producer.</p>
+						<p class="Indent2">To download or print your completed &lt;ACTIVITY_NAME&gt;, click on &lt;URL_LINK&gt; and enter the last 4 digits of your SSN and your birth date. If a new window does not automatically appear, you may have to copy the link and paste it into the address bar of a new browser window.</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<p class="thead1">To Name / Email</p>
+						<p>Client Name/Email typed in email fields or pre-filled from mapped dataitems</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">From Name / Email</p>
+						<p>From Name/Email used in client Fill and Sign and Sign Only requests if available, else organization name/address</p>
+						<p>Use Agent: Owning Agent’s Preference Name/Email</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<p class="thead1">CC Address</p>
+						<p>If <a href="../../Groups/App.htm#EnableCcSenderInAllRequests" target="_blank" alt="Enable Cc Sender In All Requests">Enable Cc Sender In All Requests</a> is set in Organization Configuration/Groups page on the App tab, cc email sent to ‘From Email’ address</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">Available Tags<sup>3</sup></p>
+						<p>&lt;AGENT_NAME&gt;<br />&lt;CLIENT_NAME&gt;<br />&lt;ACTIVITY_NAME&gt;<br />&lt;APPLICATION_ID&gt;<br />&lt;COMPANY_NAME&gt;<br />&lt;DATE_TIME&gt; (current datetime in UTC)<br />&lt;HYPER_LINK&gt;<br />&lt;PRODUCT_NAME&gt;<br />&lt;PRODUCT_TYPE&gt;<br />&lt;SIGNER_ROLE&gt;<br />&lt;STATUS&gt;<br />&lt;TRANSACTION_TYPE&gt;<br />&lt;URL_LINK&gt;<br />ApplicationSearchItems<sup>4</sup> (e.g., add &lt;CLIENT_NAME&gt;)</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+						<p class="thead1">Notes:</p>
+						<p>
+							<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailNote3.flsnp" />
+						</p>
+						<MadCap:snippetBlock src="../../../Resources/Snippets/Email/EmailNote4.flsnp" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<MadCap:snippetBlock src="../../../Resources/Snippets/Email/EmailSeeAlso.flsnp" />
+		<p><a href="#top" alt="Return to Top">Return to Top</a>
+		</p>
+	</body>
+</html>

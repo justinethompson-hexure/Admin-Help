@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable View History</b> checkbox to disable  the ability to view the History dialog. The View History blue link on the All Activities page will not be visible nor will the History option in the Other Actions menu. <MadCap:conditionalText MadCap:conditions="General.Online">See also All Activities, <MadCap:xref href="../../../../UserGuide/All Activities/View History.htm" target="_blank" alt="View History [User Instructions]">View History [User Instructions]</MadCap:xref>.</MadCap:conditionalText></body>
+</html>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Use the Case Access tab to grant Full Control access to all activities by one user group to users in the same or other user groups. </p>
+        <p>
+            <b class="Bold">Example:</b>
+        </p>
+        <p>A common scenario would be to grant Sales Desk users case access to Agent users' cases (activities). </p>
+        <ol>
+            <li>On the <b class="Bold">Organization Configuration/Groups</b> page, select a user group in the grid at the top of the page. </li>
+            <li>Click the <b class="Bold">Case Access</b> tab.</li>
+            <li>
+                <p>Select the checkbox for each user group that will have Full Control access to activities (cases) created by the user group selected in step 1. For example, select a <b class="Bold">Sales Desk Group</b> in the grid at the top of the <b class="Bold">Groups</b> page. On the <b class="Bold">Case Access</b> tab, select the <b class="Bold">Agent Group</b> checkbox so that Sales Desk users can troubleshoot, edit and complete activities created by the users in the Agent group. <b class="Bold">NOTE:</b> When setting case access for an Agent Group, ensure the <b class="Bold">Agent Group</b> checkbox is cleared on the Case Access tab  to prevent agents from accessing other agents' cases. </p>
+                <p MadCap:conditions="General.Online">The following image provides a sample Agent group case access by a Sales Desk group.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../../ImagesAdmin/GroupPage3.png" alt="Sample Agent Group Case Access" title="Sample Agent Group Case Access" MadCap:conditions="General.Online">
+                    </img>
+                </p>
+            </li>
+            <li>(Optional) Select the <b>Check/Uncheck All</b> checkbox to select or remove case access by all users in all user groups.</li>
+            <li>In FireLight, users go to <b class="Bold">All Activities</b> and click the search icon next to the <b class="Bold">User</b> list to open a dialog and select a user to view their activities. FireLight adds the selected user to the User list next to the search icon.</li>
+        </ol>
+        <p>
+            <b class="Bold">NOTE:</b> If one or more groups are selected on the Case Access tab, and the user group has the Enable All Activities User Share checkbox or the <a href="../../../../Organization Configuration/Groups/App.htm#AllowActivityShare" alt="Allow Activity Share">Allow Activity Share</a> checkbox selected on the App tab in Groups, the Case Access settings can override the user Share Read Only options by granting Full Control access to the members of the selected user groups along with the user share options. The Enable All Activities User Share option can be used in combination with the <a href="../../../../Organization Configuration/Groups/App.htm#DisableEditingOtherUsersActivities" alt="Disable Editing Other Users' Activities">Disable Editing Other Users' Activities</a> on the App tab to provide Read Only access instead of Full Control access to shared activities. See <MadCap:xref href="../../../../Organization Configuration/Groups/Case Access and User Share Comparison.htm" target="_blank" alt="Case Access and User Share Comparison">Case Access and User Share Comparison</MadCap:xref> for more information about how Firm ID, Case Access and Enable All Activities User Share interact.</p>
+    </body>
+</html>

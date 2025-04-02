@@ -1,0 +1,998 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>FireLight v2.20 Release Notes</h1>
+        <p class="note">
+            <b>NOTE:</b> Refer to the "FireLight v2.20 Release History" page in FireLight<sup>®</sup> Admin Help to access links for available CMR design documents and Help topics.</p>
+        <h2>2.20.192 April 20, 2021 UAT Patch / April 23, 2021 Production Patch</h2>
+        <p>
+            <b class="Bold">NOTE:</b> A Translation update is included in this patch.</p>
+        <h2>Fixed Defects</h2>
+        <p>
+            <b class="DRNumberBold">Console for Windows</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 244872 </b> Console: Cannot complete signature with initials. Problem Summary: Was using old signature request in console. Single signer wasn't working. Resolution: Updated signing methods on the console. Account for single signer.<br></br>Areas Impacted: Signature methods, and console signing process</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">E-Delivery</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 244395 </b> E-Delivery - Falls into Approval Loop. Problem: Cannot complete agent signing and stuck in approval loop if child case with agent signature is signed first and there is not an agent signature on agent case. Resolution:  Check the child case not currently being signed for the status and required agent signatures in order to allow agent signature on one child case and not the other child case and no agent signatures on the agent case.<br></br>Areas impacted:  E-delivery fill and sign signing and completion process</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">SendGrid</b>
+        </p>
+        <ul>
+            <li>
+                <p>Enable SendGrid.  <b class="Bold">Impact: High</b>  The configuration file was not properly setup to enable send grid for our production release on 4/9/2021.  SendGrid has been enabled in UAT for a few months.  When we deploy the patch to production, this change will enable the use of send grid in production.</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Swiss Re Magnum Integration</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 244786 </b> Get error opening Magnum again after closing. Problem: We were making an incorrect PUT API call to the Magnum service instead of a POST. This was causing all Magnum sessions after case creation to fail. Resolution: Updated the API request to use a POST instead of a PUT.<br></br>Areas Impacted: Magnum dialogs in Wizards </p>
+                <p>
+                    <b class="Bold">NOTE:</b> An updated <em>FireLight Magnum Integration Guide</em> is included in the Admin Help.</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Wizards and Forms</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 243227 </b> Wizard - setreadonly rule cannot be used to make current field readonly. <b class="Bold">Impact: Low</b> Problem: the setreadonly rule could was not able to make the current field readonly.  The rule would run, but the base system would always immediately set readonly back to false for the current field. Resolution: Modified the base system to not clear the readonly state of the current field when updating the field value, so that if set to readonly by rules, it will remain readonly.<br></br>Areas Impacted: Wizard UI, when updating fields that have rules to make the current field readonly</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 244451 </b> Wizard - some pages with errors do not display as page has error in Nav and not included in percent complete. <b class="Bold">Impact: Low</b> Problem: In 2.20, a bug fix was made (iConnect 240231) to recursively disable child fields when the setcontrolstate or statecontrolrangestate rules disable a data item. Validation messages are not displayed for disabled fields, and when a disabled field is encountered, child fields of that field are not processed for validation messages that would be added to the a) error list and b) included in % complete.  (The validation message is still displayed on the field itself since it is handled differently). Resolution: When processing validation messages for the error list and % complete, include enabled children of disabled fields.<br></br>Areas Impacted: Wizard UI</p>
+                <p>
+                    <strong>NOTE:</strong> It was not anticipated that the same data items would be used in multiple field hierarchies, and children of a field in other hierarchies would not be enabled/disabled with the changes for iConnect 240231 (this is not a bug).  One workaround for the above issue is to avoid using duplicate data items in multiple locations.</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 244533 </b> DataGrids have the error message in gray instead of Red. <b class="Bold">Impact: Low</b> Problem: the issue was due to changes made for WCAG recommendations. Resolution: made changes in _dataGrid.scss to resolve the issue.<br></br>Areas Impacted: Error messages in wizard DataGrid controls</p>
+            </li>
+        </ul>
+        <h2>2.20.192 April 9, 2021 Production Release</h2>
+        <h2>Known Issue</h2>
+        <p>This affects the combined wizard + forms UI, when a wizard (actually any wizard within the activity) has multiple fields on different panels or pages with the same ID (i.e., MY_DATA_ITEM).  If one instance is in a chain of descendant controls where a parent field is disabled via a rule, with the implementation of iConnect 240231, this will now disable all children of that parent, including the one with ID MY_DATA_ITEM, and this will also disable any other instances of field with ID MY_DATA_ITEM on the wizard (because it’s the data item itself that becomes disabled), but not its descendant controls / data items in the other instances.  When this occurs, such descendant fields will still be enabled and could have validation messages, but those messages will not count toward % complete or be shown in the error list.  The workaround is to not use the same ID for multiple fields in different sections of any wizard within the activity.</p>
+        <MadCap:pageBreak>
+        </MadCap:pageBreak>
+        <h2>Enhancements</h2>
+        <p>
+            <b class="DRNumberBold">Accessibility - FireLight App  (Work in Progress)</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">CMR 238923 </b> (Carriers and Distributors) Enhancements to support Web Content Accessibility Guidelines (WCAG) - Level A. Accessibility enhancements for FireLight<sup>®</sup> App to conform to Level A WCAG requirements. We are still working on this enhancement. More information is provided about breaking changes.</p>
+                <p>Adherence to Web Content Accessibility Guidelines is critical to navigation for individuals who require assistance with web use. Assistive technology is also negatively impacted as a result of web content that does not conform to defined accessibility guidelines. There are three levels of Web Content Accessibility Guidelines (WCAG) compliance: A, AA and AAA. The levels of accessibility are broken down into four principles: Perceivable, Operable, Understandable and Robust (POUR). Enhancements are needed for FireLight to comply with the Web Content Accessibility Guidelines for Level A. FireLight will continue to be enhanced in future releases to work toward the desired accessibility of Level AA. </p>
+                <p>Impacts: </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Clients who use Automated testing </p>
+                    </li>
+                    <li>
+                        <p>Embedded clients who interact with the object model of FireLight web pages</p>
+                    </li>
+                    <li>
+                        <p>Multiple impacts across the system: Impacts on client branding will need reviewed (Hexure will make updates for clients, clients needs to review)</p>
+                    </li>
+                    <li>
+                        <p>IXN is not expected to be WCAG level A compliant for April. We will work with IXN to meet compliance in a future release</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Admin Help</b>
+        </p>
+        <ul>
+            <li>
+                <p>Added the following Spotlight Feature Videos to Admin Help:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>
+                            <a href="https://vimeo.com/522132713/e0c6555854" target="_blank" title="2.20 Enhancements" alt="2.20 Enhancements">2.20 Enhancements</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="https://vimeo.com/499292261/8246d7bff2" target="_blank" title="https://vimeo.com/499292261/8246d7bff2" alt="https://vimeo.com/499292261/8246d7bff2">2020 Vision Recap</a> and <em>2020 Vision Recap Roadmap Presentation 2020.pdf</em></p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="https://vimeo.com/515508685/52ad6cf174" target="_blank" title="Base System Testing" alt="Base System Testing">Base System Testing</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="https://vimeo.com/533583617/ff72a50da5" target="_blank" title="Custom Lists and Rules Video" alt="Custom Lists and Rules Video">Custom Lists and Rules</a>
+                        </p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Admin Tool</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">CMR 216273 </b> (Carriers and Distributors) Add ability to view back-office output for carriers in test. Currently within FireLight, a user is not able to see the output file that is sent to the DTCC to help troubleshoot any issues that might be occurring. With this enhancement, we will create a few feature within the Admin Tool that will allow users to be able to see application information on each case that is being sent to the DTCC; particularly the App/Sub status.  With this status, the user is able to view the output file, and also download it.  </p>
+                <p>Impacts:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>New UI - A new UI is built (similar to the API Insights tool) to incorporate the application information.</p>
+                    </li>
+                    <li>
+                        <p>Group Settings - This feature is visible based on role code; a new checkbox has been added to enable this feature.</p>
+                    </li>
+                    <li>
+                        <p>Audits - A new audit message is displayed within the history and audit report to show when a user has viewed this information and if they downloaded a file.</p>
+                    </li>
+                    <li>
+                        <p>Within the Testing Environments ONLY - This feature will only be within the QE, UAT, and Staging Environments for now, as to not display any PII information.</p>
+                    </li>
+                    <li>
+                        <p>This feature applies to the App/Sub file only. Attachments are not included in this enhancement.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">CMR 236718</b> (Carriers and Distributors) Remove SSN/DOB Validation from Signer Verification and Only Show Passcode. Base enhancement to remove the top option asking for the SSN/DOB validation and ONLY present the option to enter the Passcode provided during initial validation. A new Organization Setting is implemented for this validation type. All signing processes is validated with the new Organization Setting turned on. This enhancement will touch the signing functionality for: Request Client to Fill App, Request Client to Fill - Generate Link Without Email, Request Client to Fill &amp; Sign, E-Sign - Sign Now, E-Sign - Remote Sign, E-Sign - Generate Link Without Email. Tele-Sign and E-Delivery is excluded from this enhancement request. SMS Text and LexisNexis validations will continue to function with this new Organization Setting.</p>
+                <p>Impacts:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Admin-New Organization Setting</p>
+                    </li>
+                </ul>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>The SSN/DOB validation options are not displayed when the Organization Setting is selected in Admin. All client signing options will display a validation window that contains only the passcode option: Request Client to Fill App, Request Client to Fill - Generate Link Without Email, Request Client to Fill &amp; Sign, E-Sign - Sign Now, E-Sign - Remote Sign, E-Sign - Generate Link Without Email.</p>
+                    </li>
+                    <li>
+                        <p>UI Impacts: If the org setting is checked, the UI for entering all signing types, Client fill and Sign, and Client Fill is altered to only show passcode.</p>
+                    </li>
+                    <li>
+                        <p>Leave Behind emails and client completed emails will now also have the updated UI that will only show passcode.</p>
+                    </li>
+                    <li>
+                        <p>Clients who use Tele-Sign, E-Delivery, SMS Text and LexisNexis should expect to perform additional regression testing.</p>
+                    </li>
+                    <li>
+                        <p>Console is out of scope for Passcode Only Validation.</p>
+                    </li>
+                </ul>
+                <p>
+                    <b class="Bold">PLEASE NOTE:</b> Using the Passcode Only Validation Organization setting without adding SMS Text or LexisNexis for multi-factor authentication can weaken the link from a security perspective. The URL link to access completed documents is sent to the email address entered by the agent/advisor, followed by an additional email containing the passcode. If the email address is incorrectly entered (but is a valid email) there is a potential security risk involved with this process. All users should ensure emails are properly entered and/or add a multi-factor authentication. If your firm organization feels there is an enhanced security risk, please do not use this setting. Additional enhancements is included in future releases to tighten security with this organization setting active.</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">CMR 239914</b> (Carriers and Distributors) Sales Agreement History to Include Custom List Changes. In the 2.19 release, FireLight was enhanced to add or remove Custom Lists using the Sales Agreement page (215635). This functionality added the ability for Custom List deployments to be included in the All Configuration Scope. The History was unable to be enhanced during that release. The Sales Agreement History is updated to include records for adding and/or removing Custom Lists via the Sales Agreement page. <p>Impacts: </p><ul style="list-style-type: circle;"><li><p>Admin, Sales Agreement History - Will now display history of Custom List changes (add/remove) made on the Sales Agreement Page</p></li></ul></p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <b class="DRnumber">CMR 242623 </b> (Carriers and Distributors)&#160;Limit the ability to update purge policy for Activities. Purge policy values were not being limited to a max value in Activities. Because these directly correspond to the data usage FireLight has on our server we need to manage this more closely. We changed these values to be editable only by internal Hexure "Vendor" roles. When a client needs to modify the values they will need to work with their FireLight PM.  <p>Impacts:</p><ul style="list-style-type: circle;"><li><p>Product Configuration, Activities - Complete Purge Policy and Incomplete Purge Policy settings</p></li></ul></li>
+            <li>
+                <b class="DRnumber">Rule Node Enhancement </b> Added a new "disetchildren" rule node that will point to a single data item. If the data item is a group or a panel, all children will have their values set to a value that is specified. This node should work similarly to DiSet, but will set the children of a particular component instead of a setting the component itself. In Admin Help, see "|disetchildren" in the "Advanced Rules Category and Element Definitions Reference" topic.</li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Common Tags</b>
+        </p>
+        <p class="Indent">Added the following common tags:</p>
+        <ul>
+            <li>
+                <p>FLI_CURRENT_FIRM_NAME - The current firm name for the activity.</p>
+            </li>
+            <li>
+                <p>FLI_FIRM_NAME - The firm name for the activity.</p>
+            </li>
+            <li>
+                <p>FLI_DOCUSIGN_ESIGN - Allows an organization to override the standard FireLight signing method with the DocuSign signing method in the rules.</p>
+            </li>
+            <li>
+                <p>FLI_THIRDPARTY_CONFIG_GROUP - Allows an organization to extend the config group value set in the Admin Third-Party Configuration in the rules.</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Console</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">CMR 216386 </b> (Carriers and Distributors) Support the ability to check out activities on the offline console containing both Wizards and Forms. Currently, if a client wants to use the console, they are not able to check out any activities that have wizards.  With this enhancement, you is able to check out activities that have wizards, by bypassing the wizards in the package, and allowing the forms to be checked out through the console. Clients will need to manage any data collection that is required on wizards, and ensure that these data items and rule sets are being captured on the forms to not hinder these activities reaching a complete status. </p>
+                <p>Impacts: </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Console check in/out process - Forms will only be seen within the console, even if wizards are applied in the same application.</p>
+                    </li>
+                    <li>
+                        <p>Wizard Only Applications will NOT be able to be checked out and will produce an error if selected to check out to the Console.</p>
+                    </li>
+                    <li>
+                        <p>Data collection and Rule Sets - Clients will need to manage any data collection that is required on wizards, and ensure that these data items and rule sets are being captured on the forms to not hinder these activities reaching a complete status.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">CMR 233782 </b>
+                    <b class="DRNumberBold">Work in Progress</b> (Carriers and Distributors) Localization of the Console. We are still working on the translations for this enhancement. To continue with the Localization of FireLight, we are looking to add localization for Spanish and French Canadian to the console. For this release, we are focusing on Spanish translations only, and will move to other languages in the near future. For this release we is focusing on the Windows version only. </p>
+                <p>Impacts: </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Console - The entire console is localized for the Spanish language including the home dashboard, the console settings, the Checked out applications tab, and  Application History.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">E-Delivery</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">CMR 240910 </b> E-Delivery Cleanup. This enhancement is specific for e-Delivery Fill and Sign Client Directed workflows where FireLight will store and send the Request Change Client reason in the 1122. The Request Change reason entered during the client session is stored in the 1122 in the Client's KeyValue section with the value of FLI_CHANGE_REASON. </p>
+                <p>Impacts:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>e-Delivery Fill and Sign Client Directed Request Change reason is stored in  FLI_CHANGE_REASON</p>
+                    </li>
+                    <li>
+                        <p>e-Delivery Fill and Sign Client Directed Request Change reason is passed in the 1122 in  FLI_CHANGE_REASON</p>
+                    </li>
+                </ul>
+                <p>
+                    <b class="Bold">NOTE:</b>&#160;Added an updated <em>FireLight E-Delivery Guide</em> to the Admin Help.</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">E-Signature - DocuSign (Work in Progress)</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">CMR 237379 </b> (Carriers and Distributors) Support the use of DocuSign within FireLight. We are still working on document retrieval from DocuSign for this enhancement. With this enhancement, FireLight is integrating with DocuSign to allow the option for our clients to use the DocuSign services for their e-signature captures.  This is an available option for our Remote Signature only for this release. </p>
+                <p>Assumptions to consider with this project:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>DocuSign must be honored anytime it is enabled regardless of the Org initiating the application.  Meaning, Carriers enable DocuSign and deploy the app to the distribution.  FireLight must honor DocuSign for the distribution as well as honor it in the carrier Org.</p>
+                    </li>
+                    <li>
+                        <p>DocuSign will support Remote Sign Only.</p>
+                    </li>
+                    <li>
+                        <p>FireLight is handing off the signing process for remote sign when DocuSign is enabled. Any Email notification, Signing and audit is completed within the DocuSign environment.</p>
+                    </li>
+                    <li>
+                        <p>When DocuSign is enabled, the Signature Audit will not be captured within the FireLight Signing audit, however FireLight is receiving a signature audit back from DocuSign that is attached to the application and sent within the client's payload.</p>
+                    </li>
+                    <li>
+                        <p>FireLight will need the signed documents with the digital signature applied and the DocuSign signature audit returned 100% complete to FireLight.  The clients that need DocuSign implemented have the DocuSign digital signature, tamper evidence and audit approved.</p>
+                    </li>
+                    <li>
+                        <p>FireLight must be able to retain the digital signature without breaking the hash for the DocuSign documents.</p>
+                    </li>
+                    <li>
+                        <p>FireLight must be able to send documents completed by DocuSign to the different firms (Distributor receive X&amp;Y forms and Carrier receives A, B, and C).</p>
+                    </li>
+                    <li>
+                        <p>FL will need a bi-directional ability to cancel the eSignature (A user can cancel the signature from FireLight and from DocuSign).</p>
+                    </li>
+                    <li>
+                        <p>The User MUST have authentication when sending PII information to DocuSign, so FireLight will still send the last 4 digits of the SSN and DOB of each party to DocuSign.</p>
+                    </li>
+                </ul>
+                <p>Impacts: </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>FireLight E-Signatures - Specifically the "Send Email Request" or Remote Signing capability</p>
+                    </li>
+                    <li>
+                        <p>Organization Settings - Enabling the DocuSign option</p>
+                    </li>
+                    <li>
+                        <p>Third-Party Configuration Table - service type for DocuSign, new column for sub firm "Control Group"</p>
+                    </li>
+                    <li>
+                        <p>App Changes - New UI page for "DocuSign Signing Ceremony" information that can be entered and initiate the call to DocuSign</p>
+                    </li>
+                    <li>
+                        <p>Reports - the Third-Party configuration Report is altered to show the DocuSign signed applications and add the Control Group</p>
+                    </li>
+                    <li>
+                        <p>Audits - New audits is created to capture the calls to DocuSign, any cancellations, and the completion of the signature process</p>
+                    </li>
+                    <li>
+                        <p>Display Statuses - New display statuses will show when the signature process is in process, cancelled, or completed through DocuSign</p>
+                    </li>
+                    <li>
+                        <p>Transfer - Transfer is disabled when DocuSign is used, even if it is selected within the groups settings. Share will not be impacted</p>
+                    </li>
+                    <li>
+                        <p>Client Fill and Sign - Client Fill and Sign is disabled when DocuSign is used, but will also notify the user of this through a tool tip</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">E-Signature - Embedded: Signature in React</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">CMR 204256 </b> (Carriers and Distributors: Embedded Clients) This enhancement will take the existing E-signature process that is currently in place, and make it available within the React system.  This will allow a user to be able to move through the E-signature process outside of our current Legacy system.  This is a phased approach, the majority of the current functionality will still be available, eventually allowing all of our functionality to work within React.</p>
+                <p>In this release, we is focusing on the Client API, specifically utilizing the Sign Now functionality.  This enhancement will allow embedded clients to enter into the E-signature ceremony to complete the signing process for their parties.  This enhancement will impact the Initialization page, Client Consent Capture, Presentation of Required Signers and Completed Signatures, and the Sign now functionality, which will include Document sets, initials, and capturing a signature.  This enhancement will not include the SMS text Functionality, LexisNexis, Topaz Functionality, or Driver License Verification.</p>
+                <p>While this enhancement will impact the full sign now functionality of the E-signature process, it will not impact the existing Legacy feature, meaning this is only impacting Embedded clients at this time. </p>
+                <p>Impacts: </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>E-Signature Ceremony for Client API / Embedded Clients </p>
+                        <ul style="list-style-type: square;">
+                            <li>
+                                <p>Initialization Page</p>
+                            </li>
+                            <li>
+                                <p>Client Consent Capture Page</p>
+                            </li>
+                            <li>
+                                <p>Presentation of Required Signers and Completed Signers Page</p>
+                            </li>
+                            <li>
+                                <p>Presentation of Documents Page</p>
+                            </li>
+                            <li>
+                                <p>Document Sets</p>
+                            </li>
+                            <li>
+                                <p>Capture Signature Page</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Email - SendGrid</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">CMR 232288 </b>
+                    <MadCap:conditionalText MadCap:conditions="General.Postpone">Kevin B </MadCap:conditionalText> SendGrid (Carriers and Distributors) Added code to FireLight to support a new third-party email service called SendGrid for the outbound emails that come out of FireLight. The goal of this project is to improve our email delivery to Google and other large email providers, to improve visibility into email delivery, and to possibly leverage additional services provided by SendGrid to enhance the overall email validation and tracking within FireLight. We are now ready to turn SendGrid on in our UAT environment. This is a more thorough test of the feature, but may require changes in your network configuration, specifically it may require an update to the DNS record of your domain.</p>
+                <p>Impacts:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>May require changes in the organization's network configuration, specifically it may require an update to the DNS record of your domain. If you have set your organization support email address to a corporate email address, you probably also updated the SPF record on your domain to include the IP Addresses of the email servers used by FireLight.  You will need to have your network team add to your SPF record the IP address SendGrid will use to send email on behalf of FireLight.  The SendGrid IP Address is 168.245.13.50.  We do suggest that you keep the existing IP address within your SPF record you have set up for FireLight in case we need to roll back to our legacy email code. We are also planning on keeping our current mail server(s) and will use it as a back up to SendGrid in case we ever run into problems that require us not to use SendGrid.  We recommend sharing this information with your network team so that they are aware of this change.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">FireLight Access</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">CMR 233321 </b> (Carriers and Distributors) FireLight Access: Single User Associated with Multiple Firms. It is common for Advisers/Agents to be associated with multiple selling organizations or distributors. A single agent may be associated with a Broker-Dealer through which all securities products are sold, a BGA for all of their non-securities Life business, and one or more IMOs for annuity business. </p>
+                <p>In a situation where a carrier implements their own FireLight environment while utilizing FireLight Access as the means of authenticating users, the carrier would like to be able to associate that user with multiple firms/sales organizations. There are multiple reasons why carriers would want to differentiate by selling organization; including product availability, workflow, review, suitability, compensation, etc. </p>
+                <p>The successful implementation of this functionality will include the following: </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Organization is able to enter/upload/manage FireLight users that are associated with more than one selling organization/FirmID.</p>
+                        <ul style="list-style-type: square;">
+                            <li>
+                                <p> FireLight Access will need to support multiple Firm IDs for a single user name (email address).</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>When a user name/email address is associated with more than one Firm ID, there is a dialog presented after authentication that will require the selection of a firm prior to entering FireLight. If the user name/email has only one Firm ID with which it is associated, the firm selection dialog is hidden. </p>
+                        <ul style="list-style-type: square;">
+                            <li>
+                                <p>There is no change to the current login page/dialog.</p>
+                            </li>
+                            <li>
+                                <p>The login process will query the system to determine if the user is associated with more than one firm ID.</p>
+                            </li>
+                            <li>
+                                <p>If the user is associated with more than one firm, a new dialog is presented to allow for selection of the firm with which the user is submitting business for this session, else the dialog will not be shown.</p>
+                                <p>*The dropdown in the new dialog will need to display the name of the firm as the user will likely not know the firm ID.</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">FireLight and LexisNexis Integration</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">CMR 239187</b> (Carriers and Distributors)  This Enhancement allows the ability to recognize and save any data that is associated to the LexisNexis custom action calls - including both the Instant ID and Risk Classifier services.  This gives the user the ability to  have data automatically save once a custom action button is selected associated with LexisNexis services, as well as prevent the application from being deleted.  These services give the requesting organization the ability to retrieve this information up until the application purge, especially if this data wasn't submitted to their back office. This enhancement will only affect users of the LexisNexis Instant ID and Risk Classifier Solution functionality. </p>
+                <p>Impacts:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Custom Action, specifically Action Type "LexisNexis" - when this button is clicked, the data already entered is retained and the application will no longer be able to be deleted.</p>
+                    </li>
+                    <li>
+                        <p>Delete Button within All Activities - this button is disabled, with a tool tip explaining the reasoning when hovered over.</p>
+                    </li>
+                    <li>
+                        <p>Save - The application will automatically save once the Custom action button for LexisNexis is clicked. The application will still ask the user if they want to save if they exit prematurely from submitting the application. This was left to still give the user the ability to save, however, if they select "no" the information will still save per the custom action button.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b class="DRnumber">CMR 240025 </b>  (Carriers and Distributors)  Adding Risk Indicators to the LexisNexis Instant ID Service. With the Instant ID service from LexisNexis, FireLight is receiving the CVI Score, NAS Score, NAP score, and Pass/Fail value.  With this enhancement, FireLight will also receive any risk indicators that may be associated with the user.  These is able to be mapped to a dataitem through the data group properties, where rules can be written for these values.  This will also allow the values to be sent within the organization's outbound process.  This will only impact users using the Instant ID service who would also like to receive the additional risk indicators.  Any implementations that are already in place will not be affected. (This is delivered prior to the 2.20 release in a patch.)<p>Impacts:</p><ul style="list-style-type: circle;"><li><p>LexisNexis Instant ID service: Risk Indicators will now be available to be received and mapped within FireLight.</p></li><li><p>Forms: A new Data group property has been created to map any risk indicators received by LexisNexis to the forms.</p></li><li><p>Audits: The audit report has been altered to include any risk indicators that are received.</p></li></ul></li>
+            <li>
+                <b class="DRnumber">CMR 243306 </b> Audit Report Displays the LexisNexis Order Number in the LexID column. Modified the Audit Report header name of the column that contains the Order Number and LexID from "LexID" to "LexID/OrderNumber."</li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">FireLight and RGA Aura Next Integration (Multi-Release)</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">CMR 238933 </b> (Carriers and Distributors) RGA Aura Next Integration. Enhance FireLight to leverage the Aura Next JavaScript and APIs within a FireLight application to gather underwriting data for life applications. </p>
+                <p>
+                    <em>Additional information and impacts is available in the August release.</em>
+                </p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">FireLight and Swiss Re Magnum Integration</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">CMR 224601 </b> (Carriers and Distributors) Enhance FireLight to leverage the Magnum Pure Engine APIs within a FireLight application to gather underwriting data for life applications.</p>
+                <p>The Magnum Pure Engine APIs is embedded in FireLight and shown in a dialog when opened by clicking on a Custom Action button added to a wizard page in the application.</p>
+                <p>When Magnum is opened, data is passed in the bootstrap process from the FireLight application to set up the correct interview questions in Magnum.</p>
+                <p>When Magnum is closed, the data is saved and passed to FireLight, which is mapped to the appropriate form fields so the data is submitted with the application.</p>
+                <p>FireLight will query the Magnum API for a status. Once the data is complete in the Magnum interview the status is set to complete.  FireLight rules is able to leverage the status to recognize when the application can be set to 100% complete when data entry is finished. After the Magnum interview is complete, it can be reopened and updated prior to application submittal.</p>
+                <p>FireLight will also retrieve and store the case level underwriting decision when the interview is complete.  Additionally, the full underwriting decision tree is stored in JSON format and made available to the provider for added customizations.</p>
+                <p>Note that the Magnum setup is handled by the carrier, not the distributor. When a distributor runs a carrier product activity, the carrier custom action button, custom lists and provider are called after the relevant distributor components.</p>
+                <p>Impacts:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Admin, Custom Action Properties: New option named External Source.</p>
+                    </li>
+                    <li>
+                        <p>Admin, Custom Action Properties: External Source Type with option Magnum to tie Magnum API to the custom action button.</p>
+                    </li>
+                    <li>
+                        <p>Admin, Custom Action Properties: New Outbound Mapping List and Inbound Mapping List options with Custom List options to allow selection in mapping list to pass to Magnum and receive from Magnum.</p>
+                    </li>
+                    <li>
+                        <p>Admin, Custom Action Properties: New External Source Parameter to enter rulebase name.</p>
+                    </li>
+                    <li>
+                        <p>Admin, Organization Settings, 3rd Party Service Config: New Magnum Service Type with ApiKey, and Site URL.</p>
+                    </li>
+                    <li>
+                        <p>App: Dialog appears when the Magnum Custom Action button is clicked with the Magnum interview underwriting questions.</p>
+                    </li>
+                    <li>
+                        <p>App: A Magnum Case ID is created the first time the Magnum Custom Action button is clicked in an application.</p>
+                    </li>
+                    <li>
+                        <p>App: The Magnum Case ID is never replaced on an application where the Case ID has already been generated.</p>
+                    </li>
+                    <li>
+                        <p>App: The Case ID is attached to the application and passed when the application is submitted to the backend admin system at the carrier.</p>
+                    </li>
+                    <li>
+                        <p>App: Magnum dialog can be opened and data updated any time after it is completed prior to the FireLight application submittal.</p>
+                    </li>
+                    <li>
+                        <p>App: Data entered in Magnum is saved when a user clicks the dialog Close button or clicks off the dialog and it closes.</p>
+                    </li>
+                    <li>
+                        <p>App: Outbound Mapping List data is passed to Magnum from FireLight when Magnum is opened.</p>
+                    </li>
+                    <li>
+                        <p>App: Updated Outbound Mapping List data is passed to Magnum from FireLight when Magnum is opened.</p>
+                    </li>
+                    <li>
+                        <p>App: Inbound Mapping List data is passed to FireLight from Magnum when Magnum dialog is closed.</p>
+                    </li>
+                    <li>
+                        <p>App: Inbound Mapping List Magnum data is mapped to applicable FireLight form field data items.</p>
+                    </li>
+                    <li>
+                        <p>App: Underwriting case decision is retrieved from Magnum and added to a data item in FireLight when the interview is finished.</p>
+                    </li>
+                    <li>
+                        <p>App: All Magnum data is cleared in a copied activity.</p>
+                    </li>
+                    <li>
+                        <p>App: Entries appear in the audit each time the Web service is called to open and close the dialog.</p>
+                    </li>
+                    <li>
+                        <p>App: A single record appears in the service request table containing the case ID and the JSON returned from Magnum. A single record appears in the service request table containing the full case decision JSON returned from the Magnum decision service.</p>
+                    </li>
+                    <li>
+                        <p>App: An error message appears if the Magnum dialog attempts to open and the Web service unavailable.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Integration/Provider</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">CMR 241776 </b> GetPrintPDFs needs a way to save off the current dataitems and generate PDFs. Problem: When the callexternal rule calls the provider, and the provider needs to call GetPrintPDFs on the document service, it needs to pass the current data items so that the generated PDFs will contain the latest data entry values.</p>
+                <p>Resolution:</p>
+                <ol>
+                    <li>
+                        <p>Add a ReadOnlyDataItems collection to the ExternalCallContext, which will contain the current session data item dictionary, so that it is available in the provider.  The provider should not modify this collection but can use it to pass through to base.</p>
+                    </li>
+                    <li>
+                        <p>Create an overload of the GetPrintPDFs document service method that accept a dataItems dictionary parameter and uses these data items if passed instead of loading from the database.  The provider can pass the ReadOnlyDataItems collection to this overloaded method to generate PDFs using the latest values from the user's data entry session.</p>
+                    </li>
+                </ol>
+                <p>Areas Impacted: callexternal rule and GetPrintPDFs document service method</p>
+            </li>
+        </ul>
+        <MadCap:pageBreak>
+        </MadCap:pageBreak>
+        <p>
+            <b class="DRNumberBold">Quote and Product Repository</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">CMR 238922 </b> (Carriers and Distributors) Embed IXN Life Quote Solution into FireLight. Hexure will work with IXN to embed the IXN Life Quote solution into FireLight, further enhancing the experience for advisors and agents. The data for life quotes is provided by IXN's tool directly within FireLight, while the Annuity quote tool remains a FireLight tool. </p>
+                <ol>
+                    <li>
+                        <p>Embed IXN in FireLight for Life Quote </p>
+                        <p>Data is passed from FireLight to IXN and from IXN to FireLight. </p>
+                    </li>
+                    <li>
+                        <p>Access FireLight eApp from IXN Life Quote tool</p>
+                    </li>
+                </ol>
+                <p>Impacts: </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>e-Application - Available through IXN's platform after Life Quote process through IXN</p>
+                    </li>
+                    <li>
+                        <p>FireLight Quote - Data mapping is used when available for FireLight to IXN and IXN to FireLight</p>
+                    </li>
+                    <li>
+                        <p>IXN does not currently support Localization</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">CMR 240184 </b> (Carriers and Distributors) Quote Enhancements. This enhancement adds several new features to Annuity quotes. </p>
+                <ol>
+                    <li>
+                        <p>Add state specific quote documents for Annuity.</p>
+                    </li>
+                    <li>
+                        <p>Quote Basic Proposal: Always show expanded index funds for Fixed Indexed Annuity products.</p>
+                    </li>
+                    <li>
+                        <p>Quote Comparison Proposal: Add "N/A" value to Policy Fees when not available.</p>
+                    </li>
+                </ol>
+                <p>Impacts:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Annuity Quote - Ability to upload documents based on jurisdiction. </p>
+                    </li>
+                    <li>
+                        <p>Annuity Quote Basic Proposal Output - Expanded detail based on index funds. </p>
+                    </li>
+                    <li>
+                        <p>Annuity Quote Comparison Proposal Output - Policy fees will display "N/A" when not applicable per PPfA.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Review Queue</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">CMR 232272 </b> (Carriers and Distributors) Apply Additional Info Text to Review Queue History. Currently within the Review Queue, a user can add additional information to the application dashboard within the Review Queue. This can include Policy Number, Owner Name, Agent Name, etc., in order to provide the reviewer with more details pertaining to the application.  This functionality will need to be applied to the Review Queue History page, so that detail can continue to be viewed by the reviewers.  This will impact all users of the Review Queue who currently utilize the Additional Info text box within the Review Queue page in the Admin.</p>
+                <p>Impacts:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Review Queue - will tie the existing functionality of the review queue Additional Info text box (found within the Admin tool) to also show within the Review Queue History page on the e-application.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <b class="DRnumber">CMR 236598</b> (Distributor) Change Max Frequency for Automated Review Queue. The upper validation for the Admin, Review Queue, Automation Retry Interval is currently set to 300 minutes. Update the configuration for the field to allow up to 720 minutes. This will only apply to the Queue Type of "Automated." Expanding this limit will allow the client to have greater control of how many web service calls are performed per day. <p>Impacts: </p><ul style="list-style-type: circle;"><li><p>Automated Review Queue - Upper limit increase allows for greater customization of retry interval selection.</p></li></ul></li>
+            <li>
+                <p>
+                    <b class="DRnumber">CMR 239185 </b> (Carriers and Distributors) Reviewer Documents is Retained through Sequential Review Queues. Within FireLight today, a user is not able to retain comments within reviewer documents from one queue to another unless a workaround is placed within the Provider. For this enhancement, comments made on any reviewer document will need to be retained throughout each sequential review queue that it is associated with.  Even though these comments will still be editable across each queue, the next reviewer is able to view them within the queue that they are assigned, which allows for a more convenient user experience. Additionally, if an application is rejected, then these reviewer documents will need to be retained, especially if the user would want to recall that rejection. This is an impact to all users who currently use reviewer documents within all available review queues (Post-Submit Queues, Pre-submit Queues, and automated queues). </p>
+                <p>Impacts: </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Review Queue - mainly Reviewer Documents - any comments added to the reviewer documents is retained. This will apply to all review queues - Pre-Submit, Post Submit, and Automated queues.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Security</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">CMR 207828 </b>  (Carriers and Distributors) SSO Security: SHA-1 to SHA-2 Password Encryption.</p>
+                <p>Impacts: </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Password Policies - Users should not be impacted by this change, but it is possible the implementation of this enhancement will require direct login accounts to change their password on their next login after the enhancement is deployed to the FireLight environment.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <MadCap:pageBreak>
+        </MadCap:pageBreak>
+        <p>
+            <b class="DRNumberBold">Wizards and Forms UI</b>
+        </p>
+        <ul>
+            <li>
+                <b class="DRnumber">CMR&#160;227673, DR 242650 </b>  Click Custom Action Rule does not work correctly in wizards. Problem: Logic to handle Custom Action requests on wizard InitialLoad did not exist, so ClickCustomAction rule did not work on initial load. Resolution: added logic to handle Custom Action requests on initial load.<br></br>Areas Impacted: Initial Load on Wizards (should either work or be broken), ClickCustomAction rules that run on InitialLoad (should be most or all of them)</li>
+            <li>
+                <b class="DRnumber">CMR 239266 </b> (Carriers and Distributors) UI Enhancement - Synch Modal Pop-Up and Toast Behavior. There is a difference in behavior between modal pop-up messages and toast messages that is creating issues for end users. <p>Essentially, the problem lay with the toast messages, in that the toast message closes with a click action anywhere on that web page. Once closed, there is no clear way to recover that message. If the message states that there is a specific action required by the user and that message was closed without having been read and acknowledged by the user, it leaves the user without that information and without a way to re-trigger that information. </p><p>We will correct the functionality to require that a click action be made within the borders of the Toast message in order for the message to close: </p><ul style="list-style-type: circle;"><li><p>Existing "toast" pop-up message is changed and will require that selection be made within the toast message to close the message. </p><ul style="list-style-type: square;"><li><p>The user can close the pop-up by selecting "X" in the upper right-hand corner of the pop-up.</p></li><li><p>The requirement could also be that the user must close the pop-up by selecting a specific control like an "OK," "Close,"  or other custom action button defined by the Admin user.</p></li></ul></li></ul></li>
+            <li>
+                <p>
+                    <b class="DRnumber">CMR 239265 </b> (Carriers and Distributors) UI Enhancement - Field Coloring Consistency between "Form Only" and "Form and Wizard" Implementations. Form field shading in wizard and form combination packages. Currently, different behavior is observed in the coloring of enabled fields in forms; depending on the composition of the package in which the forms appear. If the package includes only forms, the shading of enabled fields is yellow. If the package includes a combination of forms and wizards, enabled fields appear without shading. The scenario where this can occur when carriers utilizing form deploy to distributor environments utilizing wizards. It should be noted that required fields (shaded in red) is currently consistent regardless of package configuration and this will not change. </p>
+                <p>The shading of enabled fields on forms is a significant usability issue because of the number of fields that may be present on any one page of a form. Forms could have as many as 50-80 enabled fields on a given page, Without shading, it can be difficult to differentiate between enabled and disabled fields. </p>
+                <p>The desired functionality is for shading of enabled fields that currently appears in implementations that only include forms. Successful implementation will result in field shading of forms being consistent between "form only" and "form and wizard" implementations.</p>
+            </li>
+        </ul>
+        <h2>Fixed Defects</h2>
+        <p>
+            <b class="DRNumberBold">Activities</b>
+        </p>
+        <ul>
+            <li>
+                <b class="DRnumber">DR 242495 </b> Locked Read Only Transferred Data Items in E-App not working when clicking on Update button on Illustration Activity. Problem: Fields that are set in the illustration and transferred to an application are initially set to read-only.  When an update occurs from the illustration to the application, any shared dataitems are no longer set to read-only in the application. Resolution:  Shared dataitems are reset to read-only after the dataitems are updated.<br></br>Areas Impacted: Dataitems shared between illustration and a next activity</li>
+            <li>
+                <b class="DRnumber">DR 242533 </b> FLI_PREVIOUS_ACTIVITY_ACORDTYPE not getting set correctly. Problem: The logic to save the dataitems was error prone and creating empty values which made the rules not able to use the Data Items. Resolution: Changed the logic to always set these data items with prefix 1 as values for the Parent App. Prefix 2 is values for the Grandparent, etc. If no parent exists then these Data Items won't exist.<p>Areas Impacted: This fix is within the Activity Creation logic so it can potentially affect all clients creating activities. However, clients using linked activities (i.e., Needs Determination -&gt; Application) will have the FLI_PREVIOUS_ACTIVITY Dataitems set correctly and consistently. There is no change to functionality or workflow. </p><p>If a parent activity exists the following data items is created and populated with details on the Parent activity.</p><p class="Indent">FLI_PREVIOUS_ACTIVITY_ACORDTYPE1</p><p class="Indent">FLI_PREVIOUS_ACTIVITY_JURISDICTION1</p><p class="Indent">FLI_PREVIOUS_ACTIVITY_NAME1</p><p>If the parent activity has a parent (Grandparent) the following data items is created and populated with details on the Parent activity.</p><p class="Indent">FLI_PREVIOUS_ACTIVITY_ACORDTYPE2</p><p class="Indent">FLI_PREVIOUS_ACTIVITY_JURISDICTION2</p><p class="Indent">FLI_PREVIOUS_ACTIVITY_NAME2</p><p>Same goes for Great-Grandparent activities and so on.</p></li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 243062 </b> Error occurred while processing your request. Problem: The Acord Assembly was overwritten during the Client Integration deployments. Resolution: Updated the Acord Assembly to 2.20.<br></br>Areas Impacted: activity creation</p>
+            </li>
+        </ul>
+        <MadCap:pageBreak>
+        </MadCap:pageBreak>
+        <p>
+            <b class="DRNumberBold">Admin</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 239651 </b> Incorrect Admin Group History Audits - Products being removed from product access. Problem: In Groups on the Product Access tab, users are able to select an Organization before saving the existing Organization settings on the tab. Temporary Resolution: Added a "Changes must be saved before selecting new Organization" note to the Product Access tab in Groups.<br></br>Areas Impacted: Groups - Product Access tab</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 240681 </b> API Insights - error when loading request info. Problem: The API trace query is using the correct UTC timestamps, but if the API trace information contained "SafeSerializationManager," (see https://stackoverflow.com/a/36522975/156738), Json.net is unable to deserialize the data, resulting in an exception and the list not being refreshed with the contents for the specified date range. Resolution: Corrected the code to properly deserialize the content.<br></br>Areas Impacted: API Insights UI</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 242412 </b> Add a scroll bar or modify the display of the deployment confirmation window to not be so long. Problem: jconfirm dialog was used which did not allow autoscroll, causing dialog to increase in size until it was no longer on screen. Resolution: changed to a proper dialog with autoscroll capabilities. As a result some styling might be slightly different.<br></br>Areas Impacted: Admin Deployments</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 242951 </b> Authorization failure not logged to API Insights. Problem: If an authorization failure occurred on the REST API before the organization was identified, the request info was not logged in API Insights. Resolution: When the organization is not available, log the API trace to the IT organization.  Also accept an auth header with multiple spaces between "Bearer" and the token; fix json response to contain the error entire message in the json instead of with "| Review API Insights for additional information" appended to the response.<br></br>Areas Impacted: REST API</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 244034 </b> Forms with duplicate FormIDs causing randomly missing validation messages. Problem: Obtaining the next FormID when creating a form (either by uploading or using the package conversion tool) was not thread-safe, and if multiple simultaneous uploads occurred, two forms could get the same FormID, causing problems with processing of rules if those forms exist in the same activity.  This occurred with SSL in Production, but analysis found over 1,500 forms with duplicate FormIDs in Production, which should also be corrected to prevent additional occurrences. Resolution: Lock the FormLibrary table when determining the next FormID and inserting a new record, to ensure each FormID is unique.  Also corrected package conversion to perform all updates in a transaction and audit creation of forms via copy.<br></br>Areas Impacted: Admin form upload and package conversion.  Unit testing has been done to verify thread safety and atomic increment of the FormID.  Additional testing should be done to verify that these features still work normally.</p>
+            </li>
+        </ul>
+        <MadCap:pageBreak>
+        </MadCap:pageBreak>
+        <p>
+            <b class="DRNumberBold">All Activities</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 233340 </b> Activity Name sort option is out of order in All Activities. Problem: The issue occurred when there were shared activities from other users in the list. They were added at the bottom of the list when sorted by anything other than the activity date. Resolution: The shared activities is sorted correctly with the rest of the activities list.<br></br>Areas Impacted: All Activities page sorting</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 237833 </b> Advance Search Saved Searches Filters Clearing. Problem: Advance Search Saved Searches Filters Clearing when moving to the next page. Resolution: Fixed by storing all selected filter criteria and using them on moving different pages of search results.<br></br>Areas Impacted: Activities &gt; Advanced Search</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Client Fill and Sign</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 241851 </b> Client Fill and Sign Option Not Available. Problem: UpdateAppToolBar() was not being called which updates the Other Actions menu options. Resolution: placed the call to UpdateAppToolBar() inside a div.<br></br>Areas Impacted: change event for combos on an application </p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Copy As Is and Save As</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 240712 </b> Activities created via Copy as is and Save as should retain original firm ID. Problem: On copy as-is and Save as, the system currently assigns the user's current firm info to the activity.  Since the system does not check product availability in this scenario, it should retain the original firm information on the new activity, since the firm can influence product availability. Resolution: Modified copy as-is and save as to retain the original firm ID and name (available in the FLI_FIRM_ID and FLI_FIRM_NAME data items) on the new activity.<br></br>Areas Impacted: Copy as-is and Save as in app</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Custom Action Button</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 243608 </b> DI Pre Qual Letter does not upload. Problem: Last week, we changed up some of the wizard/react Custom Action logic, and a copy/paste error caused the indicated default doc description to not be set for the Upload Dialog custom action button. Resolution: Fixed the error, set it to the correct variable.<br></br>Areas Impacted: Upload Custom Action button</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Custom Lists</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 240595 </b> Custom list search not always querying on correct organization ID. Problem: The Custom list query class has two constructors, one of which takes an organizationID parameter but does not assign it to the OrganizationID property, which could lead to incorrect results when searching custom lists in distributor environments. Resolution: Assign the OrganizationID property from all constructors so that the correct ID is used for queries.<br></br>Areas Impacted: Custom list search in custom list service and back office manager</p>
+            </li>
+        </ul>
+        <MadCap:pageBreak>
+        </MadCap:pageBreak>
+        <p>
+            <b class="DRNumberBold">Direct Login Accounts</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 240584 </b> Direct login account sometimes required to change password even though it was changed recently. Resolution: Added 'Must Change Password' checkbox to Update User page of STS Admin, to allow unchecking if it becomes set for an existing user (should only be required for new users).<br></br>Areas Impacted: Update User view in STS admin (Vendor access).</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">E-Delivery</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 237737 </b> Not getting client reject reason back in the 1122 on client directed e-delivery. Request for client directed does not send the comments entered in the change request.  Resolution:  The dataitems for child cases were only being returned if the child case was submitted.  In the client directed workflow, the child cases are deleted after the client requests a change since it is not being handled by the agent.  Changed it to use the status of the parent case to determine whether to send back the child dataitems since the parent case will go to submitted status to indicate termination of the case.<br></br>Areas Impacted:  Scenarios where the parent case transitions to submitted will include the pdfs and dataitems.  This includes change requests, cancel by agent or carrier, and client decline signature.</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 239617 </b> Unable to serialize PDF. bad allocation Error. Problem: Combining some PDFs was resulting in high CPU usage and abnormally terminated workflow threads (affecting back office processing) due to a bad allocation issue in the ABCpdf component. Resolution: Updated ABCpdf component from v10 to v12.<br></br>Areas Impacted: All parts of the system involving PDF processing and generation.</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">FireLight Access</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 240577 </b> Access - User unable to change organizations when logged into existing session. Resolution: Modified FL Access to a) honor the org querystring even when there is an existing session and b) delete the session when logging into FireLight. <br></br>Areas Impacted: Access</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">FireLight Embedded</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 243207, DR 243322 </b> Embedded eSign is redirecting to Firelight login. Embedded - FL Login screen appearing. Problem: When transitioning from eApp to eSign in Embedded a separate instance of state is created because of the separate areas. The data needed to control calls to the Proxy server were when changing instances. Resolution: These proxy values are now stored outside of the instances state.<br></br>Areas Impacted: Embedded users that were using both eApp and eSign react UI's</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 243512 </b> FL Embedded renderPDF navigates to login screen. Problem: When using the proxy in embedded, external links would not include the mandatory session header that the proxy uses to identify a particular session. This caused FireLight to redirect to the login screen. Resolution: Added functionality to the proxy to parse URL params with temporary security tokens to identify sessions for a single request.<br></br>Areas Impacted: Any embedded function that opens external FireLight links (printing, viewing uploaded documents, etc)</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">FireLight Illustrations</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 230221 </b> Firelight UI Screens not displaying Foresight Engine errors correctly with Print option. Problem: The UI was accessing an array of error objects but not the messages of those objects. Resolution: The UI now accesses the messages of each error instead of their containing objects.<br></br>Areas Impacted: EGApp Illustration Reports when accessing Print </p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">HTTP Redirect on Submission</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 231434 </b> HTTP Redirect resulting in error. Problem: Embedded redirect was not redirecting. Resolution: Consolidated log off logic so that the redirect occurs consistently and correctly.<br></br>Areas Impacted: Log off logic</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Localization</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 243493 </b> All Activities screen when French sort dropdown wrapped to next line. Problem: In All Activities, the sort dropdown moved to the next line in French. Resolution: Adjusted the dropdown width to set in the same line.<br />Areas Impacted: All Activities sort dropdown in French</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">PDF Documents</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 235035 </b> Fixed annuity Addendum issue. Problem: The Addendum reference object was being removed when the addendum was extending past the page. Resolution: Added the "RemoveOldObject" property to the PDFTable class that's evaluated in the MoveRowToNextPage method that can be set when adding the addendums. <br></br>Areas Impacted: PDF Addendums</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 243991 </b> Display print pdf has error. Problem: The ABCpdf component needed to be updated. This was fixed.<br></br>Areas Impacted: Display/Print PDF </p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Preferences</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 237619 </b> Preferences is showing an invalid dropdown value of Quotes. Problem: Quote option was not being filtered out as a Product Type. Resolution: Modified LoadLists() to remove Quote as a Product Type option when the activity is not available.<br></br>Areas Impacted: Product Type dropdown in Preferences</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Review Queue</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 238192 </b> Review Queue - Able to select current queue from 'Move To' dropdown and is auto removed. Problem:  When attempting to move an application to the original queue. The system loses the case as it does not complete the move. Resolution: Only move the application if the destination queue is different from the original queue.<br></br>Areas Impacted: Review Queue logic</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Save As</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 220115 </b> Hitting Continue Immediately After Save As Causes Signatures to be Bypassed in New App. Problem: Right after a user conducts a Save As action, if they hit the Continue button right after (while the browser is waiting to redirect them to the new app), when they are finally redirected, the HasValidSignatures property of the new app is left as defaulted to false. Resolution: In the Save As action, we are now copying the old HasValidSignatures to the new app.<br></br>Areas Impacted: Save As function, Signature Ceremony of a new app created from the Save As function</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Signatures</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 232861 </b> Cases stuck in signatures status. Problem: Activities that did not transition due to missing signatures, but no way for the signature to be collected. Resolution: If a signing ceremony is in process and another signing ceremony is started, it can have the potential to delete the signature of the first, but be marked as complete.  As it is still missing a signature, it is not able to transition passed signatures to complete. The method that clears the incomplete parties has been moved from the initialization of the signing ceremony to the signer selection.  The current signer is then cleared before beginning rather than all of the interested parties, thereby allowing multiple signing ceremonies simultaneously.<br></br>Areas Impacted: Client signing (internal and external sign), agent signing, multi-signing</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 243101 </b> Another error occurs when initialing for remote cases. Problem: An error occurred after the user entered initials on a remote email request for e-Signature. Resolution: Updated e-sign Initial insertion to make a new ClientVerificationModel whenever it's null.<br></br>Areas Impacted: Signature Initials in remote e-Signature</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 243447 </b> UAT Next Issue: No SSN or DOB validation during the eSigning ceremony. Problem: The "Required" attribute on the MobileNumber in the associated ClientVerificationModel interfered with the custom validation for the SSN and DOB. Resolution: Changed the attribute to "PhoneRequired" as before(changeset 46092) which re-introduced issue 23025(Signer Mobile Number required validation not showing).<br></br>Areas Impacted: SMS verification, Client identity verification</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 244035 </b> Error with blank phone # in Client Identity Verification. Problem: Validating mobile number was not correctly handling a blank phone number (either in the app or the verification view) and would generate an exception. Resolution: Modified the logic for Validate Identity Verification to require non-blank app and verify values and a match between the app and verification view.<br></br>Areas Impacted: Client verification with SMS</p>
+            </li>
+        </ul>
+        <MadCap:pageBreak>
+        </MadCap:pageBreak>
+        <p>
+            <b class="DRNumberBold">State Approvals</b>
+        </p>
+        <li>
+            <ul>
+                <li>
+                    <p>
+                        <b class="DRnumber">DR 240708 </b> Check for state approvals bug. Problem:&#160;The code to check for state approvals has a flaw that was introduced with refactoring for unit testing, resulting in the jurisdiction not being passed and used. Resolution:&#160;fixed by assigning the jurisdiction parameter to Jurisdiction property of Request_CheckForStateApproval.<br></br>Areas Impacted:&#160;State approval check on new activities with replaced product</p>
+                </li>
+            </ul>
+        </li>
+        <p>
+            <b class="DRNumberBold">Transfer</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 242374 </b> Exception completing or canceling transfer for deleted activity. Problem: Applications deleted after a transfer would cause silent exceptions and performance issues as they would always try to finish being transferred when app homepage is hit. Resolution: Made it so purged and deleted apps will get their transfer canceled after it fails the first time.<br></br>Areas Impacted: app -home page</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Wizards and Forms</b>
+        </p>
+        <ul>
+            <li>
+                <b class="DRnumber">DR 237748 </b> Data Grid and Copy with Changes - Need Documentation only. Added a "Clear Data Item Rule for Copy with Changes" sub topic to the "Data Grid" topic in Admin Help. Added a "NOTE for Admin Users" to the "Copy with Changes" topic in the platform user guide.<br></br>Areas Impacted: Admin Help and User Guide</li>
+            <li>
+                <b class="DRnumber">DR 240135 </b> Wizard - Documents that should not be removable can be removed. Problem: Document posted over to next activity were able to be removed using the remove link in the documents dialogue in wizards, but not forms only. Resolution:  Added the functionality to the wizard documents dialog. <br></br>Areas Impacted: Wizard documents dialog and the remove link visibility</li>
+            <li>
+                <b class="DRnumber">DR 240231 </b> Errors on wizard field does not show as error on navigation nor stops order. Problem: The DataItem "PrimaryBene1_Info" was Disabled (i.e., IsEnabled = false) in that application, most likely by a rule that was removed. When a parent control get disabled, all children validation is ignored, which was not populating the validation errors. Meanwhile, the UI was not reflecting that the children controls were disabled. Resolution: (1) To fix that specific application, a rule to enable "PrimaryBene1_Info" is needed. (2) A fix for the UI to properly set the state of the control and all of its children has been implemented. Same fix is applied to SetControlRangeState, SetReadOnly and SetReadOnlyRange.<br></br>Areas Impacted: Rules: SetStateControl, SetControlRangeState, SetReadOnly and SetReadOnlyRange. These rules will now affect the control and all of its children. Please note multiple rules applied to same control, will have a conflict, and last one applied will win. For example, if a rule disables a control, and another rule enables one of that control's children; then the last rule that runs will take effect.</li>
+            <li>
+                <b class="DRnumber">DR 240251 </b> Suitability GS1 - calendar display truncated. Problem: The Wizard Datepicker Calendar popup could display behind other page items, e.g., the FireLight header. Resolution: Updated the base styling for the calendar so that it displays in front of most objects.<br></br>Areas Impacted: Wizards, Embedded ESign</li>
+            <li>
+                <b class="DRnumber">DR&#160;240587 </b> FLI_CURRENT_FIRM_ID not being updated in wizard UI. Problem: Logic to update FLI_CURRENT_FIRM_ID for activities in data entry status is missing from the combined wizard+forms UI. Resolution: Moved logic to update FLI_CURRENT_FIRM_ID into CreateDefaultData, which is called from both legacy forms and wizard UI.<br></br>Areas Impacted: Wizard U and update of FLI_CURRENT_FIRM_ID data item</li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 240596 </b> Optional form count not being counted correctly. Problem: In the review queue and new application UI, AppManager.GetAppPackages is called to retrieve package/form info, and also to determine optional form count.  With refactoring for unit testing, a bug was introduced where it was no longer utilizing the optional form count returned by this method. Resolution: Corrected the code to return and utilize the optional form count.<br></br>Areas Impacted: New application UI and in app and review queue</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 241426 </b> Previous_Next all white on hover over. Problem: When hovering over the Previous or Next button, the button turned white. Resolution: Extended button component to be selectable, which simply changes style to not interfere with standard ITButton styling.<br></br>Areas Impacted: Previous and Next buttons in Wizards</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 241914 </b> Wizard Text Box - Cannot Set Max Length Above 999. Problem:&#160;Casting of Max Length was not properly done and because of that ,"" (Comma) was rendered in HTML if max length is more than 999. Resolution: Proper casting of Max Length fixed issue.<br></br>Areas Impacted: Text boxes with max length greater than 999 is set in Wizard.</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 241963 </b> Wizard - Check boxes on multiple instance forms not working correctly. Problem: The "Group Name" in that form definition was the same for all checkboxes. The issue is not related to embedded. Workaround: A workaround to immediately fix it is to update Athene form definition and use [FORM_INDEX] in the "Group Name" in these checkboxes (e.g., use "FLComparativeRequestGroup[FORM_INDEX]" for the group names in these checkboxes).<br></br>Areas Impacted: Check boxes and Radio buttons in UI</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 242357 </b> CONTINUE button not enabled at 100%. Problem: The form was not refreshing correctly after the upload documents dialog closed. Resolution: (1) Fixed the form to correctly refresh after the upload documents dialog closed and (2) Also fixed the remove document to correctly remove the document from all associated forms.<br></br>Areas Impacted: Upload Documents dialog close, and Remove document in Upload Documents dialog</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 242606 </b> Slider controls not working properly in the wizard. Problem: Slider controls not working properly in the wizard. It was referencing the same div to trigger events. Resolution: reworked references to prevent two controls to add events to the same div.<br></br>Areas Impacted: Wizard</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 242911 </b> Wizards are being cut off at the top of the screen. Problem: The top of Wizard pages was being cut off. Resolution: Modified the panel offset logic for Embedded ESign that was causing issues within Wizards.<br></br>Areas Impacted: Wizards, Embedded ESign</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 242918 </b> Multi Data collect chain link display appears different. Problem: In legacy forms when the linked dialog was enabled it was not rendering correctly. Resolution: Modified how the dialog is generated to fix issue.<br></br>Areas Impacted: Legacy Forms</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 243467 </b> FireLight error when selecting Sign option -- possibly Soft Limit / Addendum related. Problem: After an update to our PDF creation software, certain pages are no longer automatically created. This causes exceptions to occur when we try to set content in addendum/overflow pages. Resolution:&#160;We now manually create a page as needed for addendum pages.<br></br>Areas Impacted: Any fields that surpass the Soft Limit length, when generating a PDF (including when going into signing, printing, and viewing a locked application)</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 243492 </b> Error when uploading illustration in wizard. Problem: Some earlier changes in the 2.20 release also modified the Document dialog component, adding in strict equality checks - this caused some logic to strict-check an undefined property against null, which is actually true, causing the logic to assume the property had value, which then caused an 'undefined' access error. Resolution: Switch that specific equality check back to the looser abstract version, so we consider null and undefined the same thing, which is practically correct.<br></br>Areas Impacted: Upload dialog for Wizard/React, including the Upload Custom Action button result</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 243671 </b> Combined wizard and forms UI - field shading issue. Problem: Optional fields are shaded yellow when forms and wizards are in the same UI. Dropdowns and some radio buttons/checkboxes are still shaded white when optional. Field shading of forms should be consistent between "form only" and "form and wizard" implementations. Resolution: The default background color of check-box and the radio button is white in "form only" implementation and "form and wizard" is working the same as "Form Only." This is expected behavior. Textbox and combo box are also working as expected. The background color of combo box options is white in  "form and wizard" as compared to yellow in "Form only." This was fixed. NOTE: If the user is getting a combo box with a white back ground, it might be possible that a user has set the background color property to white in the combo box through field properties in the Admin.<br></br>Areas Impacted: Combo boxes</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 243924 </b> Wizard DatePicker control doesn't show required. Problem: After entering a valid DOB, and then deleting, the DatePicker is not displaying as required in the wizard. didate component in react was preventing an update when a page was loaded with a value and then the value in the datepicker was changed back to that value. Resolution: made it so the didate did not prevent that update by updating _lastValue.<br></br>Areas Impacted: Wizard DatePicker</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 244027 </b> Wizard - "Could not be rendered" Red message displays on date field. Problem: Wizard DatePicker fields in a format other than MM/DD/YYYY were causing an issue when formatting values. Resolution: Modified the datepicker logic to handle loading of more formats. <br />Areas Impacted: Wizards</p>
+            </li>
+        </ul>
+    </body>
+</html>

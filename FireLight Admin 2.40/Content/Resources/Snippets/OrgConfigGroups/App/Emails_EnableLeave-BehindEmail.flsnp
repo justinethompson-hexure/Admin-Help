@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the  <b>Enable Leave-Behind Email</b> checkbox to enable the auto-generated email to clients that provides a link to download the application documents after each client signs the application. The client Leave-Behind Email template can be modified in <MadCap:xref href="../../../../Organization Configuration/Email.htm" target="_blank" alt="Email">Email</MadCap:xref> in Organization Configuration.</body>
+</html>

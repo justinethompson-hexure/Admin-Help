@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>If the form is inactive and the organization's designated lock time is about to expire, an Alert message appears. Click the <b class="Bold">SAVE NOW</b> button to save the changes and release the lock. Click the <b class="Bold">EXTEND</b> button to continue working and extend the lock for another round of lock time. The lock releases when you click <b>SAVE</b>, navigate to another page, or exit the form.</p>
+    </body>
+</html>

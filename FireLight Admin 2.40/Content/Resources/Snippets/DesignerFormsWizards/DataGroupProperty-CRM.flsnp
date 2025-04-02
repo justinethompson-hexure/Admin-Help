@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p class="Indent"><strong>1035 Exchange Ceding Company CRM available dataitems:</strong>  FirstName, Line1, City, AddressStateTC, Zip, DiaNumber, Replacement_Company_LocationID[FORM_INDEX], eSigConditionalNotes FORM_INDEX], and Replacement_Company_UniversalLocationID[FORM_INDEX]</p>
+        <p class="Indent"><strong>Redtail CRM available dataitems:</strong> FirstName, MiddleName, LastName, Occupation, MarStat, Gender, BirthDate, Age, Citizenship, SSN, Line1, Line2, Line3, Line4, City, AddressStateTC, YearsAtAddress, CountyName, Zip, AreaCode, Phone, DiaNumber</p>
+        <p class="Indent"><b class="Bold">Salesforce CRM available dataitems:</b> FirstName, MiddleName, LastName, Occupation, MarStat, Gender, BirthDate, Age, Citizenship, Line1, Line2, Line3, Line4, City, AddressStateTC, Zip, AddressCountry, YearsAtAddress, CountyName, AreaCode, DiaNumber, SSN</p>
+        <p class="Indent"><strong>Whitepages.com CRM available  dataitems:</strong> FirstName, MiddleName, LastName, Gender, BirthDate, Age, Citizenship, SSN, MarStat, Occupation, Line1, Line2, Line3, Line4, City, AddressStateTC, YearsAtAddress, CountyName, Zip, AreaCode, Phone, DiaNumber</p>
+    </body>
+</html>

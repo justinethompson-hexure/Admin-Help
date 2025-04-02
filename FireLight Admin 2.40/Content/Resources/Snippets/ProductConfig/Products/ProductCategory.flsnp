@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Product Category displays the product category based on the type of product/line of business. For a non-insurance product type, you can choose the product category in the list. For all other product types, the category is read-only and driven by the ProductCategory and ProductType tables in the client Config databases.</body>
+</html>

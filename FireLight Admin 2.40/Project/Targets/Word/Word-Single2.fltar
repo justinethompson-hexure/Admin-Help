@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="SingleTopic"
+  Type="MsWord"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterToc="/Project/TOCs/WordSingleTopic2.fltoc"
+  MasterPageLayout="/Content/Resources/PageLayouts/Word8_5X11/2017WordNormal8_5X11.flpgl"
+  MasterStylesheet="/Content/Resources/Stylesheets/2017MainStyles.css"
+  PatchHeadingLevels="true"
+  EmbedImages="true"
+  ConditionTagExpression="include[General.PDF]exclude[General.Internal or General.Online or General.Postpone]">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false"
+    ExpandingTextConversion="expand"
+    GenerateXPS="false"
+    OutputFormat="docx"
+    EnableTrackedChanges="false"
+    PreserveTrackedChanges="true" />
+  <PDF
+    ShowUsedBookmarks="false"
+    PageMode="UseNone" />
+</CatapultTarget>

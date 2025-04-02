@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>E-Delivery Deliver Only <MadCap:conditionalText MadCap:conditions="General.Online"> [User Instructions]</MadCap:conditionalText></h1>
+        <p>E-Delivery Deliver Only workflow  is available if your organization has implemented the E-Delivery Deliver Only feature.</p>
+        <p>E-Delivery Deliver Only workflow includes delivery of activity/application documents to the clients in the E-Delivery Deliver Only parent case and associated child cases. </p>
+        <p>FireLight<sup MadCap:conditions="General.Online">®</sup> supports two E-Delivery Deliver Only processing workflows that drive what FireLight does with the case when it is received. Cases can either be agent directed or client directed.</p>
+        <ul>
+            <li>Agent directed cases go into a dashboard view for the agent to manage. The agent must approve the case before it is sent to the clients.</li>
+            <li>Client directed cases go directly to the clients and do not require an agent to approve the case.</li>
+        </ul>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Agent Directed E-Delivery Deliver Only Case</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">Agent Directed E-Delivery Deliver Only Case</h2>
+                <ol>
+                    <li>
+                        <p>The agent receives an email that notifies the agent they have a pending e-Delivery Deliver Only transaction for review. The e-Delivery case is in E-Delivery Pending Agent Review status.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture28.png" alt="E-Delivery Pending Agent Review Email" title="E-Delivery Pending Agent Review Email" />
+                        </p>
+                        <p MadCap:conditions="General.Postpone">The agent will also receive an email that notifies the agent when all child cases are complete. The E-Delivery cases are always auto submitted (ignores the Auto Submit group option in Admin).</p>
+                    </li>
+                    <li>
+                        <p>The agent logs in to FireLight. The agent opens the case by doing one of the following: </p>
+                        <ul>
+                            <li>
+                                <p>On the FireLight Home page, the agent clicks the E-Delivery Deliver Only case in the <b class="Bold">Recent Activity</b> grid on the left.</p>
+                                <p>
+                                    <img src="../../Resources/ImagesUserGuide/Manage/Capture.png" alt="" title="" />
+                                </p>
+                                <p><b class="Bold">NOTE:</b>&#160;On the Home page, the counter on the right of the E-Delivery button in the Manage section increases any time an agent directed case is  in a “Pending Agent Review” status.  Count is based on pending agent review, so any action that causes it to set to pending agent review (i.e., new agent directed case, client change request) will add it to the count and it will not decrease until the case moves to another display status.</p>
+                            </li>
+                            <li>
+                                <p>On the lower right under <b class="Bold">Manage</b>, the agent clicks the <b class="Bold">E-Delivery</b> button to open <b class="Bold">All Activities</b> filtered by E-Delivery cases and then clicks the <b class="Bold">View</b> button for the E-Delivery Deliver Only case. </p>
+                                <p>
+                                    <img src="../../Resources/ImagesUserGuide/Manage/Capture134.png" alt="All Activities - E-Delivery Deliver Only Case" title="All Activities - E-Delivery Deliver Only Case" />
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>The case is locked down. The agent cannot unlock the case. On the E-Delivery navigation bar, Agent can click <b class="Bold">Cancel E-Delivery</b> to cancel the E-Delivery Deliver Only,  or the agent can click the <b class="Bold">Approve</b> button to continue. The cancel is only available while the case is not complete.</p>
+                        <p><b>NOTE</b>: The carrier has an option in FireLight Admin to show or hide the Request Print button. When the button is shown and the agent clicks <b>Request Print</b>, a request for the carrier to send a paper copy is sent to the carrier. Once Request Print is selected, the order is effectively ended. The agent view has no active buttons. The clien view has not active buttons. FireLight revokes the original email links sent to the client and FireLight sends to the clients the email called Revoke E-Delivery Request. This email is also sent if the client does a request change or a decline sign. </p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture1.png" alt="E-Delivery Deliver Only Navigation Bar" title="E-Delivery Deliver Only Navigation Bar" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Agent ensures the client information is correct and clicks the <b class="Bold">Send Email</b> button to send the Request Clients Complete their E-Delivery Requirements emails to the clients.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture30.png" alt="" title="" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>The Pending Requests dialog shows the E-Delivery Deliver Only pending requests for the parent and child cases. The agent can click links to send reminders or passcodes to the clients. Agent clicks <b class="Bold">Close</b>.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture4.png" alt="" title="" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Agent can click the link <img src="../../Resources/ImagesUserGuide/Manage/Capture6.png" alt="Link Icon" title="Link Icon" /> icon to view the Linked Activities and status.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture5.png" alt="View Linked Activities" title="View Linked Activities" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Clients  receive the E-Delivery Deliver Only email. Each client clicks the URL link within the email and enters their login credentials to open FireLight. Following are sample client request emails, passcode email (if passcode is enabled), and a login page. </p>
+                        <p><b class="Bold">NOTE:</b> The case is complete when the client login authenticates.  For E-Delivery Deliver Only cases, the requirement is only that the policy was delivered, not that the clients reviewed the documents.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture7.png" alt="Sample E-Delivery Deliver Only Email to Client" title="Sample E-Delivery Deliver Only Email to Client" />
+                        </p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture31.png" alt="Client Request Email" title="Client Request Email" />
+                        </p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture32.png" alt="Sample Client Passcode Email" title="Sample Client Passcode Email" />
+                        </p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture8.png" alt="Welcome Login Page" title="Welcome Login Page" />
+                        </p>
+                    </li>
+                    <li>
+                        <p> FireLight opens to the Electronic Documents page. Client clicks one of the following: </p>
+                        <ul>
+                            <li>
+                                <p><b class="Bold">Review Documents</b> button to review and download documents as shown in step 8.</p>
+                            </li>
+                            <li>
+                                <p><b class="Bold">Contact Agent</b> button to open a dialog and send a message to the agent.</p>
+                            </li>
+                        </ul>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture33.png" alt="Electronic Documents Page" title="Electronic Documents Page" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>FireLight displays the E-Delivery Deliver Only documents list. Client can click a document button to review the document. Client cannot make any changes because as soon as the client logs in, the E-Delivery Deliver Only case is complete.  </p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture11.png" alt="Review and Download Documents" title="Review and Download Documents" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Client can click the <b class="Bold">Document Download</b> button to open the Download PDF Documents page. </p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture12.png" alt="Download PDF Documents" title="Download PDF Documents" />
+                        </p>
+                        <p>Client can download the activity documents or request a printed copy from the carrier by doing one of the following.</p>
+                        <ul>
+                            <li>
+                                <p>Click the <b class="Bold">Download All</b> link. On the notification bar, client clicks an option to <b class="Bold">Open</b>, <b class="Bold">Save</b> menu, or <b class="Bold">Cancel</b> the downloaded PDF documents.</p>
+                                <p>
+                                    <img src="../../Resources/ImagesUserGuide/Manage/Capture13.png" alt="Download Complete Notification Bar" title="Download Complete Notification Bar" />
+                                </p>
+                            </li>
+                            <li>
+                                <p> <b class="Bold">NOTE:</b> The carrier has an option in FireLight Admin to show or hide the Request Print button. </p>
+                                <p>When the button is shown, click the <b class="Bold">Request Print</b> button to request a printed copy of the documents from the carrier. The following message appears.   </p>
+                                <p>
+                                    <img src="../../Resources/ImagesUserGuide/Manage/Capture35.png" alt="" title="" />
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Client clicks the <b class="Bold">Log Off</b> button on the upper right of the page to exit FireLight.</p>
+                    </li>
+                    <li>
+                        <p>After the client completes the case, the agent's view of the E-Delivery Deliver Only case in FireLight displays the following message for the case. If the Request Print is available, the agent can click <b class="Bold">Request Print</b> to request printed copies of the documents from the carrier.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture36.png" alt="Application Pending Transmission Message" title="Application Pending Transmission Message" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>(Optional) In <b class="Bold">All Activities</b>, click the link icon <img src="../../Resources/ImagesUserGuide/LinkIcon.png" alt="Linked Activity - Link Icon" title="Linked Activity - Link Icon" /> to view the status of the child cases.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture37.png" alt="All Activities - Linked Cases" title="All Activities - Linked Cases" />
+                        </p>
+                        <p>Click the <b class="Bold">View History</b> link to view the audit History for the E-Delivery Deliver Only case. </p>
+                        <p><b class="Bold">NOTE:</b> Actions taken on the child case will show in the child case audit.  Not all audits are shown in parent case history.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture38.png" alt="All Activities - View History" title="All Activities - View History" />
+                        </p>
+                    </li>
+                </ol>
+                <p MadCap:conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Client Directed E-Delivery Deliver Only Case</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">Client Directed E-Delivery Deliver Only Case</h2>
+                <ol>
+                    <li>
+                        <p>Clients in the child cases receive the E-Delivery Deliver Only email that indicates their documents are ready to be downloaded.  The client receives a separate email with the login Passcode if passcode is enabled. The E-Delivery Deliver Only case is in Pending E-Delivery  status.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture39.png" alt="E-Delivery Deliver Only Email to Client" title="E-Delivery Deliver Only Email to Client" />
+                        </p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture40.png" alt="Passcode Email for Client" title="Passcode Email for Client" />
+                        </p>
+                        <p>If the agent opens the case in the agent's view, the Pending Requests dialog shows the E-Delivery Deliver Only pending requests for the cases. The Delivery Status is In Progress. The agent can click links to send reminders or passcodes. The agent clicks <b class="Bold">Close</b>.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture41.png" alt="Pending Requests from Agent's View" title="Pending Requests from Agent's View" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>The client clicks the URL link in the email and logs in to FireLight using either the Last 4 Digits of SSN/Government ID and Birth Date or the Passcode if passcode is enabled. </p>
+                        <p><b class="Bold">NOTE:</b> The case is complete when the client login authenticates.  For E-Delivery Deliver Only cases, the requirement is only that the policy was delivered, not that the clients reviewed the documents.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture8.png" alt="Welcome Login Page" title="Welcome Login Page" />
+                        </p>
+                    </li>
+                    <li>
+                        <p> FireLight opens to the Electronic Documents page. Client clicks one of the following: </p>
+                        <ul>
+                            <li>
+                                <p><b class="Bold">Review Documents</b> button to review and download documents as shown in step 8.</p>
+                            </li>
+                            <li>
+                                <p><b class="Bold">Contact Agent</b> button to open a dialog and send a message to the agent.</p>
+                            </li>
+                        </ul>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture33.png" alt="Electronic Documents Page" title="Electronic Documents Page" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>FireLight displays the E-Delivery Deliver Only documents list. Client can click a document button to review the document. Client cannot make any changes because the E-Delivery Deliver Only case is locked and complete.  </p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture11.png" alt="Review and Download Documents" title="Review and Download Documents" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Client can click the <b class="Bold">Document Download</b> button to open the Download PDF Documents page. </p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture12.png" alt="Download PDF Documents" title="Download PDF Documents" />
+                        </p>
+                        <p>Client can download the activity documents and/or request a printed copy from the carrier by doing one of the following.</p>
+                        <ul>
+                            <li>
+                                <p>Click the <b class="Bold">Download All</b> link. On the notification bar, client clicks an option to <b class="Bold">Open</b>, <b class="Bold">Save</b> menu, or <b class="Bold">Cancel</b> the downloaded PDF documents.</p>
+                                <p>
+                                    <img src="../../Resources/ImagesUserGuide/Manage/Capture13.png" alt="Download Complete Notification Bar" title="Download Complete Notification Bar" />
+                                </p>
+                            </li>
+                            <li>
+                                <p><b class="Bold">(Optional)</b> The carrier has an option in FireLight Admin to show or hide the Request Print button. When the button is shown, the client can click the <b class="Bold">Request Print</b> button to request a printed copy of the documents from the carrier. The following message appears. The case is in Request Print status.</p>
+                                <p>
+                                    <img src="../../Resources/ImagesUserGuide/Manage/Capture35.png" alt="" title="" />
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>If the client does not Request Print, client clicks the <b class="Bold">Log Off</b> button on the upper right of the page to exit FireLight.</p>
+                    </li>
+                    <li>
+                        <p>(Optional for Agent) In <b class="Bold">All Activities</b>, agent clicks the link icon <img src="../../Resources/ImagesUserGuide/LinkIcon.png" alt="Linked Activity - Link Icon" title="Linked Activity - Link Icon" /> to view the status of the parent and child cases. </p>
+                        <p>If the E-Delivery case is still pending for one of the clients, the status for that client is Pending E-Delivery.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture42.png" alt="Linked Activities - E-Delivery Pending for One Client" title="Linked Activities - E-Delivery Pending for One Client " />
+                        </p>
+                        <p>Click the <b class="Bold">View History</b> link to view the audit History for the E-Delivery Deliver Only case.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture43.png" alt="All Activities - View History" title="All Activities - View History" />
+                        </p>
+                        <p>After the clients complete the case, the agent's view of the E-Delivery Deliver Only case in FireLight displays the following message for the case. If the Request Print is shown, the agent can click <b class="Bold">Request Print</b> to request printed copies of the documents from the carrier.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture36.png" alt="Application Pending Transmission Message" title="Application Pending Transmission Message" />
+                        </p>
+                    </li>
+                </ol>
+                <p MadCap:conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Undeliverable E-Delivery Emails</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">Undeliverable E-Delivery Emails</h2>
+                <MadCap:snippetBlock src="../../Resources/Snippets/Email/EDeliveryUndeliverableEmailAdmin.flsnp" />
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p MadCap:conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

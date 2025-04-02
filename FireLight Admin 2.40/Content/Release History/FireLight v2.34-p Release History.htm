@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight v2.34-p Release History</h1>
+        <h2>April 2024 Release—4/18/2024 Production</h2>
+        <h3>      New Functionality</h3>
+        <h4>Add SuranceBay Key to Third Party Settings: CR-2290</h4>
+        <p>This enhancement allows for the input of the SuranceBay APIKey under Third Party Configuration Settings (Organization Settings) as part of the Agency Onboard Process.</p>
+        <h4>SuranceBay My Preference Page - SuranceBay Login Section - Showing Two Different Validation Messages in Specific Scenario with Test and Save Button: CR-2043</h4>
+        <p>When user enters invalid SuranceBay credentials and click on “Save” button, Red validation message appears as expected. When the user enters valid credentials and clicks on “Test” a Green message appears a expected. User should then click save to ensure the red validation message is cleared.</p>
+        <h4>SuranceBay - APIKey Is Not Valid or Null Message Provided to the User: CR-2497</h4>
+        <p>If an administrator provides an invalid or null API Key and a user initiates an application activity, the system displays, “Your System Administrator enabled SuranceBay Integration; however, API Key is having issues. Please contact your System Administrator immediately to fix the issue. Please be advised by proceeding with the application, the integration is not enabled at this moment,” and during the application process no widgets or messages from SuranceBay appear.</p>
+        <h4>Update 1035YellowPages Integration to Version 2.11: CR-1393</h4>
+        <p>We updated the 1035 YellowPages integration to version 2.11 to align with Cooperative Technologies most current production version.</p>
+        <h4>Passcode Validation to Download Documents for Enrollment: DIST-2888</h4>
+        <p>This enhancement is related to user authentication method for Enrollment apps. Once the individual (child) enrollment app is signed and submitted by the client, they receive an email to download the application documents. There was an issue with authentication method when the link to download documents was clicked, only allowing to enter SSN/DOB info. With this enhancement, clients will be able to access the link using the passcode validation also.</p>
+        <h5>Impact</h5>
+        <p>Passcode validation will be used as an authentication method to download documents for an individual app created for Enrollment activity.</p>
+        <h2>Resolved Issues</h2>
+        <h3>File Upload – Note on Documents Dialog to Mention about File Being Compressed AfterUpload: DIST-2876</h3>
+        <p>We resolved an issue where the Documents dialog did not inform users that files may be compressed during upload. This message is now displayed.</p>
+        <h3>Review Queue – Data Entry Percentage Is Not Updating as Expected When Data Entry Issues Are Resolved: DIST-2880</h3>
+        <p>When reviewer documents contain mandatory fields, the percentage is now updating as expected when the mandatory fields have been completed.</p>
+        <h3>Report Scheduler – FTP Information Should Not Be Displayed on the Report Scheduler as This Information Applies Only to Production: DIST-3017</h3>
+        <p>This information has been removed from the Report Scheduler screen. Text has been added to remind the user to correctly set the FTP information via the Organization Settings when the requested delivery method is SFTP.</p>
+        <h3>Activity Reports – Client Signed Reports Is No Longer Generating as Expected: DIST-3195</h3>
+        <p>The data items reference for this report have been updated to correct the error. Report is now generating as expected.</p>
+        <h3>Support Tool Unable to Display Signature Info Due to Missing Agent Name Column: DIST-3196</h3>
+        <p>We resolved an issue where signature information failed to be displayed in the support tool. Signature information is now appearing as designed.</p>
+        <h3 style="text-align: left;">FireLight Direct Login  - No Longer Able to Log In to Accounts in Organizations That Have 2-Factor Authentication Enabled UI-898</h3>
+        <p>Implementation of the new Login screen has been rolled back to correct an issue that was reported on Multi Factor Authentication.   Users logging directly into Firelight will see the old Login screen.</p>
+        <h3>FireLight Administration Tool - CORS Origins Settings Are Removed When Updating SFTP Settings: DIST-3107</h3>
+        <p>We updated the logic for saving and maintaining the CORS Origins and SFTP settings in the Administration tool to ensure that both can be updated independently.</p>
+        <h3>FireLight Administration Tool – “Link to Package” Link Is Not Displayed as Expected in the Sales Agreement: DIST-2866</h3>
+        <p>The location and alignment of this link have been updated so that it displays as expected. </p>
+        <h3>Firelight Administration Tool – The Form Field Report Is Not Displaying as Expected and an Error Is Generated: DIST-2743</h3>
+        <p>The form field report has been optimized; however, in some cases generation of the PDF report may still time out. When this is the case, we recommend generating the form field report as a CSV file.</p>
+        <h3>Form Properties – Passcode Only Validation Behaves Differently between Post Issue and Enrollment: DIST-2769</h3>
+        <p>We resolved an issue where passcode-only validation was not working as designed, resulting in a discrepancy in how it operated between post-issue and enrollment. It is not working as intended.</p>
+        <h3>eSignature - Status Notification for Agent Being Sent to Client: DIST-3224</h3>
+        <p>An error that incorrectly changed the recipient of this notification has been corrected. Agent is not receiving the status notification as expected.</p>
+        <h3>Some Email Notifications Are Incorrectly Determining When and Where to Send the Message: DIST-3237</h3>
+        <p>We resolved an issue where status update email was being sent to agents even when the group option Enable Use Agent Email and the user preference Use Agent Email for All Communications were not selected. Now only agents designated to receive status update email via this option and preference are receiving such notifications.</p>
+        <h3>FireLight – Error Occurred When Opening an Activity After Adding or Removing Optional Forms: EAES-3342</h3>
+        <p>The logic to add and remove options forms has been corrected to resolve this issue.</p>
+        <h3>Inefficient Regular Expression Causes Endless Rules Execution which Can Affect System Stability: EAES-3387</h3>
+        <p>We resolved an issue where rules were executed in a loop, delaying opening activities and impacting system stability.</p>
+        <h3>Error Sending Email on e-Delivery Case Due to Invalid applicationId: EAES-3429</h3>
+        <p>We resolved an issue where e-Delivery case email was not distributed. The email is now being sent as designed.</p>
+        <h3>Email Variable Replacements Should Replace Variable with Blank Value If Data Item Value Has Whitespace: EAES-3536</h3>
+        <p>We resolved an issue where automated email was not rendered as intended. The email is now rendered as designed.</p>
+        <h3>eApplication – Create New Application Page Occasionally Displays an Incorrect Error Message Briefly, at the Bottom of the Page: EAES-3549</h3>
+        <p>The code has been updated to ensure that an incorrect error message no longer appears.</p>
+        <h3>Case Transfer – When Transferring a Case via Using a Custom Action the Permissions for the User the Case Is Transferred to Are Not Working as Expected: EAES-3817</h3>
+        <p>The logic for custom action transfers has been updated so that group permissions are correctly initialized based on the associated role code. Permissions are now being set correctly.</p>
+        <h3>API – CreateActivity/UploadDocuments Functionality Is Not Validating the Document Type as Expected Leading Failed Uploads: PC-1310</h3>
+        <p>Validation on the document type has been temporarily disabled to allow document upload via API to complete without errors.</p>
+        <p>***Please note that the JIRA ticket numbers are provided for reference. JIRA tickets are not accessible to users outside Hexure.***</p>
+        <p data-mc-conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

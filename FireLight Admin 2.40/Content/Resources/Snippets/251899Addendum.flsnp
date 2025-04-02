@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>All the signature fields placed on a form will also be shown after the addendum text ends on the last page of the associated addendum document. To show signatures on Form addendum documents, the addendum document will have the signature field along with the Signed Date added of the same signer type(s) as that of its original form. These signature fields are stacked from top to bottom and are placed after the addendum text ends on the last page of the document. The signature fields are labeled to identify the signer type based on the form signature control. The signed date fields are adjacent to the signature field. If the Addenedum does no have enough space remaining on the page to show signature(s) on the page, the signatures will overflow onto another addendum page. The addendum document is also presented for signature along with its associated form.</p>
+        <p>
+            <img src="../ImagesUserGuide/New Activity/Capture415.png" alt="Addendum Document with Signatures" title="Addendum Document with Signatures">
+            </img>
+        </p>
+        <p>In case multiple copies are generated for the form using the Form Index property, all the addendum documents of each  form copy will show the same signature fields as the corresponding form.</p>
+        <p>In the Review Queue, Application History and Audit Report links show audit history of signatures on the addendum document like other forms at the time of the signing ceremony. </p>
+    </body>
+</html>

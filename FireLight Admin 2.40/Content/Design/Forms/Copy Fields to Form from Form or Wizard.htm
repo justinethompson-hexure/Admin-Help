@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Copy Fields to a Form from a Form or Wizard</h1>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FormLockUnlock.flsnp" />
+        </p>
+        <p>Use the Copy Fields feature to copy fields from one form to another form or from a wizard to a form. To copy fields on the same form, use the Toolbox (see <MadCap:xref href="Align Copy and Move Controls.htm" target="_blank" alt="Align, Copy and Move Controls">Align, Copy, and Move Controls</MadCap:xref>).</p>
+        <h2>System Rules for the Copy Feature</h2>
+        <p>The following system rules apply.</p>
+        <ul>
+            <li>Matching fields copied together stay together.</li>
+            <li>Any and all fields in an existing fillable form can be copied to a new non-fillable form uploaded as a non-fillable PDF or XPS file.</li>
+            <li>Original fields uploaded with a fillable PDF form cannot be copied to other forms uploaded as Fillable PDF files.</li>
+            <li>Fields added to a form in the designer can be copied to any other form.</li>
+        </ul>
+        <h2>Copy Fields</h2>
+        <ol>
+            <li>On the upper left, select the target form that receives the copied fields.</li>
+            <li>On the left under <b>Input Control</b>, click <b>Copy Fields</b>.</li>
+            <li>
+                <p>Click the <b>Copy From</b> field and select the source form or wizard to copy the fields from.  Or type a form or wizard Name, Number, or Edition to filter the list of forms and wizards and then select a form or wizard from the filtered list.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/CopyFieldsRules1.jpg" alt="Select a Form to Copy Fields and Rules From" title="Select a Form to Copy Fields and Rules From" />
+                </p>
+                <p><b class="Bold">NOTE:</b> In the Copy From list, wizards have "Wizard-" preceding the wizard name so wizards go to near the end of list. </p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Copy Fields from Wizard Guidelines:</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <ul>
+                            <li>
+                                <p>The Page column displays the wizard page name instead of displaying a page number as is shown in forms. </p>
+                            </li>
+                            <li>
+                                <p> The "Keep Original Field Coordinates" checkbox is cleared and disabled. Wizard data items do not have coordinates assigned to them.</p>
+                            </li>
+                            <li>
+                                <p>The "Copy all Selected Fields to the Active Page" is auto-selected and disabled.</p>
+                            </li>
+                            <li>
+                                <p>Any Custom Action button controls using the Custom Action Type "External Source" or "Milliman" are excluded from the list of controls available to be copied from a wizard to a form destination. While these buttons might be available for copying from a wizard to a form, the functionality tied to these Custom Actions is not functional in a forms environment.</p>
+                            </li>
+                            <li>
+                                <p>No matter the size of the control as it exists in the Wizard, the Default size of the controls in the Form environment is used for the fields/controls upon landing on the form. Controls can then be moved and adjusted as necessary to fit form requirements. The default size for each control is listed below: </p>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>Combo Box (equates to wizard Dropdown&#160;List), Text Box, Calendar (equates to wizard DatePicker), and Address Autocomplete controls appear on the form with the default size of 50x18.</p>
+                                    </li>
+                                    <li>
+                                        <p>Check Box and Radio Buttons appear on the form with the default size of 15x15.</p>
+                                    </li>
+                                    <li>
+                                        <p>Button (equates to wizard Custom Action) appear on the form with the default size of 20x20.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>All copied wizard fields land on the form beginning at the top left of the form, moving left to right across the page and then down to the next line. If there are existing data items on the form, the fields being copied over from a wizard may overlay those existing controls.</p>
+                            </li>
+                            <li>
+                                <p>If more fields are copied from a wizard than there is space on the form to receive them, after all lines on the form have been filled,  all "excess" data fields are located at the bottom left corner of the form and are staggered so that the user can see there are multiple data fields.</p>
+                            </li>
+                            <li>
+                                <p>Where there are one-to-one relationships between wizard data field properties and form data field properties, the data field retains the same field properties on the destination form as existed on the source data item from the wizard. </p>
+                                <p>Retained data field properties from the wizard field data source:</p>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>Text Box retained field properties: Field Name, Common Tag Name, Error Placement, Input Type, Placeholder Text, Text Mask, SSN Format, Data Group, Data Group Property, Max Length, Read Only, and Office Use Only.</p>
+                                    </li>
+                                </ul>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>Combo Box (wizard Dropdown List) retained field properties: Field Name, Common Tag Name, List Values, Data Group, Data Group Property, Read Only, Office Use Only, Error Placement, and Help Text. </p>
+                                    </li>
+                                </ul>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>Check Box and Radio Button retained field properties: Field Name, Common Tag Name, Export Value, Group Name, Error Placement, Help Text, Display Style / Border Style, Data Group, Data Group Property, Read Only, and Office Use Only. </p>
+                                    </li>
+                                </ul>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>Button (wizard Custom Action) retained field properties: Field Name, Common Tag Name, Help Text, Data Group, Custom Action, Custom Action Type, and Action Parameter.</p>
+                                    </li>
+                                </ul>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>Calendar (wizard DatePicker) retained field properties: Field Name, Custom Tag Name, Error Placement, Help Text, Data Group, Data Group Property, Text Mask, and Read Only.</p>
+                                    </li>
+                                </ul>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>Address Autocomplete retained field properties: Field Name, Common Tag Name, Placeholder Text, Help Text, and Data Group.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>When the fields from the source wizard are displayed in the Copy Fields dialog and data items do not exist on the destination form,  the checkboxes adjacent to the Field Name/DataItemId column are selected (checked) and the checkboxes under the Already Exists column are cleared (unchecked).</p>
+                            </li>
+                            <li>
+                                <p>Any "Masks" added in the "Organization Settings" under the <MadCap:xref href="../../Organization Configuration/Organizations/Activity.htm" title="Activity" alt="Activity">Activity</MadCap:xref> tab are available for mapping when a data item to be mapped has one of the Masks selected.</p>
+                            </li>
+                            <li>
+                                <p>Any "custom" mask that exists in the wizard and is not a part of the mask created under the Organization Settings is not supported in Forms. If a data field to be copied from wizard to form has a "custom" mask, the data field is available for copying but the mask setting in the Field Properties is blank for the copied field.</p>
+                            </li>
+                        </ul>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/Capture245.png" alt="Copy From Wizards" title="Copy From Wizards" />
+                </p>
+            </li>
+            <li>
+                <p>In the grid, ensure all the fields to be copied are selected and then clear the checkboxes for the fields that will not be copied.</p>
+                <ul>
+                    <li><b>Select all fields - </b>Select the checkbox in the <b>Field Name</b> column of the list header. Clear the checkbox to clear all fields.</li>
+                    <li><b>Search for a particular field - </b>Type the field name in the <b>Search</b> field and click <b>Go</b> to display fields that match the search text.</li>
+                    <li><b>Search for all fields on a particular page - </b>Type <b>Page:[#]</b> in the <b>Search</b> field, such as “Page:2”.</li>
+                    <li><b>Clear the search results - </b>Clear the text in the <b>Search</b> field and click <b>Go</b> to clear the search results.</li>
+                    <li><b>Sort the grid columns - </b>Click a column title name to sort the grid by the selected column. Click the same column title to sort the grid in the reverse (descending or ascending) order.</li>
+                </ul>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/CopyFieldsRules2.jpg" alt="Select Fields and Rules to Copy" title="Select Fields and Rules  to Copy" MadCap:conditions="General.Online" />
+                </p>
+                <p>
+                    <img src="../../Resources/ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" /> The entries in the Page, Field Type, In PDF, DataItemID, and Already Exists columns are read only.</p>
+            </li>
+            <li>
+                <p>Below the grid, select the following checkboxes that apply.</p>
+                <p><b>Keep Original Field Coordinates</b> retains the field coordinates from the source form.</p>
+                <p><b>Copy All Selected Fields To The Active Page</b> copies all of the selected fields to the active page in the target form.</p>
+                <p><b>Copy All Selected Fields and Pages</b> copies the selected fields and the pages the fields exist on to the active page in the target form.</p>
+                <p><b>Copy Page Names</b> copies the page names.</p>
+                <p><b>Delete All Existing Fields Before Copy</b> deletes all of the existing fields in the target form before copying fields from the source form.</p>
+            </li>
+            <li>Click the <b>Copy Selected Fields</b> button to copy the fields and rules to the form that is active on the Designer page and lock the form for editing.</li>
+            <li>Click <b>SAVE</b> on the upper left of the target form page to save the copied fields, which unlocks the form for editing by other users.</li>
+        </ol>
+        <p><b class="Bold">See Also:</b> <MadCap:xref href="../Wizards/Copy Fields to a Wizard from a Form.htm" title="Copy Fields to a Wizard from a Form" alt="Copy Fields to a Wizard from a Form">Copy Fields to a Wizard from a Form</MadCap:xref></p>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

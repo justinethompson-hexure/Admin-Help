@@ -1,0 +1,1657 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Detailed Activity Reports</h1>
+        <p class="note"><b class="Bold">NOTE:</b> Activity reports do not contain Personally Identifiable Information (PII) because the activity reports are sent to clients via email. Any reports with PII information need to be <MadCap:xref href="Admin Reports.htm" target="_blank" alt="Admin Reports">Admin Reports</MadCap:xref> that are accessed and printed securely via FireLight<sup MadCap:conditions="General.Online">®</sup> Admin. <br /><strong>Spotlight Video:</strong> See the <a href="https://vimeo.com/335249731/d9783c0dce" target="_blank" title="FireLight Reports" alt="FireLight Reports">Reports</a> Spotlight Feature Video for more information.</p>
+        <p>Detailed Activity Reports are run on a scheduler through our automated activity reporting tool and do not appear in <MadCap:variable name="General.ProductName" /> Admin.  Each report can be sent in CSV or PDF format and is sent on an automated schedule to an organization email. A distribution email is best as it allows you to change your recipients as needed and allows the report scheduler to run efficiently. </p>
+        <p>The Detailed Activity reports have default data columns.  Some configurations, such as optional columns, are available.  The Detailed Activity Reports provide detailed data about transaction activity, but do not have access to specific form data that is not stored outside of the encrypted form data.</p>
+        <h2>Typical Activity Report Setup</h2>
+        <p>Activity reports can be scheduled via the <MadCap:xref href="Activity Reports Scheduler.htm">Activity Reports Scheduler</MadCap:xref>.</p>
+        <p><b>Carrier</b>
+        </p>
+        <ul>
+            <li>Daily – Detail, Failed, Summary, Purged</li>
+            <li>Weekly – Pending Purge</li>
+            <li>Monthly – Detail, Summary</li>
+        </ul>
+        <p><b>Carriers with Multiple Distributors</b>
+        </p>
+        <ul>
+            <li>Daily – Detail By Channel, Failed,  Purged</li>
+            <li>Weekly – Pending Purge</li>
+            <li>Monthly – Detail By Channel</li>
+        </ul>
+        <p><b>Distributors with Multiple Carriers</b>
+        </p>
+        <ul>
+            <li>Daily – Detail, Failed, Submission Summary (TrnSummary)</li>
+            <li>Weekly – Pending Purge</li>
+            <li>Monthly – Detail</li>
+        </ul>
+        <MadCap:snippetBlock src="../../Resources/Snippets/HaveActivityReportDeliveredViaSFTP.flsnp" />
+        <h2>Sample Detailed Activity Reports</h2>
+        <p>Following are sample Detailed activity reports.<MadCap:conditionalText MadCap:conditions="General.Online"> Click a link to view a sample report.</MadCap:conditionalText> </p>
+        <p>&#160;</p>
+        <table>
+            <caption><b class="TableBlue">Detail Reporting Options</b>
+            </caption>
+            <col style="width: 435px;" />
+            <col style="width: 178px;" />
+            <col style="width: 196px;" />
+            <col style="width: 264px;" />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Report Name</th>
+                    <th>Description</th>
+                    <th>Default Columns</th>
+                    <th>Options</th>
+                    <th>Frequency</th>
+                    <th>Format</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr MadCap:conditions="General.Postpone">
+                    <td>
+                        <p><a href="../../Resources/Reports/ApplicationStatusReport(IT).pdf" target="_blank" title="Sample Application Status Report" alt="Sample Application Status Report">Application Status</a>
+                            <MadCap:conditionalText MadCap:conditions="General.PDF"> <b class="Bold">Application Status</b></MadCap:conditionalText>
+                        </p>
+                        <p>(ApplicationStatusReport)</p>
+                    </td>
+                    <td>Lists application information including status, date application entered review queue, total amount and source of funds.</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <p>Application</p>
+                            </li>
+                            <li>
+                                <p>Submit Date</p>
+                            </li>
+                            <li>
+                                <p>Carrier</p>
+                            </li>
+                            <li>
+                                <p>Product</p>
+                            </li>
+                            <li>
+                                <p>Current Status</p>
+                            </li>
+                            <li>
+                                <p>Date Entered Suitability Review Queue</p>
+                            </li>
+                            <li>
+                                <p>Agent</p>
+                            </li>
+                            <li>
+                                <p>Owner</p>
+                            </li>
+                            <li>
+                                <p>Customer ID</p>
+                            </li>
+                            <li>
+                                <p>Total Amount</p>
+                            </li>
+                            <li>
+                                <p>Source of Funds</p>
+                            </li>
+                            <li>
+                                <p>Request Type</p>
+                            </li>
+                            <li>
+                                <p>Sent On</p>
+                            </li>
+                            <li>
+                                <p>Viewed On</p>
+                            </li>
+                            <li>
+                                <p>Signed On</p>
+                            </li>
+                            <li>
+                                <p>Captured Name (Name of the Signer)</p>
+                            </li>
+                            <li>
+                                <p>Captured Signature</p>
+                            </li>
+                            <li>
+                                <p>Email Address (Email ID of the Signer)</p>
+                            </li>
+                            <li>
+                                <p>Using IP&#160;Address</p>
+                            </li>
+                            <li>
+                                <p>Client Fill &amp;&#160;Sign</p>
+                            </li>
+                            <li>
+                                <p>E-Sign Email Request</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>&#160;</td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td>
+                        <p><a href="../../Resources/Reports/ApplicationStatusReport(IT).pdf" target="_blank" title="Sample Custom Application Status Report" alt="Sample Custom Application Status Report" MadCap:conditions="General.Online">Application Status</a>
+                            <MadCap:conditionalText MadCap:conditions="General.PDF"><b class="Bold">Application Status</b>
+                            </MadCap:conditionalText>
+                        </p>
+                        <p>(ApplicationStatusReport)</p>
+                    </td>
+                    <td>Lists application information including the current status, display status, review queue information, and whether E-Sign was used.</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <p>Policy Number</p>
+                            </li>
+                            <li>
+                                <p>Application</p>
+                            </li>
+                            <li>
+                                <p>Carrier</p>
+                            </li>
+                            <li>
+                                <p>Product</p>
+                            </li>
+                            <li>
+                                <p>Last Update Date</p>
+                            </li>
+                            <li>
+                                <p>Current Status</p>
+                            </li>
+                            <li>
+                                <p>Display Status</p>
+                            </li>
+                            <li>
+                                <p>Signature</p>
+                            </li>
+                            <li>
+                                <p>Date Entered Review Queue</p>
+                            </li>
+                            <li>
+                                <p>Review Queue</p>
+                            </li>
+                            <li>
+                                <p>Reviewer</p>
+                            </li>
+                            <li>
+                                <p>Agent</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>&#160;</td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td>
+                        <p><a href="../../Resources/Reports/CaseAccessVerificationReport.pdf" target="_blank" title="Sample Case Access Verification Report" alt="Sample Case Access Verification Report" MadCap:conditions="General.Online">Case Access Verification</a><b MadCap:conditions="General.PDF" class="Bold">Case Access Verification</b>
+                        </p>
+                        <p>(CaseAccessVerification)</p>
+                    </td>
+                    <td>Lists applications that have been viewed by someone other than the owning agent.</td>
+                    <td>
+                        <ul>
+                            <li>Application Name</li>
+                            <li>Status</li>
+                            <li>Date</li>
+                            <li>Viewed By</li>
+                            <li>Viewed Agent ID</li>
+                            <li>Viewed Group Code</li>
+                            <li>Message</li>
+                            <li>Owning Agent</li>
+                            <li>Owning Agent ID</li>
+                            <li>Owning Group Code</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Exclude Role Code (can exclude multiple role codes (e.g., support personnel role codes) from the report who have a legitimate reason for viewing agents' applications)</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td>
+                        <p>
+                            <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/EmailBounceBacks.pdf" target="_blank" title="FireLight Bounce Back Email Report" alt="FireLight Bounce Back Email Report">FireLight Bounce Back Email Report</a>
+                            </MadCap:conditionalText><b MadCap:conditions="General.PDF" class="Bold">FireLight Bounce Back Email Report</b>
+                        </p>
+                        <p>(EmailBounceBacks)</p>
+                    </td>
+                    <td>Lists SendGrid bounce back email notifications for an organization. The report is grouped by Activity Type (Illustration, Application, e-Delivery Fill and Sign, etc.).</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <p>Activity ID</p>
+                            </li>
+                            <li>
+                                <p>Activity Name</p>
+                            </li>
+                            <li>
+                                <p>Activity Status</p>
+                            </li>
+                            <li>
+                                <p>Agent ID</p>
+                            </li>
+                            <li>
+                                <p>Email Reason</p>
+                            </li>
+                            <li>
+                                <p>Email Address</p>
+                            </li>
+                            <li>
+                                <p>Error Date</p>
+                            </li>
+                            <li>
+                                <p>Error Reason</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>&#160;</td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>CSV</td>
+                </tr>
+                <tr>
+                    <td><a href="../../Resources/Reports/DetailDeclineSignReport.pdf" target="_blank" title="Sample Detailed Declined Signature Report" alt="Sample Detailed Declined Signature Report" MadCap:conditions="General.Online">FireLight Detail Declined Signature</a><b MadCap:conditions="General.PDF">FireLight Detail Declined Signature</b>
+                        <p>(DetailDeclineSign)</p>
+                    </td>
+                    <td>Lists all applications where agent has declined electronic signature.</td>
+                    <td>
+                        <ul>
+                            <li>Package ID</li>
+                            <li>Product Name</li>
+                            <li>Application Name</li>
+                            <li>Transaction Type</li>
+                            <li>Create Date</li>
+                            <li>Agent ID
+</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Add column Role Code / Header name for role code</li>
+                        </ul>
+                        <p class="Indent">&#160;</p>
+                        <p>&#160;</p>
+                    </td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><a href="../../Resources/Reports/DetailDisplayStatusReport.pdf" target="_blank" title="FireLight Detailed Status Report" alt="FireLight Detailed Status Report" MadCap:conditions="General.Online">FireLight Detailed Status Report</a><b MadCap:conditions="General.PDF" class="Bold">FireLightDetailedStatus</b>
+                        </p>
+                        <p>(DetailDisplayStatus)</p>
+                    </td>
+                    <td>Lists the status and display status of all activities that have not been deleted between the requested dates.</td>
+                    <td>
+                        <ul>
+                            <li>Activity ID</li>
+                            <li>Application Name</li>
+                            <li>Status Updated Date</li>
+                            <li>Status</li>
+                            <li>Display Status</li>
+                        </ul>
+                    </td>
+                    <td>&#160;</td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="../../Resources/Reports/EnrollmentApplicationReport.pdf" target="_blank" title="FireLight Enrollment Report Active Applications" alt="FireLight Enrollment Report Active Applications" MadCap:conditions="General.Online">FireLight Enrollment Report Active Applications</a><b class="Bold" MadCap:conditions="General.PDF">FireLight Enrollment Report Active Applications</b>
+                        <p>(EnrollmentApplicationReport)</p>
+                    </td>
+                    <td>Lists the enrollment activity for the organization. This report is sortable by Group, then Status in alphabetical order, and then by Application Name in alphabetical order.</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <p>Agent ID</p>
+                            </li>
+                            <li>
+                                <p>Agent Name </p>
+                            </li>
+                            <li>
+                                <p>Group ID</p>
+                            </li>
+                            <li>
+                                <p>Application Name</p>
+                            </li>
+                            <li>
+                                <p>Status</p>
+                            </li>
+                            <li>
+                                <p>Product Name</p>
+                            </li>
+                            <li>
+                                <p>Create Date</p>
+                            </li>
+                            <li>
+                                <p>Last Activity</p>
+                            </li>
+                            <li>
+                                <p>Elapsed Days</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>&#160;</td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="../../Resources/Reports/DetailSubmissionReport.pdf" target="_blank" title="Sample Successful Submission Report" alt="Sample Successful Submission Report" MadCap:conditions="General.Online">FireLight Successful Submission</a><b MadCap:conditions="General.PDF">FireLight Successful Submission</b>
+                        <p>(Detail)</p>
+                    </td>
+                    <td>
+                        <p>Lists all applications successfully submitted that day. This report lists only applications that would be invoiced by Hexure. Totals for each transaction type allowed by organization are listed.</p>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Package ID	</li>
+                            <li>Product Name	</li>
+                            <li>Create Date	</li>
+                            <li>Submit Date	</li>
+                            <li>Elapsed Days	</li>
+                            <li>Application Name</li>
+                            <li>	Transaction Type
+</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Add column Role Code / Header name for role code</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td>
+                        <p>
+                            <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/DetailSubmissionStatus.pdf" target="_blank" title="Sample Status Report" alt="Sample Status Report">FireLight Submission Status</a> </MadCap:conditionalText><b MadCap:conditions="General.PDF" class="Bold">FireLight Submission Status</b>
+                        </p>
+                        <p>(DetailSubmissionStatus)</p>
+                    </td>
+                    <td>
+                        <p>Lists all applications that are in the Pending Review status. </p>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Package ID	</li>
+                            <li>Product Name	</li>
+                            <li>Create Date	</li>
+                            <li>Agent Name</li>
+                            <li>Application Name</li>
+                            <li>Transaction Type</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Change the status parameter from Pending Review to a different status </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="../../Resources/Reports/AgentFirmSubmissionDetail.pdf" target="_blank" title="Sample FireLight Agent Successful Submission Report" alt="Sample FireLight Agent Successful Submission Report" MadCap:conditions="General.Online">Agent Successful Submission</a>
+                        <MadCap:conditionalText MadCap:conditions="General.Online"><![CDATA[  ]]></MadCap:conditionalText><strong MadCap:conditions="General.PDF">Agent Successful Submission</strong>
+                        <p>(AgentFirmSubmission)</p>
+                    </td>
+                    <td>Lists all applications successfully submitted ordered by product type.</td>
+                    <td>
+                        <ul>
+                            <li>Application Name</li>
+                            <li>
+TransRefGUID</li>
+                            <li>Create Date</li>
+                            <li>Submit Date</li>
+                            <li>Product Name</li>
+                            <li>Transaction Type</li>
+                            <li>UserName</li>
+                            <li>Policy Number </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Add column External Mapcode / Header name for external mapcode</li>
+                            <li>Header name for Policy Number</li>
+                            <li>Add column Firm ID / Header name for Firm ID</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/DetailSubmissionByChannelReport.pdf" target="_blank" title="Sample Detailed Submission Report by Channel" alt="Sample Detailed Submission Report by Channel" MadCap:conditions="General.Online">FireLight Detailed Submission by Channel</a>
+                        </MadCap:conditionalText><b MadCap:conditions="General.PDF">FireLight Detailed Submission by Channel</b>
+                        <p>(DetailByChannel)</p>
+                    </td>
+                    <td>Lists submission by organization for the time- period, broken down by the distributor submitting the business. This report contains counts for each of the transaction types. This is a good report for carriers to receive if their product is being sold by multiple distributors.</td>
+                    <td>
+                        <ul>
+                            <li>Package ID</li>
+                            <li>Product Name</li>
+                            <li>Create Date</li>
+                            <li>Submit Date</li>
+                            <li>Elapsed Days</li>
+                            <li>Application Name</li>
+                            <li>Transaction Type</li>
+                        </ul>
+                    </td>
+                    <td>N/A</td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="../../Resources/Reports/DetailSubmissionByCarrier.pdf" target="_blank" title="Sample Detailed Successful Submission Report by Carrier" alt="Sample Detailed Successful Submission Report by Carrier" MadCap:conditions="General.Online">FireLight Detailed Submission by Carrier</a>
+                        <MadCap:conditionalText MadCap:conditions="General.Online"> </MadCap:conditionalText><b MadCap:conditions="General.PDF">FireLight Detailed Submission by Carrier</b>
+                        <p>(DetailbyCarrier)</p>
+                    </td>
+                    <td>Lists all applications submitted for the time period broken down by the carrier's Product Code (dependent on the carrier adding the Product Code in Admin).</td>
+                    <td>
+                        <ul>
+                            <li>TransRefGUID</li>
+                            <li>Product Name</li>
+                            <li>Policy Number</li>
+                            <li>Submit Date</li>
+                            <li>Owner Name</li>
+                            <li>Application Name</li>
+                            <li>Transaction Type
+</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Replace owner with Signer Type 1 / Header name for Signer Type 1</li>
+                            <li>Add column for Signer Type 2 / Header name for Signer Type 2</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td>
+                        <p>
+                            <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/DistDetailByCarrier.pdf" target="_blank" title="Sample Distributor Detail by Carrier Report" alt="Sample Distributor Detail by Carrier Report">Distributor Detail by Carrier</a> </MadCap:conditionalText><b MadCap:conditions="General.PDF" class="Bold">Distributor Detail by Carrier</b> </p>
+                        <p>(DistDetailByCarrier)</p>
+                    </td>
+                    <td>Lists all applications submitted for the time period broken down by the carrier's product organization (instead of the carrier's Product Code as in the Detailed Submission by Carrier report above).</td>
+                    <td>
+                        <ul>
+                            <li>TransRefGUID</li>
+                            <li>Product Name</li>
+                            <li>Policy Number</li>
+                            <li>Submit Date</li>
+                            <li>Owner Name</li>
+                            <li>Application Name</li>
+                            <li>Transaction Type
+</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Replace owner with Signer Type 1 / Header name for Signer Type 1</li>
+                            <li>Add column for Signer Type 2 / Header name for Signer Type 2</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td>
+                        <p><a href="../../Resources/Reports/DistDetailCarrierByRoleCode.pdf" target="_blank" title="Distributor Detail by Carrier by Role Code" alt="Distributor Detail by Carrier by Role Code" MadCap:conditions="General.Online">Distributor Detail by Carrier by Role Code</a><b class="Bold" MadCap:conditions="General.PDF">Distributor Detail by Carrier by Role Code</b>
+                        </p>
+                        <p>(DistDetailCarrierByRole<br />Code)</p>
+                        <p>&#160;</p>
+                    </td>
+                    <td>Lists all applications successfully submitted for the time period broken down by the carrier's product organization by role code.</td>
+                    <td>
+                        <ul>
+                            <li>TransRefGUID</li>
+                            <li>Product Name</li>
+                            <li>Product Type</li>
+                            <li>Policy Number</li>
+                            <li>Submit Date</li>
+                            <li>Owner Name</li>
+                            <li>Application Name</li>
+                            <li>Transaction Type
+</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Replace owner with Signer Type 1 / Header name for Signer Type 1</li>
+                            <li>Add column for Signer Type 2 / Header name for Signer Type 2</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr MadCap:conditions="General.Postpone">
+                    <td>
+                        <p><a href="../../Resources/Reports/DistDetailCarrierByRoleCode.pdf" target="_blank" title="Sample Report" alt="Distributor Detail by Carrier by Role Code and Org Sample Report">Distributor Detail by Carrier by Role Code and Org</a><b MadCap:conditions="General.PDF" class="Bold"> Distributor Detail by Carrier by Role Code and Org</b>
+                            <MadCap:conditionalText MadCap:conditions="General.Postpone"> DR 231950</MadCap:conditionalText>
+                        </p>
+                        <p>(DistDetailCarrierByRole<br />CodeAndOrg)</p>
+                        <p>&#160;</p>
+                    </td>
+                    <td>Lists all applications successfully submitted for the time period broken down by the carrier's product organization by role code and organization.</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <p>Organization Name</p>
+                            </li>
+                            <li>
+                                <p>Role Code</p>
+                            </li>
+                            <li>
+                                <p>Group</p>
+                            </li>
+                            <li>
+                                <p>Period</p>
+                            </li>
+                            <li>
+                                <p>Year to Date</p>
+                            </li>
+                            <li>
+                                <p>Life to Date</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>&#160;</td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="../../Resources/Reports/DTIDataItemDetailReport.pdf" target="_blank" title="Sample DTI Successful Submission Report" alt="Sample DTI Successful Submission Report" MadCap:conditions="General.Online">DTI Successful Submission</a><strong MadCap:conditions="General.PDF">DTI Successful Submission</strong>
+                        <p>(DTIDataItemDetail)</p>
+                    </td>
+                    <td>Lists all applications successfully submitted for the time period.  This report provides the ability to use application search items that are stored for each app.  See your Strategic Account Manager for details.</td>
+                    <td>
+                        <ul>
+                            <li>TransRefGUID</li>
+                            <li>Submit Date</li>
+                            <li>Product Name</li>
+                            <li>Transaction Type</li>
+                            <li>
+Owner Name</li>
+                            <li>Agent Name
+</li>
+                        </ul>
+                        <p>&#160;</p>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Add column Application Search Item 1 / Header name for Application Search Item 1</li>
+                            <li>Add column Application Search Item 2 / Header name for Application Search Item 2</li>
+                            <li>Add column DTI Number / Header name for DTI number</li>
+                            <li>Add column Role Code / Header name for role code</li>
+                            <li>Replace owner with Signer Type / Header name for signer type</li>
+                            <li>Add column Used Cooperative Technologies / Header name for used CT</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="../../Resources/Reports/DTIDetailSubmissionReport.pdf" target="_blank" title="Sample DTI Detailed Submission Report" alt="Sample DTI Detailed Submission Report" MadCap:conditions="General.Online">DTI Detail</a><b MadCap:conditions="General.PDF">DTI Detail</b>
+                        <p>(DTIDetail)</p>
+                    </td>
+                    <td>Lists all applications submitted for the time-period. This report includes the transRefGuid ID (DTI) for each application.</td>
+                    <td>
+                        <ul>
+                            <li>TransRefGUID</li>
+                            <li>Submit Date</li>
+                            <li>Product Name</li>
+                            <li>Transaction Type</li>
+                            <li>
+Owner Name</li>
+                            <li>DTI Number</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Replace Owner Signer Type with signer type / Header name for signer type</li>
+                            <li>Add column External Mapcode / Header name for external mapcode</li>
+                            <li>Add column Role Code / Header name for role code</li>
+                            <li>Add column Use of Review Queue / Header name for use of review queue</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="../../Resources/Reports/FailedSubmissionReport.pdf" target="_blank" title="Sample Failed Submission Report" alt="Sample Failed Submission Report" MadCap:conditions="General.Online">FireLight Failed Submission</a>
+                        <MadCap:conditionalText MadCap:conditions="General.Online"> </MadCap:conditionalText><b MadCap:conditions="General.PDF">FireLight Failed Submission</b>
+                        <p>(Failed)</p>
+                    </td>
+                    <td>Lists all applications that failed submission and are still within the retry queue for processing.</td>
+                    <td>
+                        <ul>
+                            <li>Package ID</li>
+                            <li>Product Name</li>
+                            <li>Create Date</li>
+                            <li>Resubmit Date</li>
+                            <li>Application Name
+</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Add column Role Code / Header name for role code</li>
+                            <li>Add column DTI Number / Header name for DTI number</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="../../Resources/Reports/IllustrationUserDetailedReport.pdf" target="_blank" title="Sample FireLight Illustration User Detailed Report" alt="Sample FireLight Illustration User Detailed Report" MadCap:conditions="General.Online">FireLight Illustration User Detailed Report</a><b class="Bold" MadCap:conditions="General.PDF">FireLight Illustration User Detailed Report</b>
+                        <p>(IllustrationUserDetailed)</p>
+                    </td>
+                    <td>Lists the unique active users accessing this activity for a 90-day time frame. If a user has at least one non-test illustration (report or calcs) within the last 90 days, they are considered active.</td>
+                    <td>
+                        <ul>
+                            <li>Agent ID (User ID)</li>
+                            <li>Carrier</li>
+                            <li>Seller Name</li>
+                            <li>Transaction ID</li>
+                            <li>Request ID</li>
+                            <li>Create Date</li>
+                            <li>CUSIP</li>
+                            <li>Request Type</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Active In Days _____ (defaults to 90 for a 90-day time frame for the report)</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><a href="../../Resources/Reports/IllustrationActivityDetailReport.pdf" target="_blank" title="Sample FireLight Illustration User Detailed Report" alt="Sample FireLight Illustration User Detailed Report" MadCap:conditions="General.Online">&gt;Illustration Activity Detail Report</a> <b MadCap:conditions="General.PDF">Illustration Activity Detail Report</b></p>
+                        <p>(IllustrationActivityDetail)</p>
+                    </td>
+                    <td> Lists Illustration transaction details.</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <p>Owner Type</p>
+                            </li>
+                            <li>
+                                <p>Owner First Name</p>
+                            </li>
+                            <li>
+                                <p>Owner Last Name</p>
+                            </li>
+                            <li>
+                                <p>Name (field shows if Owner Type = Trust or Corporation)</p>
+                            </li>
+                            <li>
+                                <p>Owner Birth Date</p>
+                            </li>
+                            <li>
+                                <p>Owner Gender</p>
+                            </li>
+                            <li>
+                                <p>Annuitant First Name
+</p>
+                            </li>
+                            <li>
+                                <p>
+Annuitant Last Name</p>
+                            </li>
+                            <li>
+                                <p>
+
+Annuitant Birth Date
+
+</p>
+                            </li>
+                            <li>
+                                <p>Annuitant Gender</p>
+                            </li>
+                            <li>
+                                <p>Issue State</p>
+                            </li>
+                            <li>
+                                <p>Expected Premium
+
+Surrender Charge Period
+
+Strategy Allocations (3 fields)
+</p>
+                            </li>
+                            <li>
+                                <p>
+Gain Control Percentage
+
+</p>
+                            </li>
+                            <li>
+                                <p>Producer First Name
+</p>
+                            </li>
+                            <li>
+                                <p>
+Producer Last Name
+
+</p>
+                            </li>
+                            <li>
+                                <p>Producer Email
+
+</p>
+                            </li>
+                            <li>
+                                <p>Producer Role Code
+</p>
+                            </li>
+                            <li>
+                                <p>Created Date
+
+ </p>
+                            </li>
+                            <li>
+                                <p>Last Modified Date</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>Ability to  filter apps based on CUSIP.</td>
+                    <td>Weekly</td>
+                    <td>CSV</td>
+                </tr>
+                <tr>
+                    <td><a href="../../Resources/Reports/PendingDeletionReport.pdf" target="_blank" title="Sample Pending Deletion Report" alt="Sample Pending Deletion Report" MadCap:conditions="General.Online">Pending Deletion</a>
+                        <MadCap:conditionalText MadCap:conditions="General.Online"> </MadCap:conditionalText><b MadCap:conditions="General.PDF">Pending Deletion</b>
+                        <p>(PendingDeletion)</p>
+                    </td>
+                    <td>Lists all of the uncompleted applications pending deletion according to the organization's purge policy set in the Admin.</td>
+                    <td>
+                        <ul>
+                            <li>Agent ID</li>
+                            <li>Agent Name</li>
+                            <li>Product Name</li>
+                            <li>Create Date</li>
+                            <li>Purged Date</li>
+                            <li>Status</li>
+                            <li>Application Name</li>
+                            <li>Transaction Type
+</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Set Number of days before deletion / Header name for days before deletion</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><a href="../../Resources/Reports/EDeliveryPendingExpirationReport.pdf" target="_blank" title="Sample E-Delivery Pending Expiration Report" alt="Sample E-Delivery Pending Expiration Report"><MadCap:conditionalText MadCap:conditions="General.Online">E-Delivery Pending Expiration </MadCap:conditionalText></a><b MadCap:conditions="General.PDF" class="Bold">E-Delivery Pending Expiration</b>
+                        </p>
+                        <p>(EDeliveryPendingExpiration)</p>
+                        <p>&#160;</p>
+                    </td>
+                    <td>Lists all applications with only e-Delivery activities that are not in terminal status. Report includes only parent cases (does not include any child cases).</td>
+                    <td>
+                        <ul>
+                            <li>Firm ID</li>
+                            <li>Policy Number</li>
+                            <li>Agent Name</li>
+                            <li>Product Name</li>
+                            <li>Application Name</li>
+                            <li>Create Date</li>
+                            <li>Last Activity</li>
+                            <li>Elapsed Days</li>
+                            <li>Expiration Date</li>
+                            <li>Display Status</li>
+                        </ul>
+                    </td>
+                    <td>N/A</td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/PendingOrdersReport.pdf" target="_blank" title="Sample Pending Orders Report" alt="Sample Pending Orders Report">Pending Orders</a>
+                        </MadCap:conditionalText><b MadCap:conditions="General.PDF">Pending Orders</b>
+                        <p>(PendingOrders)</p>
+                    </td>
+                    <td>Lists all active applications in edit application status for the time-period.</td>
+                    <td>
+                        <ul>
+                            <li>Firm ID</li>
+                            <li>Agent Name</li>
+                            <li>Application Name</li>
+                            <li>Transaction Type</li>
+                            <li>Create Date</li>
+                            <li>Last Activity Date</li>
+                            <li>Elapsed Days 
+</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Add column Role Code / Header name for role code</li>
+                            <li>Add column Application Search Item / Header name for application search item</li>
+                            <li>Min/Max Values (i.e., to pull apps for last 30 days, use 0/30)</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>
+                            <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/PendingPurgeReport.pdf" target="_blank" title="Sample Pending Purge Report" alt="Sample Pending Purge Report">Pending Purge</a>
+                            </MadCap:conditionalText>
+                            <MadCap:conditionalText MadCap:conditions="General.Online">&#160;</MadCap:conditionalText><b MadCap:conditions="General.PDF">Pending Purge</b>
+                        </p>
+                        <p>(PendingPurge)</p>
+                    </td>
+                    <td>Lists active applications (both completed and uncompleted) scheduled to be purged at the next purge cycle according to the organization’s purge policies.</td>
+                    <td>
+                        <ul>
+                            <li>Agent ID</li>
+                            <li>Agent Name</li>
+                            <li>Product Name</li>
+                            <li>Create Date</li>
+                            <li>Last Update Date</li>
+                            <li>Status</li>
+                            <li>Application Name
+</li>
+                        </ul>
+                    </td>
+                    <td>N/A</td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><a href="../../Resources/Reports/PurgedReport.pdf" target="_blank" title="Sample Purged Applications Report" alt="Sample Purged Applications Report" MadCap:conditions="General.Online">Purged Applications</a><![CDATA[  ]]><b MadCap:conditions="General.PDF">Purged Applications</b></p>
+                        <p>(Purged)</p>
+                    </td>
+                    <td>Lists all applications purged from the system within the time period specified.</td>
+                    <td>
+                        <ul>
+                            <li>Package ID</li>
+                            <li>Product Name</li>
+                            <li>Create Date</li>
+                            <li>Last Activity</li>
+                            <li>Purged Date</li>
+                            <li>Status</li>
+                            <li>	Application Name</li>
+                            <li>Transaction Type
+</li>
+                        </ul>
+                    </td>
+                    <td>N/A</td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><a href="../../Resources/Reports/QuoteActivitiesReport.pdf" target="_blank" title="Quote Activity Report" alt="Quote Activity Report" MadCap:conditions="General.Online">Quote Activity Report</a><b MadCap:conditions="General.PDF" class="Bold">QuoteActivityReport</b>
+                        </p>
+                        <p>(QuoteActivitiesReport)</p>
+                        <p>&#160;</p>
+                    </td>
+                    <td>
+                        <p>Lists all quotes by FireLight user and number of quotes linked to an e-Application by line of business.</p>
+                        <p>Includes the number of Total Quotes, Annuity Quotes with Lined e-App, Life Quotes with Linked e-App, and Total Quotes with Linked e-App if the count is greater than zero.</p>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>
+                                <p>Quote Name</p>
+                            </li>
+                            <li>
+                                <p>Create Date</p>
+                            </li>
+                            <li>
+                                <p>Quote ID</p>
+                            </li>
+                            <li>
+                                <p>Product Type</p>
+                            </li>
+                            <li>
+                                <p>Agent Name</p>
+                            </li>
+                            <li>
+                                <p>Linked e-Application</p>
+                            </li>
+                            <li>
+                                <p>Linked Policy Number</p>
+                            </li>
+                            <li>
+                                <p>Linked e-Application Status</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>&#160;</td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="../../Resources/Reports/ReviewQueueReport.pdf" target="_blank" title="Sample Review Queue Report" alt="Sample Review Queue Report" MadCap:conditions="General.Online">Review Queue</a><b MadCap:conditions="General.PDF" class="Bold">Review Queue</b>
+                        <p>(ReviewQueue)</p>
+                    </td>
+                    <td>
+                        <p>Lists the applications that are currently in each review queue.</p>
+                        <p>&#160;</p>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>
+                                <p>Date (created)</p>
+                            </li>
+                            <li>
+                                <p>Product </p>
+                            </li>
+                            <li>
+                                <p>Agent </p>
+                            </li>
+                            <li>
+                                <p>Owner </p>
+                            </li>
+                            <li>
+                                <p>Current Queue </p>
+                            </li>
+                            <li>
+                                <p>Reviewer Name</p>
+                            </li>
+                            <li>
+                                <p>Reviewer ID</p>
+                            </li>
+                            <li>
+                                <p># of Days in Current Queue</p>
+                            </li>
+                            <li>
+                                <p># of Days in Review Queue
+</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Use Agent Name from App Search Items</li>
+                            <li>Use Owner Name from App Search Items / Header name for Owner Name</li>
+                            <li>Replace Owner Signer Type with signer type</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/ReviewQueueReviewerReport.pdf" target="_blank" title="Sample Review Queue Reviewer Report" alt="Sample Review Queue Reviewer Report">Review Queue Reviewer</a>
+                        </MadCap:conditionalText><b MadCap:conditions="General.PDF" class="Bold">Review Queue Reviewer</b>
+                        <p>(ReviewQueueReviewer)</p>
+                    </td>
+                    <td>Lists the applications that have been approved or rejected from the queue.</td>
+                    <td>
+                        <ul>
+                            <li>Reviewer Name</li>
+                            <li>Client Name</li>
+                            <li>Time Elapsed</li>
+                            <li>Date Entered Queue</li>
+                            <li>Date Review Completed</li>
+                            <li> Approval Status</li>
+                            <li>Agent Name</li>
+                            <li>Queue Name
+</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Use Agent Name from App Search Items</li>
+                            <li>Use Client Name from App Search Items / Header name for Client Name</li>
+                            <li>Replace Client Signer Type (owner) with signer type</li>
+                            <li>Add column for App Search Item / Header name for App Search Item</li>
+                            <li>Add column for product organization name / Header name for product organization name</li>
+                            <li>Add column for E-Signed (Yes/No) / Header name for E-Signed</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/ReviewQueueMoveReport.pdf" target="_blank" title="Sample Review Queue Move Report" alt="Sample Review Queue Move Report">Review Queue Move</a> </MadCap:conditionalText><b MadCap:conditions="General.PDF" class="Bold">Review Queue Move</b>
+                        <p>(ReviewQueueMove)</p>
+                    </td>
+                    <td>Lists the applications that have been manually or automatically moved into a queue. </td>
+                    <td>
+                        <ul>
+                            <li>Reviewer Name</li>
+                            <li>Client Name</li>
+                            <li>Agent Name</li>
+                            <li>Date Entered Queue</li>
+                            <li>Queue Name
+</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Use Agent Name from App Search Items</li>
+                            <li>Use Client Name from App Search Items / Header name for Client Name</li>
+                            <li>Replace Client Signer Type (owner) with signer type</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td>
+                        <p>
+                            <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/ReviewQueueReleaseReport.pdf" target="_blank" title="Sample Review Queue Release Report" alt="Sample Review Queue Release Report">Review Queue Release</a>
+                            </MadCap:conditionalText> <b MadCap:conditions="General.PDF" class="Bold">Review Queue Release</b></p>
+                        <p>(ReviewQueueReleaseReport)</p>
+                    </td>
+                    <td>Lists the applications that have been manually or automatically released.</td>
+                    <td>
+                        <ul>
+                            <li>Application ID</li>
+                            <li>Application Name</li>
+                            <li>Status</li>
+                            <li>Create Date</li>
+                            <li>Policy Number</li>
+                            <li>Action</li>
+                            <li>Action Date</li>
+                            <li>Manual Rel</li>
+                            <li>User Name</li>
+                        </ul>
+                    </td>
+                    <td>&#160;</td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td>
+                        <p>
+                            <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/ExpirationDeadlineDateDetailedReport.pdf" target="_blank" title="Sample Expiration Deadline Date Detailed Report" alt="Sample Expiration Deadline Date Detailed Report">FireLight Expiration Deadline Date</a>
+                            </MadCap:conditionalText> <b MadCap:conditions="General.PDF" class="Bold">FireLight Expiration Deadline Date</b> </p>
+                        <p>(ExpirationDeadlineDate<br />Detailed)</p>
+                    </td>
+                    <td>Lists all of the activities that have expired from the Review Queue per the expiration deadline date.</td>
+                    <td>
+                        <ul>
+                            <li>Activity Type
+</li>
+                            <li>Agent</li>
+                            <li>Agent ID</li>
+                            <li>Case Name
+
+</li>
+                            <li>Create Date</li>
+                            <li>
+Last Activity
+</li>
+                            <li> 
+
+Expired Date</li>
+                            <li>Status</li>
+                        </ul>
+                    </td>
+                    <td>&#160;</td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td>
+                        <p>
+                            <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/PendingExpirationDeadlineDateDetailedReport.pdf" target="_blank" title="Sample Pending Expiration Deadline Date Detailed Report" alt="Sample Pending Expiration Deadline Date Detailed Report">FireLight Pending Expiration Deadline Date</a>
+                            </MadCap:conditionalText><b MadCap:conditions="General.PDF" class="Bold">FireLight Pending Expiration Deadline Date</b>
+                        </p>
+                        <p>(PendingExpirationDeadline<br />DateDetailed)</p>
+                    </td>
+                    <td>Lists all of the activities that are pending expiration from the Review Queue per the expiration deadline date.</td>
+                    <td>
+                        <ul>
+                            <li>Activity Type
+</li>
+                            <li>
+Agent Name</li>
+                            <li>Agent ID</li>
+                            <li>Case Name
+
+</li>
+                            <li>Create Date</li>
+                            <li>
+Last Activity
+</li>
+                            <li>Days Elapsed</li>
+                            <li>Pending 
+
+ Expired Date</li>
+                            <li>Status 
+
+</li>
+                        </ul>
+                    </td>
+                    <td>&#160;</td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td>
+                        <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/GIACTTransactionActivityReport.pdf" target="_blank" title="Sample GIACT Web Service Detailed Report" alt="Sample GIACT Web Service Detailed Report">GIACT Web Service Detailed Report</a>
+                        </MadCap:conditionalText><b class="Bold" MadCap:conditions="General.PDF">GIACT Web Service Detailed Report</b>
+                        <p>(GIACTTransactionActivity)</p>
+                        <p>See the <a href="https://vimeo.com/406918050/236d81831d" target="_blank" title="Service Request Table Reporting Changes" alt="Service Request Table Reporting Changes">Service Request Table Reporting Changes</a> Spotlight Feature Video for more information.</p>
+                    </td>
+                    <td>Lists all transactions that have an account response code (and customer response code if applicable), which provides the volume of transactions utilizing the GIACT web services. The purge policy for this report is 3 years (1095 days). This report is available for carriers and distributors.</td>
+                    <td>
+                        <ul>
+                            <li>ACORD Type (eApp, eDelivery, etc.) </li>
+                            <li>Agent ID </li>
+                            <li>Distributor Transaction ID (AppID)</li>
+                            <li>Call Date</li>
+                            <li>Initiating Organization</li>
+                            <li> Account Response Code (gVerify) </li>
+                            <li>Customer Response Code (gAuthenticate)</li>
+                        </ul>
+                    </td>
+                    <td>&#160;</td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td>
+                        <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/LexisNexisUsageReport.pdf" target="_blank" title="Sample LexisNexis Usage Report" alt="Sample LexisNexis Usage Report">LexisNexis Usage Report</a>
+                        </MadCap:conditionalText><b MadCap:conditions="General.PDF" class="Bold">LexisNexis Usage Report</b>
+                        <p>(LexisNexisUsage)</p>
+                        <p>See the <a href="https://vimeo.com/406918050/236d81831d" target="_blank" title="Service Request Table Reporting Changes" alt="Service Request Table Reporting Changes">Service Request Table Reporting Changes</a> Spotlight Feature Video for more information.</p>
+                    </td>
+                    <td>
+                        <p>Lists the total uses of LexisNexis and LexisNexisRisk for the period. The purge policy for this report is 3 years (1095 days).</p>
+                        <p><b class="Bold">NOTE:</b> The Service Type column displays "Risk Classifier," "Quiz" or "Instant ID" to distinguish between the various LexisNexis web services. </p>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>TransRefGUID</li>
+                            <li>
+RefID (Lex ID)</li>
+                            <li>Date</li>
+                            <li>Carrier</li>
+                            <li>Distributor</li>
+                            <li>DTI Number
+</li>
+                            <li>Conversation ID</li>
+                            <li>Quoteback ID</li>
+                            <li>Case Name</li>
+                            <li>Agent Name</li>
+                            <li>User ID</li>
+                            <li>Agent ID</li>
+                            <li>Service Type</li>
+                            <li>Submit Date</li>
+                        </ul>
+                    </td>
+                    <td>N/A</td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td>
+                        <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/MillimanUsageReport.pdf" target="_blank" title="Milliman Usage Report" alt="Milliman Usage Report">Milliman Usage Report</a>
+                        </MadCap:conditionalText>
+                        <MadCap:conditionalText MadCap:conditions="General.PDF">Milliman Usage Report</MadCap:conditionalText>
+                        <p>(MillimanUsageReport)</p>
+                    </td>
+                    <td>Lists all Milliman requirements ordered  (RX, MIB, MVR) by the organization for the time period.</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <p>Application Name</p>
+                            </li>
+                            <li>
+                                <p>Requirements Ordered</p>
+                            </li>
+                            <li>
+                                <p>Order Number</p>
+                            </li>
+                            <li>
+                                <p>Order Date</p>
+                            </li>
+                            <li>
+                                <p>Order Request Result</p>
+                            </li>
+                            <li>
+                                <p>Order Response Result</p>
+                            </li>
+                            <li>
+                                <p>Results Status</p>
+                            </li>
+                            <li>
+                                <p>Completion Date</p>
+                            </li>
+                            <li>
+                                <p>Writing Agent Name</p>
+                            </li>
+                            <li>
+                                <p>User Name</p>
+                            </li>
+                            <li>
+                                <p>Carrier</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>N/A</td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td>
+                        <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/ParamedVendorActivityReport.pdf" target="_blank" title="Paramed Vendor Activity Report" alt="Paramed Vendor Activity Report">Paramed Vendor Activity Report</a>
+                        </MadCap:conditionalText><b MadCap:conditions="General.PDF" class="Bold">Paramed Vendor Activity Report</b>
+                        <p>(ParamedVendorActivityReport)</p>
+                    </td>
+                    <td>
+                        <p>Lists all APPS and ExamOne (LabOne) Paramed Exams ordered</p>
+                        <p>by the organization for the time period.</p>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>
+                                <p>Paramed Vendor</p>
+                            </li>
+                            <li>
+                                <p>Paramed Status</p>
+                            </li>
+                            <li>
+                                <p>Order Date</p>
+                            </li>
+                            <li>
+                                <p>Last Status Date</p>
+                            </li>
+                            <li>
+                                <p>Product Name</p>
+                            </li>
+                            <li>
+                                <p>Application Name</p>
+                            </li>
+                            <li>
+                                <p>Writing Agent Name</p>
+                            </li>
+                            <li>
+                                <p>User Name</p>
+                            </li>
+                            <li>
+                                <p>External Role Code</p>
+                            </li>
+                            <li>
+                                <p>Carrier</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>N/A</td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td>
+                        <p>
+                            <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../Resources/Reports/ThirdPartyServiceUsage_All.pdf" target="_blank" title="Third Party Usage Report" alt="Third Party Usage Report">Third-Party Usage Report</a>
+                            </MadCap:conditionalText><b MadCap:conditions="General.PDF" class="Bold">Third-Party Usage</b>
+                        </p>
+                        <p>(ThirdPartyUsage_All)</p>
+                    </td>
+                    <td>Lists the Third-Party Usage for All Third Parties except for Cooperative Technologies (a separate report below). Includes Total Web Service Calls per Third-Party and Total Web Service Usage.</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <p>Application ID</p>
+                            </li>
+                            <li>
+                                <p>Web Service</p>
+                            </li>
+                            <li>
+                                <p>Call Date</p>
+                            </li>
+                            <li>
+                                <p>Organization</p>
+                            </li>
+                            <li>
+                                <p>Config Group </p>
+                            </li>
+                            <li>
+                                <p>Allow Esign</p>
+                            </li>
+                        </ul>
+                        <p>&#160;</p>
+                    </td>
+                    <td><b class="Bold">NOTE:</b> DocuSign is currently the only third-party service request that is setting the Config Group in the service request.</td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="../../Resources/Reports/ThirdPartyServiceUsage.pdf" target="_blank" title="Sample Third Party Cooperative Technologies Usage Report" alt="Sample Third Party Cooperative Technologies Usage Report" MadCap:conditions="General.Online">Third-Party Cooperative Technologies Usage</a><b MadCap:conditions="General.PDF">Third-Party Cooperative Technologies Usage</b>
+                        <p>(ThirdPartyServiceUsage_CT1035)</p>
+                        <p>See the <a href="https://vimeo.com/406918050/236d81831d" target="_blank" title="Service Request Table Reporting Changes" alt="Service Request Table Reporting Changes">Service Request Table Reporting Changes</a> Spotlight Feature Video for more information.</p>
+                    </td>
+                    <td>Lists the total uses of the Cooperative Technologies 1035 Yellow Pages for the period. The purge policy for this report is 3 years (1095 days).</td>
+                    <td>
+                        <ul>
+                            <li>TransRefGUID</li>
+                            <li>RefID</li>
+                            <li>Form Number</li>
+                            <li>Call Date</li>
+                            <li>Initiating Organization</li>
+                            <li>Selling Organization</li>
+                            <li>Ceding Carrier CT ID</li>
+                            <li>Universal Location ID
+</li>
+                        </ul>
+                    </td>
+                    <td>N/A</td>
+                    <td>
+                        <p>Daily</p>
+                        <p>Weekly</p>
+                        <p>Monthly</p>
+                    </td>
+                    <td>
+                        <p>PDF</p>
+                        <p>CSV</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><a href="../../Resources/PDFdocs/TransactionDetailReport.pdf">Transaction Detail Report</a><b>Transaction Detail Report [Beta]</b><![CDATA[
+                        ]]></p>
+                        <p>(TransactionDetail_All)</p>
+                    </td>
+                    <td>Lists all visible wizards within the packet and all fields presented to the agent and the customer, whether or not a value is entered. </td>
+                    <td>
+                        <ul>
+                            <li>
+                                <p>Confirmation Number</p>
+                            </li>
+                            <li>
+                                <p>Transaction ID</p>
+                            </li>
+                            <li>
+                                <p>Status </p>
+                            </li>
+                            <li>
+                                <p>State</p>
+                            </li>
+                            <li>
+                                <p>Product</p>
+                            </li>
+                            <li>
+                                <p>Carrier</p>
+                            </li>
+                        </ul>
+                    </td>
+                    <td>Org setting must be enabled via a support ticket to receive this report</td>
+                    <td>For those with Transaction Detail Reports enabled, whenever an application is submitted</td>
+                    <td>PDF</td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

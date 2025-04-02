@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Admin users can perform a search in the copy rules search field, but when the information is cleared, the user cannot get past the search results. This maintenance item will remove the error being presented when search results are cleared and allow the user to return to the full list of search results, providing a better user experience.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>  Admin, Rules, Copy Rules Search results are refreshed upon clearing the search criteria, error removed when clearing search</p>
+            </li>
+        </ul>
+    </body>
+</html>

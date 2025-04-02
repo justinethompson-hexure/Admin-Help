@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This Enhancement will add new rule scopes to FireLight that will make the rules run after the application is created and when other rules are already run. Rules created using these new rule scopes will run last after all other rules in the application have finished. This is to save application load time in case there are rules written using large custom lists. Rules created using the new rule scopes will run for both when (a) new application is created, (b) an existing application is loaded for data entry.</p>
+        <p>The new rule scopes will support faster application load time.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Two new rule scopes "Run Last - Initialize" and "Run Last - All" is added to the Rule Scope dropdown at FL Admin -&gt; Product Config -&gt; Rule Sets -&gt; Rules Window (link)</p>
+            </li>
+        </ul>
+    </body>
+</html>

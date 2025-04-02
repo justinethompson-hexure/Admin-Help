@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>Enter the name of the data item associated with the field. Use any characters except apostrophes. This does not need to be unique among all fields in the form. <MadCap:snippetText src="FieldPropsFieldName.flsnp" /></p>
+    </body>
+</html>

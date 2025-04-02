@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Enable APPS</b> checkbox to enable the APPS paramedical exam ordering feature if the organization has the APPS integration. This is an optional feature. See <MadCap:xref href="../../../../Features/APPS Paramed Exam Order Integration.htm" title="APPS Paramed Exam Order Integration" alt="APPS Paramed Exam Order Integration">APPS&#160;Paramed Exam Order Integration</MadCap:xref>. Both Paramed Ordering options can be selected simultaneously. See <b class="Bold">NOTES</b>.</body>
+</html>

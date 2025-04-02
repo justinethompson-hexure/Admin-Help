@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight v2.36-p Release Notes</h1>
+        <h1><b style="font-size: 16pt;">New Functionality</b>
+        </h1>
+        <p><b style="font-size: 12pt;">Disallow Copying an Activity with Expired Sales Agreement: DIST-3730</b>
+        </p>
+        <p>Currently, a user cannot proceed with data entry of an activity with an expired/invalid sales agreement. As a validation, it will be restricted to creating a copy of an activity with invalid sales agreement.</p>
+        <p><b>Impact</b>
+        </p>
+        <p>FireLight App: Copy option will be unavailable on below areas for the activities whose sales agreement in invalid.</p>
+        <p>•	Other Action menu</p>
+        <p>•	All Activities page</p>
+        <p><b style="font-size: 12pt;">Make CSV the Default Format When Generating Admin Reports: DIST-3679</b>
+        </p>
+        <p>With recent enhancements to admin reports, changes have been made to the CSV format due to width/column limitation in the PDF format of reports. For this reason, to generate the entire report, user must select CSV from the dropdown because the default option is currently PDF.</p>
+        <p>With these changes, the default selected format will be for CSV to generate admin reports. </p>
+        <p>The exception to this change will be Application Audit and Transaction Summary reports.</p>
+        <p><b>Impact</b>
+        </p>
+        <p>FL Admin: Display CSV as the default format on admin reports page under the Utilities menu.</p>
+        <p style="font-weight: bold;font-size: 12pt;">New Detailed Activity Reports are Available with the Report Scheduler Functionality:  DIST-3807 and DIST- 2341</p>
+        <p>The following activity reports have been to the Report Scheduler.   They will be listed under detailed reports:</p>
+        <ul>
+            <li>
+                <p>Application Bypass RQ: List activities that have bypassed both pre and post submit reviews</p>
+            </li>
+            <li>
+                <p>Apps Submitted to Suitability Review: List activities that were submitted to post submit review</p>
+            </li>
+            <li>
+                <p>Apps Suitability Review Received: Review status received for activities submitted to post submit review</p>
+            </li>
+        </ul>
+        <p><b style="font-size: 12pt;">Prevent System from Scrolling All the Way to the Top When User Launches SireLC Can Sell: CR-2355</b>
+        </p>
+        <p>When a user browses the Product Selection Page in FireLight and selects a product with SureLC Parity, system now returns to the same row, instead of scrolling to the very top of the Product Selection page. We have improved the user experience by maintaining the cursor on the selected product.</p>
+        <p><b style="font-size: 12pt;">Include MIB Response as Part of the Audit Report: CR-3254</b>
+        </p>
+        <p>When user calls Evidence Framework, FireLight is now able to get the final MIB Response and record it in the Audit Report for the primary insured that is associated to Case ID. Work is in progress to add the ability to include the MIB report for additional insureds.</p>
+        <p><b style="font-size: 12pt;">Add New DataItem to Determine When MIB Is Complete: CR-3435</b>
+        </p>
+        <p>FireLight now indicates when an MIB is complete.</p>
+        <p><b style="font-size: 12pt;">Disable Print PDF for External Signers: EAES-4825</b>
+        </p>
+        <p>A new checkbox has been added to signature controls. The checkbox is called "Disable Print PDF" When true, it will prevent the signer type assigned to that specific control from viewing the application as a PDF as well as printing during the signing ceremony. This only applies for external users. This only applies to Sign Only.</p>
+        <p><b style="font-size: 12pt;">Implement Ability to Cancel Paramedic Appointment: CR-2853</b>
+        </p>
+        <p>We have implemented the ability for a user to cancel either an APPS or ExamOne appointment after it has been scheduled.  The ability to cancel the appointment is set up using a custom action with the parameter “ExamOneCancelAppointment” or “APPSCancelAppointment.”    A cancellation message will be presented.</p>
+        <p><b style="font-size: 12pt;">Include the Paramed Transaction in the Audit History: CR-2923</b>
+        </p>
+        <p>When cancellation of an appointment is successfully executed the Audit history will display the following text: "Paramed [ExamOne/Apps] has been successfully cancelled" For failing cancellations the audit report will display the message that is returned from the ParaMed service.</p>
+        <p><b style="font-size: 14pt;">Resolved Issues</b>
+        </p>
+        <p><b style="font-size: 12pt;">LexisNexis Emailage in Signatures - Service Call in Signature Workflow Is Not Consistent for REACT and Legacy Signing System: CR-2302</b>
+        </p>
+        <p>We resolved an issue where the use  of the field properties “Use LexisNexis” and “Use LexisNexis Emailage” for the Signature Control Type were inconsistent between the Legacy and REACT signing systems. The signing systems now work as designed.</p>
+        <p><b style="font-size: 12pt;">Redtail Mapping Issue with "Trust Name" in Redtail: CR-3062</b>
+        </p>
+        <p>We resolved an issue where "Trust Name" in Redtail mapped to "Owner Last Name." "Trust Name" now maps to "Trust Name" as designed.</p>
+        <p><b style="font-size: 12pt;">Paramed ExamOne Cancellation Response Is Not Mapping: CR-3201</b>
+        </p>
+        <p>We resolved an issue where the ExamOne Paramed Cancellation Response was not invoked after the Cancel Appointment button was clicked. The Cancel Appointment button is now working as designed.</p>
+        <p><b style="font-size: 12pt;">When "Required" Property Is Checked for the Radio Button and Checkbox Control, the Application Is Not Displaying the Required Message: DIST-3707</b>
+        </p>
+        <p>We resolved an issue where when the Required property was checked, the required message did not appear. The Required property now works as expected.</p>
+        <p><b style="font-size: 12pt;">Copy Form Field Functionality in Wizard Designer Stuck on Loading: DIST-3720</b>
+        </p>
+        <p>We resolved an issue where the Copy Form field in the Wizard Designer was taking an excessively long time to load. The Copy Form field now works as designed.</p>
+        <p><b style="font-size: 12pt;">Hide Allow ApplicationAudit Report Flag from Group Page: DIST-3727</b>
+        </p>
+        <p>We resolved an issue where the group setting Allow Application Audit Report was errantly available when selecting Org Settings &gt; Groups page in the Admin app. This groups setting is now no longer available when make this selection.</p>
+        <p><b style="font-size: 12pt;">Unable to Submit Application When External Login Username Contains a Vertical Bar | Character: DIST-3814</b>
+        </p>
+        <p>We resolved an issue where audit reports failed to be generated when the external login user name contained a vertical bar character (|). Audit reports are now generated without issue regardless of whether a vertical bar character is included in the external login user name.</p>
+        <p><b style="font-size: 12pt;">If Group Setting "Copy with Changes" Is Enabled for the User, They Try to Copy the Expired Product from All Activities Getting Server Error: DIST-3816</b>
+        </p>
+        <p>We resolved an issue where an error resulted from clicking the Copy button for an expired product on the All Activities page. The Copy button on the All Activities page now works as designed.</p>
+        <p><b style="font-size: 12pt;">Clear Audit and Delivery History When Adding a New Schedule: DIST-3909</b>
+        </p>
+        <p>We resolved an issue where when adding a new schedule the Schedule History and Delivery History tabs displayed history information about the previously selected schedule. The tabs are now working as designed.</p>
+        <p><b style="font-size: 12pt;">Illustration Signature Came in on Wrong Page: EAES-3269</b>
+        </p>
+        <p>We resolved an issue where the Illustration signature appeared on the wrong page. The signature now appears on the correct page.</p>
+        <p><b style="font-size: 12pt;">Data Item Values and Form Include State Are Not Consistent with Rules That Set Form State (Sporadic): EAES-4126</b>
+        </p>
+        <p>We resolved an issue where data item values and rules were inconsistent.</p>
+        <p><b style="font-size: 12pt;">Applications Are Not Getting Submitted after Data Entry and Signatures: EAES-4733</b>
+        </p>
+        <p>We resolved an issue where applications were not being submitted after data entry and signatures. Application submission is now working as expected.</p>
+        <p><b style="font-size: 12pt;">When a Document Upload Using a Template Is Required to Complete Data Entry the “Data Entry Met” Popup Does Not Always Appear as Expected:  EAES-4975</b>
+        </p>
+        <p>We resolved an issue where the “Data Entry Met” popup was not presented until the user refreshed the screen after a required upload.    This is now working as expected and the popup is presented without refreshing the screen.</p>
+        <p>&#160;</p>
+        <p>***Please note that the JIRA ticket numbers are provided for reference. JIRA tickets are not accessible to users outside Hexure.***</p>
+        <p data-mc-conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

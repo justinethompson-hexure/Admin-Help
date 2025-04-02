@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Pre-Submission (PreSubmit) Queue; Post-Submission Queue; Automated Queue" />
+    </head>
+    <body>
+        <h1>
+            <a name="top">
+            </a>Types of Review Queues Overview <MadCap:conditionalText MadCap:conditions="General.Online"> [Reviewer Instructions]</MadCap:conditionalText></h1>
+        <h2>Pre-Submission (PreSubmit) Queue</h2>
+        <p>For pre-submission reviewers only, the pre-submission review process includes the following workflow.</p>
+        <ol>
+            <li>
+                <p>Before or after the signature process completes in FireLight<sup MadCap:conditions="General.Online">®</sup>, the agent sends a request for review to one or more reviewers prior to application submission.</p>
+            </li>
+            <li>
+                <p>Each reviewer receives an email with a URL link to the PreSubmit review queue along with a separate email or text with the required login passcode.</p>
+                <p>If a reviewer receives multiple requests for multiple activities to review, each request email has a unique URL and requires a unique passcode. For example, a pre-submission reviewer receives five review requests so the reviewer logs in five times using a unique URL and passcode for each of the five orders.</p>
+            </li>
+            <li>
+                <p>The reviewer clicks the Review button and then locks and reviews the order.</p>
+            </li>
+            <li>
+                <p>The reviewer reviews the order documents and then approves the order, rejects the order, or requests more information from the agent and waits for the additional information to complete the review process.</p>
+            </li>
+            <li>
+                <p>When the reviewer completes the review (approved or rejected), the reviewer clicks the <b class="Bold">Log Off</b> button on the upper right and closes the web browser.</p>
+            </li>
+        </ol>
+        <p>
+            <b class="Bold">Order Processing after the Pre-Submission Review</b>
+        </p>
+        <ul>
+            <li>
+                <p>If any reviewer approves an order that was submitted to the PreSubmit queue for review after the signature process, and the reviewer’s organization does not have a post-submission review process, FireLight automatically submits the application order. If the pre-submission review occurs before the signature process, FireLight does not automatically submit the order after reviewer approval. Instead FireLight sets the order to the PreSubmit Review Complete status in FireLight. The agent then completes the order in FireLight and submits the order.</p>
+            </li>
+            <li>
+                <p>If the organization has a post-submission review process, FireLight automatically submits the order to the applicable post-submission queue for further review.</p>
+            </li>
+        </ul>
+        <h2>Post-Submission Queue</h2>
+        <p>For post-submission reviewers, the post-submission review process includes the following workflow.</p>
+        <ol>
+            <li>
+                <p>After the signature process completes in FireLight, the agent chooses whether to submit the application order to the optional pre-submission review queue (if the organization enables the pre-submission review process) or the agent submits the application order and FireLight automatically submits the application to the applicable post-submission review queue for review.</p>
+            </li>
+            <li>
+                <p>Reviewers for the applicable post-submission review queue receive an email notifying them that an application was submitted to the review queue. Optionally, the organization can disable action email notifications.</p>
+            </li>
+            <li>
+                <p>A post-submission reviewer unlocks and reviews the application order. If the organization requires fillable reviewer forms, the reviewer needs to fill in the required reviewer forms before approving or rejecting the application order. Or, the organization may provide optional reviewer forms that the reviewer can fill in at their discretion.</p>
+                <p>
+                    <b class="Bold">NOTE:</b> When using Sequential Review Queues, reviewer documents and their comments are retained in the original queue. However, since each queue has a completely new document set, these comments are not retained across sequential review queues. Despite this, these comments can be copied through a client's provider. If an organization is interested in this option, it can reach out to their Strategic Account Manager.</p>
+            </li>
+            <li>
+                <p>If any reviewer approves an application order, FireLight automatically submits the application.</p>
+            </li>
+        </ol>
+        <h2>Automated Queue</h2>
+        <p>An automated review queue operates in an automated state, which approves or rejects a post-submission review without manual interference by a reviewer. However, an organization can grant access to lock and review orders in the automated review queues to a select group of reviewers.</p>
+        <ol>
+            <li>
+                <p>An agent submits an application after all the prerequisite steps are finished (e.g., Signatures, PreSubmit review).</p>
+            </li>
+            <li>
+                <p>According to the organization’s Review Queue script, FireLight inserts the application into one or more automated queue(s). The application is considered ‘Locked’ (a normal review queue function) by the Provider. User interaction is allowed on the automated queue items, if the user has access to the automated queue.</p>
+            </li>
+            <li>
+                <p>The Automated queue logic starts, and immediately tells the organization’s Provider to run the logic it has in place for the Automated Review process, whatever that may be.</p>
+            </li>
+            <li>
+                <p>The Provider may need to wait some time for the organization’s process to finish, which can take up to hours or days. During this time, the system continues to trigger the Provider to check if the review process is finished for the application. The application, in this status, will continue to retry against the Provider, which is intended to approve or reject it at some point.</p>
+            </li>
+            <li>
+                <p>Once the Provider understands that the process is finished (could take a while, or could be immediate), it will then tell the FireLight system to either Approve or Reject the review item.</p>
+            </li>
+            <li>
+                <p>FireLight reruns the review script at this point, just like with regular queues, to determine if the application should be inserted into any other queues, whether automated or not. If automated, the process starts over again, just for a different queue. Additionally, if the application was inserted into multiple automated queues, the next queue’s item (related to the same application) runs through the same process. Only one automated queue item can run at a time for a given application.</p>
+            </li>
+            <li>
+                <p>If the expiration deadline set in FireLight Admin is exceeded, the automated queue will either approve or reject the order depending on the “At Deadline” option that was set in FireLight Admin.</p>
+            </li>
+            <li>
+                <p>The Provider has access to the Queue names and numbers to help it understand contextual differences for review items – what queues they belong to. This allows for diversification of business requirements.</p>
+            </li>
+            <li>
+                <p>Just like with normal queues, once an application is finished with all possible queues, it moves on to the final submission logic.</p>
+            </li>
+        </ol>
+        <p MadCap:conditions="General.Online">
+            <a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

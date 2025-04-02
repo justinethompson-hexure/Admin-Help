@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The State Approvals tab sets the state approvals for the product within this sales agreement. This is the agreement level list of states that the product can be sold in. At least one state must be selected. <br></br>Select the <b>Check/Uncheck All</b> checkbox to select all states and territories in the <b class="Bold">State Approved</b> grid and then clear any specific states where the product is not approved. Clear the <b>Uncheck All</b> checkbox to clear all state selections and then select only the states where the product is approved.</p>
+        <p>Select the <b class="Bold">Display Approved States during signing ceremony</b> checkbox to have the system display in the signing ceremony only the states selected in the "State Approvals" tab on the Sales Agreement.</p>
+    </body>
+</html>

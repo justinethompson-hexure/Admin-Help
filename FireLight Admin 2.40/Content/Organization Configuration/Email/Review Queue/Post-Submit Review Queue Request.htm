@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="General.Online">
+    <head>
+        <link href="../../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Post-Submit Review Queue Request email template guidelines and usage." />
+    </head>
+    <body>
+        <h1><a name="top"></a>Post-Submit Review Queue Request</h1>
+        <p>
+            <MadCap:snippetText src="../../../Resources/Snippets/Email/EmailColumnDesc.flsnp" />
+        </p>
+        <table style="border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;">
+            <caption class="Table">Post-Submit Review Queue Request </caption>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Action, To Name/Email, From Name/Email, CC Address, Available Tags, and Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p class="thead1">Action</p>
+                        <p>Notifies one or more reviewers that a case was added to a Review Queue requiring reviewer action</p>
+                        <p style="widows: 0;orphans: 0;">Template Name: Post-Submit Review Queue Request</p>
+                        <p>Email Subject Line: Case Added To Review Queue</p>
+                        <p>Message:</p>
+                        <p class="Indent2">Dear Reviewer,</p>
+                        <p class="Indent2">The following case &lt;CASE_NAME&gt; from agent &lt;AGENT_CODE&gt;, is now available for review on queue &lt;QUEUE_NAME&gt;. Please login to Firelight at your earliest convenience to review.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="thead1">To Name / Email</p>
+                        <p>Firm address or review queue email group</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="thead1">From Name / Email</p>
+                        <p>Organization name/address</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="thead1">CC Address</p>
+                        <p>No cc Sender</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="thead1">Available Tags<sup>3</sup></p>
+                        <p>&lt;AGENT_CODE&gt;
+							(external map code)<br />&lt;AGENT_NAME&gt; (User Full Name in the application owning agent's Preferences page)<br />&lt;APPLICATION_NAME&gt;<br />&lt;APPLICATION_ID&gt;
+							<br />&lt;CASE_NAME&gt; (Activity name, replaces APPLICATION_NAME)<br />&lt;COMPANY_NAME&gt;<br />&lt;DATE_TIME&gt; (current datetime in UTC)
+							<br />&lt;PRODUCT_NAME&gt;
+							<br />&lt;PRODUCT_TYPE&gt;
+							<br />&lt;QUEUE_NAME&gt;
+							<br />&lt;QUEUE_NUMBER&gt;
+						<br />&lt;STATUS&gt;<br />ApplicationSearchItems<sup>4</sup> (e.g., add &lt;CLIENT_NAME&gt;)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="thead1">Notes:</p>
+                        <p>
+                            <MadCap:snippetText src="../../../Resources/Snippets/Email/EmailNote3.flsnp" />
+                        </p>
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Email/EmailNote4.flsnp" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:snippetBlock src="../../../Resources/Snippets/Email/EmailSeeAlso.flsnp" />
+        <p><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>With the 2.24 Base FireLight release, the enhancement was introduced to allow Wizard fields and data to be displayed upon locked activity status. The functionality was not optional and did not allow clients to turn this feature off. An Organization level setting is introduced to allow clients further flexibility in determining what their locked functionality will consist of; the previous version of forms only or allow the new functionality view of the locked wizard fields and data to be displayed along with the forms.</p>
+        <p>A new dropdown selection for "Lock Mode" is provided on the Organization, Activity tab. The options available in the dropdown is "View Forms Only" and "View Forms and Wizard" with the default of "View Forms Only." Clients who wish to have the new view introduced in the 2.24 release of the Wizard fields and data after the activity is locked is required to update this in the Admin under the Organization, Activity setting after the 2.25 base release.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>New Organization setting for "Lock Mode" selection</p>
+            </li>
+            <li>
+                <p>Default for "Lock Mode" is "View Forms Only" - clients who wish to have the current Wizard lock view is required to make an update to their settings</p>
+            </li>
+        </ul>
+    </body>
+</html>

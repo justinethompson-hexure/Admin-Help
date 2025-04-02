@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Application<MadCap:conditionalText MadCap:conditions="General.Online"> [User Instructions]</MadCap:conditionalText></h1>
+        <p>Application activity is available if your organization has implemented the Application activity feature.</p>
+        <ol>
+            <li>
+                <p>On the Home page under <b class="Bold">Start New</b> or on the <b class="Bold">New Activity</b> menu, click <b class="Bold">Application.</b></p>
+                <p><b class="Bold">NOTE:</b> If you enter FireLight<sup MadCap:conditions="General.Online">®</sup> through your organization’s CRM system and FireLight launches directly into a new business application, skip steps 1 through 4.</p>
+            </li>
+            <li>
+                <p>For a single carrier implementation, select a <b class="Bold">Jurisdiction</b> and <b class="Bold">Product Type</b> from the drop-down lists. In <b class="Bold">Product Type</b>, select the <b class="Bold">All</b> option to view a list of all available products.</p>
+                <p>For a multi-carrier implementation, select a <b class="Bold">Jurisdiction</b>, <b class="Bold">Product Type</b>, and <b class="Bold">Carrier</b> from the drop-down lists.</p>
+                <p>
+                    <img src="../../Resources/ImagesUserGuide/New Activity/Capture96.png" alt="Create New Application" title="Create New Application" />
+                </p>
+                <p><b class="Bold">NOTE:</b> Click the information icon   <img src="../../Resources/ImagesAdmin/InformationMsgIcon.png" alt="Informational Message Icon" title="Informational Message Icon" /> next to Jurisdiction to view a description of Jurisdiction. Click <b class="Bold">OK</b> to close the dialog.</p>
+                <p>
+                    <img src="../../Resources/ImagesUserGuide/New Activity/Capture97.png" alt="Jurisdiction Info" title="Jurisdiction Info" />
+                </p>
+            </li>
+            <li>
+                <p>If an information icon <img src="../../Resources/ImagesAdmin/InformationMsgIcon.png" alt="Informational Message Icon" title="Informational Message Icon" />  is next to a product name, click the icon to view product information in a More Info dialog. Click <b class="Bold">OK</b> to close the dialog.</p>
+                <p>
+                    <img src="../../Resources/ImagesUserGuide/New Activity/Capture98.png" alt="More Info dialog" title="More Info dialog" />
+                </p>
+            </li>
+            <li>
+                <p>Click a product name in the grid to begin an application for the product. Products sold by a subsidiary carrier may show the subsidiary carrier’s name depending on your organization’s settings.</p>
+                <p>If your organization enabled the optional Use Resident State in Form Selection feature in FireLight Admin, select a <b class="Bold">Residence</b> jurisdiction from the list.  The Residence list determines available form selection. Click <b class="Bold">Back</b> to return to the previous page and select a different product.</p>
+                <p>
+                    <img src="../../Resources/ImagesUserGuide/New Activity/Capture99.png" alt="Jurisdiction, Product Type and Residence Lists" title="Jurisdiction, Product Type and Residence Lists" />
+                </p>
+            </li>
+            <li>
+                <p>FireLight displays a list of Required Forms for the application. Any Optional Forms appear below the list of Required Forms. You can select one or more optional forms to include within the application. FireLight dynamically adds conditional forms when the business case triggers them to be included.</p>
+                <p>
+                    <img src="../../Resources/ImagesUserGuide/New Activity/Capture100.png" alt="Required and Optional Forms" title="Required and Optional Forms" />
+                </p>
+                <p>If you enter FireLight through your organization’s CRM system, the client data associated with the individual selected in the CRM will post over to FireLight. If the posted over data does not contain a product ID or jurisdiction ID, FireLight will open to the FireLight Home page. When you select a product and jurisdiction as shown below, you can choose whether to use the client posted over data to pre-fill the associated fields on the forms for the application. Ensure the <b class="Bold">Create the application for [client name]</b> checkbox is selected to pre-fill applicable form fields with the posted over client information from the CRM system as shown below. Clear the checkbox to omit the posted over client data and not pre-fill the applicable form fields.</p>
+                <p><b class="Bold">NOTE:</b> The posted over client data can continue to be used for any applications created during the FireLight session. However, if you enter FireLight through your organization’s CRM system and the posted over client data includes a product ID and jurisdiction ID, FireLight will open to an application for the existing product and jurisdiction included in the posted over client data.</p>
+                <p>
+                    <img src="../../Resources/ImagesUserGuide/New Activity/Capture101.png" alt="Select Optional Forms and Create Application" title="Select Optional Forms and Create Application" />
+                </p>
+            </li>
+            <li>Click <b class="Bold">Create Application</b>.</li>
+            <li>
+                <p>Make any changes to the default application name and click <b class="Bold">Create</b>. Click <b class="Bold">Cancel</b> to return to Required Forms without creating the new application.</p>
+                <p>
+                    <img src="../../Resources/ImagesUserGuide/New Activity/Capture102.png" alt="Create Application" title="Create Application" />
+                </p>
+            </li>
+            <li>
+                <p>Fill in the fields on the application form and click <b class="Bold">CONTINUE</b> when Data Entry reaches 100%. See <MadCap:xref href="Data Entry/Data Entry.htm" alt="Data Entry Step">Data Entry Step [User Instructions]</MadCap:xref> for detailed information.</p>
+            </li>
+            <p><strong>NOTE</strong>: If any changes to the Sales Agreement affect product availability, the following alert message will appear,&#160;"This product is not available since the sales agreement is invalid. Contact your admin for more info,"&#160;and the activity is made read-only, disallowing completion. The following conditions cause an unlocked activity to be made read-only:&#160;</p>
+            <ul>
+                <li>
+                    <p>End Date has passed current date,</p>
+                </li>
+                <li>
+                    <p>An older end date was entered,</p>
+                </li>
+                <li>
+                    <p>Start date is for a future date,</p>
+                </li>
+                <li>
+                    <p>Jurisdiction selected for the activity is no more checked for the sales agreement.</p>
+                </li>
+            </ul>
+            <li>
+                <p><b class="Bold">NOTE:</b> Skip this step if your organization does not provide pre-signature review in the pre-submission review queue.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>On the action menu, click <b class="Bold">Request Review</b> to request a pre-submission review before the signature process.</li>
+                    <li>Select the checkbox next to one or more names for <b class="Bold">Reviewer Name</b>. Click <b class="Bold">Send Email Request</b> to initiate the pre-submission review.</li>
+                </ol>
+            </li>
+            <li>
+                <p>Complete the signing process. See <MadCap:xref href="Signatures/Signatures Step.htm" alt="Signatures Step">Signatures Step [User Instructions]</MadCap:xref> for detailed information. Simplified instructions follow.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Click <b class="Bold">Use E-Signature</b> to electronically sign the documents.</p>
+                    </li>
+                    <li>
+                        <p>In the <b class="Bold">List of Required Signers</b>, click a signer type button (e.g., click <b class="Bold">Owner</b>).</p>
+                    </li>
+                    <li>
+                        <p>Click <b class="Bold">Sign Now</b> to sign on this device.</p>
+                    </li>
+                    <li>
+                        <p>Fill in the <b class="Bold">Identification Verification</b> fields and click <b class="Bold">Verified</b>.</p>
+                    </li>
+                    <li>
+                        <p>The signer reviews the documents, selects the checkbox for <b class="Bold">I have reviewed and agree with the terms expressed within this document</b>, and clicks <b class="Bold">Sign</b>.</p>
+                    </li>
+                    <li>
+                        <p>The signer enters their signing information (Signer Full Name and City) and clicks <b class="Bold">I Consent</b> to complete their signature capture.</p>
+                    </li>
+                    <li>
+                        <p>In the <b class="Bold">List of Required Signers</b>, click <b class="Bold">Agent</b>. You review the documents and click <b class="Bold">Sign</b>.</p>
+                    </li>
+                    <li>
+                        <p>Enter your Agent On-Site Signature information and click <b class="Bold">I Consent</b>.</p>
+                    </li>
+                    <li>
+                        <p>Click <b class="Bold">CONTINUE</b>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p><b class="Bold">NOTE:</b> Skip this step if your organization does not provide a post-signature review within the pre-submission review queue. See <MadCap:xref href="Review/Pre-Submission Review.htm" alt="Pre-Submission Review Step">Pre-Submission Review Step [User Instructions]</MadCap:xref> for detailed information. Simplified instructions follow.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Click an option on the action menu:</p>
+                        <ul>
+                            <li>
+                                <p><b class="Bold">Submit</b> to submit the application. Go to step 12.</p>
+                            </li>
+                            <li>
+                                <p><b class="Bold">Request Review</b> to request a pre-submission review.</p>
+                                <p>
+                                    <img src="../../Resources/ImagesUserGuide/New Activity/Capture94.png" alt="Pre-Submission Review Selection" title="Pre-Submission Review Selection" />
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>After clicking Request Review, click a button to <b class="Bold">Send Request to Reviewer(s)</b> or to <b class="Bold">Decline E-Review</b>.</p>
+                        <p>If you decline e-review, click <b class="Bold">OK</b> on the Electronic Review Declined dialog.</p>
+                        <p><b class="Bold">NOTE:</b> If your organization requires a pre-submission review, this page does not appear and you go directly to step c.</p>
+                    </li>
+                    <li>Select the checkbox next to one or more names for <b class="Bold">Reviewer Name</b>. Click <b class="Bold">Send Email Request</b>. Click <b class="Bold">Back to App</b> to return to the application.</li>
+                </ol>
+                <p><b class="Bold">NOTE:</b> The application could also go into a post-submission review if your organization requires it. Upon final reviewer approval, the application is automatically submitted.  Note that this occurs without use of the EnableAutoSubmit Admin Groups option nor the FLI_AUTO_SUBMIT dataitem.</p>
+            </li>
+            <li>
+                <p>If no pre-submission review, click <b class="Bold">CONTINUE</b> to submit the new application.</p>
+            </li>
+        </ol>
+        <p MadCap:conditions="General.Online">Click the browser <b class="Bold">Back</b> button to return to FireLight Admin Help.</p>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

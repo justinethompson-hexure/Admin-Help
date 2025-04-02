@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>The <b class="Bold">More Info</b> text box displays custom text for the product. Enter the product information to display when a user clicks the information icon next to the product name in the Create a New Application grid in <MadCap:variable name="General.ProductName" />. The custom text can include HTML formatting, which will display with formatting in <MadCap:variable name="General.ProductName" />. For examples, see <a href="../../../../Product Configuration/Rule Sets/AdvancedRulesSamples.htm#IncludeHTMLinPopUps" target="_blank" alt="Include HTML in Pop-ups">Include HTML in Pop-ups</a> in Advanced Rules Samples.</body>
+</html>

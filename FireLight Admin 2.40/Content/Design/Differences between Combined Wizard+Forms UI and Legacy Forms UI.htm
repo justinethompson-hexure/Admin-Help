@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+		<h1>Differences between Combined Wizard+Forms UI and Legacy Forms UI<a name="top">
+		</a></h1>
+        <p class="note"><b class="Bold">Spotlight Video:</b> See the <a href="https://vimeo.com/335508554/593d86b6fa" target="_blank" title="FireLight Wizards and Forms in the Same UI" alt="FireLight Wizards and Forms in the Same UI">Wizards and Forms in the Same UI</a> Spotlight Feature Video for information about the combined Wizards and Forms UI.</p>
+        <p>Some differences between the legacy forms UI and the combined wizard+forms UI follow.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: bottom;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="tableDarkBlue">[Differences Between Legacy Forms UI and Combined Wizard + Forms UI]</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 367px;" />
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 350px;" />
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <th class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">Legacy Forms UI</th>
+                    <th class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Wizard+Forms Combined UI</th>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">Uses chevrons for previous/next page navigation</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Uses buttons for previous/next page navigation</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"> The entire form/viewable area scrolls</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">The content between the header and footer scrolls</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">Differences in styling of fields, buttons, and validation messages</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Differences in styling of fields, buttons, and validation messages</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">Text box fields do not display the number of characters in the field as the user types in the field.</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Text box fields display the character countdown on the lower right of the field with the number of characters typed along with maximum length of the field. For example, "42/100" shows the text box contains 42 characters of a possible 100 characters per the maximum length setting in the field properties.</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">An activity that contains only forms and doesn’t have any wizards in any of its packages uses the legacy forms UI.</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows"> If a wizard is added to any package in the activity, the combined UI is used. If the distributor has any wizards in their packages, this can take effect in distributor environments even if the carrier doesn’t use any wizards.</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">Legacy forms operates on the current page regarding radio buttons and updating a radio button affects only fields with the same Group on the current page.</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Wizard (React UI) intrinsically operates on the entire wizard and forms collection, and updating a radio button affects all fields with the same Group for the application as a whole.</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyB-Regular-DarkerRows">By default, all Combo Box dropdown lists display the first item in the list when a user opens a form. When the user changes any other field on the form, all the Combo Box dropdown lists become blank. A blank item can be added to a combo box List Name Values field property for the combo box to be blank when the user opens the form, which is the  same behavior as the form and wizard UI.</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">By default, all Dropdown List fields are blank when a user opens a wizard.</td>
+                </tr>
+            </tbody>
+        </table>
+		<p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top" title="Return to Top">Return to Top</a>
+		</p>
+    </body>
+</html>

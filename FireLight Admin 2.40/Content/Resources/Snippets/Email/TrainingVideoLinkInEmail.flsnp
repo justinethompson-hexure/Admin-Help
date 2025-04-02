@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p>Where appropriate, you can add a link to a specific training video to an email template.</p>
+        <p>For example, add a link for the <em>FireLight eSignatures - Remote Sign</em> training video to the Signature Request email template.</p>
+        <ol>
+            <li>
+                <p>Click the above link for the FireLight training videos and click the image link for the <b class="Bold">FireLight eSignatures - Remote Sign</b> video. Copy the extended URL for the specific training video to the clipboard:</p>
+                <p>https://vimeopro.com/user47344059/firelight-training/video/263943487 </p>
+            </li>
+            <li>Go to the FireLight <b class="Bold">Admin/Organization Configuration/Email</b> page.</li>
+            <li>In the <b class="Bold">Email Template Type</b> list, select <b class="Bold">Signature Request</b>.</li>
+            <li>
+                <p>Add a sentence or paragraph to the template and include the Vimeo website address from step 1. The website address will appear as a hyperlink in the email. For example, add something similar to the following:</p>
+                <p>Click this link, https://vimeopro.com/user47344059/firelight-training/video/263943487, to access a training video for FireLight eSignatures - Remote Sign. </p>
+            </li>
+            <li>Click the <b class="Bold">Save Email Template</b> button to save your update. </li>
+        </ol>
+    </body>
+</html>

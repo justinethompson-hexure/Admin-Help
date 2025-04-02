@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="WordTitle"
+    Link="/Content/Print Only Topics/WordTitle.htm"
+    conditions="General.PDF"
+    BreakType="none"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Word8_5X11/2017WordTitle8_5X11.flpgl" />
+  <TocEntry
+    Title="WordCopyright"
+    Link="/Content/Print Only Topics/WordCopyright.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.PDF"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Word8_5X11/2017WordCopyright8_5X11.flpgl"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same"
+    ChapterNumberReset="continue"
+    ComputeToc="false"
+    ReplaceMergeNode="false" />
+  <TocEntry
+    Title="WordTOC"
+    Link="/Content/Print Only Topics/WordTOC.htm"
+    conditions="General.PDF"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Word8_5X11/2017WordTOC8_5X11.flpgl"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same"
+    ChapterNumberReset="continue"
+    ComputeToc="false"
+    ReplaceMergeNode="false" />
+  <TocEntry
+    Title="Features"
+    Link="/Content/Features/Features.htm"
+    BreakType="none"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false">
+    <TocEntry
+      Title="Account Opening Activity"
+      Link="/Content/Features/Account Opening.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Address Validation"
+      Link="/Content/Features/Address Validation.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Application Activity"
+      Link="/Content/Features/Application Activity.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="APPS Paramed Exam Order Integration"
+      Link="/Content/Features/APPS Paramed Exam Order Integration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Carrier Testing as a Distributor"
+      Link="/Content/Features/Carrier Testing as a Distributor.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Client Fill and Sign"
+      Link="/Content/Features/Client Fill and Sign.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Comm100 Chat Service Integration"
+      Link="/Content/Features/Comm100 Chat Service Integration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Commission Netting"
+      Link="/Content/Features/Commission Netting.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Cooperative Technologies 1035Yellow Pages"
+      Link="/Content/Features/Cooperative Technologies 1035 Yellow Pages.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Create User, Transfer, Email Custom Action (Concierge Paper Workflow)"
+      Link="/Content/Features/Create User, Transfer, Email Custom Action (Concierge Paper Workflow).htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="DocuSign Integration"
+      Link="/Content/Features/DocuSign.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="DTCC Money Settlement Support"
+      Link="/Content/Features/DTCC Money Settlement Support.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="E-Delivery (Fill and Sign)"
+      Link="/Content/Features/E-Delivery Fill and Sign.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="E-Delivery Deliver Only"
+      Link="/Content/Features/E-Delivery Deliver Only.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="E-Delivery Sign Only"
+      Link="/Content/Features/E-Delivery Sign Only.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Enrollment Activity"
+      Link="/Content/Features/Enrollment Activity.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="E-Signature in React"
+      Link="/Content/Features/E-Signature in React.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="ExamOne HealthPiQture Integration"
+      Link="/Content/Features/ExamOne HealthPiQture Integration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="ExamOne Paramed Exam Order Integration"
+      Link="/Content/Features/ExamOne Paramed Exam Order Integration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Fees, Expenses, and Commissions Repository"
+      Link="/Content/Features/Fees, Expenses and Commissions Repository.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Fee Inquiry Activity"
+      Link="/Content/Features/Fee Inquiry Activity.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="FireLight Illustration"
+      Link="/Content/Features/FireLight Illustration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="GIACT Services Integration"
+      Link="/Content/Features/GIACT Services Integration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="LexisNexis Client Identification Verification During Data Entry"
+      Link="/Content/Features/LexisNexis Client Identification Verification Integration Data Entry.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="LexisNexis Client Identification Verfication During E-Signature"
+      Link="/Content/Features/LexisNexis Client Identification Verification Integration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      StartSection="false" />
+    <TocEntry
+      Title="LexisNexis Risk Classifier Integration"
+      Link="/Content/Features/LexisNexis Risk Classifier Integration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Localization"
+      Link="/Content/Features/Localization.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Milliman Integration"
+      Link="/Content/Features/Milliman Integration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Multiple Activities"
+      Link="/Content/Features/Multiple Activity.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Needs Determination Activity"
+      Link="/Content/Features/Needs Determination.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Needs Determination Product Filtering"
+      Link="/Content/Features/Needs Determination Product Filtering.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Polling for Web Service Response"
+      Link="/Content/Features/Polling for Web Service Response.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Post Submission Status Workflow"
+      Link="/Content/Features/Post Submission Status.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Post-Issue Services Support"
+      Link="/Content/Features/Post-Issue Services Support.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Print Forms Activity"
+      Link="/Content/Features/Print Forms Activity.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Provider Lookup - NPIS Integration"
+      Link="/Content/Features/Provider Lookup.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Quote"
+      Link="/Content/Features/Quote.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Redtail Integration"
+      Link="/Content/Features/Redtail Integration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="RGA Aura Next Integration"
+      Link="/Content/Features/RGA Aura Next Integration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Salesforce Integration"
+      Link="/Content/Features/Salesforce Integration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="SendGrid - Bounce Back Email Tracking"
+      Link="/Content/Features/SendGrid.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="SMS Text Authentication"
+      Link="/Content/Features/SMS Text Authentication.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Subsequent Payment Support"
+      Link="/Content/Features/Subsequent Payment Support.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Swiss Re Magnum Integration"
+      Link="/Content/Features/Swiss Re Magnum Integration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Tele-Sign"
+      Link="/Content/Features/Tele-Sign.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Whitepages.com (Ekata) Integration"
+      Link="/Content/Features/Whitepages.com Integration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Product Config"
+      Link="/Content/Product Configuration/Product Config.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+      <TocEntry
+        Title="Activities"
+        Link="/Content/Product Configuration/Activities.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Commissions"
+        Link="/Content/Product Configuration/Commissions.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Fee Inquiry"
+        Link="/Content/Product Configuration/Fee Inquiry.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Product Repository"
+        Link="/Content/Product Configuration/Product Repository.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Packages"
+        Link="/Content/Product Configuration/Packages.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Products"
+        Link="/Content/Product Configuration/Products.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
+      <TocEntry
+        Title="Rule Sets"
+        Link="/Content/Product Configuration/Rule Sets.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Advanced Rules Category and Element Definitions Reference"
+          Link="/Content/Product Configuration/Rule Sets/AdvancedRulesCategoryElementDefinitionsReference.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Advanced Rules Samples"
+          Link="/Content/Product Configuration/Rule Sets/AdvancedRulesSamples.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Add a Rule Set and Detail"
+          Link="/Content/Product Configuration/Rule Sets/Add a Rule Set and Detail.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Copy Rules"
+          Link="/Content/Product Configuration/Rule Sets/Copy Rules.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Delete a Rule Set"
+          Link="/Content/Product Configuration/Rule Sets/Delete a Rule Set.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Duplicate a Rule Set"
+          Link="/Content/Product Configuration/Rule Sets/Duplicate Rule Set.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Export Rule Set XML"
+          Link="/Content/Product Configuration/Rule Sets/Export Rule Set XML.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Import/View All Rule Definitions"
+          Link="/Content/Product Configuration/Rule Sets/Import-View All Rule Definitions.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Lock and Unlock a Rule Set for Editing"
+          Link="/Content/Product Configuration/Rule Sets/Lock and Unlock a Rule Set for Editing.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Pre-Built Rule Templates"
+          Link="/Content/Product Configuration/Rule Sets/Pre-BuiltRuleTemplates.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Rules Window"
+          Link="/Content/Product Configuration/Rule Sets/Rules Window.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Search for a Rule Set"
+          Link="/Content/Product Configuration/Rule Sets/Search for a Rule Set.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Search Rules in Package Tab"
+          Link="/Content/Product Configuration/Rule Sets/Search Rules in Package Tab.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Templates Window"
+          Link="/Content/Product Configuration/Rule Sets/TemplatesWindow.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="View Rule Set Audit History"
+          Link="/Content/Product Configuration/Rule Sets/View Rule Set History.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      </TocEntry>
+      <TocEntry
+        Title="Sales Agreements"
+        Link="/Content/Product Configuration/SalesAgreements.htm"
+        BreakType="pageLayout"
+        AutoEndOnLeftPage="disabled"
+        StartSection="false"></TocEntry>
+    </TocEntry>
+  </TocEntry>
+</CatapultToc>

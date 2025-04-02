@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>By default, this drop-down is available when the Validate Input check box is selected. When available, the default value is Date. Other options are Future Date, Future Date – In Range, Future Date – Out Range, Past Date. Past Date – In Range, Past Date – Out Range, and Age Range. If selecting Future Date - In Range, Future Date - Out Range, Past Date - In Range, Past Date - Out Range, or Age Range, enter the Validation Range in Day/Months/Years and the range value in Value.</body>
+</html>

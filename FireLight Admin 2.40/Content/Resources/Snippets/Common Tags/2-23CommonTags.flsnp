@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Common tags logic is being updated to sync external sources of data with common tags that are passed into FireLight prior to activity creation, such as SSO and embedded.</p>
+        <p>App -</p>
+        <ol>
+            <li>
+                <p>Update new field definitions to support loading existing data in new format.</p>
+            </li>
+            <li>
+                <p>Update rules engine to support loading existing data in new format.</p>
+            </li>
+            <li>
+                <p>Rules Engine Common Tag Value Syncing</p>
+            </li>
+            <li>
+                <p>Build a Map of Field List Sources for all data item IDs with a list.</p>
+            </li>
+        </ol>
+        <p>Impacts:</p>
+        <ol>
+            <li>
+                <p>Data passed in SSO for an activity.</p>
+            </li>
+            <li>
+                <p>Embedded activities in FireLight.</p>
+            </li>
+            <li>
+                <p>Activities when opened in App.</p>
+            </li>
+            <li>
+                <p>Rules engine, rules.</p>
+            </li>
+            <li>
+                <p>Lists (dropdown and combo box; checkbox and radio buttons).</p>
+            </li>
+        </ol>
+    </body>
+</html>

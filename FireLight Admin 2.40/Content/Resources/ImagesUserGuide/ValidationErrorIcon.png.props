@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileProperties>
+    <ImageOverlay Profile="D:\Documents\My Profiles\FireLightUserGuide.capro" ProfileHash="17ab8a245f347468213ad253f12e292d50527913" ScreenRectangle="164,399,30,25">
+        <OriginalImage Type="Image" ShapeTimeSpan="10000" AutoAdjust="true" DPI="96" medium_print_EnableFormat="true" medium_print_DPI="300" Folder="D:\Documents\My Projects\FireLight Admin 2.18\Content\Resources\ImagesUserGuide" ExportFormat="png" medium_print_ExportFormat="png" BorderColor="#4682b4" Border="solid" FileName="Capture{n}" EnableGrayScaleFormat="false" medium_screen_and__max_width__64_063em__ExportFormat="png" medium_screen_and__max_width__64_063em__DPI="96" medium_screen_and__max_width__40em__ExportFormat="png" Title="Validation Error Icon" Alt="Validation Error Icon" medium_print_OutputScaleFactor="3.12" medium_print_ColorDepth="32" ComputedWidth="30" ComputedHeight="25">SUkqAOABAACAP+BP8AQWDQeEQmFQuGQ2HQ+IRGHQOCRKLReMRmNQ2KRuPR+QSEAR2RR5IJCCuRyQUtFqCjIZSWRSSZRKTwU4nGEg4HQVqNSCh0OzWNTSiQtxuOCiwWQV5PKGnM5wVGIyjxijVeEHQ6QVGo2MM1my+Y1qJwOzQZnM6CjMZx4kEiCrdb2mOWi7DweQVisWRKxWQUplO7QiszJWq2ClQqUShQVxOLCwfDyUPB6C0mEjsdwUcDiG1+GoFAwU/H7C5WPIJBQU/n+o1MAVWGgEAw2eT6gADH1fVRfNACmU6oQzOQViMTa7eIGYzQVMpmtb+LGczwVNJqI8cAcmE4nF42L2KyTXqQ5eLyCkUixjud6EeAAYz3Z3u8qZeeG3q+X6Lve/CDvk+iNk6TqCjEMSQv0hBPE8goxjGjzcgAMoyoSlSClSVKPN6yMFrwiTLsypSQqkgoVBUgpHEcgpqmqkUTtmqyixChquK8sCQiuK6ClQVCEuDEaQwon6gqGizfuC4YAKekTnOg6SGNsokeR9IEkxshAsCxDUOJrCkHIKGwbIKOo6y8sxdl2goiCIiDfyoyc5oXGTaIe37+AAvs6T6AEDQRBU8S0g7gk+T7iT8q8U0Ci8GUVSCLICEAD+AAQAAQAAAAAAAAAAAQQAAQAAAB4AAAABAQQAAQAAABkAAAACAQMABAAAAKYCAAADAQMAAQAAAAUAAAAGAQMAAQAAAAIAAAARAQQAAQAAAAgAAAAVAQMAAQAAAAQAAAAWAQQAAQAAABkAAAAXAQQAAQAAANgBAAAaAQUAAQAAAK4CAAAbAQUAAQAAALYCAAAcAQMAAQAAAAEAAAAoAQMAAQAAAAIAAAA9AQMAAQAAAAIAAABSAQMAAQAAAAIAAAAAAAAACAAIAAgACAAAdwEA6AMAAAB3AQDoAwAA</OriginalImage>
+        <Shapes />
+        <Variables />
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

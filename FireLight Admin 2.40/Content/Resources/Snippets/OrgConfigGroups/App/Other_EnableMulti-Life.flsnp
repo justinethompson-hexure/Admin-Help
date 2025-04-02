@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Enable Multi-Life</b> checkbox to enable multi-life and/or group enrollment business support in <MadCap:variable name="General.ProductName" /> such as agent ability to mass email clients for client fill functionality, to initiate mass client email based e-signature workflow, and to initiate mass submissions. When this option is selected, the Send Requests icon is visible at the top left of the activity list on the All Activities page. <MadCap:conditionalText MadCap:conditions="General.Online">See also <MadCap:xref href="../../../../UserGuide/All Activities/Send Requests - Multi-Life Applications.htm" target="_blank" alt="Send Requests - Multi-Life Applications [User Instructions]">Send Requests - Multi-Life Applications [User Instructions]</MadCap:xref>.</MadCap:conditionalText></body>
+</html>

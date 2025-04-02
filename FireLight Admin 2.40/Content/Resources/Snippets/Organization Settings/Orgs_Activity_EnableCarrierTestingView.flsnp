@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>(Distributors only) Select the <b class="Bold">Enable Carrier Testing View</b> checkbox to allow carriers to test in your distributor organization and then select a role code in the associated dropdown list that carriers can use to test in your distributor environment. The role code selection enables distributors to control carrier access for testing. <b class="Bold">NOTE:</b> Carriers need to select the <b class="Bold">Enable Distributor Testing View</b> setting under Testing on  the <MadCap:xref href="../../../Organization Configuration/Groups/App.htm" target="_blank" alt="App">App</MadCap:xref> tab in Groups for the user role code who will do the testing in the distributor environment.</body>
+</html>

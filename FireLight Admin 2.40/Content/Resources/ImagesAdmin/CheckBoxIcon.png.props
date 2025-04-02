@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileProperties>
+    <ImageOverlay Profile="D:\Documents\My Profiles\FireLight2.9HighQualityPRINTProfile2.capro" ProfileHash="b9e5fff40380c3436a3a54951708e451724865e7" ScreenRectangle="2408,348,18,15">
+        <OriginalImage Type="Image" ShapeTimeSpan="10000" Folder="D:\Documents\My Projects\FireLightAdmin2.9\Content\Resources\Images" Border="solid" ExportFormat="png" medium_print_EnableFormat="true" AutoAdjust="true" ComputedWidth="20" ComputedHeight="17" EnableGrayScaleFormat="false" DPI="96" medium_print_ExportFormat="jpg" medium_screen_and__max_width__64_063em__ExportFormat="jpg" medium_screen_and__max_width__40em__ExportFormat="jpg" Title="Schedule a Deployment" Alt="Schedule a Deployment" medium_print_DPI="300" medium_print_OutputScaleFactor="2.8" medium_print_ColorDepth="32" medium_print_JPEGQuality="100" EnableCropRectangle="false" CropRectangle="0,0,0,0" medium_screen_and__max_width__64_063em__OutputScaleFactor="1" medium_screen_and__max_width__64_063em__DPI="96" OutputScaleFactor="0.9" BorderWidth="1" BorderColor="#4682b4" ImageBlurFactor="2" ImageShadeFactor="5" JPEGQuality="100" FileName="" PaddingLeft="0" PaddingRight="0" PaddingTop="0" PaddingBottom="0" Format="tiff">SUkqAMQAAACAP+BP8AQWDQeEQmFQuGQ2HQWBwSFGqKABLxeHxmNRCBQyIwuKGqLRiNyWPR2Fx+JxWDpaXSaHsSZAAezUAQOTyiEyGES5LTCHTJiTSbTiU0adyyDT6gQ2hUQezedQmVUmRS2X02F0+a1GkVSvweeVif1qFVyi1OEVWEWOl1mzQi0V61Qe2WKlQWmXG5TOu1KJQq7wa3Xq4XyC3PATnA22KxdL4iS2G7ZSCzzIZKN5aOXXNZ/BZzQaMAQEABAA/gAEAAEAAAAAAAAAAAEEAAEAAAASAAAAAQEEAAEAAAAPAAAAAgEDAAQAAACKAQAAAwEDAAEAAAAFAAAABgEDAAEAAAACAAAAEQEEAAEAAAAIAAAAFQEDAAEAAAAEAAAAFgEEAAEAAAAPAAAAFwEEAAEAAAC7AAAAGgEFAAEAAACSAQAAGwEFAAEAAACaAQAAHAEDAAEAAAABAAAAKAEDAAEAAAACAAAAPQEDAAEAAAACAAAAUgEDAAEAAAACAAAAAAAAAAgACAAIAAgAAHcBAOgDAAAAdwEA6AMAAA==</OriginalImage>
+        <Shapes />
+        <Variables />
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

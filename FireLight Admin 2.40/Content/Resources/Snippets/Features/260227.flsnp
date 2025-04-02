@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This multi-release project goal is to get to a single code base for forms and wizards so we are not creating and maintaining code in two locations. We are updating the legacy forms functionality, currently in ASP.NET MVC, to the React code currently used in wizards and forms + wizards.  The final phases of this project is to migrate customers from MVC to React and then to deprecate the MVC code.</p>
+        <p>We have researched all legacy forms functionality and determined what is needed in React and what can be removed due to lack of use. The May release will consist of the functionality that can be removed from FireLight.</p>
+        <p>May 2.24 Changes</p>
+        <ol>
+            <li>
+                <p>Remove benchmarks from the Admin tool.</p>
+            </li>
+            <li>
+                <p>Remove Annotations from the Other Actions menu in FLApp.</p>
+            </li>
+            <li>
+                <p>Remove Disable Show Annotations group option from the Admin tool.</p>
+            </li>
+        </ol>
+        <p>Impacts:</p>
+        <p class="Indent">May 2.24</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p> Removal of Benchmarking from Admin.</p>
+            </li>
+            <li>
+                <p> Removal of annotations from FLApp and Admin Group option.</p>
+            </li>
+        </ul>
+    </body>
+</html>

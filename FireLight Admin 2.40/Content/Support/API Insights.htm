@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>API Insights</h1>
+        <p>On the Home page or navigation bar, go to <b class="Bold">Support</b> and click <b class="Bold">API Insights</b> to open the API Insights page.</p>
+        <p class="note"><b class="Bold">NOTE:</b> Follow the instructions below to enable and use the API Insights support tool. </p>
+        <p>Use the API Insights page to analyze and evaluate requests and responses in the FireLight<sup MadCap:conditions="General.Online">®</sup> REST APIs. </p>
+        <h2>Guidelines</h2>
+        <ul>
+            <li>All REST API calls are traced. </li>
+            <li>The API Insights support tool traces requests through various points in the lifecycle of an activity, which requires an ID that uniquely identifies each request. FireLight automatically creates the Trace ID  when a request is made. When the request is complete, even if an exception or other error occurs, the Trace ID is reflected in the response header. </li>
+            <li>
+                <p>Captured trace data includes:</p>
+                <ul style="list-style-type: circle;">
+                    <li>Request payload and headers.</li>
+                    <li>Results from a rule run, if one is made. This would include the JSON content.</li>
+                    <li>Responses from external systems. Specifically, this includes responses from illustration services calls.</li>
+                    <li>Response payload, including error responses and exceptions.</li>
+                </ul>
+                <p><b class="Bold">NOTE:</b> Existing audits written via instrumentation are removed so we do not have duplicate information written out in two different places.</p>
+            </li>
+            <li>
+                <p>API traces are purged globally from the entire system every 7 days. </p>
+            </li>
+            <li>Trace data is recorded for your organization and any organizations for which you have Sales Agreements.</li>
+        </ul>
+        <h2>Enable API Insights Support Tool</h2>
+        <ol>
+            <li>Go to the Organization Configuration/<MadCap:xref href="../Organization Configuration/Groups.htm" target="_blank" alt="Groups">Groups</MadCap:xref> page.</li>
+            <li>Select a user role that will use the API Insights tool.</li>
+            <li>
+                <p>Go to the <MadCap:xref href="../Organization Configuration/Groups/Debugging Tools.htm" target="_blank" alt="Debugging Tools">Debugging Tools</MadCap:xref> tab and select the <b class="Bold">Enable Viewing of API Insights Traces</b> option. This enables and shows API Insights in the Support section of the Admin Home page and navigation bar. </p>
+                <p>Clear the <b class="Bold">Enable Viewing of API Insights Traces</b> checkbox to disable and hide the API Insights support tool.</p>
+            </li>
+        </ol>
+        <h2>View Trace Data and Copy JSON for Troubleshooting Issues</h2>
+        <ol>
+            <li>On the Home page or navigation bar, go to <b class="Bold">Support</b> and click <b class="Bold">API Insights</b> to open the API Insights page.</li>
+            <li>On the upper left, select an <b class="Bold">Organization</b> in the list. This list contains all organizations with sales agreements with the current organization.</li>
+            <li>
+                <p>Do any of the following to filter and view trace data.</p>
+                <p>On the left in the <b class="Bold">Date &amp; Time Range</b> section:</p>
+                <ul>
+                    <li>
+                        <p>Enter values in the <b class="Bold">Start Date</b> and <b class="Bold">End Date</b> fields to filter the list by a specific date range (a date range is not required).  If a date range is not known, click the <b class="Bold">Search</b> button without entering Date and Time values.  This will show all entries in the trace table for selection.</p>
+                    </li>
+                    <li>
+                        <p>In <b class="Bold">Username or Producer ID</b>, enter a value to filter by user. </p>
+                    </li>
+                    <li>
+                        <p>Select the <b class="Bold">Show failed requests only</b> checkbox to filter by failed requests.</p>
+                    </li>
+                    <li>
+                        <p>Click the <b class="Bold">Search</b> button to retrieve a trace table that includes Timestamps, Trace ID, Activity ID, Username (Producer ID), Request URL, and Error on the right. On the right, click a <b class="Bold">Trace ID</b> to place the Trace ID into the <b class="Bold">Trace ID</b> section.</p>
+                    </li>
+                </ul>
+                <p>On the left in the in the <b class="Bold">Trace ID</b> section: enter a specific Trace ID (without the timestamp). </p>
+            </li>
+            <li>
+                <p>On the left, click the <b class="Bold">LOAD</b> button to load the trace data associated with the Trace ID.</p>
+            </li>
+            <li>
+                <p>In the <b class="Bold">Trace Information</b> dialog, view the API trace data in the <b class="Bold">Request Headers</b>, <b class="Bold">Request Body</b> and <b class="Bold">Response Body</b> sections. View the exceptions that were posted in the stack trace in the <b class="Bold">Exceptions</b> section. For troubleshooting issues, go to steps 6 and 7 to copy the Request JSON and the Response JSON to the clipboard and then paste them to the trace log for troubleshooting.</p>
+                <p><b class="Bold">NOTE:</b> "Non-JSON Request" appears in orange text in the Request Body section and "Non-JSON Response" appears in red text in the Response Body section when the request and response are non-JSON format.</p>
+            </li>
+            <li>In the <b class="Bold">Request Body</b> section, click the <b class="Bold">COPY REQUEST JSON</b> button to copy the Request JSON to the clipboard. If the copy is successful, paste the JSON into the trace log.</li>
+            <li>In the <b class="Bold">Response Body</b> section, click the <b class="Bold">COPY RESPONSE JSON</b> button to copy the Response JSON to the clipboard.  If the copy is successful, paste the JSON into the trace log.</li>
+            <li>When finished, click the <b class="Bold">CLOSE</b> button to exit the dialog.</li>
+        </ol>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

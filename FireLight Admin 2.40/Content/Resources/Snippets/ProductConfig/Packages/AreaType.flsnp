@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Area Type displays the area of the system for the selected package. Select an <b class="Bold">Area Type</b> in the list to designate the area of the system for a new package. </p>
+        <ul>
+            <li>
+                <p><b class="Bold">Activity</b> is the front end part of the system.</p>
+            </li>
+            <li>
+                <p><b class="Bold">Reviewer</b> is the Review Queue part of the system. It contains required reviewer dashboard forms to be used by only reviewers in the Review Queue. Dashboard forms should not be included in the application package or distributor package. Reviewer dashboard forms must be set to Required. Add the reviewer dashboard forms to the <MadCap:xref href="../../../../Product Configuration/SalesAgreements.htm" target="_blank" alt="Sales Agreements">Sales Agreements</MadCap:xref> for the applicable products and set Package Duty to Required. In the Review Queue, the Approve button is disabled until required reviewer forms are completed.</p>
+            </li>
+            <li>
+                <p><a name="ReviewerOptional"></a><b class="Bold">Reviewer Optional</b> is the Review Queue part of the system for Reviewer Optional. It contains optional reviewer forms to be used only by reviewers in the Review Queue. Reviewer forms should not be included in the application package or distributor package. Add the optional reviewer forms package to the <MadCap:xref href="../../../../Product Configuration/SalesAgreements.htm" target="_blank" alt="Sales Agreements">Sales Agreements</MadCap:xref> for the applicable products and set Package Duty to Required. In the Review Queue, the Approve button is enabled and optional reviewer forms are not required to be completed before approving the order.</p>
+            </li>
+        </ul>
+    </body>
+</html>

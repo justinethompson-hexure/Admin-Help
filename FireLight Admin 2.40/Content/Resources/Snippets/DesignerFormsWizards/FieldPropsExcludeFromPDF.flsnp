@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>Select the checkbox to exclude the control when the form is printed on paper. By default, every control appears on the PDF. When this checkbox is selected, the control does not appear on the printed or submitted form.</body>
+</html>

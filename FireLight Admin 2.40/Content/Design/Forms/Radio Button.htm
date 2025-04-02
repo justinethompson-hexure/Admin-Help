@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Radio Button</h1>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FormLockUnlock.flsnp" />
+        </p>
+        <h2>Add a Radio Button Control</h2>
+        <p>Use the Radio Button control to limit the number of selection options, which provides  selection of a value within a group of radio button fields. </p>
+        <ol>
+            <li>On the left under <b>Add Control to Form</b>, click <b>Radio Button</b>.</li>
+            <li>Drag the control from the upper left of the form to an applicable location on the form.</li>
+            <li>
+                <p>Double-click the <b class="Bold">Radio Button</b>, or on the left under <b>Input Control</b>, click <b>Field Properties</b> to open the Field Properties dialog.</p>
+            </li>
+            <li>
+                <p>Enter the field properties for the radio button.</p>
+                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+                    <caption class="Table">Radio Button Field Properties </caption>
+                    <col style="width: 192px;" class="TableStyle-2017_IT-Simple2-Column-Regular" />
+                    <col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                            <th class="TableStyle-2017_IT-Simple2-HeadE-Regular-Header1">Field Property</th>
+                            <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Field Name</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsFieldName.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Common Tag Name</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/FieldProps-CommonTagName.flsnp" />
+                                <p>
+                                    <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FormsCommonTagCBRB.flsnp" /> When a Common Tag Name field is set to blank for a Check Box or Radio Button, the existing list is deleted.</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../../Resources/ImagesAdmin/Capture150.png" alt="Confirm dialog" title="Confirm dialog" MadCap:conditions="General.Online" />
+                                </p>
+                                <p>If a Common Tag Name is selected, the Edit List Name Values link appears below the Export Value field property. Otherwise, it does not apply.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Export Value</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <p>The export value for the control. This can be a common tag list value or a custom export value. The default value is "true." It is enabled to enter the export value when no Common Tag Name is associated with the field. It is disabled when there is a Common Tag Name associated with the field. To fill the correct value, click the <b class="Bold">Edit List Name Values</b> link.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Edit List Name Values</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <p><b class="Bold">NOTE:</b> A list appears in a radio button control only if a common tag name has been added to the field.</p>
+                                <p>To add an export value when a Common Tag Name is present that is associated with a list, click the <b class="Bold">Edit List Name Values</b> link to open the List Name Values dialog. Only one row can be selected for a radio button control. This can be a row provided by the selected Common Tag Name or a user-created row. </p>
+                                <p>The following tooltips are available in the List Name Values dialog title row:</p>
+                                <ul>
+                                    <li>
+                                        <MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/FormCaptionRuleValueTooltip.flsnp" />
+                                    </li>
+                                    <li>
+                                        <MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/FormRulesOverrideTooltip.flsnp" />
+                                    </li>
+                                </ul>
+                                <p>The following examples are for the Owner_Gender common tag. Do one of the following:</p>
+                                <ul>
+                                    <li>
+                                        <p>If you want a row provided by the selected Common Tag Name, select the checkbox for the applicable common tag row for a List Value and Caption/Rules Value for the radio button control. Click <b class="Bold">OK</b> to save. When the dialog is closed, the Caption/Rules Value appears in the Export Value field if no Rules Override was entered in the row. If a Rules Override was entered, it appears in the Export Value field.</p>
+                                        <p MadCap:conditions="General.Online">
+                                            <img src="../../Resources/ImagesAdmin/Capture192.png" alt="Export Values - Select Common Tag List Value" title="Export Values - Select Common Tag List Value" MadCap:conditions="General.Online">
+                                            </img>
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>If you want to create a new row with different values, scroll down to the last row, select the checkbox for the row, and enter the <b class="Bold">Caption/Rules Value</b> and optional <b class="Bold">Rules Override</b> value for the new export value. Tab off the Caption/Rules Value column and click <b class="Bold">OK</b> to save. When the dialog is closed, the Caption/Rules Value appears in the Export Value field if no Rules Override was entered in the row. If a Rules Override was entered, it appears in the Export Value field.  </p>
+                                        <p MadCap:conditions="General.Online">
+                                            <img src="../../Resources/ImagesAdmin/Capture193.png" alt="Export Values - User-Created Value" title="Export Values - User-Created Value" MadCap:conditions="General.Online">
+                                            </img>
+                                        </p>
+                                    </li>
+                                </ul>
+                                <p class="Indent">Click <b>OK</b> to save the entries and return to the Field Properties dialog.</p>
+                                <MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/CopyPasteList.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Top, Left</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsTopLeft.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Width, Height</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsWidthHeight.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b>Tab Index </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsTabIndex.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b>Group Name </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Type the name for the group of radio buttons. <b class="Bold">NOTE:</b> <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/RadioButtonGroups.flsnp" /></td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b>Help Text </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsToolTip.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b>Error Placement </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsErrorPlacement.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Protection</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/ProtectionFieldPpty.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b>Data Group </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsDataGroup.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b>Custom List </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsCustomList.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Data Group Property</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <p>
+                                    <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsDataGroupProperty.flsnp" />
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Border Styling</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">In the list, select the display styling of the radio button (Round or Square). When selected, Round style displays a dot and Square style displays a check mark.</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b>Global Scope </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsGlobalScope.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b>Exclude from PDF </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsExcludeFromPDF.flsnp" /> </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Passcode Only Validation</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FormsPasscodeOnlyVal.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Read Only</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsReadOnly.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Office Use Only</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsOfficeUseOnly.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Print Border</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Select the checkbox for the control on the printed PDF to contain a border and the enclosed space within the bounding border hides anything behind the control. If Print Border is not selected, a border does not print and the bounding area defined for the control has a transparent background.</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyB-Regular-DarkerRows"><b class="Bold">Z Order</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                                <MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsZOrder1.flsnp" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsZOrder4.flsnp" />
+                </p>
+            </li>
+            <li>Click the <b>Update</b> button to update the field properties and lock the form for editing.</li>
+            <li>Click the <b>Close</b> button to close the Field Properties dialog.</li>
+            <li>Click the <b>SAVE</b> button on the upper left of the Form Designer page to save the form, which unlocks the form for editing by other users. <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FormSaveOtherUser.flsnp" /></li>
+            <li>
+                <MadCap:snippetText src="../../Resources/Snippets/Rules/UpdateRuleSetsDB.flsnp" />
+            </li>
+        </ol>
+        <h2>Example: Group of Radio Buttons for Gender</h2>
+        <p>Add radio button controls for selecting a gender for the owner. </p>
+        <ol>
+            <li>On the left under <b>Add Control to Form</b>, click <b>Radio Button</b>.</li>
+            <li>Drag the control from the upper left of the form to an applicable location on the form.</li>
+            <li>
+                <p>Double-click the <b class="Bold">Radio Button</b>, or on the left under <b>Input Control</b>, click <b>Field Properties</b> to open the Field Properties dialog.</p>
+            </li>
+            <li>
+                <p>In <b class="Bold">Field Name</b>, enter <b class="Bold">OwnerGender</b>.</p>
+            </li>
+            <li>
+                <p>Click in <b class="Bold">Common Tag Name</b> and begin typing <b class="Bold">Owner</b> in the text box at the top of the list of common tags and select <b class="Bold">Owner_Gender</b> from the list of common tags. The Export Value is disabled when a Common Tag Name is selected.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/Capture162.png" alt="" title="" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+            <li>
+                <p>Click in <b class="Bold">Group Name</b> and add <b class="Bold">OwnerGender</b> as the group name. </p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/RadioButtonControl.jpg" alt="Radio Button Control and Field Properties" title="Radio Button Control and Field Properties" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+            <li>
+                <p>Click the <b class="Bold">Edit List Name Values</b> link to open the <b class="Bold">List Name Values</b> dialog. The last row with the default export value of true is checked by default.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/Capture163.png" alt="Export Values - Clear the True Export Value" title="Export Values - Clear the True Export Value" MadCap:conditions="General.Online" /> </p>
+            </li>
+            <li>
+                <p>If a value in the common tag list is preferred for the checkbox (Female, Male, etc.), select the checkbox for the preferred value. For example, select <b class="Bold">Female</b>. If applicable, add a Rules Override value. For example, enter F to be used in rules rather than the caption. Click <b class="Bold">OK</b> to save changes and close the List Name Values dialog. </p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/Capture164.png" alt="Select Row for List Value 2, Caption Femaile" title="Select Row for List Value 2, Caption Femaile " MadCap:conditions="General.Online" /> </p>
+                <p>The radio button now shows an Export Value of "F." On the Field Properties dialog, click <b class="Bold">Update</b>. </p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/Capture165.png" alt="Radio Button for Female with Rules Override of F" title="Radio Button for Female with Rules Override of F" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+            <li>
+                <p>Continue adding Radio Button controls for each owner gender option to be included in the OwnerGender group of radio buttons. Set the Field Name, Common Tag Name, and Group Name to the same values for each of the radio buttons in the group. Then select a unique row for the List Value and Caption/Rules Value in the List Name Values dialog for each radio button. </p>
+                <p>Following is a sample group of four form radio buttons using rule overrides for Male (M), Female(F), Unisex(U), and Other(O). </p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/Capture166.png" alt="Sample Gender Radio Buttons Using Rules Overrides" title="Sample Gender Radio Buttons Using Rules Overrides" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+        </ol>
+        <h2>Example: Radio Button for FLI_DECLINED_ESIGN</h2>
+        <p><b class="Bold">NOTE:</b> <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/RadioBtnFLIDECLINEESIGN.flsnp"></MadCap:snippetText></p>
+        <p class="Indent" MadCap:conditions="General.Online">
+            <img src="../../Resources/ImagesAdmin/RadioButtonControl1.jpg" alt="FLI_DECLINE_ESIGN Common Tag" title="FLI_DECLINE_ESIGN Common Tag" MadCap:conditions="General.Online">
+            </img>
+        </p>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

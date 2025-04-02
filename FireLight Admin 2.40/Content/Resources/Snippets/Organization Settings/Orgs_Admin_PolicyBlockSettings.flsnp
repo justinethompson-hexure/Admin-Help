@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This is where you set up <MadCap:variable name="General.ProductName"></MadCap:variable> to assign policy numbers to applications.</p>
+        <p>Add or Edit Policy Number Blocks:</p>
+        <ol style="list-style-type: lower-alpha;">
+            <li>
+                <p>Next to <b class="Bold">Policy Block Settings</b>, click the <b>Click to Edit</b> link to open the Policy Number Block List dialog.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../ImagesAdmin/PolicyNumberBlockList-DB.jpg" alt="Policy Number Block List dialog" title="Policy Number Block List dialog" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+            <li>
+                <p>Add information in the following:</p>
+                <p>
+                    <b>Add New</b> – click this link to add a new block of policy numbers. <br></br></p>
+                <p>
+                    <b>Block Id</b> – type the ID for the block of policy numbers.</p>
+                <p>
+                    <b>Policy # Range Start</b> – type the starting policy number for the policy number block.</p>
+                <p>
+                    <b>End</b> – type the ending policy number for the policy number block. This is the last policy number used within the Policy Block range.</p>
+                <p>
+                    <b>Last Policy #</b> – type the ending policy number for the policy number block.</p>
+                <p>
+                    <b>Warn When Drops Below</b> – type the policy number that, when reached, will send a warning email notice to the Support Email address indicating that the policy number block for that block ID will soon run out of policy numbers.</p>
+                <p>
+                    <b>Warn Every X Policy Num</b> – type when to send a reoccurring warning email every number of policies below the number in the Warn When Drops Below text box entry.</p>
+                <p class="Indent">
+                    <b>Example:</b> Enter <b>9900</b> in <b>Warn When Drops Below</b> to indicate the policy block numbers is running low at that point. Then type <b>10</b> in the <b>Warn Every X Policy Num</b> text box to send additional warning emails for every ten policy numbers issued below number 9900.</p>
+                <p>
+                    <b>Policy # Format</b> – type the policy number format. This defines the final format of the policy number.</p>
+                <p>
+                    <b>Test</b> – click this button to test the new policy number block and open the Test Policy Block Range Format dialog. Click   the <b>X</b> on the upper right to close the dialog. <br></br></p>
+            </li>
+            <li>
+                <p>Click the <b>Save</b> button to save your entries.</p>
+            </li>
+            <li>Click the <b>X</b> on the upper right to close the dialog.</li>
+        </ol>
+    </body>
+</html>

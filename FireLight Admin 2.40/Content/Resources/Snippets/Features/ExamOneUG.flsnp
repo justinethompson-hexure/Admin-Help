@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>
+            <big class="bold">ExamOne</big>
+        </p>
+        <p>
+            <b class="Bold">Pre Signature ExamOne Paramed Exam</b>
+        </p>
+        <p>Following is a sample wizard user experience for an ExamOne Paramed Examination scheduling prior to signing the application.</p>
+        <ol>
+            <li>
+                <p>Start an application.</p>
+            </li>
+            <li>
+                <p>Select the <b class="Bold">Use ExamOne for Paramed Examination</b> checkbox.</p>
+            </li>
+            <li>
+                <p>Select the applicable location button for <b class="Bold">Mobile Appointment</b> or <b class="Bold">In Center Examination</b>.</p>
+            </li>
+            <li>
+                <p>Enter any information for the Insured that was not pre-filled from the application data entries. </p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../../ImagesAdmin/Capture220.png" alt="ExamOne Paramed Examination - Pre-Signature" title="ExamOne Paramed Examination - Pre-Signature" MadCap:conditions="General.PDF - UGuide" />
+                </p>
+            </li>
+            <li>
+                <p>In <b class="Bold">Start Date</b> and <b class="Bold">End Date</b>, select the date range for finding paramed exam appointments. The Response field displays the number of appointments available during the selected date range. In the following example, the Response field displays the number of Mobile appointments available.</p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../../ImagesAdmin/Capture221.png" alt="Start Date and End Date" title="Start Date and End Date" />
+                </p>
+            </li>
+            <li>
+                <p>Schedule a Mobile or an In Center Location paramed exam. For Mobile exams, the examiner will go to the Insured's house, work, or other location to complete the exam. </p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../../ImagesAdmin/Capture222.png" alt="Schedule a Paramed Exam" title="Schedule a Paramed Exam" />
+                </p>
+                <p>Mobile Times:&#160;</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Click the <b class="Bold">Get Mobile Times</b> button. A message displays: "Back Office Action is being performed. A validation is being performed." Wait for the back office action to conclude.</p>
+                    </li>
+                    <li>
+                        <p>In the <b class="Bold">Mobile Times</b> list, select an appointment date and time for the paramed exam. A single Insured exam is for 45 minutes if a single insured. If it is for two Insureds, the user can book two back-to-back exams, totaling 90 minutes.</p>
+                    </li>
+                    <li>
+                        <p>Click the <b class="Bold">Confirm Mobile Times</b> button. A message displays: "Back Office Action is being performed. A validation is being performed." </p>
+                        <p>The Response field displays the appoint confirmation information. </p>
+                        <p MadCap:conditions="General.PDF - UGuide">
+                            <img src="../../ImagesAdmin/Capture230.png" alt="Response Field - Appointment Confirmation" title="Response Field - Appointment Confirmation" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>When data entry is 100%, click the <b class="Bold">CONTINUE</b> button on the upper right to proceed to the next step in the application process.</p>
+                    </li>
+                </ol>
+                <p>In Center Locations:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p> Click the <b class="Bold">Get In Center Location</b> button. A message displays: "Back Office Action is being performed. A validation is being performed."</p>
+                    </li>
+                    <li>
+                        <p>The Response field displays the number of locations available. </p>
+                        <p MadCap:conditions="General.PDF - UGuide">
+                            <img src="../../ImagesAdmin/Capture231.png" alt="Response Field - Number of Locations Available" title="Response Field - Number of Locations Available" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>In the <b class="Bold">In Center Locations</b> list, select a location for the paramed exam. The options in the list include the exam location's address and distance from the Insured's address.</p>
+                    </li>
+                    <li>
+                        <p>Click the <b class="Bold">Get In Center Times</b> button. A message displays: "Back Office Action is being performed. A validation is being performed."</p>
+                    </li>
+                    <li>
+                        <p>The Response field displays the number of time slots available. </p>
+                        <p MadCap:conditions="General.PDF - UGuide">
+                            <img src="../../ImagesAdmin/Capture232.png" alt="Response Field - Time Slots Available" title="Response Field - Time Slots Available" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>In the <b class="Bold">In Center Times</b> list, select an appointment date and time for the paramed exam. </p>
+                        <p MadCap:conditions="General.PDF - UGuide">
+                            <img src="../../ImagesAdmin/Capture233.png" alt="In Center Location and Dade/Time for the Exam" title="In Center Location and Dade/Time for the Exam" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Click the <b class="Bold">Confirm In Center</b> button. A message displays: "Back Office Action is being performed. A validation is being performed." An appointment confirmation appears in the Response field below the Confirm In Center button. </p>
+                        <p MadCap:conditions="General.PDF - UGuide">
+                            <img src="../../ImagesAdmin/Capture234.png" alt="Response Field - Appointment Confirmation" title="Response Field - Appointment Confirmation" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>When data entry is 100%, click the <b class="Bold">CONTINUE</b> button on the upper right to proceed to the next step in the application process.</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <p>
+            <b class="Bold">Post Signature ExamOne Paramed Exam</b> </p>
+        <p>Following is a sample wizard user experience for an ExamOne Paramed Examination scheduling for an In Center location after signing the application. </p>
+        <ol>
+            <li>
+                <p>Start an application.</p>
+            </li>
+            <li>
+                <p>Select the <b class="Bold">Use ExamOne for Paramed Examination</b> checkbox.</p>
+            </li>
+            <li>
+                <p>Select the applicable location button for <b class="Bold">Mobile Appointment</b> or <b class="Bold">In Center Examination</b>.</p>
+            </li>
+            <li>
+                <p>Enter any information for the Insured that was not pre-filled from the application data entries. </p>
+            </li>
+            <li>
+                <p>Skip the paramed exam scheduling section.</p>
+            </li>
+            <li>
+                <p>When Data Entry is 100%, go to the next step in the application process. </p>
+            </li>
+            <li>
+                <p>When the Insured completes the signing process:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Enter the Insured's address information.</p>
+                    </li>
+                    <li>
+                        <p>Enter the <b class="Bold">Start Date</b> and <b class="Bold">End Date</b> for the paramed exam scheduling.</p>
+                    </li>
+                    <li>
+                        <p>Click the <b class="Bold">Check Mobile Availability</b> button to check for Mobile exam availability or click the <b class="Bold">Check In Center Availability</b> button to check for In Center exam availability.</p>
+                    </li>
+                    <li>
+                        <p>Click the <b class="Bold">Check Availability</b> button. </p>
+                        <p MadCap:conditions="General.PDF - UGuide">
+                            <img src="../../ImagesAdmin/Capture226.png" alt="Post-Signature Paramed Exam Scheduling" title="Post-Signature Paramed Exam Scheduling" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Select a location in the <b class="Bold">In Center Locations</b> list and click the <b class="Bold">Get In Center Times</b> button. </p>
+                    </li>
+                    <li>
+                        <p>Select a time in the <b class="Bold">In Center Times</b> list and click the <b class="Bold">Book Exam Appointment</b> button. </p>
+                        <p MadCap:conditions="General.PDF - UGuide">
+                            <img src="../../ImagesAdmin/Capture227.png" alt="Get In Center Locations and Times and Book Exam" title="Get In Center Locations and Times and Book Exam" />
+                        </p>
+                        <p>
+                            <b class="Bold">NOTE:</b> If the client clicks the <b class="Bold">Skip</b> button, FireLight submits the paramed exam order information, but scheduling does not occur. ExamOne will reach out to the client to schedule that appointment.</p>
+                    </li>
+                    <li>
+                        <p>Click the <b class="Bold">Continue</b> button when "Appointment confirmed at ..." text appears below the Book Exam Appointment button.  </p>
+                        <p MadCap:conditions="General.PDF - UGuide">
+                            <img src="../../ImagesAdmin/Capture228.png" alt="Appointment Confirmed" title="Appointment Confirmed" /> </p>
+                    </li>
+                    <li>
+                        <p>If other signers need to sign the application, FireLight returns to the List of Required Signers for the application. </p>
+                        <p MadCap:conditions="General.PDF - UGuide">
+                            <img src="../../ImagesAdmin/Capture229.png" alt="List of Required Signers" title="List of Required Signers" />
+                        </p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>The agent receives email messages during the following events: </p>
+                <ul>
+                    <li>
+                        <p>Paramed exam is cancelled</p>
+                    </li>
+                    <li>
+                        <p>Paramed exam is complete</p>
+                    </li>
+                    <li>
+                        <p>Paramed exam status update</p>
+                    </li>
+                    <li>
+                        <p>Paramed exam status and agent action is needed (e.g., when a client may have some questions or the paramed vendor is having difficulties contacting the client)</p>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+    </body>
+</html>

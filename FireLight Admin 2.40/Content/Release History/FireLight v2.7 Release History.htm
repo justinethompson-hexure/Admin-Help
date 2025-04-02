@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight v2.7 Release History</h1>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>February 26, 2016 Minor Production Release</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="note"><b>NOTE:</b> If a design document is associated with an enhancement, click the link in the iConnect number to open the design document.</p>
+                <h2>Client Designated Enhancements</h2>
+                <p><b class="DRNumberBold">Admin</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[126598] </b> Sort the grid by Name on the Groups page in Profiles – In FireLight Admin on the Groups page, made the list of groups in the grid alphabetical first by the “Name” column and then by the “TC Rode Code” column.</li>
+                    <li><b class="DRnumber">[<a href="../Resources/DesignDocs/128213-iConnect128213DeclinedSignatureEmail.pdf" target="_blank" title="Design Document" alt="Design Document">128213</a>] </b>Added email notification after application is submitted when e-Sign is declined – Added a new email template in Admin for when electronic signature is declined during the application signature process.</li>
+                </ul>
+                <p><b class="DRNumberBold">Audit History</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[<a href="../Resources/DesignDocs/127287-OptionsForIConnect 127287.pdf" target="_blank" title="Design Document" alt="Design Document">127287</a>] </b>Added the user logged in during the agent signing to the audit trail – In FireLight, added the logged in username to each individual audit message during the signing ceremony. Displays in the FireLight Packet Audit Report and in the History link in All Applications.</li>
+                </ul>
+                <p><b class="DRNumberBold">Forms Visibility</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[<a href="../Resources/DesignDocs/125552BD-Visability.pdf" target="_blank" title="Design Document" alt="Design Document">125552</a>] </b>Added Distributor only visibility – Added the ability to restrict forms from visibility of both distributors and carriers. The back office can request forms as "Organization Only" so when the back office requests the forms they will get only ones that belong to that organization (based on provider calling). Carriers will not see distributors' forms and distributors will not see carriers' forms.</li>
+                </ul>
+                <p><b class="DRNumberBold">Manual Review Process</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[<a href="../Resources/DesignDocs/122321-DesignApproachForAttachedDocView.pdf" target="_blank" title="Design Document" alt="Design Document">122321</a>] </b>Added ability to view attached documents in the manual review process – In FireLight, added the ability for reviewers in the manual review queue (step 3) to see additional documents the agent attached to the application using a View Additional Documents button. The organization’s style sheet needs to be updated to include the View Additional documents button.</li>
+                </ul>
+                <ul>
+                    <li><b class="DRnumber">[<a href="../Resources/DesignDocs/127624-iConnectDesignApproach.pdf" target="_blank" title="Design Document" alt="Design Document">127624</a>] </b>Added the ability to disable the application submit button based on criteria – Added the ability to disable the Submit button and force applications to go to the manual review queue (step 3) prior to submission in FireLight.</li>
+                    <li><b class="DRnumber">[128021] </b>Added the agent code to the review queue email – Added the ability in Admin to add the &lt;AGENT_CODE&gt; data element to the manual reviewer requests for application review email template.</li>
+                </ul>
+                <p><b class="DRNumberBold">Signature Types</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[129406] </b>Added new Authorized Signer signature types – Added new signer types for Authorized Signer, Authorized Signer 2, Authorized Signer 3, Authorized Signer 4, and Authorized Signer 5 in the Signature Box control in the Admin form designer.</li>
+                    <li><b class="DRnumber">[131311] </b> New sub-brand logos were not being saved in the database – Now sub-brand logs are being saved in the database.</li>
+                </ul>
+                <h2>Fixed Defects</h2>
+                <ul>
+                    <li><b class="DRnumber">[128988] </b> – FireLight CUSO Only – unable to copy applications.</li>
+                    <li><b class="DRnumber">[129409] </b> – Ranking order looking only at first digit in sequence.</li>
+                    <li><b class="DRnumber">[129733] </b> – Back office script not saving.</li>
+                    <li><b class="DRnumber">[129848] </b> – Getting emails from agent/delegate when submitting depending on who is performing the Insured Signature ceremony.</li>
+                    <li><b class="DRnumber">[130211] </b> – Send follow up passcode does not work for E-Sign request.</li>
+                    <li><b class="DRnumber">[130374] </b> – Password email generated by outstanding requests does not honor agent email preference.</li>
+                    <li><b class="DRnumber">[130760] </b> – Product list not populated on New Application page.</li>
+                    <li><b class="DRnumber">[130827] </b> – Defect in Staging – Mobile Configuration screen is blank.</li>
+                    <li><b class="DRnumber">[131311] </b> New sub-brand logos were not being saved in the database – Now sub-brand logs are being saved in the database.</li>
+                    <li><b class="DRnumber">[131547] </b> – Error message/required field flag added to field after 100% completion call to carrier</li>
+                </ul>
+                <h2>Applied Patches</h2>
+                <p>The following patches were applied after the 2.7.0.247 release was deployed to STAGING on January 22, 2016.</p>
+                <ul>
+                    <li><b class="DRnumber">[132913] </b> – AXAD Offline Console is repeating 1st page entry fields on every subsequent page.</li>
+                    <li><b class="DRnumber">[133368] </b> – Final emails are not included in the audit report</li>
+                </ul>
+                <p MadCap:conditions="General.Online"><a href="#top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>January 22, 2016 Staging Release</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="note"><b>NOTE:</b> If a design document is associated with an enhancement, click the link in the iConnect number to open the design document.</p>
+                <h2>Client Designated Enhancements</h2>
+                <p><b class="DRNumberBold">Admin</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[110098] </b>Added ability to copy and/or move fields from one page to another within a form – In Admin, added the ability to copy and/or move fields from one page to another within a form using the Toolbox in form designer.</li>
+                    <li><b class="DRnumber">[116998] </b>Added new Account Holder and Account Holder 2 signer types – Added new Account Holder and Account Holder 2 signer types in the Signature Box control, Signer Type list, in FireLight Admin. This allows separate signature controls for signers to authorize one time or frequent premium deposits from a bank account in FireLight.</li>
+                </ul>
+                <p><b class="DRNumberBold">All Applications</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[125287] </b>Add additional application search items and display rep code within the All Applications view – Added the ability to display additional application search items (rep code) in the All Applications view and to display additional information in the Review Queue (transaction ID, rep name, rep code, etc.). In Admin under Profiles on the Review Queue page, additional information can be displayed in the Review Queue by adding a header label and the application search item to display in the Additional Info field.</li>
+                </ul>
+                <p><b class="DRNumberBold">Audit History</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[<a href="../Resources/DesignDocs/127287-OptionsForIConnect 127287.pdf" target="_blank" title="Design Document" alt="Design Document">127287</a>] </b>Added the user logged in during the agent signing to the audit trail – In FireLight, added the logged in username to each individual audit message during the signing ceremony. Displays in the FireLight Packet Audit Report and in the History link in All Applications.</li>
+                </ul>
+                <p><b class="DRNumberBold">Email</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[<a href="../Resources/DesignDocs/128213-iConnect128213DeclinedSignatureEmail.pdf" target="_blank" title="Design Document" alt="Design Document">128213</a>] </b>Added email notification after application is submitted when e-Sign is declined – Added a new email template in Admin for when electronic signature is declined during the application signature process.</li>
+                </ul>
+                <p><b class="DRNumberBold">Form Visibility</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[<a href="../Resources/DesignDocs/125552BD-Visability.pdf" target="_blank" title="Design Document" alt="Design Document">125552</a>] </b>Added Distributor only visibility – Added the ability to restrict forms from visibility of both distributors and carriers. The back office can request forms as "Organization Only" so when the back office requests the forms they will get only ones that belong to that organization (based on provider calling). Carriers will not see distributors' forms and distributors will not see carriers' forms.</li>
+                </ul>
+                <p><b class="DRNumberBold">Groups</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[<a href="../Resources/DesignDocs/126576-DesignApproachForUseAgentEmail.pdf" target="_blank" title="Design Document" alt="Design Document">126576</a>] </b>Added the ability to specify who emails appear to come from when being sent by a delegate – In Admin, added a new Enable Use Agent Email group option on the App tab. When the group option is selected, a new Use Agent Email for All Communications checkbox is visible on the My Preferences page in FireLight. When the checkbox is selected, the agent’s email is used for all outgoing communications. When the checkbox is cleared, the logged in user’s email is used for outgoing communication.</li>
+                </ul>
+                <p><b class="DRNumberBold">Manual Review</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[<a href="../Resources/DesignDocs/122321-DesignApproachForAttachedDocView.pdf" target="_blank" title="Design Document" alt="Design Document">122321</a>] </b>Added ability to view attached documents in the manual review process – In FireLight, added the ability for reviewers in the manual review queue (step 3) to see additional documents the agent attached to the application using a View Additional Documents button. The organization’s style sheet needs to be updated to include the View Additional documents button.</li>
+                    <li><b class="DRnumber">[<a href="../Resources/DesignDocs/127624-iConnectDesignApproach.pdf" target="_blank" title="Design Document" alt="Design Document">127624</a>] </b>Added the ability to disable the application submit button based on criteria – Added the ability to disable the Submit button and force applications to go to the manual review queue (step 3) prior to submission in FireLight.</li>
+                    <li><b class="DRnumber">[128021] </b>Added the agent code to the review queue email – Added the ability in Admin to add the &lt;AGENT_CODE&gt; data element to the manual reviewer requests for application review email template.</li>
+                </ul>
+                <p><b class="DRNumberBold">Reports</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[128868] </b>Added role code to daily FireLight production report – “Pending Orders” – Added the Role Code as a data element to the FireLight Pending Applications report.</li>
+                </ul>
+                <p><b class="DRNumberBold">Signer Types</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[129406] </b>Added new Authorized Signer signer types – Added new signer types for Authorized Signer, Authorized Signer 2, Authorized Signer 3, Authorized Signer 4, and Authorized Signer 5 in the Signature Box control in the Admin form designer.</li>
+                </ul>
+                <p MadCap:conditions="General.Online"><a href="#top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>October 30, 2015 Production Release</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="note"><b>NOTE:</b> If a design document is associated with an enhancement, click the link in the iConnect number to open the design document.</p>
+                <h2>Client Designated Enhancements</h2>
+                <p><b class="DRNumberBold">Branding</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[<a href="../Resources/DesignDocs/106534-AdditionalBrandingByLineOfBusiness.pdf" title="Design Document" alt="Design Document" target="_blank">106534</a> ]</b>Added the ability to brand UI elements – Added the ability for organizations to custom brand FireLight UI elements (UI Labels, System Strings, Audit Messages, List Profile, Email Templates, and Validation Error Messages) and add or update sub/firms using the Branding page in FireLight Admin. The vendor must first enable the organization to allow UI branding and then the Change UI Branding permission under Admin needs to be selected on the Groups page in Profiles to add the Branding page and a Branding button on the Home page in FireLight Admin. We highly recommend contacting your Strategic Account Manager or business analyst before using the Add or Update Sub/Firm Brand feature.</li>
+                </ul>
+                <p><b class="DRNumberBold">Console</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[<a href="../Resources/DesignDocs/119418-ConsoleSecurityEnhancementsDesign.pdf" target="_blank" title="Design Document" alt="Design Document">119418</a>] </b>Enhanced FireLight Console security – Enhanced the Console security by adding more control over password content, limiting the number of active devices a user can have and limiting the number of times a password can be changed. On the Organizations tab in FireLight Admin/Profiles, the Mobile Configuration dialog now includes the ability to set the minimum numbers and symbols in the Console login Password (formerly called the PIN) along with the ability to include a required Username field on the Console login dialog. The Mobile Configuration dialog contains new fields for Max Devices per Organization, Min Numbers in Password, Min Symbols in Password, and Type of Username (None, External ID, or Custom). It also renamed some of the old fields (PIN Length to Min Password Length, PIN Duration to Password Expires in, Max Invalid PIN Attempts to Max Login Attempts, and Authentication Window to Max Login Attempts window). In FireLight web on the Preferences page under Mobile Access, the Reset PIN button name is renamed to Reset Password. In the FireLight Console, the Reset PIN button is renamed to Reset Password. The Console login dialog can be custom branded with colors, text, images, and footer text. </li>
+                </ul>
+                <p><b class="DRNumberBold">Display/Print PDF</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[103510] </b>Added ability to designate placement of the validation report – Added properties to allow the provider to designate the placement of the validation report within the Display/Print PDF option. The validation report can now be placed first or last in either the application forms section or within the optional forms section of the print order list.</li>
+                </ul>
+                <p><b class="DRNumberBold">Form Designer</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[110098] </b>Documented the ability to copy/move fields from one page to another in a form – In the <i>FireLight Admin User Guide</i> on the form Design page, added additional instructions for using the Toolbox to copy and move fields from one page to another within a form. </li>
+                    <li><b class="DRnumber">[111825] </b>Enhanced “exclude from back office” functionality so that it can be conditional via rules – In FireLight Admin on the form Design page, added two new nodes in advanced rules (getbackofficeformstate and setbackofficeformstate) so “exclude from back office” functionality can be conditional via rules.</li>
+                    <li><b class="DRnumber">[118329] </b>New Save prompt in FireLight Admin on the form Design page – In FireLight Admin, when a user attempts to leave a form without first saving changes, a new Form Changes dialog asks the user to save form changes. Clicking “Yes” saves the changes and clicking “No” discards the changes.</li>
+                </ul>
+                <p><b class="DRNumberBold">Forms</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[<a href="../Resources/DesignDocs/118048-FireLightDesignApproach-FormUpdateEnhancement.pdf" target="_blank" title="Design Document" alt="Design Document">118048 form</a> / <a href="../Resources/DesignDocs/118048-FireLightDesignApproach-ReplaceProduct.pdf" target="_blank" title="Design Document" alt="Design Document">118048 product</a>] </b>New replace/update form and update product features in FireLight Admin – In FireLight Admin on the Forms page, added a new Replace Form button that opens the upload form page where the admin user can upload a new replacement form for the selected form on the Forms page. Also added a new Replace Product field on the Sales Agreement page. The admin user can enter start and end dates and a time zone for a product to expire and then select a similar type replacement product from the Replace Product list. Active applications are switched over to the new product on the old product expiration date.</li>
+                </ul>
+                <p><b class="DRNumberBold">Groups</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[<a href="../Resources/DesignDocs/112151-ChangesToDisableSigningUntilAllPagesViewedFunctionality.pdf" target="_blank" title="Design Document" alt="Design Document">112151</a>] </b>New group setting for Agents not required to view all pages – In FireLight Admin under Profiles on the Groups tab, the new “Agent Not Required to View All Pages” checkbox on the App tab allows Agents to sign without viewing all pages within a document set. If this feature is selected and Disable Signing Until All Pages Viewed feature is also selected in FireLight Admin, the “Confirm all documents without reviewing individually” checkbox appears in FireLight during the Agent signing process. The Agent can select the checkbox and click OK on the confirmation dialog to proceed with signing without viewing all of the form pages.</li>
+                </ul>
+                <p><b class="DRNumberBold">Integration</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[<a href="../Resources/DesignDocs/118292-DesignApproachForLimitResidentStates_v2.pdf" target="_blank" title="Design Document" alt="Design Document">118292</a>] </b>New ability to limit Resident Jurisdiction – All carriers can now restrict residence to jurisdictions they pass in the TX 1228 if the 1228 contains jurisdiction restrictions. When creating an application in FireLight, this limits the options in the Resident Jurisdiction list to only those states in which the agent is licensed to sell the selected product.</li>
+                </ul>
+                <p><b class="DRNumberBold">Localization</b>
+                </p>
+                <ul class="ul_1">
+                    <li><b class="DRnumber">[<a href="../Resources/DesignDocs/99197-LocalizationDesignDoc.pdf" target="_blank" title="Design Document" alt="Design Document">99197</a> ]</b>Added support for multi-lingual capabilities – Added a Localization page under Profiles in FireLight Admin that is available for organizations that are located in a country other than the U.S. The FireLight UI elements is translated into the selected language using Google Translate. Then the organization has the ability to modify the translation of the FireLight UI elements (UI Labels, System Strings, Audit Messages, List Profile, Email Templates, and Validation Error Messages) using the Localization page. The English language version is always available to users. FireLight users will see the localized UI when they first log on, but will have the choice to select English or the localized language on the upper left of the Home page for subsequent logons. </li>
+                </ul>
+                <p><b class="DRNumberBold">Organizations</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[<a href="../Resources/DesignDocs/118252-ValidateIdentityValuesDuringSigning.pdf" target="_blank" title="Design Document" alt="Design Document">118252</a> ]</b>Added a Validate Identity Verification option in FireLight Admin – Under Profiles on the Organizations page in FireLight Admin, added a Validate Identity Verification checkbox that applies to the Client Identification Verification entry during the e-signature capture process in FireLight. Select the checkbox in FireLight Admin to: (1) not auto-populate the SSN and DOB fields in the Client Identification Verification section for e-Signature, and (2) require the SSN and DOB fields to match the mapped application values for the signer type. If the values do not match, a validation message indicates that the entered value does not match the application entry value and prevents signing in FireLight.</li>
+                </ul>
+                <h2>Other Enhancements</h2>
+                <p><b class="DRNumberBold">Branding</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[125999] </b>Added ability to set a default time zone and limit the list of time zones – In FireLight Admin, added Time Zone to the Branding page under the List Profile. Admin users with permissions to change branding can limit the number of time zones displayed for the organization on the My Preferences page in FireLight. In FireLight, users can select their time zone from the Default Time Zone list on the My Preferences page.</li>
+                </ul>
+                <p><b class="DRNumberBold">Console</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[125723] </b>Implemented conditional template forms in the disconnected Console – Implemented the ability for template forms to be conditional and set off from rules in the Console. This was already implemented in the FireLight web application in version 2.6.</li>
+                </ul>
+                <p><b class="DRNumberBold">Form Designer</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[121762] </b>Made the focused field on form entry more prominent – Added styles in the Site.Css to make the focused field on form entry more prominent, keeping consistency through all browsers.</li>
+                    <li><b class="DRnumber">[125988/<a href="../Resources/DesignDocs/126934-CustomFileUpload.pdf" target="_blank" title="Design Document" alt="Design Document">126934</a>] </b>Added a Custom Upload action to the Button control in FireLight Admin and the ability to upload documents and non-pdf images to an application in FireLight – In FireLight Admin on the form Designer page, added a new Custom File Upload action and related field properties to the Button input control. FireLight users can click the button control to open the Application Documents dialog, select a Document Type (or Other), browse to the location of the document or image file and click the Upload button to upload the document or image to the application Documents list on the Other Actions menu. FireLight accepts image files in .jpg, .tiff, .png, .gif, and .bmp formats. Image files in non-pdf format can only be uploaded via a custom button.</li>
+                </ul>
+                <p><b class="DRNumberBold">Forms List</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[120205] </b>Get Form Definitions from Provider/Integration – In FireLight Admin, added a Label field to the Form List page. Label is a free-form string field that can be used to determine which forms to get definitions for and obtain item IDs from the form definition. It can also be used for specifying additional version/edition information for a form.</li>
+                </ul>
+                <p><b class="DRNumberBold">Global Data Items</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[126685] </b>Added a new FLI_ORGANIZATION_NAME to Default Data on application creation – Added a new FLI_ORGANIZATION_NAME to the default data on application creation. We already set FLI_ORGANIZATION_ID and just added the name as well.</li>
+                </ul>
+                <p><b class="DRNumberBold">Integration</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[<a href="../Resources/DesignDocs/124555-Iconnect124555UpdateUserOnBehalfOf.pdf" target="_blank" title="Design Document" alt="Design Document">124555</a>] </b>Added the ability to call out to update the user when an application is created on behalf of another user – When an application is created on behalf of another user, the back office is called and asked to request a new 1228 for that user.</li>
+                </ul>
+                <p><b class="DRNumberBold">Other Actions Menu</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">[121773] </b>Added new document type options – In FireLight on the Other Actions menu in Documents, added two new Document Type options (Select Document Type and Other). The user must now select a Document Type in the list.</li>
+                    <li><b class="DRnumber">[126438] </b>Tied the Illustration document type in the upload document dialog to Additional Doc With Signature – In FireLight, “Illustration With Signature” document type is now labeled “Illustration” in the document upload dialog.</li>
+                </ul>
+                <p><b class="DRNumberBold">Quoting</b>
+                </p>
+                <ul class="ul_1">
+                    <li><b class="DRnumber">[<a href="../Resources/DesignDocs/118204-DesignApproachForQuoting.pdf" target="_blank" title="Design Document" alt="Design Document">118204</a>] </b>New Quoting capability for Term Life products – Added a Quoting page to FireLight and a Quoting tab to FireLight Admin under Profiles. Admins use the Quoting tab in FireLight Admin to prepare and upload a rate file and add product and rate information for existing Term Life products. FireLight users use the Quoting page to see comparison quotes for Term Life products and they can begin a new application from the Quoting page in FireLight.</li>
+                </ul>
+                <p><b class="DRNumberBold">Signer Types</b>
+                </p>
+                <ul class="ul_1">
+                    <li><b class="DRnumber">[119843] </b>Added a new Additional Payor signer type – Added a new Additional Payor signer type in the Signature Box control, Signer Type list, in FireLight Admin. This allows separate signature controls payors for Applicant A and Applicant B in FireLight.</li>
+                    <li><b class="DRnumber">[126341] </b>Added a new Additional Applicant role/signer type – Added a new Additional Applicant role, signer type. In FireLight Admin, the new role is added to the List Profile section in custom Branding.</li>
+                </ul>
+                <h2>Fixed Defects</h2>
+                <ul class="ul_1">
+                    <li><b class="DRnumber">[121462] </b>There is no auto-formatting in the disconnected Console application – Added field mask implementation to the Console. This has been corrected.</li>
+                    <li><b class="DRnumber">[122105] </b>Client Fill email request: Removed the radio buttons Client and Admin and replaced them with a checkbox, “Complete annotated areas only” on the Request Another Person to Complete Filling the Forms dialog in FireLight.</li>
+                    <li><b class="DRnumber">[126123] </b>Corrected width, height and position of some controls – Some controls appeared to be either slightly smaller or nudged down in FireLight EApp. The proper offsets needed were determined and adjusted accordingly. No changes were made to existing clients.</li>
+                    <li><b class="DRnumber">[126348] </b>Update FireLight user database from inbound 103 request – Updated the logic to update the user’s role code during the processing of the 103 data. This will update the user whenever the user information is sent.</li>
+                    <li><b class="DRnumber">[126565] </b>Generic error appears if you ask a client to fill out an application – The error was corrected and no longer occurs when asking a client to fill out an application.</li>
+                    <li><b class="DRnumber">[126639] </b>Review Queue deployment is not including email group and additional info fields – This has been corrected. The Review Queue deployment now includes the email group and additional information fields.</li>
+                    <li><b class="DRnumber">[126768] </b>Submit Action is available if a separate session changes and unlocks an application – An agent in the field was able to submit an application with no signatures that had been unlocked in a separate session on a different machine. Validation was added to the Submit action to ensure the application is in a state to be submitted. If validation fails, an exception is thrown.</li>
+                    <li><b class="DRnumber">[126879] </b>OverrideDataItems is only showing a subset of the copied items – This has been corrected. Data is now prepopulated for override dataitems.</li>
+                    <li><b class="DRnumber">[127061] </b>Problem Opening apps in the same session once an app has been copied using FireLight Console – An error was being thrown on copied applications. One of the files for the application was not copied and it failed when accessing the app. This has been corrected. The file is now being copied and not causing errors.</li>
+                    <li><b class="DRnumber">[127453] </b>Long Combo Box control text in FireLight Admin wraps into another option item in FireLight –  This has been corrected. In the Site.css, made the line not wrap to keep the integrity of the combo box text in FireLight.</li>
+                    <li><b class="DRnumber">[127466] </b>Save popup dialog on the form Designer in FireLight Admin needs formatting – In FireLight Admin, the Save popup dialog has been formatted so the “f” in the word “form” is capitalized and the “Save form changes?” text is centered over the “Yes/No” buttons.</li>
+                    <li><b class="DRnumber">[127628, 127691] </b>On the Create a New Application page, the long product names are not wrapping – This has been corrected. The line now wraps on long product names on the Create a New Application page in FireLight.</li>
+                </ul>
+                <p MadCap:conditions="General.Online"><a href="#top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

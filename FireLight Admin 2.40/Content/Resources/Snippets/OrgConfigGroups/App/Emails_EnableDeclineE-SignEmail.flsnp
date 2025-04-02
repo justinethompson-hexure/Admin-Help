@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b>Enable Decline E-Sign Email</b> checkbox to enable the auto-generated email sent from the organization to the owning agent when the e-signature process is declined on an application. The email can contain organization specific instructions on the wet signature process before electronically submitting the application in <MadCap:variable name="General.ProductName" /><sup MadCap:conditions="General.Online">®</sup>. The Declined E-Signature email template can be modified in <MadCap:xref href="../../../../Organization Configuration/Email.htm" target="_blank" alt="Email">Email</MadCap:xref> in Organization Configuration.</body>
+</html>

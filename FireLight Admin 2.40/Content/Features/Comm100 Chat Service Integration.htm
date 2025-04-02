@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Setup and user instructions for Comm100, which  provides a live chat service for customer support. " />
+    </head>
+    <body>
+        <h1><a name="top"></a>Comm100 Chat Service Integration</h1>
+        <table style="border-bottom-style: solid;border-bottom-width: 1px;border-collapse: separate;mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Comm100 Chat Service Integration</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p style="page-break-after: avoid;">FireLight<sup>®</sup> can integrate with Comm100 Chat Service. </p>
+                        <p>Comm100 provides a live chat service for customer support. Their online portal allows for real-time communication and email between the User and Agent. Users is able to open the Comm100 dialog and ask questions when help is needed.</p>
+                        <p style="widows: 5;orphans: 0;page-break-after: avoid;">
+                            <img src="../Resources/ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" /> Comm100 integration does not require any changes to the Provider for your organization.</p>
+                        <p class="note"><b class="Bold">Spotlight Video:</b> See the <a href="https://vimeo.com/310655709/acf4956d35" target="_blank" title=" Comm100 -Chat- Integration Video" alt=" Comm100 -Chat- Integration Video">FireLight Comm100 -Chat- Integration</a> spotlight feature video for training instructions.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Comm100 Chat Service Setup</p>
+                        <ol>
+                            <li>FireLight clients contract directly with Comm100 to set up an account (<a href="https://www.comm100.com/" target="_blank" alt="https://www.comm100.com">https://www.comm100.com</a>). </li>
+                            <li>
+                                <p>Comm100 provides setup instructions and customization instructions for the chat button.</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p>In Organization Configuration on the Organization Settings page, <MadCap:xref href="../Organization Configuration/Organizations/Admin.htm" alt="Admin">Admin</MadCap:xref> tab, set up the Comm100 configuration by adding the configuration properties and values in the Third-Party Service Config dialog.</p>
+                        <ol>
+                            <li>Click the <b>Click to Edit</b> link to the right of <b>Third-Party Service Config</b>.</li>
+                            <li>Click the <b class="Bold">Add New</b> link at the top of the dialog. In <b class="Bold">Config Name</b>, type <b>SiteId</b>. In <b class="Bold">Config Value</b>, type the Site&#160;ID provided by Comm100. In <b class="Bold">Service Type</b>, select <b class="Bold">Comm100</b> and click the <b class="Bold">Add Config</b> button. </li>
+                            <li>Click the <b class="Bold">Add New</b> link at the top of the dialog. In <b class="Bold">Config Name</b>, type <b>PlanCode</b>. In <b class="Bold">Config Value</b>, type the  Main&#160;Code Plan ID provided by Comm100. In <b class="Bold">Service Type</b>, select <b class="Bold">Comm100</b> and click the <b class="Bold">Add Config</b> button.</li>
+                            <li>Click the <b class="Bold">Add New</b> link at the top of the dialog. In <b class="Bold">Config Name</b>, type <b class="Bold">PrimaryServer</b>. In <b class="Bold">Config Value</b>, type the primary Chat Server for your Comm100 service plan provided by Comm100. In <b class="Bold">Service Type</b>, select <b class="Bold">Comm100</b> and click the <b class="Bold">Add Config</b> button.</li>
+                            <li>
+                                <p>Click the <b class="Bold">Add New</b> link at the top of the dialog. In <b class="Bold">Config Name</b>, type <b class="Bold">SecondaryServer</b>. In <b class="Bold">Config Value</b>, type the secondary Chat Server for your Comm100 service plan provided by Comm100. In <b class="Bold">Service Type</b>, select <b class="Bold">Comm100</b> and click the <b class="Bold">Add Config</b> button. </p>
+                                <p><b class="Bold">NOTE:</b> Config Group is an optional configuration used by the <MadCap:xref href="DocuSign.htm" alt="DocuSign Integration">DocuSign Integration</MadCap:xref> integration.</p>
+                                <p>Examples:</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/Capture141.png" alt="Add a New Comm100 Configuration Value" title="Add a New Comm100 Configuration Value" MadCap:conditions="General.Online" />
+                                </p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/Capture142.png" alt="Comm100 Third Party Configuration IDs and Values" title="Comm100 Third Party Configuration IDs and Values" MadCap:conditions="General.Online" />
+                                </p>
+                            </li>
+                            <li>Close the dialog.</li>
+                            <li>Click the <b>Save Organization</b> button on the Organization Settings page.</li>
+                            <li>In Utilities on the <MadCap:xref href="../Utilities/Deployments/Deployments.htm" alt="Deployments">Deployments</MadCap:xref> page, deploy the <b class="Bold">Organization Configuration</b> to the applicable environments. See <MadCap:xref href="../Utilities/Deployments/Deploy Data.htm" alt="Deploy Data">Deploy Data</MadCap:xref>.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <ol>
+                            <li>Begin an application or other activity.</li>
+                            <li>
+                                <p>Click the <b class="Bold">Chat</b> button on the lower right of the FireLight web page to begin the chat session.</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help – Design Document: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 179243</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/DesignDocs/179243-Design Comm100 Chat Service.pdf" target="_blank" title="CMR 179243" alt="CMR 179243">CMR 179243</a></MadCap:conditionalText></p>
+                        <p>Spotlight Feature Video: <a href="https://vimeo.com/310655709/acf4956d35" target="_blank" title=" Comm100 -Chat- Integration Video" alt=" Comm100 -Chat- Integration Video">FireLight Comm100 -Chat- Integration</a></p>
+                        <p>Comm100 Contact: Mike Karr, mike.karr@comm100.com</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

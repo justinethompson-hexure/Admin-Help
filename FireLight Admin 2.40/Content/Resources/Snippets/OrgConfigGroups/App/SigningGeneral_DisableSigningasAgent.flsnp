@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable Signing as Agent</b> checkbox to disable access to signing as an Agent. Agent signers is disabled in the list of required signers. Use this option to control who is allowed to sign based on different group role codes. For example, you may have a workflow where the agent's assistants are responsible for completing the activity with the client, but are not the agent of record and, therefore, they are not allowed to sign as the agent. Set up an Assistants group and select the <b class="Bold">Disable Signing as Agent</b> option. Set up another Agents group for the agents who is signing the activities and do not select the <b class="Bold">Disable Signing as Agent</b> option.</body>
+</html>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="General.Postpone">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Common Tag Conversion</h1>
+        <p class="note"><b class="Bold">IMPORTANT!</b> Be sure to enable the common tag conversion utilities. Go to the <b class="Bold">Organization Configuration/Groups/</b><MadCap:xref href="../Organization Configuration/Groups/Admin.htm" target="_blank" alt="Admin">Admin</MadCap:xref> tab and select the <b class="Bold">Enable View Utilities</b> checkbox. This enables all utilities for the organization. </p>
+        <h2>Additional Information about Common Tag Conversion</h2>
+        <MadCap:snippetBlock src="../Resources/Snippets/Common Tags/CommonTagConversonInfo.flsnp" />
+        <h2>Initial QE/UAT Development and Testing</h2>
+        <ol>
+            <li>
+                <p>Use the <MadCap:xref href="Download Tag List.htm" target="_blank" alt="Download Tag List">Download Tag List</MadCap:xref> utility to download a spreadsheet of tags for the existing forms, wizards and rules within a package.</p>
+                <p class="note"><b class="Bold">TIP:</b> Optionally, add all forms, wizards and rule sets to a "tag conversion" package to convert all the forms, wizards and rule sets in one run. Then move the new converted forms, wizards and rule sets to the applicable packages after verifying the converted tags. This would produce a very large spreadsheet for mapping dataitems, but would ensure that all form, wizard and rule set tags were converted at the same time.</p>
+            </li>
+            <li>Create a mapping spreadsheet by updating the downloaded spreadsheet to add new tag names for dataitems and export list values in the "to" columns of the spreadsheet. </li>
+            <li>Use the <MadCap:xref href="Generate Mapping Rule Set.htm" target="_blank" alt="Generate Mapping Rule Set">Generate Mapping Rule Set</MadCap:xref> utility to create a mapping rule set that converts old tags to new tags. Add the mapping rule set to the applicable package. This can be useful for mapping one set of data item tags to another set of data item tags (e.g., from carrier to distributor tags) or it can be used during a holdover period while preparing for a package conversion.</li>
+            <li>
+                <p>Use the <MadCap:xref href="Package Conversion.htm" target="_blank" alt="Package Conversion">Package Conversion</MadCap:xref> utility to create the new forms, wizards and rule sets that uses the new tags and replace the old forms, wizards and rule sets. Schedule the old forms, wizards and rule sets expiration date and schedule the new converted forms, wizards and rule sets to begin on the following day.</p>
+                <p><b class="Bold">NOTE:</b> If you find a mistake in the new tag names, go back to the mapping spreadsheet, make the correction and repeat the package conversion to the updated tag names.</p>
+            </li>
+            <li>On the Product Configuration/<MadCap:xref href="../Product Configuration/Packages.htm" target="_blank" alt="Packages">Packages</MadCap:xref> page, verify the new converted forms, wizards and rule sets are in the applicable product package.</li>
+            <li>Contact your FireLight<sup MadCap:conditions="General.Online">®</sup> PM to arrange for developer assistance with converting old tags to new tags in the Provider. Work with the FireLight integration team to schedule the converted Provider to be deployed when the new forms, wizards and rules begin.</li>
+            <li>
+                <p>Test all scenarios to ensure activities function correctly through submission.</p>
+                <ul>
+                    <li>New activities</li>
+                    <li>Activities created prior to conversion</li>
+                    <li>Submission of activities locked prior to conversion</li>
+                    <li>Submission of activities created prior to conversion</li>
+                    <li>Submission of new activities</li>
+                </ul>
+            </li>
+        </ol>
+        <h2>Staging and Production Deployment and Testing</h2>
+        <ol>
+            <li>On the <b class="Bold">Utilities/Deployments</b> page, schedule the deployment of the Products with updated forms, wizards and rules. (See <MadCap:xref href="Deployments/Deploy Data.htm" target="_blank" alt="Deploy Data">Deploy Data</MadCap:xref> for deployment instructions.)</li>
+            <li>Schedule the deployment of the updated Provider on the same date and time.</li>
+            <li>
+                <p>Test all scenarios to ensure activities function correctly through submission.</p>
+                <ul>
+                    <li>New activities</li>
+                    <li>Activities created prior to conversion</li>
+                    <li>Submission of activities locked prior to conversion</li>
+                    <li>Submission of activities created prior to conversion</li>
+                    <li>Submission of new activities</li>
+                </ul>
+            </li>
+        </ol>
+        <h2>After Deployment</h2>
+        <p>When all of the changes have been deployed, the following scenarios are handled by the new forms, wizards and rule sets.</p>
+        <p>
+            <p>Create New Activity</p>
+            <ul>
+                <li>New activities only contain the new tags. There is no need for the rules to map to the new tags.</li>
+                <li>The forms, wizards and rules use the new tags.</li>
+                <li>The Provider uses the new tags to generate outbound calls.</li>
+                <li>The Provider does not need to map to the new tags in the DataItem collection.</li>
+            </ul>
+        </p>
+        <p>
+            <p>Existing Active Activity</p>
+            <ul>
+                <li>The activity initially contains only old tags.</li>
+                <li>When the activity is opened, the conversion rule maps the old tags to the new tags. The activity now has both old tags and new tags.</li>
+                <li>The forms, wizards and rules use the new tags.</li>
+                <li>The Provider uses the new tags to generate outbound calls.</li>
+                <li>The Provider does not need to map new tags in the DataItem collection.</li>
+            </ul>
+            <p>Existing Locked Activity (Activity Data Cannot Change)</p>
+            <ul>
+                <li>The activity contains only old tags.</li>
+                <li>The forms and wizards display the stamped page images.</li>
+                <li>The rules do not run on locked activities.</li>
+                <li>The Provider needs to map new tags in the DataItem collection.</li>
+                <li>The Provider uses new tags to generate outbound calls.</li>
+            </ul>
+            <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+            </p>
+        </p>
+    </body>
+</html>

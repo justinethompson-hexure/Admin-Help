@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <table style="border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;">
+            <caption class="Table">Three Properties Affect Six Different Areas of the System for Form Visibility </caption>
+            <col style="width: 309px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>System Area</th>
+                    <th>Property</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> <b>Form Library</b></td>
+                    <td>
+                        <p> Remove Excluded Form From Print</p>
+                        <p>Exclude from Back Office </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>Form Design</b>
+                    </td>
+                    <td>Protection</td>
+                </tr>
+                <tr>
+                    <td colspan="2"> <b>Areas of the system that can be affected by the above three properties:</b><ul><li colspan="2"> 
+
+Form Entry
+
+
+</li><li colspan="2">Printing from Edit Application
+</li><li colspan="2">
+
+Printing from Edit Application – Locked state
+
+
+</li><li colspan="2">View Application from Sign Later
+
+
+</li><li colspan="2">Download link from final email
+
+
+</li><li colspan="2">Submissions within the provider
+
+</li></ul></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <table style="mc-table-style: url('../../TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">How Three Properties Affect Six Areas of the System </caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 118px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadE-Regular-Header1">Setting Area</th>
+                    <th class="TableStyle-2017_IT-Simple2-HeadE-Regular-Header1">Property</th>
+                    <th class="TableStyle-2017_IT-Simple2-HeadE-Regular-Header1">Value</th>
+                    <th class="TableStyle-2017_IT-Simple2-HeadE-Regular-Header1">Form <br />Entry</th>
+                    <th class="TableStyle-2017_IT-Simple2-HeadE-Regular-Header1">Active Print</th>
+                    <th class="TableStyle-2017_IT-Simple2-HeadE-Regular-Header1">Locked Print</th>
+                    <th class="TableStyle-2017_IT-Simple2-HeadE-Regular-Header1">View Application</th>
+                    <th class="TableStyle-2017_IT-Simple2-HeadE-Regular-Header1">Download Email</th>
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Submission</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" rowspan="2">
+                        <b>Form Library</b>
+                    </td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">Remove Excluded<br />Form From Print</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">TRUE</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">1*</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">1*</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows" style="text-align: center;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">Exclude from Back<br />Office</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">TRUE</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows" style="text-align: center;">2*</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" rowspan="6">
+                        <b>Form Design</b>
+                    </td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" rowspan="6">Protection</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">Public</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows" style="text-align: center;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">Private</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">3*</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows" style="text-align: center;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">Client</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">
+                        <p>(N/A) 6*</p>
+                    </td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows" style="text-align: center;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">Agent</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">9*</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">9*</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">3*</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">9*</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows" style="text-align: center;">4*</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">Signer</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">&#160;</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">8*</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">5*</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows" style="text-align: center;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">Reviewer</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">7*</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">7*</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">7*</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">7*</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">7*</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows" style="text-align: center;">&#160;</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows" colspan="9">
+                        <b>Key</b>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">*1</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows" colspan="8">When true and the form is currently excluded because of a business rule, the form is hidden from the print dialog.</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">*2</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows" colspan="8">When true, by default the list of forms the provider receives for transmission over to the carrier will not include forms with this setting set.</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">*3</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows" colspan="8">Will be excluded from the View Application within the Signing Ceremony.</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">*4</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows" colspan="8">By default is included from the list of documents obtained by the provider.</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">*5</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows" colspan="8">Will show only the form for download/print if the client was a signer on the form.</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">*6</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows" colspan="8">Client protection was not implemented in FireLight.<MadCap:conditionalText MadCap:conditions="General.Postpone"> Will show only the form for download/print if the user is a client signer type.</MadCap:conditionalText></td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows" style="text-align: center;">*7</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows" colspan="8">Not visible.</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows" style="text-align: center;">*8</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows" colspan="8">Will show the form only if the user was a signer on the form.</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyB-Regular-DarkerRows" style="text-align: center;">*9</td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows" colspan="8">Agent document only, will not be included for any client document view, signing, down-load, or email access.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

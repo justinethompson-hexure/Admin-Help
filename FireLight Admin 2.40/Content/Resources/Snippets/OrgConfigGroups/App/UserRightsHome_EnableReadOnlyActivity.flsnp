@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Select the <strong>Enable Read-Only Activity</strong> checkbox to enable read-only access for the selected role code. Users in the role code will not be able to edit orders, which means no edits, no saving, and no continuing.  Additionally, the users can view documents from the Other Actions &gt; Documents dialog , but cannot add or remove documents.   Users cannot edit the activity name in the Other Actions &gt; Summary dialog. The read-only functionality supports printing unless other group options to disable print are selected. Validation messages will appear, but no edits can be made. In data entry, the CONTINUE button is grayed out with a hover over stating "read-only." In All Activities, read-only users can view activities, but cannot copy or delete them. <strong>Spotlight Video:</strong> See the <a href="https://vimeo.com/406911396/b058d9df63" target="_blank" title="FireLight New Group Options to Control Read-Only Functionality" alt="FireLight New Group Options to Control Read-Only Functionality">New Group Options to Control Read-Only Functionality</a> Spotlight Feature Video for more information.</p>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This Integration will allow for a Paramed exam to be scheduled through FireLight by sending basic proposed insured’s demographics and account information to the ExamOne ScheduleNow Paramed online ordering system.  Based on the proposed insured’s demographics and if the insured prefers their exam to be completed at an In-Center (ExamOne Office) or Mobile (Personal Location), it will open up the location(s) availability.  Upon choosing the location, the dates and times calendar will open for the insured to choose the desired slot.  If the desired location, date and time is available, then the appointment is locked in for the insured.  This new functionality is managed via a custom action button within the activity. All clients that want to use this service are required to contract directly with ExamOne. </p>
+        <p>Impacts: </p>
+        <ul>
+            <li>
+                <p>Activities:  Adding checkbox to enable Paramed ordering </p>
+            </li>
+            <li>
+                <p>Admin:  Third-Party Configuration - Adding a new Service Type</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>Data Group Properties</p>
+            </li>
+            <li>
+                <p>Email Templates: different statuses on Paramed ordering</p>
+            </li>
+            <li>
+                <p>UI Changes:  Statuses</p>
+            </li>
+            <li>
+                <p>Common Tags:  life insurance related</p>
+            </li>
+            <li>
+                <p>API Structure:  send required insured data and account info, order ID and availability will open and save in the database.  We will then submit the order to ExamOne with the same tracing ID and lock the order with the schedule</p>
+            </li>
+            <li>
+                <p>Forms: Data Group Properties</p>
+            </li>
+            <li>
+                <p>Reports: Usage</p>
+            </li>
+            <li>
+                <p>Audits: Addition of new codes needed for ACORD 1122</p>
+            </li>
+        </ul>
+    </body>
+</html>

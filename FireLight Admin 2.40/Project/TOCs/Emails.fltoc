@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="Accept User Share - All Activities"
+    Link="/Content/Organization Configuration/Email/Case Sharing/Accept User Share - All Activities.htm" />
+  <TocEntry
+    Title="Accept User Share - Single Activity"
+    Link="/Content/Organization Configuration/Email/Case Sharing/Accept User Share - Single Activity.htm" />
+  <TocEntry
+    Title="Agent Completed Application" />
+  <TocEntry
+    Title="Agent E-Delivery Expiration Warning"
+    Link="/Content/Organization Configuration/Email/E-Delivery/Agent E-Delivery Expiration Warning.htm" />
+  <TocEntry
+    Title="Agent E-Delivery Expired"
+    Link="/Content/Organization Configuration/Email/E-Delivery/Agent E-Delivery Expired.htm" />
+  <TocEntry
+    Title="Agent Illustration PDF Output"
+    Link="/Content/Organization Configuration/Email/Illustration/Agent Illustration PDF Output.htm" />
+  <TocEntry
+    Title="Agent Request Expiration Warning"
+    Link="/Content/Organization Configuration/Email/Activities/Agent Request Expiration Warning.htm" />
+  <TocEntry
+    Title="Agent Request Expired"
+    Link="/Content/Organization Configuration/Email/Activities/Agent Request Expired.htm" />
+  <TocEntry
+    Title="Auto Submit Email Notification"
+    Link="/Content/Organization Configuration/Email/Activities/Auto Submit Email.htm" />
+  <TocEntry
+    Title="Batch Review Request"
+    Link="/Content/Organization Configuration/Email/Review Queue/Batch Review Queue Request.htm" />
+  <TocEntry
+    Title="Client E-Delivery Expiration Warning"
+    Link="/Content/Organization Configuration/Email/E-Delivery/Client E-Delivery Expiration Warning.htm" />
+  <TocEntry
+    Title="Client E-Delivery Expired"
+    Link="/Content/Organization Configuration/Email/E-Delivery/Client E-Delivery Expired.htm" />
+  <TocEntry
+    Title="Client Request Expiration Warning"
+    Link="/Content/Organization Configuration/Email/Activities/Client Request Expiration Warning.htm" />
+  <TocEntry
+    Title="Client Request Expired"
+    Link="/Content/Organization Configuration/Email/Activities/Client Request Expired.htm" />
+  <TocEntry
+    Title="Client Signed and Approved the Application"
+    Link="/Content/Organization Configuration/Email/Activities/Client Signed and Approved the Application.htm" />
+  <TocEntry
+    Title="Client Signed and Declined the Application"
+    Link="/Content/Organization Configuration/Email/Activities/Client Signed and Declined the Application.htm" />
+  <TocEntry
+    Title="Declined E-Signature"
+    Link="/Content/Organization Configuration/Email/Activities/Declined E-Signature.htm" />
+  <TocEntry
+    Title="Download Completed Application"
+    Link="/Content/Organization Configuration/Email/Activities/Download Completed Application.htm" />
+  <TocEntry
+    Title="E-Delivery Agent Review Request"
+    Link="/Content/Organization Configuration/Email/E-Delivery/E-Delivery Agent Review Request.htm" />
+  <TocEntry
+    Title="E-Delivery Pending Agent Review"
+    Link="/Content/Organization Configuration/Email/E-Delivery/E-Delivery Pending Agent Review.htm" />
+  <TocEntry
+    Title="E-Delivery Pending Agent Signature"
+    Link="/Content/Organization Configuration/Email/E-Delivery/E-Delivery Pending Agent Signature.htm" />
+  <TocEntry
+    Title="E-Delivery Reminder"
+    Link="/Content/Organization Configuration/Email/E-Delivery/E-Delivery Reminder.htm" />
+  <TocEntry
+    Title="Email Template"
+    Link="/Content/Organization Configuration/Email.htm" />
+  <TocEntry
+    Title="Leave-Behind Email"
+    Link="/Content/Organization Configuration/Email/Activities/Leave-Behind Email.htm" />
+  <TocEntry
+    Title="Request Client to Fill"
+    Link="/Content/Organization Configuration/Email/Activities/Request Client to Fill Activity.htm" />
+  <TocEntry
+    Title="Review Queue More Info Reply"
+    Link="/Content/Organization Configuration/Email/Review Queue/Review Queue More Info Reply.htm" />
+  <TocEntry
+    Title="Revoke User Share - All Activities"
+    Link="/Content/Organization Configuration/Email/Case Sharing/Revoke User Share - All Activities.htm" />
+  <TocEntry
+    Title="Revoke User Share - Single Activity"
+    Link="/Content/Organization Configuration/Email/Case Sharing/Revoke User Share - Single Activity.htm" />
+  <TocEntry
+    Title="Signature Request"
+    Link="/Content/Organization Configuration/Email/Activities/Signature Request.htm" />
+  <TocEntry
+    Title="Submit Reminder"
+    Link="/Content/Organization Configuration/Email/Activities/Submit Reminder.htm" />
+  <TocEntry
+    Title="Template Upload Email"
+    Link="/Content/Organization Configuration/Email/Activities/Template Upload Email.htm" />
+  <TocEntry
+    Title="User Share Request - All Activities"
+    Link="/Content/Organization Configuration/Email/Case Sharing/User Share Request - All Activities.htm" />
+  <TocEntry
+    Title="User Share Request - Single Activity"
+    Link="/Content/Organization Configuration/Email/Case Sharing/User Share Request - Single Activity.htm" />
+</CatapultToc>

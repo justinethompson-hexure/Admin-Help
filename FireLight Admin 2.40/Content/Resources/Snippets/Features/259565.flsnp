@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Currently, there is a set limitation of 5 attempts when a user selects an incorrect/mismatched state during the E-sign ceremony with the "State Signing Error" selection made on the signature control. After the 5th attempt with a state mismatch, the application is locked and cannot be submitted. This enhancement will allow clients to configure the number of attempts to display an alert for state mismatch at the time of signing ceremony. Using this setting, clients can also set the number of attempts to be unlimited. Removing the limitation for the number of attempts will allow signers to select a mismatching signing state any number of times. This will allow the alert dialog to display to the user after each invalid state selection, but will not lock the application and prevent submission. </p>
+        <p>This change will impact all clients using the setting "State Signing Error" on the signature control of their form. </p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Admin Tool: New org setting "State Signing Error Attempts" on Organization Config -&gt; Organization Settings -&gt; Signature (tab).</p>
+            </li>
+            <li>
+                <p>E-Sign ceremony: State signing mismatch on signature capture screen. </p>
+            </li>
+            <li>
+                <p>This change will also impact the embedded APIs used for SSO/IXN.</p>
+            </li>
+        </ul>
+    </body>
+</html>

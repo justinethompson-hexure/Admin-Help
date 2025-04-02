@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Full Settling DTCC Member</b> checkbox to indicate you are a full settling member firm. This is required for FireLight<sup MadCap:conditions="General.Online">®</sup> to send the money settlement detail to the DTCC. See <MadCap:xref href="../../../Features/DTCC Money Settlement Support.htm" target="_blank" alt="DTCC Money Settlement Support">DTCC Money Settlement Support</MadCap:xref> in Features.</body>
+</html>

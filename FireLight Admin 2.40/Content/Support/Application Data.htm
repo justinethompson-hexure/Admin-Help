@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Application Data<a name="top"></a></h1>
+        <p>Use the Application Data page to view information on each case that is being sent to the DTCC and their App/Sub<MadCap:conditionalText MadCap:conditions="General.Postpone"> and attachment</MadCap:conditionalText> status.</p>
+        <p><strong>NOTE:</strong> The information contained in this Application Data tool shows only what is transmitted from FireLight<sup MadCap:conditions="General.Online">®</sup> to the DTCC. This does not reflect any information from the DTCC to the client organization.</p>
+        <h2>Enable Application Data in Admin</h2>
+        <ol>
+            <li>
+                <p>In <b class="Bold">Organization Configuration</b> on the <b class="Bold">Groups</b> page, select a group <b class="Bold">Name</b> in the grid.</p>
+            </li>
+            <li>
+                <p>In <b class="Bold">Groups</b> on the <b class="Bold">Debugging Tools</b> tab, select the <strong>Enable Viewing of Application Data</strong> checkbox.</p>
+            </li>
+        </ol>
+        <h2>View and Download Application Data</h2>
+        <ol>
+            <li>
+                <p>On the Home page or navigation bar, go to <b class="Bold">Support</b> and click <b class="Bold">Application Data</b> to open the Application Data page.</p>
+            </li>
+            <li>On the left, enter an <b class="Bold">Application ID or Application Control Number</b> and click <b class="Bold">LOAD</b>. <b class="Bold">NOTE:</b> After clicking the LOAD button, FireLight displays the following message for entry of an incorrect Application ID or Application Control Number: "Application ID or Application Control Number does not exist."<p>The window on the right shows any information listed about the application. This includes Application Name, Application Control Name (DTI Number), Application ID (GUID), Distributor Code, Carrier Code, Request Type, Submission Status of the application submission, and <b class="Bold">View AppSub File</b> button, which shows after the request to the DTCC has been received.  Click the <b class="Bold">View AppSub File</b> button to display the AppSub below the table. </p><p><b class="Bold">NOTE:</b> The View AppSub File, View and Download buttons are available only in the QE, UAT, and Staging environments. The buttons are not available in Production  to protect Personally Identifiable (PI) information. </p><p><img src="../Resources/ImagesAdmin/Capture139.png" alt="Application Data Page" title="Application Data Page" /></p></li>
+            <li>
+                <p>View specific details on the application, specifically for DTCC transmissions. On the right of the page, the table includes the Type, Instant (date and timestamp), Status of the DTCC Transmission, and a view column. The Status of the DTCC Transmission can include the following responses: Success, Pending, Confirmed, Transmitted, Error, AppSub, and N/A. Click the <b class="Bold">View</b> button next to the "Transmitted" status to view the header of the transmission to the DTCC.</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>The order of a successful transmission is: Pending, Transmitted, Confirmed, and Success. </p>
+                    </li>
+                    <li>
+                        <p>The order of a rejected transmission is: Pending, Transmitted, Transmission Accepted, Transmission Rejected, transmitted, Transmission Accepted, and Success. The transmitted, Transmission Accepted, etc., can occur multiple times until a Success happens.</p>
+                    </li>
+                    <li>
+                        <p>The Confirmation response field will show either Confirmed or Rejected or is blank until the response is received by the DTCC. Click the <b class="Bold">View</b> button next to the Response status of "Accepted" or "Rejected" to view the DTCC response. Note that the "Accepted" status is the same as the "Success" status.</p>
+                    </li>
+                    <li>
+                        <p>The confirm header is viewable and downloadable as a txt file upon viewing. Only the latest confirmation is viewable and downloadable. Any previous confirmations will show type, timestamp, and status, but not a viewable file. </p>
+                    </li>
+                    <li>
+                        <p>Confirmation is visible in all environments: QE, UAT, Staging, and Production.</p>
+                    </li>
+                    <li>
+                        <p>A rejected response will have a View button to help the user troubleshoot the issue.</p>
+                    </li>
+                    <li>
+                        <p>AppSub will always be viewable, either when a successful or rejected transmission occurs.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>In the right column of the table, click the <b class="Bold">View</b> button to view the Request, Transmission, and Response to display the information in a separate section below the application details. Clicking the View button creates an audit that a support person viewed this transmission in the Audit History. </p>
+                <p><b class="Bold">NOTE:</b> The View button is available only in the QE, UAT, and Staging environments. It is not available in Production  to protect PI information.</p>
+            </li>
+            <li>
+                <p>In the Request, Transmission, or Response details section on the lower right, click the <b class="Bold">Download</b> button to download a TXT file with the detailed information. </p>
+                <p><b class="Bold">NOTE:</b> The Download button is available only in the QE, UAT, and Staging environments. To protect PI&#160;information, it is not available in Production. </p>
+            </li>
+        </ol>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

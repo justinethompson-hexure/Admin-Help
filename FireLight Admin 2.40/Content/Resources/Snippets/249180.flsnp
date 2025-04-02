@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Distributors have been reporting issues with changing the carrier when using Copy with Changes on a saved activity because some data items are not being cleared. To correct this problem, our clients want to disallow changing the carrier when selecting Copy with Changes. Additionally, another client asked to disallow Copy with Changes in the feedback for this change.&#160; As a result, support is added for both of these options.</p>
+        <p>Add Disable Carrier with Copy with Changes:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>An new option is added for all Distributor organizations, which disables the selection of a carrier with Copy with Changes: Disable Change Carrier Copy with Changes. This option will not appear if the organization is a carrier.</p>
+            </li>
+        </ul>
+        <p>Current Disable Copy Option Changes:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>There is a current Group option Disable Copy in All Activities, which disables both Copy As Is and Copy with Changes.&#160; We are removing this option and replacing it with two options, which will allow clients to select one or both options by group role code.&#160; If a client selects one of these two options, the Copy dialog is hidden and not appear, as the copy dialog is to select the desired copy option. NOTE: If the client has Disable Copy in All Activities selected for any Groups, a script is run on each environment to select the two new options, Disable Copy As Is and Disable Copy with Changes.</p>
+            </li>
+        </ul>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Disable Change Carrier Copy with Changes is available only to distributor organizations.</p>
+            </li>
+            <li>
+                <p>Group option Disable Copy in All Activities replaced with two options: Disable Copy As Is and Disable Copy with Changes.</p>
+            </li>
+            <li>
+                <p>If Disable Copy in All Activities was selected for a group, the two new options is selected for the applicable groups.</p>
+            </li>
+            <li>
+                <p>Copy dialog does not appear when only one of the disable copy options is selected.</p>
+            </li>
+        </ul>
+    </body>
+</html>

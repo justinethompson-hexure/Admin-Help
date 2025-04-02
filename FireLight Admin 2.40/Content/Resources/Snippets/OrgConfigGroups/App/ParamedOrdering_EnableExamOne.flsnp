@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Enable ExamOne</b> checkbox to enable the ExamOne paramedical exam ordering feature if the organization has the ExamOne integration. This is an optional feature. See <MadCap:xref href="../../../../Features/ExamOne Paramed Exam Order Integration.htm" title="ExamOne Paramed Exam Order Integration" alt="ExamOne Paramed Exam Order Integration">ExamOne Paramed Exam Order Integration</MadCap:xref>. Both Paramed Ordering options can be selected simultaneously. See <b class="Bold">NOTES</b>.</body>
+</html>

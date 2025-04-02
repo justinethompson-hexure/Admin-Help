@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Click the link to open the <b class="Bold">Activity Pop-up Messages</b> dialog.</p>
+        <p class="note"><b class="Bold">NOTE:</b> The pop-up messages within the list are the default FireLight messages. If the CSS for your organization has customized content for some of these default messages, the content you enter here will override the custom content in the CSS branding file, and it will override the FireLight default content. </p>
+        <ol style="list-style-type: lower-alpha;">
+            <li>On the left, click a <b class="Bold">Pop-up ID</b> in the list.</li>
+            <li>On the right, in <b class="Bold">Message Content</b>, edit the message content as applicable for your organization.</li>
+            <li>If desired to have no message appear, enter a blank message and then click <b>Yes</b> on the "Saving blank popup message will suppress popup message from appearing for the selected activity action. Do you want to proceed?" message that appears.</li>
+            <li>If desired to add links for actions such as Continue, Enter More Data, and Other Actions, add tags to the custom pop-up message as follows:</li>
+            <ul>
+                <li>
+                    <p>Continue button: &lt;HYPER_LINK CONTINUE_ACTION&gt;<i>sample text</i>&lt;/HYPER_LINK&gt;</p>
+                </li>
+                <li>
+                    <p>Other Actions menu: &lt;HYPER_LINK OTHER_ACTION&gt;<i>sample text</i>&lt;/HYPER_LINK&gt;</p>
+                </li>
+                <li>
+                    <p>Enter More Data: &lt;HYPER_LINK ENTER_MORE_DATA_ACTION&gt;<i>sample text</i>&lt;/HYPER_LINK&gt;</p>
+                </li>
+            </ul>
+            <li>To return to the default message, above the Message Content click <b class="Bold">Restore Default</b>.</li>
+            <li>Click <b class="Bold">Save</b>.</li>
+            <p class="Indent">The following variables are available for the pop-ups as for the email templates. Use pipes (|) to surround the variable name (e.g., |CASE_NAME| variable).</p>
+            <ul>
+                <li>AGENT_NAME</li>
+                <li>CASE_NAME</li>
+                <li>
+                    <p>PRODUCT_NAME</p>
+                </li>
+                <li>
+                    <p>PRODUCT_TYPE</p>
+                </li>
+                <li>
+                    <p>COMPANY_NAME</p>
+                </li>
+                <li>
+                    <p>POLICY_NUMBER</p>
+                </li>
+                <li>
+                    <p>ACTIVITY_NAME</p>
+                </li>
+            </ul>
+        </ol>
+        <p class="Indent">Styling variables are available for the messages. They have the |STYLE:styleName| and |ENDSTYLE| tags, where "styleName" is the name of the CSS class to be used. The |STYLE| and |ENDSTYLE| variable tags  surround the text for which to apply the CSS class. If these style variables are desired, please contact Hexure for assistance with setting up a class for your use.</p>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="Word Print Target"
+  Type="MsWord"
+  Destinations=""
+  MasterPageLayout="/Content/Resources/PageLayouts/Word8_5X11/2017WordNormal8_5X11.flpgl"
+  ConditionTagExpression="include[General.PDF], exclude[General.Internal or General.Online or General.Postpone]"
+  PatchHeadingLevels="true"
+  InjectBookHeadings="false"
+  MasterStylesheet="/Content/Resources/Stylesheets/2017MainStyles.css"
+  DisableAutoSync="true"
+  EmbedImages="true"
+  MasterToc="/Project/TOCs/2018WordTOC.fltoc">
+  <PrintedOutput
+    CollapseMargins="false"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false"
+    ExpandingTextConversion="expand"
+    PopupConversion="remove-body"
+    EnableTrackedChanges="false"
+    DisableMasterPageUsage="true"
+    OutputFormat="docx" />
+  <DocumentProperties
+    Title="ForeSight Help"
+    Author="" />
+  <PDF
+    ShowUsedBookmarks="true"
+    Tagged="true"
+    PageLayout="OneColumn"
+    TitleBar="FileName" />
+  <Destinations></Destinations>
+  <Glossaries />
+</CatapultTarget>

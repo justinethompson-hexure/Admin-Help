@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <strong>Enable Viewing of Application Data</strong> checkbox to enable the Application Data tool in the Support section of Admin. See the <MadCap:xref href="../../../../Support/Application Data.htm" target="_blank" alt="Application Data">Application Data</MadCap:xref> topic for instructions on using the Application Data support tool to view information on each case that is being sent to the DTCC; their App/Sub<MadCap:conditionalText MadCap:conditions="General.Postpone"> and attachment</MadCap:conditionalText> status.</body>
+</html>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>If the wizard is not locked and another user has saved changes to the wizard since you began your work,  a <strong>Wizard Changes</strong> dialog opens. Choose one of the following buttons on the dialog: <strong>Overwrite Changes</strong> to overwrite the changes that the other user made and update the wizard with your latest changes, <b>Discard Changes</b> to discard the changes that you made and open the last saved version of the wizard by the other user, or <b>Cancel Save</b> to close the dialog and return to the last active location in the wizard. </body>
+</html>

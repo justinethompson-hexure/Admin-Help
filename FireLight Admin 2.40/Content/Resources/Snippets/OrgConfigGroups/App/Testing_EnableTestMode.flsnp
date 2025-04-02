@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p class="Indent">Select the <strong>Enable Test Mode</strong> checkbox to enable the logged in user to type an effective date for the activity and test the replacement of forms, the expiration of forms, and the start date and expiration dates of Sales Agreements by creating new activities that do not get submitted to the back office. If the logged in user has this permission enabled and the Enable System Override Date enabled, and they create a new activity, a new prompt for an Override Date is displayed next to the Product Type drop-down list. If left empty, the current date is used in all sales agreement and form selection logic; otherwise, the Override Date is used. The Override Date is stored with the activity so you can return later to test additional configuration changes.</p>
+        <p class="Indent">If you have an external system interfacing with <MadCap:variable name="General.ProductName" /> with a TX103 transaction, you can pass in a few elements within the TX103 to set up the activity in the same way. The following items must be set in the inbound TX103:</p>
+        <ul>
+            <li>
+                <p class="Indent"> Set the TransEffDate under the TXLifeRequest aggregate.</p>
+            </li>
+            <li>
+                <p class="Indent"> Set the TestIndicator under the TXLifeRequest aggregate with OLI_BOOL_TRUE (tc = “1” or element value to “True”).</p>
+            </li>
+        </ul>
+    </body>
+</html>

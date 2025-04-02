@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>In the <b class="Bold">State Approved</b> grid, select the checkbox for each jurisdiction in which the product is approved. At least one state must be selected. The product jurisdictions approved will then appear in the State Approvals jurisdiction list in <MadCap:xref href="../../../../Product Configuration/SalesAgreements.htm" target="_blank" alt="Sales Agreements">Sales Agreements</MadCap:xref>.  A Sales Agreement cannot be created for a state in which the product has not been approved.</body>
+</html>

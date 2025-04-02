@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>In the <b class="Bold">E-Delivery Expiration Warning Threshold</b> text box, enter the number of days prior to the expiration of a pending E-Delivery an email should be sent to the agent and/or client. This email will warn of the impending expiration of the E-Delivery.  If 0 is entered, no email is sent. Go to <MadCap:xref href="../../../Organization Configuration/Email.htm" target="_blank" alt="Email">Email</MadCap:xref> in Organization Configuration to see the associated  agent and client E-Delivery expiration email templates.</body>
+</html>

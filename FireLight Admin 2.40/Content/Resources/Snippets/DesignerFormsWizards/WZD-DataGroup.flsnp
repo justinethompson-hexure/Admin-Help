@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>Select a Data Group if applicable. This is where you select a Data Group for fields associated with a Custom Action button field. For example, when Custom Action in a button is set to CRM, set Data Group to the type of party (e.g., Owner, Annuitant, Beneficiary, etc.). When Custom Action is set to CRM and the CRM Type is set to 1035YellowPages, set Data Group to the 1035 Exchange Ceding Company number (1035 Exchange Ceding Company 1, 1035 Exchange Ceding Company 2, etc.). When Custom Action in a button is set to Custom List, set Data Group to the Custom List number (e.g., Custom List 1, Custom List 2, etc.). </body>
+</html>

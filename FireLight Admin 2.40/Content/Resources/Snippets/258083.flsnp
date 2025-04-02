@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This base enhancement will disable "Copy" icon for checked out applications when console app is in offline mode.  When the console app is offline, users should not be allowed to make a copy of the applications. For this purpose, "Copy" icon is disabled on both Windows and iPad Console e-Apps.</p>
+        <p>Impact:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>"Copy" icon is disabled for applications that are checked out when console app is in offline mode. This change will impact both Windows and iPad Console e-Apps.</p>
+            </li>
+        </ul>
+    </body>
+</html>

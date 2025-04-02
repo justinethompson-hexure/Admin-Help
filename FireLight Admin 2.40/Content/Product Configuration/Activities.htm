@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Create a New Activity, Configurable Activity, Configurable Activity Guidelines, Activity History" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Activities</h1>
+        <p>On the navigation bar, click <b>Product Config/Activities</b> to view the Activities page. </p>
+        <p class="note"><b class="Bold">NOTE:</b> Configurable Pre-Sale  activity requires licensing. Contact your Strategic Account Manager for details. See also the <i MadCap:conditions="General.PDF">FireLight Configurable Pre-Sale Guide</i><a href="../Resources/PDFGuides/FireLight Configurable Presale Guide.pdf" target="_blank" title="FireLight Configurable Pre-Sale Guide" alt="FireLight Configurable Pre-Sale Guide" MadCap:conditions="General.Online">FireLight Configurable Pre-Sale Guide</a>. <br /><b class="Bold">Spotlight Videos:</b> See the <a href="https://vimeo.com/359887614/c9050b28f6" target="_blank" title="FireLight Configurable Pre-Sale" alt="FireLight Configurable Pre-Sale">FireLight Configurable Pre-Sale</a> and <a href="https://vimeo.com/391512949/ed406be8e3" target="_blank" title="FireLight Spotlight -  Scoring and Pre-Sale" alt="FireLight Spotlight -  Scoring and Pre-Sale">FireLight Scoring and Pre-Sale</a> Spotlight Feature Videos for instructions.</p>
+        <p>Use the Activities page to create and configure a pre-sale activity using the activity layer of FireLight. An Activity represents a type of Activity a user can create (e.g., Account Opening, Pre-Sale, Needs Determination,  etc.). The Activity can be configured independently and some of its workflow can be customized by the Admin on the Activities page instead of requiring code changes by FireLight development. </p>
+        <p>An organization can create new activities that have different names and icons on the Home page, different pre-fill codes, potentially different next steps, different locking rules, different deleting rules, and different reporting.</p>
+        <h2>Optional Activity Naming Convention for SSO Clients Only</h2>
+        <MadCap:snippetBlock src="../Resources/Snippets/Features/249258.flsnp" />
+        <h2>Configurable Activity Guidelines</h2>
+        <p class="note" MadCap:conditions="General.Postpone"><b class="Bold">IMPORTANT!</b> In parent/child activities, you may need to write a rule to disable the use of custom action buttons that could change data in the child activity when coming from a pre-sale activity.</p>
+        <ul>
+            <li>The top section of the Activities page contains the existing activities that are supported in FireLight (Account Opening, Application, E-Delivery, Fee Inquiry, Illustration, Needs Determination, Post Issue,  Print Forms, Quote, SubPay, etc.). Selecting any of these activities displays the activity details below. Any new activity configured on the Activities page is included in the top section.</li>
+            <li>An organization can create more than one Pre-Sale activity and more than one Pre-Sale activity per Activity Type. </li>
+            <li>Activities are linked to Products and Packages via a Sales Agreement.</li>
+            <li>Pre-Sale activities can be sent automatically to the post-submission review queue.</li>
+            <li>
+                <p>  New Pre-Sale activity deployments:</p>
+                <ul style="list-style-type: circle;">
+                    <li>Carriers and Distributors: (1) Carriers create a product and package with the activity type that are deployed to the distributor via the sales agreement.  Only the product, packages with the activity type, and sales agreements deploy. (2) The Distributor links the product to an Activity defined in their distribution environment.  (3) The Distributor defines the Activity settings on the Activities page and deploys the Activity to their own environment.</li>
+                    <li>Carriers Only:&#160;Carriers can manage the entire process for their own organizations. Carriers can deploy the Activity and its associated product, package, and sales agreement to Staging and Production environments, but not to the Distributor. Activity deployments must stay within the same organization. </li>
+                </ul>
+            </li>
+            <li>
+                <p>When accessing FireLight through SSO: If the product is active in Groups and the new activity has the TypeCode defined for pre-fill, then when the SSO has that transaction type defined, FireLight launches the user into the activity in the SSO.</p>
+            </li>
+            <li>
+                <p>E-Signature and PreSubmit review are triggered based on the settings, if there are signature tags, and the script for review.</p>
+                <p class="note"><b class="Bold">NOTE:</b> When the pre-signature review process is before the signature process, the Request Client to Fill &amp; Sign  option is not available on the Other Actions menu and we do not allow the Console to check out an app. <MadCap:conditionalText MadCap:conditions="General.Online">See also <MadCap:xref href="../UserGuide/FireLight Basics/Other Actions/Request Client to Fill and Sign.htm" target="_blank" alt="Request Client to Fill &amp; Sign [User Instructions]">Request Client to Fill &amp; Sign [User Instructions]</MadCap:xref>.</MadCap:conditionalText></p>
+            </li>
+            <li>Upon continuing to next steps, pre-fill data and lock down into the next activity are based on the Activities page settings. </li>
+            <li>
+                <p>The next steps are driven by first the activity type of the current activity and its activity type’s admin configuration, then the user permissions in the role code-based user group, then finally by the data items in the current activity. When the Known DataItems FLI_NEXT_ACTIVITY_JURISDICTION, FLI_NEXT_ACTIVITY_PRODUCT_CUSIP and FLI_NEXT_ACTIVITY_ACORDTYPE are set and valid, then it is possible for no options to be presented, but have the user redirected immediately to the new application. If only FLI_NEXT_ACTIVITY_JURISDICTION and FLI_NEXT_ACTIVITY_PRODUCT_CUSIP are filled and valid and there are multiple Activity Types for that product, then the user is asked to select which Activity type to proceed to on that product. If only FLI_NEXT_ACTIVITY_ACORDTYPE is filled and valid, then the user is redirected to the new  activity page and asked to select a product. If none of those data items are filled or valid, then the user is presented an intersection of the Activity Types the user has access to and the next Activity Types selected for the current activity type.</p>
+            </li>
+            <li>Linked activities follow the activity settings for locking the initial Pre-Sale activity, which  controls deletes of the initial activity if there are linked activities.</li>
+            <li>Upon continuing, the PDF from the initial activity is included in the documents of the next activity. The Pre-Sale activity name is the document type name. This can be used for the templates.</li>
+            <li>Audits from the Pre-Sale activity are included in the next activity.</li>
+            <li>The audits on both the Pre-Sale and the next activity include an audit record of the linkage.</li>
+            <li>In FireLight on the All Activities page, the Activity type includes the new activity.</li>
+            <li>Reports are run based on the billing code for the new activity.</li>
+            <li>Reports include the new activity.</li>
+        </ul>
+        <p class="Indent"><b class="Bold">NOTE:</b>&#160;Existing Needs Determination and Account Opening activities were converted to a Pre-Sale activity type with customized names of Needs Determination and Account Opening and the activities remain linked.</p>
+        <h2>LastUpdate (Purge Policy)</h2>
+        <p>LastUpdate is updated when the following occurs:</p>
+        <ul>
+            <li>
+                <p>The app data is updated.  This includes when:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>The user clicks Save or answers Yes to the save prompt when leaving an activity.</p>
+                    </li>
+                    <li>
+                        <p>The user is prompted for recoverable changes when opening an activity and chooses to Recover.</p>
+                    </li>
+                    <li>
+                        <p>At various times during data entry (print, custom action, CRM, etc.).</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>The activity name is changed.</p>
+            </li>
+            <li>
+                <p>The activity status or display status changes (for instance, from data entry to signatures, signatures to review, app submission, etc.).</p>
+            </li>
+            <li>
+                <p>A policy number is assigned to the activity.</p>
+            </li>
+            <li>
+                <p>The activity is checked out to the console or checked in from the console.</p>
+            </li>
+            <li>
+                <p>Pending app data is updated.</p>
+            </li>
+        </ul>
+        <p>When the activity is submitted, LastUpdate is updated to the current time and will reset the purge countdown, so by definition it will not be near the purge time at submission.  For example, if the purge policy is 60 days and it was not transmitted to DTCC within 60 days of submission, it would get purged, but that is not likely, because an activity in pending transmission status is seen and dealt with long before then.</p>
+        <p>The provider also has access to the activity information (including LastUpdate) via the app service GetApplicationInfo.</p>
+        <p>Clients can request to receive <MadCap:xref href="../Utilities/Reports/Detail Reports.htm" target="_blank" alt="Detailed Activity Reports">Detailed Activity Reports</MadCap:xref> for pending purge and recently purged activities.</p>
+        <h2 MadCap:conditions="General.PDF">Add a New Activity</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Add a New Activity</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Do the following to create a new Activity.</p>
+                <ol>
+                    <li>
+                        <p>On the navigation bar, click <b>Product Config/Activities</b> to view the Activities page. </p>
+                        <p>Existing activities appear in a grid at the top of the page.</p>
+                        <p>
+                            <img src="../Resources/ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" /> To remove an existing activity, click the red <b class="Bold">X</b> on the right of a grid row.</p>
+                    </li>
+                    <li>On the upper left, click the <b class="Bold">Add New Activity</b> link.</li>
+                    <li>
+                        <p>Below the grid on the <b class="Bold">Activity Detail</b> tab, complete the following fields.</p>
+                        <table style="width: 100%;mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+                            <caption class="Table">Activity Detail Tab Settings </caption>
+                            <col style="width: 192px;" class="TableStyle-2017_IT-Simple2-Column-Regular" />
+                            <col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+                            <thead>
+                                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                                    <th class="TableStyle-2017_IT-Simple2-HeadE-Regular-Header1">Setting</th>
+                                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Activity Name</b>
+                                    </td>
+                                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                        <p>
+                                            <MadCap:snippetText src="../Resources/Snippets/ProductConfig/Activities/ActivityName.flsnp" />
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">ACORD Type</b>
+                                    </td>
+                                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                        <p>In <b class="Bold">ACORD Type</b>, select the ACORD type for the Activity in the list. This is the ACORD TypeCode used in ACORD Transactions coming into FireLight. Use it to select an ACORD Type for a new Activity. Some ACORD Types have a TransSubType typecode appended. </p>
+                                        <p>Examples: </p>
+                                        <ul>
+                                            <li>
+                                                <p>Account Opening (106)</p>
+                                            </li>
+                                            <li MadCap:conditions="General.Postpone">
+                                                <p>Agent Assignment (161)</p>
+                                            </li>
+                                            <li>
+                                                <p>Application (103)</p>
+                                            </li>
+                                            <li>
+                                                <p>Appointments (410)</p>
+                                            </li>
+                                            <li>
+                                                <p>E-Delivery Deliver Only (121-12123)</p>
+                                            </li>
+                                            <li>
+                                                <p>E-Delivery Fill and Sign (121-12100)</p>
+                                            </li>
+                                            <li>
+                                                <p>E-Delivery Sign Only (121-12100)</p>
+                                            </li>
+                                            <li>
+                                                <p>Enrollment (1204-13000)</p>
+                                            </li>
+                                            <li>
+                                                <p>Fee Inquiry (1241)</p>
+                                            </li>
+                                            <li>
+                                                <p>Generic Post Issue (113)</p>
+                                            </li>
+                                            <li MadCap:conditions="General.Postpone">
+                                                <p>Guided Illustration (111-11101)</p>
+                                            </li>
+                                            <li>
+                                                <p>Illustration (111)</p>
+                                            </li>
+                                            <li>
+                                                <p>Needs Determination (116-11600), which is the combination of ACORD Type 116 and TransSubType typecode 11600 separated by a dash (-)</p>
+                                            </li>
+                                            <li>
+                                                <p>PreSuitability (116-11602)</p>
+                                            </li>
+                                            <li>
+                                                <p>Print Forms (310)</p>
+                                            </li>
+                                            <li>
+                                                <p>Sub Pay (508)</p>
+                                            </li>
+                                            <li>
+                                                <p>Ticket App (103-10301) subtype of 10301 (Life Insurance New Business Submission Transaction). This new activity is used to support IXN's E-Ticket Activity.</p>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Activity Type</b>
+                                    </td>
+                                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                        <p>
+                                            <MadCap:snippetText src="../Resources/Snippets/ProductConfig/Activities/ActivityType.flsnp" />
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Billing Code</b>
+                                    </td>
+                                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                        <p>
+                                            <MadCap:snippetText src="../Resources/Snippets/ProductConfig/Activities/BillingCode.flsnp" />
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows" MadCap:conditions="">
+                                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Rank Order</b>
+                                    </td>
+                                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                        <MadCap:snippetBlock src="../Resources/Snippets/ProductConfig/Activities/RankOrder.flsnp" />
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Hide Product CUSIP IDs</b>
+                                    </td>
+                                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                        <p>
+                                            <MadCap:snippetText src="../Resources/Snippets/ProductConfig/Activities/HideProductCUSIPIDs.flsnp" />
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Branding Icon (Font Awesome Icons)</b>
+                                    </td>
+                                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                        <MadCap:snippetBlock src="../Resources/Snippets/ProductConfig/Activities/BrandingIcon.flsnp" />
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Complete Purge Policy</b>
+                                    </td>
+                                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                        <MadCap:snippetBlock src="../Resources/Snippets/ProductConfig/Activities/CompletePurgePolicy.flsnp" />
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Incomplete Purge Policy</b>
+                                    </td>
+                                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                        <MadCap:snippetBlock src="../Resources/Snippets/ProductConfig/Activities/IncompletePurgePolicy.flsnp" />
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Continue/Apply Label</b>
+                                    </td>
+                                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                        <p>
+                                            <MadCap:snippetText src="../Resources/Snippets/ProductConfig/Activities/ContinueApplyLabel.flsnp" /> </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Allow Pre-Signature Review</b>
+                                    </td>
+                                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                        <MadCap:snippetBlock src="../Resources/Snippets/ProductConfig/Activities/AllowPre-SignatureReview.flsnp" />
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Allow Post-Signature Review</b>
+                                    </td>
+                                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                        <MadCap:snippetBlock src="../Resources/Snippets/E-SignReactPreSubmitQ.flsnp" />
+                                        <MadCap:snippetBlock src="../Resources/Snippets/ProductConfig/Activities/AllowPost-SignatureReview.flsnp" />
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Bypass New Activity Prompts</b>
+                                    </td>
+                                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                        <p>
+                                            <MadCap:snippetText src="../Resources/Snippets/ProductConfig/Activities/BypassNewActivityPrompts.flsnp" />
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Disable Transfer Data Items to Next Activity</b>
+                                    </td>
+                                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                        <p>
+                                            <MadCap:snippetText src="../Resources/Snippets/ProductConfig/Activities/DisableTransferDataItemstoNextActivity.flsnp" /> </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Lock Transferred Data Items</b>
+                                    </td>
+                                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                        <p>
+                                            <MadCap:snippetText src="../Resources/Snippets/ProductConfig/Activities/LockTransferredDataItems.flsnp" />
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Include InsTech Managed Products</b>
+                                    </td>
+                                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                        <p>
+                                            <MadCap:snippetText src="../Resources/Snippets/ProductConfig/Activities/IncludeInsTechManagedProducts.flsnp" />
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                    <td class="TableStyle-2017_IT-Simple2-BodyB-Regular-LightRows"><b class="Bold">Edit Activity Pop-up Messages</b>
+                                    </td>
+                                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                                        <MadCap:snippetBlock src="../Resources/Snippets/ProductConfig/Activities/EditActivityPop-upMessages1.flsnp" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        <p>Click the <b class="Bold">Next Activities</b> tab. Use this tab to define what Activities can be created next from the current Pre-Sale Activity. For example, a Pre-Sale Activity might include another Pre-Sale Activity or the Illustration Activity and/or the Application Activity as next activities. </p>
+                        <p>In the <b class="Bold">All Activities</b> list, select an Activity and click the right arrow button <img src="../Resources/ImagesAdmin/RightArrowButton.jpg" alt="Right Arrow Button" title="Right Arrow Button" /> to move it to the <b class="Bold">Next Activities</b> list.</p>
+                    </li>
+                    <li> Click the <b class="Bold">Save Activity</b> button at the end of the Activities page.</li>
+                    <li>On the navigation bar, click <b class="Bold">Product Config &gt; <MadCap:xref href="Products.htm" target="_blank" alt="Products">Products</MadCap:xref></b>  Create a product for your new activity.</li>
+                    <li>On the navigation bar, click <b class="Bold">Product Config &gt; <MadCap:xref href="Packages.htm" target="_blank" alt="Packages">Packages</MadCap:xref></b>. Create a package for the new activity product.</li>
+                    <li>On the navigation bar, click <b class="Bold">Product Config &gt; <MadCap:xref href="SalesAgreements.htm" target="_blank" alt="Sales Agreements">Sales Agreements</MadCap:xref></b>. Create a Sales Agreement for the new Package.</li>
+                    <li>
+                        <p>On the navigation bar, click <b class="Bold">Organization Config &gt; <MadCap:xref href="../Organization Configuration/Groups.htm" target="_blank" alt="Groups">Groups</MadCap:xref></b>. Select each user group that will use the new activity and do the following for each group: </p>
+                        <ul>
+                            <li>On the <b class="Bold">Activity Access</b> tab, select the checkbox for the new Pre-Sale activity you created.</li>
+                            <li>On the <b class="Bold">Product Access</b> tab, select the checkbox for the product you created for the new Pre-Sale activity.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>On the navigation bar, click <b class="Bold">Utilities &gt; <MadCap:xref href="../Utilities/Deployments/Deployments.htm" target="_blank" alt="Deployments">Deployments</MadCap:xref></b>. In <b class="Bold">Synchronization Scope</b>, select <b class="Bold">All Configuration</b>. Enter a <b class="Bold">Reason</b> for the deployment. In the grid, select the <b class="Bold">Deploy</b> checkbox for the product to deploy. Choose whether to <b class="Bold">Deploy Now</b> or <b class="Bold">Schedule Deployment</b>. See "Guidelines" above for carrier/distributor and carrier only deployment information. See <MadCap:xref href="../Utilities/Deployments/Deploy Data.htm" target="_blank" alt="Deploy Data">Deploy Data</MadCap:xref> for deployment instructions.</p>
+                    </li>
+                    <li>The FireLight Home page displays the new pre-sale activity and icon button in the Start New section. Click the button to start the pre-sale activity process. Upon completion of the pre-sale activity, click Continue to start the next step defined in the activity settings. That could be signing if there are active signature tags, pre-submission  review if it was selected in the Activity settings  and set in script, or start the submit process to send the output file to the endpoints and initiate the next activity workflow. </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">View Activity History</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">View Activity History</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>
+                        <p>On the navigation bar, click <b>Product Config &gt; Activities</b> to go to the Activities page.</p>
+                        <p>Existing activities appear in a grid at the top of the page.</p>
+                    </li>
+                    <li>Click an <b class="Bold">Activity</b> in the grid.</li>
+                    <li>
+                        <p>Click the <b class="Bold">Activity History</b> tab.</p>
+                        <p>The tab displays the Action, Old Value, New Value, Action Date, and Login of the user that performed the action.</p>
+                    </li>
+                    <li>Click the <b class="Bold">Next</b> and <b class="Bold">Prev</b> buttons to navigate among the Activity History pages.</li>
+                    <li>In Utilities, Reports page, <MadCap:xref href="../Utilities/Reports/Admin Reports.htm" target="_blank" alt="Admin Reports">Admin Reports</MadCap:xref>, in <b class="Bold">Admin History Reports</b>, run the <b class="Bold">Activity History Audit Report</b> to view an audit history report for selected activities during a selected time frame.</li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

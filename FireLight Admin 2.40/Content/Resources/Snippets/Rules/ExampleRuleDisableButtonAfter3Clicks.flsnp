@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <ol>
+            <li>
+                <p>Organization Configuration/Organization Settings page, <MadCap:xref href="../../../Organization Configuration/Organizations/Admin.htm">Admin</MadCap:xref> tab: set up the LexisNexis credentials. LexisNexis supplies the configuration IDs and values. </p>
+                <p class="note"><b class="Bold">NOTE:</b> The credentials will always be the carrier credentials. If a carrier is going to deploy their product and forms to a distributor, the credentials from the carrier is used. For distributors, if credentials exist in both the carrier and distributor environments, FireLight uses the carrier's credentials.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Click the <b>Click to Edit</b> link next to <b>Third-Party Service Config</b> and enter the LexisNexis credentials (configuration IDs and values):&#160;Username, Password, AccountID, and Workflow.</p>
+                        <p><b class="Bold">NOTE: </b> AccountID and Workflow are used to created the service endpoint, therefore, slashes(/) are not allowed.</p>
+                        <ul style="list-style-type: square;">
+                            <li>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>Username</b>. In <b>Config Value</b>, type the accountID/username (e.g., 12345/LexisNexisUserID) LexisNexis provided. In <b>Service Type</b>, select <b>LexisNexis</b> and click the <b>Add Config</b> button.</li>
+                            <li>
+                                <p>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>Password</b>. In <b>Config Value</b>, type the password LexisNexis provided. In <b>Service Type</b>, select <b>LexisNexis</b> and click the <b>Add Config</b> button.</p>
+                            </li>
+                            <li>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>AccountID</b>. In <b>Config Value</b>, type the accountID  LexisNexis provided. In <b>Service Type</b>, select <b>LexisNexis</b> and click the <b>Add Config</b> button.</li>
+                            <li>
+                                <p>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>Workflow</b>. In <b>Config Value</b>, type the workflow ID LexisNexis provided for your organization. In <b>Service Type</b>, select <b>LexisNexis</b> and click the <b>Add Config</b> button.</p>
+                                <p MadCap:conditions="General.Online">Click the following images for examples:</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../../ImagesAdmin/Capture100.png" alt="Third Party Service Config - Add LexisNexis Config" title="Third Party Service Config - Add LexisNexis Config" class="Thumbnail" MadCap:conditions="General.Online" />
+                                </p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../../ImagesAdmin/Capture99.png" alt="Third Party Configuration - LexisNexis Credentials" title="Third Party Configuration - LexisNexis Credentials" class="Thumbnail" />
+                                </p>
+                            </li>
+                        </ul>
+                        <p><b class="Bold">NOTE: </b> To update a config value: clear the current value, enter a new value and click the <b class="Bold">Update</b> link next to the value. To delete a config value: click the <b class="Bold">Delete</b> link next to the value and click <b class="Bold">OK</b> on the confirmation dialog.</p>
+                    </li>
+                    <li>
+                        <p>Click the <b>Save Organization</b> button on the Organization Settings page.</p>
+                    </li>
+                </ol>
+                <p class="note"><b class="Bold">NOTE: </b> When in UAT or STAGING, use the staging credentials from LexisNexis.  LexisNexis PRODUCTION credentials will not work in the FireLight UAT and STAGING environments. When testing in UAT or STAGING, use the test data provided by LexisNexis in the spreadsheet here: <a href="../../DesignDocs/Insurance_Technologies_TestSeeds_December2019.xlsx" target="_blank" title="LexisNexis testing spreadsheet for UAT and STAGING" alt="LexisNexis testing spreadsheet for UAT and STAGING">Insurance_Technologies_TestSeeds_December2019.xlsx</a>.</p>
+            </li>
+            <li>
+                <p>Designer/Form Designer and Wizard Designer  (if wizard is applicable):</p>
+                <p>
+                    <p>
+                        <p>Add a custom action button to the form/wizard that will initiate a web service call to LexisNexis  for each signer type.</p>
+                        <p>Form: </p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>Add a <MadCap:xref href="../../../Design/Forms/Button.htm">Button</MadCap:xref> control to the form.</li>
+                            <li>Double-click the <b class="Bold">Button</b> control to open the Field Properties dialog. </li>
+                            <li>Enter the dataitem name for the button in <b class="Bold">Name</b>.</li>
+                            <li>Select the signer type (e.g., Owner) in the <b class="Bold">Data Group</b> list.</li>
+                            <li>Select <b class="Bold">Custom Action</b> in the <b class="Bold">Action Type</b> list.</li>
+                            <li>Enter <b class="Bold">LexisNexis</b> in <b class="Bold">Action Parameter</b> and click <b class="Bold">Update</b>.</li>
+                        </ol>
+                        <p>Wizard:</p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>Add a <MadCap:xref href="../../../Design/Wizards/Custom Action.htm">Custom Action</MadCap:xref> control to the wizard.</li>
+                            <li>Double-click the <b class="Bold">Custom Action</b> control to open the Custom Action Properties dialog.</li>
+                            <li>Enter the dataitem name for the custom action button in <b class="Bold">Name</b>.</li>
+                            <li>Select the signer type (e.g., Owner) in the <b class="Bold">Data Group</b> list.</li>
+                            <li>Select<b class="Bold"> Custom Action</b> in the <b class="Bold">Custom Action</b> list.</li>
+                            <li>Select <b class="Bold">LexisNexis</b> in the <b class="Bold">Custom Action Type</b> list.</li>
+                            <li>Enter <b class="Bold">LexisNexis</b> in <b class="Bold">Custom Action Parameter</b> and click <b class="Bold">OK</b>.</li>
+                        </ol>
+                    </p>
+                </p>
+            </li>
+            <li>
+                <p>Add Text Box input controls for the data items and set the Data Group and Data Group Property of each data item used by LexisNexis for each signer type. Allowed signer types include Owner, Joint Owner, Annuitant, Joint Annuitant, and Payor. The First Name, Last Name, Street Address, City, State, Zip, DOB, SSN and Phone Number data items are required to make the web service call to LexisNexis. </p>
+                <p><b class="Bold">Example</b>
+                </p>
+                <p>In the following example, field properties for the Name, Data Group, and Data Group Property are listed  for each required data item/Text Box control for the "Owner" signer type Data Group.</p>
+                <table style="width: 765px;margin-left: 0;margin-right: auto;caption-side: bottom;">
+                    <caption class="tableDarkBlue">Required Data Item and Text Box Control Common Tag Field Properties for "Owner" Signer Type</caption>
+                    <col style="width: 146px;" />
+                    <col style="width: 702px;" />
+                    <tbody>
+                        <tr>
+                            <th colspan="2">Required Data Items and Text Box Field Properties for "Owner" Signer Type</th>
+                        </tr>
+                        <tr>
+                            <td><b class="Bold">Required Data Item</b>
+                            </td>
+                            <td><b class="Bold">Text Box Control Common Tag Field Properties for "Owner" Signer Type</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>First Name</td>
+                            <td>Name = Owner_FirstName, Data Group = Owner, Data Group Property = FirstName</td>
+                        </tr>
+                        <tr>
+                            <td>Last Name</td>
+                            <td>Name = Owner_LastName, Data Group = Owner, Data Group Property = LastName</td>
+                        </tr>
+                        <tr>
+                            <td>Street Address</td>
+                            <td>Name = Owner_ResidentialAddress1, Data Group = Owner, Data Group Property = Line1</td>
+                        </tr>
+                        <tr>
+                            <td>City</td>
+                            <td>Name = Owner_ResidentialAddress_City, Data Group = Owner, Data Group Property = City</td>
+                        </tr>
+                        <tr>
+                            <td>State</td>
+                            <td>Name = Owner_ResidentialAddress_State, Data Group = Owner, Data Group Property = AddressStateTC</td>
+                        </tr>
+                        <tr>
+                            <td>Zip</td>
+                            <td>Name = Owner_ResidentialAddress_Zipcode, Data Group = Owner, Data Group Property = Zip</td>
+                        </tr>
+                        <tr>
+                            <td>DOB</td>
+                            <td>Name = Owner_DOB, Data Group = Owner, Data Group Property = BirthDate</td>
+                        </tr>
+                        <tr>
+                            <td>SSN</td>
+                            <td>Name = Owner_SSN, Data Group = Owner, Data Group Property = SSN</td>
+                        </tr>
+                        <tr>
+                            <td>Phone Number</td>
+                            <td>Name = Owner_Primary_PhoneNumber, Data Group = Owner, Data Group Property = DiaNumber</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li>
+                <p>Add Text Box controls for each signer type that LexisNexis will validate.</p>
+            </li>
+            <li>
+                <p>Add Rules. </p>
+                <p>The following FireLight global dataitem IDs are available for each PARTY (signer type) for rule creation on LexisNexis values:</p>
+                <ul>
+                    <li>[PARTY]_FLI_LEXISNEXIS_ID</li>
+                    <li>[PARTY]_FLI_LEXISNEXIS_CVI_SCORE</li>
+                    <li>[PARTY]_FLI_LEXISNEXIS_NAS</li>
+                    <li>[PARTY]_FLI_LEXISNEXIS_NAP</li>
+                    <li>[PARTY]_FLI_LEXISNEXIS_PASS</li>
+                </ul>
+                <p>Example Rule: Disable Custom Action Button After Three Attempts</p>
+                <p>&lt;block&gt;</p>
+                <p>&lt;setcontrolstate dataitemid="{ButtonID}"&gt;</p>
+                <p class="Indent">&lt;compare op="!="&gt;</p>
+                <p class="Indent2">&lt;const value="3" type="String" /&gt;</p>
+                <p class="Indent2">&lt;diget dataitemid="{ButtonID}" /&gt;</p>
+                <p class="Indent">&lt;/compare&gt;</p>
+                <p class="Indent">&lt;/and&gt;</p>
+                <p>&lt;/setcontrolstate&gt;</p>
+                <p>&lt;if&gt;</p>
+                <p class="Indent">&lt;condition&gt;</p>
+                <p class="Indent2">&lt;and&gt;</p>
+                <p class="Indent3">&lt;compare op="=="&gt;</p>
+                <p class="Indent4">&lt;const value="EFT" type="String" /&gt;</p>
+                <p class="Indent4">&lt;diget dataitemid="FundingSource" /&gt;</p>
+                <p class="Indent3">&lt;/compare&gt;</p>
+                <p class="Indent3">&lt;compare op="=="&gt;</p>
+                <p class="Indent4">&lt;const value="3" type="String" /&gt;</p>
+                <p class="Indent4">&lt;diget dataitemid="{ButtonID}" /&gt;</p>
+                <p class="Indent3">&lt;/compare&gt;</p>
+                <p class="Indent2">&lt;/condition&gt;</p>
+                <p class="Indent3">&lt;postmessage dataitemid="{Dataitem}"&gt;</p>
+                <p class="Indent4">&lt;const value="Maximum LexisNexis calls for this party have been reached." /&gt;</p>
+                <p class="Indent3">&lt;/postmessage&gt;</p>
+                <p class="Indent2">&lt;else /&gt;</p>
+                <p class="Indent2">&lt;removemessage dataitemid="FundingSource" /&gt;</p>
+                <p>&lt;/if&gt;</p>
+                <p>&lt;/block&gt;</p>
+            </li>
+        </ol>
+    </body>
+</html>

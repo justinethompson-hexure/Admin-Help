@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Setup and usage instructions for supporting the ability to complete and submit post issue servicing forms in FireLight." />
+    </head>
+    <body>
+        <h1><a name="Top"></a>Post-Issue Services Support</h1>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Post-Issue Services Support</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>The Post-Issue Services feature implements new menu options to support the ability to complete and submit post issue servicing forms in FireLight<sup>®</sup>.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">FireLight Setup</p>
+                        <p>Contact your <MadCap:variable name="General.ProductName" /> Strategic Account Manager. </p>
+                        <ul>
+                            <li>For single sign on, the SSO needs to be updated to indicate that the transaction is a post issue transaction rather than a new business transaction. The transaction type should be set to ACORD 113 Policy Admin for all post issue transactions.  The transaction subtype will then be used to indicate what type of administrative changes is made: ACORD 113 transaction for administrative changes (name changes, address, email, phone, owner change, beneficiary change, etc.), ACORD 105 transaction for withdrawal requests, and ACORD 107 transaction for program additions/changes (automatic withdrawal services, rebalancing, DCA, etc.). </li>
+                            <li>
+                                <p>Provider changes are needed only if the client would like to use the new outbound ACORD.</p>
+                            </li>
+                            <li>There is a licensing addendum to support post issue. </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <ol>
+                            <li>Product Configuration/Rule Sets page, <MadCap:xref href="../Product Configuration/Rule Sets/Rules Window.htm" alt="Rules Window">Rules Window</MadCap:xref>: use global data items FLI_TRANSTYPE and FLI_TRANSSUBTYPE  in rules on the service                                        forms to enable/disable forms and create validation rules based on the transaction and subtransaction types sent in the SSO request. For direct login users, add checkboxes on the cover sheet for the types of subtransactions, e.g., change of beneficiary, etc.</li>
+                            <li>Organization Configuration/Groups page <MadCap:xref href="../Organization Configuration/Groups/Activity Access.htm" alt="Activity Access">Activity Access</MadCap:xref> tab: select the <b>Post Issue</b> checkbox for the transaction type for products that will support Post Issue service forms.  (If the group is also allowed to create new business applications, ensure the <b>Application</b> checkbox is selected for the group.)</li>
+                            <li>
+                                <p>Product Configuration/<MadCap:xref href="../Product Configuration/Activities.htm" alt="Activities">Activities</MadCap:xref> page:</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>
+                                        <p>In the grid at the top of the page, add or select the <b class="Bold">Post Issue</b> activity. </p>
+                                    </li>
+                                    <li>
+                                        <p>Ensure <b class="Bold">ACORD Type</b> is set to <b class="Bold">Generic Post Issue (113)</b>.</p>
+                                    </li>
+                                    <li>
+                                        <p>Update the settings for your organization.  </p>
+                                    </li>
+                                    <li>
+                                        <p>Enter the <b class="Bold">Continue/Apply Label</b>, for example, enter <b class="Bold">Generic Post Issue</b>.</p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>Product Configuration/<MadCap:xref href="../Product Configuration/Products.htm" alt="Products">Products</MadCap:xref> page: </p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>Add  a new Post Issue Services product.</li>
+                                    <li>Set <b class="Bold">Product Type</b>, <b class="Bold">Product Type Filter (UI)</b> and <b class="Bold">Billing Code</b> to <b class="Bold">Service Forms</b>.</li>
+                                    <li>In the <b>States Approved</b> grid, select the checkboxes in the <b>Approved</b> column for each state where the Post Issue Service product is allowed. </li>
+                                    <li>Click <b class="Bold">Save Product Config</b>.</li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>Product Configuration/<MadCap:xref href="../Product Configuration/Packages.htm" alt="Packages">Packages</MadCap:xref> page: add a Post Issue Service Forms package.</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>
+                                        <p> Set the <b>ACORD Type</b> to <b>Generic Post-Issue (113)</b>. Set <b class="Bold">Area Typ</b>e to <b class="Bold">Activity</b>.</p>
+                                    </li>
+                                    <li>
+                                        <p>On the Form/Wizards in Package tab, set the post issue service forms inclusion option to <b>Conditional</b> or <strong>Optional</strong> as applicable. Be sure to add at least one required form (e.g., a Cover Sheet, Contract Change Request, etc.) to the package. The package must have at least one required form. </p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>Product Configuration/<MadCap:xref href="../Product Configuration/SalesAgreements.htm" alt="Sales Agreements">Sales Agreements</MadCap:xref> page: add post issue service forms to a product by including the  post issue service package as part of a specific maintenance type package for the product. </p>
+                                <p class="Indent">
+                                    <img src="../Resources/ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" /> You can also create a Post Issue only product with Post-Issue Services as the only approved Transaction Type on the Products page. Then add a package and sales agreement for the product with only the post issue service forms included in the assigned package.</p>
+                            </li>
+                            <li style="font-weight: normal;"> Utilities/Reports page, <MadCap:xref href="../Utilities/Reports/Admin Reports.htm" alt="Admin Reports">Admin Reports</MadCap:xref>: the Agent Report and Agent Activity Report list the transaction type to allow for tracking of application, subsequent payment, post issue and other transactions. </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <ol>
+                            <li>
+                                <p>On the <b>Home</b> page in <MadCap:variable name="General.ProductName" />, click <b>Post-Issue Services</b> on the right (direct login users only).</p>
+                                <p>
+                                    <img src="../Resources/ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" /> If the order initiates on the client side, and the SSO into FireLight has the 113 ACORD TransType, the product ID and the product jurisdiction to launch directly into a Post-Issue order, skip steps 1, 2, and 3. </p>
+                            </li>
+                            <li>
+                                <p>On the <b>Create New Post-Issue Services</b> page, select a <b>Jurisdiction</b> and <b>Product Type</b> in the lists and then click a product name.</p>
+                            </li>
+                            <li>On the product <b>Required Forms/Optional Forms</b> page, select any optional forms to include and click the <b>Create</b> button. On the <b>Create</b> dialog, type a name for the application and click the <b>Create</b> button.</li>
+                            <li>Fill in updated information on the applicable application/post-issue service forms and continue the normal application process through signature capture and submission.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help  – Design Documents: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 127725 </MadCap:conditionalText><a href="../Resources/DesignDocs/127725-PostIssueDesignApproach.pdf" target="_blank" title="CMR 127725" alt="CMR 127725" MadCap:conditions="General.Online">CMR 127725</a></p>
+                        <p>User Guide  – <em>FireLight Platform User Guide</em>, New Activity section, <MadCap:conditionalText MadCap:conditions="General.PDF"> "Post-Issue Services" </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../UserGuide/New Activity/Post-Issue Services.htm" alt="Post-Issue Services">Post-Issue Services [User Instructions]</MadCap:xref> </MadCap:conditionalText>topic</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a name="top"></a><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

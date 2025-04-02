@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p>The CSS class associated with the branding file.  The main purpose of a class name is to control styling within the element. This is an advanced option; contact your Strategic Account Manager for assistance. <b class="Bold">IMPORTANT!</b> Clients that use the Class name property for custom classes are responsible for thoroughly testing their wizards with every release of FireLight due to FireLight base changes that could potentially affect their custom styles.</p>
+    </body>
+</html>

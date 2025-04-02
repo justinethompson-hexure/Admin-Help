@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p>If you add duplicate copies of a form to a package (for example, additional beneficiary form), the original form becomes a template for the duplicate copies. Use the form Designer page to add a moniker [FORM_INDEX], [FORM_INDEX_PLUS_1] and/or [FORM_COUNT] identifier to mark the DataItemIDs to change on the duplicate copies. The identifier is replaced by the index number of the copy starting at 1. The form names and form numbers will have the index appended at the end.</p>
+        <p class="note">
+            <b>NOTE:</b> Duplicate copies of a form are added to an application package on the Packages page in Product Configuration. See “Add and Edit a Forms Package” in <MadCap:xref href="../../../Product Configuration/Packages.htm">Packages</MadCap:xref>.</p>
+        <p>
+            <b>[FORM_INDEX] Examples</b>
+        </p>
+        <p>Following are examples of how each identifier would change within the system for each copy of a Beneficiary form.</p>
+        <p>DataItemId</p>
+        <p class="Indent">Insured[FORM_INDEX]_FirstName</p>
+        <p class="Indent">1 = Insured1_FirstName</p>
+        <p class="Indent">2 = Insured2_FirstName</p>
+        <p>Form Name</p>
+        <p class="Indent">Beneficiary Form</p>
+        <p class="Indent">1 = Beneficiary Form 1</p>
+        <p class="Indent">2 = Beneficiary Form 2</p>
+        <p>Form Number</p>
+        <p class="Indent">ITBFCO</p>
+        <p class="Indent">1 = ITBFCO1</p>
+        <p class="Indent">2 = ITBFCO2</p>
+        <p class="note"><![CDATA[  ]]><b>NOTE:</b> Having a form not duplicated results in no change to the value, so this data is compatible with legacy data and no conversion needs to take place.</p>
+    </body>
+</html>

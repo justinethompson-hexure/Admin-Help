@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>FireLight is able to upload a fillable PDF that already has dataitems and rules applied. These dataitems and rules is retained within FireLight and through the download process.</p>
+        <p>Items to NOTE:</p>
+        <p>While dataitems and rules can still be able to be applied to these forms while in FireLight, they will not be retained in the download process.</p>
+        <p>This whole enhancement will apply only to the Print Forms Activity. A Print Forms License will have to be applied before any of these changes are visible.</p>
+        <p>Impacts -</p>
+        <p>App:</p>
+        <p>Print PDF Dialog - A download icon has been added to allow for the user to conveniently download these forms while in the E-application platform.</p>
+    </body>
+</html>

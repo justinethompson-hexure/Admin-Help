@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>In the <b class="Bold">IDP Identifier</b> text box, enter the IDP Identifier for your organization. When using SAML 2.0 SSO, this is the URL to uniquely identify the SSO request to <MadCap:variable name="General.ProductName" />.  We use this identifier to ensure the request is originating from a trusted site. FireLight supports multiple IDP Identifiers per organization by entering the identifiers separated by commas (no spaces), for example: IDP_Identifier1,IDP_Identifier2,IDP_Identifier3. Add IDP Certificates in the supported services table below.</body>
+</html>

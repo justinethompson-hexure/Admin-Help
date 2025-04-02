@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <ol>
+            <li>On the navigation bar, click <b>Organization Config/Tele-Sign Scripts</b>.</li>
+            <li>On the upper left click <b class="Bold">Add New Script</b>.</li>
+            <li>Enter a <b class="Bold">Tele-Sign Script Name</b> in the box.</li>
+            <li>
+                <p>In <b class="Bold">Script Template</b>, add the HTML for the Tele-Sign script.</p>
+                <p>The Script Preview section displays a preview of the script in text format.</p>
+            </li>
+            <li> At the bottom of the page, click <b class="Bold">Save Tele-Sign Script</b> to save your work.</li>
+            <li>Add the saved Tele-Sign Script to the applicable <MadCap:xref href="../../../Product Configuration/SalesAgreements.htm" alt="Sales Agreements" target="_blank">Sales Agreements</MadCap:xref>.</li>
+        </ol>
+    </body>
+</html>

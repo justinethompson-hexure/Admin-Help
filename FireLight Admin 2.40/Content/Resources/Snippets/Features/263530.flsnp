@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The Group setting for Case Access by Firm ID is used to provide office staff and assistants in an organization access to activities based on the firm ID/rep code passed over during the SSO process. Currently, the office staff is required to search for the individual cases in "All Activities." Adding the ability for the office staff to view activities shared based on firm ID/rep ID will provide an efficient process for locating the activity.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Shared Activity tab displays shared cases when "Case Access by Firm ID" Group setting is selected</p>
+            </li>
+        </ul>
+    </body>
+</html>

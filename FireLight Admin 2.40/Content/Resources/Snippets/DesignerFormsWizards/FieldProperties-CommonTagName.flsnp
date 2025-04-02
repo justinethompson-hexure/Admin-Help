@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body> Type or select a common tag name for the control. If the data item ID begins with a potential common tag name, FireLight provides  context-aware suggestions for common tag names based on data as it is typed. You can select from the list of common tags to autocomplete the Name property if applicable. Tag naming is crucial for correctly identifying the fields within the form. Go to <MadCap:xref href="../../../Design/Common Tagging/Common Tags.htm" MadCap:conditions="General.Online" target="_blank" alt="Common Tags">Common Tags</MadCap:xref> <MadCap:conditionalText MadCap:conditions="General.PDF"> "Common Tags" in Admin Help </MadCap:conditionalText>and open the <b class="Bold">CommonTags.xlsx</b> spreadsheet for common tag names.</body>
+</html>

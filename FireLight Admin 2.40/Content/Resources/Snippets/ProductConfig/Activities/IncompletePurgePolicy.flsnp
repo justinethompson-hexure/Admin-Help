@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Incomplete Purge Policy displays the number of days after an Incomplete activity has been updated. Once the 60-day time period has been exceeded the Purge process will purge the activity. The default is 60 days for all activities, except for E-Delivery Fill and Sign (15 days) and  E-Delivery Sign Only (30 days), and can only be changed by Hexure.  </p>
+        <p>
+            <b class="Bold">NOTES:</b>
+        </p>
+        <ul>
+            <li>
+                <p>Organizations can receive PDFs of documents not locked down for signing prior to purge. Base functionality can leverage the data query service to expose Print PDF in the provider for activities prior to signing, prior to purge, providing access to documents when the activity is not locked. Name Value Pair-PDF documents can be returned in addition to the XML name/value pair file
+in the outbound payload. Includes retry logic for only 1 retry prior to purge. Contact your Strategic Account Manager for updating the provider.</p>
+            </li>
+            <li>
+                <p>See "LastUpdate (Purge Policy)" above for detailed purge information.</p>
+            </li>
+        </ul>
+    </body>
+</html>

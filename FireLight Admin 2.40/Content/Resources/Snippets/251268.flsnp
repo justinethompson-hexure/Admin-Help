@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This feature will allow users to drag and drop a file from system or network location to upload documents window to attach them to an activity. This is an additional enhancement to the current way of browsing a file and then attaching it to the activity.</p>
+        <p>Impacts:</p>
+        <p>Users will have the ability to drag and drop a file on all available Upload Documents windows.</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>FLApp -&gt; Other Actions -&gt; Documents</p>
+            </li>
+            <li>
+                <p>FLApp -&gt; Review Queue -&gt; Attach Documents</p>
+            </li>
+            <li>
+                <p>FLApp -&gt; Activity -&gt; Custom Action File Upload (button)</p>
+            </li>
+            <li>
+                <p>Users who do not wish to use the drag and drop functionality will continue to have the option to click in the area to browse for a file.</p>
+            </li>
+        </ul>
+    </body>
+</html>

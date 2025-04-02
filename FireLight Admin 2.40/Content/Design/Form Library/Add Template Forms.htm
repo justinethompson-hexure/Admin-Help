@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Add Template Forms</h1>
+        <p class="note"><b class="Bold">NOTE:</b> FireLight templates are currently displayed only in the portrait format. If a document is uploaded in a landscape format, the upload appears partially within FireLight<sup MadCap:conditions="General.Online">®</sup>. Once viewing the upload within the Print Forms section, the upload appears completely.  This can be more of an issue when signatures are collected on the uploaded page. Please submit a JIRA&#160;ticket to request support in setting up or troubleshooting template forms.</p>
+        <p>A template form is used as a placeholder to add an additional document to the order package.  For example, use a template form to upload a picture of a client's driver's license or check in a PDF file or use a template form to determine the placement of signatures on a supplemental form (e.g., illustration, etc.) in the signing ceremony.</p>
+        <p>FireLight validates whether the template is uploaded before the user data entry can reach 100%. The template appears in the Open list to provide instructions. The template form can include the Custom Action Upload and Custom Action Print in Button controls to provide clear instructions with easy links to complete the template requirement.</p>
+        <p>A signature template form needs to be one page. Once the supplemental form is uploaded in FireLight, the template form is replaced with the supplemental form. The form properties of a signature template form include the signature locations on the page for the associated document type. If relative, the actual page stamped is based on its relative position in the document. If static, the system stamps the captured signature based on the coordinates of the template form signature controls.</p>
+        <p><strong>Example: Signature Template Form</strong>
+        </p>
+        <p class="note"><b>NOTE:</b> Template forms can also be conditional and set off from rules.</p>
+        <p>Adding a signature template form requires uploading the template form on the Form Library page, adding signature controls on the Designer page, and adding the form to a Package and making it a required form on the Packages page in Product Configuration.</p>
+        <p>Upload a template form and make it a required form in the product package.</p>
+        <ol>
+            <li>Designer/<MadCap:xref href="Form Library.htm" alt="Form Library" target="_blank">Form Library</MadCap:xref> page: in the upper left, click <b>Upload Forms</b>.</li>
+            <li>If you previously exported the signature template form in <MadCap:variable name="General.ProductName" />, select the <b>Use exported <MadCap:variable name="General.ProductName" /> definitions</b> checkbox.</li>
+            <li>In the upper left, click <b>Add files</b>.</li>
+            <li>In the Open dialog, browse to the folder and select the signature template form for the supplemental document type, then click <b>Open</b>.</li>
+            <li>Click <b>Start Upload</b> to upload the file.</li>
+            <li>When finished uploading the form, click the <b>Back</b> button to return to the Form Library page.</li>
+            <li>On the Form Detail tab, select the <b>Is Template Form</b> checkbox.</li>
+            <li>
+                <p>Select the  document tag in <b>Document Tag</b>. This is the associated document type for the template form. For example, select <b>IllustrationWithSignature</b> to indicate the required document is an illustration with a signature. Hexure sets up the Document Tags for your organization. Contact your Strategic Account Manager to have the tags added. Be sure to use descriptive names for your document tags. In a distributor environment, the carrier document tag types include only carrier template document tag types that are currently on a form in the application. CarrierOnly visibility can be added to the carrier's List Profile and document tags so carrier-only uploaded documents can arrive at their proper destination. DistributorOnly visibility can be added to the distributor's List Profile and document tags so distributor-only uploaded documents can arrive at their proper destination. </p>
+                <p><b class="Bold">NOTE:</b> Needs determination documents are attached as NeedsDetermination document tags, illustration as LinkedIllustration, and Account Opening documents as AccountOpening. All other attached documents coming from one activity to the next activity come over with a document tag of Other.</p>
+            </li>
+            <li>Select the <b>States</b> where the required form (e.g., Illustration with Signature) is approved.</li>
+            <li>At the bottom of the Form Library page, click the <b>Form Designer</b> button to go to the form on the <MadCap:xref href="../Forms/Form Designer.htm" alt="Form Designer" target="_blank">Form Designer</MadCap:xref> page.</li>
+            <li>
+                <p>Add signature controls for the placement of signatures on the document page.</p>
+            </li>
+            <li>
+                <p>On the navigation bar, click <b>Product Config</b> and then click <MadCap:xref href="../../Product Configuration/Packages.htm" alt="Packages" target="_blank">Packages</MadCap:xref>.</p>
+            </li>
+            <li>
+                <p>On the <b>Forms in Package</b> tab, add the template form to the applicable packages and make it a required form.</p>
+            </li>
+            <li>
+                <p>Click the <b>Save Package</b> button.</p>
+                <p>A dialog displays the following message in <MadCap:variable name="General.ProductName" /> after the user clicks the Create Application button: "This Application has one or more Template Form with Document Tags [IllustrationWithSignature]. Please upload related document from Other Actions &gt; Documents." Click <b class="Bold">Close</b> to close the dialog.</p>
+            </li>
+            <li>On the navigation bar, click  <b class="Bold">Utilities</b> and then click <b class="Bold">Deployments</b> to deploy the forms and packages to the applicable environments. See <MadCap:xref href="../../Utilities/Deployments/Deploy Data.htm" alt="Deploy Data" target="_blank">Deploy Data</MadCap:xref>.</li>
+        </ol>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

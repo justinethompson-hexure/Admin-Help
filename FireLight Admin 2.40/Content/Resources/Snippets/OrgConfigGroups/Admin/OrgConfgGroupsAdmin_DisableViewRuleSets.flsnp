@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable View Rule Sets</b> checkbox to disable the ability to view rule sets on the <MadCap:xref href="../../../../Product Configuration/Rule Sets.htm" target="_blank" alt="Rule Sets">Rule Sets</MadCap:xref> page. The Rule Sets option under Product Configuration on the Admin home page and the Rule Sets option under Product Config on the navigation bar will not be visible when this option is selected. The user will not be able to add new rule sets or make changes to existing rule sets.</body>
+</html>

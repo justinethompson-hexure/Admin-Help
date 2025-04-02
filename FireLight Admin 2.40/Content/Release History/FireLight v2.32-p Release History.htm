@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight v2.32-p Release History</h1>
+        <h2>November 2023 Release—11/10/2023 Production</h2>
+        <h2>Enhancements</h2>
+        <h3>LexisNexis—Add New Data Group Properties for Phone Finder, OTP, and Emailage: CR-1199</h3>
+        <p>We added the ability to allow all LexisNexis DDP integrations to be included in the same workflow without overwriting previous responses from the API.</p>
+        <h4>Impact</h4>
+        <ul>
+            <li>
+                <p>New data group properties added for Wizards/Form Designers</p>
+            </li>
+            <li>
+                <p>PhoneFinder, OTP, and Emailage have unique response types</p>
+            </li>
+            <li>
+                <p>Changes implemented to LexisNexis DDP class to ensure new data group properties are mapped correctly</p>
+            </li>
+            <li>
+                <p>Blocks users from proceeding with application after entering an incorrect One-Time Passcode</p>
+            </li>
+        </ul>
+        <h3>LexisNexis—Implement OTP Confirmation/Validation: CR-1203</h3>
+        <p>We added the ability to add feedback to LexisNexis One-Time Passcode when a user enters their code for authentication.</p>
+        <h4>Impact</h4>
+        <ul>
+            <li>
+                <p>Adds custom action parameter for OTP confirmation button</p>
+            </li>
+            <li>
+                <p>After entering a code, feedback is given to user (success/failure)</p>
+            </li>
+            <li>
+                <p>On failure, user is prompted to re-enter passcode</p>
+            </li>
+            <li>
+                <p>Blocks users from proceeding with application without a correct One-Time Passcode</p>
+            </li>
+        </ul>
+        <h2>Resolved Issues</h2>
+        <h3>Resending of Email Message Is Missing Content If Prevent Email Editing Is Enabled: PC-1622</h3>
+        <p>We resolved an issue where system-generated email sent to clients contained erroneous messaging. System-generated email sent to clients now reads as expected.</p>
+        <h3>Admin—Specific Package Conversion Is Not Working as Expected: PC-1489</h3>
+        <p>We resolved an issue where package conversion resulted in an error. Package conversion now works as expected.</p>
+        <h3>When Client Fill &amp; Sign Request Is Sent to Multiple Signers Initial Scheduler Reminder Should Only Be Sent to Primary Signer: EAES-2120</h3>
+        <p>We resolved an issue where secondary signer email was being received prior to primary signer email being completed. Email is now being received in the proper order.</p>
+        <h3>Error Going into Signing from External Fill and Sign: EAES-2075</h3>
+        <p>We resolved an issue where an error was received during external filling and signing of applications. The process now works as designed.</p>
+        <h3>External Link in Reminder Email for Fill &amp; Sign Request Functions as Client Fill Only: EAES-1824, iConnect: 263122, 276766</h3>
+        <p>We resolved an issue were during the signing ceremony no prompt to click Continue appears for signing ceremony completion. The signing ceremony now works as designed.</p>
+        <h3>Home Tab Does Not Have Proper Link on Purged Activity View Page: DIST-1914</h3>
+        <p>We resolved an issue where the Home link on the Purged Activity view page was incorrect. The link now works as expected.</p>
+        <h3>Print Forms: When Form Number Is Long in a Data Grid and Wraps to the Second Line Gap Is Showing: DIST-1184</h3>
+        <p>We resolved in Print Forms activity an issue where long numbers in data grids wrapped improperly. Long numbers now appear as intended.</p>
+        <h3>Some Trace Logs Not Being Written to File Instrumentation: DI-1090</h3>
+        <p>We resolved an issue where trace logs were not being written correctly to the database. Trace logs are now being written correctly.</p>
+        <h3>Default Workflow Retry Time Should Be 4 Hours Instead of 10: DI-932</h3>
+        <p>We resolved an issue where workflow retry attempts occurred too frequently. Retry attempts now occur at an acceptable interval.</p>
+        <h3>Scheduling ExamOne Appointment Generates Errors: CR-1310</h3>
+        <p>We resolved an issue where when creating a Health and Lifestyle questionnaire app the Confirm In-Center Time option did not work as expected. This feature now works as designed.</p>
+        <h3>CanSell Error Is Not Being Displayed Correctly: CR-947</h3>
+        <p>We resolved an issue where the user was unable to move an application to the review queue due to a CanSell error that was not displayed as expected.  CanSell error is now displaying as expected.</p>
+        <h3>LexisNexis PhoneFinder Not Returning Invalid: CR-1201</h3>
+        <p>We resolved an issue where PhoneFinder deemed invalid information valid. PhoneFinder now treats invalid information as invalid and works as designed.</p>
+        <h3>RGA AuraNext Integration—Next and Close Buttons Not Working Properly in Aura Forms Renderer: CR-899</h3>
+        <p>We resolved an issue with the Next and Close buttons in the forms renderer in Aura not working as expected. The Next and Close buttons now function properly.</p>
+        <h3>Milliman Integration—Not Getting Proper Response with Milliman Service: CR-706</h3>
+        <p>We resolved an issue where issuing a Milliman request resulted in receiving an error message. Milliman requests now work as intended.</p>
+        <h3>React Version of Signing Ceremony Only Inclusion Options: EAES-1943</h3>
+        <p>We resolved an issue where the Inclusion Option was not always working correctly for the React version of the signing ceremony.</p>
+        <h3>Application Does Not Get Unlocked after Cancelling Fill &amp; Sign Request: EAES-2394</h3>
+        <p>We resolved an issue where the application was not unlocked as expected when the user cancelled a “Client Fill and Sign” request in the pending request dialog.</p>
+        <h3>Request to Add New Product Types to FireLight: PC-1626</h3>
+        <p>Two new product types, Agent Contracting and Agent Training, were added to the system.</p>
+        <p>*** Please note that the JIRA ticket numbers are provided for reference. JIRA tickets are not accessible to users outside Hexure.***</p>
+        <p data-mc-conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

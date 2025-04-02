@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Add allowable signature fonts, other than the standard block font, for use on the Capture Electronic Signature dialog. The font will default to the standard block font if no signature fonts are selected here. </p>
+        <p class="Indent">Add Signature Fonts:</p>
+        <ol style="list-style-type: lower-alpha;">
+            <li>
+                <p>On the right of <b class="Bold">Signature Fonts</b>, click the <b>Click to Edit</b> link  to open the Signature Font Styles dialog and select the checkbox for each font that is available for electronic signature in <MadCap:variable name="General.ProductName"></MadCap:variable>. </p>
+            </li>
+            <li>Click the <b>Update</b> button to save the selections.</li>
+        </ol>
+    </body>
+</html>

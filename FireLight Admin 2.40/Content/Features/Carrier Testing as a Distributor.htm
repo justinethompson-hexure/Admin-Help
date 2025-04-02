@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Setup and user instructions for a carrier to test inside of a distributor environment." />
+    </head>
+    <body>
+        <h1><a name="top"></a>Carrier Testing as a Distributor</h1>
+        <p class="note"><b class="Bold">Spotlight Video:</b> See <a href="https://vimeo.com/371942928/7a866182e5" target="_blank" title="FireLight Carrier Testing as a Distributor" alt="FireLight Carrier Testing as a Distributor">Carrier Testing as a Distributor</a> for a Spotlight feature video about Carrier Testing as a Distributor.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Carrier Testing as a Distributor</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 764px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>FireLight<sup>®</sup> provides a means for a carrier to test inside of a distributor environment. This allows carriers that have an active sales agreement with a distributor to have visibility of how their carrier forms, wizards, and rules function inside the distributor's environment, which could possibly avoid potential issues caused by rule conflicts between carrier forms and distributor forms. </p>
+                        <p> In FireLight Admin, the distributor controls the level of carrier access to the distributor environment through a Carrier Test Group role code and  activates the carrier testing view via organization settings. </p>
+                        <p>Guidelines:</p>
+                        <ul>
+                            <li>Carrier testing as a distributor is available in all environments except Production.</li>
+                            <li>Carrier Single Sign On (SSO) testing is not available in the distributor  environment.</li>
+                            <li>Carrier access is based on active sales agreements, which means carrier users with access to the distributor environment can access only their own carrier activities and products in the distributor's carrier testing environment. They do not have access to any other carrier's activities or products.</li>
+                            <li>When the carrier user logs in, they have the carrier role code, but the distributor role code is what manages product and activity access.</li>
+                            <li>Using the distributor carrier test group role code, carrier users can create activities and submit orders from the distributor environment to test outbound feeds (App/Sub or 103 or Name Value Pairs is sent).  This allows carriers to do full end-to-end testing in the distributor environment and make sure the outbound files are correct.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p><b class="Bold">Distributor:</b>
+                        </p>
+                        <p>Allow carriers to test in your distributor environment. Do the following to add a carrier test group with a TC Role Code defined for the group and activate carrier testing in the distributor environment.</p>
+                        <ol>
+                            <li>
+                                <p>In Organization Configuration on the <MadCap:xref href="../Organization Configuration/Groups.htm" alt="Groups">Groups</MadCap:xref> page, add a carrier test Group with  a <b class="Bold">Name</b> and <b class="Bold">TC Role Code</b> entered for the group. Then select the group options for the carrier test Group. </p>
+                                <p><b class="Bold">NOTE:</b> This example uses "Carrier Test Group" for a sample name. If you already have a carrier test group set up, you do not need to create a new carrier test group Name and TC Role Code.</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>On the <b class="Bold">Activity Access</b> tab, select the applicable activity checkboxes for the Carrier Test Group. Ensure all appropriate activities are selected for the Carrier Test Group.</li>
+                                    <li>On the <b class="Bold">Product Access</b> tab, select all the product access checkboxes per Carrier selling organization for the Carrier Test Group. </li>
+                                    <li>Set any additional group options for the Carrier Test Group.</li>
+                                    <li>At the end of the page, click <b class="Bold">Save</b>.</li>
+                                </ol>
+                            </li>
+                            <li>In Organization Configuration on the Organization Settings page, <MadCap:xref href="../Organization Configuration/Organizations/Activity.htm" alt="Activity">Activity</MadCap:xref> tab, select the <b class="Bold">Enable Carrier Testing View</b> checkbox and select the <b class="Bold">Carrier Test Group</b> in the dropdown list.</li>
+                        </ol>
+                        <p><b class="Bold">Carrier:</b>
+                        </p>
+                        <p>Allow carrier users to test your carrier products, forms, wizards, and rules in the distributor environment.</p>
+                        <ol>
+                            <li>Ensure your carrier products, packages, and sales agreements are deployed to the distributor's UAT or Staging environment using the Distributor All Configuration synchronization scope. See <MadCap:xref href="../Utilities/Deployments/Deploy Data.htm" alt="Deploy Data">Deploy Data</MadCap:xref> for deployment information.</li>
+                            <li>In Organization Configuration at the top of the <MadCap:xref href="../Organization Configuration/Groups.htm" alt="Groups">Groups</MadCap:xref> page, select the carrier role that will do the testing in the distributor's environment.</li>
+                            <li>On the <b class="Bold">App</b> tab in the <b class="Bold">Testing</b> section, select the <b class="Bold">Enable Distributor Testing View</b> checkbox.</li>
+                            <li>At the end of the page, click <b class="Bold">Save</b>.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">User Experience</p>
+                        <p>When a carrier user (with the distributor testing view enabled) logs in to FireLight, a Distributor Testing View  list appears above the Recent Activity list. This list contains only the distributors that have the carrier testing view enabled and have active selling agreements with the carrier.</p>
+                        <ol>
+                            <li>
+                                <p>On the FireLight Home page, select a distributor name in the <b class="Bold">Distributor Testing View</b> list.</p>
+                                <p>FireLight transitions from the logged in Carrier Testing group Name/TC Role Code to the Distributor Testing group Name/TC Role Code in the distributor environment.</p>
+                            </li>
+                            <li>Create an activity in the selected distributor environment. </li>
+                            <li>Complete the activity in the distributor environment.</li>
+                            <li>Submit the activity from the distributor environment to test outbound feeds (App/Sub or 103 or Name Value Pairs is sent). The submission should work just like it is a distributor submitting the activity.</li>
+                            <li>To return to your carrier testing view: go to the FireLight Home page in the distributor view and select your carrier organization in the dropdown list above the Recent Activity list. </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help – Design Document: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 204820</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/DesignDocs/DRAFT FL_Design_iconnect 204820 Carrier testing as if they are a Distributor.docx V2.pdf" target="_blank" title="CMR 204820" alt="CMR 204820">CMR 204820</a></MadCap:conditionalText></p>
+                        <p>Spotlight Feature Video: <a href="https://vimeo.com/371942928/7a866182e5" target="_blank" title="FireLight Carrier Testing as a Distributor" alt="FireLight Carrier Testing as a Distributor">Carrier Testing as a Distributor</a></p>
+                        <p>Guide: <em MadCap:conditions="General.PDF">Carrier Testing as Distributor Guide</em><a href="../Resources/PDFGuides/Carrier Testing as Distributor Guide.pdf" target="_blank" title="Carrier Testing as Distributor Guide" alt="Carrier Testing as Distributor Guide" MadCap:conditions="General.Online">Carrier Testing as Distributor Guide</a></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

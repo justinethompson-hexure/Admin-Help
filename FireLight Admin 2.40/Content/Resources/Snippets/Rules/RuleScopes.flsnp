@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p><b>All</b> – Rule is executed when the application is first loaded or whenever a referenced data container’s value changes.</p>
+        <p><b>Initialize</b> – Rule is executed when the application is first loaded.</p>
+        <p><b>Property Change</b> – Rule is executed whenever a referenced data container’s value changes. </p>
+        <p class="hangingindent"><b class="Bold">Run Last - Initialize</b> – Rule is the last to run at the time the application is either created or loaded (i.e., after all other rules have run). This rule scope is applied for a new application created and while loading an existing application. It runs at the end of initial processing. While the rules without "Run Last - Initialize" run, the rules with "Run Last - Initialize" have their events disabled. When the other rules have run, the events for "Run Last - Initialize" are re-enabled and those rules run normally.</p>
+        <p class="hangingindent"><b class="Bold">Run Last - All</b>  – Rule runs last at the time a field property is changed and also when the application is initialized. Functions the same way as the rules with scope "All," but these will run at the end (i.e., after all the rules with scope "All" and "Property Change" are run).</p>
+    </body>
+</html>

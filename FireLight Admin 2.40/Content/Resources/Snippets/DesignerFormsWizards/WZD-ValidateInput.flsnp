@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>Select the checkbox to auto-generate validation rules and messages at run time for input types, such as Number, SSN, TIN, Amount, Zip, etc. This property will not be available when input type is selected as “None.” By default, it will be unchecked and will need to be checked to apply validation rules for the selected input types (other than None).</body>
+</html>

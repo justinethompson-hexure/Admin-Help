@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This enhancement in base Firelight is an additional integration with ExamOne, called HealthPiQture.  This integration will allow for configuration on Mortality Scores, ScriptCheck, LabPiQture and Medical Claims, and relevant scoring data loaded, based on the client requirements.  This data is utilized by the carrier to deliver an underwriting decision.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Organization Configuration-&gt; Organization Settings-&gt; Admin-&gt; Third-Party Config</p>
+            </li>
+            <li>
+                <p>Designer-&gt; Form or Wizard Design-&gt; Custom Action to trigger calls to ExamOne</p>
+            </li>
+            <li>
+                <p>Designer-&gt; Form and/or Wizard-&gt; DataGroupProperties to identify both data to be sent</p>
+            </li>
+        </ul>
+    </body>
+</html>

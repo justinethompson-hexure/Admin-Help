@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Enrollment Activity</h1>
+        <p class="note"><b class="Bold">Spotlight Video:</b> See  the  <a href="https://vimeo.com/675275662/bbc9fc8376" target="_blank" title="Multi Activity and Enrollment Activity" alt="Multi Activity and Enrollment Activity">Multi Activity and Enrollment Activity</a> Spotlight feature video  (starting at 14:38 minutes) about the Enrollment activity.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Enrollment Activity </caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1"><b class="TableBlue">Description</b>
+                        </p>
+                        <p>The purpose of the Enrollment activity is simplification of the Application build and Participant signature aspects of the enrollment process. This new functionality improves the workflow experience for Agents and  Case Managers (CM). The streamlining of this functionality allows users to manage the workflow much more efficiently and allow the sponsoring carrier to enter a market involving larger group/enrollment scenarios. </p>
+                        <p>Major aspects of this activity include the following:</p>
+                        <ul>
+                            <li>
+                                <p>Case Managers are the primary FireLight users in the workflow. The Case Manager accesses FireLight through their existing SSO.</p>
+                            </li>
+                            <li>
+                                <p>Case Managers start the new enrollment activity by selecting it from the FireLight home page. On selection, the activity launches and presents 3 data collection screens/views. </p>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>“Plan” page – Plan information is collected on the first screen. Plan information may include but is not limited to Employer ID (required), Employer Name, Ownership, Plan Type, etc. Full definition of information collected to be defined. This information is passed via common tag to linked/child applications that is created for each participant. Data collected/required will vary by organization. It may be necessary to assure fully completed plan information exists prior to allowing navigation to the Participant page. Currently, the Enrollment process supports only the Primary Owner and the Primary Insured.</p>
+                                    </li>
+                                    <li>
+                                        <p>“Participant” page – The participant page will allow addition, deletion, and update of participants in the plan. The primary method of adding participant information is through census upload. The Participant page is presented in a grid view with columns to be defined. The grid view must support validation to identify situations where required information is not present or is formatted incorrectly.</p>
+                                    </li>
+                                    <li>
+                                        <p>Census Upload – The Census includes participant demographic information and may include product/benefit information. Product information included is used for the purpose of stubbing out product applications for each participant. For this reason, the product/benefit fields included in the census upload vary by Product Type.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <p>Manual addition, deletion, and update of records/rows of the participant page grid should be supported. For smaller groups, the user may choose to simply add/edit participant information directly. In this scenario, there needs to be functionality to trigger stubbing out of new or edit of existing applications.</p>
+                            </li>
+                            <li>
+                                <p>This page displays a link for each application “stubbed out” through the census and manual entry process.</p>
+                            </li>
+                            <li>
+                                <p>Case Managers use existing FireLight functionality to share the Enrollment activity with the agent of record on the case.</p>
+                            </li>
+                            <li>
+                                <p>Information of the agent of record on the case appears on the application and not information for the Case Manager. </p>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <p>Verify that agents have visibility of all child/linked applications associated with the enrollment/parent activity.</p>
+                            </li>
+                            <li>
+                                <p>Case Managers are able to send multi-life/batch signature requests to participants: The system supports multi-life/batch: </p>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>“Signature Only” </p>
+                                    </li>
+                                    <li>
+                                        <p>“Client Fill and Sign”</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <p>Type of signature required is driven by the signer type/role in relation to the application. Agents have visibility of their cases, and only their cases through the share initiated by the Case Manager.</p>
+                            </li>
+                            <li>
+                                <p>Agents are not required to interact with or sign Applications.</p>
+                            </li>
+                            <li>
+                                <p>Permissions of what the agent can do with the applications are defined by group/role permissions.</p>
+                            </li>
+                            <li>
+                                <p>The audit from the Enrollment is sent to the next activity. The audits on both the Enrollment and the next activity will include an audit record of the linkage.</p>
+                            </li>
+                            <li>
+                                <p>A new activity report shows the enrollment process.  This report is a detailed activity report and is available to be sent to the organization via email on a daily, weekly, or monthly basis. See the "FireLight Enrollment Report Active Applications" in <MadCap:xref href="../Utilities/Reports/Detail Reports.htm" title="Detailed Activity Reports" alt="Detailed Activity Reports">Detailed Activity Reports</MadCap:xref>.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p>Create a new Enrollment activity.</p>
+                        <ol>
+                            <li>
+                                <p>On the upper left of the Product Configuration/<MadCap:xref href="../Product Configuration/Activities.htm" title="Activities" alt="Activities">Activities</MadCap:xref> page, click <b class="Bold">Add New Activity</b>. </p>
+                            </li>
+                            <li>
+                                <p>On the Activity Detail tab, enter or select the following settings. </p>
+                                <p>Activity Name = Enrollment (this is editable)</p>
+                                <p>ACORD Type = Enrollment (1204-13000) </p>
+                                <p>Activity Type = Pre-Sale </p>
+                                <p>Branding Icon = selected Font Awesome Icon</p>
+                                <p>Continue/Apply Label = Apply (client-defined) </p>
+                            </li>
+                            <li>
+                                <p>Click <b class="Bold">Save Activity</b>.</p>
+                            </li>
+                        </ol>
+                        <p>Create an Enrollment wizard and Plan Design wizard page. </p>
+                        <ol>
+                            <li>
+                                <p>On the upper left of the Designer/<MadCap:xref href="../Design/Wizard Library/Wizard Library.htm" title="Wizard Library" alt="Wizard Library">Wizard Library</MadCap:xref> page, click <strong>Create Wizard</strong>.</p>
+                            </li>
+                            <li>
+                                <p>On the Wizard Detail tab, enter the following settings: </p>
+                                <p>Wizard Number = Enrollment (this is editable)</p>
+                                <p>Wizard Name = Enrollment (this is editable)</p>
+                                <p>State Approved list = select the states where the Enrollment product is approved</p>
+                            </li>
+                            <li>
+                                <p>Click <b class="Bold">Save</b>.</p>
+                            </li>
+                            <li>
+                                <p>Click <b class="Bold">Wizard Designer</b> to go to the <MadCap:xref href="../Design/Wizards/Wizard Designer.htm" title="Wizard Designer" alt="Wizard Designer">Wizard Designer</MadCap:xref>.</p>
+                            </li>
+                            <li>
+                                <p>In the Enrollment wizard, click <b class="Bold">Add New Page</b>. This page captures the information needed to tie participants to a batch enrollment.<br />In the <b class="Bold">Page Properties</b> dialog, enter the following settings. </p>
+                                <p>Name = [name of the data item for the page, e.g., <b class="Bold">PlanDesign</b>, etc.]</p>
+                                <p>Title = [display name of the wizard page, e.g. <b class="Bold">Plan Design</b>, etc.]</p>
+                                <p>Click <b class="Bold">OK</b> to save and close Page Properties. </p>
+                            </li>
+                            <li>
+                                <p>Drag panels and fields from the right column onto the wizard page. The page must contain a required <b class="Bold">Group ID</b> field, which ties the application back to the enrollment process and a product CUSIP ID. Following is an example layout of the required Group ID field, required CUSIP ID field, and some optional fields that it could also contain.</p>
+                                <p>Add an <strong>Agent Information</strong> Panel with the following fields, especially if the agent is not participating in capturing the information on each participant.</p>
+                                <p class="Indent">Agent Name, Text Box</p>
+                                <p class="Indent">Agent Email, Text Box</p>
+                                <p>Add a <b class="Bold">Plan Information</b> Panel with the following fields.</p>
+                                <ul>
+                                    <li>
+                                        <p class="Indent">Group ID = Text Box, Required, Field Name and Common Tag Name = FLI_COMPANY_ID</p>
+                                    </li>
+                                    <li>
+                                        <p class="Indent">Company Name = Text Box, Field Name and Common Tag Name = Insured_EmpDetails_EmployerName</p>
+                                    </li>
+                                    <li>
+                                        <p class="Indent">Owner Name = Text Box, Optional, Field Name and Common Tag Name = Owner_FullName</p>
+                                    </li>
+                                    <li>
+                                        <p class="Indent">Owner Email = Text Box, Optional, Field Name and Common Tag Name = Owner_Primary_EmailAddress</p>
+                                    </li>
+                                    <li>
+                                        <p class="Indent">Type of Coverage = Dropdown List or group of Radio Buttons, Optional, Field Name = Enrollment_ProductSelection</p>
+                                    </li>
+                                    <li>
+                                        <p class="Indent">Child Application CUSIPID = Text Box, Required, Field Name = Enrollment_CUSIPID</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Click <b class="Bold">Save Wizard</b>.</p>
+                            </li>
+                        </ol>
+                        <p>Add Enrollment rules.</p>
+                        <ol>
+                            <li>On the Product Configuration/<MadCap:xref href="../Product Configuration/Rule Sets.htm" title="Rule Sets" alt="Rule Sets">Rule Sets</MadCap:xref> page, click <b class="Bold">Add New Rule Set</b> on the upper left.</li>
+                            <li>
+                                <p>Enter or select the following settings for the new rule set. </p>
+                                <p>Rule Set Name = the rule set name, e.g., Enrollment Rules</p>
+                                <p>Rule Set Type = User Interface</p>
+                                <p>State Approved = select the states in which the Enrollment rule set is approved</p>
+                            </li>
+                            <li>
+                                <p>Add any other settings as needed.</p>
+                            </li>
+                            <li>
+                                <p>Click <b class="Bold">Save Rule Set</b>.</p>
+                            </li>
+                            <li>
+                                <p>Click the <b class="Bold">View All Rule Definitions</b> link to open the Rule Definitions Window. Manually add the rules and click <b class="Bold">Update</b>. Optionally, add rules from the <b class="Bold">Enrollment</b> wizard page in the Wizard Designer.</p>
+                            </li>
+                        </ol>
+                        <p>Add an Enrollment product.</p>
+                        <ol>
+                            <li>
+                                <p>On the upper left of the Product Configuration/<MadCap:xref href="../Product Configuration/Products.htm" title="Products" alt="Products">Products</MadCap:xref> page, click <strong>Add New Product</strong>.</p>
+                            </li>
+                            <li>
+                                <p>On the <b class="Bold">Product Details</b> tab, enter or select the following settings. </p>
+                                <p>Product Name = Enrollment</p>
+                                <p>Product Type = Non-Insurance Product</p>
+                                <p>Product Category = Non-Insurance Product</p>
+                                <p>Product Type Filter (UI) = Non-Insurance Product</p>
+                                <p>Billing Code = Normal</p>
+                                <p>Product Locale = (select applicable locale)</p>
+                                <p>State Approved list = select the states where the Enrollment product is approved</p>
+                            </li>
+                            <li>
+                                <p>Click <strong>Save Product Config</strong>.</p>
+                            </li>
+                        </ol>
+                        <p>Add an Enrollment package.</p>
+                        <ol>
+                            <li>
+                                <p>On the Product Configuration/<MadCap:xref href="../Product Configuration/Packages.htm" title="Packages" alt="Packages">Packages</MadCap:xref> page, add an Enrollment package.</p>
+                            </li>
+                            <li>On the upper left, click<b class="Bold"> Add New Package</b>.</li>
+                            <li>
+                                <p>On the <b class="Bold">Package Detail</b> tab, enter or select the following settings. </p>
+                                <p>Package Name = Enrollment </p>
+                                <p>ACORD Type = Enrollment (1204-13000)</p>
+                                <p>Area Type = Activity</p>
+                            </li>
+                            <li>
+                                <p>On the <b class="Bold">Forms/Wizards in Package</b> tab, drag each Enrollment form and wizard from the All Forms/Wizards list to the Forms/Wizards in Package list.</p>
+                            </li>
+                            <li>
+                                <p>Click <b class="Bold">Save Package</b>.</p>
+                            </li>
+                            <li>
+                                <p>On the <b class="Bold">Rule Sets in Package</b> tab, drag each Enrollment rule set from the All Rule Sets list to the Rule Sets in Package list.</p>
+                            </li>
+                            <li>Click <b class="Bold">Save Package</b>.</li>
+                        </ol>
+                        <p>Add the Enrollment sales agreement.</p>
+                        <ol>
+                            <li>
+                                <p>On the Product Configuration/<MadCap:xref href="../Product Configuration/SalesAgreements.htm" title="Sales Agreements" alt="Sales Agreements">Sales Agreements</MadCap:xref> page, add an Enrollment sales agreement.</p>
+                            </li>
+                            <li>In the grid at the top of the page, select the <b class="Bold">Enrollment</b> product.</li>
+                            <li>On the left, fill in applicable settings and select states in <b class="Bold">State Approvals</b>.</li>
+                            <li>Under <b class="Bold">Available Packages</b>, select the <b class="Bold">Enrollment</b> package and click the right arrow to move it to the <b class="Bold">Assigned Packages</b> list.</li>
+                            <li>Click the <b class="Bold">Save Sales Agreement</b> button.</li>
+                        </ol>
+                        <p>Grant access permissions to the Enrollment activity.</p>
+                        <ol>
+                            <li>
+                                <p>In the grid at the top of the Organization Configuration/<MadCap:xref href="../Organization Configuration/Groups.htm" title="Groups" alt="Groups">Groups</MadCap:xref>  page, select a group <b class="Bold">Name/TC Role Code</b>.</p>
+                            </li>
+                            <li>
+                                <p>On the <b class="Bold">Activity Access</b> tab, select the <b class="Bold">Enrollment</b> checkbox.</p>
+                            </li>
+                            <li>
+                                <p>On the <b class="Bold">Product Access</b> tab, select the <b class="Bold">Enrollment</b> checkbox.</p>
+                            </li>
+                            <li>
+                                <p>Click the <b class="Bold">Save</b> button.</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">User Experience</p>
+                        <MadCap:snippetBlock src="../Resources/Snippets/Features/EnrollmentUserExperience.flsnp" />
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help – Design Document: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 236720</MadCap:conditionalText><a href="../Resources/DesignDocs/236720  Enrollment Workflow 2.22 December.pdf" target="_blank" title="Design Document" alt="Design Document" MadCap:conditions="General.Online">CMR&#160;236720</a></p>
+                        <p MadCap:conditions="General.Online"><a href="#top" target="_self" title="Return to Top" alt="Return to Top">Return to Top</a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:pageBreak />
+    </body>
+</html>

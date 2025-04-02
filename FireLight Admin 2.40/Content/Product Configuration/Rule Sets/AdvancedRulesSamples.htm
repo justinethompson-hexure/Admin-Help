@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <!-- <link href="../../Resources/Dependencies/codemirror.css" rel="stylesheet" type="text/css" />
+		<script src="../../Resources/Dependencies/codemirror.js" type="text/javascript">
+		</script>
+		<script src="../../Resources/Dependencies/xml.js" type="text/javascript">
+		</script>-->
+        <meta name="description" content="Rule samples, sample rules, Advanced Rule Samples" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Advanced Rules Samples</h1>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Rules/RulesBestPracticesNote.flsnp" />
+        <p>Following are six advanced rules samples. <MadCap:conditionalText MadCap:conditions="General.Online">Click a sample name to view the rule.</MadCap:conditionalText> </p>
+        <h2 MadCap:conditions="General.PDF">Disable a Section</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Disable a Section</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+                    <MadCap:codeSnippetCopyButton />
+                    <MadCap:codeSnippetCaption>
+                        <p>Disable a Section</p>
+                    </MadCap:codeSnippetCaption>
+                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">Disable an Annuitant section.
+						&lt;block&gt;
+						&lt;set name="condition"&gt;
+						&lt;compare op="=="&gt;
+						&lt;diget dataitemid="Annuitant_SameAsOwner" /&gt;
+						&lt;const value="Yes" type="String" /&gt;
+						&lt;/compare&gt;
+						&lt;/set&gt;
+						&lt;setcontrolstate dataitemid="Annuitant_FirstName" clearondisable="true"&gt;
+						&lt;get name="condition"/&gt;
+						&lt;/setcontrolstate&gt;
+						&lt;setcontrolstate dataitemid="Annuitant_MiddleName" clearondisable="true"&gt;
+						&lt;get name="condition"/&gt;
+						&lt;/setcontrolstate&gt;
+						&lt;setcontrolstate dataitemid="Annuitant_LastName" clearondisable="true"&gt;
+						&lt;get name="condition"/&gt;
+						&lt;/setcontrolstate&gt;
+						&lt;setcontrolstate dataitemid="Annuitant_Gender" clearondisable="true"&gt;
+						&lt;get name="condition"/&gt;
+						&lt;/setcontrolstate&gt;
+						&lt;setcontrolstate dataitemid="Annuitant_Age" clearondisable="true"&gt;
+						&lt;get name="condition"/&gt;
+						&lt;/setcontrolstate&gt;
+						&lt;setcontrolstate dataitemid="Annuitant_DOB" clearondisable="true"&gt;
+						&lt;get name="condition"/&gt;
+						&lt;/setcontrolstate&gt;
+						&lt;setcontrolstate dataitemid="Annuitant_ResidentialAddress" clearondisable="true"&gt;
+						&lt;get name="condition"/&gt;
+						&lt;/setcontrolstate&gt;
+						&lt;setcontrolstate dataitemid="Annuitant_ResidentialAddress_City" clearondisable="true"&gt;
+						&lt;get name="condition"/&gt;
+						&lt;/setcontrolstate&gt;
+						&lt;setcontrolstate dataitemid="Annuitant_ResidentialAddress_State" clearondisable="true"&gt;
+						&lt;get name="condition"/&gt;
+						&lt;/setcontrolstate&gt;
+						&lt;setcontrolstate dataitemid="Annuitant_ResidentialAddress_Zip" clearondisable="true"&gt;
+						&lt;get name="condition"/&gt;
+						&lt;/setcontrolstate&gt;
+						&lt;setcontrolstate dataitemid="Annuitant_MailingAddress1" clearondisable="true"&gt;
+						&lt;get name="condition"/&gt;
+						&lt;/setcontrolstate&gt;
+						&lt;setcontrolstate dataitemid="Annuitant_MailingAddress_City" clearondisable="true"&gt;
+						&lt;get name="condition"/&gt;
+						&lt;/setcontrolstate&gt;
+						&lt;setcontrolstate dataitemid="Annuitant_MailingAddress_State" clearondisable="true"&gt;
+						&lt;get name="condition"/&gt;
+						&lt;/setcontrolstate&gt;
+						&lt;setcontrolstate dataitemid="Annuitant_MailingAddress_Zip" clearondisable="true"&gt;
+						&lt;get name="condition"/&gt;
+						&lt;/setcontrolstate&gt;
+						&lt;setcontrolstate dataitemid="Annuitant_SSN" clearondisable="true"&gt;
+						&lt;get name="condition"/&gt;
+						&lt;/setcontrolstate&gt;
+						&lt;setcontrolstate dataitemid="Annuitant_Phone" clearondisable="true"&gt;
+						&lt;get name="condition"/&gt;
+						&lt;/setcontrolstate&gt;
+						&lt;setcontrolstate dataitemid="Annuitant_Email" clearondisable="true"&gt;
+						&lt;get name="condition"/&gt;
+						&lt;/setcontrolstate&gt;
+					&lt;/block&gt;</MadCap:codeSnippetBody>
+                </MadCap:codeSnippet>
+                <p MadCap:conditions="General.Online"><a href="#top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Enable a Form</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Enable a Form</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+                    <MadCap:codeSnippetCopyButton />
+                    <MadCap:codeSnippetCaption>
+                        <p>Enable a Form</p>
+                    </MadCap:codeSnippetCaption>
+                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">Add Beneficiary Form
+						&lt;setformstate name="16432-Beneficiary"&gt;
+						&lt;compare op="=="&gt;
+						&lt;diget dataitemid="AdditionalBeneficiaries" /&gt;
+						&lt;const value="Yes" /&gt;
+						&lt;/compare&gt;
+					&lt;/setformstate&gt;</MadCap:codeSnippetBody>
+                </MadCap:codeSnippet>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Include HTML in Popups</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Include HTML in Popups</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p><a name="IncludeHTMLinPopUps"></a>HTML can be added to rules in the Admin form designer to create custom formatting in popup messages.  The More Info field on the Sales Agreement page also supports HTML formatting.  The HTML tags do not have to be encoded before entering as the encoding is automatically generated upon saving.</p>
+                <p><b class="Bold">NOTE:</b> The values of data items can be retrieved in a popup node’s HTML by wrapping the data item ID in braces { }. For example: {My_Data_Item_Id}. Anything within braces { } is treated as a data item that needs to be retrieved. </p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Sample Popup Rule</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <MadCap:codeSnippet>
+                            <MadCap:codeSnippetCopyButton />
+                            <MadCap:codeSnippetCaption>
+                                <p>Sample Popup Rule</p>
+                            </MadCap:codeSnippetCaption>
+                            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">Sample Popup rule with HTML formatting within the popup dataitem node.  The HTML value must be set to "true" in order to save the rule containing HTML.
+								&lt;if&gt;
+								&lt;condition&gt;
+								&lt;compare op="=="&gt;
+								&lt;diget dataitemid="TypeOfOwnership" /&gt;
+								&lt;const value="Trust" /&gt;
+								&lt;/compare&gt;
+								&lt;/condition&gt;
+								&lt;popup dataitemid="TypeOfOwnership_PopupLabel" title="Title" buttons="OK" html="true"&gt;
+								&lt;p style="font-weight:700;"&gt;
+								Trust owners must be approved by the home office before the application can be processed.
+								&lt;/p&gt;
+								&lt;p&gt;
+								Check the knowledge base to learn what types of trusts are allowed:
+								&lt;br /&gt;
+								&lt;a href="http://example.com/kb/non-natural-owners.html" target="_blank"
+								style="color:#fd596c;"&gt;Knowledge Base Article&lt;/a&gt;
+								&lt;/p&gt;
+								&lt;/popup&gt;
+							&lt;/if&gt;</MadCap:codeSnippetBody>
+                        </MadCap:codeSnippet>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Sample More Info Field</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>More Info field on the <MadCap:xref href="../SalesAgreements.htm" target="_blank" alt="Sales Agreements">Sales Agreements</MadCap:xref> page with font and HTML formatting.</p>
+                        <p class="Indent">
+                            <img src="../../Resources/ImagesAdmin/MoreInfoFieldFormatting.jpg" alt="More Info Field with Font and HTML Formatting" title="More Info Field with Font and HTML Formatting" /> </p>
+                        <p>Sample More Info field content:</p>
+                        <p class="Indent">&lt;font size="3" color="red"&gt;Click the link for a product brochure:&lt;br /&gt; &lt;br /&gt; &lt;a href="http://www.companyname.com/Products/Products_ProductName_brochure.shtml" target="_blank"&gt;Product Brochure&lt;/a&gt; &lt;br /&gt;&lt;br /&gt;</p>
+                        <p>Looks like this in <MadCap:variable name="General.ProductName" />:</p>
+                        <p class="Indent">
+                            <img src="../../Resources/ImagesAdmin/MoreInfoPopup.jpg" alt="More Info Pop-up in FireLight" title="More Info Pop-up in FireLight" />
+                        </p>
+                        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                        </p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Set Permissions for a Logged-in User</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Set Permissions for a Logged-in User</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p><a name="IncludeHTMLinPopUps"></a>The following example allows rules to prevent modification of some application input fields during data entry based on the session role code.</p>
+                <p>When an application is accessed by a user with a <b>single role code</b>, the data item “FLI_CURRENT_ROLE_CODE” is updated with the role code of the current session. A single data item is also created using the format “FLI_CURRENT_ROLE_CODE &lt;RC&gt;”, where the role code is captured in the &lt;RC&gt; tag.</p>
+                <p>When an application is accessed by a user with <b>multiple role codes</b>, the “FLI_CURRENT_ROLE_CODE” is updated  with the first role code in the list.  Also distinct data items using the format “FLI_CURRENT_ROLE_CODE &lt;RC&gt;” for each role code are updated for each role code. Each role code is captured in the &lt;RC&gt; tag.</p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Sample Rule</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <MadCap:codeSnippet>
+                            <MadCap:codeSnippetCopyButton />
+                            <MadCap:codeSnippetCaption>
+                                <p>Sample Rule</p>
+                            </MadCap:codeSnippetCaption>
+                            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;block&gt;
+								&lt;if&gt;
+								&lt;condition&gt;
+								&lt;compare op="=="&gt;
+								&lt;diget dataitemid="FLI_CURRENT_ROLE_CODE"&gt;&lt;/diget&gt;
+								&lt;const value="rep1" type="String"&gt;&lt;/const&gt;
+								&lt;/compare&gt;
+								&lt;/condition&gt;
+								&lt;setreadonly dataitemid="txtSecured"&gt;
+								&lt;const value="true" /&gt;
+								&lt;/setreadonly&gt;
+								&lt;else /&gt;
+								&lt;setreadonly dataitemid="txtSecured"&gt;
+								&lt;const value="false" /&gt;
+								&lt;/setreadonly&gt;
+								&lt;/if&gt;
+							&lt;/block&gt;</MadCap:codeSnippetBody>
+                        </MadCap:codeSnippet>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Use FireLight Global Application Data</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Use FireLight Global Application Data</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+                    <MadCap:codeSnippetCopyButton />
+                    <MadCap:codeSnippetCaption>
+                        <p>Check Issue Jurisdiction</p>
+                    </MadCap:codeSnippetCaption>
+                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">Check Issue Jurisdiction
+						&lt;if&gt;
+						&lt;condition&gt;
+						&lt;not&gt;
+						&lt;isnullorwhitespace&gt;
+						&lt;diget dataitemid="Annuitant_ResidentialAddress_State" /&gt;
+						&lt;/isnullorwhitespace&gt;
+						&lt;/not&gt;
+						&lt;compare op="!="&gt;
+						&lt;diget dataitemid="FLI_ISSUED_STATE_ABBREV" /&gt;
+						&lt;diget dataitemid="Annuitant_ResidentialAddress_State" /&gt;
+						&lt;/compare&gt;
+						&lt;/condition&gt;
+						&lt;postmessage dataitemid="Annuitant_ResidentialAddress_State"&gt;
+						&lt;format format="Issue jurisdiction {0} does not match the Annuitant state"&gt;
+						&lt;diget dataitemid="FLI_ISSUED_STATE_ABBREV" /&gt;
+						&lt;/format&gt;
+						&lt;/postmessage&gt;
+						&lt;else /&gt;
+						&lt;removemessage dataitemid="Annuitant_ResidentialAddress_State" /&gt;
+					&lt;/if&gt;</MadCap:codeSnippetBody>
+                </MadCap:codeSnippet>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Use Variables – Calculate Attained Age</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Use Variables – Calculate Attained Age</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <MadCap:codeSnippet>
+                    <MadCap:codeSnippetCopyButton />
+                    <MadCap:codeSnippetCaption>
+                        <p>Use Variables - Calculate Attained Age</p>
+                    </MadCap:codeSnippetCaption>
+                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">Annuitant Attained Age
+						&lt;block&gt;
+						&lt;if&gt;
+						&lt;condition&gt;
+						&lt;not&gt;
+						&lt;isnullorwhitespace&gt;
+						&lt;diget dataitemid="Annuitant_DOB" /&gt;
+						&lt;/isnullorwhitespace&gt;
+						&lt;/not&gt;
+						&lt;not&gt;
+						&lt;isnull&gt;
+						&lt;diget dataitemid="Annuitant_DOB" type="DateTime" /&gt;
+						&lt;/isnull&gt;
+						&lt;/not&gt;
+						&lt;/condition&gt;
+						&lt;diset dataitemid="Annuitant_Age"&gt;
+						&lt;datetimedifference option="Year"&gt;
+						&lt;datetimenow /&gt;
+						&lt;diget dataitemid="Annuitant_DOB" type="DateTime" /&gt;
+						&lt;/datetimedifference&gt;
+						&lt;/diset&gt;
+						&lt;else /&gt;
+						&lt;diset dataitemid="Annuitant_Age"&gt;
+						&lt;const value="" /&gt;
+						&lt;/diset&gt;
+						&lt;/if&gt;
+					&lt;/block&gt;</MadCap:codeSnippetBody>
+                </MadCap:codeSnippet>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:pageBreak />
+        <h2 MadCap:conditions="General.PDF">Use Custom Formatting</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Use Custom Formatting</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+                    <MadCap:codeSnippetCopyButton />
+                    <MadCap:codeSnippetCaption>
+                        <p>Use Custom Formatting</p>
+                    </MadCap:codeSnippetCaption>
+                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">US SSN and Reformat
+						&lt;block&gt;
+						&lt;set name="deformattedSSN"&gt;
+						&lt;deformat format="d"&gt;
+						&lt;diget dataitemid="Annuitant_SSN" /&gt;
+						&lt;/deformat&gt;
+						&lt;/set&gt;
+						&#160;
+						&lt;if&gt;
+						&lt;condition&gt;
+						&lt;not&gt;
+						&lt;isnullorwhitespace&gt;
+						&lt;get name="deformattedSSN" /&gt;
+						&lt;/isnullorwhitespace&gt;
+						&lt;/not&gt;
+						&lt;ismatch regex="^\d{9}$"&gt;
+						&lt;get name="deformattedSSN" /&gt;
+						&lt;/ismatch&gt;
+						&lt;/condition&gt;
+						&lt;diset dataitemid="Annuitant_SSN"&gt;
+						&lt;format format="{0}-{1}-{2}"&gt;
+						&lt;substring&gt;
+						&lt;get name="deformattedSSN" /&gt;
+						&lt;const value="0" /&gt;
+						&lt;const value="3" /&gt;
+						&lt;/substring&gt;
+						&lt;substring&gt;
+						&lt;get name="deformattedSSN" /&gt;
+						&lt;const value="3" /&gt;
+						&lt;const value="2" /&gt;
+						&lt;/substring&gt;
+						&lt;substring&gt;
+						&lt;get name="deformattedSSN" /&gt;
+						&lt;const value="5" /&gt;
+						&lt;const value="4" /&gt;
+						&lt;/substring&gt;
+						&lt;/format&gt;
+						&lt;/diset&gt;
+						&lt;/if&gt;
+					&lt;/block&gt;</MadCap:codeSnippetBody>
+                </MadCap:codeSnippet>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:pageBreak />
+    </body>
+</html>

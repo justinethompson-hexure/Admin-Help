@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Lock and Review an Order in a PreSubmit or Post-Submission Review Queue; Lock and Review an Order in an Automated Review Queue" />
+    </head>
+    <body>
+        <h1>
+            <a name="top">
+            </a>Step 2. Lock and Begin an Order Review<MadCap:conditionalText MadCap:conditions="General.Online"> [Reviewer Instructions]</MadCap:conditionalText></h1>
+        <p>
+            <b class="Bold">NOTE:</b> When an activity is locked by the reviewer (status = "In Pre-Submit Review" or "In Review") and the application is opened by the agent/user in FireLight, a message appears with text, "Application is locked for review." The agent/user cannot unlock or cancel the application. The Unlock option on the Other Actions menu and the Unlock button on the Rename/Summary dialog on the Other Actions menu are disabled while the activity is in review. The Pending Requests dialog that opens from the Requests link on the Other Actions menu does not show the Cancel Request link, </p>
+        <h2>Lock and Review an Order in a PreSubmit or Post-Submission Review Queue</h2>
+        <ol>
+            <li>
+                <p>The reviewer clicks the <b class="Bold">Review</b> button to open an order pending review.</p>
+                <p>
+                    <img src="../../Resources/ImagesReviewQ/RQ32.png" alt="Click Review Button" title="Click Review Button" />
+                </p>
+            </li>
+            <li>
+                <p>The reviewer clicks the <b class="Bold">Lock and Review Order</b> button to lock the order so other reviewers cannot access the order while it is in review. The reviewer clicks the <b class="Bold">Cancel</b> button to leave the order open for review by other reviewers who have access to the queue.</p>
+                <p>
+                    <b class="Bold">Example – PreSubmit Review Lock and Review Order dialog</b>
+                </p>
+                <p>
+                    <img src="../../Resources/ImagesReviewQ/RQ33.png" alt="Lock and Review Order" title="Lock and Review Order" />
+                </p>
+                <p>
+                    <b class="Bold">Example – Post-Submission Review Lock and Review Order dialog</b>
+                </p>
+                <p>
+                    <img src="../../Resources/ImagesReviewQ/RQ34.png" alt="Post-Submission Review Lock" title="Post-Submission Review Lock" />
+                </p>
+                <p>
+                    <b class="Bold">OPTIONAL (Post-Submission Review):</b> To automatically lock orders when clicking the <b class="Bold">Review</b> button without the Lock and Review Order warning dialog appearing, a post-submission reviewer can select the <b class="Bold">Don’t show me again</b> checkbox or click <b class="Bold">My Preferences</b> on the navigation bar and set <b class="Bold">Warn before lock</b> to <b class="Bold">No</b>. The change takes effect the next time the reviewer logs in to FireLight<sup MadCap:conditions="General.Online">®</sup>.</p>
+                <p>
+                    <img src="../../Resources/ImagesReviewQ/RQ35.png" alt="Don't show me again Check Box" title="Don't show me again Check Box" />
+                </p>
+                <p>When the reviewer selects the <b class="Bold">Don’t show me again</b> checkbox, the following message appears on the dialog. The reviewer clicks the <b class="Bold">Lock and Review Order</b> button to continue with the review or clicks <b class="Bold">Cancel</b> to return to the queue without locking the order for review.</p>
+                <p>
+                    <img src="../../Resources/ImagesReviewQ/RQ36.png" alt="Alert Window Message" title="Alert Window Message" />
+                </p>
+            </li>
+        </ol>
+        <h2>Lock and Review an Order in an Automated Review Queue</h2>
+        <p>Locking an order (case) in an automated review queue causes the Provider to be put into a holding pattern for that case. This locking causes the Provider to bypass the case in the automated review queue. It is the responsibility of the reviewer to reject or move the case. The Provider retry is cancelled. The Provider will then have a time interval to check back on the case, but the lock is honored. If a reviewer unlocks the case, the Provider can re-lock and pick back up where it left off.</p>
+        <ol>
+            <li>
+                <p>After successful log on, FireLight opens to the Home page. On the right under <b class="Bold">Manage</b>, reviewer clicks <b class="Bold">Review Queue</b>.</p>
+            </li>
+            <li>
+                <p>On the left under <b class="Bold">Automated Queues</b>, the reviewer clicks the name of an automated queue.</p>
+            </li>
+            <li>
+                <p>In the automated queue, the reviewer finds the pending order to review and clicks the <b class="Bold">Review</b> button to lock the order for review.</p>
+            </li>
+            <li>
+                <p>The reviewer follows the standard post-submission review process for approving, rejecting or moving the case.</p>
+            </li>
+            <li>
+                <p>To release the order back to the automated queue without review, the reviewer clicks the <b class="Bold">Unlock</b> button on the order so the Provider can pick back up where it left off.</p>
+            </li>
+        </ol>
+        <p MadCap:conditions="General.Online">
+            <a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

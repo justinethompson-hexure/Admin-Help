@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The “More Info” dialog from the Review Queue shows up currently on the legacy forms UI when an agent uses the PreSubmit Review Queue, and the reviewer requests “More Info” for a NIGO application. The dialog presented to the agent is implemented on the Wizard/REACT UI (Forms and Wizards) to allow clients to adopt the Wizard with Forms UI completely and avoid communicating outside FireLight.  Adding the “More Info” dialog on the Wizard UI will reduce/eliminate unnecessary calls to the agent’s back office and allow the communication between reviewer and agent to remain within FireLight.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Applications containing wizards - "More Info" dialog from Pre-Submit Review Queue will display for reviewers to request more info from agents during the review process.</p>
+            </li>
+        </ul>
+    </body>
+</html>

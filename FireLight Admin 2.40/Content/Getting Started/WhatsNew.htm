@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>What's New in FireLight</h1>
+        <p>The following enhancements are now available for all clients unless noted otherwise. See the "FireLight v2.40" Release History" topic in Admin Help for fixed defects and links to design documents and Admin Help topics.</p>
+        <p><a name="top"></a><span style="font-size: 16pt; font-weight: bold;">New Features</span>
+        </p>
+        <p><span style="font-size: 14pt; font-weight: bold;">Hard Stop Error Message: CR-4088</span>
+        </p>
+        <p>We updated the hard stop error message to the following: "Unable to continue. You are not authorized to sell:</p>
+        <p>&lt;Message&gt;</p>
+        <p>&lt;Message&gt;</p>
+        <p>You may create this application, but cannot submit it until all the necessary requirements to sell the product are met.”</p>
+        <p><span style="font-size: 14pt; font-weight: bold;">Gracefully Handle Unaccounted DocuSign Events: CR-4175</span>
+        </p>
+        <p>We modified payload handling to more gracefully handle unaccounted DocuSign events and reduce error logging.</p>
+        <p><b style="font-size: 14pt;">Messaging for Producer When Its Neither Soft Stop Nor Hard Stop: CR-4178</b>
+        </p>
+        <p>We added the following DTCC Producer Authorization message: “All requirements are satisfied. You can proceed with selling this product.”</p>
+        <p><b style="font-size: 14pt;">Update Verbiage in the Soft Stop Message: CR-4181</b>
+        </p>
+        <p>We updated the FireLight soft stop message to read: “DTCC Producer Authorization: You are authorized to sell this product, though certain requirements are not yet fully met”</p>
+        <p><b style="font-size: 14pt;">Compliance Reports: DIST-4595, DIST-4596, DIST-4988, DIST-5133</b>
+        </p>
+        <p>A few compliance reports are added as part of admin reports in the admin tool.</p>
+        <p>1.	Age Limit</p>
+        <p>2.	Net Worth</p>
+        <p>3.	Income</p>
+        <p>4.	Tax Bracket</p>
+        <p>5.	Limited Investment Experience</p>
+        <p>6.	VA/Net Worth %</p>
+        <p>7.	Elderly Modest Means &amp; Limited Experience</p>
+        <p>8.	Non-Natural Person Accounts</p>
+        <p>9.	Tax Qualified Sales</p>
+        <p>10.	Large Surrender Replacements</p>
+        <p>11.	Pre-threshold Surrender Sales</p>
+        <p>12.	High 1035 &amp; Exchange Reps</p>
+        <p>13.	High Switching Reps</p>
+        <p><b style="font-size: 12pt;">Impact:</b>
+        </p>
+        <p>FL Admin: New report "Compliance Report" will be available on the Reports page in the Admin section. User will be able to select any of the above compliance reports to generate them in CSV format.</p>
+        <p><b style="font-size: 14pt;">Master Repository for Wizard Templates: DIST-4589, DIST-5033, DIST-4511, DIST-4512, DIST-5134</b>
+        </p>
+        <p>As part of increasing wizard efficiency, a master repository of wizard templates will be made available in the admin tool. While adding a new wizard, the admin user will be able to navigate through the available wizard templates to view if they meet their requirement and then import it into the wizard library. Any rule set attached with the wizard template will also be imported. They can then go ahead and customize the wizard as per their need, without building the wizard from scratch.</p>
+        <p><b style="font-size: 12pt;">Impact:</b>
+        </p>
+        <p>FLAdmin: Under the Designer menu, a new menu option will be available to view the existing wizard templates in the master repository and then select and import them into the wizard library.</p>
+        <p><b style="font-size: 14pt;">Update Next Activity Default Messages with User-Friendly Wording: EAES-3095</b>
+        </p>
+        <p>We updated error messages to be more clear and user-friendly, including the following:</p>
+        <ul>
+            <li>
+                <p>"This product has not been configured for your organization. Press OK to continue."</p>
+            </li>
+            <li>
+                <p>"The product you are attempting to access is not available. Press OK to continue."</p>
+            </li>
+            <li>
+                <p>"The product you are attempting to access is not available. Press OK to continue."</p>
+            </li>
+        </ul>
+        <p><b style="font-size: 14pt;">Implement Logic for New Checkbox on Dropdown Controls: EAES-6450</b>
+        </p>
+        <p>We have added to the Forms and Wizards controls a new checkbox, TDR-Selected Value Only, to pare down combo box and dropdown lists and reduce the length of reports.</p>
+        <p><b style="font-size: 12pt;">Impact:</b>
+        </p>
+        <p>Forms and Wizards/TDR – Selected Value Only</p>
+        <p><span style="font-size: 16pt; font-weight: bold;">Resolved Issues</span>
+        </p>
+        <p><span style="font-size: 14pt; font-weight: bold;">Search Fields in Wizard Packages-DIST-4369</span>
+        </p>
+        <p>We resolved an issue where clicking the Search button on the Search Fields in Wizard Packages tab in the Wizard Library resulted in an error. Clicking the Search button now works as designed.</p>
+        <p><b style="font-size: 14pt;">ReviewQueueReport Activity Report Error: DIST-4864</b>
+        </p>
+        <p>We resolved an issue where an error resulted when generating the ReviewQueueReport. The report can now be generated without issue.</p>
+        <p><b style="font-size: 14pt;">EDeliveryPendingExpirationReport Activity report Error: DIST-4865</b>
+        </p>
+        <p>We resolved an issue where an error resulted when generating the EDeliveryPendingExpiratoinReport. The report can now be generated without issue.</p>
+        <p><b style="font-size: 14pt;">Getting Server Error When User Approved or Reject the App from Review Queue: DIST-4932</b>
+        </p>
+        <p>We resolved an issue where a server error was received when users approved or rejected an app in the review queue. In this scenario now no error is received.</p>
+        <p><b style="font-size: 14pt;">Error Occurring in Activity Completion Report Due to Missing Login Date Value: DIST-5020</b>
+        </p>
+        <p>We resolved an issue where an error occurred when generating the Activity Completion Report. The report can now be generated without issue.</p>
+        <p><b style="font-size: 14pt;">Timeout Error When Generating Business Detail Report: DIST-5132</b>
+        </p>
+        <p>We resolved an issue where generating the Business Detail Report for a date range longer than two days resulted in an error. The report can now be generated without issue.</p>
+        <p><b style="font-size: 14pt;">Admin Reports Are Not Showing in the Report Section, Except for the Application Audit and Transaction Detail Report: DIST-5194</b>
+        </p>
+        <p>We resolved an issue where not all Admin Reports appeared in the Report section. Now all Admin Reports display, as designed.</p>
+        <p><b style="font-size: 14pt;">Spurious Application Messages for Passcodes Being Created but Not Sent: EAES-3264</b>
+        </p>
+        <p>We resolved an issue where an application message for Passcode Application would be created and stored but not sent. Passcode Application messages are now sent as designed.</p>
+        <p><b style="font-size: 14pt;">User with Apostrophe in the Name, Not Able to Be Assigned as (Producer/Admin/Member) in Any of New or Old Workgroups: EAES-3919</b>
+        </p>
+        <p>We resolved an issue where a user with an apostrophe in the name could not be assigned to a workgroup. Now such users can be assigned to workgroups.</p>
+        <p><b style="font-size: 14pt;">In the Resend Passcode Email Functionality, Entering an Email Address with Leading or Trailing Spaces Results in a Validation Error: EAES-4745</b>
+        </p>
+        <p>We resolved an issue where when attempting to resend a passcode email, entering an email address with leading or trailing spaces resulted in a validation error. Now such addresses can be entered without issue.</p>
+        <p><b style="font-size: 14pt;">In the Send Reminder Email Functionality, Entering an Email Address with Leading Spaces Results in a Validation Error: EAES-4746</b>
+        </p>
+        <p>We resolved an issue where when attempting to send a reminder email, entering an email address with leading or trailing spaces resulted in a validation error. Now such addresses can be entered without issue.</p>
+        <p><b style="font-size: 14pt;">In the Send New Email Functionality in Message Center, Entering an Email Address with Leading or trailing Spaces Results in a Validation Error: EAES-4747</b>
+        </p>
+        <p>We resolved an issue where when attempting to send a new email in the Message Center, entering an email address with leading or trailing spaces resulted in a validation error. Now such addresses can be entered without issue.</p>
+        <p><b style="font-size: 14pt;">Cancel Tele-Sign Link Color Is Different than Normal Signers Revoke Request Link: EAES-5158</b>
+        </p>
+        <p>We resolved an issue where in the signers list the Cancel Tele-Sign link color was incorrect and did not match the link color of other signers. Now the Cancel Tele-Sign link appears as designed.</p>
+        <p><b style="font-size: 14pt;">When "Allow E-Sign" Is Disabled, No Audit Report Is Generated When It Skips the Submission Process to Go to Complete: EAES-5413</b>
+        </p>
+        <p>We resolved an issue where when Allow E-Sign is disabled no audit report was generated. Now in this scenario an audit report is generated as designed.</p>
+        <p><b style="font-size: 14pt;">When "Allow E-Sign" Is Disabled, a Record Is Not Inserted in ApplicationTrans Table Used for Billing: EAES-5418</b>
+        </p>
+        <p>We resolved an issue where when "Allow E-Sign" was disabled, the app went to complete without a record being inserted in the ApplicationTrans table used for billing. Now in this scenario a record is inserted in the ApplicationTrans table.</p>
+        <p><b style="font-size: 14pt;">App Status Showing 'Client Signatures Complete' After Re-sign Process Initiated: EAES-5882</b>
+        </p>
+        <p>We resolved an issue where after the re-sign process was initiated the app status erroneously showed “Client Signatures Complete.” Now in this scenario the app status shows as In Signatures with the request canceled.</p>
+        <p><span style="font-size: 14pt;">Activity Created but Unable to Open Due to Invalid Product Organization ID: EAES-5891</span>
+        </p>
+        <p>We resolved an issue where an erroneous ProductOrganizationID of 0 caused issues when attempting to open an activity. Activities can now be opened as designed.</p>
+        <p><b style="font-size: 14pt;">Tele Sign MVC Signing: Signer Name and Signer Email Not Autofill in Forms Access Page for Send Via Email Page: EAES-5893</b>
+        </p>
+        <p>We resolved an issue where on the Tele Sign access page the Signer Name and Signer Email fields failed to autofill. Now these fields autofill as designed.</p>
+        <p><b style="font-size: 14pt;">'Locked for review' Audit Not Showing in TDR for Review Queue: EAES-5999</b>
+        </p>
+        <p>We resolved an issue where when the pre-submit review was approved or rejected, the TDR report field was blank. Now in this scenario the report field is populated.</p>
+        <p><b style="font-size: 14pt;">After the App Is Submitted and Completed, the Audit Details of the Completed App Are Not Appearing in the TDR: EAES-6054</b>
+        </p>
+        <p>We resolved an issue where when an app was submitted and complete audit details of the completed app failed to appear in the TDR. Now in this scenario audit details appear in the report.</p>
+        <p><b style="font-size: 14pt;">Scheduled Assemblies Configured to Run Every 1 or 2 Minutes Are Instead Running Every 5 Minutes: EAES-6108</b>
+        </p>
+        <p>We resolved an issue where scheduled assemblies ran every five minutes instead of the every one or two minutes they were configured to run. Scheduled assemblies are now running every one or two minutes, as configured.</p>
+        <p><b style="font-size: 14pt;">Overlapped Checkboxes Are Displaying for Optional Forms: EAES-6262</b>
+        </p>
+        <p>We resolved an issue where on optional forms checkboxes overlapped. Checkboxes on these forms now display correctly.</p>
+        <p><b style="font-size: 14pt;">“(OFFICE USE ONLY)” Is Appearing at the End of Certain Error Messages: EAES-6305</b>
+        </p>
+        <p>We resolved an issue where “(OFFICE USE ONLY)” erroneously appeared at the end of some error messages. Error messages now appear correctly, as designed.</p>
+        <p><b style="font-size: 14pt;">Error Messages Are Displaying "Office Use Only". Provider Colors Are Not Always Displayed: EAES-6306</b>
+        </p>
+        <p>We resolved an issue error messages displayed “Office Use Only” and did not include provider colors. Error messages now appear as designed.</p>
+        <p><b style="font-size: 14pt;">Documents Uploaded via the REST API Have the Wrong Visibility: EAES-6394</b>
+        </p>
+        <p>We resolved an issue where documents uploaded the REST API had the incorrect visibility of CarrierOnly. Now such documents have the correct visibility.</p>
+        <p><b style="font-size: 14pt;">The Value 'Unknown' Is Not Displayed for the Newly Created Data Item 'FLI_APP_ORIGIN' When an App Is Created Using the QETestPage.aspx Sample App: EAES-6397</b>
+        </p>
+        <p>We resolved an issue where the value Unknown failed to be displayed for the newly created data item FLI_APP_ORIGIN when an app was created using the QETestPage.aspx sample app. Now in this scenario the value Unknown is displayed.</p>
+        <p><b style="font-size: 14pt;">Unable to Continue after Signatures Due to Pending Review Request: EAES-6428</b>
+        </p>
+        <p>We resolved an issue where applications could not be completed in certain circumstances. Now applications can be completed without issue.</p>
+        <p><b style="font-size: 14pt;">Deployment of Firm with All-Numeric ID Not Working: EAES-6436</b>
+        </p>
+        <p>We resolved an issue where deploying firm data failed when firm records contained numeric-only values. Now in this scenario firm data deploys without issue.</p>
+        <p><b style="font-size: 14pt;">Log an Exception When There Are No Available Continue Actions: EAES-6443</b>
+        </p>
+        <p>We now log an exception when there are no available continue actions and the user cannot complete nor submit the activity.</p>
+        <p><b style="font-size: 14pt;">Exclude From Back Office Checkbox Missing: EAES-6525</b>
+        </p>
+        <p>We resolved an issue where the Exclude from Back Office checkbox was missing from the Form Library page. The checkbox is now available on the page, as designed.</p>
+        <p><b style="font-size: 14pt;">Value of Data Item FLI_APP_ORIGIN Displays Unknown Instead of “Firelight UI” When Application Is Created by Clicking the New Application Button: EAES-6566</b>
+        </p>
+        <p>We resolved an issue where the data item “FLI_APP_ORIGIN” displayed “Unknown” when creating an application using the native UI. Now in this scenario “Firelight UI” appears.</p>
+        <p><b style="font-size: 14pt;">Distributor Should Not Be Able to Modify State Approvals of a Carrier Sales Agreement: PC-1446</b>
+        </p>
+        <p>We resolved an issue where distributors were able to modify state approvals of a carrier sales agreement. Now, distributors can restrict (remove) jurisdiction approvals from a carrier sales agreement but cannot add approvals that the carrier did not specify.</p>
+        <p><b style="font-size: 14pt;">Firm Management Firm Organization Code Is Global Variable Allowing All to See Other Instances: PC-2662</b>
+        </p>
+        <p>We resolved an issue where on the Sales Agreement page any company using the Firm Management feature could view all other Firm Organizations. Now accounts using Firm Management see only their own Firm Organization view.</p>
+        <p><b style="font-size: 14pt;">Open Source License Info Page Is 404: PC-2704</b>
+        </p>
+        <p>We resolved an issue where the open source license info page failed to display. This page now appears as designed.</p>
+        <p><b style="font-size: 14pt;">Wizard Does Not Show Rule Processing Exceptions: PC-3271</b>
+        </p>
+        <p>We resolved an issue where the form/wizard failed to display rule processing exceptions. These exceptions now appear on the first visible form or wizard.</p>
+        <p><b style="font-size: 14pt;">Form/Wizard History Tab Are Not Showing the Edition’s Old and New Values: PC-3424</b>
+        </p>
+        <p>We resolved an issue where after adding or editing the edition on the Form/Wizard details page the old and new values did not display on the History tab. Now both the old and new values appear on the tab in this scenario.</p>
+        <p><b style="font-size: 14pt;">Template Rules for SSN Are Disallowing Some Valid Numbers: PC-3473</b>
+        </p>
+        <p>We resolved an issue where template rules disallowed some valid SSNs. Now all valid SSNs are allowed.</p>
+        <p><b style="font-size: 14pt;">Organization Spelling Incorrect: PC-3637</b>
+        </p>
+        <p>We corrected a spelling error on the Manage Sales Agreement page.</p>
+        <p><b style="font-size: 14pt;">Exceptions Occurring Rendering Layout Due to Missing EnableMixPanel View Property: PC-3676</b>
+        </p>
+        <p>We resolved an issue where layout rendered incorrectly.</p>
+        <p>&#160;</p>
+        <p>***Please note that the JIRA ticket numbers are provided for reference. JIRA tickets are not accessible to users outside Hexure.***</p>
+        <p data-mc-conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

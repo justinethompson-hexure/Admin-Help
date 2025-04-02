@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Print Forms</b> checkbox to provide group access to the Print Forms activity. See <MadCap:xref href="../../../../Features/Print Forms Activity.htm" target="_blank" alt="Print Forms Activity">Print Forms Activity</MadCap:xref> in Features. <MadCap:conditionalText MadCap:conditions="General.Online">See <MadCap:xref href="../../../../UserGuide/New Activity/Print Forms.htm">Print Forms [User Instructions]</MadCap:xref>.</MadCap:conditionalText></body>
+</html>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>This  is the ending date of the sales agreement. Click in the <b>End</b> box and type or select the end date of the agreement in the calendar on the right. If left blank, the selling agreement has no ending date and is in effect indefinitely. The sales agreement end time is based on the time zone selected in the field below it and the product would no longer be available as of 12:00 a.m. on the day in the “End” field. Note that applications created before this date can still be completed after the end date. Specifying an end date limits the ability to create new applications of that product but does not prevent applications that were already started from being completed. For the enable override date, the end date marks the application entered at 12:00 a.m. ET for the date selected.</body>
+</html>

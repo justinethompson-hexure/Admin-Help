@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Add Reviewer-Only Forms<a name="top"></a></h1>
+        <p>Add required and optional reviewer forms to be filled in by reviewers in the Review Queue.</p>
+        <ol>
+            <li>Upload the reviewer forms to the <b class="Bold">Form Library</b> page and fill in the applicable <b class="Bold">Form Detail</b>.</li>
+            <li>
+                <p>On the <MadCap:xref href="../Forms/Form Designer.htm" alt="Form Designer" target="_blank">Form Designer</MadCap:xref>, open the form.</p>
+                <ul>
+                    <li>In <b>Form Properties</b>, set Protection to <b>Public</b>.</li>
+                    <li>In every field on the form where form data from matching fields are imported from the application, open the <b>Field Properties</b> and select the <b>Is read only</b> checkbox. This pre-fills those fields on the reviewer form with form data from the application and set those fields to display only.</li>
+                    <li>Save the form.</li>
+                </ul>
+            </li>
+            <li>
+                <p>In <MadCap:xref href="../../Product Configuration/Packages.htm" alt="Packages" target="_blank">Packages</MadCap:xref>, create a new package for the reviewer forms. </p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>In <b>Area Type</b>: select <b>Reviewer</b> if reviewers are required to fill in the forms, or select <strong>Reviewer Optional</strong> if reviewers can fill in the optional reviewer forms at their discretion.</li>
+                    <li>Add only the reviewer forms to the package. (Reviewer forms should not be included in the application package or broker package.) </li>
+                    <li>Set the reviewer forms in package to <b>Required</b>.</li>
+                    <li>Save the package.</li>
+                </ol>
+            </li>
+            <li>On the <MadCap:xref href="../../Product Configuration/SalesAgreements.htm" alt="Sales Agreements" target="_blank">Sales Agreements</MadCap:xref> page, add the Reviewer package to the applicable product sales agreements.</li>
+            <li>On the <MadCap:xref href="../../Utilities/Deployments/Deploy Data.htm" target="_blank" alt="Deploy Data">Deploy Data</MadCap:xref> page, deploy the forms, package, and sales agreement to the applicable environments.</li>
+            <li>When a user completes and submits an application, the application along with any required or optional reviewer-only forms are sent to the Review Queue. </li>
+            <li>When a reviewer clicks the Review button on an application order that has reviewer-only forms included, a Reviewer Documents button appears on the order review item. If the reviewer documents are required, the Approve button is disabled until the reviewer fills in and completes the required reviewer documents and returns to the order review item. If the reviewer documents are optional, the Approve button is enabled and the reviewer can determine whether or not to fill in the optional reviewer documents during the review process.</li>
+        </ol><a href="#top" alt="Return to Top">Return to Top</a>
+    </body>
+</html>

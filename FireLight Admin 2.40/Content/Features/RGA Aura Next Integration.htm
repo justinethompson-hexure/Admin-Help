@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Aura Next integration setup" />
+    </head>
+    <body>
+        <h1>&#160;</h1>
+        <h1>RGA Aura Next Integration<a name="top"></a></h1>
+        <p class="note"><b class="Bold">Spotlight Video:</b> See <a href="https://vimeo.com/566703701/15c08c5868" target="_blank" title="RGA Aura Next Integration" alt="RGA Aura Next Integration">RGA Aura Next Integration</a> for a Spotlight feature video about RGA Aura Next Underwriting Interview.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">RGA Aura Next Integration</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p><b class="Bold">NOTE:</b> The RGA Aura Next integration is available for Wizard only.</p>
+                        <p>With the Aura Next integration, Firelight<sup>®</sup> leverages the Aura Next APIs within an activity to gather underwriting data for life applications.</p>
+                        <p>The Aura Next APIs are embedded in FireLight and shown in a dialog when opened by clicking a Custom Action button added to a wizard page in the activity.</p>
+                        <p>When Aura Next is opened, data is passed from the FireLight activity to set up the correct interview questions in Aura Next.</p>
+                        <p>When Aura Next is closed, the data is saved and passed to FireLight, which can be mapped to the appropriate PDF form fields so the data is submitted with the activity.</p>
+                        <p>FireLight queries an Aura Next API for a status. Once the data is complete in the Aura Next interview, the status is set to complete. FireLight leverages the status to recognize when the activity can be set to 100% complete when data entry is finished. After the Aura Next interview is complete, it can be reopened and updated prior to activity submittal.</p>
+                        <p>FireLight also retrieves and stores the case-level underwriting decision when the interview is complete. Additionally, the full underwriting decision tree is stored in JSON format and made available to the provider for added customizations.</p>
+                        <p><b class="Bold">NOTE:</b> Aura Next setup is handled by the carrier, not the distributor. When a distributor runs a carrier product activity, the carrier custom action button and provider are called after the relevant distributor components.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows" MadCap:conditions="">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">FireLight Setup</p>
+                        <p> Contact your <MadCap:variable name="General.ProductName" /> Strategic Account Manager to create an addendum to the contract to support the FireLight RGA Aura Next integration.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows" MadCap:conditions="">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p>See the <em MadCap:conditions="General.PDF">FireLight Aura Next Disclosure Engine Integration Guide</em><a href="../Resources/PDFGuides/FireLight Aura Next Disclosure Engine Integration Guide 12_2022.pdf" target="_blank" title="FireLight Aura Next Disclosure Engine Integration Guide 12_2022" alt="FireLight Aura Next Disclosure Engine Integration Guide 12_2022" MadCap:conditions="General.Online">FireLight Aura Next Disclosure Engine Integration Guide 12_2022</a> in Admin Help for detailed requirements, setup information, and more.</p>
+                        <p MadCap:conditions="General.PDF">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows" MadCap:conditions="">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <MadCap:snippetBlock src="../Resources/Snippets/Features/AuraNext.flsnp" />
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help:</p>
+                        <ul>
+                            <li>
+                                <p><em MadCap:conditions="General.PDF">FireLight Aura Next Disclosure Engine Integration Guide</em>
+                                    <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/PDFGuides/FireLight Aura Next Disclosure Engine Integration Guide 12_2022.pdf" target="_blank" title="FireLight Aura Next Disclosure Engine Integration Guide 12_2022" alt="FireLight Aura Next Disclosure Engine Integration Guide 12_2022">FireLight Aura Next Disclosure Engine Integration Guide 12_2022</a> </MadCap:conditionalText>
+                                </p>
+                            </li>
+                            <li>
+                                <p>Release History: <b class="DRnumber">CMR 238933</b></p>
+                            </li>
+                        </ul>
+                        <p>User Guide:</p>
+                        <ul>
+                            <li>
+                                <p><em> FireLight Platform User Guide</em>, New Activity, Data Entry, Action Buttons topic, see "Example: Aura Next Underwriting Interview"</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

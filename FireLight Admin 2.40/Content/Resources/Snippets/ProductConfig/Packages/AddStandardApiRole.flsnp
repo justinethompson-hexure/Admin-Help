@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Click the <b class="Bold">Add Standard Api Role</b> button to add a role code that is specific to API calls, which allows rule sets to run only for external APIs (e.g., ForeSight Illustration Services, external applications, etc.).</body>
+</html>

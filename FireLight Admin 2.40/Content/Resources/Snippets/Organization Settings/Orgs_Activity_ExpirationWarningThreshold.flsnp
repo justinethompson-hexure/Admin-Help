@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>In the <b class="Bold">Expiration Warning Threshold</b> text box, enter the number of days prior to the expiration of a pending request an email should be sent to the agent and/or client.  This email will warn of the impending expiration of the signature, client fill &amp; sign, share, etc., request.  If 0 is entered, no email is sent. Go to <MadCap:xref href="../../../Organization Configuration/Email.htm" target="_blank" alt="Email">Email</MadCap:xref> in Organization Configuration to see the associated request expiration email templates for the client and agent.</body>
+</html>

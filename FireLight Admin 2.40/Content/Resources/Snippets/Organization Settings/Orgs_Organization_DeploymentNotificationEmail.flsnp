@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>In the <b class="Bold">Deployment Notification Email</b> text box, enter  the email address to receive deployment notification emails for the organization. You can enter multiple email addresses separated by semicolons. If distributors add deployment notification email addresses in their Organization Configuration/Organization Settings pages on the Organization tab, notifications of Distributor configurations that any of their carriers deploy will also be sent to the distributors.</body>
+</html>

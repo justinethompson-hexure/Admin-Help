@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Address security finding of Insecure Deployment: Unpatched Application (jQuery-UI). To address security issues, Hexure patched the existing version 1.10.4 of the jQuery UI in FireLight version 2.26 instead of updating wholesale to a newer version. The patch minimizes the impacts to clients' CSS files. This requires regression testing of the base system.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>CSS</p>
+            </li>
+            <li>
+                <p>FireLight UI</p>
+            </li>
+            <li>
+                <p>Branding behavior</p>
+            </li>
+        </ul>
+    </body>
+</html>

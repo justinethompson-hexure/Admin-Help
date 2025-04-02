@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="Review Queue Guide PDF Print Target"
+  Type="PDF"
+  Destinations=""
+  MasterToc="/Project/TOCs/RevQWordTOC.fltoc"
+  MasterPageLayout="/Content/Resources/PageLayouts/Word8_5X11/2017WordNormal8_5X11.flpgl"
+  ConditionTagExpression="include[&quot;General.FL 2.23&quot; or General.PDF]exclude[General.Internal or &quot;General.Next Release&quot; or General.Online or &quot;General.PDF - UGuide&quot; or General.Postpone]"
+  PatchHeadingLevels="true"
+  InjectBookHeadings="false"
+  MasterStylesheet="/Content/Resources/Stylesheets/2017MainStyles.css">
+  <PrintedOutput
+    CollapseMargins="false"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false"
+    ExpandingTextConversion="expand"
+    PopupConversion="remove-body" />
+  <DocumentProperties
+    Title="FireLight Review Queue Guide"
+    Author="" />
+  <PDF
+    ShowUsedBookmarks="false"
+    Tagged="true"
+    PageLayout="OneColumn"
+    TitleBar="FileName"
+    DownsampleImages="true"
+    ImagePPIThreshold="250" />
+  <Destinations></Destinations>
+  <Variables>
+    <Variable
+      Name="General/UserGuideTitle">FireLight Review Queue Guide</Variable>
+    <Variable
+      Name="General/DocumentName">Review Queue Guide</Variable>
+    <Variable
+      Name="General/PlatformUserGuideTitle">FireLight Review Queue Guide</Variable>
+  </Variables>
+</CatapultTarget>

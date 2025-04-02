@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>In the <b class="Bold">Time Out</b> text box, enter the amount of time that information in the field will remain visible in periods of inactivity. Enter the number of seconds for the data to remain visible. An entry of zero (0) = None, which means data is obfuscated immediately.</body>
+</html>

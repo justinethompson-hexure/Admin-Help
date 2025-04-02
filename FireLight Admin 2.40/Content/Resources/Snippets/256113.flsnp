@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This base enhancement will update the existing data copy feature within the form environment to include a Wizard as the source of the data to be copied. Similarly, the existing data copy feature process within the Wizard environment is enhanced in allow a form to serve as the source of the data to be copied.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Form Designer: Copy Field Dialogue box to be enhanced to include Wizards in the "Copy From" dropdown list.</p>
+            </li>
+            <li>
+                <p>Wizard Designer: Add a "Copy Field" option to the "Page Options" list in the Wizard so that a  "Copy Fields" dialogue box (that resembles the current form dialogue box) is presented in the Wizard that will list forms in the "Copy From" dropdown listing </p>
+            </li>
+        </ul>
+    </body>
+</html>

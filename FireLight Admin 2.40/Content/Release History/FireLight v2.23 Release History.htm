@@ -1,0 +1,553 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight v2.23 Release History</h1>
+        <h2>2.23.83 March 29 UAT / April 1, 2022 Production Patch Release</h2>
+        <p><b class="DRNumberBold">Activities</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 260133 </b> Illustration API - FLI_SUB_FIRM_ID not being passed to FS. Problem: With the common tag data item changes in the Feb. release (2.23), several places that previously added or updated data items were now only updating the data item if it existed, and were no longer adding the data item if it didn't exist. Resolution: Corrected the code to add the data item if it doesn't exist. <br />Areas Impacted: Illustration API, "FLI_" prefixed data items passed in the request, AppManager.RequestTxLife103, AdditionalDataItems property, EditWizardController.UploadParticipantDocument (enrollment activity)</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 260507 </b> Enrollment activity not working in Production due to reliance on benchmarking logic. Problem: The implementation of the enrollment feature inadvertently relies on the benchmarking feature, and because benchmarking is not enabled in Production (by design), this causes problems with enrollment workflow. Resolution: Enabled the initial rule run logic for benchmarks in Production so the enrollment activity initialization will work correctly.  The actual benchmark functionality will remain disabled. <br />Areas Impacted: Initialization of applications from enrollment activity</p>
+            </li>
+        </ul>
+        <h2>2.23.81 March 17 UAT / March 18, 2022 Production Patch Release</h2>
+        <p><b class="DRNumberBold">Activities</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 254472 </b> Rulesets do not appear to run until saved. Problem: We are becoming more suspicious that this problem is due to caching.  We actually cache the rule script code as well as the deserialized rule definitions.  The script code is cached internally, but the cached definitions are exposed to the rules engine, and if the cached definition was modified in some way, it could conceivably result in behavior like you are describing.  Whenever a rule set is saved, it is discarded from the cache and reloaded from the database, which could explain why the problem clears up for a time after saving a rule set.  Then at some later point, if the cached definitions change, the strange behavior could recur.  Cached items are also dropped out of the cache after 2 hours, which could explain the problem disappearing for periods of time. We're not seeing where the rule definitions would be modified, but it seems worth it to at least rule that out as a possibility.  If this doesn't resolve the issue, then we will know it wasn't the cause. Resolution: Modified the rule set caching to only cache the rule script code and not rule definitions. Note that this could have an impact on memory usage and processing time when loading rules for activity data entry. <br />Areas Impacted: Loading and execution of rules</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 254568 </b> Illustration to Application, not able to edit App. Problem: Updating from an illustration would make the transferred data items readonly, regardless of the 'Lock Transferred Data Items' setting in the Illustration activity. Resolution: 'Lock Transferred Data Items' setting in the Illustration activity when updating existing app from an illustration.  NOTE: organizations that want the data items to be readonly will need to check 'Lock Transferred Data Items' in their Illustration activity if they want to retain the old behavior. <br />Areas Impacted: Read-only state of transferred data items in Update from Illustration</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DRs 258960, 259439 </b> Illustration - Value with % sign are divided by 100 and Annuities - Index allocations changing after generating illustrations. Problem: The Data Item conversion for 2.23 caused a change to the illustration app data mapping to modify the application's original data when converting the data to an appropriate format for the web request. This caused percentages to change in the app after running an illustration, as well as modifying some other fields of data. Resolution: We new create a new data items collection at the beginning of the mapping process that isolates the changes from the original data. <br />Areas Impacted: FireLight Illustrations App Data Mapping</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR&#160;258973 </b> Policy number no longer seen on copied apps during signing ceremony and on generated PDF. Problem: Data items changed by rules were sometimes not sync'ed back to the data items collection. Resolution: Correctly sync'ed the rules changes to the data items collection in all scenarios after the rules run. <br />Areas Impacted: Form only - Initializing and reinitializing the forms model</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 259423 </b> UI Not Refreshing after CustomAction. Problem: Async task data changes were not applied correctly and therefor the rules didn't run until the selected page is already validated and processed. Resolution: Committed the async task changes immediately and run rules before we validate the selected page. <br />Areas Impacted: Processing pending async task data changes</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Admin</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 259604 </b> Designer not allowing field names with | vertical bar character. Problem: The merge into the release branch mistakenly reverted the change for iConnect 256066, reintroducing that bug into the 2.23.79 release. Resolution: Put back the original code prior to the merge.<br />Areas Impacted: Allowed field names in the form and wizard designer</p>
+            </li>
+        </ul>
+        <h2>2.23.79 March 4 UAT / March 8, 2022 Production Patch Release</h2>
+        <h2>Fixed Defects</h2>
+        <p><b class="DRNumberBold">Activities</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR&#160;259110 </b> Application errors when selecting commission/fee option at the beginning of Rate Lock apps. Problem: Changes for common tags could result in an error executing rules when syncing the data item collection if it recorded the removal of a common tag data item that didn't exist. Resolution: Added a null check to skip removal of a non-existent data item. <br></br>Areas Impacted: Data entry with common tags</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Addendum Forms with Localized Text</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR&#160;258856 </b> Addendum headers in French are wrapping and causing text to overlay. Problem: The French text in the header is longer than the English version. The space provided for the rendering was not large enough and the text was wrapping and overlaying. Resolution: Changed the layout of the two header items. The French text wraps and does not interfere with the second column header. <br></br>Areas Impacted: This should only affect Localized Clients using Addendum forms</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Admin</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 258951 </b> Unable to edit rules from wizard designer. Problem: Changes for iConnect 250574 "Lock notification to prevent multi-user overwriting - Rule Set, Form and Wizard" introduced a bug that could result in an array index being exceeded because the code was using the active rule position (within the selected rule set) to index into the rule set collection. Resolution: Corrected the code to use the active rule set for lock information, instead of looking up a rule set in the collection based on the active rule position. <br></br>Areas Impacted: Editing of rules for the selected field from the wizard designer</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 259025 </b> Checked Canadian provinces are unchecking themselves on rule sets after saving. Problem: Changes for iConnect 250574 "Lock notification to prevent multi-user overwriting - Rule Set, Form and Wizard," the result being that it isn't loading the jurisdiction approvals for higher jurisdiction IDs (&gt; 63).  If the rule set is then saved, without those jurisdictions being re-checked, those jurisdictions will no longer be approved for the rule set when utilized in app. Resolution: Fixed to load additional jurisdiction approvals that are stored for the rule set. <br></br>Areas Impacted: Display of jurisdiction approvals in Admin -&gt; Rule Sets</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Embedded: Print Forms</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR&#160;258915 </b> Suitability paperwork is not displaying in Print Forms. Problem: When the activity runs rules for the first time when opening a packages gets included. This new package gets included in the users session but does not get saved correctly to the DB. When printing the DB is queried and the correct packages are not listed. Resolution: This was a timing issue. The model that manages the current "Save" state of the activity was not initialized and the IsDirty flag on the model was not getting set early enough. <br></br>Areas Impacted: Embedded activities that add/remove packages on initial startup.</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 259188 </b> Loading of PDFs for print not working from BO doc service or REST API. Problem: Loading of documents for the BODocumentService.PrintPDFs method is no longer loading documents.  This is a side effect of the fixes for iConnect 254670, which changed the call to get the application information in such a way that the app packages are no longer loaded, which is now required when loading of the documents for print in GetPrintPDFs -&gt; LoadPrintOrder -&gt; GetFormDefinitionListForPrint (due to changes for iConnect 257996). NOTE: This issue also impacts the REST API GetDocumentList and GetActivityPDF calls. Resolution: Corrected the code to load the app packages. <br></br>Areas Impacted: BODocumentService.PrintPDFs, REST API GetDocumentList, GetActivityPDF</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Provider</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 258539 </b> 'Agent Data Collection Form' not populating with required data. Problem: The provider call from the rules engine was passing the data items collection without the recent rules changes. Resolution: Pass the updated data item collection. <br></br>Areas Impacted: Rules engine calls to provider.</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Review Queue</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DRs 258908, 258921 </b> Reviewer Documents - Expected values from application not mapping into Reviewer Documents. Problem 1: Changes for common tags had the effect of activity data items from the source activity no longer transferring to the first reviewer documents app. Resolution: Corrected the logic to copy the data items. Problem 2: The logic to load the original activity data into the reviewer doc app was still not working correctly if the reviewer document form contained fields with common tags. Resolution: Exclude common tag data items when determining whether to copy the source activity data items. Patched Production on 3/2/2022.<br></br>Areas Impacted:&#160;The first reviewer docs app for an activity in the review queue (sequential queue copying of data was not affected), pre-filled data on the first reviewer docs app for an activity in the review queue</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Wizards and Forms</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR&#160;258926 </b>  Wizard - issues with field values and form inclusion during data entry - The Ownership Structure will not hold the value. Problem 1:  The dynamic drop-down would generate the correct drop-down values but would lose the values if you turn the page.  It would hold the values if it was not a newly created app. Resolution: The dataitem that holds the drop-down values was not being included in the list of dataitems for the page until after the rules had run and the model reinitialized when re-opening the case.  Moved the initializing of the page dataitems to after the rules dataitems are created. Problem 2: The dataitems were updating based on the conditional packages and the rules do not run in a consistent order, so sometimes it would not include the dataitem with the drop-down values when creating the page view and would only get added when the case was re-opened. Resolution: Added an update to the page map of dataitems to update the page maps if there have been dataitems updated based on the adding/removing of conditional packages. <br />Areas Impacted: Field updates in wizards, Conditional packages</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR&#160;259190 </b> Wizard - Dropdown (Combo Box) Options Blank when reloading activity. Problem: The issue is not due to it being a distributor, and is not due to setcomboitem rules.  For FPS-2980 (TFA), there are no such rules for SA_EMPLOYER_STATE. Rather, the issue is that the distributor has wizards in the sales agreement, so the combined forms+wizard UI is used for data entry rather than the legacy forms UI (which is used in the carrier).  Due to changes for iConnect 258527 (and possibly other scenarios), the "item source postfix" data item can be empty, and when the activity is reloaded, this results in the drop-down values being cleared (the same behavior that would [correctly] occur if the combo items rule did clear all of the items).  The check for the postfix data item should be treating an empty value as not being initialized from rules (since, if all items were removed, the string would contain an empty json list, which is not null or empty with the common tags changes that have been implemented). Resolution: If the drop-down item source postfix data item is empty, use the item source of the underlying field rather than initializing with an empty drop-down list. <br />Areas Impacted: Populating of combo drop-downs in the combined wizard+forms UI when reloading an activity.</p>
+            </li>
+        </ul>
+        <h2>2.23.71 February 25, 2022 Production Release</h2>
+        <p MadCap:conditions="General.Postpone"><b class="Bold">NOTE: Documentation for this release is currently incomplete and in a "DRAFT" status.</b>
+        </p>
+        <h2>Enhancements</h2>
+        <h3>Annuity</h3>
+        <p><b class="DRNumberBold">Commission Netting</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">CMR 252605 </b>
+                    <MadCap:conditionalText MadCap:conditions="General.Postpone">Mitch - in review</MadCap:conditionalText> <em>In Development</em> (Carriers) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/252605.flsnp" />
+            </li>
+        </ul>
+        <h3>Foundation</h3>
+        <p><b class="DRNumberBold">Admin Help</b>
+        </p>
+        <ul>
+            <li>
+                <p>Added the following Spotlight Feature Videos to Admin Help: </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p><a href="https://vimeo.com/670332352/04de4658d3" target="_blank" title="2.23 Enhancements" alt="2.23 Enhancements">2.23 Enhancements</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p><a href="https://vimeo.com/675275662/bbc9fc8376" target="_blank" title="Multi Activity and Enrollment Activity" alt="Multi Activity and Enrollment Activity">Multi Activity and Enrollment Activity</a>
+                        </p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Comma Characters in Custom Lists Not Supported</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/DRAFT 255515 Comma Characters in Custom Lists not supported.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 255515</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone" style="background-color: #32cd32;">Abi - approved</MadCap:conditionalText><em>Client Testing </em>(Carriers and Distributors)  </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/255515.flsnp" />
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Common Tags</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/256914 Common Tag FLApp Enhancements.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 256914</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Cynthia </MadCap:conditionalText><em>Client Testing </em>(Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Common Tags/2-23CommonTags.flsnp" />
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Enrollment Activity  - Child Activity Naming</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">CMR 257473 </b> <em>Client Testing</em> (Carriers and Distributors) </p>
+                <p>Updated the child activity name to the following format: </p>
+                <p class="Indent">[FLI_COMPANY_ID] - [Insured_LastName] </p>
+                <p>If the company ID is not given, the child activity name is in the following format: </p>
+                <p class="Indent">[InsuredLastName]_[InsuredFirstName]_Application</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">FireLight Email Changes</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">CMR&#160;252051 </b> <MadCap:conditionalText MadCap:conditions="General.Postpone" style="background-color: #32cd32;">Mitch - approved</MadCap:conditionalText><em>Client Testing</em> (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/252051.flsnp" />
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Lock Notification to Prevent Multi-User Overwriting - Rule Set, Form and Wizard</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/250574 Lock notification to prevent multi-user overwriting - Rule Set Form and Wizard.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 250574</a></b> <MadCap:conditionalText MadCap:conditions="General.Postpone" style="background-color: #32cd32;">Mitch, Keerti -approved</MadCap:conditionalText> <em>Client Testing </em> (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/250574.flsnp" />
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Review Queue</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">CMR 250011 </b> <MadCap:conditionalText MadCap:conditions="General.Postpone" style="background-color: #32cd32;">Kevin - n/a review</MadCap:conditionalText><em>Client Testing</em> (Carriers and Distributors)&#160;Group Access to PreSubmit Review. </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/250011.flsnp" />
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Web Content Accessibility Guidelines (WCAG Version 2.1) - Orientation and Resize Text</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/256361 WCAG (Version 2.1) - Orientation and Resize Text 2.23.pdf" target="_blank" title="Design Doc" alt="Design Doc">CMR 256361</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Abi </MadCap:conditionalText><em>Client Testing</em> (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/2-23WCAG.flsnp" />
+            </li>
+        </ul>
+        <h3>Life</h3>
+        <p><b class="DRNumberBold">APPS Pending Case Status</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">CMR 252374 </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Erin </MadCap:conditionalText><em>In Development</em> (Carriers and Distributors) This is a continuation of the APPS integration.  </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/252374APPS.flsnp" />
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">ExamOne Integration (Multi-Release)</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">CMR 252374 </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Erin </MadCap:conditionalText><em>In Development</em> (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/252374.flsnp" />
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Milliman Integration</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/PDFGuides/FireLight Milliman Integration Guide.pdf" target="_blank" title="Milliman Integration Guide" alt="Milliman Integration Guide">CMR  253817</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Lawrence - <span style="background-color: #32cd32;">user instructions approved</span></MadCap:conditionalText><em>In Development</em> (Carriers and Distributors)  </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/2-23Milliman.flsnp" />
+            </li>
+        </ul>
+        <h3>Work Orders</h3>
+        <p><b class="DRNumberBold">Add Ability to Have URLs Assigned to Each Form in FireLight that Could Be Shared to Non-FireLight Users</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/252240 Print Form PDF Enhancements.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 252240</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone" style="background-color: #32cd32;">Julie TFS 27593 - approved</MadCap:conditionalText><em>Client Testing </em>(Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/252240.flsnp" />
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Export Results of Searches</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/233156 Export Results of Searches (1).pdf" target="_blank" title="Design Document" alt="Design Document">CMR 233156</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone" style="background-color: #32cd32;">Keerti, Abi - approved</MadCap:conditionalText><em>Client Testing </em>(Carriers and Distributors)</p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/233156.flsnp" />
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Move the Existing Agent Sign Order to Group Level</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/253979 Agent Signing Order.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 253979</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone" style="background-color: #32cd32;">Julie - approved</MadCap:conditionalText><em>Client Testing </em>(Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/253979.flsnp" />
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Show Signatures on (Soft Limit) Addendum Documents</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/251899 Show Signatures on (soft limit) Addendum Documents.pdf" target="_blank" title="Design Document" alt="Design Document">CMR&#160;251899</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone" style="background-color: #32cd32;">Keerti, Abi - approved</MadCap:conditionalText><em>Client Testing </em>(Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/251899.flsnp" />
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Signer Validation for All Signer Type Roles</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/255787 Signing Ceremony Updates - Additional Role Validation.pdf" target="_blank" title="Design Document" alt="Rule Samples:">CMR 255787</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone" style="background-color: #32cd32;">Abi - approved</MadCap:conditionalText><em>Client Testing</em> (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Signatures/2-23SignerValidation.flsnp" />
+            </li>
+        </ul>
+        <h2>Fixed Defects</h2>
+        <p><b class="DRNumberBold">Activities</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR&#160;256959 </b> Template form Popup not showing in legacy forms UI if localized text contains single quotes. Problem:&#160;Some text values in the HTML were surrounded by single quotes. Those quotes were conflicting with quotes within the text itself and causing invalid HTML. Resolution: Changed the single quotes surrounding the text to double quotes to avoid the conflicts. <br />Areas Impacted: These changes only affect Non wizard Activities in Data Entry. Some clients may not be affected if they did not have quotes in the custom messages listed below.</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR&#160;257182 </b> Apps not being transmitted due to properties not reflecting latest application state. Problem: The auto save logic had a bug where upon copying a case the hasValidSignatures flag and the hasErrors flag could be improperly set. Resolution: Jayson B's changes seem to have fixed the hasValidSigantures bug in this iConnect. Tested a submitted app and everything seems to be consistent. <br />Areas Impacted:&#160;All activity transmissions</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 257467 </b> Application Creation is out of SLA. Problem: The common tag feature added an overhead to the creation of the activity data items collection since it needs to through all fields in the activity. Resolution: Added database caching when loading the forms/wizards, when we build the activity data items collection. <br />Areas Impacted: Building the activity data items collection when creating an activity.</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 257624 </b> Apps getting 'stuck' after pre-submit review. Problem: This problem applies when an application has Pre-Signature Review enabled in its activity, and FLI_REQUIREMANUALREVIEW is set to false. If the agent browses back to the application editing page while waiting on signatures to complete, then the process for automatically declining Pre-Signature Review will occur, which will put the app into a state that causes the continue button to get stuck. This seems to be the most common when an agent sends a email request for signing and then completes the agent signing section, then browses back to the application. Resolution: Added check on the application status for automatically declining Pre-Signature Review so the process occurs when locking, not again after locking. This automatic declining of Pre-Signature Review now will only occur if the application status is in a "ActiveApplication" (0) state or a "PendingReview" (7) state, and occurs for Wizards when locking, and Forms when continuing from the Edit Application page. There isn't a way to check if Pre-Signature Review has already been declined so checking to see if we are in the correct state to auto-decline Pre-Signature Review is difficult. This also means that there are a lot of different ways this fix can be tested.<br />Areas Impacted: Applications that use Pre-Signature Review and have FLI_REQUIREMANUALREVIEW set to false</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 257669 </b> Unable to Get Past Signatures Complete. Problem: Not able to continue to review step after signing. Resolution: Removed the condition causing the continue button to not enable when you are not able to save as it does not need to save again before moving to review.  Moved logic for disable save. <br />Areas Impacted: Continue button enable logic</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 257775, 257784 </b> Producer name no longer flooding to application. Problem: With the recent common tag implementation, the provider data item initialization was not adding data items if they didn't exist, and it was only updating them. Resolution: Fixed the provider implementation to add the data item if it doesn't exist. <br />Areas Impacted: Provider data items initialization</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 258115 </b> Sporadic occurrences of submitted applications not completing. </p>
+                <p>Problem (TFS 26998):  Occasionally, an application is submitted, is processed in the BeforeOSJ workflow, but then does not go through the Submit workflow, leaving the status at Submit Requested. Analysis of an occurrence found that the BeforeOSJ workflow completed, deleting of the workflow record timed out, which prevented the Submit workflow from being initiated, resulting in the above behavior. Resolution: Modify the workflow processing to ensure the Submit workflow is always initiated when the BeforeOSJ workflow processing finishes. </p>
+                <p>Problem (TFS 29232): When inserting into the workflow via StartWorkflow, if a WorkflowInstance record already exists for that app, it just updates the workflow, but does not update the WorkflowType.  So if, for instance, a SendAppStatus workflow was initiated but failed, it would remain in the workflow, and if another workflow (for instance SubmitAfterOSJ) was started, it would remain as a 'SendAppStatus' workflow and the SubmitAfterOSJ workflow would never occur. Some workflow types are more important than others. If a SubmitAfterOSJ workflow was started, but remained due to a failure, a SendAppStatus workflow should not replace it in the workflow (but the reverse should).  Resolution: Modify UpdateWorkflow to update the WorkflowType for workflows other than status workflows. <br />Areas Impacted: Submission of applications</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 258189 </b> Duplicate signatures on addendums triggered in the application. Problem: Signature of the same signer are duplicated on the addendum document. Resolution: Change/fixed the way of filtering unique signatures for addendum documents. <br />Areas Impacted: Signatures on addendum documents</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR&#160;258251 </b> Create button showing as grey when creating an application. Problem: An updated component caused this issue and some other issues. Resolution: Rolled back changes for "Outdated and Vulnerable components" which will need to be reviewed and addressed in a future release. <br />Areas Impacted: Activities</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR&#160;258638 </b> Address Autocomplete field not working correctly. Problem: The state mapping was determining the state code type (Acord vs. abbrev vs. state) from the list values, but if the first list value was empty, this wasn't working, preventing the mapping from occurring. Resolution: Exclude empty list values for determining the state type when mapping in address auto complete, CRM, etc. <br />Areas Impacted: State code mapping when mapping fields in address autocomplete and CRM</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 258715 </b> FLI_PERCENT_COMPLETE is not updating in Rules. Problem: With the recent Common Tag feature implementation the FLI_PERCENT_COMPLETE changes were not committed to the Rules correctly. Resolution: Committed the FLI_PERCENT_COMPLETE changes after the field update. <br />Areas Impacted: Updating PercentComplete/FLI_PERCENT_COMPLETE when processing field updates in Rules.</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 258761 </b> Data grids no longer being initialized when displayed via rules. Problem: With the common tags changes, if a setcontrolstate rule with clearondisabled was used with a data grid, the data grid does not get reinitialized properly when made visible by a rule. Resolution: Connect to rules engine data item change events for data grid initialization. <br />Areas Impacted: setcontrolstate/setcontrolrangestate rules on data grids</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Admin</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 248486 </b> Wizard designer data grid control storing custom list GUID instead of list name. Problem: In the wizard designer, custom lists were being identified by Guid (internal ID) rather than name.  So if a wizard was exported and imported into another organization, an error would occur in data entry for the app because the custom list could not be loaded (even if the referenced custom was added for that org, because it would have a different ID). Resolution: With the fix, it now also stores the custom list name in the wizard definition, and then looks up the custom list (for that org) by name, so the above scenario will now work (if the org has that custom list defined). <br />Areas Impacted: Wizard designer Data Grid and Custom Lists</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 255475 </b> Unable to load rule set with rule nodes containing XML character entities. Problem: In the rules editor, popup nodes were being decoded twice, resulting in an error parsing the XML if the content contained character entities. Resolution: Removed the double decoding logic. <br />Areas Impacted: Rules editor</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 255503 </b> Data Group Property has unexpected value when uploading PDF. Problem: logic for displaying dropdown was expecting "None" in the Data Group. when it is uploaded a null is stored instead. Resolution: made the logic for displaying dropdown to handle null. <br />Areas Impacted: Form Designer</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 255549</b> React DatePicker is not localized. Problem: react calendar not localized. Resolution: added localization with date-fns. <br />Areas Impacted: Wizard DatePicker</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 255729 </b> Wizard designer - show a busy indicator during save. Problem: 1) No indicator was displayed while saving a wizard, 2) If the app firewall blocked the request, the user was not informed of the blockage. Resolution: 1) Show a spinner during save, 2) Show the firewall error to the user.<br />Areas Impacted: Wizard Designer save</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR&#160;256217 </b> Form Field Report in admin did not include all forms when pulled report. Problem 1: All forms are not included in the report. Some forms are missing in report. Resolution: Now all forms are included in the report. Problem 2: FormName column is showing only some of the dropdown values. Resolution: The report now shows all values in the respective columns. <br />Areas Impacted: Admin Reports &gt; Form Field Report</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 257665 </b> Radio Button no longer working. Problem: Updating a radio button was not updating the related Data Items by the radio button Group Name. Resolution: Fixed the updating of radio button data item and all the related data items with the same radio button Group Name. <br />Areas Impacted: Radio Button updates</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR&#160;257715 </b> Form Library throwing Generic Error. Problem: The bug fix for TFS 29272 -- "Bug 2.23 Lock Notification- Shows locked status for any Wizard/Form locked by another user when open the Wizard/Form Library from Home page" introduced this bug (as well as TFS 29516 -- "Error When Selecting Back button on the Import Wizard Page," TFS 29529 -- "Bug 2.23 Wizard Library- Create Wizard link throwing error," and TFS 29530 -- "Bug 2.23 Wizard/Form Designer: View in Library link throwing error"). Resolution: A null check was added to the code to prevent the above issues. <br />Areas Impacted: Loading of Form Library and Wizard Library from designer, create form/wizard, import form/wizard</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 257872 </b> Incorrect wizard error message when multiple users edit a rule. Problem: Wrong message was written. Resolution: Changed the message text. <br />Areas Impacted: Form Designer &gt; Rule Window</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 257944 </b> Form history not always deployed with form. Resolution: Modified form deployment to always deploy form history. <br />Areas Impacted: Form Configuration and Distributor Form Configuration deployment</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DRs 257982, 258249 </b> settable rule node is not working correctly with schedule fields. Additional Schedule field issues. Problem: After start age or date is updated in the schedule, the data was not updated until a row was added or removed. Resolution: Made it so the schedule is updated correctly. <br />Areas Impacted: wizard schedule</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR&#160;258069 </b> Sales Agreement Auto Deploy setting becomes unchecked by saving sales agreement. Problem: Auto Deploy setting for Distributor was getting disabled and unchecked after saving the sales agreement. Resolution: Carrier and broker organization were setting back to default after saving the sales agreement caused the issue. This was fixed.<br />Areas Impacted: Auto deployment of sales agreements</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 258245 </b> Form Designer: Unable to edit field properties in Internet Explorer. Problem: Changes for iConnect 255503 used code syntax that isn't supported by Internet Explorer. Discovered additional issues preventing update of field properties (more use of JS syntax that isn't supported by IE). Resolution: 1) Modified to use IE-compatible JS syntax. 2) Moved the definitions for the window.FL_FORMDESIGN back to the top of the script for IE in order to use for the update method. <br />Areas Impacted: Admin form designer, update field properties in IE browser</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 258247 </b> Unable to view a Wizard in Wizard Designer or Wizard Library when using Internet Explorer. Problem: Changes for iConnect 248486 used code syntax that isn't supported by Internet Explorer. Resolution: Modified to use IE-compatible JS syntax. <br />Areas Impacted: Admin wizard designer</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">All Activities</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 255725 </b> All Activities - Text search freezes search results. Problem: All Activities - Text search freezes search results and do not get update on selecting other user from dropdown list. Resolution: Set selected user (from dropdown) in application search criteria. <br />Areas Impacted: All Activities</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 257875 </b> Searches in All Activities is not working on IE. Problem: Changes for TFS 27717 (iConnect 233156) were using JS syntax that is not supported by IE. Resolution: Modified the code to use IE-compatible syntax. <br />Areas Impacted: All Applications view</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 258486 </b> Copy functionality does not bring over all required fields from original to copied application. Problem: With common tags refactoring changes, Read-only, user-entered data items were getting changed to a Source of Base, resulting in the data items not getting copied to the next activity. Resolution: Do not change the data item source to Base.<br />Areas Impacted: Copying of read-only user-entered values</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Console</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 257910 </b> Console Error checking out applications. Problem: Changes for iConnect 257182 introduced an issue where if the comparison value is null, an object reference exception occurs. Resolution: Modified to use string.Equals instead. <br />Areas Impacted: Console checkout</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">E-Delivery</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 255708 </b> Database timeout in e-Delivery workflow. Problem: apps in the e-Delivery pre-submit workflow were failing with a DB timeout when locking the activity.  Previously in 2.22 when using the wrapped DAL, the app lock step was failing with "There is already an open DataReader associated with this Command which must be closed first." Resolution: if a DB timeout occurs during lock when using a separate DAL, attempt to use the wrapped DAL. Also see iConnect 256130 for a related e-delivery fix that was made. <br />Areas Impacted: Locking of activities in the e-Delivery pre-submit workflow</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 256130 </b> e-Delivery presubmit workflow fails if child app is submitted. Problem: e-Delivery pre-submit workflow was failing without submitting the parent app if any of the child apps were already submitted. Resolution: In e-Delivery pre-submit workflow, only submit child e-delivery apps if they are not already submitted. <br />Areas Impacted: e-Delivery pre-submit workflow</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 256802 </b> Failed email delivery revokes Client Request. Problem:  E-delivery case submitted without the child case signatures/forms. Resolution:  The issue was that the email for the agent signatures failed the sendgrid processing.  The child case was incorrectly cancelled and since the agent case did not have signatures on it and the child case had the requests cancelled, the agent case submitted when the agent clicked the continue button.  The send grid process for bounced emails was updated to check if the bounced email was the agent email.  If it was the agent email, we will send a notification to the organization email and will not cancel the child case.  If the child case bounced, we will check if the status of the case is still active.  If it is not, we will send an email notifying the agent and the org, but will not cancel the child case. <br />Areas Impacted: Sendgrid processing of failed emails</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 257196 </b> E-Delivery Reissue Data Missing in 1122. Problem:  Reason and description for request reissue not included in the data items sent back in the 1122. Resolution: Can auto save was preventing the data from being saved before the 1122 was created.  Removed the condition and just save data. Added save for change dialog when change has been entered but not yet submitted. <br />Areas Impacted: Saving of data at time of agent requesting reissue of e-Delivery case</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Email</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 256247 </b> Search Items in Automated Emails Not Filling. Problem: The replacement values were not being filled for the passcode email template when used for the final download email. Resolution:  The data was not being passed into the formatting of the template as the default template only uses the passcode value.  Added the application data, as well as the to and from name as other uses of the passcode email have this data available. <br />Areas Impacted: The final and leave behind passcode email that is used when the passcode validation option is selected in the org settings.  Additional data is available for replacement values.</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 257777 </b> Emails from FireLight coming over as raw HTML. Problem: The branding for the reminder emails that are sent through the scheduler were displaying as raw HTML. Resolution:  The emails are now being sent through the new queued process and did not have the necessary info and alternations to the view to generate the HTML email correctly.  Added to the stored message to indicate HTML and the changes for the alternate view.  Emails now display are previously through the scheduled process. <br />Areas Impacted: Emails sent through the scheduled email queue and scheduled reminder emails</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">FireLight Embedded</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 253796 </b> [Set back to Dev Review] FireLight Embedded not notifying the host page when Confirmation Dialogue is canceled. Problem: When a user canceled proceed to signatures or Finish activity, it was impossible for embedded clients to detect and re-enable the button. Resolution: A canceled property has been added to the signatureStatusEvent response. The API now triggers this event with cancelled = true when the dialog is declined. <br />Areas Impacted: Embedded</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 257373 </b> Issues with Submit in Embedded with No Signatures. Firelight Direct functionality should not be in embedded. Problem:&#160;When Embedded clients using the Proxy server and redirecting into FL for ESign and Submission the Embedded flag was not getting set for the session. Without this flag set the toolbar is displayed and exposes unwanted functionality for Embedded clients. Resolution: Added an option to specify the Embedded flag in the SSOGateway. This sets the flag for the session and hides the toolbar. <br />Areas Impacted: Embedded clients using the Proxy server and redirecting to ESign for signatures and submission.</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 257466 </b> Adobe Acrobat Plugin in Chrome Blocks Instech's Popups at Print PDF, end of AOE. Problem: When embedded clients using the proxy server were choosing to print AND the browser has a PDF viewer extension installed the PDF extension was re-requesting the PDF and the Proxy server was not allowing the second request. Because the second request failed the PDF failed to display. Resolution: We changed the proxy server from only allowing a single use access token to allowing the access token to expire after a short period of time. <br />Areas Impacted: Embedded Clients using the Proxy server requesting to view the PDF's, with a browser that has a PDF view extension installed (i.e. Adobe PDF Viewer)</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR&#160;258388 </b> No fields/Inputs available for Death Benefit in Embedded Wizard. Problem: With the recent Common Tag feature implementation it was incorrectly updating the version of the supplied data items that hold the default values which caused the VersionManager not to run on these data items to fix any outdated properties. Resolution: Observed the version of the supplied data items. <br />Areas Impacted: Creating an activity with supplied default data items</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DRs 258400 </b> Agent and BD name fields missing. Problem 1: With the recent Common Tag feature implementation it was incorrectly updating the version of the supplied data items that hold the default values which caused the VersionManager not to run on these data items to fix any outdated properties. Resolution: Observed the version of the supplied data items. Problem 2: With the recent Common Tag feature implementation there was unnecessary call to load the form items without expanding the Form/Wizard Definition, in the CreateActivity API which was caching the wrong definitions.  Resolution: Removed this unnecessary call. <br />Areas Impacted: Creating an activity with supplied default data items, creating an activity with the CreateActivity API</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR&#160;258419 </b> Agent Name information is missing on the AOE page. Problem: In some cases, a CreateActivity request resulted in app data items being invisible/disabled (related to changes for common tags). Resolution: Corrected the logic to always deserialize the data items correctly. <br />Areas Impacted: REST API calls accepting data item collections</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 258527 </b> Embedded instance setcomboitems the rules do not appear to be working. Problem: Due to changes related to common tags, on new activities in wizard, when setting dropdown items via the setcomboitems rule node, the drop-down list would not immediately reflect the changes. Resolution: Initialize new apps with the postfix data item used by the drop-down, so that the UI will show the change on the new activity where the data item doesn't exist yet. <br />Areas Impacted: setcomboitem rule in the combined forms+wizard UI for new activities</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 258537 </b> SSO dataitems are not pre-filling in the embedded. Problem: With the recent Common Tag feature implementation it was not handling the CreateActivity API request correctly when the supplied data items passed with null properties. Resolution: Fixed the json deserialization to handle the null values correctly. <br />Areas Impacted: Creating an activity by the CreateActivity API</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR&#160;258617 </b> eSign - Embedded Users Unable to Unlock Application. Problem: The logic for the Sign FirelightAPI's availableActions.isUnlockAvailable and showUnlockDialog was incorrect, with false positives and false negatives. Resolution: Corrected the logic. isUnlockAvailable is now true when on the Signers page of Signing, and false otherwise (while in Signing). <br />Areas Impacted: Embedded / Firelight API</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 258699 </b> Embedded - data grid not rendered correctly on new app when model data is empty. Problem: In some cases, data grid on a new activity isn't rendering properly on a new activity. Resolution: Fixed the parsing logic to handle empty string properly. <br />Areas Impacted: Data grids in embedded using controlstate/visibility rules.</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">FireLight Illustration</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 250340 </b> Exception on Illustration when Clicking on Update Button and the Child Application is Signed. Problem: Updating an illustration that already have linked signed application will throw an exception. Resolution: Error message for updating Illustration with linked signed application. <br />Areas Impacted: Updating illustration</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 255478 </b> Messages are not displaying on Quickview page. Problem: Critical-level messages on the CalcOutputs object to-be-displayed on the Quickview should have been causing the Quickview UI to not be rendered - this was not happening. Resolution: Change the logic to pick up the critical-level messages, and not render the Quickview (but still show those messages to the user. just like with the normal critical messages). Also fixed was an issue where FireLight was interpreting warning-level messages as critical messages. <br />Areas Impacted: Quickview messages</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 257646 </b> UAT Next Illustration Hardstop 2-7-22 (Illustration call returning 401 unauthorized - Last week UAT Next). Problem - While using the Illustration REST API calls would fail with a 500 error. This was caused by a new UserInformation object that was being created each time the property getter was called. This resulted in a null object being used for the users Role Codes. Resolution - The UserInformation object/property is now being created once per request. So, when the users RoleCodes are set they are retained the next time the UserInformation object is used. <br />Areas Impacted: Clients calling the Illustration REST API</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Home Page</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 256443 </b> User unable to login - unknown Activity Type. Resolution: Added null checks to handle null activity type for application. <br />Areas Impacted: Home view, All activities</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Integration</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 258433 </b> Invalid override date when creating products. Problem: In the case where two different products had the same CUSIP, the 103 service would grab one of them without any discernment about the Sales Agreement Start &amp; End dates - this would lead to some cases where an expired product was being used by the 103 processing (and then later, our system would produce an error because the person didn't have access to that product because it's expired). Resolution: Change up the query to prioritize products who had a sales agreement within the StartDate and EndDate. <br />Areas Impacted: All inbound 103 xml's - processing of products</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Print Forms</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 256586 </b> Print forms activity - Error printing forms when data item doesn't exist. Problem: Null reference when data item not found for field. Resolution: Add null checks. <br />Areas Impacted: print for Print Forms activity with optional forms</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 257738 </b> Print Forms / Application Package Wizard Error Message. Problem: With the recent Common Tag implementation the addition of data items was not registering correctly. Resolution: Fixed the Addition and replacing of the data items. <br />Areas Impacted:&#160;Handling adding and replacing data items during initialization, and when packages/forms are changed.</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 257996 </b> Print forms - custom action print not working when rules include additional packages. Problem: The changes for iConnect 255745 were incomplete, resulting in an error still occurring when printing forms activities if rules modified the included packages. Resolution: Instead of reloading the application after invoicing print forms, only update the app status, so that the existing app packages (modified by rules) from the model are retained and used for print functionality.  Also modified the print functionality to always use the model application packages (for all activity types), since that will always be more relevant (even for activities that can be saved). <br />Areas Impacted: Printing of Print Forms activities</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Requests</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR&#160;249554 </b> Firelight Esign Bug Allows Sending Reminder with Expired Link. Problem: The logic to retrieve the sent email requests was showing expired email requests. Resolution: Modified logic to retrieve the emails to not show expired requests. Moved the previous spot to a new location to allow iConnect 255610 to work as well. <br />Areas Impacted: Outstanding Requests dialog</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Review Queue</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 251056 </b> Cannot Disable Pre-Submit Reviewer Completed Application Email. Problem: One piece of the fix for this patched item was lost during the code merge into the next release branch, which had the effect of reintroducing the bug into the 2.22 release. Resolution:&#160;Corrected the code issue in the main branch. <br />Areas Impacted: Submission emails for reviewer</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 252775 </b> User Preferences - Reviewer Name and Address not populating in review step email. Problem: If data items (FLI_REVIEWER_NAMES, FLI_REVIEWER_EMAILS) exist in application data with null or empty values then user preferences data was overwritten by null or empty values. Resolution: Add a condition to check for null or empty values if data items exist (FLI_REVIEWER_NAMES, FLI_REVIEWER_EMAILS) exist in application data. If data items values are not null or empty, we overwrite user preference data, else not. <br />Areas Impacted: Application &gt; Review page</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR&#160;258155 </b> Send Email to Reviewer window stays and 'Send Email Request' button is still enabled after the reviewer email sent. Problem: This is a data issue related to iConnect 250011 - in that iConnect ticket, we changed the internal queue IDs of all PreSubmit queues to match a specific pattern, and then modified the code to use that pattern to determine if a queue is a PreSubmit queue. A number of database syncs across multiple organizations have taken place since the corresponding sql script has been run, and so have overwritten the new PreSubmit queue ID pattern with the old IDs, and now the new code is no longer able to tell if a queue is PreSubmit, which ultimately leads to problems with the PreSubmit review step for any affected organization. Resolution: All these syncs are coming from the UAT databases. It has been determined that we will not be updating those databases (which would prevent the syncs from changing the PreSubmit queue IDs). So, anytime a sync occurs, this problem will come back for the given organization, and we will need to re-run the corresponding script for that organization. The migration scripts that cleans this all up is run across all upper environments on the release date, and this will no longer be an issue past that point.<br />Areas Impacted: PreSubmit review queues</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Validation Messages</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 255757, DR 256611 </b> No error icons (!) to display full warning message when Validation Message Style is "Inline." Problem:&#160;The fix for IC 251129 removed the warning icon, but the full message is truncated when too long and can be display when hovering over the icon. Once the icon was removed there was no way to see the full message. NOTE: This is only an issue when the organization setting specifies to use the "Inline" method for displaying validation messages. Resolution: Modify the HTML and CSS to show/hide the correct image element based on the CSS class name of errorText or errorText--Warning. <br />Areas Impacted: Organizations that are using the Inline style of validation messages would be affected.</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Wizards and Forms</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 250889 </b> Wizard error - HTML Style of name 'background-position-x' is not allowed. Problem: Wizard designer would not save if html style included background css property and had error on background position x. Resolution:  The decoded html sets defaults for background position x and y, among other properties as background is short-hand way of setting background-color.  Added background position x and background position y to list of allowed css properties for the sanitizer.  Also added all errors instead of just the first to the error message dialog. <br />Areas Impacted: Wizard designer save when html checkbox is checked</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR&#160;255745 </b> Conditional Packages Not Printing. Problem: The problem for this is they are using conditional packages and print forms. For printing to work with conditional packages its needs to be saved and print forms does not save never has. Resolution: Made it so the print form pulls the application's package list the model instead of the DB when the ACORD type is print forms. <br />Areas Impacted: Wizard print dialog</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 255803 </b> Next Button is disrupting a wizard panel. Resolution: Other changes to code resolved this issue. <br />Areas Impacted: Wizards</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR&#160;256165 </b> Wizard - client exception reading null DataItem property. Problem: A null reference error was occurring in some situations in the wizard CRM UI. Resolution: Added null checks. <br />Areas Impacted: Wizard CRM</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR&#160;256594 </b> Illustration - Client exception on apply. Resolution: Added null checks. <br />Areas Impacted:&#160;Wizard UI</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 257457 </b> Next Button Overlaying with Image Panel. Problem: An additional issue was found where the overflow was not being handled properly because on initial render scroll height was being set to the client height. Resolution: Handled case by setting the same overflow logic on initial render if scroll height was equal to or greater than client height (instead of simply greater than). <br />Areas Impacted: Applications containing a wizard in the FireLight system</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DRs 258021, 258028 </b> Slow data entry in legacy forms UI. Problem: Changes related to common tags work introduced additional overhead of duplicating data collections when getting data items during data entry.  In legacy forms, the process to fix invalid combos incurred this overhead for every field in the activity, severely slowing field updates. Resolution: Eliminated the data collection duplication. <br />Areas Impacted: This impacts all data entry in FireLight, and could improve load time (for legacy forms and combined wizard + forms UI) as well as updating of fields and other data entry workflows</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DRs 258151, 258310</b> Weird Behavior with the Tables in Distributor Instances. Problem: This behavior was a side effect of two bugs. </p>
+                <ol>
+                    <li>
+                        <p>There is logic in the wizard UI to load custom lists for the activity, but it loads only the app organization's custom lists, so in a distributor organization, the carrier's custom lists were not getting loaded (originally reported in iConnect 208198, but never fixed).  The system compares the timestamp of the custom list with the associated grid information to determine if the grid data needs to be updated due to a list change, but because this list of custom lists doesn't include the carrier's, it always treats the grid data as out-of-date and proceeds to #2. </p>
+                    </li>
+                    <li>
+                        <p>Elsewhere, there is logic in the wizard UI (implemented for iConnect 223527) to "Update the list definition for a grid without (read: attempting not to) replacing user entries."  This logic a) doesn't rely on the custom lists loaded in #1, b) assumes that there is a unique key column for the custom list data (which there isn't for custom list System SubAccounts, associated with grid field Allocation_Data_Grid) and c) apparently does replace user entries in some cases.  Because of issue #1, this replacement logic always executes when opening an activity in the distributor environment, which has the effect of assigning values from one row to other rows of the grid with the same ProductId, which results in the allocation values getting duplicated. </p>
+                    </li>
+                </ol>
+                <p>Resolution: </p>
+                <ol>
+                    <li>
+                        <p>Modified the wizard logic in a distributor environment to also load the carrier's custom lists for the logic to determine if the grid data is out-of-date.  So if the custom list hasn't changed, it will no longer proceed to #2. </p>
+                    </li>
+                    <li>
+                        <p>When the custom list has changed, modified the wizard logic to update the grid list definition only if the column that has been identified as the key column has unique values for each row of the list.  Note that this could still result in the original bug reported in 223527 manifesting in some scenarios (if a custom list not having a unique key column is updated, in-flight apps' grid data associated with that custom list will not get updated).  And apparently the fix for 223527 is incomplete in that it does sometimes replace user entries, and that issue still exists, but will not occur in this scenario.  A more comprehensive review of the original bug and fix would be needed to completely avoid this possibility. </p>
+                    </li>
+                    <li>
+                        <p>After discussion with FireLight development, the client will add a unique identifier Key to their data grids to prevent the issue.</p>
+                    </li>
+                </ol>
+                <p>Areas Impacted: Data grids in combined wizard + forms UI</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 258745 </b> Issue with the Owner/ Annuitant Type Selected. Problem: With changes for common tags, data items for rules vs. data entry were not always being kept in sync, which could result in data item values not having expected values. Resolution: Corrected the logic to keep the data item values in sync. <br />Areas Impacted: Data entry in legacy forms UI</p>
+            </li>
+        </ul>
+        <p MadCap:conditions="General.Online"><a href="#top">Return to Top</a>
+        </p>
+    </body>
+</html>

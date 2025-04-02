@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable Sign Now for Client</b> checkbox to disable the Sign Now option, which bypasses the Client Signature Choice page, so users go directly from the List of Required Signers page to the Send Email To Client To Request Signatures page. E-signature capture can only be done through an external request. </body>
+</html>

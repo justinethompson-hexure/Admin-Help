@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>In the <b class="Bold">Agent Signing Order</b> list, select an option to allow the organization to set the agent signing order by role code. The "Default" agent signing order allows the agent to choose whether to sign before or after client signers. In the list, select "First" (agent must sign first, client signer buttons are disabled until after agent signs),  or "Last" (agent must sign last, agent signer button is disabled until after all clients sign). When the Agent Signing Order is set to Last, the <b class="Bold">Notify Agent When Ready to Sign</b> option becomes available for selection.</body>
+</html>

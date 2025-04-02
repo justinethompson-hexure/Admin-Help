@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p class="Indent">The <b class="Bold">Supported Services and Integration Service Record</b> table displays all certificates and supported services data that are used for authentication within the system. </p>
+        <p class="Indent">
+            <b class="Bold">Guidelines:</b>
+        </p>
+        <ul>
+            <li>
+                <p>When configuring your Organization Security settings, it is important to note that all records must match the provided Certificate and Client Secret assuming the record matches all of the following requirements:</p>
+                <ul style="list-style-type: circle;">
+                    <li>The record is selected in the Enabled column</li>
+                    <li>The record's Services Supported column has the requested action selected</li>
+                </ul>
+                <p MadCap:conditions="General.Online">Example (one row selected in the Enabled column with Embedded in Services Supported): </p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../ImagesAdmin/Capture104.png" alt="Success Example" title="Success Example" MadCap:conditions="General.Online">
+                    </img>
+                </p>
+                <p MadCap:conditions="General.Online">Example (two rows selected in the Enabled column with Embedded in Services Supported):</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../ImagesAdmin/Capture103.png" alt="Failure Example" title="Failure Example" MadCap:conditions="General.Online">
+                    </img>
+                </p>
+            </li>
+            <li>
+                <p>If any of the matching records do not successfully authorize using the request's provided Certificate and Client Secret, the request will fail.</p>
+            </li>
+            <li>The table can have up to 4 certificates per selected supported service. </li>
+            <li>For API/Embedded access, the table can have multiple certificates and keys defined so that the organization can let vendor A in with one certificate/key combination and let vendor B in with another certificate/key combination.</li>
+            <li>By default, every organization has an IDP row. This row cannot be deleted or modified except for the Name property. If there are no IDP certificates for the organization, the IDP row will not do anything because it does not have a valid certificate.</li>
+            <li>Potential supported services include IDP SSO, Embedded, Illustration API, API Access, and Token SSO.</li>
+        </ul>
+        <p MadCap:conditions="General.Online" class="Indent">
+            <img src="../../ImagesAdmin/Capture26.png" alt="Certificates Grid" title="Certificates Grid" MadCap:conditions="General.Online">
+            </img>
+        </p>
+        <p class="Indent">
+            <b class="Bold">Add a New Supported Service Record</b>
+        </p>
+        <p class="Indent">
+            <b class="Bold">NOTE:</b> To enable one or more extra services for your organization, contact your Strategic Account Manager to ensure the correct billing is set up and the database is updated to enable the checkboxes for your organization to add one or more new supported services.</p>
+        <ol>
+            <li>
+                <p>Below the table, click the <b class="Bold">Add New Supported Service Record</b> link to open the Supported Services Configuration dialog.</p>
+            </li>
+            <li>Enter a <b class="Bold">Name</b> for the new service certificate.</li>
+            <li>In <b class="Bold">Supported Services</b>, select the checkbox for the type of service (IDP SSO, Embedded, Illustration API, API Access, or Token SSO).</li>
+            <li>In <b class="Bold">Client Secret</b>, click <b class="Bold">New</b> to generate a new Client Secret. The generated secrets are randomly generated GUID/UUID strings.</li>
+            <li>In the<b class="Bold"> Certificates</b> section, enter a certificate. To enter additional certificates for the record, click the plus (+) sign to open another tab. The table can have up to 4 certificates per selected supported service.</li>
+            <li>Copy and paste the certificate information into the text box.</li>
+            <li>
+                <p>Click <b class="Bold">Save</b> and close the Supported Services Configuration dialog.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../ImagesAdmin/Capture35.png" alt="Supported Services Configuration dialog" title="Supported Services Configuration dialog" MadCap:conditions="General.Online">
+                    </img>
+                </p>
+            </li>
+            <li>In the supported services table <b class="Bold">Enabled</b> column, select the checkbox for the record to enable the service.</li>
+            <li>Click the <b class="Bold">Save Organization</b> button.</li>
+        </ol>
+        <p class="Indent">
+            <b class="Bold">Edit and View an Existing Supported Service Record</b>
+        </p>
+        <ol>
+            <li>In the table, click an item in the <b class="Bold">Name</b> column to open the Supported Services Configuration dialog.</li>
+            <li>View and edit the information as applicable. For example, click the  plus (+) to add another certificate to an existing service.</li>
+            <li>Click <b class="Bold">Save</b> and close the Supported Services Configuration dialog.</li>
+        </ol>
+        <p>
+            <b class="Bold">Add a New Integration Service Record</b>
+        </p>
+        <p>The Integration Service Records are available for known integrated services. Only one record can exist per integrated service type.</p>
+        <p>
+            <b class="Bold">NOTE:</b> Upon expiration, FireLight will automatically update the IXN certificate so clients do not have to update the certificate in the Organization settings.</p>
+        <p>Do the following to add an IXN Integrated Service.</p>
+        <ol>
+            <li>
+                <p>Below the table, click the <b class="Bold">Add New Integration Service Record</b> link to open the Integrated Services Configuration dialog.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../ImagesAdmin/Capture133.png" alt="Add New ntegration Service Record Link" title="Add New ntegration Service Record Link" MadCap:conditions="General.Online">
+                    </img>
+                </p>
+            </li>
+            <li>
+                <p>In the <b class="Bold">Name</b> list, select <b class="Bold">IXN Integrated Service</b>. Select the applicable <b>Supported Services</b> checkboxes.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../ImagesAdmin/Capture136.png" alt="Integrated Services Configuration dialog" title="Integrated Services Configuration dialog" MadCap:conditions="General.Online">
+                    </img>
+                </p>
+            </li>
+            <li>
+                <p>In <b class="Bold">Client Secret</b>, click the <b class="Bold">New </b>button.</p>
+                <p>On the <b class="Bold">Confirm</b> dialog, click <b class="Bold">Update</b>. </p>
+                <p>Next, click <b class="Bold">Save</b>.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../ImagesAdmin/Capture131.png" alt="Integrated Services Configuration dialog" title="Integrated Services Configuration dialog" MadCap:conditions="General.Online">
+                    </img>
+                </p>
+            </li>
+            <li>
+                <p>FireLight adds the IXN Integrated Service to the table.  </p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../ImagesAdmin/Capture134.png" alt="Updated Table with the IXN Integrated Service" title="Updated Table with the IXN Integrated Service" MadCap:conditions="General.Online">
+                    </img>
+                </p>
+            </li>
+            <li>
+                <p>To add another IXN Integration Service Record, the existing IXN Integration Service Record must first be deleted by clicking the red <b class="Bold">X</b> on the right of the Table. Click <b class="Bold">OK</b> on the <b class="Bold">Delete Config</b> dialog.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../ImagesAdmin/Capture135.png" alt="Delete Config dialog" title="Delete Config dialog" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+        </ol>
+    </body>
+</html>

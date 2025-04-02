@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>With this enhancement, agents will have a new option during the signing ceremony to "Sign Later" using a link provided via email. The "Sign Now" option will remain intact for agents who wish to complete signing at the time of activity completion. Providing the option to remote sign using a FireLight link will add flexibility to the base platform and allow agents additional signing options.</p>
+        <p>FireLight will record audits for agent signatures, i.e., Sign Now or Sign Later. Information for both FireLight and non-FireLight agents is captured.</p>
+        <p>Application Signer and Interested Party tables is populated throughout the entire process of data entry and signature ceremony to reflect correct information for reporting and auditing purposes.</p>
+        <p>Impact:</p>
+        <ul>
+            <li>
+                <p>This enhancement will impact signature process for agents. Option to sign the activities via email link is made available to the agents.</p>
+            </li>
+            <li>
+                <p>Embedded APIs will have an impact that are used for Agent remote signing (such as in IXN E-App process, Embedded UIs, etc.)</p>
+            </li>
+            <li>
+                <p>Application Signer table is populated throughout the data entry process. This will allow the table to retain partial information to find out the number of agent parties.</p>
+            </li>
+            <li>
+                <p>Interested Party will store information about the primary and additional agents signing through Sign Now or Sign Later process. To retain the Interested Party info after the purge, System User table is used.</p>
+            </li>
+            <li>
+                <p>New email template is created when an email is sent to the primary or additional agent for Signature.</p>
+            </li>
+            <li>
+                <p>Audit history updated to reflect agent remote sign</p>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>To enable the Common Tags feature for the organization, select the "Enable Common Tags" checkbox in Organization Configuration, <MadCap:xref href="../../../Organization Configuration/Organizations/Activity.htm" title="Activity" alt="Activity">Activity</MadCap:xref> tab. Enter or select a common tag name for the control. FireLight<sup MadCap:conditions="General.Online">®</sup> provides  context-aware suggestions for common tags based on data as it is typed. You can enter search text in the empty search box and/or select from the list of common tags to autocomplete the Common Tag Name property. See <MadCap:xref href="../../../Design/Common Tagging/Common Tags1.htm" title="Common Tags" alt="Common Tags">Common Tags</MadCap:xref> for detailed information and to access spreadsheets of the available common tag names and their associated list values when applicable.</p>
+    </body>
+</html>

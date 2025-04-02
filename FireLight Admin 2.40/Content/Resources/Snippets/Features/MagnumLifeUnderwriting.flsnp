@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <ol>
+            <li>
+                <p>Create a new activity in FireLight. </p>
+                <p>
+                    <b class="Bold">NOTE:</b> All Magnum interview data in a copied FireLight activity is cleared when it is copied.</p>
+            </li>
+            <li>
+                <p>Fill in answers for the pre-underwriting fields in FireLight. The information from the pre-underwriting fields determine what questions to display in the Magnum interview. Click the custom action button. </p>
+                <p>Magnum opens and the underwriting interview appears. The interview questions are specific to the organization and the activity details, such as jurisdiction, issue age, etc. </p>
+            </li>
+            <li>
+                <p>Select or enter an answer to the questions on each page of the interview. You can open the interview multiple times to complete it. </p>
+                <p>Click the <b class="Bold">Previous</b> and <b class="Bold">Next</b> buttons to move through the pages. When you reach the end of the interview, the Next button is disabled. Click the <b class="Bold">Close</b> button to save and exit the interview.</p>
+            </li>
+            <li>
+                <p>The applicable answered questions from the interview are filled into FireLight.</p>
+            </li>
+            <li>
+                <p>At any time while the activity is unlocked before submittal, you can click the custom action button to open Magnum to access and change the data in the interview. </p>
+                <p>If any of the required pre-underwriting FireLight data has changed, the Magnum interview is updated with the most current data. If applicable, new interview questions will appear and some may be removed. For example, a user changes the insured age from 59 to 60, which triggers different questions in the interview.</p>
+            </li>
+        </ol>
+    </body>
+</html>

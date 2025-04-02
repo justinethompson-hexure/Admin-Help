@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This feature will add new email templates for the post-issue activity type. Currently, the system has email templates for different activity types such as e-delivery, pre-sale, quote, illustration, etc., but it does not have template options for post-issue. These email templates are used to automatically send an email at various stages of an activity such as, client fill and sign, when an activity is submitted, when signatures are requested and completed, etc.</p>
+        <p>Today, the post-issue activity uses email templates under the email category of “Activities”. With this enhancement, email templates for post-issue is separated under a new email category of “Post-Issue”. Clients will have the ability to customize email templates specific to post-issue activities.</p>
+        <p>The email templates being added for Post-Issue email category is:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>  Client Request to Fill - Post-Issue</p>
+            </li>
+            <li>
+                <p>  Download Completed - Post-Issue</p>
+            </li>
+            <li>
+                <p>  Signature Request - Post-Issue</p>
+            </li>
+        </ul>
+        <p>Impacts: </p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>New email category, template type and email text is added to screen FLAdmin -&gt; Organization Config -&gt; Email.</p>
+            </li>
+        </ul>
+    </body>
+</html>

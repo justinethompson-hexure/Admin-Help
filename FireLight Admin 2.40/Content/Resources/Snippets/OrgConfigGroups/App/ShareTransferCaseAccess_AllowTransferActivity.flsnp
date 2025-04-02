@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Allow Transfer Activity</b> checkbox to allow the user to transfer an activity to a new owner using the Transfer link on the Other Actions menu in <MadCap:variable name="General.ProductName" />. If this access permission is enabled and the user is the owner of the application, the Transfer link will appear on the Other Actions menu. <MadCap:conditionalText MadCap:conditions="General.Online">See also <MadCap:xref href="../../../../UserGuide/FireLight Basics/Other Actions/Transfer.htm" target="_blank" alt="Transfer [User Instructions]">Transfer [User Instructions]</MadCap:xref>.</MadCap:conditionalText></body>
+</html>

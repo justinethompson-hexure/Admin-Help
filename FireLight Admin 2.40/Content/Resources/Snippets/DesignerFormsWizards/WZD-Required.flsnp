@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>Select the checkbox to make text box fields required without writing any rules for the data item. Selecting the Required property creates and executes the Required rule on the data item at run-time, displaying "Required" as the error message when a rule is triggered.</body>
+</html>

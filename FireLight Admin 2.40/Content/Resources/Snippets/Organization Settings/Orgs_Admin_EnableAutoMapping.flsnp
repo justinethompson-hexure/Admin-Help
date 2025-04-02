@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Enable Auto Mapping</b> checkbox to enable the auto mapping feature for mapping inbound data. This supports mapping data from another source, such as ForeSight<sup>®</sup> or Salesforce, to FireLight. See <MadCap:conditionalText MadCap:conditions="General.PDF">the "Common Tags" topic in the Admin Help</MadCap:conditionalText><MadCap:xref href="../../../Design/Common Tagging/Common Tags.htm" MadCap:conditions="General.Online" target="_blank" alt="Common Tags">Common Tags</MadCap:xref><MadCap:conditionalText MadCap:conditions="General.Online"><![CDATA[  ]]></MadCap:conditionalText> to find a link to a common tags spreadsheet to use for mapping data.</body>
+</html>

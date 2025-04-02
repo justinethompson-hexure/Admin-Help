@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Select the <b class="Bold">Allow NIGO Printing</b> checkbox to allow printing of activities that are Not In Good Order. When a distributor and a carrier have different settings for the Allow NIGO Printing checkbox, the more restrictive organization setting is used. For example, when a distributor has the Allow NIGO Printing checkbox selected and the activity contains forms from a carrier who does not have this checkbox selected, the more restrictive carrier setting is used. When this checkbox is selected, the Print Submitted Only checkbox cannot be selected.</p>
+        <p>
+            <b>NOTE:</b> A group, such as a Home Office user, may be given the ability to print a NIGO activity regardless of the organizational print setting. That user may print an activity that is not at 100% complete even if the organizational setting dictates that an activity must be submitted before the print option is enabled. Group settings will not be overridden by a carrier’s settings in the distributor environments. See the <a href="../../../Organization Configuration/Groups/App.htm#EnablePrintNIGO" target="_blank" alt="Enable Print NIGO">Enable Print NIGO</a> setting in Organization Configuration/Groups on the App tab.</p>
+    </body>
+</html>

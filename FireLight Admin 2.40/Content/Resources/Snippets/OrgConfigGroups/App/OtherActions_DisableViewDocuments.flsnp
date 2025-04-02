@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable View Documents</b> checkbox to disable  the dialog used to view or upload documents to the activity.  If the option Disable View Documents is cleared and the activity is not purged, checked out or transferred, the Documents option is enabled on the Other Actions menu in the Edit Activity page. <MadCap:conditionalText MadCap:conditions="General.Online">See also <MadCap:xref href="../../../../UserGuide/FireLight Basics/Other Actions/Documents.htm" target="_blank" alt="Documents [User Instructions]">Documents [User Instructions]</MadCap:xref>.</MadCap:conditionalText></body>
+</html>

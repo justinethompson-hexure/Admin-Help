@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>With this update, FireLight will extend the status events associated with e-signature for the provider. Base will now alert the provider (raise events) whenever someone starts or completes a signing ceremony instead of just when the first signing ceremony begins and when all signatures are captured. Included in the information that is raised by these events is the signer type / role.  Additionally, Base will raise an event when an application goes from a locked to unlocked state, thus signifying that an e-signature for the application was declined / cancelled. These changes will allow for the provider to send messages to clients regarding the status of e-signatures.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Base will raise more events to allow the provider to track the status of e-signatures and provide updates to clients</p>
+            </li>
+        </ul>
+    </body>
+</html>

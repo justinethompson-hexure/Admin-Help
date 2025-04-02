@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">E-Delivery Sign Only</b> checkbox to provide group access to the E-Delivery Sign Only activity workflow. See <MadCap:xref href="../../../../Features/E-Delivery Sign Only.htm" target="_blank" alt="E-Delivery Sign Only">E-Delivery Sign Only</MadCap:xref> in Features. <MadCap:conditionalText MadCap:conditions="General.Online">See also <MadCap:xref href="../../../../UserGuide/Manage/E-Delivery Sign Only.htm" target="_blank" alt="E-Delivery Sign Only [User Instructions]">E-Delivery Sign Only  [User Instructions]</MadCap:xref>.</MadCap:conditionalText></body>
+</html>

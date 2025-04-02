@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>In the <b class="Bold">Failed Email Notifications</b> text box, enter the email address for sending failed email notifications to your organization via the SendGrid email delivery system. Each environment can have a different email address configured. Agents is notified of any failure through a Message Center message (if the organization does not disable the Message Center) and by email if they have the "Send Message Center Emails" option enabled in <MadCap:conditionalText MadCap:conditions="General.PDF">Preferences</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../../../UserGuide/Preferences/Preferences.htm" alt="Preferences">Preferences [User Instructions]</MadCap:xref></MadCap:conditionalText>. When a permanent email failure is processed, the organization is sent the following information in an email: </p>
+        <ul>
+            <li>
+                <p>Who the email was from</p>
+            </li>
+            <li>
+                <p>Who the email was To (including CC)</p>
+            </li>
+            <li>
+                <p>Which email address the failure was for</p>
+            </li>
+            <li>
+                <p>The failure reason</p>
+            </li>
+            <li>
+                <p>The Subject of the email</p>
+            </li>
+            <li>
+                <p>The body of the original email that failed</p>
+            </li>
+        </ul>
+        <p>This process will also ensure that the failed email address is not the address specified in the "Failed Email Notifications" setting. When displaying history, the message is: "Email failure notification for &lt;email&gt; has been sent to &lt;org_email&gt;."</p>
+    </body>
+</html>

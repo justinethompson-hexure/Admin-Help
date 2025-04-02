@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1><a name="top"></a>Firm Management</h1>
+        <p class="note"><b class="Bold">IMPORTANT!</b> The Firm Management page can be accessed only by the IT Vendor role or the Main Organization Admin "super user" role, but is not available or visible for sub-firms. To enable Firm Management, select the <b class="Bold">Enable Firm Management</b> checkbox in Groups on the <MadCap:xref href="Groups/Admin.htm" title="Admin" alt="Admin">Admin</MadCap:xref> tab. <br />For detailed information, see the design documents for Firm Management<MadCap:conditionalText MadCap:conditions="General.PDF"> in Admin Help.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online">, <a href="../Resources/DesignDocs/263816 Firm Management July 2.25.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 263816</a> and <a href="../Resources/DesignDocs/268110_Firm_Management_Phase_2.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 268110</a>.</MadCap:conditionalText></p>
+        <p>IT Vendor role view provides the ability to add a new firm, as well as the list of firms that have been set up for a main organization with the option to update or delete. </p>
+        <p><b class="Bold">NOTE:</b> The list is a global list that applies in all scenarios, i.e.: Firm 4444 information is global for all Firm Management and does not vary across organizations. Read-only view for the main organization allows a display of only the firms and the data entered by the vendor role.</p>
+        <p MadCap:conditions="General.Online">
+            <img src="../Resources/ImagesAdmin/Capture251.png" alt="Firm Management Page - Active Tab" title="Firm Management Page - Active Tab" />
+        </p>
+        <p class="note"><b class="Bold">NOTE:</b> Only the IT Vendor Role can change information on the Firm Management page.</p>
+        <h2>Firm ID/Case Access Identifier</h2>
+        <p>The “new” Firm will be a different identifier than the “old” hierarchical Firm/Case Access /Office identifier (firm information from FireLight Access will also be tied to the “old” firm / case access identifier).</p>
+        <p>For backwards compatibility, if the group does not have a Firm associated with it, the following fields and data items will be populated with the “old” Case Access firm identifier and name (what is passed in the FirmRegistrationNum/FirmName for the associated agent party in the 1228):</p>
+        <ul>
+            <li>
+                <p>FLI_FIRM_ID data item</p>
+            </li>
+            <li>
+                <p>FLI_CASE_ACCESS data item</p>
+            </li>
+            <li>
+                <p>FLI_FIRM_NAME data item</p>
+            </li>
+            <li>
+                <p>User FirmID property</p>
+            </li>
+            <li>
+                <p>User CaseAccess properties</p>
+            </li>
+            <li>
+                <p>Activity FirmID property</p>
+            </li>
+            <li>
+                <p>Activity CaseAccess property</p>
+            </li>
+        </ul>
+        <p>Going forward, CaseAccess/FLI_CASE_ACCESS should be used instead of FirmID / FLI_FIRM_ID for hierarchical firm related logic, and all base logic related to Case Access by Firm ID will use CaseAccess / FLI_CASE_ACCESS.</p>
+        <p>The following identifiers will continue to be used for the “old” Firm Case Access logic:</p>
+        <ul>
+            <li>
+                <p>FLI_CURRENT_FIRM_ID</p>
+            </li>
+            <li>
+                <p>FLI_CURRENT_FIRM_NAME</p>
+            </li>
+            <li>
+                <p>FLI_ORIG_FIRM_ID</p>
+            </li>
+        </ul>
+        <p>If a group does have a Firm associated with it in Groups profile, the following fields and data items will be populated with the “new” firm information configured in Firm Management profile in Admin:</p>
+        <ul>
+            <li>
+                <p>FLI_FIRM_ID data item (Firm ID)</p>
+            </li>
+            <li>
+                <p>FLI_FIRM_NAME data item (Firm Name)</p>
+            </li>
+            <li>
+                <p>FLI_DTCC_ASC_FIRM_ID data item (Associated Firm ID)</p>
+            </li>
+            <li>
+                <p>FLI_DTCC_ASC_FIRM_NAME data item (Firm Name)</p>
+            </li>
+            <li>
+                <p>User FirmID</p>
+            </li>
+            <li>
+                <p>Activity Firm ID</p>
+            </li>
+        </ul>
+        <h3>Product Access</h3>
+        <p>Regarding creating new activities/products, the system will now limit the products list by Jurisdiction and Jurisdiction defined in the new hyper link in the product access tab. The system does not use the firm ID specifically on the EGApp side. The system only uses the group access product ID.</p>
+        <p>For this new logic, we modified the FillUserGroup method to include two new parameters. These two new parameters are related to the new JurisdictionApproval and AdditionalJurisdictionApproval columns added to the GroupProductAvailability.</p>
+        <p>This new limitation is populated in the AccessibleProductInfoCollection. This new collection contains the jurisdictions for every individual product.</p>
+        <p>Now we need to either call the UserGroup from everywhere we need to restrict products by jurisdiction or pass in the UserGroup object.</p>
+        <h2>Add or Update a Firm</h2>
+        <p><b class="Bold">NOTE:</b> All fields are required to be entered before the Add link or Update link is enabled.</p>
+        <ol>
+            <li>
+                <p>Open the <b class="Bold">Active</b> tab in the Firm Management grid.</p>
+            </li>
+            <li>
+                <p>To add a firm, go to the blank row at the end of the last page of the Active tab for the organization. </p>
+            </li>
+            <li>
+                <p>Enter the <b class="Bold">Firm ID</b>, <b class="Bold">Firm Name</b>, and <b class="Bold">Associated Firm ID</b> for the new firm.  </p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../Resources/ImagesAdmin/Capture252.png" alt="Firm Management - Add New Row" title="Firm Management - Add New Row" />
+                </p>
+                <p>Duplicate names cannot be entered for a Firm Name or Associated Firm ID. When adding a Firm Name or Associated Firm ID that already exists in the database, FireLight<sup MadCap:conditions="General.Online">®</sup> displays an error. Click <b class="Bold">CLOSE</b> to close the message. FireLight returns to data entry so the user can enter a unique Firm ID and/or Associated Firm ID for the row.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../Resources/ImagesAdmin/Capture253.png" alt="Error Message" title="Error Message" />
+                </p>
+            </li>
+            <li>
+                <p>Click the <b class="Bold">Add</b> link to add the firm. </p>
+            </li>
+            <li>
+                <p>If updating an existing firm, make changes in an existing row for a firm and click the <b class="Bold">Update</b> link.</p>
+            </li>
+        </ol>
+        <h2>Delete a Firm</h2>
+        <p><b class="Bold">NOTE:</b> When a user clicks the Delete link to delete a firm, the firm has the IsDeleted flag set to true. The firm will remain in the table until the user either restores the firm or the firm is removed via the Purge Process. This allows FireLight to keep the normal process for deleting entities, maintaining history of deleted firms, and maintaining how FireLight does deployments.  Additionally, it allows users, who accidentally delete a firm, to not be constrained by the uniqueness of Firm ID, Name, etc., when setting the firm back up.</p>
+        <ol>
+            <li>
+                <p>Open the <b class="Bold">Active</b> tab in the Firm Management grid. </p>
+            </li>
+            <li>
+                <p>Click the <b class="Bold">Delete </b>link on the far right of a firm row to delete the row from the Firm Management Active tab.</p>
+            </li>
+            <li>
+                <p>FireLight moves the deleted firm to the Firm Management <b class="Bold">Deleted</b> tab.</p>
+            </li>
+        </ol>
+        <h2>Restore a Deleted Firm</h2>
+        <p><b class="Bold">NOTE:</b> If a firm is deleted via the Purge Process, it will not be available on the Deleted tab.</p>
+        <ol>
+            <li>
+                <p>Open the <b class="Bold">Deleted</b> tab in the Firm Management grid.</p>
+            </li>
+            <li>
+                <p>Locate the firm to be restored and click the <b class="Bold">Restore</b> link on the far right of the firm row in the grid. </p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../Resources/ImagesAdmin/Capture254.png" alt="Firm Management - Deleted Tab" title="Firm Management - Deleted Tab" />
+                </p>
+            </li>
+            <li>
+                <p>FireLight restores the firm  to the Active tab in Firm Management.</p>
+            </li>
+        </ol>
+        <h2>Deploy Firm Organizations</h2>
+        <ol>
+            <li>
+                <p>On the FireLight Home page or on the top navigation bar, in <b class="Bold">Utilities</b>, click <b class="Bold">Deployments</b> to open the Deploy page.</p>
+            </li>
+            <li>
+                <p>In <b class="Bold">Reason</b>, enter a reason for the deployment.</p>
+            </li>
+            <li>
+                <p>In <b class="Bold">Synchronization Scope</b>, select <b class="Bold">Firm Configuration</b>. </p>
+            </li>
+            <li>
+                <p>In <b class="Bold">Organization</b>, select the <b class="Bold">[Organization Name]</b> associated with the Firms to be deployed.</p>
+            </li>
+            <li>
+                <p>Click the <b class="Bold">Load Deployment Information</b> button.</p>
+            </li>
+            <li>
+                <p>In the grid <b class="Bold">Deploy</b> column, select the checkboxes for the Firms to be deployed. Optionally, select or clear the <b class="Bold">Check / Uncheck All</b> checkbox above the grid to select or clear all the checkboxes in the Deploy column.</p>
+            </li>
+            <li>
+                <p>Choose deployment options to complete the deployment. See <MadCap:xref href="../Utilities/Deployments/Deploy Data.htm" title="Deploy Data" alt="Deploy Data">Deploy Data</MadCap:xref> for deployment options.</p>
+            </li>
+        </ol>
+        <h2>FireLight App Side Support for Firm Management</h2>
+        <p>The Application side of FireLight supports the state availability for sub-firms selected in Groups; product availability by state as determined in Groups via the Product Access tab product hyperlink is what is shown for state availability in the application activity for the specified product.</p>
+        <ul>
+            <li>
+                <p>The TC of the UserRoleCode under OLifeExtension in the 1228 is used to identify the user's group / Sub Firm if they have one.</p>
+            </li>
+            <li>
+                <p>If a user is a member of a Sub Firm, the TC will begin with a group identifier, and be separated from the TC by an underscore.</p>
+            </li>
+            <li>
+                <p>The group identifier is used in the admin side to query for all role codes that belong to that group/Sub Firm.</p>
+            </li>
+            <li>
+                <p>The group identifier is set up during onboarding and will not be editable in the Admin tool to ensure that it is not changed.</p>
+            </li>
+            <li>
+                <p>	FLI_FIRM_ID and FLI_CASE_ACCESS is set to the same if the group/Sub Firm is NOT specified.</p>
+            </li>
+        </ul>
+        <MadCap:pageBreak />
+        <p MadCap:conditions="General.Online"><a href="#top">Return to Top</a>
+        </p>
+    </body>
+</html>

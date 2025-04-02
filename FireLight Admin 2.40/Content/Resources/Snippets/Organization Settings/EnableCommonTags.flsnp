@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The Enable Common Tags checkbox is cleared (unchecked) by default, so no Common Tags synchronization between the carrier and distributor occurs. Select the checkbox to allow the Common Tags to synch automatically between a carrier and a distributor. Both parties, carrier and distributor, must have the “Enable Common Tags” checkbox selected (checked) to allow for this automatic synch process. </p>
+    </body>
+</html>

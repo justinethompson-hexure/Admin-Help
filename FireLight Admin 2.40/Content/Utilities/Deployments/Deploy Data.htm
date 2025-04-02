@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Deploy Data</h1>
+        <h2>Guidelines</h2>
+        <ul>
+            <li>To receive deployment notification emails, enter one or more email addresses in the <a href="../../Organization Configuration/Organizations/Organization.htm#DeploymentNotificationEmail" target="_blank" alt="Deployment Notification Email">Deployment Notification Email</a> field on the Organization tab of the Organizations Settings page in Organization Configuration.</li>
+            <li>When viewing or uploading Fee data in UAT, it is actually stored in Staging.  This is because there is only one DTCC test region, which is another potential source of the fee data for carriers that utilize it, and regardless of the source (manual upload or DTCC), the fee data is stored in the FireLight<sup MadCap:conditions="General.Online">®</sup> DTCC subsystem.  It is accessible from UAT and/or Staging to allow testing in either environment, but it resides only in Staging.  Fee data that comes from DTCC cannot be deployed – instead, it must be passed through the DTCC production region.</li>
+            <li>Carriers use the non-Distributor configurations in Synchronization Scope to deploy their data to the next carrier environment, and they use the Distributor configurations to deploy their products/packages/forms to distributors.</li>
+            <li>Distributors use the non-Distributor configurations  in Synchronization Scope to deploy the distributor products/packages/forms, etc., to the next distributor environment, and they use the Carrier Only configurations to deploy the carrier products/packages/forms, etc., to the next distributor environment.</li>
+            <li>When Auto Deploy is enabled in UAT on the <MadCap:xref href="../../Product Configuration/SalesAgreements.htm" target="_blank" alt="Sales Agreements">Sales Agreements</MadCap:xref> page in Product Configuration, auto deploy will be in effect for all carriers to that distributor from carrier UAT to distributor Staging. Otherwise, if the distributor enables Auto Deploy in Sales Agreement settings for a given Carrier Org, auto deploy will be in effect for that carrier to the distributor from carrier UAT to distributor Staging. In Staging, if the distributor organization enables Auto Deploy in Organization settings &gt; Admin, auto deploy will be in effect for all carriers to that distributor from carrier UAT to distributor Production (or from carrier Staging to distributor Production). Otherwise, if the distributor enables Auto Deploy in Sales Agreement settings for a given Carrier Org, auto deploy will be in effect for that carrier to the distributor from carrier UAT to distributor Production (or from carrier Staging to distributor Production). </li>
+            <li>If a carrier has the Deploy Email Group added on the Sales Agreements page for a distributor, the distributor emails recipients are notified of carrier deployments that may affect the users' experience for that carrier's deployment configurations in the distributor environment, regardless of the distributor Auto Deploy setting.</li>
+            <li>The system does not allow deployments from Production to prevent overwriting data in Staging.</li>
+            <li>
+                <p>When an admin user for a Firm Org is logged in, they have access to Deployments. However, that access is greatly restricted. Admin users of the Firm Orgs have the Synchronization Scope default to "Group Configuration," and that is the only item available to them from the dropdown list. The list of Groups  they see is only Groups that are associated with their organization.</p>
+            </li>
+        </ul>
+        <h2>Process</h2>
+        <p>Use the Deployment tab on the Deployments page to move new or updated data from the UAT environment (where all of your development and your testing occurs) to the Staging environment and then to the Production environment. </p>
+        <ol>
+            <li>
+                <p>Ensure you are logged in to the correct environment (UAT or Staging) for the deployment. </p>
+                <p>
+                    <img src="../../Resources/ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" /> The environment name appears to the left of the navigation bar.</p>
+            </li>
+            <li>
+                <p>On the navigation bar, click <b>Utilities/Deployments</b> to go to the Deployment tab on the Deployments page.</p>
+            </li>
+            <li>
+                <p>In the <b>Synchronization Scope</b> list, select a configuration. The default is <b class="Bold">Select Scope</b>, which speeds the loading of the Deployments page.</p>
+                <p class="hangingindent"><b class="Bold">All Configuration</b> includes additions and changes to the top level of data (Activities, Custom Lists, Products, Quote data, Forms/Wizards, Packages, Sales Agreements, and Rule Sets). Carriers use the All Configuration to promote changes, including Sales Agreements, to their next environments. Distributors use the All Configuration to deploy distributor information to their next distributor environments and to deploy carrier information to their next distributor environments, including Sales Agreements, when not using Auto Deploy. <b class="Bold">NOTE:</b> Activity data is part of the All Configuration, but some of the Activity data is part of Branding (Activity Name, Apply Label &amp; Messages). If the user changed the name, label, or messages in Activity they should also deploy the Localization/Branding Configuration along with the All Configuration.</p>
+                <p class="hangingindent"><b class="Bold">Commission Netting Configuration</b> (for carriers only) includes each DPfA that can be deployed. Multiple DPfAs can be selected for deployment, but each one selected shows as a single, individual change. See  in Product Configuration.</p>
+                <p class="hangingindent"><b>Custom List Configuration</b> includes additions and changes to custom lists modified through the <MadCap:xref href="../../Organization Configuration/Custom Lists.htm" target="_blank" alt="Custom Lists">Custom Lists</MadCap:xref> page in Organization Configuration.  </p>
+                <p class="hangingindent"><b>Data Item Sync Configuration</b> includes synched Data Items. See <MadCap:xref href="../../Organization Configuration/Mapping.htm" target="_blank" alt="Mapping">Mapping</MadCap:xref> in Organization Configuration.</p>
+                <p class="hangingindent"><b>Fees and Expenses Configuration </b>is used by carriers to deploy manually uploaded fee files from Staging into Production.</p>
+                <p class="hangingindent"><b class="Bold">Firm Configuration</b> includes the Firm additions, changes, and deletions on the <MadCap:xref href="../../Organization Configuration/Firm Management.htm" title="Firm Management" alt="Firm Management">Firm Management</MadCap:xref> page in Organization Configuration.</p>
+                <p class="hangingindent"><b>Form Configuration</b> includes the form and wizard level of data and nothing else. See <MadCap:xref href="../../Design/Designer.htm" target="_blank" alt="Designer">Designer</MadCap:xref>.</p>
+                <p class="hangingindent"><b>Group Configuration</b> includes all changes to the role codes modified through  <MadCap:xref href="../../Organization Configuration/Groups.htm" target="_blank" alt="Groups">Groups</MadCap:xref> in Organization Configuration. </p>
+                <p class="hangingindent"><b>Localization/Branding Configuration</b> includes changes to localization or branding modified through the optional <MadCap:xref href="../../Features/Localization.htm" target="_blank" alt="Localization">Localization</MadCap:xref> or <MadCap:xref href="../Branding.htm" target="_blank" alt="Branding">Branding</MadCap:xref> features. <b class="Bold">NOTE:</b> Activity data is part of the All Configuration, but some of the Activity data is part of Branding (Activity Name, Apply Label &amp; Messages). If the user changed the name, label, or messages in Activity, they should also deploy the Localization/Branding Configuration along with the All Configuration.</p>
+                <p class="hangingindent"><b class="Bold">Mapping Configuration</b> includes changes to mappings modified on the <MadCap:xref href="../../Organization Configuration/Mapping.htm" target="_blank" alt="Mapping">Mapping</MadCap:xref> page, Mapping tab in Organization Configuration.</p>
+                <p class="hangingindent"><b>Organization Configuration</b> includes all data that is specific to the organization, such as email addresses, email messages, corporate information, etc. By design, the IDP Identifier and IDP Certificates are not included in the Organization scope. See <MadCap:xref href="../../Organization Configuration/Organization Settings.htm" target="_blank" alt="Organization Settings">Organization Settings</MadCap:xref> in Organization Configuration. </p>
+                <p class="hangingindent"><b>Package Configuration</b> includes the product, package, rule set, and form/wizard data. See <MadCap:xref href="../../Product Configuration/Packages.htm" target="_blank" alt="Packages">Packages</MadCap:xref> in Product Configuration.</p>
+                <p class="hangingindent"><b>Product Configuration</b> includes additions and changes to <MadCap:xref href="../../Product Configuration/Products.htm" target="_blank" alt="Products">Products</MadCap:xref> and product notifications and nothing else. </p>
+                <p class="hangingindent"><b class="Bold">Repository Product Configuration</b> includes additions and changes to products in the .</p>
+                <p class="hangingindent"><b>Review Queue Configuration </b>includes changes to the review queue script and to review queues modified through Organization Configuration in <MadCap:xref href="../../Organization Configuration/ReviewQueue.htm" target="_blank" alt="Review Queue">Review Queue</MadCap:xref>.   </p>
+                <p class="hangingindent"><b>Rule Set Configuration</b>  &#160;includes changes to rule sets modified through the Form Designer <MadCap:xref href="../../Design/Forms/RulesWindow.htm" target="_blank" alt="Rules Window">Rules Window</MadCap:xref>, Wizard Designer <MadCap:xref href="../../Design/Wizards/Rules Window - Wizards.htm" target="_blank" alt="Rules Window">Rules Window</MadCap:xref>, and through <MadCap:xref href="../../Product Configuration/Rule Sets.htm" target="_blank" alt="Rule Sets">Rule Sets</MadCap:xref> in Product Configuration. </p>
+                <p class="hangingindent"><b class="Bold">Tele-Sign Script Configuration</b> includes additions and changes to the <MadCap:xref href="../../Organization Configuration/TeleSign Scripts.htm" target="_blank" alt="Tele-Sign Scripts">Tele-Sign Scripts</MadCap:xref> in Organization Configuration.</p>
+                <p class="hangingindent"><b class="Bold">Carrier Only All Configuration</b> includes  the top level of data (Activities, Custom Lists, Products, Packages, Rule Sets, Quoting data, and Forms/Wizards). Distributors use this scope to deploy carrier top-level configurations, excluding Sales Agreements,  to distributor environments when not using Auto Deploy. Deployment by a distributor does not impact carrier custom list changes. </p>
+                <p class="hangingindent"><b>Carrier Only Product Configuration</b> includes additions and changes to <MadCap:xref href="../../Product Configuration/Products.htm" target="_blank" alt="Products">Products</MadCap:xref> and nothing else. Distributors use this scope to deploy carrier product configurations to distributor environments if not using Auto Deploy.</p>
+                <p class="hangingindent"><b>Carrier  Only Form Configuration</b> includes only the form and wizard level of data. Distributors use this scope to deploy carrier forms and wizards to distributor environments if not using Auto Deploy.</p>
+                <p class="hangingindent"><b>Carrier Only Package Configuration</b> includes the product, package, rule set, and form/wizard data. Distributors use this scope to deploy carrier packages to distributor environments if not using Auto Deploy.  </p>
+                <p class="hangingindent"><b>Carrier Only Rule Set Configuration</b>  &#160;includes changes to rule sets modified through Form Designer <MadCap:xref href="../../Design/Forms/RulesWindow.htm" target="_blank" alt="Rules Window">Rules Window</MadCap:xref>, Wizard Designer <MadCap:xref href="../../Design/Wizards/Rules Window - Wizards.htm" target="_blank" alt="Rules Window">Rules Window</MadCap:xref>, and through <MadCap:xref href="../../Product Configuration/Rule Sets.htm" target="_blank" alt="Rule Sets">Rule Sets</MadCap:xref> in Product Configuration.  </p>
+                <p class="hangingindent"><b>Carrier Only Custom List Configuration</b> includes only the custom list level of data. Distributors use this scope to deploy carrier custom lists to distributor environments if not using Auto Deploy.  </p>
+                <p class="hangingindent"><b class="Bold">Distributor All Configuration</b> includes  the top level of data (Activities, Custom Lists, Products, Packages, Sales Agreements, Rule Sets, Quoting data, and Forms/Wizards) that are specific to the selected distributors. Carriers use this scope to deploy carrier top-level configurations to distributor environments. Deployment by a carrier does not impact distributor custom list changes.</p>
+                <p class="hangingindent"><b>Distributor Product Configuration</b> additions and changes to <MadCap:xref href="../../Product Configuration/Products.htm" target="_blank" alt="Products">Products</MadCap:xref> and product notifications that are specific to the selected distributors. Carriers use this scope to deploy carrier product configurations to distributor environments.</p>
+                <p class="hangingindent"><b>Distributor Form Configuration</b> includes only the form and wizard level of data. Carriers use this scope to deploy carrier forms and wizards to distributor environments. Select one or more forms and wizards for deployment.</p>
+                <p class="hangingindent"><b>Distributor Package Configuration</b> includes the product, package, rule set, and form/wizard data. Carriers use this scope to deploy carrier packages to distributor environments.  </p>
+                <p class="hangingindent"><b>Distributor Rule Set Configuration</b>  &#160;includes changes to rule sets modified through Form Designer <MadCap:xref href="../../Design/Forms/RulesWindow.htm" target="_blank" alt="Rules Window">Rules Window</MadCap:xref>, Wizard Designer <MadCap:xref href="../../Design/Wizards/Rules Window - Wizards.htm" target="_blank" alt="Rules Window">Rules Window</MadCap:xref>, and through <MadCap:xref href="../../Product Configuration/Rule Sets.htm" target="_blank" alt="Rule Sets">Rule Sets</MadCap:xref> in Product Configuration.  </p>
+                <p class="hangingindent"><b>Distributor Custom List Configuration</b> includes changes to custom lists modified through the Designer page. Carriers use this scope to deploy carrier custom lists to distributor environments. </p>
+            </li>
+            <li>
+                <p> Select an <b class="Bold">Organization</b> from the list. </p>
+            </li>
+            <li>
+                <p>(Optional) Click <b class="Bold">Load Deployment Information</b> to enable the Description, Organization, and Deploy options of the Deployment details or click the <b class="Bold">Cancel</b> button to cancel loading the deployment information. A deployment of all changes can be scheduled without completing this step.</p>
+            </li>
+            <li>
+                <p>(Optional) Type in the text box above the grid to filter deployment information by description. The system filters the deployment items relevant to that particular organization and description and displays only the items available for deployment for the organization.</p>
+                <p><b class="Bold">Example:</b> When Synchronization Scope is set to Product Configuration and the grid shows all product configurations for the selected organization, type <b class="Bold">Annuity</b> in the text box to filter and show only the organization's Annuity products in the grid.</p>
+            </li>
+            <li>
+                <p>When deploying Distributor Configurations, the <b class="Bold">Correct Out-of-Sync Environments</b> checkbox becomes available.</p>
+                <ul>
+                    <li>Leave the checkbox cleared to have the deployment comparison from the carrier UAT to the farthest distributor environment (Production if Auto Deploy is enabled in UAT and Staging).  Deployment to Production includes all necessary updates and succeed, but if any intermediate environment is out of sync, the deployment to that environment could fail.</li>
+                    <li>
+                        <p>Select the checkbox to have the deployment first compare with the next immediate environment, and if any differences are detected, those changes are used for the deployment to all destination environments. This enables deployment to out-of-sync intermediate environments to succeed and be brought back into sync. It is possible that a deployment is successful but not complete to all higher environments, requiring deploying again (one or two times until the items no longer show for deployment) to get all environments updated with the latest changes. Once all environments are back in sync, this option can be cleared, and a single deployment successfully updates all environments.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>If using Force Deploy, select the <b>Force Deploy</b> checkbox before selecting the checkboxes for the updates to deploy. Selecting the Force Deploy checkbox re-loads the list of items for the Production environment. <b class="Bold">NOTE:</b> To enable the Force Deploy feature, go to Organization Configuration/Organization Settings/<MadCap:xref href="../../Organization Configuration/Organizations/Admin.htm" target="_blank" alt="Admin">Admin</MadCap:xref> tab and select the <b class="Bold">Enable Force Deploy</b> checkbox.</p>
+                <p>
+                    <img src="../../Resources/ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" /> <b>Force Deploy</b>  is not available for carriers when deploying to a distributor. The Force Deploy option is available only for carrier-to-carrier deployments and distributor-to-distributor deployments in the UAT environment. </p>
+                <p class="Indent2">Select the <b>Force Deploy</b> checkbox: Carriers select Force Deploy to deploy from the carrier's UAT environment to the carrier's Staging and Production environments in one step. Distributors select Force Deploy to deploy from the distributor's UAT environment to the distributor's Staging and Production environments in one step.</p>
+                <p class="Indent2">Clear the <b>Force Deploy</b> checkbox: Carriers clear Force Deploy to deploy the configuration from the carrier's UAT environment to the carrier's Staging environment. Distributors clear Force Deploy to deploy the configuration from the distributor's UAT environment to the distributor's Staging environment.</p>
+                <p><b>Example:</b> A carrier would select this checkbox when retiring a product so it is no longer available for selling. </p>
+            </li>
+            <li>
+                <p>On the <b>Deployment</b> tab, select the checkboxes for items in the list to deploy to Staging or Production. This list can include items to add, change, or remove in the Production environment. Select or clear the <b>Check/Uncheck All</b> checkbox above the grid to select or clear all of the checkboxes in the Deploy column.</p>
+            </li>
+            <li>
+                <p>On the right, click the applicable <b class="Bold">Product Changes</b>, <b class="Bold">Form Changes</b>, <b class="Bold">Package Changes</b>, <b class="Bold">Sales Agreement Changes</b>, <b class="Bold">Rule Set Changes</b>, <b class="Bold">Custom List Changes</b>, and <b class="Bold">Activity Changes</b> to open a dialog and view the history for the selected items in the grid for the Synchronization Scope. Clicking one of these links shows all changes since the last deployment that is deployed for the current item or  for all selected items, depending on which link you click. The Package Changes, Form Changes, and Rule Set Changes dialogs display the changes in a panel format with search filtering available at the top of the dialog, individual forms, packages, or rule sets listed in the left pane, and Date/Time, Action, Old Value, and New Value columns in a grid format on the right.</p>
+                <p><b class="Bold">EXAMPLE</b>
+                </p>
+                <p>Information about the selected item appears on the right. For example, All Configuration is selected in Synchronization Scope. The pane on the right displays Product Changes, Form Changes, Package Changes, Sales Agreement Changes, Custom List Changes, and Activity Changes for the product selected in the grid on the left. Under <b class="Bold">Total for Selected Items</b>, view the number of all product, form, package, sales agreement, and rule set changes for all selected items on the left since the last deployment for those items.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/Deploy8.jpg" alt="Deploy Page" title="Deploy Page" MadCap:conditions="General.Online" />
+                </p>
+                <p> On the right, click the <b>Form Changes</b> link to open a Form Changes dialog and view all form changes since the last deployment for the item(s) selected in the grid on the Deploy page. </p>
+                <p><b class="Bold">NOTE:</b> The Form Changes,  Package Changes, and Rule Set Changes dialog display the changes in a panel format with search filtering available at the top of the dialog, individual forms, packages, or rule sets listed in the left pane, and Date/Time, Action, Old Value, and New Value columns in a grid format on the right.</p>
+                <p class="ExampleBottom" MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/Capture244.png" alt="Form Changes dialog" title="Form Changes dialog" />
+                    <br />
+                </p>
+            </li>
+            <li>On the upper right of the Deployments page, type a <b>Reason</b> for the deployment.</li>
+            <li>
+                <p><MadCap:variable name="General.ProductName" /> displays deployment process status on the upper right:</p>
+                <p><b>Locked</b> indicates that the request is locked because a deployment process is currently running.</p>
+                <p><b>Not Locked</b> indicates that the request is not locked because a deployment process is not running.  </p>
+            </li>
+            <li>
+                <p>(Optional) On the right, click the <b>View All Scheduled Deployments</b> link to open the Scheduled Deployment List dialog and view Synchronization Scope, Time of Deployment, and Items that are scheduled to deploy. In the Items column, pause the pointer over <b>View Items</b> to display the items that are scheduled to be deployed.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/Deploy9.jpg" alt="Scheduled Deployment List" title="Scheduled Deployment List" MadCap:conditions="General.Online" /> </p>
+            </li>
+            <li>
+                <p>Choose a deployment option.</p>
+                <p><strong>Deploy Now</strong> </p>
+                <p class="Indent">Click the <b>Deploy Now</b> button to deploy the selected Synchronization Scope now. On the <b>Confirm Deploy</b> dialog, ensure the target deployment environment is correct and click the <b>OK</b> button  to deploy the selected data items.</p>
+                <p MadCap:conditions="General.Online" class="Indent">
+                    <img src="../../Resources/ImagesAdmin/Deploy4.jpg" alt="Confirm Deploy dialog" title="Confirm Deploy dialog" MadCap:conditions="General.Online" />
+                </p>
+                <p><strong>Schedule Deployment </strong>
+                </p>
+                <p class="Indent"><b>NOTE:</b> Deployments are scheduled for the Mountain Time zone.</p>
+                <ol>
+                    <li>Click in the <b>Schedule Deployment at (Mountain Time)</b> box and click the deployment date on the calendar. </li>
+                    <li>
+                        <p>In the <b>Schedule Deployment at (Mountain Time)</b> box, change the time of day for the deployment and click the <b>Done</b> button. </p>
+                        <p><b class="Bold">NOTE:</b> The Deploy Now button becomes gray and disabled after selecting a schedule deployment time.</p>
+                    </li>
+                    <li>
+                        <p>Verify the date and time in the <b>Schedule Deployment at (Mountain Time)</b> box and click the <b>Schedule Deployment</b> button.</p>
+                    </li>
+                </ol>
+                <p><strong>Clear a Scheduled Deployment</strong> </p>
+                <p class="Indent">In the <b>Schedule Deployment at (Mountain Time)</b> box, delete the date and time. The Deploy Now button becomes enabled.</p>
+            </li>
+        </ol>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

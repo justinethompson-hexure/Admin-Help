@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Enable Illustration Send Email</b> checkbox to enable the  email that goes to the agent when a user clicks the Send Email button in an Illustration activity. If selected, it enables the Send Email button (next to the Print button) in the navigation bar of the open Illustration. Select the number of days before the email expires in the <b class="Bold">Illustration Email Expiration</b> list below. <MadCap:conditionalText MadCap:conditions="General.Online">See <MadCap:xref href="../../../../Organization Configuration/Email/Illustration/Agent Illustration PDF Output.htm" target="_blank" alt="Agent Illustration PDF Output">Agent Illustration PDF Output</MadCap:xref> in Illustration Email templates.</MadCap:conditionalText></body>
+</html>

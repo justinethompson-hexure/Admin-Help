@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Setup and usage instructions for the Needs Determination activity, which collects the client data ahead of any sale transaction to allow the agent/producer/rep to make a best interest recommendation based on unbiased questions." />
+    </head>
+    <body>
+        <h1><a name="Top"></a>Needs Determination Activity</h1>
+        <p class="note"><a name="top"></a><b class="Bold">Spotlight Video:</b> See the <a href="https://vimeo.com/330067433/d0d6f71199" target="_blank" title="FireLight Needs Determination" alt="FireLight Needs Determination">Needs Determination</a> Spotlight feature video for a demo of Needs Determination.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Needs Determination Activity</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p style="widows: 2;orphans: 2;">The Needs Determination activity collects the client data ahead of any sale transaction to allow the agent/producer/rep to make a best interest recommendation based on unbiased questions.  The distributor and the financial institution will define the questions they want to ask and supply that to FireLight<sup>®</sup> for tagging and workflow setup.  The data collected during the Need Determination can be used in the product filter to eliminate products that do not match the client need.  The process and completed PDFs is part of the audit record.  The completed PDFs is sent to any subsequent applications to be included in the e-Signature and review process if a Needs Determination template form is added to the package.  This entire workflow will create a defensible process for clients.</p>
+                        <p style="widows: 2;orphans: 2;">The Needs Determination activity does the following:</p>
+                        <ul>
+                            <li style="widows: 2;orphans: 2;"> Captures questions via the standard PDF with tags and rules and stores the answers as new data items. These data items can be defined into filter rules to apply to the available product selection in the electronic application process. </li>
+                            <li style="widows: 2;orphans: 2;">Has its own audit report, output, and reporting.</li>
+                            <li>
+                                <p style="widows: 2;orphans: 2;">Uses the rules engine and has access to the same group option functionality as the application, post issue, and sub-pay activity types.  This will allow for different Need questionnaires depending on the group role code.</p>
+                            </li>
+                        </ul>
+                        <p style="widows: 2;orphans: 2;">To support this feature, there is a licensing component for the distributors and for forms tagging. Distributors will need to work with their Strategic Account Manager for pricing. </p>
+                        <p style="widows: 2; orphans: 2;" MadCap:conditions="General.Online">Click the following thumbnail image to view the DOL compliance support sales journey workflow.</p>
+                        <p MadCap:conditions="General.Online" style="widows: 1;orphans: 1;">
+                            <img src="../Resources/ImagesAdmin/Features3.jpg" alt="DOL Compliance Support Sales Journey" title="DOL Compliance Support Sales Journey" class="Thumbnail" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">FireLight Setup</p>
+                        <p class="note" style="widows: 2;orphans: 2;"><b>NOTE:</b> Workflows using the FireLight Needs Determination activity can enable the product filtering feature to filter the list of available products based on entries in the Needs Determination. See "Needs Determination Product Filtering" on this Help page.</p>
+                        <p style="widows: 2;orphans: 2;">Determine the types of Needs Determination workflows for your organization. Submit a Work Order with your Strategic Account Manager to update your SSO, applicable database tables and rules for your organization and for any custom Upload button work, etc. </p>
+                        <p style="widows: 2;orphans: 2;">Workflow Options:</p>
+                        <ul>
+                            <li>
+                                <p style="widows: 2;orphans: 2;">SSO directly into the FireLight<sup>®</sup> Needs Determination activity. SSO opens a new Needs Determination activity with the SSO pre-filled data. Use the ACORD activity type 116.   Submit a Work Order with your Strategic Account Manager to update your SSO. When the  application process begins, data items from the Needs Questionnaire are pre-filled in the product application as read-only fields. To make the pre-filled application fields editable, include the requested editable fields in your Work Order submitted to your Strategic Account Manager.   Also have an additional DocType of Needs Determination with a Document Tag of NeedsDetermination added to your organization's List Profile, so a Needs Determination template form can be added to the application package, which allows the user to print and view the Needs Determination within the application package.  If a template is not added, the document will only be visible only by viewing it in Other Actions/Documents and would then be included last in the final document package for submission to the provider.</p>
+                                <p style="widows: 2; orphans: 2;" MadCap:conditions="General.Online">Click the following thumbnail image to view the DOL workflow for a Needs Determination transaction.</p>
+                                <p MadCap:conditions="General.Online" style="widows: 2;orphans: 2;">
+                                    <img src="../Resources/ImagesAdmin/Needs6.jpg" alt="FireLight Needs Determination Transaction Workflow" title="FireLight Needs Determination Transaction Workflow" class="Thumbnail" />
+                                </p>
+                            </li>
+                            <li>
+                                <p style="widows: 2;orphans: 2;">SSO directly into a new application with the data from an outside Needs Determination activity. Use the ACORD activity type 103. The Needs Determination completed outside of FireLight can be sent as an attachment with the description and document tag of OutsideNeedsDetermination. This type of template cannot be deleted when sent in the post over. </p>
+                                <p style="widows: 2;orphans: 2;">Submit a Work Order with your Strategic Account Manager to update your SSO and an update to your organization's Upload Document types in the list profile database table.</p>
+                                <p style="widows: 2; orphans: 2;" MadCap:conditions="General.Online">Click the following thumbnail image to view the DOL workflow using SSO with a pre-filled Needs Determination.</p>
+                                <p MadCap:conditions="General.Online" style="widows: 2;orphans: 2;">
+                                    <img src="../Resources/ImagesAdmin/Needs5.jpg" alt="SSO with Pre-Filled Needs Determination" title="SSO with Pre-Filled Needs Determination" class="Thumbnail" />
+                                </p>
+                            </li>
+                            <li>
+                                <p style="widows: 2;orphans: 2;">Create a Needs Determination in FireLight using the FireLight Needs Determination activity type available from the New Activity list.  When the application process begins, data items from the Needs Questionnaire are pre-filled in the product application as read-only fields. To make the pre-filled application fields editable, include the requested editable fields in your Work Order submitted to your Strategic Account Manager.  Also have an additional DocType of Needs Determination with a Document Tag of NeedsDetermination added to your organization's List Profile, so a Needs Determination template form can be added to the application package, which allows the user to print and view the Needs Determination within the application package.  If a template is not added, the document is visible only by viewing it in Other Actions/Documents and would then be included last in the final document package for submission to the provider. </p>
+                                <p style="widows: 2; orphans: 2;"><b class="Bold">NOTE:</b> Needs determination documents is attached as NeedsDetermination document tags, illustration as LinkedIllustration, and Account Opening documents as AccountOpening. All other attached documents coming from one activity to the next activity will come over as a document tag of Other.</p>
+                            </li>
+                            <li>
+                                <p style="widows: 2;orphans: 2;">When an advisor starts a new application in FireLight (or starts a new application via SSO), but rules identify that a Needs Determination is required, Organizations need to define in a Work Order whether they want to support an upload or stop the application process. Note that if manual upload is supported, the FireLight Needs Determination product filtering will not occur.</p>
+                                <p style="widows: 2;orphans: 2;"><b>Upload option:</b> The organization can add a template form so FireLight will know that a Needs Determination is required in the application. If a template form requires a Needs Determination and one was not sent in the SSO or pre-filled from FireLight, the system will look at rules to determine if the advisor can proceed and upload the Needs Determination. </p>
+                                <p style="page-break-inside: auto;widows: 2;orphans: 2;"><b>Stop option:</b> Rules need to support presenting an error message if the advisor must stop and begin with the Needs Determination activity. A global dataitem FLI_NEEDS_BASED_APP can be set to True defining that the application is based on a Need activity. Firms can use this dataitem in rules to enforce workflow that requires a Need activity prior to an Application.  A rule can be set to ensure the value is true, and if not, provide notification to the advisor that a Needs Determination must be completed and they should exit the application to fulfill that requirement. Submit a Work Order with your Strategic Account Manager for the error message and rules.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p class="note"><b class="Bold">NOTE:</b> If you would like to rename the Needs Determination activity for your organization, contact your Strategic Account Manager to submit a work order for changing the Needs Determination activity name in the UI system wide, the audit history, emails and reports.</p>
+                        <p><b>FireLight Needs Determination Activity</b>
+                        </p>
+                        <ol>
+                            <li>
+                                <p style="page-break-inside: auto;">Design/Form Library page: Upload the client submitted Needs Questionnaire PDF to FireLight. Also upload a Needs Determination Template form that is added to the product packages. (In the Need Determination to Application Apply process the template form is replaced by the completed Needs Questionnaire form.) For the template form, select the <b>Is Template Form</b> checkbox and in <b>Document Tag</b>, select the <b>NeedsDetermination</b> Document Tag. Select the <b>States</b> where the Needs Determination is approved and click the <b>Update</b> button. <b class="Bold">NOTE:</b> Contact your Strategic Account Manager to have the implementation team add an additional DocType of Needs Determination with a Document Tag of "NeedsDetermination" added to your organization's List Profile.</p>
+                            </li>
+                            <li>
+                                <p>Designer/Form Designer page: Add any custom tags and rules to the Needs Questionnaire form. The data items in the Needs Questionnaire can be defined into filter rules if the product filtering feature on the Organization Configuration/Groups page is enabled. We recommend using radio button controls with export values instead of checkbox controls, which have their export value defaulted to "true."</p>
+                                <p><b>NOTE:</b> FireLight recognizes two FireLight Global data items in the new activity workflow.</p>
+                                <ul>
+                                    <li>FLI_NEXT_ACTIVITY_PRODUCT_CUSIP – the CUSIP configured on the Product</li>
+                                    <li>FLI_NEXT_ACTIVITY_JURISDICTION – the numeric jurisdiction code</li>
+                                </ul>
+                                <p class="Indent">The two data items can be used in a Needs Determination new activity form to skip the standard FireLight new activity workflow and begin the next activity. The source activity (Needs Determination) form can include input controls where the user can select the FLI_NEXT_ACTIVITY_JURISDICTION and FLI_NEXT_ACTIVITY_PRODUCT_CUSIP values. These input controls will generally be either dropdowns or custom lists. <b>NOTE</b>: These lists cannot be retrieved from the database or filtered by the provider. This means the lists that get built by the forms designer may have products that the user is not configured to sell. </p>
+                                <p class="Indent">The logic in the New Activity workflow determines if the source activity contains the above well known data items and attempts to create the next activity based on these values when the user clicks the APPLY button after completing the Needs Determination questionnaire. If successful, the user is redirected to the activity without needing to make selections in the standard FireLight new activity workflow. If the user is not allowed to sell the selected product in the selected jurisdiction, the user is shown a popup explaining why the selection is not valid and the user must go through the standard FireLight new activity workflow.</p>
+                                <p class="Indent" MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/FLIGlobalDataItems1.png" alt="Unable to Create Activity Notification" title="Unable to Create Activity Notification" MadCap:conditions="General.Online" />
+                                </p>
+                            </li>
+                            <li>
+                                <p>Product Configuration/<MadCap:xref href="../Product Configuration/Activities.htm" alt="Activities">Activities</MadCap:xref> page: In the grid at the top of the page, select the <b class="Bold">Needs Determination</b> activity. Ensure <b class="Bold">ACORD Type</b> is set to <b class="Bold">Needs Determination (116-11600)</b>. Update the settings for your organization.  Enter the Continue/Apply label for the Needs Determination activity. On the <b class="Bold">Next Activities</b> tab, move the possible next activities after the Needs Determination is complete from the <b class="Bold">All Activities</b> list to the <b class="Bold">Next Activities</b> list and click the <b class="Bold">Save Activity</b> button.</p>
+                            </li>
+                            <li>Product Configuration/<MadCap:xref href="../Product Configuration/Products.htm" alt="Products">Products</MadCap:xref> page: Add a <b>Needs Determination</b> product and select <b>Preneed</b> or <b class="Bold">Non-Insurance Product</b> in <b class="Bold">Product Type</b>. In the <b>State Approved</b> grid, select the <b>Approved</b> checkbox for each state where the Needs Determination is approved. </li>
+                            <li>
+                                <p>Product Configuration/Packages page: </p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>Add a <b>Needs Determination</b> product package. Set <b>ACORD Type</b> to <b>Needs Determination (116-11600)</b>. Add the Needs Questionnaire form to the package and save the package. </li>
+                                    <li>For each product that will require a Needs Determination, add the <b>Needs Determination Template</b> form to the product package and save the package.</li>
+                                </ol>
+                            </li>
+                            <li style="page-break-inside: auto;">Product Configuration/Sales Agreements page: Select the <b>Needs Determination</b> product in the upper list, move the <b>Needs Determination</b> package from the Available Packages to the <b>Assigned Packages</b> list.  Set <b>Package Duty</b> to <b>Required</b>. Some clients will use a cover page to determine if a Need Determination is required and if that workflow is being implemented, the Need Determination package is conditional and rules will need to be defined in the cover page for when to trigger the Need.</li>
+                            <li>
+                                <p>Organization Configuration/Groups page: </p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>Select a <b>TC Role Code</b> for a group of users in the upper list who will use the FireLight Needs Determination activity. </li>
+                                    <li>
+                                        <p>On the <b>Activity Access</b> tab, select the <b>Needs Determination</b> checkbox. <b>NOTE</b>: This group code does not need to be enabled for users who SSO into FireLight with a pre-filled needs questionnaire and do not use the Needs Determination activity in FireLight.</p>
+                                        <p MadCap:conditions="General.Postpone">Additionally, to require certain role codes to always start with a Needs Determination before an application, clear the <b>Application</b> checkbox. This removes the option of manually selecting New Business Application from the New Activity list.  The user must begin with a Needs Determination and then progress to an application through the Apply functionality from the Needs Questionnaire or from the All Activities page.</p>
+                                    </li>
+                                    <li>On the <b>Product Access</b> tab, select the <b>Needs Determination</b> product for each role code that will use that activity.  This ensures that the advisor has access to the package.  This also allows a firm to define different need determination questionnaires per role code.</li>
+                                    <li>Repeat for each group of users that will use the FireLight Needs Determination activity. </li>
+                                </ol>
+                            </li>
+                        </ol>
+                        <p><b>Outside Needs Determination Attachment in Post-Over</b>
+                        </p>
+                        <ol>
+                            <li>Designer/Form Library page: Upload a template for the Outside Needs Determination form. Select the <b>Is Template Form</b> checkbox. In <b>Document Tag</b>, select <b>Outside Needs Determination</b>. Select the <b>States</b> where the Needs Determination is required and click the <b>Update</b> button.</li>
+                            <li>Product Configuration/Packages page: For each product that will require a Needs Determination, add the <b>Needs Determination Template</b> form to the product package and save the package.</li>
+                        </ol>
+                        <p><b>Outside Needs Determination Document Upload</b>
+                        </p>
+                        <p style="widows: 2;orphans: 2;">You can add an outside needs determination template form to your application package.  This will allow and/or force the upload of a Needs Determination completed outside of FireLight.  Rules can be placed on this template to define if a Needs Determination is required in the application. The system will look at rules to determine if the advisor can proceed to 100%.  This template will need to be set to a Document Tag for Outside Needs Determination on the Forms page. The Outside Needs Template form could include a signature control. Contact your Strategic Account Manager for a Work Order to implement the necessary rules and Document Tag. </p>
+                        <p style="widows: 2; orphans: 2;"><b class="Bold">IMPORTANT!</b>
+                        </p>
+                        <p style="widows: 2; orphans: 2;">The fields that pass from a Needs Determination to an Application are read-only fields. However, a custom action button has the ability to change the data in read-only fields by design. If the needs determination Application has a custom action button on it, an admin user can disable that custom action button by using a rule to hide the custom action button so users cannot change needs determination data within the associated Application. Following is a sample rule.</p>
+                        <MadCap:codeSnippet>
+                            <MadCap:codeSnippetCopyButton />
+                            <MadCap:codeSnippetCaption>
+                                <p>Hide a Custom Action Button</p>
+                            </MadCap:codeSnippetCaption>
+                            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;if&gt;
+    &lt;condition&gt;
+            &lt;compare op="=="&gt;
+                &lt;const value="true" type="String" /&gt;
+                &lt;diget dataitemid="FLI_NEEDS_BASED_APP" /&gt;
+            &lt;/compare&gt;
+    &lt;/condition&gt;
+&lt;setvisibility dataitemid="someCustomActionBtn" &gt;
+    &lt;const value="false"/&gt;
+&lt;/setvisibility
+</MadCap:codeSnippetBody>
+                        </MadCap:codeSnippet>
+                        <p style="widows: 2; orphans: 2;">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <p style="widows: 2;orphans: 2;"><b>FireLight Needs Determination Activity</b>
+                        </p>
+                        <ol>
+                            <li style="widows: 2;orphans: 2;">SSO directly into the Needs Determination activity or from the FireLight <b>Home</b> page or navigation bar, click <b>New Activity</b>, and click <b>Needs Determination</b>. </li>
+                            <li style="widows: 2;orphans: 2;">In the Create New Needs Determination dialog, click <b>Needs Determination</b>.</li>
+                            <li style="widows: 2;orphans: 2;">In the Required Forms dialog, the Needs Questionnaire is selected and locked. Click <b>Create</b>. </li>
+                            <li style="widows: 2;orphans: 2;">In the <b>Create</b> dialog, type a name for the Needs Determination activity and click <b>Create</b>.</li>
+                            <li>
+                                <p style="widows: 2;orphans: 2;">Complete the required information on the Needs Questionnaire form and when form entry is 100%, click the <b>Continue</b> button. </p>
+                                <ul>
+                                    <li style="widows: 2;orphans: 2;">If a signature control is on the Needs template form in the application package, the Needs Questionnaire will proceed without signatures. The signature is collected in the application signature process. </li>
+                                    <li style="widows: 2;orphans: 2;">If a signature control is on the Needs Questionnaire, proceed through the signature process and click <b>CONTINUE</b> on the navigation bar. On the Confirmation Dialog, click <b>Yes</b>. On the transmitted successfully confirmation message, click <b>Close</b>.</li>
+                                </ul>
+                            </li>
+                            <li style="widows: 2;orphans: 2;">
+                                <p>Click <b>APPLY</b> on the navigation bar to proceed with creating a new product application. If the product filtering feature is enabled, the list of available products on the Create New Application dialog is filtered based on the entries made in the Needs Questionnaire form. The Needs Questionnaire is included in the application forms. Completed Needs Questionnaire form fields with data items that match application form field data items will pre-fill into the matching application form fields as read-only. </p>
+                            </li>
+                            <li>
+                                <p style="widows: 2;orphans: 2;">When the application is submitted, the Needs Determination Questionnaire is included in the application documents on the Other Actions menu in Display/Print PDF and Documents listings. On the All Activities page, the Application and related Needs Determination are visible in the list. At the top of the All Activities page in <b>Activity type</b>, select <b>Needs Determination</b> to filter the page view by FireLight Needs Determination activities. A Needs Determination that is tied to an application cannot be deleted unless you first delete the unlocked application and then delete the Needs Determination.</p>
+                            </li>
+                        </ol>
+                        <p style="widows: 2;orphans: 2;"><b>Outside Needs Determination Attachment in Post-Over</b>
+                        </p>
+                        <p style="widows: 2;orphans: 2;">The Needs Determination is completed outside of <MadCap:variable name="General.ProductName" /> and is sent as an attachment with the description and document tag of Needs Determination with the SSO into <MadCap:variable name="General.ProductName" />. The outside Needs Determination form is included in the application like "Other Documents," but it cannot be deleted.</p>
+                        <p style="widows: 2;orphans: 2;"><b>Outside Needs Determination Document Upload</b>
+                        </p>
+                        <ol>
+                            <li style="widows: 2;orphans: 2;">Complete the Needs Determination outside of <MadCap:variable name="General.ProductName" />. </li>
+                            <li style="widows: 2;orphans: 2;">Start a New Business application in <MadCap:variable name="General.ProductName" />.</li>
+                            <li style="widows: 2;orphans: 2;">FireLight displays a message, for example: "This application has one or more Template forms with Document Tag [Outside Needs Determination]. Please upload related documents from Other Actions/Documents."</li>
+                            <li style="widows: 2;orphans: 2;">On the <b>Other Actions</b> menu, click <b>Documents</b>. In <b>Document Type</b>, select <b>Other</b>, browse for the Outside Needs Determination document, and click <b>Upload</b>. </li>
+                        </ol>
+                        <p style="widows: 2;orphans: 2;">The document is added to the list of Application Documents. The uploaded Needs Determination document is like "Other Documents" in that you can delete and replace the Needs Determination document. The document is included in the Other Actions menu, Display/Print PDF documents list, and in the Documents for Application list that the client can download and print.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help  – Design Document: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 147396</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/DesignDocs/147396-DesignApproachForNeedsDetermination.pdf" target="_blank" title="CMR 147396" alt="CMR 147396">CMR 147396</a></MadCap:conditionalText><![CDATA[  ]]></p>
+                        <p>Spotlight Feature Video – <a href="https://vimeo.com/330067433/d0d6f71199" target="_blank" title="FireLight Needs Determination" alt="FireLight Needs Determination">Needs Determination</a></p>
+                        <p>User Guide – <em>FireLight Platform User Guide</em>,  New Activity section, <MadCap:conditionalText MadCap:conditions="General.PDF">"Needs Determination" </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../UserGuide/New Activity/Needs Determination.htm" alt="Needs Determination">Needs Determination [User Instructions]</MadCap:xref> </MadCap:conditionalText>topic </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

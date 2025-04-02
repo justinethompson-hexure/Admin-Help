@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>State Signing Error: If the Signature Box control on the form has the State Signing Error option enabled in Admin and the state selected is not the state where the activity is being signed, a message similar to the following Signing Error message appears. The signer clicks <b class="Bold">OK</b> to close the message and selects another State in the list.</p>
+        <p class="Indent">
+            <img src="../../ImagesAdmin/Capture205.png" alt="State Signing Error Warning Message" title="State Signing Error Warning Message">
+            </img>
+        </p>
+        <p class="Indent">The organization can set the number of state not matching attempts to be unlimited in Admin or the organization can set  a limit on the number of attempts for state not matching. If the number of state mismatch attempts is limited, on the final attempt to sign with the state not matching, a message like the following Signing Error message appears. </p>
+        <p class="Indent">
+            <img src="../../ImagesAdmin/Capture206.png" alt="State Signing Fatal Error Message" title="State Signing Fatal Error Message" />
+        </p>
+        <p class="Indent">The following message appears in FireLight.</p>
+        <p class="Indent">
+            <img src="../../ImagesUserGuide/New Activity/Capture384.png" alt="Activity Is Incomplete Message" title="Activity Is Incomplete Message">
+            </img>
+        </p>
+        <p class="Indent">The agent receives a message and email with content similar to the following.</p>
+        <p class="Indent">
+            <img src="../../ImagesUserGuide/New Activity/Capture385.png" alt="Signaure Submission Error Email" title="Signaure Submission Error Email">
+            </img>
+        </p>
+        <p class="Indent">An audit message is written out for the Signing Ceremony for the signer each time the warning message is displayed during the signature process. If the final configurable base message is presented to the signer, a final audit record is also written out.</p>
+    </body>
+</html>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <strong>Disable Action Email Notifications</strong> checkbox to disable automatic review queue email notifications for users within the selected group. When disabled, the owner of the activity will not receive email notification when the reviewer approves, rejects, or requests more info for the reviewed activity.</body>
+</html>

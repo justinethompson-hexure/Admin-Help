@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Activity Reports Scheduler<a name="top"></a></h1>
+        <p>The Reports Scheduler Tool allows clients to schedule any available Detailed or Summary activity reports from the Admin App. Clients can configure the sending of required reports at a specific </p>
+        <ul>
+            <li>
+                <p>Frequency (Daily/Weekly/Monthly/etc.)</p>
+            </li>
+            <li>
+                <p>Format (CSV/PDF)</p>
+            </li>
+            <li>
+                <p>Send mode (Email or SFTP)</p>
+            </li>
+        </ul>
+        <p>Reports Scheduler can be accessed by users with the proper permissions—granted through the Admin App—to configure activity reports. </p>
+        <p>
+            <img src="../../Resources/ImagesAdmin/EnableViewReportSchedulerjpg.jpg" style="width: 5in;" />
+        </p>
+        <p><b>Note</b>: The Report Scheduler UI will be available in the organization's UAT environment, though the report generation will happen in their production environment. Organizations using SFTP as their delivery method will manage their FTP info on their production environment.</p>
+        <h3>Add New Group Setting to Allow Access to Report Scheduler</h3>
+        <p>A new group setting, Enable View Report Scheduler, is available from FL Admin (UAT) Organization Settings &gt; Groups page &gt;&#160;Admin tab &gt; Enable View &gt; Report Scheduler to provide user groups with access to Report Scheduler.</p>
+        <p>When this setting is enabled for a user group, users from that group can log in to the Admin App to access the Report Scheduler link from the Utilities menu, available from both the homepage and the top menu.</p>
+        <p><b>Note</b>: Managing this setting will be available in the organization’s UAT environment.</p>
+        <p>
+            <img src="../../Resources/ImagesAdmin/ReportScheduler.png" style="width: 5in;" />
+        </p>
+        <p>Users with the Vendor role <i>do not</i> require the group setting to be enabled for their user group. Users with the Vendor role for an organization can log directly in to the Admin App to access the Report Scheduler and view/schedule activity reports for their organization or the organization that they select on the homepage.</p>
+        <h3>Manage Activity Report Schedule</h3>
+        <p>The updated interface allows users with the correct permissions to select existing detailed and summary activity reports and schedule them for their organization.</p>
+        <p>Users can add a new schedule, edit an existing schedule, or delete a schedule for their organization. Using the report scheduler screen, admin users can select available detailed and summary activity reports and schedule them at a frequency as per their need to be sent via email or at an FTP location.</p>
+        <p>Following is the screen for the report scheduler page.</p>
+        <p>
+            <img src="../../Resources/ImagesAdmin/ActivityReports.png" alt="Activity Popup Message" title="Activity Popup Message" style="width: 5in;" />
+        </p>
+        <p>Users can select the following from this page:</p>
+        <p>•	<b>Schedule Name</b>: Name to identify the schedule for a set of reports. This can be duplicated within an organization for multiple report configurations.</p>
+        <p>•	<b>Report Category</b>: Detailed / Summary / Custom</p>
+        <p>•	<b>Report Name</b>: Dropdown listing existing activity reports, based on the report category selected.</p>
+        <p>•	<b>Schedule</b>: Dropdown listing options Daily, Weekly, Monthly, Quarterly, Semi Annual and Yearly.</p>
+        <p>•	<b>Schedule Day</b>:</p>
+        <p>o	When schedule “Weekly” is selected, user can choose day of the week when the report is sent. Default value is “Friday.”</p>
+        <p>o	When schedule is selected as “Monthly,” user can select the day of the month from 1st till last day of the month. Default selected day of the month for "Monthly" schedule is "Last Day of the Month."</p>
+        <p>•	<b>Delivery Method</b>: Email / SFTP</p>
+        <p>•	<b>Recipient Email</b>: When delivery method “Email” is selected, recipient email is mandatory to be entered.</p>
+        <p>•	<b>Report Format</b>: PDF/CSV/Both/Email</p>
+        <p>•	<b>Orientation</b>: Landscape/Portrait</p>
+        <p>•	<b>Report Parameters</b>: When delivery method “SFTP” is selected, this field will show the FTP Host info from the Org Settings page that was saved for activity reports. This field remains in-editable and only for display purpose.</p>
+        <p>•	<b>Description</b>: Section will display the short desc about the selected report.</p>
+        <p>•	<b>Key – Value</b>: This section displays the optional parameter keys for the selected report and value to supplied when generating the report for delivery. The entered value for the key is saved when its checkbox is selected when scheduling the report.</p>
+        <p>FTP&#160;information will be managed from the organization's production environment.</p>
+        <p>A note will appear on the bottom of the page to let the user know that they must add FTP info for the activity reports to be delivered to that location. Also, this info needs to be verified by the FL support team to create an FTP connection pool to be utilized by the activity reports job scheduler.</p>
+        <p>The note is “In case delivery method "SFTP" is selected, ensure that correct FTP credentials to send the Activity Reports are entered on Organization Settings &gt; Admin (tab) &gt; Activity Reports FTP Info (link). Once the FTP credentials are entered request FL Support to open the SFTP firewall to start delivering the report.”</p>
+        <h3>Deleting a Schedule</h3>
+        <p>You can delete a schedule by clicking  “X” next to the schedule on the grid. An alert message,  “Are you sure you want to delete '&lt;Report Name&gt;'?, appears. Confirming this action removes schedule parameters for the report, prevents future delivery to recipients, and cannot be undone.</p>
+        <p>Confirming <b>Yes</b> deletes the schedule.</p>
+        <h3>View Report Schedule History</h3>
+        <p>Audit history of all schedule changes can be viewed in the Schedule History tab on the Report Scheduler page.</p>
+        <p>
+            <img src="../../Resources/ImagesAdmin/ScheduleHistory.jpg" style="width: 5in;" />
+        </p>
+        <h3>View Report Delivery History</h3>
+        <p>The Delivery History tab on the Report Scheduler page displays the delivery status of the selected schedule. When the reports are delivered successfully at the given delivery mode and schedule, it displays “Success” for the delivery date and time. If there was an issue with the delivery, it displays “Failure” along with a link to view the exception detail. Report delivery history can be viewed by both admin users and users with the vendor role.</p>
+        <p>
+            <img src="../../Resources/ImagesAdmin/DeliveryHistory.jpg" style="width: 5in;" />
+        </p>
+        <h3>Duplicate Schedule Alert</h3>
+        <p>When a new report schedule is added or an existing one is editing, there is a check to not allow creating duplicate schedules for a report. An alert is raised when duplicate schedule with below values is selected at the time of creation or editing:</p>
+        <ul>
+            <li>
+                <p>Report Name</p>
+            </li>
+            <li>
+                <p>Report Frequency</p>
+            </li>
+            <li>
+                <p>Report Format</p>
+            </li>
+            <li>
+                <p>Delivery Method</p>
+            </li>
+        </ul>
+        <p>The alert message displayed is "Selected report schedule already exists. Set a different schedule for this report."</p>
+        <h3>Manage FTP Credentials to Deliver Activity Reports</h3>
+        <p>On the Organization Settings page, on the Admin tab, the “Activity Reports FTP Info” links allows entering FTP info for the activity reports.</p>
+        <p>Clicking this link opens a dialog with text boxes to enter the following FTP info.</p>
+        <ul>
+            <li>
+                <p>FTP Credential	</p>
+            </li>
+            <li>
+                <p>FTP Host</p>
+            </li>
+            <li>
+                <p>FTP Port	</p>
+            </li>
+            <li>
+                <p>FTP Directory</p>
+            </li>
+            <li>
+                <p>FTP Username	</p>
+            </li>
+            <li>
+                <p>FTP Password</p>
+            </li>
+        </ul>
+        <p><b>Note</b>: FTP credentials will be managed from the organization’s production environment.</p>
+        <p>
+            <img src="../../Resources/ImagesAdmin/ActivityReportsFTPConfiguration.png" style="width: 5in;" />
+        </p>
+        <p>The note below appears to let users know that after entering the FTP&#160;information, FireLight support must be contacted to create an FTP&#160;connection pool. </p>
+        <p>“All fields are required. Ensure that entered FTP info is correct. Once the FTP info is saved, request FL Support to open the SFTP firewall to start delivering the activity reports.”</p>
+        <p>After FTP details are entered, they cannot be removed/deleted for that organization.</p>
+        <h3>Scheduling Custom and Internal Reports</h3>
+        <p>Custom and internal (for all orgs) reports can be scheduled by the vendor role only.</p>
+        <h3>Scheduling Custom Report for an Org</h3>
+        <p>When a user with the Vendor role logs in to FireLight and selects an organization, they can schedule custom reports for that specific organization. Because custom reports use data items specific to an organization, only Vendor users can schedule custom reports. Once a custom report is scheduled for an organization, the schedule is visible to the organization admin, who can edit or add another schedule for their organization using the same custom report.</p>
+        <h3>Scheduling Internal Use Report</h3>
+        <p>Users with vendor roles can schedule internal reports that generate data used for billing and accounting purposes for all or individual organizations. The internal reports, identified in the Report dropdown by a “**”, are visible to the user with Vendor role only when they land in the Report Scheduler  page.</p>
+        <p>When the vendor user loads the Report Scheduler page without selecting any organization from homepage, they can schedule the internal report for all organizations. On the Report Scheduler page, a Scheduled for All Organizations checkbox appears to schedule reports for all organizations. Reports scheduled for all organizations checking this flag generate report data for all organizations.</p>
+        <p>If the vendor user loads the Report Scheduler page after selecting an organization from the homepage, they can schedule the internal report for the selected organization. These report schedules will not be available to the admin user for that organization when they log in to their instance (org) of the Report Scheduler page.</p>
+        <p>
+            <img src="../../Resources/ImagesAdmin/ScheduledForAllOrgs.png" style="width: 5in;" />
+        </p>
+        <h2>More Information</h2>
+        <p>See the following topics for additional information about reports.</p>
+        <ul>
+            <li>
+                <p>
+                    <MadCap:xref href="Reports.htm">Reports</MadCap:xref>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <MadCap:xref href="Detail Reports.htm" target="_blank" alt="Detailed Activity Reports">Detailed Activity Reports</MadCap:xref>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <MadCap:xref href="Summary Reports.htm" target="_blank" alt="Summary Activity Reports">Summary Activity Reports</MadCap:xref>
+                </p>
+            </li>
+        </ul>
+        <p>&#160;</p><a href="#top" alt="Return to Top">Return to Top</a>
+    </body>
+</html>

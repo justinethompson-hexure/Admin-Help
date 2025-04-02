@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Email</h1>
+        <p>On the navigation bar, click <b>Organization Config</b> and click <b>Email</b> to go to the Email Template page.</p>
+        <p>The Email Template page contains a collection of default email templates the system uses to automatically generate emails when certain events occur in FireLight<sup MadCap:conditions="General.Online">®</sup>. </p>
+        <h2>Select an Email Template</h2>
+        <ol>
+            <li>In the <b class="Bold">Email Category</b> list, select a category to filter the email templates by the selected category.</li>
+            <li>Select an  email template to modify  as applicable for your organization using the individual email topics under the selected category in the Admin Help as a guide.</li>
+            <li>If applicable, select a Locale.</li>
+            <li>If applicable, select a Branding Firm.</li>
+        </ol>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Email Guidelines</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">Email Guidelines</h2>
+                <ul>
+                    <li>
+                        <p>The "To Address" cannot contain more than one address in an email. Multiple "To" addresses are not supported.</p>
+                    </li>
+                    <li>If the email address field can be edited, DMARC logic is automatically applied if the Use DMARC checkbox is selected in Organization Settings on the <MadCap:xref href="Organizations/Activity.htm">Activity</MadCap:xref> tab. The From Address is replaced by the organization's email address to avoid email server rejection due to domain mismatch. The Reply To address will still be the agent's email. If you do a direct login or you do not send in an email address, we enable the Use DMARC feature automatically and do the replacement. If you send in the email address but have the "Use DMARC" setting enabled, we also do the replacement. The only time we do not replace the From address with the organization's email address is when you send in the email address and do not have the "Use DMARC" setting enabled on the Organization  Settings, <MadCap:xref href="Organizations/Activity.htm" target="_blank" alt="Activity">Activity</MadCap:xref> tab.</li>
+                    <li>You can disable preference fields and send with the incoming FireLight request. If template fields are not disabled, users can also type the From name and Email. There are two ways that the preference fields can be disabled. One is using the Organization Configuration/Groups, <MadCap:xref href="Groups/App.htm" target="_blank" alt="App">App</MadCap:xref> tab setting "Disable Edit Preferences." The other is done automatically, similar to the DMARC option. If the user comes in through an external FireLight request, the preference fields are disabled automatically. However, if the Groups, App tab setting "Enable Override SSO" is enabled, it enables the group to still edit the preferences full name and email address even if they come in through a request.</li>
+                    <li>
+                        <MadCap:snippetText src="../Resources/Snippets/Email/ReplacementVariablesGuidelines.flsnp" />
+                    </li>
+                    <li>
+                        <p>A new replacement variable using an activity’s dataitems can be added to an email template by requesting a database change to add the new value to the activity search items list.  This activity search item can be used in the Advanced Search in the All Activities page in FireLight or can simply be saved off for use in the email templates. Contact your Strategic Account Manager to add the new replacement variable.</p>
+                    </li>
+                    <li>
+                        <p>The CLIENT_NAME tag requires a dataitem of the same name to be added to the activity and set to the name of the signer wanted for the replacement value.</p>
+                        <p>For example, to set it to the owner name, a rule would be added to the form:</p>
+                        <MadCap:codeSnippet>
+                            <MadCap:codeSnippetCopyButton />
+                            <MadCap:codeSnippetCaption>
+                                <p>Set Client_Name to Owner_FullName</p>
+                            </MadCap:codeSnippetCaption>
+                            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;if&gt;
+  &lt;condition&gt;
+    &lt;not&gt;
+      &lt;isnullorwhitespace&gt;
+        &lt;diget dataitemid="Owner_FullName" /&gt;
+      &lt;/isnullorwhitespace&gt;
+    &lt;/not&gt;
+  &lt;/condition&gt;
+  &lt;diset dataitemid="Client_Name"&gt;
+    &lt;diget dataitemid="Owner_FullName" /&gt;
+  &lt;/diset&gt;
+&lt;/if&gt;
+</MadCap:codeSnippetBody>
+                        </MadCap:codeSnippet>
+                    </li>
+                </ul>
+                <p><b class="Bold">NOTE:</b> When possible, the From name &amp; email address are based on the owning agent's login information, but several factors can result in that not being used. If any of the following are not the case, the From name and AGENT_NAME email variable will default to the organization name (rather than organization email address):</p>
+                <ul>
+                    <li>
+                        <p>The group option Enable Use Agent Email must be selected. </p>
+                    </li>
+                    <li>
+                        <p>The user Preferences option Use Agent Email for All Communications must be selected. </p>
+                    </li>
+                    <li>
+                        <p>The agent must have a name passed in their SSO or configured in Preferences. </p>
+                    </li>
+                </ul>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Supported Replacement Variables</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">Supported Replacement Variables</h2>
+                <p><b class="Bold">NOTE:</b> Some replacement values are email-specific. For example, the QUEUE_NAME replacement variable applies to only Review Queue email templates.</p>
+                <p>
+                    <MadCap:snippetText src="../Resources/Snippets/Email/ReplacementVariablesGuidelines.flsnp" />
+                </p>
+                <p>Following are the currently supported replacement variables for emails. </p>
+                <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+                    <caption class="Table">Replacement Variables for Emails</caption>
+                    <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 158px;" />
+                    <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 578px;" />
+                    <thead>
+                        <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                            <th class="TableStyle-2017_IT-Simple2-HeadE-Regular-Header1">Variable</th>
+                            <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">ACTIVITY_NAME</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Name assigned to configurable Activity, replaces TRANSACTION_TYPE (i.e., Illustration, Application, etc.)</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">AGENT_CODE</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Agent Code</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">AGENT_NAME</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Agent Name</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">AGENT_FULLNAME</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Agent First Name and Last Name concatenated together from the Agent Section in Preferences, Agent_FirstName Agent_LastName or the quote wizard agent section</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">APPLICATION_ID</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Activity Application ID. Organizations can use an Application_ID replacement variable  to include with a URL to direct the agent back to their portal for reauthentication.  The application ID can be used in the query string so they can then pass that through to the SSO into FL.</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">APPLICATION_NAME</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Activity Name (we support this, but are replacing it with CASE_NAME)</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">CASE_NAME</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Activity Name (Replaces APPLICATION_NAME)</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">CITY_NAME</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">City for signatures</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">CLIENT_NAME</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Client Name for external request</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">COMPANY_NAME</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Company Name</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">DATE_TIME</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Current datetime in UTC</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">EXPIRY_DAYS</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Days until external request expires</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">HYPER_LINK</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <p>Used for hyperlink text, for example, "Click Here." </p>
+                                <p>Using this syntax, the system will show a hyperlink text for a static URL or a system generated URL in the emails sent to clients.</p>
+                                <ul>
+                                    <li>
+                                        <p>Static URL or the replacement variable for system generated URL should be used within the quotes ("") and should be prefixed as "URL=."</p>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <p>Hyperlink text/phrase can be customized by clients and should be written in between opening and closing tags of &lt;HYPER_LINK&gt;.</p>
+                                    </li>
+                                </ul>
+                                <p>Examples:</p>
+                                <ul>
+                                    <li>
+                                        <p>Apply a hyperlink for a static URL: <br />Syntax: &lt;HYPER_LINK URL="https://login.website.com"&gt;link&lt;/HYPER_LINK&gt;</p>
+                                    </li>
+                                    <li>
+                                        <p>Apply a hyperlink for a FireLight generated URL:<br />Syntax: &lt;HYPER_LINK URL="&lt;URL_LINK&gt;"&gt;click here&lt;/HYPER_LINK&gt;</p>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">MESSAGE</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Reserved for Message Center messages and associated emails, or post submission Provider messages</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">ORG_EMAIL</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Organization Email</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">ORG_NAME</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Organization Name</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">PARAMED_VENDOR_NAME</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Name of the specific paramed exam vendor (i.e., APPS or ExamOne)</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">PASSCODE</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Passcode for external requests</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">PRODUCT_LINK</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Add to email templates to allow sending the prospectus or buyer's guide URL. See the "Product Links" setting on the <MadCap:xref href="../Product Configuration/Products.htm" title="Products" alt="Products">Products</MadCap:xref> page. See PRODUCT_LINK_NAME below.</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">PRODUCT_LINK_NAME</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Provides the name of the document  (Prospectus or Buyer's Guide).</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">PRODUCT_NAME</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Product Name</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">QUEUE_NAME</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Review Queue Name</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">QUEUE_NUMBER</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Review Queue Number</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">RECIPIENT_NAME</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Agent Name for an external request</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">REQUESTDATE</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Request Date</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">REVIEWER_NAME</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Reviewer Name</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">ROLE</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Role of a Working Group member</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">SHAREDATE</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Share Date of User Share</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">SHARETYPE</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Type of share</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">SIGNER_ROLE</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Identifies the activity signer roles for the email <MadCap:conditionalText MadCap:conditions="General.Online">(see the <a href="../Resources/DesignDocs/DRAFT 12061 Esign Corrections for 2.17.pdf" target="_blank" title="Multi-Sign document" alt="Multi-Sign document">Multi-Sign document</a> for more information)</MadCap:conditionalText></td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">STATUS</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Activity Status</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">USER_EMAIL</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">User Email Address </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">USER_FULLNAME</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">User Full Name from the General section in Preferences</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">USER_NAME</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">User Name</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">USER_PWD</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">User Password</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">USERSHARE_NAME</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">User Name associated with User Share</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">URL_LINK</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Link used for external requests</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows" MadCap:conditions="General.Postpone">
+                            <td class="TableStyle-2017_IT-Simple2-BodyB-Regular-DarkerRows">WORK_GROUP_NAME</td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">Name of a Work Group</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><b class="Bold">NOTE:</b> A new replacement variable using an activity’s dataitems can be added to an email template by requesting a database change to add the new value to the activity search items list in the list profile.  These activity search items can be used in the Advanced Search in the All Activities page in FireLight or can simply be saved off for use in the email templates. Search parameters are specific to your organization and may differ from the ones listed in the FireLight base system.  Parameters are managed through a list profile that can be altered per your organization’s request.  For more information on this, please contact your Strategic Account Manager.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Add a Training Video Link to an Email Template</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">Add a Training Video Link to an Email Template</h2>
+                <p><b class="Bold">NOTE:</b> To add training videos to FireLight, see the <MadCap:xref href="Groups/Training.htm" target="_blank" alt="Training">Training</MadCap:xref> tab in Organization Configuration/Groups.</p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Email/TrainingVideoLinkInEmail.flsnp" />
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Add Logo and Color Branding to an Email Template</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">Add Logo and Color Branding to an Email Template</h2>
+                <p><a name="AddLogoColorBranding"></a><strong>NOTE:</strong> Firms can have a separate HTML template for each Sub Firm. </p>
+                <ol>
+                    <li>
+                        <p>Use HTML to add a logo and colors to an email template. </p>
+                        <p><b class="Bold">IMPORTANT!</b> The CSS needs to be inline and any images that are in addition to the logo need to be inline base 64 encoded.</p>
+                    </li>
+                    <li>Provide the logo in .png format (it does not need to be base 64 encoded).</li>
+                    <li>
+                        <p>Please submit a JIRA ticket with separate HTML templates, logos, and branding ID for each Sub Firm. This ticket will be assigned to a developer for review, testing, and loading into the firm's database. You cannot edit the HTML in Admin. All changes must be submitted via a JIRA ticket.</p>
+                    </li>
+                </ol>
+                <p>Following is a sample HTML template for an email:</p>
+                <p class="Indent">&lt;html&gt;&lt;body&gt;&lt;div&gt;</p>
+                <p class="Indent">&lt;table style="background-color:blue;color:white;"&gt;</p>
+                <p class="Indent">&lt;tr&gt;&lt;td colspan="2"&gt;&lt;img src="cid:$$OrgLogo$$" /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;</p>
+                <p class="Indent">&lt;td&gt;&lt;b&gt;&lt;span style="color:white;font-size:10pt;font-family:Arial;"&gt;$$Body$$&lt;/span&gt;&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</p>
+                <p class="Indent"><strong>NOTE:</strong> $$OrgLogo$$ in the sample string is replaced with the logo for your firm in FireLight.  If you create an html string for a Sub Firm, you need to replace the $$OrgLogo$$ with the URL of the logo image that you want to use for the Sub Firm.  For example, the Sub Firm would use “https://www.firelighteapp.com/EGApp/Content/Images/[Sub-firmLogo].png”  for the URL in place of the $$OrgLogo$$.</p>
+                <p MadCap:conditions="General.Online"><strong>Sample Email Preview with HTML Branding</strong>
+                </p>
+                <p MadCap:conditions="General.Online" class="Indent">
+                    <img src="../Resources/ImagesAdmin/Email1.jpg" alt="" title="" MadCap:conditions="General.Online" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Edit Email Subject Lines, Locale, and Template Text</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">Edit Email Subject Lines, Locale, and Template Text</h2>
+                <p class="note"><a name="EditEmailSubjectLinesLocaleTemplateText"></a><b>NOTE:</b> <em>Do not </em>alter the Message Center Notification email template, which is a system generated template for multiple system messages.</p>
+                <p>Change the email text for your organization.</p>
+                <ol>
+                    <li>On the navigation bar, click <b>Organization Config</b> and then click <b>Email</b>.</li>
+                    <li>In <b class="Bold">Email Category</b>, select a category of emails, for example, select <b class="Bold">Review</b> to filter the list of email templates to show only Review related email templates. Select <b class="Bold">All</b> to view a non-filtered list of all emails.</li>
+                    <li>In <b>Email Template Type</b>, select a template to edit.</li>
+                    <li>
+                        <p>If enabled for your organization, select a Sub Firm in the <b class="Bold">Branding Firm</b> list to change an email template for a Sub Firm.</p>
+                        <p><b class="Bold">NOTE:</b> If you need branding for Sub Firm emails, contact your Strategic Account Manager to have the FireLight team create the list of Branding Firms for you. Once that list is created, you can manage the Sub Firm emails on the Email page.</p>
+                    </li>
+                    <li>If localization is enabled for your organization, select a language for the email template in <b class="Bold">Locale</b>.</li>
+                    <li>
+                        <p>Add, change or delete text in the <b>Email Subject Line</b> and the <b>Email Template</b> sections as appropriate for your organization and the selected Locale.</p>
+                        <p><b>Important:</b> Do not change the text in angle brackets &lt; &gt;. This identifies a <MadCap:variable name="General.ProductName" /> data field name variable that is populated with <MadCap:variable name="General.ProductName" /> data for the message. For example, the variable &lt;CLIENT_NAME&gt; will populate the email message with the client’s name from the application.</p>
+                    </li>
+                    <li>
+                        <p>When finished editing a template, click the <b>Save Email Template</b> button at the end of the page. The change takes place immediately.</p>
+                    </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Ensure Review Queue Emails Are Sent to the Agent</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">Ensure Review Queue Emails Are Sent to the Agent</h2>
+                <p><a name="EnsureReviewQEmailsSentToAgent"></a>The following settings must be in place in FireLight Admin and FireLight to ensure the agent receives Review Queue emails.</p>
+                <p>In FireLight Admin:</p>
+                <ul>
+                    <li>In Organization Configuration/Groups on the <MadCap:xref href="Groups/Review Queue.htm" target="_blank" alt="Review Queue">Review Queue</MadCap:xref> tab, ensure the <b class="Bold">Disable Action Email Notifications</b> checkbox is cleared (unchecked) for the reviewer role code.</li>
+                    <li>In the Post-Submit Review Queue Approve and Post-Submit Review Queue Reject email templates, ensure the |MESSAGE| or &lt;MESSAGE&gt; replacement marker is somewhere within the email body.</li>
+                </ul>
+                <p>In FireLight:</p>
+                <ul>
+                    <li> On the My Preferences page, ensure the agent's <strong>Send Message Center Emails</strong> checkbox is selected (checked).</li>
+                </ul>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:conditionalText MadCap:conditions="General.Online">
+                    <MadCap:dropDownHotspot>Settings That Can Affect All Emails</MadCap:dropDownHotspot>
+                </MadCap:conditionalText>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">Settings That Can Affect All Emails</h2>
+                <p><a name="SettingsThatAffectAllEmails"></a>The following settings in Organization Configuration on the Organization Settings and Groups pages can affect all emails.</p>
+                <p class="Indent"><b>Organization Settings/Activity tab: </b>
+                </p>
+                <ul>
+                    <li><b class="Bold">Prevent Email Editing</b> Select the option to prevent system generated emails from being edited by agents or clients. For example, FireLight presents an email template  in the request process for the client fill and client fill and sign requests, but the user cannot edit the email template.</li>
+                    <li><b class="Bold">Use DMARC</b> Select the option to use the email address that is entered in the organization’s Support Email field instead of the Agent’s email address for all outgoing email communications. This option helps avoid email rejection due to DMARC authentication. The agent email is used as the "Reply to" email address.</li>
+                </ul>
+                <p class="Indent"><b>Groups/App tab: </b>
+                </p>
+                <ul>
+                    <li><b class="Bold">Disable Edit Preferences</b> Select this option to disable access to the My Preferences page in FireLight. The My Preferences button on the Home page and on the top toolbar will not be visible. If disabled, FireLight will use the default preference options or the information sent in through the incoming Single Sign-On (SSO) request.</li>
+                    <li><b class="Bold">Enable Cc Sender in All Requests</b> Select this option to enable automatic CC of the sender for any agent generated email (for example, Client App Fill Request, Sign Later Signature Request, Reviewer email).</li>
+                    <li><b class="Bold">Enable Use Agent Email</b> Select his option to enable and show the Use Agent Email for All Communication checkbox on the My Preferences page in FireLight. This allows the agent to determine if all assistant actions should use the agent’s email for outgoing communications. The Use Agent Email option is based on the activity owner’s preference, not the current session user’s preference.</li>
+                    <li><b class="Bold">Enable Override SSO</b> Select this option to enable the agent to override the entry in the Your Name field on the Send Email To Client To Request Signatures page (this overrides the User Full Name field entry on the Preferences page). This allows agents to use their preferred names on client signature requests. Without this option selected, the default behavior is to lock the User Full Name and the User Email Address fields within My Preferences to the values sent over in the Single Sign On (SSO) Request that was used to establish the FireLight user session.</li>
+                </ul>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:pageBreak />
+    </body>
+</html>

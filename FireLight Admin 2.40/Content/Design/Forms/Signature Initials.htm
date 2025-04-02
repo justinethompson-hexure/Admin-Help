@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Signature Initials</h1>
+        <p class="note"><b class="Bold">NOTE:</b> Within FireLight<sup MadCap:conditions="General.Online">®</sup>, most dates and times in the UI are displayed in the user's time zone (as configured in Preferences). Signatures are different. Signature timestamps on forms are shown in UTC. Signature dates and times elsewhere in the UI, including dates obtained from the Signature Date control,  are converted to the time zone of the signer’s state of residence.</p>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FormLockUnlock.flsnp" />
+        </p>
+        <p>Use the Signature Initials control to add e-signature initials to the form.</p>
+        <ol>
+            <li>On the left under <b>Add Control to Form</b>, click <b>Signature Initials</b>.</li>
+            <li>
+                <p>On the Adding an Initial dialog, click <b>OK</b> to proceed.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/AddingAnInitial-DB.jpg" alt="Adding an Initial dialog" title="Adding an Initial dialog" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+            <li>
+                <p>Drag the <b>Signature Initial</b> control from the upper left of the form to the signature initials area on the form and re-size it to fit the field space.</p>
+            </li>
+            <li>
+                <p>On the left under <b>Input Control</b>, click <b>Field Properties</b>.</p>
+            </li>
+            <li>
+                <p>Enter or change settings in Field Properties.</p>
+                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+                    <caption class="Table">Signature Initials Field Properties </caption>
+                    <col style="width: 192px;" class="TableStyle-2017_IT-Simple2-Column-Regular" />
+                    <col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                            <th class="TableStyle-2017_IT-Simple2-HeadE-Regular-Header1">Field Property</th>
+                            <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Field Name</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsFieldName.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Common Tag Name</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/FieldProps-CommonTagName.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Top, Left</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsTopLeft.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Width, Height</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <p>Type the width and height of the signature box in pixels. A warning appears if the signature box is not at least 160 pixels wide. The practical minimum size is 160 wide by 30 high. See "Width Height Examples" below.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b>Group Name </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <p>(Optional) Type the name for the group of signatures. The Group Name is used by the system to assemble a collection of forms into a document set that can be signed together. For example, you could define one group named “1Consent” to include only the consent form, and another group called “Application” for the rest of the forms. FireLight arranges the document sets first by number and then alphabetically. To review the consent form first, the Group Name is set to "1Consent" and the Group Name fields for the forms in the application package are set to "Application." Doing this, FireLight leads the signer through two separate signing processes; starting with the E-Consent form and followed by the Application.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Signer Type</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Select the type of signer in the list. The system uses Signer Type to determine who signs the form in the signature capture process.</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Control Type</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Select the control type of Initial (other options are Signature, City, Date, or State).</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Error Placement</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsErrorPlacement.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Protection</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/ProtectionFieldPpty.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b>Data Group </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsDataGroup.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Data Group Property</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <p>
+                                    <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsDataGroupProperty.flsnp" />
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b>Global Scope </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsGlobalScope.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b>Exclude from PDF </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsExcludeFromPDF.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Passcode Only Validation</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FormsPasscodeOnlyVal.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">State Signing Error</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <p>State Signing Error is available only for the <MadCap:xref href="Signature Box.htm" title="Signature Box" alt="Signature Box">Signature Box</MadCap:xref> control.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyB-Regular-DarkerRows"><b class="Bold">Z Order</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                                <MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsZOrder1.flsnp" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsZOrder4.flsnp" />
+                </p>
+            </li>
+            <li>Click the <b>Update</b> button to update the field properties and lock the form for editing.</li>
+            <li>Click the <b>Close</b> button to close the Field Properties dialog.</li>
+            <li>
+                <p>Click the <b>SAVE</b> button on the upper left of the Designer page to save the controls and field properties, which unlocks the form for editing by other users. <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FormSaveOtherUser.flsnp" /></p>
+                <p><b>NOTE:</b> If at least one Signature field with the same Group Name and Signer Type as the Initial is not on the form, a "Please be sure to add at least one Signature field (with same Group Name and Signer Type as this Initial) on this form" message appears. Click <b>Yes</b> to close the message.</p>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Resources/Snippets/Rules/UpdateRuleSetsDB.flsnp" />
+            </li>
+        </ol>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Setup and usage instructions for integrating with the Salesforce CRM that allows data to be pulled from Salesforce into FireLight using a custom action button on a form or wizard." />
+    </head>
+    <body>
+        <h1><a name="top"></a>Salesforce Integration<a name="top"></a></h1>
+        <p class="note"><b class="Bold">Spotlight Video:</b> See <a href="https://vimeo.com/310656143/bc2e6e377a" target="_blank" title="CRM Integration Video" alt="CRM Integration Video">FireLight CRM Integration</a> for a Spotlight feature video about Salesforce CRM integration.</p>
+        <table style="border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Salesforce Integration Feature</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p><b class="Bold">NOTE:</b> All contracting is done directly with Salesforce. </p>
+                        <p>FireLight<sup>®</sup> can integrate with the Salesforce CRM that allows data to be pulled from Salesforce into FireLight using a custom action button on a form or wizard. </p>
+                        <p>Currently, you can map the following Salesforce properties to the corresponding Data Group Property settings within FireLight fields:</p>
+                        <ul>
+                            <li>First Name</li>
+                            <li>Last Name</li>
+                            <li>Birthdate</li>
+                            <li>Phone</li>
+                            <li>Mailing Street</li>
+                            <li>Mailing City</li>
+                            <li>Mailing State</li>
+                            <li>Mailing Postal Code</li>
+                            <li>Mailing Country</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Salesforce Setup</p>
+                        <p>You must first set up an account with Salesforce.</p>
+                        <p>Organizations with a firm-wide Salesforce account and individuals with a single user account need to do the following to create their FireLight Integration connected app in Salesforce and get their Salesforce Client ID (Consumer Key) and Client Secret (Consumer Secret) for the connected app. </p>
+                        <MadCap:snippetBlock src="../Resources/Snippets/Features/SalesforceSetup.flsnp" />
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <ol>
+                            <li>
+                                <p>Designer/<MadCap:xref href="../Design/Forms/Form Designer.htm" alt="Form Designer">Form Designer</MadCap:xref> or <MadCap:xref href="../Design/Wizards/Wizard Designer.htm" alt="Wizard Designer">Wizard Designer</MadCap:xref> page: do the following to add a button control that will pull CRM data into the form or wizard. </p>
+                                <p><b>IMPORTANT!</b>  FireLight now supports triggering a custom action call from any page within the same package, regardless if the button or fields to trigger that call are on that same page.  (See <MadCap:xref href="../Design/Forms/Add Multiple Copies of a Form.htm" alt="Add Multiple Copies of a Form">Add Multiple Copies of a Form</MadCap:xref> for use on multiple-instance forms.)</p>
+                                <p><b class="Bold">Form:</b>
+                                </p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>
+                                        <p>Add a Salesforce CRM <b class="Bold">Button</b> control. In the Field Properties, select <b>CRM</b> in <b>Action Type</b>. Select a <b>CRM Type</b> option in the list: select the <b class="Bold">Salesforce</b> option to pull data from the Salesforce CRM or select the <b class="Bold">Preferences</b> option to pull data from the CRM set up on the user's Preferences page in FireLight. In the list, select a <b class="Bold">Data Group</b> for the button. For example, select the <b class="Bold">Owner</b> option to populate owner information in the associated fields on the form.</p>
+                                    </li>
+                                    <li>
+                                        <p>In the associated form fields, select the <b>Data Group</b> that matches the Data Group for the Salesforce CRM button and select the <b>Data Group Property</b> that matches the field entry. For example, in the Owner_FirstName field, select <b>Owner</b> in <b>Data Group</b> and select <b>FirstName</b> in <b>Data Group Property</b>. Ensure the Data Group and Data Group Property are selected in all fields that will pull data from Salesforce.</p>
+                                    </li>
+                                </ol>
+                                <p><b class="Bold">Wizard:</b>
+                                </p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>Add a Salesforce <b class="Bold">Custom Action</b> field to the wizard. In the Custom Action Properties, select <b class="Bold">CRM</b> in <b class="Bold">Custom Action</b>. Select a <b>CRM Type</b> option in the list: select the <b class="Bold">Salesforce</b> option to pull data from the Salesforce CRM or select the <b class="Bold">Preferences</b> option to pull data from the CRM set up on the user's Preferences page in FireLight. In the list, select a <b class="Bold">Data Group</b> for the button. For example, select the <b class="Bold">Owner</b> option to populate owner information in the associated fields on the wizard.</li>
+                                    <li>In the associated wizard fields, select the <b>Data Group</b> that matches the Data Group for the CRM button and select the <b>Data Group Property</b> that matches the field entry. For example, in the Owner_FirstName field, select <b>Owner</b> in <b>Data Group</b> and select <b>FirstName</b> in <b>Data Group Property</b>. Ensure the Data Group and Data Group Property are selected in all fields that will pull in data from Salesforce.</li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>Set up the Salesforce login credentials at either the organization level or at the advisor level. </p>
+                                <p>There are two ways to pull in the login credentials for this integration.  The best solution depends on how your firm or individual user has contracted with Salesforce. </p>
+                                <p><b>Organization level:</b>
+                                </p>
+                                <p class="Indent">FireLight can pull credentials from the organization configuration setting for firm wide contracts. </p>
+                                <p class="Indent">In Organization Configuration on the Organization Settings page, <MadCap:xref href="../Organization Configuration/Organizations/Admin.htm" alt="Admin">Admin</MadCap:xref> tab,  set up the Salesforce credentials for the organization. (<b>Note</b>: It will use the form's Organization if set up, not necessarily the distributor's or carrier's Organization.)</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>
+                                        <p>Click the <b>Click to Edit</b> link next to <b>Third-Party Service Config</b>.</p>
+                                        <ul style="list-style-type: square;">
+                                            <li>Click the <b>Add New</b> link at the top of the Third-party Service Configuration dialog. In <b>Config Name</b>, type <b>Username</b>. In <b>Config Value</b>, type the Username credential for your organization’s Salesforce account. In <b>Service Type</b>, select <b>Salesforce</b> and click the <b>Add Config</b> button.</li>
+                                            <li>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>Password</b>. In <b>Config Value</b>, type the password credential for your organization’s Salesforce account. In <b>Service Type</b>, select <b>Salesforce</b> and click the <b>Add Config</b> button.</li>
+                                            <li>
+                                                <p>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>ClientID</b>. In <b>Config Value</b>, type the Consumer Key value for your organization’s FireLight Integration app that you set up in Salesforce. In <b>Service Type</b>, select <b>Salesforce</b> and click the <b>Add Config</b> button.</p>
+                                            </li>
+                                            <li>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>ClientSecret</b>. In <b>Config Value</b>, type the Consumer Secret  value for your organization’s FireLight Integration app that you set up in Salesforce. In <b>Service Type</b>, select <b>Salesforce</b> and click the <b>Add Config</b> button.</li>
+                                            <li>
+                                                <p> Close the Third-Party Service Configuration dialog. </p>
+                                                <p><b class="Bold">NOTE:</b> Config Group is an optional configuration used by the <MadCap:xref href="DocuSign.htm" alt="DocuSign Integration">DocuSign Integration</MadCap:xref> integration. </p>
+                                                <p>Example:</p>
+                                                <p MadCap:conditions="General.Online">
+                                                    <img src="../Resources/ImagesAdmin/Capture146.png" alt="Add New Salesforce Config name and Config Value" title="Add New Salesforce Config name and Config Value" MadCap:conditions="General.Online" />
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>Click the <b>Save Organization</b> button on the Organization Settings page.</li>
+                                </ol>
+                                <p><b>Advisor level:</b>
+                                </p>
+                                <p>
+                                    <p class="note"><b class="Bold">NOTE:</b> To enable Advisors to enter their Salesforce CRM credentials in FireLight, select the <a href="../Organization Configuration/Groups/App.htm#EnableCRMPreferences" alt="Enable CRM Preferences">Enable CRM Preferences</a> checkbox in Organization Configuration/Groups on the App tab in FireLight Admin. </p>
+                                    <p class="Indent">Advisors with a user-specific/seat license with Salesforce enter their Salesforce login credentials in Preferences and FireLight will automatically pull their credentials to connect to Salesforce. Advisors need to set up an account in Salesforce to get their login User Name and Password and go through the Salesforce Setup instructions above to get their Salesforce  Consumer Key and Consumer Secret. </p>
+                                    <ol style="list-style-type: lower-alpha;">
+                                        <li>Open the <b class="Bold">Preferences</b> page.</li>
+                                        <li>In the CRM Preferences section in <b class="Bold">CRM</b>, select <b class="Bold">Salesforce</b>. </li>
+                                        <li>
+                                            <p>Enter the Salesforce <b class="Bold">User Name</b>, <b class="Bold">Password</b>, <b class="Bold">Consumer Key</b>, and <b class="Bold">Consumer Secret</b> and click <b class="Bold">Save</b>. </p>
+                                        </li>
+                                    </ol>
+                                </p>
+                            </li>
+                            <li>Product Configuration/<MadCap:xref href="../Product Configuration/Packages.htm" alt="Packages">Packages</MadCap:xref> page: add the forms or wizards with the new Salesforce button and fields to the applicable product packages.</li>
+                            <li>Utilities/<MadCap:xref href="../Utilities/Deployments/Deployments.htm" alt="Deployments">Deployments</MadCap:xref> page, deploy the <b class="Bold">Organization Configuration</b> and deploy the <b class="Bold">Product Configuration</b> and <b class="Bold">Package Configuration</b> for each product/package that includes the forms and wizards with a Salesforce CRM button.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <ol>
+                            <li>
+                                <p>If you have a user-specific license, enter your Salesforce login information in CRM Preferences on the Preferences page once and skip this step in future activities. If the firm has supplied a corporate license, skip this step.</p>
+                            </li>
+                            <li>Begin an application or other activity.</li>
+                            <li>
+                                <p>Click the <b>Salesforce CRM</b> button.</p>
+                            </li>
+                            <li>
+                                <p>Near the top of the dialog in <b>My Contacts</b>, enter the first few letters of the contact's last name or commercial name and click the search button to filter the list.</p>
+                            </li>
+                            <li>In the list of names, click a name to view the contact's information.</li>
+                            <li>
+                                <p>Click the <b>Select</b> button to populate the contact's information in the associated fields on the form or wizard.</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help and Guide – Design Document: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 180269</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/DesignDocs/180269-Salesforce Integration.pdf" target="_blank" title="CMR 180269" alt="CMR 180269">CMR 180269</a></MadCap:conditionalText></p>
+                        <p>Spotlight Feature Video – <a href="https://vimeo.com/310656143/bc2e6e377a" target="_blank" title="CRM Integration Video" alt="CRM Integration Video">FireLight CRM Integration</a></p>
+                        <p class="hangingindent">User Guide: <em>FireLight Platform User Guide</em>, <MadCap:conditionalText MadCap:conditions="General.PDF">"Salesforce Integration Setup" </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../UserGuide/Salesforce Integration Setup/Salesforce Integration Setup.htm" alt="Salesforce Integration Setup">Salesforce Integration Setup [User Instructions]</MadCap:xref> </MadCap:conditionalText>topic, <MadCap:conditionalText MadCap:conditions="General.PDF">"Action Buttons" </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../UserGuide/New Activity/Data Entry/Action Buttons.htm" alt="Action Buttons">Action Buttons [User Instructions]</MadCap:xref> </MadCap:conditionalText>topic: "Example: Salesforce CRM Lookup (Wizard View)" </p>
+                        <p>Webpage on generating Salesforce API credentials: <a href="https://web.archive.org/web/20180126194907/http://www.calvinfroedge.com/salesforce-how-to-generate-api-credentials/" target="_blank" title="How to generate Salesforce API credentials" alt="How to generate Salesforce API credentials">http://www.calvinfroedge.com/salesforce-how-to-generate-api-credentials/</a></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

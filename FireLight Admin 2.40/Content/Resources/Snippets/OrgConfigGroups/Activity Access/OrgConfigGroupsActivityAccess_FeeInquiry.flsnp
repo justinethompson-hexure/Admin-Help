@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Fee Inquiry</b> checkbox to provide group access to the Fee Inquiry activity. See <MadCap:xref href="../../../../Features/Fee Inquiry Activity.htm" target="_blank" alt="Fee Inquiry Activity">Fee Inquiry Activity</MadCap:xref> in Features. <MadCap:conditionalText MadCap:conditions="General.Online">See also <MadCap:xref href="../../../../UserGuide/New Activity/Fee Inquiry.htm" target="_blank" alt="Fee Inquiry [User Instructions]">Fee Inquiry [User Instructions]</MadCap:xref>.</MadCap:conditionalText></body>
+</html>

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="General.Online">
+    <head>
+        <link href="../../../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight Access Login when Adding Existing User to New Organization</h1>
+        <table style="border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;mc-table-style: url('../../../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">FireLight Access Login when Adding Existing User to New Organization</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Action, To Name/Email, From Name/Email, CC Address, Available Tags, and Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Action</p>
+                        <p>Sends an email to an existing user to welcome the existing user to a new organization in FireLight<sup>®</sup> Access and provide the user with login  information for the new organization in FireLight Access.</p>
+                        <p>Template Name: FireLight Access Login when Adding Existing User to New Organization
+						</p>
+                        <p>Email Subject Line: Your FireLight Login</p>
+                        <p>Message:</p>
+                        <p class="Indent2">Dear &lt;USER_NAME&gt;,</p>
+                        <p class="Indent2">Welcome to FireLight® Access. &lt;ORG_NAME&gt; has made it possible for you to submit business electronically using FireLight and avoid the hassles and cost of doing business with paper applications. By selecting the link below, you is able to edit your account information prior to submitting business through FireLight®. Completing this information will save you time by pre-populating your information on all the applications you submit.</p>
+                        <p class="Indent2">To log in:</p>
+                        <p class="Indent2">1. Navigate to &lt;URL_LINK&gt;</p>
+                        <p class="Indent2">2. Enter your email address &lt;USER_EMAIL&gt;</p>
+                        <p class="Indent2">3. Enter your account password.</p>
+                        <p class="Indent2">Please address any questions to &lt;ORG_EMAIL&gt;.</p>
+                        <p class="Indent2">Sincerely,</p>
+                        <p class="Indent2">&lt;ORG_NAME&gt;</p>
+                        <p>This template is available for sending when the organization adds a user to FireLight Access and activates the user.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">To Name / Email</p>
+                        <p>User Name/Email typed in email fields or pre-filled from mapped dataitems</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">From Name / Email</p>
+                        <p>Default: Organization's Email
+						<br /></p>
+                        <p>Use DMARC<sup>1</sup>: Organization's Support Email</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">CC Address</p>
+                        <p> N/A</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Available Tags</p>
+                        <p>&lt;DATE_TIME&gt; (current datetime in UTC)<br />&lt;HYPER_LINK&gt;<br />&lt;ORG_EMAIL&gt;<br />&lt;ORG_NAME&gt;<br />&lt;URL_LINK&gt;<br />&lt;USER_EMAIL&gt;<br />&lt;USER_NAME&gt;<br />&lt;USER_PWD&gt;<br /></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                        <p class="thead1">Notes:</p>
+                        <p>If the email address field can be edited, DMARC logic is automatically applied. The From Address is replaced by the organization's email address to avoid email server rejection due to domain mismatch. The reply to address will still be the agent's email. If you do a direct login or you do not send in an email address, we enable the Use DMARC feature automatically and do the replacement. If you send in the email address but have the "Use DMARC" organization setting enabled, we also do the replacement. The only time we do not replace the From address with the organization's email address is when you send in the email address and do not have the "Use DMARC" setting enabled in Organization Configuration/Organization Settings,  Activity tab.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:snippetBlock src="../../../Resources/Snippets/Email/EmailSeeAlso.flsnp" />
+        <p><a href="#top" alt="Return to Top" title="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

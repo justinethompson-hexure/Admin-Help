@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileTagSet
+  Comment="My set of file tags"
+  Type="Release">
+  <FileTag
+    Name="Release 2-14 PROD"
+    Comment=""
+    OriginalName="Release2-14 PROD" />
+  <FileTag
+    Name="Release 2-14 UAT"
+    Comment=""
+    OriginalName="Release2-14 UAT" />
+  <FileTag
+    Name="Release 2-14 QE"
+    Comment="" />
+</CatapultFileTagSet>

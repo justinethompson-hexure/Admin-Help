@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body> In the <b class="Bold">This Rule Set Expires On</b> box, enter or select the date the rule set ends on. This sets the expiration date of the rule set in <MadCap:variable name="General.ProductName" />. When the rule set expires, it will need to be removed from all packages in which it resides.</body>
+</html>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>The pre-submission review queue email templates are available when you select the Allow Pre-Signature Review or Allow Post-Signature Review checkbox in Product Configuration on the <MadCap:xref href="../../../Product Configuration/Activities.htm">Activities</MadCap:xref> page. Be sure to set the applicable reviewer access options in Organization Configuration/<MadCap:xref href="../../../Organization Configuration/Groups.htm">Groups</MadCap:xref> on the Review Queue and Review Queue Access tabs.</body>
+</html>

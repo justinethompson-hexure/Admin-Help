@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Queue ID's for all PreSubmit queues were unique per environment (even with the same org), which meant that all deployment-associated data that was linked to any PreSubmit queues (including group queue access) would break after deployments. In this enhancement, the system was changed to make use of a common GUID suffix (with the prefix being the orgID) for all PreSubmit queues, updated various conditions to use that new GUID for PreSubmit detection, and checked in a migration script to update all PreSubmit QueueID's to match new GUID concept. This also changed the deployment process to allow for PreSubmit Queue change deployments. </p>
+        <p>Impacts: </p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>All Review Queue items, both historical and current - their associated queue ID links will get changed by the script - there should be no change required by the clients, but testing needs to occur to ensure this.</p>
+            </li>
+        </ul>
+    </body>
+</html>

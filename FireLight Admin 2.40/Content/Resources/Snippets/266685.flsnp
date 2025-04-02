@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <ul MadCap:conditions="General.Postpone">
+            <li>
+                <p>A new admin report is created to display the usage of forms in the Print Forms activity. This report is available for only CUNA client, and they is able to generate the report based on date range and selecting forms from Forms Repository package under Print Forms activity.  The report output will contain the forms in that product and number of times it was printed to show usage of the forms.</p>
+                <p>Impact:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>FL Admin: New report "Print Forms Usage - Forms Repository" is added to the Reports section in the Admin Tool.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>

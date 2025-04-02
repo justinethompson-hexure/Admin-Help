@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Salesforce Integration Setup<MadCap:conditionalText MadCap:conditions="General.Online"> [User Instructions]</MadCap:conditionalText></h1>
+        <p>Following are instructions for adding a FireLight<sup MadCap:conditions="General.Online">®</sup> Integration connected app in Salesforce and acquiring the Salesforce Consumer Key and Consumer Secret for the connected app. You must first set up an account with Salesforce.</p>
+        <h2>Create a Connected App and Get Your Consumer Key and Consumer Secret</h2>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Features/SalesforceSetup.flsnp" />
+        <h2>Add Your CRM Preferences in FireLight</h2>
+        <ol>
+            <li>In FireLight, click <b class="Bold">Preferences</b> on the navigation bar to open the My Preferences page.</li>
+            <li>In the <b class="Bold">CRM Preferences</b> section in <b class="Bold">CRM</b>, select <b class="Bold">Salesforce</b>.</li>
+            <li>Enter your Salesforce account <b class="Bold">User Name</b> and <b class="Bold">Password</b>, and enter the <b class="Bold">Consumer Key</b> and <b class="Bold">Consumer Secret</b> values for the FireLight Integration connected app in Salesforce.</li>
+            <li>
+                <p>Click <b class="Bold">Save</b>.</p>
+                <p>
+                    <img src="../../Resources/ImagesUserGuide/PreferencesTraningMsgs/Capture11.png" alt="CRM Preferences - Salesforce" title="CRM Preferences - Salesforce" />
+                </p>
+            </li>
+        </ol>
+        <h2>Allow Access Using Username/Password Flow</h2>
+        <p>For all new organizations created after the summer of 2023, for security reasons Salesforce blocks access via the username/password flow.</p>
+        <p>For more details, please refer to <a href="https://help.salesforce.com/s/articleView?id=release-notes.rn_security_username-password_flow_blocked_by_default.htm&amp;release=244&amp;type=5">Help and Training Community</a>.</p>
+        <p>To allow access using the username/password flow:</p>
+        <ol>
+            <li>
+                <p>Go to <b>Setup</b>.</p>
+            </li>
+            <li> In <b>OAuth and OpenID Connect Settings</b>, slide the radio button on for <b>Allow OAuth Username-Password Flows</b>.</li>
+        </ol>
+        <p>
+            <img src="../../Resources/ImagesUserGuide/All Activities/AllowOAuthandOpenIDConnectFlows.png" style="width: 7in;" />
+        </p>
+        <p>This step must be completed to allow FireLight to interact with Salesforce.com as a connected app. Otherwise, the user will see the error “Username-Password Flow Disabled”  in Login History when FireLight tries to connect with Salesforce.com.</p>
+        <p>
+            <img src="../../Resources/ImagesUserGuide/All Activities/Username-PasswordFlowDisabledc.png" />
+        </p>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

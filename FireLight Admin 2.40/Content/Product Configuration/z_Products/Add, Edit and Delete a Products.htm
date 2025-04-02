@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Add, Edit, and Delete Products</h1>
+        <p>On the navigation bar, click <b>Product Config</b> and then click <b>Products</b> to go to the Products page. Adding a product creates a menu selection for a product in <MadCap:variable name="General.ProductName" /> and associates the product to a Product Type (Variable Annuity, Universal Life, Non-Insurance, etc.).</p>
+        <h2>Add a Product</h2>
+        <ol>
+            <li>
+                <p>On the upper left of the Products page, click <b>Add New Product</b>.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/ProductsPage-AddNewProduct.jpg" alt="Products Page - Add New Product Button" title="Products Page - Add New Product Button" MadCap:conditions="General.Online" class="Thumbnail" />
+                </p>
+            </li>
+            <li>
+                <p>Enter the following information for the new product.</p>
+                <p><b>Product Name </b> Type the name of the new product. This is what is presented to your end users to select in <MadCap:variable name="General.ProductName" />.</p>
+                <p><b>Product Type </b> Select the type of the new product. This is the classification the end users select when filtering by product type (Variable Annuity, Universal Life, Preneed, Non-Insurance Product, etc.). Account Opening and E-Delivery are Non-Insurance Product type.</p>
+                <p><strong>Product Category </strong> Displays the product category based on the type of product/line of business. For a non-insurance product type, you can choose the product category. For all other product types, the category is read-only and driven by the ProductCategory and ProductType tables in the client Config databases.</p>
+                <p><b>Rank Order </b> Enter a number (integer value) for the rank order of the new product. Rank order is used to order the product list in the drop-down for product selection in the FireLight application.  If the Rank Order is not entered, the product is listed in alphabetical order by product name. The rank order must be used on the other products as well.  Empty values are placed first because they don't have a value to sort by.  The rank ordering kicks in for any rank order values after that. For example, if the rank order does not matter for other products, you could set a pre-authorization product to 1 and set all of the other products to 2 to place the pre-authorization product first in your product selection list.</p>
+                <p><b>CUSIP ID </b> Type the CUSIP ID that integrates with an external illustration system, like ForeSight®. 
+When integrating with an external illustration system, <MadCap:variable name="General.ProductName" /> uses an ACORD 103 transaction to prepopulate the <MadCap:variable name="General.ProductName" /> application with data collected within the external system. The CUSIP ID in <MadCap:variable name="General.ProductName" /> is used to map the product illustrated within the external system to the product in <MadCap:variable name="General.ProductName" />. The CUSIP ID is also used in the Review Queue Script to add products to the review queue process. This is a required field.</p>
+                <p><b>Billing Code </b> Select a Billing Code for the product (Normal, Back Office, Service Forms, or Special). Billing code is used for reporting purposes.  </p>
+                <p><b>Product Code </b> Type the Product Code to define a product identifier code that can be used for DOL purposes.</p>
+                <p><b>Carrier Code </b> Type the Carrier Code to define a product identifier code that gets exposed to the distributor for ID purposes.  </p>
+                <p><b>Product DTCC Member Id </b>  Type the Product DTCC Member ID for the product. See <MadCap:xref href="../../Features/Fees, Expenses and Commissions Repository.htm">Fees, Expenses and Commissions Repository</MadCap:xref> in Features.  </p>
+                <p><b>Product Organization Name </b>  Type the organization name of the selling carrier for the product.</p>
+                <p><b>Full Settling DTCC Member </b> Select the checkbox if your organization is a full settling DTCC member.</p>
+                <p><b class="Bold">Product Locale</b> Select a locale for the product.</p>
+                <p><b>Last Updated </b> displays the date and time in UTC when the product configuration was last updated.</p>
+                <p><b>State Approved </b> grid In the grid, select the checkbox for each jurisdiction in which the product is approved. At least one state must be selected. The product jurisdictions approved will then appear in the State Approvals jurisdiction list in <MadCap:xref href="../SalesAgreements.htm">Sales Agreements</MadCap:xref>.  A Sales Agreement cannot be created for a state in which the product has not been approved.</p>
+                <p><b>Check /Uncheck All </b> selects or clears all checkboxes in the State Approved grid. This checkbox switches between selecting and clearing all of the State Approved checkboxes.</p>
+            </li>
+            <li>Click the links to add Product Features, Product Documents, and Quote Detail if applicable.</li>
+            <li>At the end of the <b>Products</b> page, click <b>Save Product Config</b> to save your entries.</li>
+            <li>Next Steps: add <MadCap:xref href="../Packages.htm">Packages</MadCap:xref> and <MadCap:xref href="../SalesAgreements.htm">Sales Agreements</MadCap:xref> for the product and grant access to the new product in <MadCap:xref href="../../Organization Configuration/Groups.htm">Groups</MadCap:xref>. Then deploy the product to the applicable environments. See <MadCap:xref href="../../Utilities/Deployments/Deploy Data.htm">Deploy Data</MadCap:xref>.</li>
+        </ol>
+        <h2>Edit a Product</h2>
+        <ol>
+            <li>On the navigation bar, click <b>Product Config/Products</b>.</li>
+            <li>In the product list grid, click a product name.</li>
+            <li>Below the grid, update the product information, including state approvals. See "Add a Product" on this page.</li>
+            <li>Click the <b>Save Product Config</b> button to save your updates.</li>
+        </ol>
+        <h2>Delete a Product</h2>
+        <ol>
+            <li>On the navigation bar, click <b>Product Config/Products</b>.</li>
+            <li>In the product list grid, click the red <b style="color: #ff0000;">X</b> to the right of the product name and product type.</li>
+            <li>
+                <p>In the confirmation dialog, click <b>Yes</b> to delete the product from the system or click <b>No</b> to close the dialog without deleting the product.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/ProductDeleteConfirmation-DB.jpg" alt="Produce Delete Confirmation dialog" title="Produce Delete Confirmation dialog" MadCap:conditions="General.Online" class="Thumbnail" />
+                </p>
+            </li>
+        </ol>
+    </body>
+</html>

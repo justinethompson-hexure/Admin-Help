@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This enhancement will allow applying a timeout to the validity of passcode required for external login link to FireLight by clients, agents, and reviewers. Currently, there is no time limitation for the passcode to be valid. To implement a standard practice for passcode (OTP) expiry, this enhancement will allow clients to enforce a timeout using an organization setting. This is an optional feature that can be set by organizations via the Organization Settings.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>  A new text box "Passcode Timeout" is added to page FL Admin &gt; Organization Configuration &gt; Organization Settings &gt; Activity (tab).</p>
+            </li>
+            <li>
+                <p>  A new "Resend Passcode" button is added to external link login page to resend passcode in case of expiration.</p>
+            </li>
+        </ul>
+    </body>
+</html>

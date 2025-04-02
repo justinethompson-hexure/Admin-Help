@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>E-Delivery Deliver Only</h1>
+        <p class="note"><b class="Bold">Spotlight Video:</b> See the <a href="https://vimeo.com/488768495/68a097525a" target="_blank" title="https://vimeo.com/488768495/68a097525a" alt="E-Delivery">E-Delivery</a> Spotlight feature video for demos of the three E-Delivery workflows.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">E-Delivery Deliver Only</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>The E-Delivery Deliver Only workflow provides delivery only of client contracts. Deliver Only cases require no signing and arrive in a locked status. An e-Delivery Deliver Only request initiates with FireLight<sup>®</sup> receiving an ACORD DocSend (TX121 and a TransSubType typecode 12123  with processing instruction =  Agent Directed or Client Directed) message that drives the E-Delivery Deliver Only workflow. The organization's provider can have the ability to access the TXLifeRequest object so the provider can add and manipulate data items that are sent in the 121. The provider can be able to call the TXLifeRequest object for all agent-directed and client-directed cases. During the process, FireLight provides status messaging back to the carrier to keep track of the contract delivery. </p>
+                        <p><b class="Bold">NOTE:</b> The initial e-Delivery emails for client pick-up can be resent with the trigger being a 121 with an ACORD TransMode 10 (OLI_TRANS_MODE_SUBRESPONSE). To trigger the resending of the emails, the 121 must contain the same TransRefGuid and PolNumber so FireLight can find and process the correct case.  In the event a child case reaches a terminal status that causes the parent case to change to any status other than "Sent To Client" (e.g., one party declines e-sign, thus the application is now a paper app), no initial emails is resent for any child cases. If a child case has been completed, it’s initial email will not be resent.</p>
+                        <p>FireLight supports two other E-Delivery workflows. Click a link to go to the feature topic.</p>
+                        <ul>
+                            <li>
+                                <p>
+                                    <MadCap:xref href="E-Delivery Fill and Sign.htm" alt="E-Delivery (Fill and Sign)">E-Delivery (Fill and Sign)</MadCap:xref><![CDATA[  ]]></p>
+                            </li>
+                            <li>
+                                <p>
+                                    <MadCap:xref href="E-Delivery Sign Only.htm" alt="E-Delivery Sign Only">E-Delivery Sign Only</MadCap:xref> </p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">FireLight Setup</p>
+                        <p> Contact your <MadCap:variable name="General.ProductName" /> Strategic Account Manager to create an addendum to the contract to support the E-Delivery workflow type, set up the integration, and accept the transaction fees. Also contact the Strategic Account Manager for assistance with creating and designing wizards and rule sets for e-Delivery.  </p>
+                        <p><b class="Bold">NOTE:</b> E-Delivery is available only with the Wizard user interface.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p>Following is a synopsis of the E-Delivery setup process. Refer to the <i MadCap:conditions="General.PDF">FireLight e-Delivery Guide</i><a href="../Resources/PDFGuides/FireLight E-Delivery Guide.pdf" target="_blank" title="FireLight E-Delivery Guide" alt="FireLight E-Delivery Guide" MadCap:conditions="General.Online">FireLight E-Delivery Guide</a> for detailed implementation instructions. <b class="Bold">NOTE: </b>The parties that carriers use for deliver only cases must be updated by Hexure in the signer list profile.  Deliver only does not have signature controls and must be set up through list profile.</p>
+                        <ol>
+                            <li>Designer/<MadCap:xref href="../Design/Wizard Library/Wizard Library.htm" alt="Wizard Library">Wizard Library</MadCap:xref> page: Create one or more wizards to be included in the E-Delivery package. Although the e-delivery workflow uses only the wizard interface, it can use forms that are converted to wizard view.  Deliver Only is also presented in a locked view and does not support fill.  It can be pre-filled by the 121 and rules is run before the case is locked.</li>
+                            <li>Designer/<MadCap:xref href="../Design/Form Library/Form Library.htm" alt="Form Library">Form Library</MadCap:xref> page: The PDF forms to be sent in the TX121 and a TransSubType typecode of 12123 and presented in FireLight (example the Policy) are sent in the TX121-12123 with a document tag identifying the form. Upload one or more template forms with a DocumentTag that correctly associates the  PDF in the TX121-12123 with the form requirements in FireLight. See the <i>FireLight e-Delivery Guide</i> for details.</li>
+                            <li>Designer/<MadCap:xref href="../Design/Wizards/Wizard Designer.htm" alt="Wizard Designer">Wizard Designer</MadCap:xref> or <MadCap:xref href="../Design/Forms/Form Designer.htm" alt="Form Designer">Form Designer</MadCap:xref> page: Design the wizards or forms to be included in the E-Delivery package and add the rules in the E-Delivery rule set. It doesn’t need to be wizards as it is pre-filled only from 121 and not user entered. Firms can have more than one wizard or form.  There  is different wizards for the different E-Delivery product types (Deliver Only, Sign Only, Fill and Sign).</li>
+                            <li>Product Configuration/<MadCap:xref href="../Product Configuration/Rule Sets.htm" alt="Rule Sets">Rule Sets</MadCap:xref> page: Add the rules for E-Delivery Deliver Only. Rules is run on each case before it is locked.  The Agent/client receives the case in a locked state.</li>
+                            <li>
+                                <p>Product Configuration/<MadCap:xref href="../Product Configuration/Activities.htm" alt="Activities">Activities</MadCap:xref> page: In the grid at the top of the page, click <b class="Bold">Add New Activity</b>, enter the name of the E-Delivery Deliver Only product in <b class="Bold">Activity Name</b>.  If it is the only e-delivery product enabled, it will also be used in the e-delivery dashboard button in the Manage section of the Home page. Select <b class="Bold">E-Delivery Deliver Only (121-12123)</b> in <b class="Bold">ACORD Type</b>. Enter settings applicable for your organization. Click <b class="Bold">Save Activity</b>.</p>
+                                <p>Note the following purge dates: </p>
+                                <ul>
+                                    <li><b class="Bold">Complete Purge Policy</b> The number of days after an E-Delivery Delivery Only case was finished (this includes Expired, Canceled, Re-Issued, and Completed cases). The default is 60 days and can be changed only by Hexure. Once the 60-day time period has been exceeded the Purge process will purge the activity.</li>
+                                    <li><b class="Bold">Incomplete Purge Policy</b> The number of days since an incomplete E-Delivery  Delivery Only case was last updated. An Incomplete activity has been updated. The default is 60 days and can be changed only by Hexure. Once the 60-day time period has been exceeded the Purge process will purge the activity.  </li>
+                                </ul>
+                            </li>
+                            <li>Product Configuration/<MadCap:xref href="../Product Configuration/Products.htm" alt="Products">Products</MadCap:xref> page: Add the E-Delivery Deliver Only product as a <b class="Bold">Non-Insurance Product</b> in <b class="Bold">Product Type</b>, <b class="Bold">Product Category</b>, and if applicable, <b class="Bold">Product Type Filter (UI)</b>. Configure product settings. Add a unique <b class="Bold">Product Code</b> that can be used to delineate the different packages to use for E-Delivery Delivery Only. Save the product config. </li>
+                            <li>Product Configuration/<MadCap:xref href="../Product Configuration/Packages.htm" alt="Packages">Packages</MadCap:xref> page: Add the E-Delivery Deliver Only package. In <b class="Bold">ACORD Type</b>, select <b class="Bold">E-Delivery Deliver Only (121-12123)</b>. Add the E-Delivery Deliver Only wizards and rule sets to the package, and save the package.</li>
+                            <li>Product Configuration/<MadCap:xref href="../Product Configuration/SalesAgreements.htm" alt="Sales Agreements">Sales Agreements</MadCap:xref> page: Add the sales agreement for the E-Delivery Deliver Only product, assign the Deliver Only package to the sales agreement, and save the sales agreement.</li>
+                            <li>
+                                <p>Organization Configuration/Organization Settings/<MadCap:xref href="../Organization Configuration/Organizations/Activity.htm" alt="Activity">Activity</MadCap:xref> tab: Be sure to set the following options and click <b class="Bold">Save Organization</b>:</p>
+                                <ul>
+                                    <li>Select the <b class="Bold">E-Delivery Reminder Frequency</b> (Never, Daily, Weekly) of an agent reminder email for E-Delivery based on the case expiration date. E-Delivery reminder emails run on the scheduler with the reminder set at intervals from the time of the application reaching the E-Delivery status. "Daily" frequency emails go out at 6:00 AM UTC. "Weekly" frequency emails go out on Sunday at 7 AM UTC. </li>
+                                    <li>In <b class="Bold">E-Delivery Expiration Warning Threshold</b>, enter the number of days prior to the expiration of a pending E-Delivery an email should be sent to the agent and/or client. This email will warn of the impending expiration of the E-Delivery. If 0 is entered, no email is sent. </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Organization Configuration/<MadCap:xref href="../Organization Configuration/Groups.htm" alt="Groups">Groups</MadCap:xref> page:</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>Select a <b class="Bold">TC Role Code</b> in the grid. </li>
+                                    <li>
+                                        <MadCap:xref href="../Organization Configuration/Groups/Activity Access.htm" alt="Activity Access">Activity Access</MadCap:xref> tab: Select the <b class="Bold">E-Delivery Deliver Only</b> checkbox to enable E-Delivery Deliver Only for the user group. (Optional) Near the end of the page, select <b class="Bold">Disable Approve Button</b> to prevent the agent/advisor from approving the E-Delivery. For example, if the carrier allows visibility to multiple agents, they can use this option to disable the Approve button. They will still have the ability to reject the case.</li>
+                                    <li>
+                                        <MadCap:xref href="../Organization Configuration/Groups/Product Access.htm" alt="Product Access">Product Access</MadCap:xref> tab: Select the checkbox for the E-Delivery Deliver Only product name.</li>
+                                    <li> Save the Groups page. </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>Utilities/Deployments page: When testing is completed, deploy the E-Delivery Deliver Only product to the applicable environments. See <MadCap:xref href="../Utilities/Deployments/Deploy Data.htm" alt="Deploy Data">Deploy Data</MadCap:xref>.</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>Synchronization Scope: Select <b class="Bold">All Configuration</b>.</li>
+                                    <li>Reason: Type the reason for the deployment.</li>
+                                    <li>Deployment tab: In the Deploy column, select the checkbox for the E-Delivery Deliver Only product.</li>
+                                    <li> Set whether to Deploy Now or Schedule Deployment and whether or not to use Force Deploy.</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <p>The E-Delivery case from the carrier goes into FireLight from the ACORD DocSend (TX121-12123) message through the firm's Provider. </p>
+                        <p>Agent Directed Cases:</p>
+                        <ol>
+                            <li>
+                                <p>The E-Delivery Delivery Only workflow is locked and ready for download. The status is Pending Agent Review.</p>
+                            </li>
+                            <li>
+                                <p>FireLight sends a request for agent review email to the agent. </p>
+                            </li>
+                            <li>Agent opens the E-Delivery Deliver Only case.<ul><li>On the left of the FireLight Home page, agent clicks an E-Delivery Deliver Only case in the <b class="Bold">Recent Activity</b> grid. </li><li>On the right of the Home page under <b class="Bold">Manage</b>, agent clicks the E-Delivery button to go to all the E-Delivery cases in <b class="Bold">All Activities</b>. Agent clicks the <b class="Bold">View</b> button to open an E-Delivery Deliver Only case in the list. <b class="Bold">NOTE:</b> In the Manage section on the Home page, the counter on the E-Delivery button shows the total number of E-Delivery cases that are in the Pending Agent Review status. Pending Agent Review statuses will increase the Agent's dashboard counter.</li></ul></li>
+                            <li>
+                                <p>Agent reviews the information. If it is accurate and complete, agent clicks the <b class="Bold">Approve</b> button. If the information is not  accurate, the agent cannot change, but must use cancel e-delivery.</p>
+                            </li>
+                            <li>
+                                <p>FireLight sends an email to the client to request the client to download the E-Delivery documents. The case is locked and ready for download. The information comes from the 121 party info.  The name and email address fields are disabled and pre-filled from the 121.  The party fields must be mapped in the Admin <MadCap:xref href="../Organization Configuration/Mapping.htm" alt="Mapping">Mapping</MadCap:xref> tool to correctly map name and email address. The status changes to Pending E-Delivery. An email request is sent to each client in the parent case and child cases. FireLight sends the Pending E-Delivery status to the carrier.</p>
+                            </li>
+                            <li>
+                                <p>The client clicks the link in the email, enters their login information and clicks <b class="Bold">Enter</b>. Once the client authenticates, the case is considered complete.  The completion process is initiated and an 1122 is sent.</p>
+                            </li>
+                            <li>
+                                <p>FireLight opens with two buttons. </p>
+                                <p><b class="Bold">Contact Agent</b> – Client clicks the <b class="Bold">Contact Agent </b>button to compose and send a message to the agent.</p>
+                                <p><b class="Bold">Review Documents</b>  – Client clicks the <b class="Bold">Review Documents</b> button to access the individual documents for review. On this page, the Client can also do the following: </p>
+                                <ul>
+                                    <li>
+                                        <p>Click the <b class="Bold">Document Download</b> button to open another view and click a <b class="Bold">Download All</b> link to download all of the E-Delivery Deliver Only documents. Display status changes to Download Complete and a 1122 is sent to the carrier.  The audit report is also regenerated to include the download audit. Depending on the browser view, Client can click the <b class="Bold">Open</b>, <b class="Bold">Save</b> and <b class="Bold">Cancel</b> buttons for the downloaded E-Delivery Deliver Only documents PDF file.</p>
+                                    </li>
+                                    <li>
+                                        <p>Click <b class="Bold">Request Print</b> to request the carrier to print the documents and mail them to the client. Upon selecting Request Print, the Display status changes to Request Print for the child case and the parent case. FireLight does not delete the cases because these cases were completed and the Request Print can be available post submit. FireLight retains the audit history.</p>
+                                    </li>
+                                    <li>
+                                        <p>Click <b class="Bold">Contact Agent</b> to compose and send a message to the agent. </p>
+                                    </li>
+                                    <li>
+                                        <p>Click <b class="Bold">Log Off</b> to log off FireLight. </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>If all child cases are locked and transitioned into E-Delivery Complete status,  FireLight submits the E-Delivery Deliver Only case to the back-office systems for final processing. The status changes to Pending E-Delivery - Submitted and then to Complete on the main agent case.</p>
+                            </li>
+                            <li>
+                                <p>When back office processing is complete, FireLight sends a Complete status to the carrier.</p>
+                            </li>
+                        </ol>
+                        <p><b class="TableBlue">Undeliverable Email (SendGrid)</b>
+                        </p>
+                        <MadCap:snippetBlock src="../Resources/Snippets/Email/EDeliveryUndeliverableEmailAdmin.flsnp" />
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information </p>
+                        <p>FireLight e-Delivery Guide: See the <em MadCap:conditions="General.PDF">FireLight E-Delivery Guide</em><a href="../Resources/PDFGuides/FireLight E-Delivery Guide.pdf" target="_blank" title="FireLight E-Delivery Guide" alt="FireLight E-Delivery Guide" MadCap:conditions="General.Online">FireLight E-Delivery Guide</a>  for detailed setup information.</p>
+                        <p>Spotlight Feature Video: <a href="https://vimeo.com/488768495/68a097525a" target="_blank" title="https://vimeo.com/488768495/68a097525a" alt="E-Delivery">E-Delivery</a></p>
+                        <p>User Guide: <em>FireLight Platform User Guide</em>, Manage section, <MadCap:conditionalText MadCap:conditions="General.PDF">"E-Delivery Delivery Only"</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../UserGuide/Manage/E-Delivery Deliver Only.htm" alt="E-Delivery Deliver Only">E-Delivery Deliver Only  [User Instructions]</MadCap:xref></MadCap:conditionalText> topics</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:pageBreak />
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

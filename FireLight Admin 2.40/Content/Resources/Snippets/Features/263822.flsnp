@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This integration exposes the FireLight Illustration SDK to support connection to FireLight Illustrations so that anyone providing an illustration functionality can integrate with the Hexure platform.  By doing this by creating REST APIs to help carriers wrap their engines, provide self-service tools exposing a variety of ways to hook their engines into the platform, or include capabilities to leverage existing engines as-is.</p>
+        <p>Impacts:</p>
+        <ul>
+            <li>
+                <p>Admin Tool</p>
+            </li>
+            <li>
+                <p>Addition for Org Settings: new tab " External Integrations" with new table to reflect the "Add New Illustration Service" that have been created. A new window will pop-up to capture the "Service Name Configuration" requirements:  Service Name, Base URL, Version (Day 1 will only show 1.0), Authentication (None, APIKey and HMAC), Key Value. New "Save Endpoint" and "Test Endpoint" buttons will also be added.</p>
+            </li>
+            <li>
+                <p>Products: new field and drop-down list is added to the “Product Details” tab. New field labeled “Illustration Service” and the drop-down list being populated with the newly created or updated “Service Name Configuration” created under the “External Integrations”.</p>
+            </li>
+            <li>
+                <p>Wizard: Creation of an illustration wizard</p>
+            </li>
+        </ul>
+        <p>Additional:</p>
+        <ul>
+            <li>
+                <p>OAS Document</p>
+            </li>
+            <li>
+                <p>Additional IS-API Documentation Site</p>
+            </li>
+            <li>
+                <p>Working example of an IS-API</p>
+            </li>
+        </ul>
+    </body>
+</html>

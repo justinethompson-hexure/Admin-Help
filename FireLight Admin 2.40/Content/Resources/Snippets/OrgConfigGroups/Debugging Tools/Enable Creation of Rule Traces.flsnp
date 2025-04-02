@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <strong>Enable Creation of Rule Traces</strong> checkbox to enable the ability to create rule traces in FireLight<sup MadCap:conditions="General.Online">®</sup>. The FireLight user needs to select the <b class="Bold">Enable Rule Tracing For Session</b> checkbox in Preferences to enable rule tracing for the current session.<MadCap:conditionalText MadCap:conditions="General.Online"> See also the "General" section in <MadCap:xref href="../../../../UserGuide/Preferences/Preferences.htm" target="_blank" alt="Preferences [User Instructions]">Preferences [User Instructions]</MadCap:xref>.</MadCap:conditionalText></body>
+</html>

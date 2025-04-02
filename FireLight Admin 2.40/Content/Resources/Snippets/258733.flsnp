@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This enhancement requires applying a filter search and creating a panel view within the list to narrow the deployment items by Form, Package or Rule Set on the Admin Deployments page. This enhancement will provide the ability to more delicately review the changes to ensure in-progress dev is not deployed accidentally. The focus of this enhancement is deployment integrity.</p>
+        <p>Impacts:</p>
+        <p>With this enhancement, users is able to apply a keyword search or date filter on the Deployment History data. Forms, Packages and Rule Sets will also be moved to a panel view to increase deployment visibility to the admin user.</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>  FL Admin -&gt; Utilities -&gt; Deploy -&gt; Deployment -&gt; Total for Selected Items</p>
+            </li>
+        </ul>
+    </body>
+</html>

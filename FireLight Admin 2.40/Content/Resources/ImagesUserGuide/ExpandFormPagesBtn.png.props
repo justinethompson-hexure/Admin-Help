@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileProperties>
+    <ImageOverlay Profile="D:\Documents\My Profiles\FireLightUserGuide.capro" ProfileHash="17ab8a245f347468213ad253f12e292d50527913" ScreenRectangle="165,504,19,15">
+        <OriginalImage Type="Image" ShapeTimeSpan="10000" AutoAdjust="true" DPI="96" medium_print_EnableFormat="true" medium_print_DPI="300" Folder="D:\Documents\My Projects\FireLight Admin 2.18\Content\Resources\ImagesUserGuide" ExportFormat="png" medium_print_ExportFormat="png" BorderColor="#4682b4" Border="solid" FileName="Capture{n}" EnableGrayScaleFormat="false" medium_screen_and__max_width__64_063em__ExportFormat="png" medium_screen_and__max_width__64_063em__DPI="96" medium_screen_and__max_width__40em__ExportFormat="png" Title="Expand Form Pages Button" Alt="Expand Form Pages Button" ComputedWidth="19" ComputedHeight="15">SUkqANAAAACAP+BP8AQWDQeEQmFQuGQ2HQmBwSHxOKRWLACIxeNRuNRmHIGQRyRBeSAA0SeGR6IQIAK2XABqzGRRYjzUADicSmBw99T0AIegTOHBaiAAy0cAASlTqWQ6dy5WzCZUKETUjzecw+VROevqf0GqUQLUakUoCROt1qWVCpNWRVasDiL2mK12voeL2KyGWk0uLXSKU+XzG3Q+4Ti5RzARe7UC8Qu9Ue+WaRYu/2vB1ODYes0LLRvG0HI2W/Z6d1SDYKohzWXHUQeAgBAA/gAEAAEAAAAAAAAAAAEEAAEAAAATAAAAAQEEAAEAAAAPAAAAAgEDAAQAAACWAQAAAwEDAAEAAAAFAAAABgEDAAEAAAACAAAAEQEEAAEAAAAIAAAAFQEDAAEAAAAEAAAAFgEEAAEAAAAPAAAAFwEEAAEAAADIAAAAGgEFAAEAAACeAQAAGwEFAAEAAACmAQAAHAEDAAEAAAABAAAAKAEDAAEAAAACAAAAPQEDAAEAAAACAAAAUgEDAAEAAAACAAAAAAAAAAgACAAIAAgAAHcBAOgDAAAAdwEA6AMAAA==</OriginalImage>
+        <Shapes />
+        <Variables />
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

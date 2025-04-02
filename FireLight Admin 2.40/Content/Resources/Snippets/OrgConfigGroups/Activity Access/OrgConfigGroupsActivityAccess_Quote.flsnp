@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Quote</b> checkbox to provide group access to the Quote activity. See <MadCap:xref href="../../../../Features/Quote.htm" target="_blank" alt="Quote">Quote</MadCap:xref> in Features. <MadCap:conditionalText MadCap:conditions="General.Online">See also <MadCap:xref href="../../../../UserGuide/New Activity/Quote.htm" target="_blank" alt="Quote [User Instructions]">Quote [User Instructions]</MadCap:xref>.</MadCap:conditionalText></body>
+</html>

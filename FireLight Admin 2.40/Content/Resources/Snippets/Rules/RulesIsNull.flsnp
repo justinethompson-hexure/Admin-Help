@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>If issues arise with fields with activities that contain both forms plus wizards that have a common tag and are not synching correctly or do not show validation messages when empty, look at the rules for the field and convert IsNull to IsNullORWhiteSpace.</body>
+</html>

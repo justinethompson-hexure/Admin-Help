@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight v2.39-p Release Notes</h1>
+        <h1><![CDATA[    ]]><b style="font-size: 16pt;">New Functionality</b></h1>
+        <p><b style="font-size: 14pt; color: #000000;">Support Filtering of Report Data to Include Only Embedded Applications: DIST-5115</b>
+        </p>
+        <p>We added the ability to filter report data so that only embedded applications are included.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Capture Application Origin in New Data Item: EAES-5673</b>
+        </p>
+        <p>We created a new data item, “FLI_APP_ORIGIN,” to capture details of the environment in which an application was created or copied, whether FireLight UI, REST API, or Unknown. See <MadCap:xref href="../Features/FLI_APP_ORIGIN Data Item.htm">FLI_APP_ORIGIN Data Item</MadCap:xref> for more information.</p>
+        <p><span style="font-size: 16pt; font-weight: bold; color: #000000;">Resolved Issues</span>
+        </p>
+        <p><span style="font-size: 14pt; font-weight: bold;">Create SuranceBay Config File with Production Settings: CR-4168</span>
+        </p>
+        <p>We resolved an issue where no config file with SuranceBay Production settings existed in the prod config directories. This config file is now available.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Comm Netting Issue: CR-4182</b>
+        </p>
+        <p>We resolved an issue where an error was encountered when attempting to calculate commission netting. Commission netting can now be calculated as designed, without error.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Update Docusign Production appSettings: CR-4210</b>
+        </p>
+        <p>We resolved an issue where production settings for Docusign environments were incorrect in the appSettings.config file. These settings are now correct.</p>
+        <p><span style="font-size: 14pt; font-weight: bold; color: #000000;">Once the App Status Is Marked as Complete, the User Can Remove the Uploaded Documents: EAES-6348</span>
+        </p>
+        <p>We resolved an issue where users were erroneously able to remove documents from completed applications. Now documents cannot be removed from completed applications.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Unable to Create Activity When User's Group Has Many Role Codes: EAES-6380</b>
+        </p>
+        <p>We resolved an issue where multiple role codes resulted in a database error when attempting to write the application audit. Application audits are now written without error.</p>
+        <p><span style="font-size: 14pt; font-weight: bold;">Form That Is Excluded from Back Office Has the Wrong Visibility, Causing It to Be Included: EAES-6385</span>
+        </p>
+        <p>We resolved an issue where forms were mistakenly set as Carrier Only instead of Client Only, causing them to be included with applications. In this scenario, such forms are not included with applications.</p>
+        <p><b style="font-size: 14pt;">System Not Honoring Signature System Selection: EAES-6458</b>
+        </p>
+        <p>We resolved an issue where selecting either Pre-Signature Review or Post-Signature Review did not work as expected. Selecting these checkboxes now works as designed.</p>
+        <p><b style="font-size: 14pt;">BeforeOSJ Workflow for Pre-submit Review Queue Is Not Working: EAES-6511</b>
+        </p>
+        <p>We resolved an issue where the BeforeOSJ workflow did not work as expected. The workflow now works as designed.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Distributor Should Not Be Able to Modify Firm Organizations on Carrier Sales Agreement: PC-3641</b>
+        </p>
+        <p>We resolved an issue where distributors were erroneously able to modify firm organizations on carrier sales agreements. Distributors are no longer able to modify firm organizations.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Validation Messages Are Not Getting Cleared Correctly: PC-3666</b>
+        </p>
+        <p>We resolved an issue where validation messages continued to display after error correction. Validation messages now clear after errors are corrected.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Integration Provider Unable to Load Rebex Assembly Due to Version Update: PC-3672</b>
+        </p>
+        <p>We resolved an issue where some integration providers encountered errors after loading the Rebex component due to a version change. The Rebex component can now be loaded without error.</p>
+        <p><b style="font-size: 14pt; color: #000000;">Error Loading Application Due to Duplicate traceFailedRequests Config File Entry: PC-3675</b>
+        </p>
+        <p>We resolved an issue where loading an application resulted in an error due to duplicated config file entries. Applications now load without errors.</p>
+        <p><b style="font-size: 14pt;">Excessive setrowvisibility Rule Exceptions: PC-3681</b>
+        </p>
+        <p>We resolved an issue where an excessive number of setrowvisibility errors appeared in exception logs. The number of setrowvisibility errors is now within the anticipated threshold.</p>
+        <p><b style="font-size: 14pt;">Loading of Pages Is Very Slow: UI-964</b>
+        </p>
+        <p>We resolved an issue in the Admin App where pages loaded slower than expected. Pages now load within acceptable limits.</p>
+        <p><span style="font-size: 14pt; font-weight: bold; color: #000000;">Password Reset and Change Password Not Working Correctly: UI-2300</span>
+        </p>
+        <p>We resolved an issue where password reset and change did not work correctly. Password reset and change now work as designed.</p>
+        <p>&#160;</p>
+        <p>***Please note that the JIRA ticket numbers are provided for reference. JIRA tickets are not accessible to users outside Hexure.***</p>
+        <p data-mc-conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

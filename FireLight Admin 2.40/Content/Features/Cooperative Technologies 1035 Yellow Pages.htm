@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="FireLight setup and usage instructions for integration with Cooperative Technologies (CT) 1035 Yellow Pages (1035 Yellow Pages) to pull in ceding carrier (surrendering carrier) data." />
+    </head>
+    <body>
+        <h1><a name="Top"></a>Cooperative Technologies 1035Yellow Pages </h1>
+        <p class="note"><a name="top"></a><b class="Bold">Spotlight Video:</b> See the <a href="https://vimeo.com/310656021/2e87239b19" target="_blank" title="Cooperative Technologies -1035 Exchange- Integration Video" alt="Cooperative Technologies -1035 Exchange- Integration Video">FireLight Cooperative Technologies -1035 Exchange- Integration</a> for a Spotlight feature video about Cooperative Technologies 1035Yellow Pages.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Cooperative Technologies Ceding Carrier Database Integration and Replacement Processing </caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 785px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>Integrate FireLight<sup>®</sup> with Cooperative Technologies (CT) to pull in the ceding carrier (surrendering carrier) data. The CT 1035Yellow Pages is a ceding carrier contact and replacement requirements database that contains up-to-date ceding carrier replacement processing location, contact information, and replacement form requirements for thousands of ceding carriers, including all Annuity, Life and Government insurers, the top Mutual Fund companies, major Banks, Fraternal Organizations, and large Pension Administrators.</p>
+                        <p>FireLight uses the CRM lookup for the carrier search, pulls in the ceding carrier data from CT for mapping to the ACORD 951 eForm, and pulls in the rules to determine whether the exchange/replacement/transfer forms can be e-signed. If the replacement forms must be wet signed, FireLight provides an easy print button that will include only these forms and a subsequent upload button for the easy upload of wet signed forms.</p>
+                        <p MadCap:conditions="General.Online">
+                            <img src="../Resources/ImagesAdmin/Features1.jpg" alt="1035 Exchange/Rollover/Transfer Process" title="1035 Exchange/Rollover/Transfer Process" MadCap:conditions="General.Online" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Cooperative Technologies Integration/FireLight Setup</p>
+                        <p class="note"><b class="Bold">IMPORTANT!</b> The CT Yellow pages integration indicating whether the form can be esigned is built with the assumption that the carrier uses the ACORD 951 eForm.  Our base code logic to set the AllowEsign value is based on the form being the ACORD 951 eForm.  Our base code is not looking at logic on the proprietary form.  While we technically cannot “REQUIRE” and check that the carrier is using the ACORD 951 eForm, the value returned will give a false positive for the Allow Esign if carriers are using any transfer or exchange form other than the ACORD 951 eForm.  When carriers have only a proprietary transfer/exchange form and they want to use the esign rules, they need to update their form to the ACORD 951 eForm.  We have a sample loaded for that form. Some carriers use their proprietary form for internal use and the ACORD 951 eForm for the signing process that is sent to the ceding carrier.  That is fine, too.  Note that using the ACORD form does require the carrier to be an ACORD member. ACORD has a special membership rate for using just this form.  If all the carrier wants to do is map the pre-filled ceding carrier processing center address and location details, that can work regardless of the form.</p>
+                        <ol>
+                            <li>
+                                <p>Carriers must contract directly with Cooperative Technologies (CT) to have the surrendering carrier data and rules pulled into the ACORD 951 eForm. CT  handles all of the billing.</p>
+                                <p class="note"><b>NOTE:</b> If you are not a current CT 1035YellowPages client, contact Cheri DeBoer-Stinson, Director of Business Development, CStinson@CooperativeTechnologies.com, 404-315-4450.</p>
+                                <p> FireLight stores a unique licensing code for the carrier in the organization code and includes that in the web service call to CT. This allows <MadCap:variable name="General.ProductName" /> to know who can use the "Get Ceding Carrier details." For billing purposes, when a client submits an order that has a CT call-out on it, <MadCap:variable name="General.ProductName" /> auto-generates a file that contains the unique licensing code and the final selected ceding carrier location ID and sends it to CT in a Microsoft Excel file via email. CT will use this data for stats and billing.</p>
+                            </li>
+                            <li>For carriers that need the Universal ID sent to them in the DTCC file, the App/Sub 3314 record has the Prior Carrier Processing Location in field 4187  to receive this value.  Please submit a Work Order to have your provider code updated to pull in this value for your file.</li>
+                            <li>
+                                <p>In FireLight Admin on the Organization Configuration/Organization Settings page, <MadCap:xref href="../Organization Configuration/Organizations/Admin.htm" alt="Admin">Admin</MadCap:xref> tab, add the Third-Party Service Config Username and Password.  Ensure the Config Name begins with "WS" as shown below. In the login credentials, the company ID and username are combined for the WSUser config value (for example, “IT/TestWS”). <b class="Bold">NOTE: The following example credentials are for example only—be sure to use the credentials provided by Cooperative Technologies.</b> </p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>To the right of <b>Third-Party Service Config</b>, click the <b>Click to Edit</b> link to open the Third-Party Service Configuration dialog.</li>
+                                    <li>
+                                        <p>Click the <b>Add New</b> link at the top of the dialog. </p>
+                                        <ol style="list-style-type: lower-roman;">
+                                            <li>In <b>Config Name</b>, enter <b class="Bold">WSPass</b>. </li>
+                                            <li>In <b>Config Value</b> enter the password (e.g., testwspw) provided by Cooperative Technologies. </li>
+                                            <li>In <b>Service Type</b>, select <b class="Bold">1035YellowPages</b> and click the <b>Add Config</b> button.</li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <p>Click the <b>Add New</b> link at the top of the dialog.</p>
+                                        <ol style="list-style-type: lower-roman;">
+                                            <li>In <b>Config Name</b>, enter <b class="Bold">WSUser</b>. </li>
+                                            <li>In <b>Config Value</b>, enter the username provided by Cooperative Technologies preceded by your company ID (e.g., IT/TestWS).</li>
+                                            <li>In <b>Service Type</b>, select <b class="Bold">1035YellowPages</b> and click the <b>Add Config</b> button. </li>
+                                            <li>
+                                                <p>Close the dialog. </p>
+                                                <p MadCap:conditions="General.Postpone"><b class="Bold">NOTE:</b> Config Group is an optional column primarily used by the <MadCap:xref href="DocuSign.htm" alt="DocuSign Integration">DocuSign Integration</MadCap:xref> integration.</p>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li>Click the <b>Save Organization</b> button on the Organization Settings page.</li>
+                                </ol>
+                                <p MadCap:conditions="General.Online" class="Indent">
+                                    <img src="../Resources/ImagesAdmin/Organizations2.jpg" alt="Add a Third Party Service Configuration" title="Add a Third Party Service Configuration" MadCap:conditions="General.Online" />
+                                </p>
+                            </li>
+                            <li>
+                                <p>Contact your Hexure (IT) Strategic Account Manager for the following:</p>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>Acquire the FireLight tagged ACORD 951 eForm that you need to use. A sample is in the "Additional Information" section below. </p>
+                                        <p class="note"><b class="Bold">NOTE: </b><b class="Bold">The use of this form is restricted to ACORD Licensed members.</b>  If you are not sure whether you are Licensed by ACORD to use this form, please check with your firm or contact ACORD Membership.</p>
+                                        <p>The following fields are mapped in FireLight:</p>
+                                        <ul>
+                                            <li>
+                                                <p>FirstName - Name of the replacement company</p>
+                                            </li>
+                                            <li>
+                                                <p>Line1 - First and second lines of replacement company address</p>
+                                            </li>
+                                            <li>
+                                                <p>City - City in which the replacement company is located </p>
+                                            </li>
+                                            <li>
+                                                <p>AddressStateTC - State in which the replacement company is located</p>
+                                            </li>
+                                            <li>
+                                                <p>Zip - Replacement company Zip code </p>
+                                            </li>
+                                            <li>
+                                                <p>DiaNumber - Phone number of the replacement company </p>
+                                            </li>
+                                            <li>
+                                                <p>Replacement_Company_Fax_PhoneNumber - Replacement company fax number</p>
+                                            </li>
+                                            <li>
+                                                <p>Email - Replacement company email address</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                <p>Replacement_Company_UniversalLocationID – the location ID of the new insurance company that is receiving the existing transferred policy</p>
+                                            </li>
+                                            <li>
+                                                <p>Replacement_Company_LocationID – the location ID of the existing insurance company policy that is being transferred to another insurance company</p>
+                                            </li>
+                                            <li>
+                                                <p>FLI_ALLOWESIGN – code to indicate whether the surrendering company allows e-Sign ACORD 1035 exchange forms (see details below)</p>
+                                            </li>
+                                        </ul>
+                                        <p>The forms team can also provide:</p>
+                                        <ul style="list-style-type: square;">
+                                            <li>
+                                                <p>The form with the button to call CT and the rule set for the form.</p>
+                                                <p>See <MadCap:xref href="../Design/Forms/Add Multiple Copies of a Form.htm" alt="Add Multiple Copies of a Form">Add Multiple Copies of a Form</MadCap:xref> for use on multiple-instance (FORM_INDEX) forms as described in step 5 below.</p>
+                                            </li>
+                                            <li>
+                                                <p>We are using the CT GetCarrierInformationv3 method.  Basically, we look at the following two values:</p>
+                                                <p>LocationRule values:</p>
+                                                <ul>
+                                                    <li>1 – Accepted without conditions</li>
+                                                    <li>2 – Accepted without conditions on ACORD 951</li>
+                                                    <li>3 – May or may not be accepted (set to no esign)</li>
+                                                    <li>
+                                                        <p>4 – Not accepted</p>
+                                                    </li>
+                                                </ul>
+                                                <p>eSigLocationTypeInd =</p>
+                                                <ul>
+                                                    <li>2 (live Sign )</li>
+                                                    <li>1 any type of signature</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <p>FireLight will set to the existing FLI_ALLOWESIGN data item values so the rules should not have to change.</p>
+                                                <p>FLI_ALLOWESIGN:</p>
+                                                <ul>
+                                                    <li>0 – No longer being used</li>
+                                                    <li>1 -  Esign not allowed  (pulled from eSignLocationRuleInd if 3 or 4/  or if NOT 1 or 2)</li>
+                                                    <li>2 – Allowed unconditionally (Pulled from eSignLocationRuleInd = 1 or 2)</li>
+                                                    <li>3 – Allowed on signature pad (Pulled from eSignLocationRuleInd = 1 or 2, eSigLocationTypeInd =2 (live Sign )</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <ul style="list-style-type: square;">
+                                            <li>A Sample RuleSet that activates signature tags based on the CT responses has been provided.  This will determine which 1035 Forms to include in e-Signature and which forms should be included in the Print button that will appear on the dynamic instruction page. Please note, the rules do not change the forms that are submitted to the carrier.  It controls only which forms are e-Signed and which are included in the Print|73. </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>Acquire a sample replacement instruction form with the print and upload button examples.</p>
+                                    </li>
+                                    <li>Add the Third-Party Web Service Usage Report for Cooperative Technologies to the Admin reports for your organization.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>The forms team will need to work the “FORM_INDEX” logic into all of the fields in case of multiple 1035 exchanges. </p>
+                                <p>The rules are built to accommodate 3 forms that are indexed.  For the rules to work, you need to set 3 forms in the package.  If you want to support more than 3, the rules will need to be adjusted and the form count is adjusted.</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/Features7.png" alt="Set 3 Forms in the Package" title="Set 3 Forms in the Package" MadCap:conditions="General.Online" />
+                                </p>
+                            </li>
+                            <li>Add the forms and rule sets to the <b>Packages</b> page in Product Configuration. Set the form inclusion option for the 1035 exchange form to <b>Conditional</b> and set the number of <b>Copies</b> to <b>3</b> for the forms to work properly. </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p><b>Set Up the Replacement Form</b>
+                        </p>
+                        <ol>
+                            <li>Carrier partners should create an instruction page for replacements that need to be wet signed and save the form as a template. This is the form that generates when the replacement forms must be wet signed.</li>
+                            <li>On the <MadCap:xref href="../Design/Forms/Form Designer.htm" alt="Form Designer">Form Designer</MadCap:xref> page, all forms to be included in the print button need to be coded for the appropriate category using the ACORD TypeCode.  For example, all exchange forms should have the ACORD TC = 73.  This value is what drives the forms to be included in the print button.</li>
+                            <li>
+                                <p>Under Add Control to Form, put a <b>Button</b> control on the 1035 Exchange Form for the print button. In the button's Field Properties, set <b>Action Type</b> to <b>Custom Action</b>. In <b>Action Parameter</b>, type <b>Print</b>.  This will print out ALL forms with the same TC Type as the current form in the app (i.e., TC = 73 for ACORD 951 eForm).</p>
+                            </li>
+                            <li>
+                                <p>Set the parameter for the print button. Specify "73" for the exchange forms to print by adding <b>|73</b> after <b>Print</b> in the <b>Action Parameter</b> (e.g., <b>Print|73)</b>.</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/Designer1.jpg" alt="Exchange Form with ACORD Type Code TC=73" title="Exchange Form with ACORD Type Code TC=73" MadCap:conditions="General.Online" />
+                                </p>
+                                <p>This form drives the rules for the print button and the e-signed replacement forms.</p>
+                            </li>
+                            <li>
+                                <p>Under Add Control to Form, put a <b>Button</b> control on the 1035 Exchange Form for the upload button. In the Field Properties for the upload button, set <b>Action Type</b> to <b>Custom File Upload</b> and set <b>Type of Doc to Upload</b> to <b>Ink Signed Forms</b>.</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/Designer2.jpg" alt="Upload ButtonReplacement Form - Upload Button" title="Replacement Form - Upload Button" MadCap:conditions="General.Online" />
+                                </p>
+                            </li>
+                            <li>Disable the ACORD 951 eForm from application documents if the forms are wet signed. Doing this eliminates the issue of a client receiving two versions of the forms (one not signed, but part of the package, and the wet signed version).</li>
+                            <li>If you want to mandate that the wet signed forms are uploaded before the order can reach 100%, the forms team can help you set up a template placeholder with conditions on when to trigger it and set that template form to required.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <ol>
+                            <li>Begin a new application and fill in replacement information on the form, which triggers the addition of the ACORD 951 eForm to the application.</li>
+                            <li>
+                                <p>On the ACORD 951 eForm, click the button that launches the ceding company lookup dialog, type the ceding company's name in the search box and click the search button. Select a company.</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/CooperativeTechnologies1.jpg" alt="Search Ceding Company dialog" title="Search Ceding Company dialog" MadCap:conditions="General.Online" />
+                                </p>
+                            </li>
+                            <li>
+                                <p>FireLight checks to see whether the ceding company supports e-signature or if it requires wet signatures.</p>
+                                <ul style="list-style-type: circle;">
+                                    <li>If e-signature is supported, the signature tags on the form is enabled.  The agent can proceed with the normal e-signature process.</li>
+                                    <li>
+                                        <p>If wet signatures are required, FireLight disables the signature fields, which removes the form from the e-signature packet.  The form must be wet signed. The replacement instruction form now generates for the application.</p>
+                                        <p>On the replacement instruction form, click the <b>Print</b> button and print the forms that need ink signatures (e.g., the ACORD 951 eForm). When the forms are completed and ink signed, click the <b>Upload</b> button to upload the completed and ink signed forms.</p>
+                                        <p MadCap:conditions="General.Online">
+                                            <img src="../Resources/ImagesAdmin/CooperativeTechnologies2.jpg" alt="Print Forms to Ink Sign" title="Print Forms to Ink Sign" MadCap:conditions="General.Online" />
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>When Form Entry is 100% in FireLight, click the <b>CONTINUE</b> button or link to go to Signatures and proceed with the normal application process.</p>
+                                <p>
+                                    <img src="../Resources/ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" /> If a firm wants to mandate that the wet signed forms are uploaded before the order can reach 100%, the forms team can help you set up a template placeholder with conditions on when to trigger it and set that template form to required.</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help:</p>
+                        <ul>
+                            <li MadCap:conditions="General.Postpone">Design Document: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 135497 </MadCap:conditionalText><b href="../Resources/DesignDocs/135497-ReplacementProcessingDesign_05-16-2018.pdf" target="_blank" title="Design Document" alt="Design Document" MadCap:conditions="General.Online" class="DRnumber"><a href="../Resources/DesignDocs/135497-ReplacementProcessingDesign_05-16-2018.pdf" target="_blank" title="CMR 135497" alt="CMR 135497">CMR 135497</a></b> </li>
+                            <li>Sample Replacement Instruction Form: <MadCap:conditionalText MadCap:conditions="General.PDF">Replacement Instruction Page </MadCap:conditionalText><a href="../Resources/DesignDocs/135497-ReplacementInstructionPage.pdf" target="_blank" title="Replacement Instruction Page" alt="Replacement Instruction Page" MadCap:conditions="General.Online">Replacement Instruction Page</a></li>
+                            <li>ACORD 951 eForm and Rule Set: <MadCap:conditionalText MadCap:conditions="General.PDF">Sample Pretagged ACORD 951 eForm and Rule Set </MadCap:conditionalText> <a href="../Resources/DesignDocs/1035 EXCHANGEROLLOVERTRANSFER eFORM.pdf" target="_blank" title="Sample Pretagged ACORD 951 eForm" alt="Sample Pretagged ACORD 951 eForm" MadCap:conditions="General.Online">Sample Pretagged ACORD 951 eForm</a><MadCap:conditionalText MadCap:conditions="General.Online">, <a href="../Resources/DesignDocs/1035 EXCHANGEROLLOVERTRANSFER eFORM.xml" target="_blank" title="Rule Set" alt="Sample Pretagged ACORD 951 eForm Rule Set">Sample Pretagged ACORD 951 eForm Rule Set</a></MadCap:conditionalText>. <b class="Bold">Contact your Strategic Account Manager for the latest form and rule set.</b> <b class="Bold">The use of this form is restricted to ACORD Licensed members. </b></li>
+                            <li>Cooperative Technologies: <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/DesignDocs/LocAndReqeSig_Accept_Report.xlsx" target="_blank" alt="LocAndReqeSig_Accept_Report.xlsx">LocAndReqeSig_Accept_Report.xlsx</a> </MadCap:conditionalText> A small sample list of  Carriers/Processing locations that allow e-Signature without restrictions or allow e-Signature on the ACORD 951 eForm. The list can be used for testing. We use the EsigRuleInd. <b class="Bold">Contact Cooperative Technologies for the latest list.</b></li>
+                        </ul>
+                        <p>Spotlight Feature Video: <a href="https://vimeo.com/310656021/2e87239b19" target="_blank" title="Cooperative Technologies -1035 Exchange- Integration Video" alt="Cooperative Technologies -1035 Exchange- Integration Video">FireLight Cooperative Technologies -1035 Exchange- Integration</a></p>
+                        <p>Admin Guide and Help: Organization Settings/<MadCap:xref href="../Organization Configuration/Organizations/Admin.htm" alt="Admin">Admin</MadCap:xref>  and <MadCap:xref href="../Utilities/Reports/Detail Reports.htm" alt="Detailed Activity Reports">Detailed Activity Reports</MadCap:xref> topics</p>
+                        <p>User Guide: <em>FireLight Platform User Guide</em>/<MadCap:conditionalText MadCap:conditions="General.PDF">"Action Buttons" </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../UserGuide/New Activity/Data Entry/Action Buttons.htm" alt="Action Buttons" title="Action Buttons">Action Buttons [User Instructions]</MadCap:xref> </MadCap:conditionalText>topic, "Example: Ceding Company Details for Replacement Processing" </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

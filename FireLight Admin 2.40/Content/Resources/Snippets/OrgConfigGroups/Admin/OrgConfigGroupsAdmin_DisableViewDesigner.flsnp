@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable View Designer</b> checkbox to disable viewing form and wizard design. The Designer &gt; Form Designer and Wizard Designer buttons on the Admin home page and  on the navigation bar will not be visible when this option is selected. The user will not be able to make changes to the form and wizard controls or access the Rules Window from the <MadCap:xref href="../../../../Design/Forms/Form Designer.htm" target="_blank" alt="Form Designer">Form Designer</MadCap:xref> or <MadCap:xref href="../../../../Design/Wizards/Wizard Designer.htm" target="_blank" alt="Wizard Designer">Wizard Designer</MadCap:xref> pages.</body>
+</html>

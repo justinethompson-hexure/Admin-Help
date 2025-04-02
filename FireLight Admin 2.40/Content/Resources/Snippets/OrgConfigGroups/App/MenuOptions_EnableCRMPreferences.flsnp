@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Enable CRM Preferences</b> checkbox to enable entering and storage of the agent CRM login credentials, which are used to retrieve client data for pre-fill, on the My Preferences page. The agent is able to enter their credentials in My Preferences in FireLight one time and when the CRM call to Redtail or other CRM occurs, the credentials will not need to be re-entered. <MadCap:conditionalText MadCap:conditions="General.Online">See also <MadCap:xref href="../../../../UserGuide/Preferences/Preferences.htm" target="_blank" alt="Preferences [User Instructions]">Preferences [User Instructions]</MadCap:xref>.</MadCap:conditionalText><![CDATA[ ]]><b class="Bold">NOTE:</b> If the Disable Edit Preferences option is selected, the Enable CRM Preferences option is not available.</body>
+</html>

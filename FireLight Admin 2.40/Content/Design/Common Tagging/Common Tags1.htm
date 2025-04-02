@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+    <head><title></title>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="CommonTags_ListName, CommonTags.xlsx, Common Tags List Name" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Common Tags</h1>
+        <p class="note"><strong>IMPORTANT!</strong> To enable Common Tags, go to the Organization Configuration/Organization Settings/<MadCap:xref href="../../Organization Configuration/Organizations/Activity.htm" title="Activity" alt="Activity" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">Activity</MadCap:xref> tab and select the <strong>Enable Common Tags</strong> checkbox. <MadCap:snippetText src="../../Resources/Snippets/Organization Settings/EnableCommonTags.flsnp" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" /></p>
+        <p>FireLight<sup MadCap:conditions="General.Online" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" style="vertical-align: super;">®</sup> provides a Common Tag Name field in most field types available in Form and Wizard designers. </p>
+        <p>The Field Name can be named anything that applies, which may be a common tag. Distributors often create field names distinct from what the carrier is using. The Common Tag Name field is used to connect fields together. For example:</p>
+        <p class="Indent">Carrier Field Name is ClientFirstName.</p>
+        <p class="Indent">Distributor Field Name is D_ClientFirstName.</p>
+        <p class="Indent">Both fields have a Common Tag Name of Owner_FirstName.</p>
+        <p>There are two ways to locate a common tag: using the search function while entering a field's Common Tag Name field property or by searching through the CommonTags.xlsx spreadsheet below.</p>
+        <p>The search returns the most logical matches and displays them in list format, starting with the closest match. You can enter multiple words. For example, assume you are looking for phone number tags for the owner. Simply enter <b class="Bold">owner phone number</b>. A list containing the entered text from which the user can select a common tag name from the list appears. The user continues typing to refine the list.</p>
+        <p>Prior to searching, when the list first opens, due to the large number of common tags only a small subset of common tags appears. By default, the full list is not shown in the Common Tag Name dropdown.</p>
+        <p MadCap:conditions="General.Online" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+            <img src="../../Resources/ImagesAdmin/Capture194.png" alt="Common Tag Name - Search" title="Common Tag Name - Search" MadCap:conditions="General.Online" />
+        </p>
+        <p><b class="Bold">NOTE:</b> If the list does not appear, ensure the spelling is correct.</p>
+        <p><b class="Bold">NOTE:</b> If the results are not returning a valid list of values, you can also search for a different portion of the common tag name.</p>
+        <h2>Common Tag Name Field Property</h2>
+        <p>In support of common tags, when you enter a common tag name in the Field Name field property, the system automatically enters the common tag name in the Common Tag Name field property when you save or tab off the field. If the Field Name property is not a common tag name, a search function is available in the Common Tag Name field property in both forms and wizards.</p>
+        <p MadCap:conditions="General.Online" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">The following image provides an example of adding Owner_FirstName in the Field Name and Common Tag Name properties.</p>
+        <p MadCap:conditions="General.Online" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+            <img src="../../Resources/ImagesAdmin/Capture195.png" alt="Owner_FirstName Common Tag Name" title="Owner_FirstName Common Tag Name" MadCap:conditions="General.Online" />
+        </p>
+        <p><b class="Bold">EXAMPLE: Combo Box Form Field for Owner Gender</b>
+        </p>
+        <p>Following is an example of adding a Combo Box form field with a Common Tag field name and Common Tag List Name values.</p>
+        <ol>
+            <li>On the left under <b>Add Control to Form</b>, click <b>Combo Box</b>.</li>
+            <li>
+                <p>Drag the <b>Combo Box</b> from the upper left of the form to the applicable field on the form and re-size it to fit the field space.</p>
+            </li>
+            <li>
+                <p>Double-click the field or on the left under <b>Input Control</b>, click <b>Field Properties</b>.</p>
+            </li>
+            <li>
+                <p>Enter or change settings in Field Properties.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>In the <b>Field Name</b> field, enter the name of the data item associated with the field. This does not need to be unique among all fields in the form or wizard. When a user enters a Field Name that exactly matches a common tag name, the system updates the Common Tag Name property to match the Field Name when the user saves or tabs off the Field Name field. For the following form designer example, click in the <b class="Bold">Common Tag Name</b> property, begin typing <b class="Bold">Owner</b> in the box, and select <b class="Bold">Owner_Gender</b> from the list of common tags to autocomplete the Common Tag Name property. </p>
+                        <p MadCap:conditions="General.Online" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+                            <img src="../../Resources/ImagesAdmin/Capture156.png" alt="" title="" />
+                        </p>
+                    </li>
+                    <li>
+                        <li>
+                            <p>In the <b>List Name Values</b> field, click the <b>Edit List Name Values</b> link to open the List Name Values dialog as shown below. The system automatically populates the list of options for the gender. </p>
+                        </li>
+                        <p MadCap:conditions="General.Online" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+                            <img src="../../Resources/ImagesAdmin/Capture157.png" alt="Combo Box List Name Values" title="Combo Box List Name Values" />
+                        </p>
+                        <li>Use the scroll bar on the right to move through the list. </li>
+                        <li>Do any of the following to customize the list. </li>
+                        <ul>
+                            <li>
+                                <p>Clear the checkbox to hide the option from the user's view.</p>
+                            </li>
+                            <li>
+                                <p>Click the up or down buttons to move options to new locations in the list. </p>
+                            </li>
+                            <li>
+                                <p>Press and hold Ctrl and click the up arrow icon on the right of the row to move the row to the top of the list.</p>
+                            </li>
+                            <li>
+                                <p>Press and hold Ctrl and click the down arrow icon on the right of the row to move the row to the bottom of the list.</p>
+                            </li>
+                            <li>
+                                <p>Select the checkbox at the end of the list to add a row for a new option. Enter the option name in the Caption/Rules Value column and optionally add a value in the Rules Override column. In the following example, the user added a Binary option. The user can click the trashcan icon to remove the user-created option from the list.</p>
+                                <p MadCap:conditions="General.Online" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+                                    <img src="../../Resources/ImagesAdmin/Capture158.png" alt="Add an Option to List Name Values" title="Add an Option to List Name Values" />
+                                </p>
+                            </li>
+                            <li>
+                                <p>Click the <b class="Bold">OK</b> button to save the changes to the list. </p>
+                            </li>
+                        </ul>
+                        <p><b class="Bold">NOTE:</b> The OK button is disabled if no row is selected or the Caption is blank in a user-created row.</p>
+                    </li>
+                    <li>Enter or change the remaining field properties.</li>
+                </ol>
+            </li>
+            <li>Click the <b>Update</b> button to update the field properties.</li>
+            <li>Click the <b>Close</b> button to close the Field Properties dialog.</li>
+            <li>Click the <b>Save</b> button on the upper left of the Form Designer page to save the form.</li>
+        </ol>
+        <h2>Common Tag Spreadsheets</h2>
+        <p>Click the CommonTags.xlsx link to view common tags. The file is organized by group name (e.g., Owner, Agent). Click the CommonTags_ListName link to view common tag list name values for options within a list (e.g., state and country codes on the Address tab).</p>
+        <p class="Indent" MadCap:conditions="General.Online" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><a href="CommonTags.xlsx" target="_blank" title="CommonTags.xlsx" alt="CommonTags.xlsx">CommonTags.xlsx</a>
+        </p>
+        <p class="Indent" MadCap:conditions="General.Online" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><a href="CommonTags_ListName (3).xlsx" target="_blank" title="CommonTags_ListName.xlsx" alt="CommonTags_ListName.xlsx">CommonTags_ListName.xlsx</a>
+        </p>
+        <p class="Indent"><b class="Bold">Example:</b>
+        </p>
+        <ol>
+            <li>
+                <p>
+                    <MadCap:conditionalText MadCap:conditions="General.PDF" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">Go to the Common Tags topic in Admin Help. </MadCap:conditionalText>
+                </p>
+            </li>
+            <li>
+                <p>Open the <b>CommonTags.xlsx</b> spreadsheet.</p>
+            </li>
+            <li>
+                <p>Click the <b class="Bold">Owner</b> tab at the bottom of the spreadsheet.</p>
+            </li>
+            <li>
+                <p>In the <b class="Bold">Common Tag</b> column, locate the <b>Owner_Gender</b> common tag. </p>
+            </li>
+            <li>
+                <p>In the <b class="Bold">ListName</b> column, locate the <b class="Bold">List_Gender</b> list name. You need the List_Gender list name to add the common tag list name values in Edit List Name Values. </p>
+            </li>
+            <li>
+                <p>Open the <b class="Bold">CommonTags_ListName.xlsx</b> spreadsheet.</p>
+            </li>
+            <li>
+                <p>Click the <b class="Bold">Party</b> tab at the bottom of the spreadsheet.</p>
+            </li>
+            <li>
+                <p>In the <b class="Bold">ListName</b> column, locate <b class="Bold">List_Gender</b>. To the right in the <b class="Bold">ListValue</b> column of the spreadsheet, note the caption and numeric export values for each of the gender options (for example, ListValue 1 = Male, 2 = Female, 3 = Unisex, etc.).</p>
+            </li>
+        </ol>
+        <p MadCap:conditions="General.Online" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

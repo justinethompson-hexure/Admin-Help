@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Select the <b class="Bold">Allow Post-Signature Review</b> checkbox to allow electronic activity package reviews after the Signatures step. This adds the pre-submission Review workflow step after the Signatures step and before the submission step within <MadCap:variable name="General.ProductName"></MadCap:variable>. The pre-submission Review step involves adding the activity to a PreSubmit review queue within the activity submission review queue.</p>
+        <p class="note">
+            <b>NOTE:</b> To  route cases from a distributor instance of FireLight to the Carrier instance of FireLight PreSubmit Review Queue, the distributor needs to enable either the Allow Pre-Signature Review or Allow Post-Signature Review option in Activities and ensure a rule is defined for all of their other carriers that turns FLI_REQUIREMANUALREVIEW data item to false. To conditionally pre-populate and disable reviewers, use  the following data items: FLI_LOCK_REVIEWERS - if set to "true" the user will not be able to add or clear the reviewers; FLI_REVIEWER_NAMES - a semicolon-separated list of reviewer names; and FLI_REVIEWER_EMAILS - a semicolon-separated list of reviewer email addresses. The number of names must match the number of emails. If not, the reviewers will not be pre-populated. </p>
+    </body>
+</html>

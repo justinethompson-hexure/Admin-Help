@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p><b class="Bold">NOTE:</b> This field property was never implemented and may be implemented in the future.</p>
+        <p MadCap:conditions="General.Postpone">Select the protection level and visibility for the field. </p>
+        <p class="Indent" MadCap:conditions="General.Postpone"><b>None</b> follows the master setting of the form. Other settings override the master form setting. </p>
+        <p class="Indent" MadCap:conditions="General.Postpone"><b>Public</b> is visible to everyone. </p>
+        <p class="Indent" MadCap:conditions="General.Postpone"><b>Private</b> is visible only to the form designer.</p>
+        <p class="Indent" MadCap:conditions="General.Postpone"><b>Client</b> is visible only to the client. This is used for the client’s private information, such as medical information.</p>
+        <p class="Indent" MadCap:conditions="General.Postpone"> <b>Agent</b> is visible only to the agent. This is used for agent information, such as commission splits. </p>
+        <p class="Indent" MadCap:conditions="General.Postpone"><b>Signer</b> is not supported. </p>
+        <p class="Indent" MadCap:conditions="General.Postpone"><b>Reviewer</b> is visible only to the reviewer.</p>
+    </body>
+</html>

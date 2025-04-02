@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileProperties>
+    <ImageOverlay Profile="D:\Documents\My Profiles\FireLightHighQualityPRINTProfile.capro" ProfileHash="728a3481d430c1d0b0fe0218cb231d9b3daa9b1f" ScreenRectangle="2815,739,39,22">
+        <OriginalImage ImageBlurFactor="2" ImageShadeFactor="5" DPI="96" ExportFormat="jpg" JPEGQuality="100" Folder="D:\Documents\My Projects\FireLightAdmin-TopNavigation\Content\Resources\Images" FileName="" BorderWidth="1" BorderColor="#000000" PaddingLeft="0" PaddingRight="0" PaddingTop="0" PaddingBottom="0" Border="solid" medium_print_EnableFormat="true" Type="Image" ShapeTimeSpan="10000" AutoAdjust="true" EnableGrayScaleFormat="false" medium_print_ExportFormat="jpg" medium_print_DPI="300" Title="Up Arrow Button" Alt="Up Arrow Button" OutputScaleFactor="1" ComputedWidth="35" ComputedHeight="21" medium_print_OutputScaleFactor="2" medium_screen_and__max_width__64_063em__ExportFormat="jpg" medium_screen_and__max_width__40em__ExportFormat="jpg" medium_print_ColorDepth="32" EnableCropRectangle="true" CropRectangle="3,1,33,19" medium_screen_and__max_width__64_063em__OutputScaleFactor="1" medium_screen_and__max_width__64_063em__DPI="96" medium_print_JPEGQuality="100">SUkqAK4BAACAP+BP8AQWDQeEQmFQuGQ2HQ+IRGJROJwOCQZdxmKRuOR2PR+JkWRQyLQeMrsADOVSCWS2XS9mzEASIiySByaNSoZy+eT2fQ6Ys2ZyOFyWMRoZUmf0umT1nU+hzWizejyikjKm1mtR2ns6ozaBTiUDGyVuzWeHM+1V+p2GqgCyDG0XO6QW1M+2QqjQWTgAYX+6xFkJ5CgB1kE9gAmiHAxFoY+8wm9gC+38YY2GN9ZgBCoxcABzDMugBKmIcZiHY9oZGEZO+i/YaiEshPmwAKShQYNAAkHM9AAmYzZQho8XWQfXRrYC/hgBvrQAIZG59zQsZlwAJQw6fmwXitHjwbkyjl8PabbcQ/d73f8Hm9/wwXxgAXfXMc8AIdHLnQRMZOwSYwhu4ZpQK+IAPm+oXMaZJPja26vI43YjjkPLgOEwMCmlA75hbDy6G+WoAEQR7+OqkANCOAA4jwJYAQwtBpxlDiqL4jUPBa7sdI/GRpxot0bJQFkhx3IqNmpJEfovIIASGFkjSgiMkGpJSxAAFcsSjLSGmrLsqrfLcwogmiwSXMUzpcgIABAA/gAEAAEAAAAAAAAAAAEEAAEAAAAnAAAAAQEEAAEAAAAWAAAAAgEDAAQAAAB0AgAAAwEDAAEAAAAFAAAABgEDAAEAAAACAAAAEQEEAAEAAAAIAAAAFQEDAAEAAAAEAAAAFgEEAAEAAAAWAAAAFwEEAAEAAAClAQAAGgEFAAEAAAB8AgAAGwEFAAEAAACEAgAAHAEDAAEAAAABAAAAKAEDAAEAAAACAAAAPQEDAAEAAAACAAAAUgEDAAEAAAACAAAAAAAAAAgACAAIAAgAAHcBAOgDAAAAdwEA6AMAAA==</OriginalImage>
+        <Shapes>
+        </Shapes>
+        <Variables />
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

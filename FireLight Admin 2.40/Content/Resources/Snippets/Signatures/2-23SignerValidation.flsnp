@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Functionality for jurisdiction validation on owner and joint owner signer roles was added in the December 2.22 release to allow clients greater controls for signer jurisdictions. For the February release, it has been requested to add the ability to select "State Signing Error" for all Signer Types. A new data item is added for use in rules to control situations where specific signer types require validation to occur in lieu of validation on all activity signer types. An update to the email template is made to accommodate the changes made to include all signer types available for the state signing error validation.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Signing jurisdiction validation available for all Signer Type roles (as set in Admin) during the signing ceremony</p>
+            </li>
+            <li>
+                <p>Admin: Forms Designer has available option for "State Signing Error" for all Signer Type roles</p>
+            </li>
+            <li>
+                <p>Default Email Template: Updates to support all roles</p>
+            </li>
+            <li>
+                <p>Validation for signer type roles based on use of new data item in rules; can override validation for specific signer types based on the roles present in the activity as written in rules</p>
+            </li>
+        </ul>
+    </body>
+</html>

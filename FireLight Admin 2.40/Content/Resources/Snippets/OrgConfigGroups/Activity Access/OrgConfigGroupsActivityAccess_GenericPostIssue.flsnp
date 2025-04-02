@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Generic Post Issue</b> checkbox to providegroup access to the Post Issue activity. See <MadCap:xref href="../../../../Features/Post-Issue Services Support.htm" target="_blank" alt="Post-Issue Services Support">Post-Issue Services Support</MadCap:xref> in Features. <MadCap:conditionalText MadCap:conditions="General.Online">See also <MadCap:xref href="../../../../UserGuide/New Activity/Post-Issue Services.htm" target="_blank" alt="Post-Issue Services [User Instructions]">Post-Issue Services [User Instructions]</MadCap:xref>.</MadCap:conditionalText></body>
+</html>

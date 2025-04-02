@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+	<head>
+		<link href="../../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+		<link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h1><a name="top"></a>Dropdown List</h1>
+		<p>
+			<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WzdLockUnlock.flsnp" />
+		</p>
+		<h2>Purpose </h2>
+		<p class="Indent">Provides selection of a single value in a dropdown list.</p>
+		<ol>
+			<li>Drag a <b class="Bold">Dropdown List</b> control from the right pane to the wizard page.</li>
+			<li>On the page, double-click the <b class="Bold">Dropdown List</b> to open the Dropdown List Properties dialog.</li>
+			<li>
+				<p>Enter the field properties.</p>
+			</li>
+			<li>Click <b class="Bold">OK</b> to save your changes.</li>
+			<li>On the upper left, click <b class="Bold">SAVE WIZARD</b> to save the wizard, which unlocks the wizard for editing by other users. </li>
+			<li>
+				<MadCap:snippetText src="../../Resources/Snippets/Rules/UpdateRulesWizard.flsnp" />
+			</li>
+		</ol>
+		<h2>Properties</h2>
+		<table style="mc-table-style: url('../../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+			<caption class="Table">Dropdown List Properties </caption>
+			<col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 162px;" />
+			<col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+			<thead>
+				<tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+					<th class="TableStyle-2017_IT-Simple2-HeadE-Regular-Header1">Property</th>
+					<th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Place Field on a New Row</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-PlaceFieldOnNewRow.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Field Name</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-DataItemID.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Common Tag Name</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/WZD-CommonTagName.flsnp" />
+						<p><b class="Bold">NOTE:</b> When the Common Tag Name field is changed, one field to another, or blank to a value, or a value to blank, a warning message appears that the existing list is changed. Click <b class="Bold">OK</b> to proceed or click <b class="Bold">Cancel</b> to discard the change to the Common Tag Name field. FireLight merges an existing list when a Common Tag is changed or added to a field with a list. This adds the common tag list rows to an existing list and merges the applicable rows. All excess common tag rows that do not apply appear at the bottom of the list unchecked, which can be selected for the control. </p>
+						<p MadCap:conditions="General.Online">
+							<img src="../../Resources/ImagesAdmin/Capture155.png" alt="Confirm Dialaog Box" title="Confirm Dialaog Box" MadCap:conditions="General.Online" />
+						</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Text</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">The label text for the dropdown.</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Edit List Name Values</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p>Create the List Name Values by doing one of the following, depending on whether the Common Tag Name property is set to a common tag name or blank. </p>
+						<p>The following tooltips are available in the List Name Values dialog title row:</p>
+						<ul>
+							<li>
+								<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WzdCaptionRulesValueIcon.flsnp" />
+							</li>
+							<li>
+								<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WzdRulesOverrideIcon.flsnp" />
+							</li>
+						</ul>
+						<p><b class="Bold">Tip:</b> To quickly move a checked row to the top or bottom of the list, hold Ctrl and click the up or down arrow icon in a row.</p>
+						<p>There are three scenarios when adding a list to a dropdown.</p>
+						<ul>
+							<li>
+								<p>Common Tag Name property is set to a common tag name: </p>
+								<ol>
+									<li>Enter or select a common tag in the <b class="Bold">Common Tag Name</b> property. </li>
+									<li>Click the <b class="Bold">Edit List Name Values</b> link.</li>
+									<li>
+										<p> The system automatically generates the stored list values and captions  that are associated with the Common Tag Name. All list items are automatically selected. In the <b class="Bold">Move</b> column, click the up and down arrows on the right of the rows to re-order the list items. In a row, clear the checkbox to hide the row from the list the user sees.</p>
+										<p> The	List Value column always contains a value if there is an associated Common Tag Name and is always blank on user-created rows.	</p>
+										<p>The list has a blank row below the last row. Select the checkbox to create a new user-created row where you can add a Caption/Rules Value and optional Rules Override value. The OK button is disabled until you add a Caption/Rules Value for the new row. There is no limit to the number of rows you can add. When the last blank row is checked a new blank row is added.</p>
+										<p>Optionally, use the Caption Override and Rules Override columns to add caption and rules overrides for the list name values. The Caption Override shows a different value in the list the user sees. The Rules Override allows you to set a different value to be used in the rules than the Caption/Rules Value. </p>
+										<p>The following example shows the List Name Values when adding a Field Name and Common Tag Name of Owner_Gender for a dropdown list control and then making some modifications to the List Name Values.  Select the checkbox in the last row and add a Caption/Rules Value of <b class="Bold">Binary</b>   so the user will see the option "Binary" in the list of options. (User-created rows do not have access to the Caption Override column. Enter the Caption/Rules Value and optional Rules Override if applicable.)</p>
+										<p MadCap:conditions="General.Online">
+										<img src="../../Resources/ImagesAdmin/Capture173.png" alt="List Name Values with Common Tag Name" title="List Name Values with Common Tag Name" MadCap:conditions="General.Online" /> </p>
+										<p MadCap:conditions="General.Online">In the following example, add a Caption Override for each of the common tag list name values. Enter the first letter of each applicable option in Caption Override. For example, enter "F" in Caption Override so the user will see "F" instead of "Female" in the list and so on. Add "B" in Caption/Rules Value  so the user will see the option "B" for the user-created row instead of "Binary." </p>
+										<p MadCap:conditions="General.Online">
+											<img src="../../Resources/ImagesAdmin/Capture188.png" alt="" title="" MadCap:conditions="General.Online" />
+										</p>
+										<p MadCap:conditions="General.Online">To add a blank option to the list:</p>
+										<ol style="list-style-type: lower-alpha;">
+											<li>
+												<p>Select the checkbox in the last blank row of the list to create a new blank row.</p>
+											</li>
+											<li>
+												<p>Enter <b class="Bold">{blank}</b> in the Caption/Rules Value. </p>
+												<p>To move the blank row to the top of the list, press and hold Ctrl and click the up arrow icon on the right of the row<MadCap:conditionalText MadCap:conditions="General.Online"> as shown below</MadCap:conditionalText>.</p>
+												<p MadCap:conditions="General.Online"> <img src="../../Resources/ImagesAdmin/Capture187.png" alt="Blank Row - Up Arrow Icon" title="Blank Row - Up Arrow Icon" MadCap:conditions="General.Online" /> </p>
+												<p MadCap:conditions="General.Online">The blank row is now at the top of the list. </p>
+												<p MadCap:conditions="General.Online">
+												<img src="../../Resources/ImagesAdmin/Capture185.png" alt="List Name Values with {blank} Row" title="List Name Values with {blank} Row" MadCap:conditions="General.Online" /> </p>
+												<p>To move a row to the bottom of the list, press and hold Ctrl and click the down arrow icon to the right of the row. </p>
+												<p>Click the up arrow icon or down arrow icon to move the row up or down in the list one row at a time.</p>
+											</li>
+										</ol>
+									</li>
+									<li>Click <b class="Bold">OK</b> to save the list and return to the Dropdown List Properties dialog.</li>
+								</ol>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<p>Common Tag Name property is blank.  </p>
+								<ol>
+									<li>Click the <b>Edit List Name Values</b> link to open the List Name Values dialog. If the list is new, the List Name Values dialog contains one blank row. If the list already exists, the dialog contains the previously added rows.</li>
+									<li>
+										<p>To enter a new row, select the checkbox for the blank row. Enter the <b class="Bold">Caption/Rules Value</b> and the <b class="Bold">Rules Override</b> value for the option to be displayed in the list. Add a new row for each option to be included in the list.  Following is an example for a list of options added for the Life_RiderOptions field that does not have a common tag name in the Common Tag Name field property. The List Value column does not contain values for the manually added rows. Optionally, enter values in the Rules Override column for the applicable rows. </p>
+										<p MadCap:conditions="General.Online">
+											<img src="../../Resources/ImagesAdmin/Capture189.png" alt="List Name Values - Add Rows" title="List Name Values - Add Rows" MadCap:conditions="General.Online" />
+										</p>
+									</li>
+									<li>Click <b>OK</b> to save the entries and return to the Dropdown List Properties dialog. </li>
+								</ol>
+							</li>
+							<li>
+								<p>Common Tag Name property is selected with an existing list. </p>
+								<ol>
+									<li>
+										<p>Select a common tag name in the Common Tag Name field property after the dropdown list is created. </p>
+									</li>
+									<li>
+										<p>The system displays a Confirm dialog. Click <b class="Bold">OK</b> to close the dialog. </p>
+									</li>
+									<li>
+										<p>The system merges the Common Tag Name list with the existing list, retains the selected original rows, and adds unselected rows for the List Values and Caption/Rules Values associated with the Common Tag Name at the end of the List Name Values dialog. </p>
+									</li>
+									<li>
+										<p> Select the checkbox to include, or clear the checkbox to exclude, applicable rows in the list. Optionally re-order the list items using the up and down arrows. Remove user-created rows by clicking the trash can icon. </p>
+									</li>
+									<li>
+										<p>Click <b class="Bold">OK</b> to save and return to the Dropdown List Properties dialog.</p>
+									</li>
+								</ol>
+							</li>
+						</ul>
+						<MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/CopyPasteList.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Import a List</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/WZD-ImportList.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Width</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-Width.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Mobile Width</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-MobileWidth.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Error Placement</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-ErrorPlacement.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Class Name</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-ClassName.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Help Text</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-HelpText.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Data Group</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<p> Select a Data Group if applicable. This is where you select a Data Group for fields associated with a Custom Action button field. For example, when Custom Action in a button is set to CRM, set Data Group to the type of party (e.g., Owner, Annuitant, Beneficiary, etc.). When Custom Action is set to CRM and the CRM Type is set to 1035YellowPages, set Data Group to the 1035 Exchange Ceding Company number (1035 Exchange Ceding Company 1, 1035 Exchange Ceding Company 2, etc.). </p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Data Group Property</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p> Select an option in Data Group Property when a field is associated with a Custom Action button. When Action Type is set to CRM, select the type of data to pull in the Data Group Property for the selected Data Group and dataitem (e.g., for the Owner_FirstName field, select Owner in Data Group and select FirstName in Data Group Property). </p>
+						<MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/DataGroupProperty-CRM.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Make Label Bold</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-MakeLabelBold.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Read Only</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-ReadOnly.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyB-Regular-DarkerRows"><b class="Bold">Office Use Only</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-OfficeUseOnly.flsnp" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+		</p>
+	</body>
+</html>

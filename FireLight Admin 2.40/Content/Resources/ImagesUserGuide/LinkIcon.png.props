@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileProperties>
+    <ImageOverlay Profile="D:\Documents\My Profiles\FireLightUserGuide.capro" ProfileHash="a595394dda155dc474b76399a189b464724e779b" ScreenRectangle="644,605,18,19">
+        <OriginalImage Type="Image" ShapeTimeSpan="10000" AutoAdjust="true" DPI="96" medium_print_EnableFormat="true" medium_print_DPI="300" Folder="D:\Documents\My Projects\FireLight Admin 2.18\Content\Resources\ImagesUserGuide\All Activities" ExportFormat="png" medium_print_ExportFormat="png" BorderColor="#4682b4" Border="solid" FileName="Capture{n}" EnableGrayScaleFormat="false" medium_screen_and__max_width__64_063em__ExportFormat="png" medium_screen_and__max_width__64_063em__DPI="96" medium_screen_and__max_width__40em__ExportFormat="png" Title="Linked Activity - Link Icon" Alt="Linked Activity - Link Icon" medium_print_OutputScaleFactor="3.12" medium_print_ColorDepth="32" ComputedWidth="18" ComputedHeight="19">SUkqAFQBAACAP+BP8AQWDQeEQmFQuGQ2HQWBwSHxOKRWJxGLRmNRmMRuPR+FR2KNGSAApycAN2VAA9S0AIWYSCHSKGSRogAgzkACOeAAyT8AGihAA00UAJakTKEzSFjWnQhcVEABOqABUVcAFmtSyXTBC0oAUyFCSyAAaWerVh22sALu3ABp3EAM26ACoriwWKE1dUVmt0U0gAz4MADDDQjAUek0q9Qy+X4s2a0SpugB35eiUZ3ZsALrPZnA16LwOPLbTABRakADLWQg76+ES09ABDbXQYpLQzG0o1b2033Lu8AMPiABycfIVzZ6KD7uZEjoAAIdMAHnrAAX9mEHvubTbaTm+CwQjTLYAEv0bekbm1u0AdAkVOq3eEc7x4+tZEr/sAMz/AACMArsqSqAm+rxPGhzygASUGuk6hKwi+UDIW+0EwuiEEQxDcDoFDkPoQgIABAA/gAEAAEAAAAAAAAAAAEEAAEAAAASAAAAAQEEAAEAAAATAAAAAgEDAAQAAAAaAgAAAwEDAAEAAAAFAAAABgEDAAEAAAACAAAAEQEEAAEAAAAIAAAAFQEDAAEAAAAEAAAAFgEEAAEAAAATAAAAFwEEAAEAAABLAQAAGgEFAAEAAAAiAgAAGwEFAAEAAAAqAgAAHAEDAAEAAAABAAAAKAEDAAEAAAACAAAAPQEDAAEAAAACAAAAUgEDAAEAAAACAAAAAAAAAAgACAAIAAgAAHcBAOgDAAAAdwEA6AMAAA==</OriginalImage>
+        <Shapes />
+        <Variables />
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

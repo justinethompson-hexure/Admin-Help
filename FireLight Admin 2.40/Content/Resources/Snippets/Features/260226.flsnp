@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>We have added several improvements to the field properties available to the designers through the admin tool.  These enhancements will expand the functionality added for common tags. </p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p> Merge an existing list when the Common Tag is added to a field with a list. This will add the common tag list rows to an existing list and merge the applicable rows.  All excess common tag rows that do not apply will appear at the bottom of the list unchecked, which may be selected if desired.</p>
+            </li>
+            <li>
+                <p> Change the search on the Field Name to align with the search on Common Tag Name so the search works consistently for both fields.</p>
+            </li>
+            <li>
+                <p> Add copy/paste to fields with a list.  This will allow clients to copy an existing list that has been customized from a form or wizard to another field and retain the original list. If the new field has an existing list, the rows is merged and the original list will take precedence.</p>
+            </li>
+            <li>
+                <p> Remove autofill from Field Name when it matches a common tag name to the Common Tag Name field.  This change will allow clients to elect when the common tag should be added to a field.</p>
+            </li>
+        </ul>
+        <p>Impacts: </p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p> Fields with existing lists are merged with the common tag list when a common tag with a list is selected. The list order is retained. The remaining common tag list items that were not in the original list will appear at the bottom of the list unchecked.</p>
+            </li>
+            <li>
+                <p> Field Name search changed from 'contains' to the same search used on the Common Tag Name field. For example, you can type in 'owner gender' and all the related fields will appear.</p>
+            </li>
+            <li>
+                <p> You can copy fields with existing lists.</p>
+            </li>
+            <li>
+                <p> You can paste copied list into another field that is a dropdown/combo box/radio/checkbox field.</p>
+            </li>
+            <li>
+                <p> When the pasted list is added to a field with an existing list, the lists are merged and the same order of the original list is retained.</p>
+            </li>
+            <li>
+                <p> When Field Name is entered as a common tag name and the user clicks off of tabs off the field, the Common Tag Name field will not be changed and remain blank.</p>
+            </li>
+        </ul>
+    </body>
+</html>

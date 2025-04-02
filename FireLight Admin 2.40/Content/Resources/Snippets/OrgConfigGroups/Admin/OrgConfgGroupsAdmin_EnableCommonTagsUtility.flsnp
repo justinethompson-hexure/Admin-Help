@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Enable Common Tags Utility</b> checkbox to enable the Common Tags Utility. The utility is available on the Home page for the admin user to manage common tags. <MadCap:conditionalText MadCap:conditions="General.Postpone">See <MadCap:xref href="../../../../Utilities/Common Tags Utility.htm" title="Common Tags Utility" alt="Common Tags Utility">Common Tags Utility</MadCap:xref>.</MadCap:conditionalText></body>
+</html>

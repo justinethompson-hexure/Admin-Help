@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>For the Print Forms activity, this enhancement will allow the fillable PDFs to support formatting of  date of birth, Social Security Number, and phone number fields. JavaScript is added to the fillable PDFs to support formatting of these specific field types (date of birth, Social Security Number, and phone number). This will allow Adobe formatting for the SSN and phone number fields to occur and will add a custom DOB solution for mm/dd/yyyy to show. This will only apply to the Print Forms Activity.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Fillable PDFs for Print Forms Activity</p>
+            </li>
+        </ul>
+    </body>
+</html>

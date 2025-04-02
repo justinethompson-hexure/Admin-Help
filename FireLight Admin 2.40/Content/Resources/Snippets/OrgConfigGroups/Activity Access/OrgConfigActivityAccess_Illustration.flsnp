@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Illustration</b> checkbox to provide group access to the Illustration activity. See <MadCap:xref href="../../../../Features/FireLight Illustration.htm" target="_blank" alt="FireLight Illustration">FireLight Illustration</MadCap:xref> in Features. <MadCap:conditionalText MadCap:conditions="General.Online">See also <MadCap:xref href="../../../../UserGuide/New Activity/Illustration.htm" target="_blank" alt="Illustration [User Instructions]">Illustration [User Instructions]</MadCap:xref>.</MadCap:conditionalText></body>
+</html>

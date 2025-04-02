@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Add a Custom Rule for a Selected Control</h1>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FormLockUnlock.flsnp" />
+        </p>
+        <p><b class="DRNumberBold">Basics for Authoring a Rule in the Rules Window</b>
+        </p>
+        <ul>
+            <li>Starting from a template is the easiest.</li>
+            <li>Review the lower pane of the Rules Window for validation errors.  Be sure to enclose multiple actions within a &lt;block&gt; node, unless the actions are within a &lt;switch&gt; or &lt;if&gt; node, which treat actions within the body or after the &lt;else/&gt; node as if a &lt;block&gt; node is present. “There can only be one root node” error usually indicates that the action is not within a block.</li>
+            <li>On the upper right of the Rules Window, click the <b>Node Help</b> link for help with creating rules.</li>
+        </ul>
+        <MadCap:pageBreak />
+        <p><b class="DRNumberBold">Modify an Existing Rule Template to Create a Custom Rule</b>
+        </p>
+        <p>Following is an example of modifying an existing Required Field rule to add a date field format for the Owner_DOB calendar control. This ensures the owner’s date of birth is formatted in MM/DD/YYYY format on the application.</p>
+        <ol>
+            <li>On the navigation bar, click <b class="Bold">Designer/Form Designer</b>.</li>
+            <li>On the upper left of the Form Designer page, select a form in the list.</li>
+            <li>
+                <p>Select a control on the form.</p>
+                <p>For example, select the <b>Owner_DOB</b> control on the form.</p>
+            </li>
+            <li>On the left under <b>Input Control</b>, click <b>Rules Window</b>.</li>
+            <li>In the <b>Filter Rule Sets</b> box, type the name of the rule set if known and click <img src="../../Resources/ImagesAdmin/SearchButton.jpg" alt="Search Button" title="Search Button" />.</li>
+            <li>
+                <p>On the upper right of the Rules Window, click the <b>New</b> button. Note the Selected Control is Owner_DOB.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/RulesWindow9.jpg" alt="Add a New Rule" title="Add a New Rule" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+            <li>
+                <p>On the left of the New Rule Template window, click the <b>Required:</b> rule and then click <b>Ok</b> on the lower right to display the rule in the Rules Window.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/RulesWindow10.jpg" alt="Select the Required Field Rule" title="Select the Required Field Rule" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+            <li>
+                <p>On the right of the Rules Window, add XML for the date format as follows and re-name the rule to <b>Required Field Date Formatted: Owner_DOB</b>.</p>
+                <p>&lt;diset dataitemid="Owner_DOB"&gt;</p>
+                <p class="Indent"> &lt;format format="MM/dd/yyyy"&gt;</p>
+                <p class="Indent2"> &lt;diget dataitemid="Owner_DOB" /&gt;</p>
+                <p class="Indent">&lt;/format&gt;</p>
+                <p>&lt;/diset&gt; </p>
+            </li>
+            <li>
+                <p>In <b>Rule Scope</b>, select an option to indicate when the rule is executed.</p>
+                <MadCap:snippetBlock src="../../Resources/Snippets/Rules/RuleScopes.flsnp" />
+            </li>
+            <li>
+                <p>Click <b>Update</b> on the Rules Window to update the new custom rule and lock the rule set for editing.</p>
+                <p>On the left, the new rule appears in the list of rules for the Owner_DOB control.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/RulesWindow12.jpg" alt="Required Date Field Formatted Custom Rule" title="Required Date Field Formatted Custom Rule" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+            <li>Click the <b>X</b> in the upper right to close the Rules Window.</li>
+            <li>
+                <p> Click <b>Yes</b> on the <b>Rule Set Changes</b> dialog in form Designer, which unlocks the rule set for editing by other users. </p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/RulesWindow22.jpg" alt="Rule Set Changes dialog" title="Rule Set Changes dialog" MadCap:conditions="General.Online" />
+                </p>
+                <p><b>NOTE:</b> If the <a href="../../Organization Configuration/Organizations/Admin.htm#ValidateRuleNameUniqueness" target="_blank" alt="Validate Rule Name Uniqueness">Validate Rule Name Uniqueness</a> checkbox is selected in Organization Configuration/Organization Settings on the Admin tab, the new rule cannot be saved unless it has a unique name.</p>
+            </li>
+        </ol>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

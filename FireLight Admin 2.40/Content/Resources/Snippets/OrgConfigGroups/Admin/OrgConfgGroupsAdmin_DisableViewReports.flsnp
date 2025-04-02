@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable View Reports</b> checkbox to disable viewing <MadCap:xref href="../../../../Utilities/Reports/Reports.htm" target="_blank" alt="Reports">Reports</MadCap:xref>. The Reports button on the Admin home page and the Reports button on the navigation bar will not be visible when this option is selected.  The user will not be able to run ad-hoc reports on application-related information.</body>
+</html>

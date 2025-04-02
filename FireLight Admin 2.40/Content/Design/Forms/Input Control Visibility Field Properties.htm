@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/2017-ITPatternedRows2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Input Control Visibility Field Properties</h1>
+        <p>When adding input controls, use the following field properties to set the visibility for the control.</p>
+        <p><b>Protection</b> field property <MadCap:conditionalText MadCap:conditions="General.Postpone">sets the protection level; visibility for the control </MadCap:conditionalText>was never implemented and may be implemented in the future.</p>
+        <p class="Indent" MadCap:conditions="General.Postpone"><b>None</b> follows the master setting of the form in the Form Properties dialog (see  <MadCap:xref href="Set Form Properties.htm" target="_blank" alt="Set Form Properties">Set Form Properties</MadCap:xref> for master form settings). Individual input control settings override the master form setting.</p>
+        <p class="Indent" MadCap:conditions="General.Postpone"><b>Public</b> is visible to everyone.</p>
+        <p class="Indent" MadCap:conditions="General.Postpone"><b>Private</b> is visible only to the form designer.</p>
+        <p class="Indent" MadCap:conditions="General.Postpone"><b>Client</b> is visible only to the client. This is used for the client’s private information, such as medical information.</p>
+        <p class="Indent" MadCap:conditions="General.Postpone"><b>Agent</b> is visible only to the agent. This is used for agent information, such as commission splits.</p>
+        <p class="Indent" MadCap:conditions="General.Postpone"><b>Signer</b> is visible only to the signer.</p>
+        <p class="Indent" MadCap:conditions="General.Postpone"><b>Reviewer</b> is visible only to the reviewer.</p>
+        <p class="hangingindent"><b>Exclude from PDF</b> field property sets whether the control appears when the form is printed on paper. By default, every control appears on the PDF. When this checkbox is selected, the control does not appear on the printed or submitted form.</p>
+        <p class="hangingindent"><b>Read Only</b> field property sets the field as a read only control. Use this for displaying calculated values on the form where editing is not allowed (for example, fund allocation total).</p>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/2017-ITPatternedRows2.css');margin-left: 0;margin-right: auto;mc-caption-repeat: true;" class="TableStyle-2017-ITPatternedRows2" cellspacing="0">
+            <caption class="Table">Exclude from PDF, Is Read Only, and Disabled Properties</caption>
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" />
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" />
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" />
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" />
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" />
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-2017-ITPatternedRows2-Head-Header1">
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Property</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Value</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Editable</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Shown in UI</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Printed PDF</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadD-Regular-Header1">Submitted Form</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows" rowspan="2"><b>Exclude from<br />PDF</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Selected</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">N/A</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Yes</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">No</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">No</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Cleared</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">N/A</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Yes</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Yes</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Yes</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows" rowspan="2"><b>Read Only</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Selected</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">No</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Yes</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Yes</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Yes</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Cleared</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Yes</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Yes</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Yes</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Yes</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows" rowspan="2">*<b>Disabled</b></td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">True</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">No</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Yes</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">No</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">No</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-DarkerRows">False</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-DarkerRows">Yes</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-DarkerRows">Yes</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-DarkerRows">Yes</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyA-Regular-DarkerRows">Yes</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="TableStyle-2017-ITPatternedRows2-Foot-Footer1">
+                    <td class="TableStyle-2017-ITPatternedRows2-FootD-Regular-Footer1" colspan="6">*When a control is disabled through a rule, the text associated with the control is displayed in the UI, but is hidden when the application is printed or submitted.</td>
+                </tr>
+            </tfoot>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

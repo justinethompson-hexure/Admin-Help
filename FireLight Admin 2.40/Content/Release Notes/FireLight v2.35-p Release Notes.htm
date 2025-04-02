@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight v2.35-p Release Notes</h1>
+        <h2>June 2024 Release—6/18/2024 Production</h2>
+        <h3>New Functionality</h3>
+        <h4>Embedded AAQ in Firelight: EAES-3923 &amp; EAES-4068</h4>
+        <p>Firelight users who have the Quote Activity enabled for their user group will see an Annuity tab when quoting, in addition to the Life quoting tab on the Quote page. The Annuity section will display an embedded version of the Agent Annuity Quoter. Users will be able to browse products and quotes within the Firelight platform.</p>
+        <h4>Update the Document Service to Extract the Metadata from PDF: CR-2661</h4>
+        <p>Changes to the Document Service to extract the metadata that comes from an external PDF to identify where the signature blocks are so we can properly implement templated forms.</p>
+        <h4>Implement Changes Needed for a New Request Type Calling the Method "IApplicationService": CR-3034</h4>
+        <p>Ability to request the list of applications with the status of each application for that organization by calling the method "IApplicationService" using a new request type. Previous functionality provided only for a single application and status to be retrieved with a call.</p>
+        <h3>Resolved Issues</h3>
+        <h4>SuranceBay - Manual Login Widget of SureLC Is Appearing Twice on Product Selection Screen: CR-3047</h4>
+        <p>We resolved an issue in FireLight Admin where the SureLC Manual Login Widget appeared twice on the Product Selection Screen. It now appears just once on the Product Selection Screen.</p>
+        <p><b style="font-size: 12pt;">SuranceBay - SureLC Login Credential Validation Failed through My Preferences Page: CR-3095</b>
+        </p>
+        <p>We resolved an issue where using valid SureLC login credentials on the My Preferences page failed to result in a successful login. Logging in to SureLC now works again as designed.</p>
+        <p><span style="font-size: 12pt; font-weight: bold;">Evidence Framework - Calling EF Service Is Not Getting any Response Returned: CR-3184</span>
+        </p>
+        <p>We resolved an issue where calling upon the Evidence Framework service failed to return a response. The Evidence Framework service is again working as expected.</p>
+        <p><b style="font-size: 12pt;">SuranceBay - Can Sell Hard Stop and Soft Stop Functionalities Not Working after Successful Login to SureLC: CR-3200</b>
+        </p>
+        <p>We resolved an issue where Sell Hard Stop and Soft Stop functionality was not working in SureLC. These functions now work as designed.</p>
+        <h4>Report Scheduler-Schedule History Displaying Unchanged Data of "Key Parameter": DIST-3334</h4>
+        <p>We resolved an issue in FireLight Admin where after changing a key parameter in a schedule the Schedule History displayed old data for the parameter. Now, after changing a schedule’s key parameter, Schedule History displays only the new data.</p>
+        <h4>“To Address” of Messages Is Mislabeled: DIST-3414</h4>
+        <p>We resolved an issue in the FireLight App where on the Application Message page the “To Address” field was mislabeled as “From Address.” The “To Address” field is now labeled properly.</p>
+        <h4>Org Name Is Displaying in Agent Completed Application Email: DIST-3455</h4>
+        <p>We resolved an issue in FireLight Admin and FireLight App where email sent to agents was being addressed to the organization’s rather than the agent’s name. These emails are now addressed properly to agents.</p>
+        <h4>New “Copy Wizard Field” Functionality in Wizard Designer Stuck on Loading: DIST-3556</h4>
+        <p>We resolved an issue in FireLight Admin where using the new “Copy Wizard Field” feature resulted in the Wizard Designer taking an unacceptably long time to load data. The Copy Wizard Field now works as designed.</p>
+        <h4>All Check Boxes of Page Get Selected When We Try to Select Individual Item from Page: DIST-3634</h4>
+        <p>We resolved an issue in FireLight Admin where using Copy from Wizard and attempting to select a single item on the page resulted in all items being selected. Now, selecting a single item results in just that item being selected, and Copy from Wizard is working as designed.</p>
+        <h4>Application Is Currently in a Status (Complete) that Will Not Allow the Application to Be Completed: EAES-4259</h4>
+        <p>We resolved an issue where an exception occurred when attempting to complete already complete applications. Applications can now be completed as designed.</p>
+        <p><b style="font-size: 12pt;">Prevent Loading of Both Quoters Based on Group Options: EAES-4488</b>
+        </p>
+        <p>We made updates to the way the data loader is launched in FireLight to prevent intermittent data retention issues. </p>
+        <p>***Please note that the JIRA ticket numbers are provided for reference. JIRA tickets are not accessible to users outside Hexure.***</p>
+        <p data-mc-conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

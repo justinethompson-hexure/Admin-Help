@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <ol>
+            <li>
+                <p>On the navigation bar, click <b>Designer/Form Designer</b> to go to the form Designer page.</p>
+            </li>
+            <li>
+                <p>On the upper left, select a form name in the list.</p>
+                <p>Or, click the search button <img src="../../ImagesAdmin/SearchButton.jpg" alt="Search Button" title="Search Button" /> next to the list to open a Form Search dialog. Type some characters that are in the form name and click <b>Go</b>. <MadCap:variable name="General.ProductName" /> will search for all forms with your entry in the form name. Click a form in the list to open the form.</p>
+            </li>
+            <li>
+                <p>On the form Designer page, if the selected form contains multiple pages, select a page number in the list to go to a specific page, for example, <b>Page 2</b>.</p>
+            </li>
+            <li>
+                <p>Click the left arrow button or right arrow button at the edge of the form to move to the previous or next form page.</p>
+            </li>
+        </ol>
+    </body>
+</html>

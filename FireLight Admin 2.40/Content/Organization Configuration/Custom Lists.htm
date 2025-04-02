@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Custom Lists</h1>
+        <p>On the navigation bar, click <b>Organization Config</b> and click <b>Custom Lists</b> to view the Custom Lists page.</p>
+        <p>Use this page to manage your custom lists in <MadCap:variable name="General.ProductName" /><sup MadCap:conditions="General.Online">®</sup>.</p>
+        <p>Add and update custom lists for your organization that are accessed from a button control.</p>
+        <p>In <MadCap:variable name="General.ProductName" />, custom lists can contain data for up to nine fields and need to be in Tab delimited text format (*.txt).</p>
+        <p class="note"><b>NOTE:</b> See the <MadCap:xref href="../Design/Forms/Button.htm" target="_blank" alt="Button">Button</MadCap:xref>  control in the Form Designer or the <MadCap:xref href="../Design/Wizards/Custom Action.htm" target="_blank" alt="Custom Action">Custom Action</MadCap:xref> field in the Wizard Designer for instructions on adding a button with a custom list and associated fields to a form or wizard.</p>
+        <h2>Add a Custom List to FireLight</h2>
+        <ol>
+            <li>Use Microsoft Excel to define your custom list. The spreadsheet should include a single sheet.</li>
+            <li>The first nine columns within the first sheet of the Excel spreadsheet are used for your custom list. Any additional columns are ignored. </li>
+            <li>
+                <p>In Excel, save the custom list as a Text  (*.txt) file. </p>
+                <p><b>NOTE:</b> The custom list upload file must be tab-delimited, and each column (text between tab characters) is limited to 4000 characters.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>Open the spreadsheet in Excel.</li>
+                    <li>On the <b>File</b> tab, click <b>Save As</b> and select a folder in which to save the file.</li>
+                    <li>On the <b>Save As</b> dialog, type a <b>File name</b>.</li>
+                    <li>In <b>Save as type</b>, select <b>Text (Tab delimited) (*.txt)</b>.</li>
+                </ol>
+                <p><b class="Bold">NOTE:</b> FireLight supports commas in custom lists and will not replace them with spaces. FireLight also supports Unicode characters (e.g., registered trademark, etc.)  in custom lists. If Unicode characters are included in the file, save the file as a <b class="Bold">Unicode Text (*.txt)</b> file so the Unicode characters will appear in the custom list and wizard <MadCap:xref href="../Design/Wizards/Data Grid.htm" target="_blank" alt="Data Grid">Data Grid</MadCap:xref> controls.</p>
+            </li>
+            <li>On the navigation bar in FireLight Admin, click <b>Organization Config/Custom Lists</b> to open the Custom Lists page.</li>
+            <li>
+                <p>At the top of page, click the <b>Add New List</b> link.</p>
+            </li>
+            <li>
+                <p>Type a <b>List Name</b> and an optional <b>List Description</b> if applicable.</p>
+            </li>
+            <li>
+                <p>Click the <b>Choose File</b> button, browse to the folder, click the name of the .txt file for the custom list, and click the <b>Open</b> button.</p>
+            </li>
+            <li>
+                <p>Click the <b>Upload</b> button.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../Resources/ImagesAdmin/CustomList-UploadButton.jpg" alt="Click the Upload Button" title="Click the Upload Button" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+            <li>
+                <p>Click the <b>OK</b> button to close the confirmation dialog.</p>
+            </li>
+            <li>
+                <p>The new custom list name is added to the Custom Lists. On the left, click the list name to view the contents on the right. In this example, the Peak Life - Occupations custom list contains the Letter and Occupation columns. Click <b class="Bold">About This List</b> link to view a description of the list.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../Resources/ImagesAdmin/Capture50.png" alt="Peak Life - Occupations Custom List" title="Peak Life - Occupations Custom List" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+            <li>Deploy the custom list to the applicable environments. See <MadCap:xref href="../Utilities/Deployments/Deploy Data.htm" target="_blank" alt="Deploy Data">Deploy Data</MadCap:xref>.</li>
+        </ol>
+        <h2>Update a Custom List</h2>
+        <ol>
+            <li>On the navigation bar, click <b>Organization Config/Custom Lists</b> to open the Custom Lists page.</li>
+            <li>
+                <p>In Custom Lists, click a list name and click the <b>Update This List</b> link.</p>
+            </li>
+            <li>
+                <p>Click the <b>Choose File</b> button, browse to the folder, click the name of the .txt file update, and click the <b>Open</b> button.</p>
+            </li>
+            <li>
+                <p>Click the <b>Upload</b> button to upload the updated custom list file.</p>
+            </li>
+            <li>
+                <p>On the left, click the list name to view the contents of the updated list.</p>
+            </li>
+            <li>Deploy the custom list update to the applicable environments. See <MadCap:xref href="../Utilities/Deployments/Deploy Data.htm" target="_blank" alt="Deploy Data">Deploy Data</MadCap:xref>.</li>
+        </ol>
+        <h2>Delete a Custom List</h2>
+        <ol>
+            <li>On the navigation bar, click <b>Organization Config/Custom Lists</b> to open the Custom Lists page.</li>
+            <li>
+                <p>	In Custom Lists, click a <b>Custom List Name</b> and click the red trash can icon to the left of the name.</p>
+            </li>
+            <li>Click the <b>OK</b> button on the Confirmation Delete dialog. Click the <b>Cancel</b> button to not delete the list.</li>
+        </ol>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

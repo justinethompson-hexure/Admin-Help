@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight v2.36 Release Notes</h1>
+        <h2>July 2024 Release—7/25/2024 Production</h2>
+        <p>&#160;</p>
+        <p><b style="font-size: 16pt;">New Functionality</b>
+        </p>
+        <p><b style="font-size: 14pt;">Ensure That DPFA DTCCMemberCode Maps to NSCC Code to Avoid Manual Changes in the DPFA File: CR-2941</b>
+        </p>
+        <p>Today, organizations enter any value on the organization code in the DPFA File to execute Commission Netting, making the matching cumbersome in Firelight. In addition, organizations do not want to make any manual edits to the DPFA File to match their codes within FireLight. Therefore, Firelight is automatically matching the DTCCMemberCode in the DPFA File for Commission Netting with NSCC Code in the Organization Settings, so the users do not have to make any manual changes in the DPFA XML File.</p>
+        <p><b style="font-size: 14pt;">Update Source of Lexis Nexis Login Credentials: CR-3051</b>
+        </p>
+        <p>When a Lexis Nexis InstantID call is kicked off from a carrier form or wizard, the credentials used should come from the carrier’s organization setup. We are finding that one distributor has not had successful results returned and the root cause is the distributor’s credentials. The ask is not to be dependent on distributor configuration to get results for our LexisNexis InstantID call.</p>
+        <p><b style="font-size: 14pt;">Add a Disclaimer Underneath Organization Label within Commission Netting Table: CR-3280</b>
+        </p>
+        <p>As part of Day 1 for Commission Netting Release, we are adding the following disclaimer within Commission Netting Table, specifically underneath Organization label: "This is an alpha version of the Commission Netting functionality. Please refer to the Implementation Guide for more information."</p>
+        <p><b style="font-size: 14pt;">New Activity Report to List Application Not Signed: DIST-2082</b>
+        </p>
+        <p>The Application Status report currently lists applications sent for review. This enhancement additionally lists applications not yet signed by client nor agent.</p>
+        <p><b style="font-size: 12pt;">Impact</b>
+        </p>
+        <p>The Application Status report lists cases from all agents that are pending signatures.</p>
+        <p><b style="font-size: 14pt;">Admin User Changes for Ease of Use: DIST-3230</b>
+        </p>
+        <p>To facilitate ease of use and to make searching behavior consistent on the Sales Agreement (SA) page, text search has been implemented for Product and Package searching.</p>
+        <p><b style="font-size: 14pt;">Add Bold Property to Fields to Allow Display Labels as Bold: DIST-3235</b>
+        </p>
+        <p>With this enhancement, users will be able to bold the labels for fields that allow label text. This feature will be available for fields on the wizard designer.</p>
+        <p><b style="font-size: 12pt;">Impact</b>
+        </p>
+        <p>Admin: Add a new field property “Make Label Bold” to the fields that allow label text on the wizard designer.</p>
+        <p><b style="font-size: 14pt;">Add Required Property to Input Fields to Apply Required Rule to the Data Item: DIST-3386, DIST-3452, DIST-3626</b>
+        </p>
+        <p>With this enhancement, users will be able to set a data item as required from its field properties on the wizard designer. This new property will eliminate the need to write a rule to make a data item as required on the app side. Though, the required property on the data item can be setup from with wizard designer, the rule will apply on the form too if the data item exists on the form present in the application.</p>
+        <p><b style="font-size: 12pt;">Impact</b>
+        </p>
+        <p>Admin: Add a new field property “Required” to the fields on the wizard designer that require user input, such as Text Box, Drop-Down, Check Box, Radio Button, and DatePicker.</p>
+        <p><b style="font-size: 14pt;">Record Success Log for Activity Reports Delivery via FTP: DIST-3413</b>
+        </p>
+        <p>Currently, when activity reports are sent via FTP, there is no record if the reports were delivered successfully, with only delivery failure being recorded. This enhancement records the activity reports log successful delivery of reports via FTP.</p>
+        <p><b style="font-size: 12pt;">Impact</b>
+        </p>
+        <p>Support user can view successful delivery of activity reports sent via FTP.</p>
+        <p><b style="font-size: 14pt;">Enhancement for SSH Auth to Deliver Activity Reports: DIST-3417, DIST-3423</b>
+        </p>
+        <p>Currently, activity reports can be delivered via FTP and email methods. FTP can be set up using UN/PWD authentication. This enhancement is to support Public/Private key authentication for FTP configurations.</p>
+        <p><b style="font-size: 12pt;">Impact</b>
+        </p>
+        <ul>
+            <li>
+                <p>Allow entering Private Key info when entering FTP configuration info for activity reports.</p>
+            </li>
+            <li>
+                <p>FL Admin &gt; Organization Config &gt; Organization Settings &gt; Admin (tab) &gt; Activity Reports FTP Info (link)</p>
+            </li>
+        </ul>
+        <p><b style="font-size: 14pt;">Modify Sales Agreement Admin Report to List Data for Firm Orgs: DIST-3628</b>
+        </p>
+        <p>Due to the implementation of Firm Orgs and its utilization in sales agreement, there is a need to update the sales agreement admin report with data based on firm orgs. We added a dropdown for the Selling Org and the Firm Orgs in the Sales Agreement admin report. The report can be filtered on a Selling Org and/or Firm Orgs to easily determine which products are on/off, which is especially helpful for the Firm Orgs (sub firms). The new column has been added to the CSV format of the report.</p>
+        <p><b style="font-size: 12pt;">Impact</b>
+        </p>
+        <p>A new column "Firm Org" is added to Sales Agreement report based on the filter selection. The change is applied to the CSV format of the report.</p>
+        <p><b style="font-size: 14pt;">Set Content Type When Writing to Azure Blob Storage: EAES-4045</b>
+        </p>
+        <p>For malware scanning to work properly, we updated the writing of blobs in FireLight to set the content type as appropriate.</p>
+        <p><b style="font-size: 14pt;">Sunset Legacy Forms Phase I UI: PC-2574</b>
+        </p>
+        <p>FireLight has gone through several iterations and user interfaces. Currently we have two versions of the user interface available to the market, the "Legacy UI" and the "Forms and Wizard UI." We will begin the process of sunsetting the "Legacy UI" by updating the default view option for “Lock Mode” to Wizards and Forms vs the Legacy UI view.    This change will not be applied by default to the data entry mode at this time.   We will be working with our current Legacy UI clients to determine the best path forward to get them all moved to the Wizard and Forms UI.  The "Legacy UI" only supported Forms and requires at least one form to be present in a package. The "Forms and Wizard UI" allows for any combination of Forms and Wizards and does not require a form to be present in a package to work correctly. Unless the organization had configured a Lock mode of Forms and Wizards, their agents would have seen the legacy UI after lockdown.  In that case, agents will now see the Forms and Wizard UI after lockdown.</p>
+        <p><b style="font-size: 12pt;">Impact</b>
+        </p>
+        <p>No action is required to use the "Forms and Wizard UI." Clients who had been using the legacy UI will experience moderate changes to the user experience in Lock Mode.</p>
+        <p><b style="font-size: 14pt;">Create Pages from Source Wizard to Destination Wizard While Copying: DIST-3552</b>
+        </p>
+        <p>This is an enhancement to the existing feature to copy fields from a source wizard to a destination wizard. Users will now be able to also create and copy pages to the destination wizard while copying fields. They can choose to copy selected fields on the active page or create new pages from source wizard and copy fields on them.</p>
+        <p><b style="font-size: 12pt;">Impact</b>
+        </p>
+        <p>A new option to also copy pages will is added on Copy Wizard Fields dialog on Wizard Designer</p>
+        <p><b style="font-size: 14pt;">After Signing External Request, Reviewer Is No Longer Able to Use the Link to Access the Documents: EAES-3581</b>
+        </p>
+        <p>We resolved an issue where users were unable to access application PDFs after signing when entering passcodes. Access of application PDFs now works as expected.</p>
+        <p><b style="font-size: 14pt;">Identify Large Rules and Inform Admin Tool Users: EAES-3392</b>
+        </p>
+        <p>Very Large Rules/ Rulesets can hinder system performance and are difficult to debug.   Logic has been added to the system to identify large rules (Size &gt; 1MB) when created and warn the administration user when they are saving a large rule.  In addition, the rule size will be tracked and displayed within the rules window.</p>
+        <p><b>Impact</b>
+        </p>
+        <p>FireLight Admin Tool</p>
+        <ul>
+            <li>
+                <p>New Warning message when rule exceeds the soft limit.   User will be able to bypass the message and save the rule.</p>
+            </li>
+            <li>
+                <p>New Functionality to display the Rule size when editing rules</p>
+            </li>
+            <li>
+                <p>Feature Flag will allow the new warning to be disabled for specific organizations if needed.</p>
+            </li>
+        </ul>
+        <p><b style="font-size: 14pt;">Soft Limit Addendums Should Inherit the Same Protection Levels as the Source Form: EAES-4237</b>
+        </p>
+        <p>The content type should be set when writing to blob storage (documents, forms, wizard/form/ruleset definitions, etc.) for malware scanning to work properly.  We have updated all writing of blobs in FireLight to set the content type as appropriate.</p>
+        <p style="font-size: 14pt;"><b>Resolved Issues</b>
+        </p>
+        <p><b style="font-size: 12pt;">Critical</b>
+        </p>
+        <p><b>"Copy Selected Fields" Button Is Not Performing any Action When Fields Are Selected to Copy: DIST-3822</b>
+        </p>
+        <p>We resolved an issue in FireLight Admin where clicking Copy Selected Fields failed to copy selected fields on the active page. The Copy Selected Fields button is now working as designed.</p>
+        <p><b>Populating Illustration Service Configuration Breaks Admin Deployments: IS-707</b>
+        </p>
+        <p>We resolved an issue where, when IllustrationService records are populated, deployments involving a product (All, Product, Package) no longer work, because IllustrationService is not included in the deployment scopes, and a referential integrity violation occurs.</p>
+        <p><b>Illustration Service V2 Calls Not Functional in Distributor Environments: IS-2791</b>
+        </p>
+        <p>We resolved an issue where the illustration service lookup in distributor environments was using the app OrganizationID rather than the app ProductOrganizationID.</p>
+        <p><b>Home Button Is Not Clickable Under Some Screen Scaling and Zoom Conditions: PC-2577</b>
+        </p>
+        <p>We resolved an issue in the Admin App where depending on screen scaling and zooming the Home button was sometimes not clickable. The Home button is now clickable regardless of screen scaling and zooming.</p>
+        <p><b>FLI_FIRM_NAME Dataitem ID Is Not Getting Pre-filled on Application Created with Launch Firelight from Access Account: PC-2937</b>
+        </p>
+        <p>We resolved an issue where the dataitem ID was not getting pre-filled on applications. The dataitem ID is now working as designed.</p>
+        <p><b style="font-size: 12pt;">High</b>
+        </p>
+        <p><b>Packages Move from the Available Packages to Assigned Packages and Vice Versa Are Not Remaining Displayed While Search Another Package: DIST-3894</b>
+        </p>
+        <p>We resolved an issue where when moving packages between "Available Packages" and "Assigned Packages," the packages did not remain displayed when searching for another package. Moving packages now works as designed.</p>
+        <p><b>FTP SSH User/Passkey and Private Key Do Not Remain Saved When User Clicks on Save Organization: DIST-3923</b>
+        </p>
+        <p>We resolved an issue where when using SSH Key Pair authentication on the Organization Setting tab, FTP SSH User/Passkey and Private Key do not remain saved after clicking Save Organizaton. The Save Organization button now works as designed.</p>
+        <p><b>After Signing External Request, Reviewer Is No Longer Able to Use the Link to Access the Documents: EAES-3581</b>
+        </p>
+        <p>We resolved an issue where users were unable to access application PDFs after signing when entering passcodes. Access of application PDFs now works as expected.</p>
+        <p><b>Status Update Email Not Sent to Agent When External Signer Decline Signature: EAES-3950</b>
+        </p>
+        <p>We resolved an issue where the Status Update email was not being sent to agents when an external signer declined signature. The Status Updated email is now being sent to agents as expected when an external signer declines signature.</p>
+        <p><b>Review Queue REST API Permissions Vulnerability Due to Not Using Token Organization: EAES-4011</b>
+        </p>
+        <p>The Review Queue REST APIs accepted the org CarrierCode on the request and did not validate that the caller has the necessary permissions to access that organization’s data. The calls now will be using the token (controller) OrganizationID rather than a value passed into the request. For backward compatibility,  the CarrierCode can still be defined on the request butwill not be utilized for this purpose.</p>
+        <p><b>Error Showing App Already Approved Page Due to New UI Changes: EAES-4078</b>
+        </p>
+        <p>We resolved an issue where apps in process appeared as already approved. Now apps are not labeled approved until they actually are.</p>
+        <p><b>Error When Opening Purged Activity in Wizard UI: EAES-4270</b>
+        </p>
+        <p>We resolved an issue where clicking the Home page link resulted in the display of the message, "We are sorry. We are unable to service your request." The Home page link now works as designed.</p>
+        <p><b>Activities Created via the REST API Have an Incorrect Override Date: EAES-4362</b>
+        </p>
+        <p>We resolved an issue where activities created via the REST API had an incorrect override date. These created activities now have the correct override date.</p>
+        <p><b>Error When Using Distributor View: EAES-4471</b>
+        </p>
+        <p>We resolved an issue where an error was received when users selected a distributor from the upper left corner of the FireLight App home page. Now when selecting a distributor, the FireLight App launches with the selected distributor in focus.</p>
+        <p><b>Localization Breaks Tri-Button Layout on Client Fill and Sign Email Page: PC-2398</b>
+        </p>
+        <p>We updated the Client Fill and Sign Email page by stacking all buttons horizontally, left-justifying them, and aligning them with the text box; left-justifying the note at the bottom of the page; and for French localization replacing "e-mail" with "un courrier électronique."</p>
+        <p><b>Redirect on Submit Is Not Working: PC-2698, PC-2440</b>
+        </p>
+        <p>We resolved an issue where selecting the Check Enable HTTP Redirect on Submit checkbox, entering the URL, and saving the group settings resulted in an error. The Check Enable HTTP Redirect on Submit checkbox is now working as designed.</p>
+        <p><b>InsTech.Common -&gt; IsBase64String Is Not Correctly Validating All Values: PC-2529</b>
+        </p>
+        <p>We resolved an issue where the function used in the InsTech.Common package was not validating correctly in all cases, resulting in the payload sent by SML being rejected with “Invalid AttachmentData64Binary value,” affecting API calls in Production. The function now validates as designed.</p>
+        <p><b>Signer Type Ordering Is Incorrect: PC-2549</b>
+        </p>
+        <p>We resolved an issue where the ordering of Signer Types was incorrect. Signer Types now appear in the correct order.</p>
+        <p><b>Error Sending Email Notification to Empty Email Address: PC-2593</b>
+        </p>
+        <p>We resolved an issue where the system attempted to send email to an empty email address, resulting in an error.</p>
+        <p><b>Home and Logoff Links Are Invalid When Opening Purged Activity in Wizard UI: PC-2705</b>
+        </p>
+        <p>We resolved an issue where when opening a purged activity in both the wizard UI and legacy forms UI, the Home and Logoff links were incorrect, resulting in the user not being able to navigate within FireLight after viewing a purged activity. The Home and Logoff links are now correct and operate as designed.</p>
+        <p><b style="font-size: 12pt;">Medium</b>
+        </p>
+        <p><b>Activity History Includes Changes that Did Not Occur: DIST-3645</b>
+        </p>
+        <p>We resolved an issue where the Activity History tab spuriously listed activity changes that had not been made. Now the Activity History tab lists only actual changes.</p>
+        <p><b>Required Changes in Agree Checkbox Web Element of React UI: DIST-3892</b>
+        </p>
+        <p>We resolved an issue on the Document Review page where the Agree Checkbox did not work as expected. The checkbox now operates as designed.</p>
+        <p><b>Firelight Admin Package Screen Issues: EAES-3101</b>
+        </p>
+        <p>We resolved an issue where buttons and links on the FireLight Admin Packages screen behaved unexpectedly. The Packages screen now again works as designed.</p>
+        <p><b>When "Enable Auto Submit" Setting Is ON and Agent Declined the External Signing then User Receive App Auto Submitted Email to the Carrier: EAES-3745</b>
+        </p>
+        <p>We resolved an issue where when Enable Auto Submit and Enable Auto Submit Email Notification were selected and the agent declined external signing users received applications auto-submitted to the carrier. Enable Auto Submit and Enable Auto Submit Email Notification are now working as designed and users are no longer receiving auto-submitted applications under these conditions.</p>
+        <p><b>Error Attempting to Save Form Data for Locked Activity Prior to Submit: EAES-4210</b>
+        </p>
+        <p>We resolved an issue where an error message was received upon completing the signing ceremony. Completing the signing ceremony now works as expected, with no errors.</p>
+        <p><b>Forms Library: Form Number Copied into New Form on Upload: PC-334</b>
+        </p>
+        <p>We resolved an issue where exporting a form with a form number and name and then uploading it to any environment failed to convey the form number and name. Now, uploading an exported form with a form number and name results in the number and name being copied into the appropriate fields.</p>
+        <p><b>Custom List Header Truncation: PC-491</b>
+        </p>
+        <p>We resolved an issue where custom list headers over a certain length would be truncated and throw an exception error when being referenced. Custom list headers now work as expected.</p>
+        <p><b>Error During SAML SSO Should Return Error HTTP Status Code: PC-1761</b>
+        </p>
+        <p>We resolved an issue where an error HTTP status code was not received during an SAML SSO error.</p>
+        <p><b>Enable Logging in Integration Provider Loader: PC-2767</b>
+        </p>
+        <p>We resolved by adding the line of code config.AddEnvironmentVariables(); to the program.cs file an issue where logs were output to a storage account in the scheduler web job but no logs for the integration provider loader were ever output.</p>
+        <p><b>French and Spanish Button Texts at Client Fill and Sign Pages are Showing Question Marks: PC-2940</b>
+        </p>
+        <p>We resolved an issue where buttons on the French and Spanish versions of the Client Fill and Sign pages contained question marks. The buttons now appear as expected.</p>
+        <p><b style="font-size: 12pt;">Low</b>
+        </p>
+        <p><b>Page Name Missing from Uploaded Signature Template with Embedded Definition: EAES-4243</b>
+        </p>
+        <p>We resolved an issue where the Uploaded Signature Template with Embedded Definition lacked its page name. The page name now appears as expected.</p>
+        <p><b>Show Commissions Button Only When Admin Carrier Navigates through Firelight: CR-3223</b>
+        </p>
+        <p>We resolved an issue where  Admin Distributor and Admin Broker users could view the Commissions Netting button on the FireLight Admin main page and reach the Commissions Netting page by entering its URL. Now only Admin Carrier users can view the button and access the page.</p>
+        <p><b>Windows Console - Group Setting: Agent Signing Order Last Is Not Working: EAES-3552</b>
+        </p>
+        <p>We resolved an issue where agents could sign applications before clients even though the Agent Signing Order was set to last. Agent Signing Order now works as designed.</p>
+        <p><b>Admin Views Are Loading Very Slowly: DIST-3905, DIST-3917</b>
+        </p>
+        <p>We changed the way that we are clearing memory cache to improve performance.</p>
+        <p><b>Changes to How Sales Agreements Management to Improve Performance: DIST-3918, DIST-3919, DIST-3944</b>
+        </p>
+        <p>Sales Agreements are now selected by default when search is used.  Package List is now available when the user has completed a search. The Manage Sales Agreement button is now enabled as expected after the sales agreement has been saved.</p>
+        <p><b>Unable to Edit Rules from the Designer Rules Window: EAES-4972</b>
+        </p>
+        <p>Corrected an issue where Rules editing was not working as expected in some cases.</p>
+        <p>&#160;</p>
+        <p>***Please note that the JIRA ticket numbers are provided for reference. JIRA tickets are not accessible to users outside Hexure.***</p>
+        <p data-mc-conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

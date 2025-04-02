@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Setup and usage instructions for enabling and using localization for language/locales other than the English (en-us) default language in FireLight." />
+    </head>
+    <body>
+        <h1><a name="top"></a>Work Groups</h1>
+        <p class="FrameFooterText2"><b class="Bold">NOTE:</b> The Work Groups section is available when the "Allow Work Groups" option is enabled in FireLight Admin.</p>
+        <p>Use Work Groups to create inter <MadCap:conditionalText MadCap:conditions="General.Postpone">and intra </MadCap:conditionalText>organization workflows allowing users to have shared visibility into an activity, receive notifications for the activity life cycle, and allow members <MadCap:conditionalText MadCap:conditions="General.Postpone">from cross organizations </MadCap:conditionalText>to have the same visibility. </p>
+        <p>With this feature, users can set up work groups and add members in the preferences view of the app portal. The Work Group section with the Manage Work button is visible in the user’s Preferences view only if the user’s organization has enabled the option in the Organization section of the Admin Tool. With work groups, activities can be shared with users within the same organization without using the case sharing option in the group’s options of the Admin tool.</p>
+        <p>The work group functionality allows for greater refinement of sharing activities, because each work group can be limited by the activity type and product type. The members of a work group share can also be set to read-only for the activities in the work group share. In addition to allowing share access to the selected product types and activity types, the members of the group will be cc’d on any agent communications. If the member does not wish to receive the agent emails, the member can check the option to disable notifications for that group.</p>
+        <p>
+            <img src="../Resources/ImagesAdmin/Capture273.png" alt="Work Groups" title="Work Groups" />
+        </p>
+        <h3>Guidelines</h3>
+        <p>Workflow participants can:</p>
+        <ul>
+            <li>
+                <p>Create activities to which all workflow participants have access/visibility.</p>
+            </li>
+            <li>
+                <p>Access status information on activities.</p>
+            </li>
+            <li>
+                <p>Receive email and FireLight messaging related to activities.</p>
+            </li>
+            <li>
+                <p>Have group/role based permissions regarding functionality allowed on activities.</p>
+            </li>
+            <li>
+                <p>Mark an activity as "Private" if they wish to exclude it from workflow participant visibility.</p>
+            </li>
+            <li>
+                <p>Delegate access to individuals outside standing workflow participants. This may be done with functionality similar to current sharing functionality.</p>
+            </li>
+            <li>
+                <p>Receive all agent emails sent for an activity to all Members of the work group, as well as the Admin and work group Producer. All participants in the work group can choose to Disable Notifications by selecting the checkbox in the row with their Participant ID.</p>
+            </li>
+            <li>
+                <p>Provide case access to a select group.</p>
+            </li>
+        </ul>
+        <p>Following are examples of workflows that would be facilitated by inter-organization transfer of activities:</p>
+        <ul>
+            <li>
+                <p>Sales Desk/Case Manager Interaction</p>
+            </li>
+            <li>
+                <p>Post-Issue Changes/Requests</p>
+            </li>
+            <li>
+                <p>NIGO Correction Process</p>
+            </li>
+        </ul>
+        <p>"Admin" roles of the work group have different permissions than "Members" of the workflow. </p>
+        <ul>
+            <li>
+                <p>The Admin user who creates the Work Group is automatically assigned as the Admin of the group. </p>
+            </li>
+            <li>
+                <p>The Admin user is required to search for a Producer. This is the Producer/Agent who will become secondary Admin for all activities in the work group.  The Admin cannot have the same user role as the Producer. They must be different.</p>
+            </li>
+            <li>
+                <p>Admin users can make edits to Work Group Name, Participants (Remove), Disable Notifications for an individual participant (selecting this option disables all notification types and cannot be refined by specific notification), and enable/disable Read-Only Access for individual members.</p>
+            </li>
+            <li>
+                <p>Permissions are either read-only or edit rights. If read-only, the read-only rights are followed at the group code for the activity. If not read-only, then the Group's session permissions are followed.</p>
+            </li>
+        </ul>
+        <p>Members of the work group can:</p>
+        <ul>
+            <li>
+                <p>Disable Notifications. </p>
+                <p>Selecting this option will disable all notification types for the individual member and cannot be refined by specific notification.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>See their edit/read-only access setting, but cannot make changes.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>Remove themselves from the working group.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>See who is in the work group with them but cannot make edits to other members or have the option to delete them.</p>
+            </li>
+            <li>
+                <p>Create a new work group and become Admin for that work group.</p>
+            </li>
+        </ul>
+        <p>Members of the work group cannot: </p>
+        <ul>
+            <li>
+                <p>Change the Work Group Producer, so they will not see the "Work Group Producer" search box.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>Add additional members to work groups where they are not the Admin, so they will not see the "Member" search box in their view.</p>
+            </li>
+        </ul>
+        <h3>Work Group Email</h3>
+        <p>An email is sent when a Member is added to the work group. The default text for the addition is “You have been added as &lt;ROLE&gt; of the work group &lt;WORK_GROUP_NAME&gt;. If you do not wish to receive notifications for the activities created by the members in this group, you my “Opt Out” by signing into FireLight and navigating to “Manage Work Groups” from your preferences page.”</p>
+        <p>An email is sent when a member is removed from the work group. The default text for the removal is “You have been removed as &lt;ROLE&gt; of the work group &lt;WORK_GROUP_NAME&gt; . If you feel you have been removed in error, please contact your work group Admin.</p>
+        <p>An email is sent when a Member opts out of Notifications using the Disable Notifications option in Work Group in the Preferences view. The default text for the Opt Out email is “You have opted out of notifications for activities as a member of the work group &lt;WORK_GROUP_NAME&gt;. If you wish to opt in, you can reverse the “Opt Out” selection by signing in to FireLight and navigating to Manage Work Groups from your Preferences page.</p>
+        <h3>Enabling and Using Work Groups</h3>
+        <ol>
+            <li>
+                <p>Enable Work Groups in the Admin tab of Organization settings in the Admin app option on by selecting the Allow Work Groups check box.</p>
+            </li>
+            <li>
+                <p>In the App, select Preferences from the toolbar menu and click Manage Work Groups.</p>
+            </li>
+            <p>If the user has the group option for “Allow Creation of New Work Group” checked in the Groups view of the Admin tool, the user can click <b>Create New</b> to create a new work group.</p>
+            <p>Users without the ability to create work groups can view their group access and change their notification settings.</p>
+            <p>When a work group is created, the user is added to the group as the Admin.</p>
+            <li>
+                <p>Rename the work group and add a producer. The producer can be added by typing the name in the producer text field and clicking the search icon or just selecting the search icon.</p>
+            </li>
+            <p>The selected name from the user list populates the Producer field.</p>
+            <p>Once the producer field has been filled, the Activities tab and Product tab are populated.</p>
+            <li>
+                <p>Add members to the group following the same steps.</p>
+            </li>
+            <li>
+                <p>Check the Read Only and Disable Notifications for each member and the activities and product types you want to share for this group.</p>
+            </li>
+            <li>
+                <p>When finished, save the changes made by clicking the Save Work Group button at the bottom of the screen.</p>
+            </li>
+        </ol>
+        <h3>Manage Work Groups</h3>
+        <p><b class="DRNumberBold">Add a Work Group</b>
+        </p>
+        <ol>
+            <li>
+                <p>If you have access to Work Groups, click the <b class="Bold">Manage Work Groups</b> button. </p>
+                <p>
+                    <img src="../Resources/ImagesAdmin/Capture274.png" alt="Manage Work Groups dialog" title="Manage Work Groups dialog" />
+                </p>
+            </li>
+            <li>
+                <p>On the upper left of the <b class="Bold">Manage Work Groups</b> dialog, click the <b class="Bold">Create New</b> link. </p>
+                <p>
+                    <img src="../Resources/ImagesAdmin/Capture275.png" alt="Create New Work Group" title="Create New Work Group" />
+                </p>
+            </li>
+            <li>
+                <p>The user role who creates the work group is automatically the Admin Assignment. The Admin enters a <b class="Bold">Work Group Name</b>, selects a <b class="Bold">Work Group Producer</b>,  and selects a <b class="Bold">Member</b> to add to the work group. The Admin adds all applicable members to the work group.<MadCap:conditionalText MadCap:conditions="General.Postpone"> If a Member creates a new work group, the Member cannot see the User List to search for Work Group Producer or Member.</MadCap:conditionalText></p>
+                <p>
+                    <img src="../Resources/ImagesAdmin/Capture276.png" alt="Add Work Group and Members" title="Add Work Group and Members" />
+                </p>
+            </li>
+            <li>
+                <p>On the <b class="Bold">Participants</b> tab, select checkboxes to <b class="Bold">Disable Notifications</b> and/or grant <b class="Bold">Read-Only Access</b> for the applicable Participants. All participants in the work group can choose whether to Disable Notifications to avoid receiving all agent emails and notifications.</p>
+                <p><b class="Bold">NOTE:</b> If the individual user has a group setting for Read-Only pre-defined by role code in FireLight Admin, their rights within the work group is set to Read-Only and cannot be changed within the work group by the work group admin. In FireLight Admin, Groups, App tab under User Rights Home/All Activities, the "Enable Read-Only Activity" setting would need to be changed by the user's FireLight Admin for that member to have Edit rights.</p>
+            </li>
+            <li>
+                <p>On the <b class="Bold">Activities</b> tab, an Admin user selects the checkboxes for the activities the work group can access. Activities are limited to the activities available to the work group Producer. Adding and removing activities is for the entire work group and not on an individual basis. Member roles have Read-Only access to the Activities tab. Members must contact the Admin of their work group for consideration of adding/removing an activity. E-Delivery activities are not supported. <b class="Bold">NOTE:</b> Activities is accessible in "All Activities" from the FireLight home page when an activity is created for the activity and product for those within the work group participant list. The ability to view or read-only after opening the activity is dependent on the settings in Work Groups for the individual. In the event the user is a participant of another work group, the filter functionality can be used on that tab to filter by the owner of the activity.</p>
+                <p>
+                    <img src="../Resources/ImagesAdmin/Capture277.png" alt="Select Activities on the Activities Tab" title="Select Activities on the Activities Tab" />
+                </p>
+            </li>
+            <li>
+                <p>On the <b class="Bold">Product Types</b> tab, and Admin user selects the checkboxes for the products the work group can access. Product types are limited to the product types available to the work group Producer. Adding and removing product types is for the entire work group and not on an individual basis. Member roles have Read-Only access to the Product Types tab. Members must contact the Admin of their work group for consideration of adding/removing a product type. </p>
+                <p>
+                    <img src="../Resources/ImagesAdmin/Capture278.png" alt="Select Product Types" title="Select Product Types" />
+                </p>
+            </li>
+            <li>
+                <p>Click the <b class="Bold">Save Work Group</b> button below the tabs. </p>
+            </li>
+            <li>
+                <p>Click the <b class="Bold">X</b> on the upper right of the dialog to close it.</p>
+            </li>
+        </ol>
+        <p><b class="DRNumberBold">Delete a Work Group or Participant</b>
+        </p>
+        <ol>
+            <li>
+                <p>In the upper grid of <b class="Bold">Manage Work Groups</b> dialog, click the red <b class="Bold">X</b> on the right of the Work Group name to delete the work group.</p>
+            </li>
+            <li>
+                <p>On the <b class="Bold">Participants</b> tab of the <b class="Bold">Manage Work Groups</b> dialog, click the red <b class="Bold">X</b> on the right of a Participant name to delete the participant from the work group.</p>
+            </li>
+            <li>
+                <p>Click <b class="Bold">Yes</b> on the <b class="Bold">Delete Confirmation</b> dialog to delete the work group or participant. The user will no longer see the deleted group or member once the deletion is confirmed.</p>
+            </li>
+        </ol>
+        <p><b class="DRNumberBold">View or Edit an Existing Work Group</b>
+        </p>
+        <ol>
+            <li>
+                <p>If you have access to Work Groups, click the <b class="Bold">Manage Work Groups</b> button.</p>
+            </li>
+            <li>
+                <p>In the <b class="Bold">Manage Work Groups</b> dialog, the upper grid lists the work groups in which you are a participant. </p>
+                <p>
+                    <img src="../Resources/ImagesAdmin/Capture279.png" alt="View and Edit Work Groups" title="View and Edit Work Groups" />
+                </p>
+            </li>
+            <li>
+                <p>Click a work group <b>Name</b> in the upper grid.</p>
+            </li>
+            <li>
+                <p>Depending on whether you are an Admin or Member, view or make edits to the work group on the <b class="Bold">Participants</b>, <b class="Bold">Activities</b>, and <b class="Bold">Product Types</b> tabs.</p>
+            </li>
+            <li>
+                <p>If applicable, click the <b class="Bold">Save Work Group</b> button after making edits.  </p>
+            </li>
+            <li>
+                <p>Click the <b class="Bold">X</b> on the upper right of the dialog to close it.</p>
+            </li>
+        </ol>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Setup and usage instructions for adding a filter from the FireLight® Needs Determination activity to the available products to select in an application." />
+    </head>
+    <body>
+        <h1><a name="Top"></a>Needs Determination Product Filtering</h1>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Needs Determination Product Filtering</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1"><b class="TableBlue">Description</b>
+                        </p>
+                        <p>This feature provides a filter from the FireLight<sup>®</sup> Needs Determination activity to the available products to select in an application. <b>NOTE</b>: At this time, product filtering is not available in workflows that use outside needs determinations.</p>
+                        <p> In FireLight Admin, the Needs Filter tab on the Organization Configuration/Groups page allows a group code to have rules and/or product filter categories defined for when to include a product in the available product options for the application selection.  For example, Accumulation, Income, Protection, Death Benefit, and Protection of Capital can be questions asked in the Needs Determination and based on the answers to these questions and others (financial profile, risk tolerance, time horizon for access to the funds), FireLight filters the list of available products so that only the products that meet the rules are listed in the available product options for the application product selection.</p>
+                        <p>Additionally, a product level definition needs to be added to identify whether the product supports Non-Qualified and Qualified money, and whether the product is a Fee Based Product or Commission Based Product. The carrier needs to define these settings at the product level, similar to how states are defined. These settings can be part of the distributor logic in their filter rules.</p>
+                        <p style="widows: 2;orphans: 2;">The product filter leverages rules written in the Needs Determination transaction, the Product Category defined in Admin, and a query to define the filter.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">FireLight Setup</p>
+                        <ul>
+                            <li>Licensing is required to support this feature. Distributors need to work with their Strategic Account Manager for pricing. Additionally, each client needs to submit a Work Order to define their specific filter criteria for the products on their shelf. This needs to be done in conjunction with your Needs Determination questionnaire or SSO.</li>
+                            <li>
+                                <p>Each financial institution needs to define their own product categories and rules to apply for the filter.</p>
+                                <p>Because some firms have different distribution channels set up in FireLight, the rules can be written to apply to group roles.</p>
+                                <p>Using the filter rules, FireLight can use weightings and scorings to include or exclude products in the filter.  Clients using the Needs Determination transaction need to define the rules, scoring, and weighting in the rules engine for the Needs Determination questionnaire.  Upon launching into the Application, the rules need to be evaluated and applied to further filter the product availability in the application product selection.  Submit a Work Order for the exact rules needed. For filter examples to provide in your work order, click the "CMR 147397" design document link in the "Additional Information" section of this feature.</p>
+                            </li>
+                            <li>When using the FireLight Needs Determination Transaction to capture questions that are stored as new data items, the data items are defined into filter rules to apply to the available product selection in the FireLight application. Submit a Work Order for the definition of the product filter. Rules written in the Needs Determination transaction will assign data points based on items selected in the Needs Determination transaction. These data items are used to query the Needs Filter table.</li>
+                            <li>When using an Outside Needs Determination, the SSO contain the data items that are defined in the filter. Submit a Work Order  for creating the SSO linking to the product filter. </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <ol>
+                            <li style="page-break-inside: auto;">On the <b>Organization Configuration/Groups</b> page, select a <b>TC Role Code</b> in the upper list.</li>
+                            <li>
+                                <p style="page-break-inside: auto;">On the<b> Activity Access</b> tab, select <b>Needs Determination</b>.</p>
+                                <p style="page-break-inside: auto;" MadCap:conditions="General.Postpone">Additionally, to require the User Group to always do a Needs Determination before an application, also select the <b>Disable Create Application</b> checkbox.</p>
+                            </li>
+                            <li>
+                                <p style="page-break-inside: auto;">On the <b>Needs Filter</b> tab, do one of the following: </p>
+                                <ul>
+                                    <li style="page-break-inside: auto;">Click the <b>Upload</b> button to upload a CSV or XLSX file with the product categories for the products to which the selected group has access. If an uploaded data set is too large, the group filter definition table will not render on the Needs Filter tab and a "Data set too large - unable to render table" message appears under the Upload button. The data is saved, but you are unable to view it on the Needs Filter tab. See the "Additional Information" section below for links to the design document and sample XLSX template.</li>
+                                    <li>
+                                        <p style="page-break-inside: auto;">Manually add the product categories as follows.</p>
+                                        <ol style="list-style-type: lower-alpha;">
+                                            <li style="page-break-inside: auto;">Select an <b>Organization</b> in the list. This is the organization whose products is filtered.</li>
+                                            <li style="page-break-inside: auto;">Click the <b>New Category</b> button.</li>
+                                            <li style="page-break-inside: auto;">On the right, type a name for the filter category.</li>
+                                            <li style="page-break-inside: auto;">In the list, select a filter type: String, ValueGreaterThanX, ValueLessThanX, NumericRange, StringOverrideFilter, ValueContainsString, or NotEqualString. See the  page for filter type descriptions and accepted inputs.</li>
+                                            <li style="page-break-inside: auto;">Type the <b>Data Item ID</b> from the Needs Questionnaire form fields or rules.</li>
+                                            <li style="page-break-inside: auto;">On the left, select <b>Products</b> in the list to which filters will apply.</li>
+                                            <li style="page-break-inside: auto;">Enter the applicable filter value for each product. If the filter category does not apply to a product, leave it blank for that product.</li>
+                                            <li>
+                                                <p style="page-break-inside: auto;">Click the <b>Save</b> button.</p>
+                                                <p MadCap:conditions="General.Online" style="page-break-inside: auto;">
+                                                    <img src="../Resources/ImagesAdmin/NeedsFilter3.jpg" alt="Filter Category" title="Filter Category" MadCap:conditions="General.Online" />
+                                                </p>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li style="page-break-inside: auto;">Repeat adding product filter categories for each applicable User Group.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <ol>
+                            <li style="page-break-inside: auto;">SSO directly into the Needs Determination Transaction or from the FireLight <b>Home</b> page or navigation bar, click <b>New Application</b>, and click <b>Needs Determination</b>. </li>
+                            <li style="page-break-inside: auto;">In the Create New Needs Determination dialog, click <b>Needs Determination</b>.</li>
+                            <li style="page-break-inside: auto;">In the Required Forms dialog, the Needs Questionnaire is selected and locked. Click <b>Create</b>. </li>
+                            <li style="page-break-inside: auto;">In the <b>Create</b> dialog, type a name for the Needs Determination application and click <b>Create</b>.</li>
+                            <li>
+                                <p style="page-break-inside: auto;">Complete the required information on the Needs Questionnaire form and when form entry is 100%, click the <b>Continue</b> button. </p>
+                                <ul>
+                                    <li style="page-break-inside: auto;">If a signature control is on the Needs template form in the application package, the Needs Questionnaire will proceed without signatures but ensures the signature is collected in the application signature process. </li>
+                                    <li style="page-break-inside: auto;">If a signature control is on the Needs Questionnaire, proceed through the signature process and click <b>CONTINUE</b> on the navigation bar. On the Confirmation Dialog, click <b>Yes</b>. On the transmitted successfully confirmation message, click <b>Close</b>.</li>
+                                </ul>
+                            </li>
+                            <li style="page-break-inside: auto;">Click <b>APPLY</b> on the navigation bar to proceed with creating a new product application. The list of available products on the Create New Application dialog is filtered based on the entries made in the Needs Questionnaire form. The Needs Questionnaire is included in the application forms. Data items from the Needs Questionnaire are pre-filled in the product application as read-only fields.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information</p>
+                        <p MadCap:conditions="General.Online">Admin Help  – Design Documents: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 147397, Sample XLSX Template</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/DesignDocs/147397_ProductFilterDesign_Approach_2-17-2017.pdf" target="_blank" title="CMR 147397" alt="CMR 147397" MadCap:conditions="General.Online">CMR 147397</a>, <a href="../Resources/DesignDocs/147397_template_2-13-17.xlsx" target="_blank" title="Sample Filter Categories Template" alt="Sample Filter Categories Template">Sample XLSX Template</a></MadCap:conditionalText><![CDATA[  ]]></p>
+                        <p>Admin Guide and Help – Organization Configuration/Groups/<MadCap:xref href="../Organization Configuration/Groups/Needs Filter.htm" alt="Needs Filter">Needs Filter</MadCap:xref> topic </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a name="top"></a><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

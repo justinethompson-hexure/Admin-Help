@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileProperties>
+    <ImageOverlay Profile="D:\Documents\My Profiles\FireLightUserGuide.capro" ProfileHash="17ab8a245f347468213ad253f12e292d50527913" ScreenRectangle="165,317,20,18">
+        <OriginalImage Type="Image" ShapeTimeSpan="10000" AutoAdjust="true" DPI="96" medium_print_EnableFormat="true" medium_print_DPI="300" Folder="D:\Documents\My Projects\FireLight Admin 2.18\Content\Resources\ImagesUserGuide" ExportFormat="png" medium_print_ExportFormat="png" BorderColor="#4682b4" Border="solid" FileName="Capture{n}" EnableGrayScaleFormat="false" medium_screen_and__max_width__64_063em__ExportFormat="png" medium_screen_and__max_width__64_063em__DPI="96" medium_screen_and__max_width__40em__ExportFormat="png" Title="Collapse Form Pages Button" Alt="Collapse Form Pages Button" medium_print_OutputScaleFactor="3.12" medium_print_ColorDepth="32" ComputedWidth="20" ComputedHeight="18">SUkqAOwAAACAP+BP8AQWDQeEQmFQuGQ2HQ2BwSHxOKRWLQiIxeNRuOQWMx2QSGGR+RQlRycABmVAAiS2SwuSSVvTMASdRgAFzkAHOeAAAz+XwaYyJRUUAN+kQgd0uWS6ggChxuZt6ayiFzkFzuez8AyWoxqiqKj0mH0sd00iV6Bxyp1WbxasVo5z6gRyvxOw2Nvx2zWiO3eF22bSW4zy51yL4CFXmkXun32W2mLYqC4KrU+DYWt3WHZQAYyyZiE5CnZ21wrLW/RQzNYfOQm7v7ZAB97WoQLVwkBbsAAXfXSuzDTxDcbmH4iHwEAQAP4ABAABAAAAAAAAAAABBAABAAAAFAAAAAEBBAABAAAAEgAAAAIBAwAEAAAAsgEAAAMBAwABAAAABQAAAAYBAwABAAAAAgAAABEBBAABAAAACAAAABUBAwABAAAABAAAABYBBAABAAAAEgAAABcBBAABAAAA5AAAABoBBQABAAAAugEAABsBBQABAAAAwgEAABwBAwABAAAAAQAAACgBAwABAAAAAgAAAD0BAwABAAAAAgAAAFIBAwABAAAAAgAAAAAAAAAIAAgACAAIAAB3AQDoAwAAAHcBAOgDAAA=</OriginalImage>
+        <Shapes />
+        <Variables />
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

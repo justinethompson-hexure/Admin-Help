@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p><b class="Bold">LexisNexis Client Identification Verification/Authentication During the E-Signature Process</b>
+        </p>
+        <p>FireLight incorporates the LexisNexis Instant ID and Instant Authentication services into the client verification/authentication process during the signing process for both Sign Now and Sign Later (external signing). FireLight supports the LexisNexis Instant ID process, sending the client's name, address, date of birth, and SSN for validation. FireLight includes the application ID and DTI&#160;number in the message to use as the customer reference values within the LexisNexis system.</p>
+        <p>In the Sign Now process, the initial call to LexisNexis occurs at the time of client verification after the agent submits the verification screen for the selected signer. In the Sign Later process, FireLight initiates the web service call to LexisNexis after the SSN/DOB or passcode validation occurs.</p>
+    </body>
+</html>

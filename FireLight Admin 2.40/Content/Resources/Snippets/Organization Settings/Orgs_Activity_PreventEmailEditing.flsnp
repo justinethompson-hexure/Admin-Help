@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Prevent Email Editing</b> checkbox to prevent system generated emails from being edited by agents or clients. For example, FireLight presents an email template  in the request process for the client fill and the client fill and sign requests, but the user cannot edit the email template.</body>
+</html>

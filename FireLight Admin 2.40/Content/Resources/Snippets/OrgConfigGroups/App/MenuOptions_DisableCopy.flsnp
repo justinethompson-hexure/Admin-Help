@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable Copy</b> checkbox to disable the Copy Activity button on the Other Actions menu within an open activity. Clear this option to enable the Copy Activity button on the Other Actions menu within an open activity, which allows users to quickly create a copy of the open activity (except for Quote and Illustration activities).</body>
+</html>

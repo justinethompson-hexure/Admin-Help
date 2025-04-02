@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>With this enhancement, clients will have the ability to create multiple versions of an email template and edit the template according to the signer the email is sent to. Based on the dynamic email templates created for the signers on an application, different email text could be sent to the specified signers and all other signers will receive the default email text.</p>
+        <p>On the email template page in FireLight Admin, a new tab is added to allow clients to select from a list of available dynamic email templates and signer roles. Based on client provided use cases, the list of signers and email templates available for further customization is limited to subset of email templates and signers. Additional templates and signers can be evaluated for future implementation as clients express the need.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>FL Admin -&gt; Organization Configuration -&gt; Email</p>
+            </li>
+            <li>
+                <p>New tab "Dynamic Email Templates" is added to the email templates screen in the admin tool.</p>
+            </li>
+        </ul>
+    </body>
+</html>

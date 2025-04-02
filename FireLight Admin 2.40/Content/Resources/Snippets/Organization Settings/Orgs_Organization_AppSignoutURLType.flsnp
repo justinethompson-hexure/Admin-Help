@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p> In the <b class="Bold">App Signout URL Type</b> list, select the type of signout URL for the  <MadCap:variable name="General.ProductName"></MadCap:variable> user application:</p>
+        <p class="Indent">
+            <b>ThankYou </b> User is redirected to a simple Thank You page when they sign out from <MadCap:variable name="General.ProductName"></MadCap:variable>.</p>
+        <p class="Indent">
+            <b>ThankYouClose </b> User is redirected to a simple Thank You page with a button to enable the user to close the window containing the <MadCap:variable name="General.ProductName" /> session.<b><br /> Custom-Url </b> User is redirected to the specified URL when they log off <MadCap:variable name="General.ProductName" />.</p>
+    </body>
+</html>

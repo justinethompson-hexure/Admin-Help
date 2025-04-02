@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="General.Online">
+	<head>
+		<link href="../../../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+		<link href="../../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h1><a name="top"></a>Email Delivery Failure Notification (SendGrid)</h1>
+		<p>
+			<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailColumnDesc.flsnp" />
+		</p>
+		<table style="border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;mc-table-style: url('../../../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+			<caption class="Table">Email Delivery Failure Notification  </caption>
+			<col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+			<thead>
+				<tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+					<th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Action, To Name/Email, From Name/Email, CC Address, Available Tags and Notes</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">Action</p>
+						<p>When the SendGrid email system is activated, it sends email delivery failure notifications to the agent via the Message Center. On screen notification appears if the agent is online. </p>
+						<p>Template Name: Email Delivery Failure Notification</p>
+						<p>Email Subject Line: Failure delivering email</p>
+						<p>Message:</p>
+						<p class="Indent2">The following had an issue with email delivery. Please review and update as necessary.</p>
+						<p class="Indent2">&lt;MESSAGE&gt;.</p>
+						<p>This email is available for sending when the user selects the <b class="Bold">Send Message Center Emails</b> checkbox on the Preferences page in FireLight. For user instructions, see<MadCap:conditionalText MadCap:conditions="General.PDF"> "Preferences"</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"> <MadCap:xref href="../../../UserGuide/Preferences/Preferences.htm" alt="Preferences [User Instructions]" target="_blank">Preferences [User Instructions]</MadCap:xref></MadCap:conditionalText> in the <em>FireLight Platform User Guide</em>.</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<p class="thead1">To Name / Email</p>
+						<p>Agent <MadCap:conditionalText MadCap:conditions="General.Postpone">or Reviewer </MadCap:conditionalText>Name/Email used in original request</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">From Name / Email</p>
+						<p>Organization Name/Email</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<p class="thead1">CC Address</p>
+						<p>No cc Sender</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+						<p class="thead1">Available Tags</p>
+						<p>&lt;MESSAGE&gt;</p>
+						<ul>
+							<li>
+								<p>When an activity is associated with the email, &lt;MESSAGE&gt; is defined as: &lt;CASE_NAME&gt;     &lt;CLIENT_NAME&gt;     &lt;CLIENT_EMAIL&gt;     &lt;EMAIL_FAILURE_REASON&gt;.</p>
+							</li>
+							<li MadCap:conditions="General.Postpone">
+								<p>When there is no activity associated with the email, &lt;MESSAGE&gt; is defined as: There was an error sending an email to &lt;CLIENT_EMAIL&gt; with the subject &lt;EMAIL_SUBJECT&gt;. The reason for the failure was &lt;EMAIL_FAILURE_REASON&gt;.</p>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<MadCap:snippetBlock src="../../../Resources/Snippets/Email/EmailSeeAlso.flsnp" />
+		<p><a href="#top" alt="Return to Top">Return to Top</a>
+		</p>
+	</body>
+</html>

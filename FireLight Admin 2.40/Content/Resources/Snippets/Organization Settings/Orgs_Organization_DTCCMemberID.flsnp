@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>In the <b class="Bold">DTCC Member ID</b> text box, type the DTCC member ID for your organization. Otherwise, leave blank. This is used when integrating with the DTCC for application submission transmissions. It is used to set the global dataitem FLI_PRODUCT_CARRIER_DTCC_FULL_MEMBER.  This dataitem can then be used in the form rules to determine eligibility for money settlement within the subsequent payment transactions.</body>
+</html>

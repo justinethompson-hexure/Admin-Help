@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Mapping</h1>
+        <p>On the navigation bar, click <b>Organization Config</b> and click <b>Mapping</b> to go to the Mapping page. </p>
+        <h2>Mapping Tab</h2>
+        <p>Use the Mapping tab to set the mapping from the FireLight<sup MadCap:conditions="General.Online">®</sup> global (FLI_*) data items (System Data Id column) to the form  data items (Form Data Id column) in <MadCap:variable name="General.ProductName" />. This is how <MadCap:variable name="General.ProductName" /> maps identification data within the forms. </p>
+        <p>The Mapping tab is <b class="Bold">not</b> used to create any FireLight global data items (FLI_*). It is used only in the signature process to map a well-known identifier (FLI_*) to an organization-specified data item for pre-filling the identification fields.</p>
+        <p MadCap:conditions="General.Online">
+            <img src="../Resources/ImagesAdmin/MappingPage.jpg" alt="Mapping Page" title="Mapping Page" MadCap:conditions="General.Online" />
+        </p>
+        <h3>Edit Form or Wizard Data Item IDs</h3>
+        <p>You can map the data from the FireLight global data items (FLI_*) to the identification form data items for your organization. </p>
+        <p>
+            <img src="../Resources/ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" /> FireLight global data items (FLI_*) in the System Data Item ID column cannot be changed. Values are case sensitive.</p>
+        <ol>
+            <li>On the navigation bar, click <b>Organization Configuration</b> and then click <b>Mapping</b>.</li>
+            <li>
+                <p>On the <b>Mapping</b> tab, select a <b>Product Type</b> in the list.</p>
+                <p>The list of available data items is automatically populated from the signer types defined within FireLight. </p>
+            </li>
+            <li>Make your changes in the <b>Form Data Id</b> column to specify the mapping of the Form Data Item ID.</li>
+            <li>Click <b>Save Mapping</b> to save your updates.</li>
+            <li>
+                <p>To undo all of your changes and set the mapping back to the original <MadCap:variable name="General.ProductName" /> system defaults, click <b>Remove Mapping</b>.</p>
+                <p><b>CAUTION:</b>  Clicking this button will remove all changes you made to the Form Data IDs, not just the changes you made in this session.</p>
+            </li>
+        </ol>
+        <h2>DataItem Sync Tab</h2>
+        <p class="note"><b class="Bold">NOTE:</b> This tab is available only for Distributor organizations.</p>
+        <p>Distributors use the DataItem Sync tab to map one data item to another data item so that when one data item changes, the linked data item also changes.</p>
+        <p MadCap:conditions="General.Online">
+            <img src="../Resources/ImagesAdmin/Deploy12.jpg" alt="DataItem Sync Tab" title="DataItem Sync Tab" MadCap:conditions="General.Online" />
+        </p>
+        <h3>Link Data Items</h3>
+        <ol>
+            <li>On the navigation bar, click <b>Organization Configuration</b> and then click <b>Mapping</b>.</li>
+            <li>
+                <p>In the grid on the <b>DataItem Sync</b> tab:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>Type the primary data item ID in the <b>Primary Data Id</b> column. This is the data item to link from.</li>
+                    <li>Type the secondary data item ID in the <b>Secondary Data Id</b> column. This is the data item to link to.</li>
+                    <li>Type a description for the data item linking in the <b>Description</b> column.</li>
+                </ol>
+            </li>
+            <li>Click the <b>Add New Row</b> button to add another pair of linked data items.</li>
+            <li>
+                <p>Click the <b>Save Mapping</b> button to save the entries.</p>
+            </li>
+        </ol>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">EXAMPLE</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p class="ExampleHead">EXAMPLE</p>
+                <p class="ExampleMiddleSection">The distributor form uses D_Owner_DOB data item for the owner's birth date field and the carrier's form uses Owner_DOB data item for owner's birth date. </p>
+                <p class="ExampleMiddleSection">Enter <b class="Bold">D_Owner_DOB</b> in <b>Primary Data Id</b> and enter <b class="Bold">Owner_DOB</b> in <b>Secondary Data Id</b> and save the mapping.</p>
+                <p class="ExampleBottom">When a producer enters the owner's birth date with the D_Owner_DOB data item on the distributor's form, FireLight will automatically pre-fill the owner's birth date with the Owner_DOB data item on the carrier's form.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h3>Delete Linked Data Items</h3>
+        <p>In the grid on the <b>DataItem Sync</b> tab, locate the row of linked data items to delete and click the red <b style="color: #ff0000;">X</b> in the <b>Delete</b> column of that row.</p>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

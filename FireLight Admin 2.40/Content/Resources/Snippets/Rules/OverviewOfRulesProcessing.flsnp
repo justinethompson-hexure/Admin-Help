@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="428" MadCap:lastWidth="1053">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p><b>High Level Architecture for Rules Processing</b>
+        </p>
+        <ul>
+            <li>Controls are tied to data containers.</li>
+            <li>Rules work against the data containers.  They have no knowledge of the associated form controls.</li>
+            <li>Rules engine is event based.  Rules are fired when a value within a container changes.</li>
+            <li>The Rules Engine uses a stack-based or postfix type language.  Think of it like working from the inside out.  Arguments are passed in first, followed by the action.</li>
+        </ul>
+        <p><b>Organization of Rules</b>
+        </p>
+        <ul>
+            <li>With the initial implementation of rule sets, FireLight converted all existing rules to rule sets—one rule set per form. The conversion routine named each rule set to match the associated form name. </li>
+            <li>When you upload a new form, FireLight does not convert the new form to a rule set. You need to add or update existing rule sets for the data items on the form and then add the applicable rule sets to the package along with the form.</li>
+            <li>You do not have to duplicate common rules on other forms. You can use rule sets to maintain rules by category (distributor-specific, owner-specific, product-specific, etc.) and then add the applicable rule sets to the packages.</li>
+        </ul>
+    </body>
+</html>

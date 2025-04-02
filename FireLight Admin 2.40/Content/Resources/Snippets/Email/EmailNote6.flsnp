@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body><sup>6</sup> The &lt;MESSAGE&gt; tag will populate the email with the list of activities ready to be submitted. For applications, it will include the application name and policy number. For e-Delivery, it will include the Client, processing instruction, and case status.</body>
+</html>

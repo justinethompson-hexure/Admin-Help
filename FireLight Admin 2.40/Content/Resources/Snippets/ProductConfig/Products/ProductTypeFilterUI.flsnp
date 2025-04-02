@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>(Carriers only) This optional <b class="Bold">Product Type Filter</b> allows carriers to define the Product Type under which the product appears in the Create New Activity page in FireLight.
+
+By consolidating products into fewer product types, this filter can help end users more easily find products in FireLight when creating a new activity. Carriers are not required to make changes if they prefer that product types remain the same.  Changes for the purpose of filtering products in the user interface do not negatively impact outbound files, integrations, workflow definitions, etc.</body>
+</html>

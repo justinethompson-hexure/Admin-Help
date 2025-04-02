@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight v2.39 Release Notes</h1>
+        <h1><a name="top"></a>What's New in FireLight</h1>
+        <p><span style="color: #000000;">The following enhancements are now available for all clients unless noted otherwise. See the "FireLight v2.39" Release History" topic in Admin Help for fixed defects and links to design documents and Admin Help topics.</span>
+        </p>
+        <h1><a name="top"></a><b style="font-size: 16pt;">New Functionality</b>
+        </h1>
+        <p><b style="font-size: 12pt;">Integration with DTCC Producer Authorization: CR-1807</b>
+        </p>
+        <p>We have added an integration to our Can Sell functionality to utilize the DTCC Producer Authorization. This integration can be selected via settings in the administration tool. Please note that this functionality is available only to carriers who are participating in the DTCC Producer Authorization and is mutually exclusive to the use of the SuranceBay Producer Eligibility functionality.</p>
+        <p><b>Impact</b>
+        </p>
+        <p>FL Admin &gt; Org Settings &gt; App &gt; Submit - either SuranceBay Producer Eligibility OR DTCC Producer Authorization can be selected under Can Sell Check.</p>
+        <p>FL eApplication (only)</p>
+        <p>When enabled, a call is made to the DTCC to verify the producer eligibility to sell the selected product.</p>
+        <p><b style="font-size: 12pt;">Moved App Settings from appsettings.config to ExternalIntegration Config Files: CR-705</b>
+        </p>
+        <p>We enhanced security by moving the app settings for the DTCC PA, LexisNext, Magnum, Aura, DocuSign, and SuranceBay apps from appsettings.config to ExternalIntegration files.</p>
+        <p><b style="font-size: 12pt;">Remove DTCC Producer Authorization from Sales Agreement: CR-4041</b>
+        </p>
+        <p>We removed DTCC PA as a selectable option in FireLight.</p>
+        <p><b>Impact</b>
+        </p>
+        <p>FL Admin &gt; Sales Agreement &gt; Options tab &gt; Can Sell Check &gt; “DTCC PA” no longer available</p>
+        <p><b style="font-size: 12pt;">Enhancements Related to Smart Text Box and Smart DatePicker: DIST-2244</b>
+        </p>
+        <p>To provide more options to validate numbers and date inputs, new properties are added to the Smart Text Box and Smart Datepicker fields.</p>
+        <p>To validate whether numbers entered on the app side are between a specific range or greater than or less than a specific number, admin users can now select properties on the field without writing rules.</p>
+        <p>Date validation options are enhanced to determine whether the entered date should be within a date range in the past or if the date should be within a date in the past or beyond that date.</p>
+        <p><b>Impact</b>
+        </p>
+        <ul>
+            <li>
+                <p>New Property “Validation Range” added for smart text box: FL Admin &gt; Wizard Designer &gt; Smart Text Box (field type) &gt; Validation Range (new property)</p>
+            </li>
+            <li>
+                <p>More options added to the Date Validation property for the smart datepicker: FL Admin &gt; Wizard Designer &gt; Smart Datepicker (field type) &gt; Date Validation (property)</p>
+            </li>
+        </ul>
+        <p><b style="font-size: 12pt;">Admin Reports Modifications: DIST-3813</b>
+        </p>
+        <p>Two new reports are available from the Admin tool:</p>
+        <ul>
+            <li>
+                <p>Business Detail Report</p>
+            </li>
+            <li>
+                <p>Workflow Report</p>
+            </li>
+        </ul>
+        <p><b>Impact</b>
+        </p>
+        <ul>
+            <li>
+                <p>FL Admin &gt; Utilities &gt; Reports: new reports can be generated in CSV format.</p>
+                <ul>
+                    <li>
+                        <p>Business Detail Report</p>
+                    </li>
+                    <li>
+                        <p>Workflow Report</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>Provide Firm Org filter for the reports below and add a column listing firm org to these reports:</p>
+                <ul>
+                    <li>
+                        <p>Sales Agreement Audit History Report</p>
+                    </li>
+                    <li>
+                        <p>Package Audit History Report</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>The Firm Filter drop-down lists firms based on access to the logged-in admin user.</p>
+            </li>
+            <li>
+                <p>The Form Fields report has new columns for field Height and Width.</p>
+            </li>
+        </ul>
+        <p><b style="font-size: 12pt;">Allow Importing First Four Columns from the Custom List or Import File to the Drop-Down Field: DIST-4390, DIST-4389, DIST-4388, DIST-4362</b>
+        </p>
+        <p>As a further enhancement to importing values to a drop down from a custom list or an external file, users can now import up to four columns while importing values.</p>
+        <p><b>Impact</b>
+        </p>
+        <ul>
+            <li>
+                <p>FL Admin: On the wizard designer, the changes below will be available to the properties dialog of a drop-down field - Wizard Designer &gt; Dropdown field&gt; Field Properties &gt; Edit List Name Values link.</p>
+                <ul>
+                    <li>
+                        <p>Drop-down to select custom list – to link or attach values to the drop-down field,</p>
+                    </li>
+                    <li>
+                        <p>Import button to select values from an external file.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>FL Admin: On the form designer, the changes below will be available to the properties dialog of a combo box field - Form Designer &gt; Combo box field&gt; Field Properties &gt; Edit List Name Values link.</p>
+                <ul>
+                    <li>
+                        <p>Drop-down to select custom list – to link or attach values to the combo box field.</p>
+                    </li>
+                    <li>
+                        <p>Import button to select values from an external file.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p><b style="font-size: 12pt;">Activity Report Modifications: DIST-4575, DIST-4779, DIST-4780</b>
+        </p>
+        <p>New activity reports are available to be scheduled from Reports Scheduler:</p>
+        <ol>
+            <li>
+                <p>Detail Report to list Illustration activity data: Illustration Activity Detail Report</p>
+            </li>
+            <li>
+                <p>Custom Report to list commission netting data for distributors: Commission Detail Report</p>
+            </li>
+            <li>
+                <p>Custom Report to list money settlement report for distributors: Money Settlement Report</p>
+            </li>
+        </ol>
+        <p><b>Impact</b>
+        </p>
+        <p>FL Admin &gt; Utilities &gt; Reports Scheduler: New reports are available to be scheduled.</p>
+        <ul>
+            <li>
+                <p>Under the detailed reports - Illustration Activity Detail Report</p>
+            </li>
+            <li>
+                <p>Under the custom reports - Commission Detail Report</p>
+            </li>
+            <li>
+                <p>Under the custom reports - Money Settlement Report</p>
+            </li>
+        </ul>
+        <p><b style="font-size: 12pt;">Notify Reviewer When Agent Uploads Documents in Post Submit Review: DIST-4710</b>
+        </p>
+        <p>Currently, when an agent adds or removes a document from an activity while it is being reviewed in the pre submit review, a notification is being sent to the reviewer to let them know of the action. The same functionality is now enhanced for the activity when reviewed by post submit review. An email notification will be sent to the reviewer in post submit review that a document is added or removed by the agent.</p>
+        <p><b>Impact</b>
+        </p>
+        <ul>
+            <li>
+                <p>FL Admin &gt; Organization Configuration &gt; Email &gt; Review Queue (Email Category) &gt; Review Queue Attachment Update (Template Type)</p>
+            </li>
+            <li>
+                <p>FL App &gt; Activity &gt; Other Actions &gt; History: Display document upload update and email notification sent update</p>
+            </li>
+            <li>
+                <p>FL App &gt; Review Queue &gt; Application History: Display document upload update and email notification sent update</p>
+            </li>
+        </ul>
+        <p><b style="font-size: 12pt; font-weight: bold;">Update APIs to V2: EAES-2088</b>
+        </p>
+        <p>We updated the following APIs to V2 so that they return a specific error code and reason when an error is encountered while using them: GetActivityDetails, GetActivityPDF, GetAvailableActions, GetDocumentList, and GetProductAvailability, Submit, Upload Document, UnlockActivity, and ValidateActivityData.</p>
+        <p><b style="font-size: 12pt;">Prevent External Signer Types from Printing PDFs (Implement for React): EAES-4596</b>
+        </p>
+        <p>We added the ability to prevent specific external signers from printing forms while reviewing them.</p>
+        <p><b style="font-size: 12pt;">Update Data Item with Role Code of Last User Who Accessed an App: EAES-5646</b>
+        </p>
+        <p>We added the ability to have the FLI_CURRENT_ROLE_CODE data item updated with the role code of the user who most recently accessed an application.</p>
+        <p><b style="font-size: 12pt;">SetToIXN Updated to Current Specifications: EAES-5883</b>
+        </p>
+        <p>The setTOIXN property now states its current function, such as toggling between the two quote tools and allows for more accurate comments.</p>
+        <p><b style="font-size: 12pt;">Edition Attribute Added to FireLight Admin Modules: PC-1941</b>
+        </p>
+        <p>We added the ability for users to add the edition attribute to the Wizard Library, Rulesets, and Package modules for more efficient version tracking of wizards, rulesets, and packages.</p>
+        <p><b style="font-size: 12pt;">Error Message Now Displays Multiple Errors: PC-2779</b>
+        </p>
+        <p>The system now displays multiple errors in an application when errors occur. <b>Note:&#160;This update has been enabled in QA and UAT but will not be generally enabled in production at this time.</b></p>
+        <p><b>Impact</b>
+        </p>
+        <p>When a person is completing an application, if there are multiple errors on a page, a popup window will appear with all errors being stated.</p>
+        <p><b style="font-size: 12pt;">Add Ability to Add More than One Product at a Time When Managing Sales Agreements: PC-2838</b>
+        </p>
+        <p>We added the ability to add multiple products to multiple selling organizations when managing sales agreements.</p>
+        <p><b>Impact</b>
+        </p>
+        <p>In Product Configuration &gt; Sales Agreements, a new menu will be available for the customer to use to select multiple products and assign them to multiple selling organizations.</p>
+        <p><b style="font-size: 12pt;">Ability to Redirect to a Dynamic URL on Submit: PC-2842</b>
+        </p>
+        <p>We added the ability to redirect to a dynamic URL on submit. This new function allows that at submit (regardless of the group option), retrieve the app data and if data item FLI_SUBMIT_REDIRECT_URL exists and has a value, it will redirect to that URL (regardless of the URL configured in group settings).</p>
+        <p><b>Impact</b>
+        </p>
+        <p>User will be able to submit (regardless of the group option), retrieve the app data, and if data item FLI_SUBMIT_REDIRECT_URL exists and has a value, it will redirect to that URL (regardless of the URL configured in group settings)</p>
+        <p><b style="font-size: 12pt;">Add New Product Type - Contingent Deferred Annuity (CDA): PC-3381</b>
+        </p>
+        <p>We expanded user options by adding a new product type, Contingent Deferred Annuity.</p>
+        <p><b style="font-size: 14pt;">Resolved Issues</b>
+        </p>
+        <p><b style="font-size: 12pt;">Unable to Continue after Data Entry, Showing "Submit Disabled" Pop-up for Non-SureLC Products: CR-3835</b>
+        </p>
+        <p>We resolved an issue where applications could not be completed following data entry and a "Submit Disabled" pop-up was displayed. Applications can now be completed as designed.</p>
+        <p><b style="font-size: 12pt;">Removal of Milliman Language from the Pop-Up Message: CR-3838</b>
+        </p>
+        <p>We resolved an issue where a pop-up message erroneously included Milliman language.</p>
+        <p><b style="font-size: 12pt;">Contract Submission Not Moving to "Pending Signatures" Status: CR-4042</b>
+        </p>
+        <p>We resolved an issue where contract submissions failed to move to pending signature status. These submissions now behave as designed.</p>
+        <p><b style="font-size: 12pt;">Firelight Does Not Receive Signature Completion Status from DocuSign Signature Completion: CR-4108</b>
+        </p>
+        <p>We resolved an issue where application status remained “in DocuSign signatures” after signature completion. Applications now as designed moved through the workflow after signature completion.</p>
+        <p><b style="font-size: 12pt;">Data Entry Percentage Displaying 0% When User Add Smart Text Box and Smart Date Picker in Package and Percentage Count Is Also Not Increased When Fields Are Getting Populated: DIST-4590</b>
+        </p>
+        <p>We resolved an issue where when creating an application with a smart text box and date picker wizard and entering data the data entry percentage remained at 0%. In this scenario the data entry percentage display is working as designed.</p>
+        <p><b style="font-size: 12pt;">Custom List Value Is Not Displaying after Lock the Application If Value Directly Referenced from Custom List: DIST-4597</b>
+        </p>
+        <p>We resolved an issue where a custom list value referenced from a custom list failed to appear after locking an application. The custom list value now appears as designed.</p>
+        <p><b style="font-size: 12pt;">Unable to Download 'Sample CSV' File: DIST-4785</b>
+        </p>
+        <p>We resolved an issue where clicking the View Sample CSV link on the Import Participants pop-up resulted in an error. When clicking this link the sample CSV is now downloaded as designed.</p>
+        <p><b style="font-size: 12pt;">Unable to Filter by Queue When Viewing Reviewer's Activities: DIST-4797</b>
+        </p>
+        <p>We resolved an issue where on the Reviewers and History tabs of the Review Queue page pagination and filtering by queue and pagination were not working as expected. These elements are now working as designed.</p>
+        <p><b style="font-size: 12pt;">Unable to Filter by Date and Keyword When Viewing Reviewer's Activities: DIST-4871</b>
+        </p>
+        <p>We resolved an issue where filtering by date and keyword on the Reviewers tab of the Review Queue page was not working as designed. These elements are now working as expected.</p>
+        <p><b style="font-size: 12pt;">When External or Internal Signer Declined the Signing, then Agent Not Receiving that Declined Reason Message Email in React: EAES-4204</b>
+        </p>
+        <p>We resolved an issue where in React when an external or internal signer declined signing, the agent did not receive the declined reason by email. Now in this scenario the agent receives an email with the declining reason.</p>
+        <p><b style="font-size: 12pt;">Print Selected Documents Button Is Not Aligned With Close Button: EAES-4354</b>
+        </p>
+        <p>We resolved an issue where on the Select Documents to Print dialog the Print Selected Documents button was misaligned. The button is now aligned correctly.</p>
+        <p><b style="font-size: 12pt;">Response Message Not Showing Properly for Empty GUID and Incomplete GUID Passed: EAES-4801</b>
+        </p>
+        <p>We resolved an issue where response messages failed to display the proper information. Response messages now display the information that should be displayed.</p>
+        <p><b style="font-size: 12pt;">Ordering of Forms Being Influenced by the Package Duty Type: EAES-5308</b>
+        </p>
+        <p>We resolved an issue where Forms and Packages were not being reported in the correct order. Forms and Packages now as designed are following the order specified by the user.</p>
+        <p><b style="font-size: 12pt;">"E-Signature Process Declined" Audit Not Visible at the History, When User sets True for "FLI_DECLINED_ESIGN" Data Item ID: EAES-5566</b>
+        </p>
+        <p>We resolved an issue where when after submitting an application for which the E-Signature process was declined the application History failed to display E-Signature Process Declined. In this scenario, History now displays E-Signature Process Declined.</p>
+        <p><b style="font-size: 12pt;">Not Showing Submit Confirmation on MVC App: EAES-5576</b>
+        </p>
+        <p>We resolved an issue where a confirmation dialog failed to appear when submitting applications. The confirmation dialog now appears as designed.</p>
+        <p><b style="font-size: 12pt;">Confirmation Dialog Message Text Changed: EAES-5577</b>
+        </p>
+        <p>We resolved an issue where the confirmation dialog text was other than expected when submitting an application.</p>
+        <p><b style="font-size: 12pt;">When the App Name Contains  Curly Braces then User Is Not Able to Send Email Request or Generate Link (REACT &amp; MVC Signing): EAES-5611</b>
+        </p>
+        <p>We resolved an issue where having an application with curly braces in the name caused sending an email signing request and generating a link to fail. Sending an email signing request and generating a link now work as designed, even when an application name includes curly braces.</p>
+        <p><b style="font-size: 12pt;">Upload Document API Should Not Validate File Size Limit of 0: EAES-5614</b>
+        </p>
+        <p>We resolved an issue where file size limit was erroneously being validated even when set to Null/0. Now when file size limit is set to Null/0 it is no longer validated.</p>
+        <p><b style="font-size: 12pt;">Retained Document Visibility Flags When Locking Application Documents: EAES-5620</b>
+        </p>
+        <p>We resolved an issue where document visibility flags were not being retained when application documents were locked. The flags are now being retained in this scenario, as designed.</p>
+        <p><b style="font-size: 12pt;">When 'FLI_DECLINED_ESIGN' Set to 'True' then App Showing Locked (Actually in Data Entry): EAES-5670</b>
+        </p>
+        <p>We resolved an issue where the Unlock button erroneously appeared while creating an application.</p>
+        <p><b style="font-size: 12pt;">Search Icon Now Showing in Enrollment Participants Page: EAES-5781</b>
+        </p>
+        <p>We resolved an issue where the search icon failed to appear on the Enrollment Participants page. The icon now appears on the page as designed.</p>
+        <p><b style="font-size: 12pt;">Exception Should Be Thrown During Save with No Forms or Wizards: EAES-5947</b>
+        </p>
+        <p>We resolved an issue where applications could not be opened due to the associated forms and wizards no longer being available.</p>
+        <p><b style="font-size: 12pt;">Unlock Button Not Showing for Client Directed Fill &amp; Sign Case: EAES-6006</b>
+        </p>
+        <p>We resolved an issue where the Unlock button failed to appear on the Activity Summary dialog. The button now appears as designed.</p>
+        <p><b style="font-size: 12pt;">Model Not Initialized Correctly for the Forms and Wizard UI for External Sessions: EAES-6279</b>
+        </p>
+        <p>We resolved an issue where the AllowNIGO setting was being controlled by the default group and not the external group when both groups exist. The AllowNIGO setting is now controlled by the settings of the external group and not the default group in this scenario.</p>
+        <p><b style="font-size: 12pt;">Text Now Showing in Red on Electronic Signatures Declined Confirm Dialog: PC-1443</b>
+        </p>
+        <p>We resolved an issue text on the Electronic Signatures Declined confirm dialog failed to appear as red. This text now appears as red as designed.</p>
+        <p><b style="font-size: 12pt;">Embedded Console Error: TypeError: Cannot Read Properties of Null (Reading 'Style'): PC-1493</b>
+        </p>
+        <p>We resolved an issue where a console error was encountered in FireLight Embedded. This error is no longer encountered.</p>
+        <p><b style="font-size: 12pt;">Improve Resiliency When Sending Fill and Sign Requests: PC-1719</b>
+        </p>
+        <p>We improved enrollment logic to ensure consistency in handling requests and errors.</p>
+        <p><b style="font-size: 12pt;">Product Availability Check for Inbound 103 Incorrect: PC-2495</b>
+        </p>
+        <p>We resolved an issue where the product availability check operated incorrectly, resulting in an inaccurate product availability list. The check is now operating as designed.</p>
+        <p><b style="font-size: 12pt;">Trim Non-Printable Characters from Application Name: PC-2845</b>
+        </p>
+        <p>We resolved an issue where application names containing invalid characters resulted in applications failing to transmit. Non-printable characters are now scrubbed from application names.</p>
+        <p><b style="font-size: 12pt;">Generate Link Message Window and Text Are Outside of the Client Fill and Sign Window and Resulting in Cosmetic and Visibility Issues: PC-2938</b>
+        </p>
+        <p>We resolved an issue where the Spanish and French versions of the Generate Link without Email dialog in the Client Fill and Sign window displayed incorrectly, resulting in cosmetic and legibility issues. The Spanish and French versions of this dialog now display correctly.</p>
+        <p><b style="font-size: 12pt;">Multiple Validation Messages Should Be Displayed in Separate Lines: PC-2978</b>
+        </p>
+        <p>We resolved an issue where multiple validation messages appeared on a single line. These messages now appear on separate lines, as designed.</p>
+        <p><b style="font-size: 12pt;">Wrong Message Displayed When Deleting Sales Agreement: PC-3033</b>
+        </p>
+        <p>We resolved an issue where sales agreement deletion messages erroneously listed the number of products deleted from the agreement. Now as designed these messages list only the number of selling organizations affected.</p>
+        <p><b style="font-size: 12pt;">Error Occurs When Clicking on Continue Link of Data Entry Met Pop Up: PC-3083</b>
+        </p>
+        <p>We resolved an issue where after data entry for an application is complete, clicking Continue resulted in an error. The Continue link now works as designed.</p>
+        <p><b style="font-size: 12pt;">Required Red Borders Around the User Input Fields Are Not Showing Up or Getting Highlighted If Left Unfilled: PC-3277</b>
+        </p>
+        <p>We resolved an issue where the red borders required around user input fields failed to appear and/or were highlighted if unfilled. User input fields now appear as designed.</p>
+        <p><b style="font-size: 12pt;">Multiple Validation Messages Showing in Single Line Separated with Pipe for Few Orgs: PC-3283</b>
+        </p>
+        <p>We resolved an issue where multiple validation messages for Automation orgs appeared in a single line separated with pipes. Multiple validation messages now appear in separate lines as designed.</p>
+        <p><b style="font-size: 12pt;">New Column “Edition” Should Be Added after “Description”: PC-3423</b>
+        </p>
+        <p>We resolved an issue where in the Rule Sets dialog the new Edition column erroneously appeared before the Description column. Now in this dialog the Edition column appears after the Description column, as designed.</p>
+        <p><b style="font-size: 12pt;">Unable to Create Next Activity for "Pre-Sale" Type of Activities: PC-3527</b>
+        </p>
+        <p>We resolved an issue where an error was received when creating a linked activity from an account opening or needs determination activity. This operation now works as designed.</p>
+        <p><b style="font-size: 12pt;">Data Entry Met Popup Is Not Appearing for REACT UI Apps: PC-3533</b>
+        </p>
+        <p>We resolved an issue where for REACT UI activities the Data Entry Met popup failed to appear when data entry reached 100% completion. The popup now appears as designed.</p>
+        <p><b style="font-size: 12pt;">More Info Popup Is Missing for REACT UI Apps: PC-3562</b>
+        </p>
+        <p>We resolved an issue where when an external reviewer requested more information for an application the More Info popup failed to appear. This message now appears as designed.</p>
+        <p><b style="font-size: 12pt;">Manage Sales Agreement: Delete Confirmation Popup Missing: PC-3563</b>
+        </p>
+        <p>We resolved an issue where when deleting a Sales Agreement using Manage Sales Agreement the delete confirmation popup message failed to appear. This message now appears as designed.</p>
+        <p><b style="font-size: 12pt;">Manage Sales Agreement: Saved Batches Are Not Retaining the Saved Agreements: PC-3564</b>
+        </p>
+        <p>We resolved an issue where when saving batches of Sales Agreements and then opening the batches Sales Agreements failed to display products saved with the batches. Saving batches now works as designed.</p>
+        <p><b style="font-size: 12pt;">Registered Trademark Symbol ® Not Showing as Symbol but as (R): PC-3596</b>
+        </p>
+        <p>We resolved an issue where the registered trademark symbol displayed as (R). The symbol now appears as ®.</p>
+        <p><b style="font-size: 12pt;">Background Product Is Not Checked in the Products List When Managing Sales Agreement: PC-3619</b>
+        </p>
+        <p>We resolved an issue where when a product was selected in the background before opening Manage Sales Agreement, that product was not selected in the products list in the Manage Sales Agreement window. In this scenario, such products are now selected.</p>
+        <p style="font-size: 12pt;font-weight: normal;"><span style="font-size: 10pt;">***Please note that the JIRA ticket numbers are provided for reference. JIRA tickets are not accessible to users outside Hexure.***</span>
+        </p>
+        <p data-mc-conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Signature Box</h1>
+        <p class="note"><b class="Bold">NOTE:</b> Within FireLight<sup MadCap:conditions="General.Online">®</sup>, most dates and times in the UI are displayed in the user's time zone (as configured in Preferences). Signatures are different. Signature timestamps on forms are shown in UTC. Signature dates and times elsewhere in the UI, including dates obtained from the Signature Date control,  are converted to the time zone of the signer’s state of residence.</p>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FormLockUnlock.flsnp" />
+        </p>
+        <p>Use the Signature Box control to add an e-signature to the form.</p>
+        <ol>
+            <li>On the left under <b>Add Control to Form</b>, click <b>Signature Box</b>.</li>
+            <li>
+                <p>Drag the <b>Signature Box</b> control from the upper left of the form to the signature area on the form and re-size it to fit the field space.</p>
+            </li>
+            <li>
+                <p>On the left under <b>Input Control</b>, click <b>Field Properties</b>.</p>
+            </li>
+            <li>
+                <p>Enter or change settings in Field Properties.</p>
+                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+                    <caption class="Table">Signature Box Field Properties </caption>
+                    <col style="width: 192px;" class="TableStyle-2017_IT-Simple2-Column-Regular" />
+                    <col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                            <th class="TableStyle-2017_IT-Simple2-HeadE-Regular-Header1">Field Property</th>
+                            <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Field Name</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsFieldName.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Common Tag Name</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/FieldProps-CommonTagName.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Top, Left</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsTopLeft.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Width, Height</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <p>
+                                    <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsWidthHeight.flsnp" />
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b>Font Size </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Type the font size for the control if different from the default.</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b>Font Family </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Select the font family for the control if different from the default.</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b>Font Color </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Select the font color for the control if different from the default.</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b>Group Name </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <p>(Optional) Type the name for the group of signatures. The Group Name is used by the system to assemble a collection of forms into a document set that can be signed together. For example, you could define one group named “1Consent” to include only the consent form, and another group called “Application” for the rest of the forms. FireLight arranges the document sets first by number and then alphabetically. To review the consent form first, the Group Name is set to "1Consent" and the Group Name fields for the forms in the application package are set to "Application." Doing this, FireLight leads the signer through two separate signing processes; starting with the E-Consent form and followed by the Application.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Signer Type</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <p>Select the type of signer in the list. The system uses Signer Type to determine who signs the form in the signature capture process. </p>
+                                <p><b class="Bold">NOTE:</b> Activities containing forms that require to be signed by a Trustee displays the text "TTEE" as a suffix on the Trustee signature field at the following places: </p>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>Form/application</p>
+                                    </li>
+                                    <li>
+                                        <p>Addendum document</p>
+                                    </li>
+                                    <li>
+                                        <p>Application PDF</p>
+                                    </li>
+                                    <li>
+                                        <p>Application Audit Report</p>
+                                    </li>
+                                    <li>
+                                        <p>Applications created via Embedded APIs/IXN</p>
+                                    </li>
+                                </ul>
+                                <p class="Indent">Trustee signature controls should be higher than size 160x30, so that TTEE is not overlapped with the signature on it.</p>
+                                <p>Text "TTEE" appears suffixed on the Trustee signature field on the Application, Application PDF, and Application Audit for the following cases:</p>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>For all the trustee signers such as: Trustee, Trustee 2, Trustee 3, Trustee 4, etc.</p>
+                                    </li>
+                                    <li>
+                                        <p>When multi-selection is done at the time of signing for "Trustee" signer along with "Owner" signer type.</p>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Control Type</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Select the control type of Signature (other options are City, Date, State, or Initial).</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Date Format</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Select the output date format that print with the Signature in the PDF. The default format is: yyyy-mm-ddTnn:nn:nn, as in 2017-04-20T15:37:37.</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b>Data Group </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsDataGroup.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Data Group Property</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <p>
+                                    <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsDataGroupProperty.flsnp" />
+                                </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b>Global Scope </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsGlobalScope.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b>Exclude from PDF </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsExcludeFromPDF.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Passcode Only Validation</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">If the Passcode Only Validation checkbox is selected (checked) when the Validate Identity Verification is checked in Organization Settings, it then uses the passcode validation functionality for this specific signature.  All other signatures that do not have this checkbox checked uses the Validate Identify Verification.  If this checkbox is checked when Validate Identity Verification is not checked in the organization settings, the passcode validation functionality still occurs for that signature. If Passcode Validation is turned on at the organization level, then this checkbox is disabled.</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows" MadCap:conditions="">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">State Match Warning</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <p>Select the checkbox to warn about solicitation state/signing state mismatch. If a state mismatch, a Signature Warning dialog warns the agent of the state mismatch. The agent can choose to submit the application and FireLight records an audit,  "Signer solicitation state and signer state mismatch acknowledged by agent." State Match Warning does not work when the Enable Auto Submit checkbox is selected in Organization Configuration/Groups on the <MadCap:xref href="../../Organization Configuration/Groups/App.htm" alt="App">App</MadCap:xref> tab in the Submit section. State Match Warning works only when there is a post signature review queue. </p>
+                                <p>The "State Signing Error" differs from the existing "State Match Warning," as a final error is provided on the fifth attempt and the user can no longer proceed with the signing ceremony in that activity. The "State Match Warning" provides a warning to the agent if there is a post signature review queue but allows the activity to proceed. These two settings cannot be used in conjunction and are not allowed to be selected in the admin Forms Designer together. The setting selection boxes act like a toggle in the signature control, only allowing one to be selected at a time.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows" MadCap:conditions="">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">State Signing Error</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetBlock src="../../Resources/Snippets/Signatures/StateSigningError.flsnp" />
+                                <MadCap:snippetBlock src="../../Resources/Snippets/Signatures/StateSignErrorRules.flsnp" />
+                                <p>Rule Samples:</p>
+                                <MadCap:codeSnippet>
+                                    <MadCap:codeSnippetCopyButton />
+                                    <MadCap:codeSnippetCaption>
+                                        <p>Insured is Owner - Validation should be on INSURED</p>
+                                    </MadCap:codeSnippetCaption>
+                                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;if&gt;
+										&lt;condition&gt;
+										&lt;compare op="=="&gt;
+										&lt;diget dataitemid="Insured_SameAsOwner" /&gt;
+										&lt;const value="true" /&gt;
+										&lt;/compare&gt;
+										&lt;/condition&gt;
+										&lt;diset dataitemid="FLI_DISABLE_STATE_SIGNING_ERROR"&gt;
+										&lt;const value="16" type="String" /&gt;
+										&lt;/diset&gt;
+										&lt;/if&gt;
+									</MadCap:codeSnippetBody>
+                                </MadCap:codeSnippet>
+                                <p>&#160;</p>
+                                <MadCap:codeSnippet>
+                                    <MadCap:codeSnippetCopyButton />
+                                    <MadCap:codeSnippetCaption>
+                                        <p>Insured is not Owner - Validation should be on OWNER</p>
+                                    </MadCap:codeSnippetCaption>
+                                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;if&gt;
+										&lt;condition&gt;
+										&lt;compare op="=="&gt;
+										&lt;diget dataitemid="Insured_SameAsOwner" /&gt;
+										&lt;const value="false" /&gt;
+										&lt;/compare&gt;
+										&lt;/condition&gt;
+										&lt;diset dataitemid="FLI_DISABLE_STATE_SIGNING_ERROR"&gt;
+										&lt;const value="8" type="String" /&gt;
+										&lt;/diset&gt;
+									&lt;/if&gt;</MadCap:codeSnippetBody>
+                                </MadCap:codeSnippet>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Use LexisNexis</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Select the checkbox to use LexisNexis third-party client authentication. For more information, see <MadCap:xref href="../../Features/LexisNexis Client Identification Verification Integration.htm" alt="LexisNexis Client Identification Verification During E-Signature">LexisNexis Client Identification Verification During E-Signature</MadCap:xref> in Features.</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Use SMS Text</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Select the checkbox to use SMS authentication for the signer role. You can write rules on the signature tags per signer and  account for workflow when the client does not have a mobile number. When entering the client mobile number during data entry, you can activate signature tags that have the Use SMS Text option selected. If a client mobile number is not available, you can deactivate signature tags with the Use SMS Text option selected, and instead, activate standard signature tags. For more information, see <MadCap:xref href="../../Features/SMS Text Authentication.htm" alt="SMS Text Authentication">SMS Text Authentication</MadCap:xref> in Features.</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Review Use Only</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Select the checkbox to allow a form to be included for review purposes only in the signing ceremony. Signature is not applied to these controls. If a review control has been added only for a signer without the corresponding signature control, the review control is ignored as there is no signing ceremony.</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyB-Regular-DarkerRows"><b class="Bold">Z Order</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                                <MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsZOrder1.flsnp" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsZOrder4.flsnp" />
+                </p>
+            </li>
+            <li>Click the <b>Update</b> button to update the field properties and lock the form for editing.</li>
+            <li>Click the <b>Close</b> button to close the Field Properties dialog.</li>
+            <li>Click the <b>SAVE</b> button on the upper left of the Form Designer page to save the form, which unlocks the form for editing by other users. <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FormSaveOtherUser.flsnp" /></li>
+            <li>
+                <MadCap:snippetText src="../../Resources/Snippets/Rules/UpdateRuleSetsDB.flsnp" />
+            </li>
+        </ol>
+        <p><strong>Width Height Examples</strong>
+        </p>
+        <p class="Indent">
+            <img src="../../Resources/ImagesAdmin/SignatureBox-SigWidthsHeights.jpg" alt="Sample Signature Widths and Heights" title="Sample Signature Widths and Heights" />
+        </p>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

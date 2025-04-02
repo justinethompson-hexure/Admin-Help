@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <strong>Enable Viewing of API Insights Traces</strong> checkbox to enable the API Insights tool in the Support section of Admin. See the <MadCap:xref href="../../../../Support/API Insights.htm" target="_blank" alt="API Insights">API Insights</MadCap:xref> topic for instructions on using the API Insights support tool to view API traces recorded for your organization and any organizations for which you have Sales Agreements.</body>
+</html>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>On the <b class="Bold">Organization Configuration/Groups</b> page, use the Needs Filter tab to define for a User Group the product filter categories  for when to include a product (to which they have access) in the available product options for the application selection following a Needs Determination transaction. </p>
+        <p>Rules written in the Needs Determination transaction assign data points based on items selected in the Needs Determination transaction. These data items are used to query the Needs Filter table.</p>
+        <p>You can add product filter categories one at a time, or you can upload a group filter definition CSV or XLSX file to define multiple filter categories. See <MadCap:xref href="../../../../Features/Needs Determination Product Filtering.htm" target="_blank" alt="Needs Determination Product Filtering">Needs Determination Product Filtering</MadCap:xref> in Features for more information about this feature along with a sample XLSX template. </p>
+        <p MadCap:conditions="General.Online">
+            <img src="../../../ImagesAdmin/NeedsFilter3.jpg" alt="Filter Category" title="Filter Category" MadCap:conditions="General.Online" />
+        </p>
+        <p>
+            <b class="Bold">NOTES:</b>
+        </p>
+        <ul>
+            <li>Products can be present in more than one row. If any one row for a given product passes all filter definitions (on that row), the product is shown.</li>
+            <li>
+                <p>If, for any given row, not all filter definition cells match to the data contained in the Needs Determination transaction, that product will not be included in product selection.</p>
+                <ul>
+                    <li>Exception – if the product is present for another row and it passes all filter definition cells for that row,  the product is shown.</li>
+                    <li>Exception – if the row contains String Override Filter type for one or more of its cells, and that cell passes with the data from the Needs Determination transaction, the product is shown.</li>
+                </ul>
+            </li>
+            <li>
+                <p>If cells are given a value of “NULL," those cells are ignored in the filtering.</p>
+            </li>
+            <li>
+                <p>Any cells within the table that are left blank are considered intentional – meaning, if a given cell is left blank (and has a Filter Type of String), and on the Needs Determination transaction the corresponding data item is not left blank, the given filter definition will not be considered to match up.</p>
+            </li>
+        </ul>
+    </body>
+</html>

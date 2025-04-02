@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Add Multiple Copies of a Form</h1>
+        <p class="note"><b>NOTE:</b> Having a form not duplicated results in no change to the value, so this data is compatible with legacy data and no conversion needs to take place.</p>
+        <p>If you add multiple copies of a form to a package (for example, additional beneficiary form), the original form becomes a template for the duplicate copies. </p>
+        <p>Use the Form Designer page to add a template moniker [FORM_INDEX], [FORM_INDEX_PLUS_1], and/or [FORM_COUNT] identifier to mark the DataItemIDs to change on the duplicate copies. The identifier is replaced by the index number of the copy starting at 1. The form names and form numbers have the index appended at the end. </p>
+        <p><b class="DRNumberBold">[FORM_INDEX] Sample Rule</b>
+        </p>
+        <p>FIELD_NAME[FORM_INDEX] &lt;= data item for the nth form copy (the rules engine automatically generates indexed rules for each form copy)</p>
+        <p><b class="Bold">Advantages:</b>
+        </p>
+        <ul>
+            <li>Eliminates duplication of rules – for a form with 10 copies, one rule suffices rather than 10 nearly identical rules</li>
+            <li>Prevents problems loading rules – if a form has 3 copies in a package, but a rule contains code referencing copies 1 thru 4, none of the rule’s script code are loaded or executed</li>
+            <li>Facilitates editing of rules – Within the Rules Windows in the Form or Wizard Designer, "List Only Rules for Selected Control" shows rules for the selected field when using the FIELD_NAME[FORM_INDEX] syntax, but not when using the FIELD_NAME1 format.</li>
+        </ul>
+        <p><b class="Bold">Differences between the Combined Wizard+Forms UI and Legacy Forms UI:</b>
+        </p>
+        <p>Legacy forms operate on the current page regarding radio buttons, and updating a radio button affects only fields with the same Group on the current page.</p>
+        <p>Wizard (React UI) intrinsically operates on the entire wizard and forms collection, and updating a radio button affects all fields with the same Group for the application as a whole.</p>
+        <p>Technically, the Group field should always be indexed on a multiple-instance form, like the field name. Indexing the Group field works correctly for legacy forms and the combined wizard+forms UI and is the recommended approach.</p>
+        <p><b class="Bold">Sample Rule:</b>
+        </p>
+        <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>[FORM_INDEX] Sample Rule</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;block&gt;
+				&lt;setvisibility dataitemid="Owner_Signature[FORM_INDEX]"&gt;
+				&lt;or&gt;
+				&lt;compare op="=="&gt;
+				&lt;const value="2" type="String" /&gt;
+				&lt;diget dataitemid="FLI_ALLOWESIGN[FORM_INDEX]" /&gt;
+				&lt;/compare&gt;
+				&lt;compare op="=="&gt;
+				&lt;const value="3" type="String" /&gt;
+				&lt;diget dataitemid="FLI_ALLOWESIGN[FORM_INDEX]" /&gt;
+				&lt;/compare&gt;
+				&lt;/or&gt;
+				&lt;/setvisibility&gt;
+			&lt;/block&gt;</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p><b class="DRNumberBold">[FORM_INDEX] Identifier Examples</b>
+        </p>
+        <p>Following are examples of how each identifier would change within the system for each copy of a Beneficiary form.</p>
+        <p><b class="Bold">DataItemId</b>
+        </p>
+        <p class="Indent">Insured[FORM_INDEX]_FirstName</p>
+        <p class="Indent">1 = Insured1_FirstName</p>
+        <p class="Indent">2 = Insured2_FirstName</p>
+        <p><b class="Bold">Form Name</b>
+        </p>
+        <p class="Indent">Beneficiary Form</p>
+        <p class="Indent">1 = Beneficiary Form 1</p>
+        <p class="Indent">2 = Beneficiary Form 2</p>
+        <p><b class="Bold">Form Number</b>
+        </p>
+        <p class="Indent">ITBFCO</p>
+        <p class="Indent">1 = ITBFCO1</p>
+        <p class="Indent">2 = ITBFCO2</p>
+        <p class="note"><![CDATA[  ]]><b>IMPORTANT!</b>  FireLight requires a Primary Rule Set when multiple copies of a form are added to a Package. See <MadCap:xref href="Assign a Primary Rule Set.htm" target="_blank" alt="Assign a Primary Rule Set">Assign a Primary Rule Set</MadCap:xref>.</p>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

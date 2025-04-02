@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Enable Change UI Branding</b> checkbox to enable the ability to view and modify all user interface items (e.g., field names, validation messages, etc.) and add or update sub/firm branding on the <MadCap:xref href="../../../../Utilities/Branding.htm" target="_blank" alt="Branding">Branding</MadCap:xref> page. The Branding option under Utilities on the Admin home page and the Branding option under Utilities on the navigation bar are visible when this option is selected. To enable this feature, select the Allow Branding of UI checkbox in Organization Configuration/Organization Settings on the Organization tab.</body>
+</html>

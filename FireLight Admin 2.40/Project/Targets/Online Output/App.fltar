@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="MadCap HTML5 Target"
+  Type="WebHelp2"
+  Destinations=""
+  MoveOutputContentToRoot="false"
+  SkinComponents=""
+  EnableResponsiveOutput="true"
+  MasterPage="/Content/Resources/MasterPages/OtherTopics.flmsp"
+  ResultsPerPage="10"
+  Skin="/Project/Skins/HTML5 - Top Navigation.flskn"
+  DefaultUrl="/Content/HomeApp2020.htm"
+  ExcludeUnreferencedContent="true"
+  MasterToc="/Project/TOCs/AppOnlineOutput.fltoc"
+  ConditionTagExpression="include[General.Online]exclude[General.Internal or &quot;General.Next Release&quot; or General.PDF or General.Postpone]"
+  IncludeCSHRuntime="false"
+  TopNavTocPath="false"
+  GenerateWebSafeImages="true"
+  WebSafeFileExtension="png"
+  PartialWordSearch="true"
+  IncludeGlossarySearchResults="false"
+  MinimumWordSize="3"
+  MasterStylesheet="/Content/Resources/Stylesheets/2017MainStyles.css"
+  OutputFolder="C:\FireLight Admin 2.40">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="true" />
+  <Glossaries />
+  <Destinations></Destinations>
+  <Variables>
+    <Variable
+      Name="General/Year">2020</Variable>
+    <Variable
+      Name="General/DocumentName">User Guide</Variable>
+    <Variable
+      Name="General/UserGuideTitle">FireLight Platform User Guide</Variable>
+  </Variables>
+</CatapultTarget>

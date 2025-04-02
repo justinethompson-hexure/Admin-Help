@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Currently FireLight has an option to enter a "Product Organization Name" for each of the products on the "Products" page in the Admin tool. This "Product Organization Name" appears as a selling carrier on the new product selection page on the app side, to allow users to filter the products based on the listed carriers. This enhancement will allow clients to enter a "Product Organization Name" for the Sales Agreements as well, for each of the Selling Organizations. In the event the "Product Organization Name" is blank on the Sales Agreement page, FireLight will use the data entered in that field on the Products page.</p>
+        <p>Use Case: Client ABC has multiple distributors that share products, most commonly Dist111 and Dist222. When one of the distributors wants a specific Carrier/Organization name to appear next to a product, Client ABC is currently required to build multiple products to facilitate this. Adding the ability to provide a Product Organization Name at the Sales Agreement level will reduce or eliminate the need for Carriers to build multiple products to satisfy this request from distribution partners.</p>
+        <p>Impact:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>FLAdmin: Product Config &gt; Sales Agreements &gt; Product Organization Name (new text box)</p>
+            </li>
+            <li>
+                <p>FLApp: List the product organization value into the Carriers dropdown and in the product list on new product selection page.</p>
+            </li>
+        </ul>
+    </body>
+</html>

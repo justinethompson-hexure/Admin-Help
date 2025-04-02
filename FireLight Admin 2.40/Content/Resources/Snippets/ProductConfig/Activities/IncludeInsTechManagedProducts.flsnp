@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Include InsTech Managed Products</b> checkbox to include products and forms and/or rule sets and quotes from InsTech Managed (print only) products. Selecting this checkbox will dynamically include InsTech Managed products and packages set up with the correct activity type. This allows agents to access both InsTech Managed and carrier sponsored products for this activity. For example, for the activity Application, the state, carrier, and product dropdown will include carrier sponsored products (per selling agreement) and InsTech Managed products.  If an agent selects an InsTech Managed product, the next activity is Print. If an agent selects a carrier sponsored product, the next activity is Apply. <b class="Bold">NOTE:</b> InsTech Managed products are available for all package types except e-Delivery.</body>
+</html>

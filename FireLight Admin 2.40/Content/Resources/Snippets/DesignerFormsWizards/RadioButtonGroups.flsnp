@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Groups require export values within a same group name to be consistent for radio buttons to work as expected. Example: If export values are “Yes” for some and the field name for others in the same group, the radio button selections will not function as expected. The export values must remain consistent, so either all of them are “Yes” values or the field name values. Avoid setting zero as an export value of checkbox or radio button, as it can cause a selection to be shown when the PDF is rendered that is not made by the user.</body>
+</html>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>(For Distributors Only) Select the <b class="Bold">Enable Auto Deploy</b> checkbox to enable the auto deploy feature for a Distributor to elect to always have Carrier deployments into their environments Auto Deploy to their (Distributor’s) Staging and Production environments. When enabled, Auto Deploy is turned on for all new carriers by default.
+Distributors can disable Auto Deploy for individual Carriers if this new option is enabled, as it will just set the default for Auto Deploy to be enabled. If Auto Deploy is enabled in UAT on the <MadCap:xref href="../../../Product Configuration/SalesAgreements.htm" target="_blank" alt="Sales Agreements">Sales Agreements</MadCap:xref> page in Product Configuration, auto deploy will be in effect for all carriers to that distributor from carrier UAT to distributor Staging. Otherwise, if the distributor enables Auto Deploy in Sales Agreement settings for a given Carrier Org, auto deploy will be in effect for that carrier to the distributor from carrier UAT to distributor Staging. In Staging, if the distributor organization enables Auto Deploy in Organization settings &gt; Admin, auto deploy will be in effect for all carriers to that distributor from carrier UAT to distributor Production (or from carrier Staging to distributor Production). Otherwise, if the distributor enables Auto Deploy in Sales Agreement settings for a given Carrier Org, auto deploy will be in effect for that carrier to the distributor from carrier UAT to distributor Production (or from carrier Staging to distributor Production). </p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileProperties>
+    <ImageOverlay Profile="D:\Documents\My Profiles\FireLightHighQualityPRINTProfile.capro" ProfileHash="728a3481d430c1d0b0fe0218cb231d9b3daa9b1f" ScreenRectangle="2388,772,33,20">
+        <OriginalImage ImageBlurFactor="2" ImageShadeFactor="5" DPI="96" ExportFormat="jpg" JPEGQuality="100" Folder="D:\Documents\My Projects\FireLightAdmin-TopNavigation\Content\Resources\Images" FileName="" BorderWidth="1" BorderColor="#000000" PaddingLeft="0" PaddingRight="0" PaddingTop="0" PaddingBottom="0" Border="solid" medium_print_EnableFormat="true" Type="Image" ShapeTimeSpan="10000" AutoAdjust="true" EnableGrayScaleFormat="false" medium_print_ExportFormat="jpg" medium_print_DPI="300" Title="Left Arrow Button" Alt="Left Arrow Button" OutputScaleFactor="1" ComputedWidth="35" ComputedHeight="22" medium_print_OutputScaleFactor="2" medium_screen_and__max_width__64_063em__ExportFormat="jpg" medium_screen_and__max_width__40em__ExportFormat="jpg" medium_print_ColorDepth="32" medium_screen_and__max_width__64_063em__OutputScaleFactor="1" medium_screen_and__max_width__64_063em__DPI="96" medium_print_JPEGQuality="100">SUkqADoBAACALqBP8AQWDQeEQmFQuGQ2HQ+IRGJQt2xWCROMRmNRuOQ9mx8ARV2xeOyWTSeUQWPs0AOyXSSUzGZTOFM6bS2XzSdTuYzZnAB10GYTyiUWJM+kUChUaaN5ZoQAIxbhkAF5LGMADimQikM8AOqwUOtxNkJ41gBRyyFDMAF1KmKs2ODNC6V+w3KHWWz2mJ2y3XCtXi6NAAOnDWKmMhPmwAKS1R22FxKGG43ho5fC4e5YoAJ9ryqQZAAZLKYG5Zdo5l04i8QfOGzHRLI5PK6fMOjcazWw1kp8AG1ST+EjLRpPKDfWtLlADcOjdbuJ73fqSClzjADkXjlNIAOfvc/oeGStPyd3v+L0TLyNMAOb3eD0/GItT6e33/L8Rz6NQAOX/Pg/MAoQasCAAgRdQBAUFIOgIAAQAP4ABAABAAAAAAAAAAABBAABAAAAIQAAAAEBBAABAAAAFAAAAAIBAwAEAAAAAAIAAAMBAwABAAAABQAAAAYBAwABAAAAAgAAABEBBAABAAAACAAAABUBAwABAAAABAAAABYBBAABAAAAFAAAABcBBAABAAAAMQEAABoBBQABAAAACAIAABsBBQABAAAAEAIAABwBAwABAAAAAQAAACgBAwABAAAAAgAAAD0BAwABAAAAAgAAAFIBAwABAAAAAgAAAAAAAAAIAAgACAAIAAB3AQDoAwAAAHcBAOgDAAA=</OriginalImage>
+        <Shapes>
+        </Shapes>
+        <Variables />
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

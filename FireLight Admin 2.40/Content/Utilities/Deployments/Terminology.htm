@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+		<h1>Terminology<a name="top">
+		</a></h1>
+        <p>Following are descriptions of FireLight<sup MadCap:conditions="General.Online">®</sup> deployment terminology.</p>
+        <h2>Environment Terminology</h2>
+        <p><MadCap:variable name="General.ProductName"></MadCap:variable> has the following three environments.</p>
+        <ul>
+            <li><b>UAT</b> – User Acceptance Testing Environment – This environment is where you should do all of your development and your testing.</li>
+            <li><b>Staging</b> – This is the environment that mirrors production and should be a clean environment for final validation before you move the product to Production.</li>
+            <li><b>Production</b> – This is your production LIVE environment.</li>
+        </ul>
+        <h2>Deployment Terminology</h2>
+        <ul>
+            <li>
+                <p><b>Auto Deploy</b> – Auto Deploy applies only to the distributor environment.  This is an option for the distributor to auto deploy carrier changes to the next environment.  This setting is at the organization level in <MadCap:xref href="../../Product Configuration/SalesAgreements.htm" target="_blank" alt="Sales Agreements">Sales Agreements</MadCap:xref> within Product Configuration.  There is an Auto Deploy setting in UAT and there is another Auto Deploy setting in Staging. </p>
+                <p>If Auto Deploy is enabled in UAT on the <MadCap:xref href="../../Product Configuration/SalesAgreements.htm" target="_blank" alt="Sales Agreements">Sales Agreements</MadCap:xref> page in Product Configuration, auto deploy will be in effect for all carriers to that distributor from carrier UAT to distributor Staging. Otherwise, if the distributor enables Auto Deploy in Sales Agreement settings for a given Carrier Org, auto deploy will be in effect for that carrier to the distributor from carrier UAT to distributor Staging. In Staging, if the distributor organization enables Auto Deploy in Organization settings &gt; Admin, auto deploy will be in effect for all carriers to that distributor from carrier UAT to distributor Production (or from carrier Staging to distributor Production). Otherwise, if the distributor enables Auto Deploy in Sales Agreement settings for a given Carrier Org, auto deploy will be in effect for that carrier to the distributor from carrier UAT to distributor Production (or from carrier Staging to distributor Production). </p>
+            </li>
+            <li><b>Force Deploy</b> – Force Deploy applies to deployments from either the carrier or distributor UAT environment to their own Staging and Production environments in one step. Force Deploy is not available for carriers when deploying to a distributor. The Force Deploy option is available only for carrier to carrier deployments or distributor to distributor deployments in the UAT environment. When the Force Deploy checkbox is selected, Force Deploy causes the deployment to go from UAT to the Staging and Production environments in one step. When the Force Deploy checkbox is cleared, deployment from UAT goes to Staging only. </li>
+            <li>
+                <p><b>Synchronization Scopes</b> – </p>
+                <p>Carriers use standard synchronization scopes (Product, Package, Form, etc.) to deploy carrier configurations from carrier to carrier environments. Carriers use Distributor synchronization scopes (Distributor Product, Distributor Form, etc.) to deploy carrier configurations from carrier to distributor environments.</p>
+                <p>Distributors use standard synchronization scopes (Product, Package, Form, etc.) to deploy distributor configurations to distributor environments. Distributors use Carrier Only synchronization scopes (Carrier Only Product, Carrier Only Form, etc.) to deploy carrier configurations to distributor environments if they are not using Auto Deploy.</p>
+            </li>
+        </ul>
+		<p MadCap:conditions="General.Online">
+			<a href="#top" alt="Return to Top">Return to Top</a>
+		</p>
+    </body>
+</html>

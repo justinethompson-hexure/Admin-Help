@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p class="Indent">Select the <b class="Bold">Enable Obfuscation</b> checkbox to enable obfuscation of data. Use the Obfuscation/Screen Security settings to limit the visibility of  fields in the FireLight user interface when in data entry. </p>
+        <p class="Indent">Obfuscation Guidelines:</p>
+        <ul>
+            <li>Obfuscation applies to both forms and wizards.</li>
+            <li>Obfuscation settings only impact data entry fields in the Data Entry and Signing process of any activity. </li>
+            <li>The contents of fields become visible again when the user selects or tabs into that field on the UI.</li>
+            <li>Obfuscation also applies to read-only fields on forms. Read-only fields are only made visible through the use of the visibility toggle (eye icon) in the FireLight page title bar.</li>
+            <li>
+                <p>Obfuscation does not apply to the labels on the buttons for selection of the signer at the beginning of the signing ceremony. These are not input fields and obfuscation does not apply.</p>
+            </li>
+            <li>When obfuscation options are selected, a toggle button  is added to the page title bar in FireLight. The user can click the <img src="../../../ImagesAdmin/Capture83.png" alt="Obfuscation Icon" title="Obfuscation Icon"></img> toggle button  in the page title bar to show the field data for review or click the <img src="../../../ImagesAdmin/Capture91.png" alt="Obfuscation Toggle Button - Hide Data" title="Obfuscation Toggle Button - Hide Data"></img> toggle button again to hide the field data.</li>
+            <li>
+                <p>There is no obfuscation of the forms once they have been flattened to create a PDF/image.</p>
+            </li>
+        </ul>
+    </body>
+</html>

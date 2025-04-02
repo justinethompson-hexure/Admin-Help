@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Selecting the <strong>Unlock Only</strong> checkbox allows the user to unlock the review but does not provide access to reviewer actions like approve/reject.  The use case for this setting is when an admin is not a principal so the firm does not want to give the user access to approve or reject orders; however, admins need the ability to reassign the activity to a new reviewer.  After unlocking the order, it remains in the unlocked state until locked by a reviewer.  If the Can Unlock All option is selected, the Unlock Only option will be disabled.</body>
+</html>

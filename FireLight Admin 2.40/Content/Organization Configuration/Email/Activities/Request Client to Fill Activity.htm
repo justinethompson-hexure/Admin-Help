@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="General.Online">
+	<head>
+		<link href="../../../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+		<link href="../../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+		<meta name="description" content="Request Client to Fill Activity email template guidelines and usage." />
+	</head>
+	<body>
+		<h1><a name="top"></a>Request Client to Fill Activity</h1>
+		<p>
+			<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailColumnDesc.flsnp" />
+		</p>
+		<table style="border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;mc-table-style: url('../../../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+			<caption class="Table">Request Client to Fill Activity </caption>
+			<col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+			<thead>
+				<tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+					<th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Action, To Name/Email, From Name/Email, CC Address, Available Tags, and Notes</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">Action</p>
+						<p>Sends a request to the client to complete their electronic application (agent selects "Request Client to Fill App" from "Other Actions" menu and also selects "Send Email Request")</p>
+						<p>Template Name: Request Client to Fill Activity<sup>1</sup></p>
+						<p>Email Subject Line: &lt;APPLICATION_NAME&gt; - Please complete filling your application</p>
+						<p>Message:</p>
+						<p class="Indent2">Dear &lt;CLIENT_NAME&gt;,</p>
+						<p class="Indent2">Thank you for applying for '&lt;PRODUCT_NAME&gt;' of &lt;COMPANY_NAME&gt;.</p>
+						<p class="Indent2">To complete your electronic application, please click on the link at the bottom of the email. You is asked to acknowledge your acceptance of the disclosure terms and consents.</p>
+						<p class="Indent2">Please use your birth date and the last 4 digits of your SSN to login.</p>
+						<p class="Indent2">If you have questions please feel free to contact me.</p>
+						<p class="Indent2">Sincerely,</p>
+						<p class="Indent2">&lt;AGENT_NAME&gt;</p>
+						<p class="Indent2">To view and complete your application, click on &lt;URL_LINK&gt;, enter the last 4 digits of your SSN, and birth date.  If a new window does not automatically appear, you may have to copy the link and paste it into the address bar of new browser window.</p>
+						<p>This template is available for sending when the <a href="../../Organizations/Activity.htm#AllowClientEfill" alt="Allow Client E-Fill">Allow Client E-Fill</a> checkbox is selected in Organization Configuration/Organization Settings on the Activity tab. </p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<p class="thead1">To Name / Email</p>
+						<p>Client Name/Email typed in email fields or pre-filled from mapped dataitems</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">From Name / Email</p>
+						<p>Default: Session User’s Preference Name/ Email<sup>2</sup></p>
+						<p>Use Agent: Owning Agent’s Preference Name/Email</p>
+						<p>Use DMARC<sup>1</sup>: Organization's Support Email</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<p class="thead1">CC Address</p>
+						<p> If <a href="../../Groups/App.htm#EnableCcSenderInAllRequests" alt="Enable Cc Sender In All Requests">Enable Cc Sender In All Requests</a> is set in Organization Configuration/Groups page on the App tab, cc email sent to ‘From Email’ address</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">Available Tags<sup>3</sup></p>
+						<p>&lt;AGENT_NAME&gt;<br />&lt;APPLICATION_NAME&gt;<br />&lt;APPLICATION_ID&gt;<br />&lt;CLIENT_NAME&gt;<br />&lt;COMPANY_NAME&gt;<br />&lt;DATE_TIME&gt; (current datetime in UTC)<br />&lt;HYPER_LINK&gt;<br />&lt;PRODUCT_NAME&gt;<br />&lt;PRODUCT_TYPE&gt;<br />&lt;STATUS&gt;<br />&lt;TRANSACTION_TYPE&gt;<br />&lt;URL_LINK&gt;<br />ApplicationSearchItem<sup>4</sup> (e.g., add &lt;CLIENT_NAME&gt;)<br /></p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+						<p class="thead1">Notes:</p>
+						<p>
+							<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailNote1.flsnp" />
+						</p>
+						<p>
+							<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailNote2.flsnp" />
+						</p>
+						<p>
+							<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailNote3.flsnp" />
+						</p>
+						<MadCap:snippetBlock src="../../../Resources/Snippets/Email/EmailNote4.flsnp" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<MadCap:snippetBlock src="../../../Resources/Snippets/Email/EmailSeeAlso.flsnp" />
+		<p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+		</p>
+	</body>
+</html>

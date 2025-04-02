@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="General.Online">
+	<head>
+		<link href="../../../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+		<link href="../../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+		<meta name="description" content="Pre-Submit Review Queue Request (Pre and Post Signature) email template guidelines and usage." />
+	</head>
+	<body>
+		<h1><a name="top"></a>Pre-Submit Review Queue Request (Pre and Post Signature)</h1>
+		<p>
+			<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailColumnDesc.flsnp" />
+		</p>
+		<table style="border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;mc-table-style: url('../../../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+			<caption class="Table">Pre-Submit Review Queue Request (Pre and Post Signature) </caption>
+			<col class="TableStyle-2017_IT-Simple2-Column-Regular">
+			</col>
+			<thead>
+				<tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+					<th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Action, To Name/Email, From Name/Email, CC Address, Available Tags, and Notes</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">Action</p>
+						<p>Requests reviewer to perform review prior to submission of activity<sup>1</sup></p>
+						<p>Template Name: Pre-Submit Review Queue Request (Pre and Post Signature)</p>
+						<p>Email Subject Line: Please review the following application</p>
+						<p>Message:</p>
+						<p class="Indent2">Dear &lt;REVIEWER_NAME&gt;,</p>
+						<p class="Indent2">Please review the following client's application for '&lt;PRODUCT_NAME&gt;' of &lt;COMPANY_NAME&gt;.</p>
+						<p class="Indent2">Click on the link at the bottom of the email to review and approve the application. You is asked to acknowledge your acceptance of the disclosure terms and consents. The instruction for completing your 'Electronic Signature' is provided as well.</p>
+						<p class="Indent2">Please use the Passcode to login.  I is providing this Passcode via phone or a separate email.</p>
+						<p class="Indent2">If you have questions please feel free to contact me.</p>
+						<p class="Indent2">Sincerely,</p>
+						<p class="Indent2">&lt;AGENT_NAME&gt;</p>
+						<p class="Indent2">To review the application, click on &lt;URL_LINK&gt;, and enter the Passcode.  If a new window does not automatically appear, you may have to copy the link and paste it into the address bar of new browser window.</p>
+						<p>This template is available for sending when the <b class="Bold">Allow Pre-Signature Review</b> or <b class="Bold">Allow Post-Signature Review</b> checkbox is selected in Product Configuration/on the <MadCap:xref href="../../../Product Configuration/Activities.htm" target="_blank" alt="Activities">Activities</MadCap:xref> page for each activity type that includes pre-submission review. Be sure to set the reviewer access options in Organization Configuration/Groups page, <MadCap:xref href="../../Groups/Review Queue.htm" target="_blank" alt="Review Queue">Review Queue</MadCap:xref> tab.</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<p class="thead1">To Name / Email</p>
+						<p>Reviewer Name/Email typed in email fields or reviewer Name/Email info saved in session user’s preferences</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">From Name / Email</p>
+						<p>Default: Session User’s Preference Name/ Email<sup>2</sup><![CDATA[
+						]]></p>
+						<p>
+							Use Agent: Owning Agent’s Preference Name/Email
+						</p>
+						<p>Use DMARC<sup>1</sup>: Organization's Support Email
+						</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<p class="thead1">CC Address</p>
+						<p>If <a href="../../Groups/App.htm#EnableCcSenderInAllRequests" alt="Enable Cc Sender In All Requests">Enable Cc Sender In All Requests</a> is set in Groups on the App tab, cc email sent to ‘From Email’ address</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">Available Tags<sup>3</sup></p>
+						<p>&lt;AGENT_NAME&gt;<br />&lt;APPLICATION_NAME&gt;
+							<br />&lt;APPLICATION_ID&gt;<br />&lt;COMPANY_NAME&gt;<br />&lt;DATE_TIME&gt; (current datetime in UTC)
+							<br />&lt;PRODUCT_NAME&gt;<br />&lt;PRODUCT_TYPE&gt;
+						<br />&lt;REVIEWER_NAME&gt; (name of first reviewer)<br />&lt;STATUS&gt;<br />ApplicationSearchItems<sup>4</sup> (e.g., add &lt;CLIENT_NAME&gt;)</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+						<p class="thead1">Notes:</p>
+						<p>
+							<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailNote1.flsnp" />
+						</p>
+						<p>
+							<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailNote2.flsnp" />
+						</p>
+						<p>
+							<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailNote3.flsnp" />
+						</p>
+						<MadCap:snippetBlock src="../../../Resources/Snippets/Email/EmailNote4.flsnp" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<MadCap:snippetBlock src="../../../Resources/Snippets/Email/EmailSeeAlso.flsnp" />
+		<p colspan="5" MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+		</p>
+	</body>
+</html>

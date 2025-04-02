@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>If you make a change to the Field Name or Global Scope field properties in a form control, an Update Rule Sets dialog appears with the message, "One or more field names have been changed. Would you like to update rules referencing the field data item ids?" Click a button to choose whether to <b>Update All Rule Sets</b>, <b>Update Primary Rule Set</b>, or <b>Do Not Update</b> any rule set included in the packages in which the form resides. <b class="Bold">CAUTION:</b> This does not update rule sets that are not included within the same package as the form being updated.</body>
+</html>

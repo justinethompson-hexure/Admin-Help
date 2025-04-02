@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="" />
+        <meta name="author" content="" /><title></title>
+        <link href="../Stylesheets/StylesForHomePage.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div id="contentBody" class="off-canvas-main">
+            <MadCap:bodyProxy />
+        </div>
+        <div class="footer">
+            <div class="row outer-row">
+                <p class="centered-text"><span style="color: #ffffff;">Copyright © 2025</span> <span style="color: #ffffff;">Hexure, all rights reserved.</span></p>
+            </div>
+        </div>
+    </body>
+</html>

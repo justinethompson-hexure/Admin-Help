@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>(Visible to Carriers and Main Org distributors) Click the <b class="Bold">Firm Orgs</b> link to display a Firm Organization dialog that contains the Firm Orgs (if any are set up) for the Selling Org that is selected in the Selling Org dropdown. Select the Firm Orgs to include in the Sales Agreement and click the <b class="Bold">X</b> on the upper right to close the dialog.</p>
+        <p MadCap:conditions="General.Online">
+            <img src="../../../ImagesAdmin/Capture270.png" alt="Firm Organization Dialog" title="Firm Organization Dialog" MadCap:conditions="General.Online">
+            </img>
+        </p>
+        <p>When a user is logged in on the App side via a Firm Org, and that Firm Org is selected in the Firm Orgs of the active Sales Agreement, the user will see the Product associated with the Sales Agreement. (This check does not interfere with the State Refinement option on the Product Access tab in Groups.) This allows the Carriers to deploy the Sales Agreements for the products for the Firm Orgs, and allows the Main Org distributor to not have to manage the Sales Agreements. If no Firm Org is selected, the Product would only be visible to the Main Org distributor. See the  <a href="../../../PDFdocs/Firm Management Enhancement.pdf" target="_blank" title="Design Document" alt="Design Document" MadCap:conditions="General.Online"> Firm Management </a><MadCap:conditionalText MadCap:conditions="General.PDF"> Firm Management </MadCap:conditionalText> design document <MadCap:conditionalText MadCap:conditions="General.PDF">in Admin Help </MadCap:conditionalText>for detailed information.</p>
+    </body>
+</html>

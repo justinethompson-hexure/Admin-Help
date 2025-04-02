@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Extend Firelight functionality by creating a new “Visualization” interface that optimizes use of viewable area for graphical presentation of policy values in individual product and product comparison scenarios to enhance communication in the sales process and facilitate client decision making.</p>
+        <p>Provide the ability to compare a set of user selected products graphically based on various presentations of Premium, Cash Value, Death Benefit, IRR, etc.</p>
+        <p>Continue to allow clients to leverage existing product presentations. When an individual product is selected, any proprietary presentation materials/graphics is accessible in the new visualization interface.</p>
+        <p>Provide for an easy transition to comparisons with competing/complementary products.</p>
+        <p> Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>TBD</p>
+            </li>
+        </ul>
+    </body>
+</html>

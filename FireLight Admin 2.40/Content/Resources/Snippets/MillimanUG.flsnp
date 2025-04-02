@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Each insurer can tailor Milliman to address their unique underwriting guidelines.</p>
+        <p>Following is a sample wizard experience for using Milliman automated underwriting, which allows agents to perform quality real-time risk assessment on individual life insurance applicants while simultaneously completing a FireLight application. </p>
+        <ol>
+            <li>
+                <p>Fill in the Insured information. </p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../ImagesUserGuide/New Activity/Capture425.png" alt="" title="" />
+                </p>
+                <p>If MIB is included as part of the order, the wizard includes additional required fields for Resident Country, Birth Country, Birth State (of the specific birth country), and Occupation. </p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../ImagesUserGuide/New Activity/Capture427.png" alt="Milliman - MIB Required Fields" title="Milliman - MIB Required Fields" />
+                </p>
+                <p>If MVR is included as part of the order, the wizard includes additional required fields for Driver's License and Driver's License State.</p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../ImagesUserGuide/New Activity/Capture428.png" alt="Milliman - MVR Required Fields" title="Milliman - MVR Required Fields" />
+                </p>
+                <p>Milliman needs to know how the authorization to retrieve this information was signed. If it not electronically signed, select the <b class="Bold">Wet Signed</b> or <b class="Bold">Oral</b> voice signature option. Next, click the <b class="Bold">Upload Copy of Signed Authorization</b> button to open the Documents <MadCap:xref href="../../UserGuide/FireLight Basics/Other Actions/Documents.htm" title="Documents" alt="Documents" MadCap:conditions="General.PDF - UGuide">Documents</MadCap:xref> dialog and upload a copy of the signed authorization document so it can be attached to the order. </p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../ImagesUserGuide/New Activity/Capture429.png" alt="Milliman - Type of Signing to Retrieve the Authorization" title="Milliman - Type of Signing to Retrieve the Authorization" />
+                </p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../ImagesUserGuide/New Activity/Capture430.png" alt="Documents - Upload Copy of Signed Authorization" title="Documents - Upload Copy of Signed Authorization" />
+                </p>
+            </li>
+            <li>
+                <p>The carrier determines which fields are visible on the Milliman wizard page. In this example, the carrier has four underwriting Risk Classifications. </p>
+                <p>Click the <b class="Bold">Milliman Request</b> custom action button. A notification states a back office action is being performed. Wait for the Milliman results. FireLight polls Milliman every 15 seconds to return those responses.</p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../ImagesUserGuide/New Activity/Capture431.png" alt="Milliman Call Page" title="Milliman Call Page" />
+                </p>
+            </li>
+            <li>
+                <p>Milliman returns an underwriting decision for each risk category based on who they are calling based on prescription Rx information as well as MIB and/or MVR depending on the carrier's preferences. </p>
+                <p>Milliman's basic underwriting classifications are:</p>
+                <p>10 = Accept / Approved<br />20 = Review<br />30 = Decline</p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../ImagesUserGuide/New Activity/Capture432.png" alt="Milliman Underwriting Results" title="Milliman Underwriting Results" />
+                </p>
+            </li>
+            <li>
+                <p>Carrier-specific data can be included on an additional Milliman Return Data wizard page that may or may not be visible to the agent. </p>
+            </li>
+        </ol>
+    </body>
+</html>

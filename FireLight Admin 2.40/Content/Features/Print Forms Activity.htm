@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Setup and usage instructions for implementing the Print Forms activity, which allows a group of users to print numerous forms from a carrier's forms repository within FireLight, which can simply be printed as a package without filling out applications, etc., or submitting to a carrier." />
+    </head>
+    <body>
+        <h1><a name="top"></a>Print Forms Activity</h1>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Print Forms Activity / Forms Repository </caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>The Print Forms activity allows a group of users to print numerous forms from a carrier's forms repository within FireLight<sup MadCap:conditions="General.Online">®</sup>, which can simply be printed as a package without filling out applications, etc., or submitting to a carrier.   The carrier sends users directly to the new Print Forms activity via SSO, by clicking the Print Forms button on the Home page, or by selecting the Print Forms option in New Activity on the navigation bar in FireLight. The Print Forms activity gives agents an easy way to access and print the forms the carrier has loaded into FireLight. It can also provide non-FireLight users access to the forms for organizations that license the Print Forms activity.</p>
+                        <p>Print Forms activity:</p>
+                        <ul>
+                            <li>Supports only Wizard data entry for the Print Forms activity wizard. Forms and wizards can be edited in the Print Forms package.</li>
+                            <li>The transaction is accounted for the first time the Print button is clicked.</li>
+                            <li><b class="Bold">NOTE:</b> A Form URL path can be added to each form in the Form Library to allow non-FireLight users access to the forms outside of FireLight. This Form URL field is available only to organizations with the Print Forms activity licensing.</li>
+                            <li>
+                                <p>After the activity is printed it is available for editing of the inputs. The Print button will still be enabled for additional printing. All fields is editable outside of FireLight, regardless of form and wizard data/fields edited while in FireLight. If data is populated in fields within FireLight, the fields will remain editable outside of FireLight and will not be locked down or stamped on the form. </p>
+                                <p><b class="Bold">NOTE:</b> If the forms have a dynamic dropdown list/combo box/checkbox, rules, etc., that drive form field selections, the available selections is based on the options available at the time the forms are saved outside of FireLight. Read Only field properties are not supported and will remain fillable outside of FireLight.</p>
+                            </li>
+                            <li>
+                                <p>All fields is editable outside of FireLight, regardless of data/fields edited while in FireLight. This could result in the appearance of “double tags” due to tag formatting based on selection. Example: SSN vs. TIN text box based on ownership type; form may appear to have two text boxes for the SSN/TIN entry. Best practice for a Configuration Specialist in this instance would be to have the fields slightly askew for the user to select the appropriate formatted field for their entry.</p>
+                            </li>
+                            <li>
+                                <p>If data is populated in fields within FireLight, the fields will remain editable outside of FireLight and will not be locked down or stamped on the form.</p>
+                            </li>
+                            <li>
+                                <p>The Read Only field property is not supported by Editable PDF Forms.</p>
+                            </li>
+                            <li>
+                                <p>The following properties are supported by Editable PDF Forms: </p>
+                                <p>Text Box</p>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>Max Length</p>
+                                    </li>
+                                    <li>
+                                        <p>Font Size</p>
+                                    </li>
+                                    <li>
+                                        <p>Font Family</p>
+                                    </li>
+                                    <li>
+                                        <p>Font Color</p>
+                                    </li>
+                                    <li>
+                                        <p>Text Alignment</p>
+                                    </li>
+                                    <li>
+                                        <p>Background</p>
+                                    </li>
+                                    <li>
+                                        <p>Is Password</p>
+                                    </li>
+                                    <li>
+                                        <p>Mask (phone number, SSN, DOB only)</p>
+                                        <p>If the associated field has a mask configured, and if:</p>
+                                        <ul style="list-style-type: square;">
+                                            <li>
+                                                <p>The mask contains "phone" in the dataitem name, then the format is (XXX)XXX-XXXX and be 10 digits</p>
+                                            </li>
+                                        </ul>
+                                        <ul style="list-style-type: square;">
+                                            <li>
+                                                <p>The mask contains "SSN" in the dataitem name, then the format is XXX-XX-XXXX and be 9 digits</p>
+                                            </li>
+                                        </ul>
+                                        <ul style="list-style-type: square;">
+                                            <li>
+                                                <p>The mask contains "DOB" in the dataitem name, then the format is mm/dd/yyyy</p>
+                                            </li>
+                                        </ul>
+                                        <p class="Indent2">For Dates, this should be the formatting:</p>
+                                        <p class="Indent3">12092005 -&gt; 12/09/2005</p>
+                                        <p class="Indent3">2-3-2005 -&gt; 2/3/2005</p>
+                                        <p class="Indent3">12/31/2005 -&gt; 12/31/2005</p>
+                                        <p class="Indent2"><strong>NOTE:</strong> It is not date aware to the level of ensuring the date is valid for the given month, e.g., 2-30-2005 -&gt; 2/30/2005. If something is outside the general range (for instance, month &gt; 12, day &gt; 31), it will leave the entered value as-is, i.e., 23-40-1960 -&gt; 23-40-1960.</p>
+                                    </li>
+                                </ul>
+                                <p>Check Box</p>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>Print border</p>
+                                    </li>
+                                </ul>
+                                <p>Radio Button</p>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>Print border</p>
+                                    </li>
+                                    <li>
+                                        <p>Border Styling</p>
+                                    </li>
+                                </ul>
+                                <p>Combo Box / Dropdown List</p>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>Font Size</p>
+                                    </li>
+                                    <li>
+                                        <p>Font Family</p>
+                                    </li>
+                                    <li>
+                                        <p>Font color</p>
+                                    </li>
+                                    <li>
+                                        <p>List Name Values</p>
+                                    </li>
+                                </ul>
+                                <p>If no custom font color, size, style, etc. are selected, the font properties is FireLight defaults.</p>
+                            </li>
+                            <li>
+                                <p>
+                                    <MadCap:snippetText src="../Resources/Snippets/DesignerFormsWizards/RadioButtonGroups.flsnp" /> The export value of zero is being evaluated for a solution to be implemented in an upcoming release.</p>
+                                <p>The ideal way to set export values follows.</p>
+                                <table style="width: 316px;caption-side: top;mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+                                    <caption class="Table">Recommended</caption>
+                                    <col style="width: 152px;" class="TableStyle-2017_IT-Simple2-Column-Regular" />
+                                    <col style="width: 152px;" class="TableStyle-2017_IT-Simple2-Column-Regular" />
+                                    <tbody>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <th class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">Option</th>
+                                            <th class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Export Value</th>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">IRA</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">IRA</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">SEP IRA</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">SEP IRA</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">403(b)</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">b_403</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">Roth IRA</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">RothIRA</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">SIMPLE IRA</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">SimpleIRA</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">457 (b)</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">b_457</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <th colspan="2" class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">OR</th>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <th class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">Option</th>
+                                            <th class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Export Value</th>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">IRA</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">yes</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">SEP IRA</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">yes</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">403(b)</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">yes</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">Roth IRA</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">yes</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">SIMPLE IRA</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">yes</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyB-Regular-LightRows">457 (b)</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">yes</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>&#160;</p>
+                                <p>A setup example to avoid follows.</p>
+                                <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');width: 324px;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+                                    <caption class="Table">Avoid</caption>
+                                    <col style="width: 152px;" class="TableStyle-2017_IT-Simple2-Column-Regular" />
+                                    <col style="width: 152px;" class="TableStyle-2017_IT-Simple2-Column-Regular" />
+                                    <tbody>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <th class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">Option</th>
+                                            <th class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Export Value</th>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">IRA</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">IRA</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">SEP IRA</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">yes</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">403(b)</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">yes</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">Roth IRA</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">RothIRA</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">SIMPLE IRA</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">yes</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyB-Regular-LightRows">457 (b)</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">yes</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                            <li>Print Form cases are hidden and do not appear in the Home page or All Activities page. Once the case is closed it will not be accessible.</li>
+                            <li>Print Form cases follow the standard purge policy.</li>
+                            <li>Reporting is adjusted to account for Print Forms transactions.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">FireLight Setup</p>
+                        <p>Contact your Strategic Account Manager. Implementation of this feature requires an addendum to the contract as there are fees associated with printing the forms.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p>The setup in Admin is similar to other activities in that access to the Print Forms activity is controlled by settings in Organization Configuration/Groups and you need to add Product, Sales Agreement, and Package with Wizard, Forms and Rules.</p>
+                        <ol>
+                            <li>
+                                <p>Designer/<MadCap:xref href="../Design/Form Library/Form Library.htm" alt="Form Library">Form Library</MadCap:xref> page: </p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>
+                                        <p>Upload any additional PDF forms you would like to add to the forms repository in FireLight. The fillable PDFs can include FireLight field properties and rules.</p>
+                                    </li>
+                                    <li>
+                                        <p>On the Form Detail tab, select the approved states for each form. The Print Forms activity requires a jurisdiction selection to ensure the correct forms are accessed for printing.</p>
+                                    </li>
+                                    <li>
+                                        <p>On the Form Detail tab, FireLight automatically adds a URL path in the Form URL field for each form when it is displayed. The URL path does not change because it is based on the form guide and org. This allows access to the form for users outside of FireLight. To the right of the Form URL&#160;field click the <b class="Bold">Copy</b> button to copy the URL link for convenience. </p>
+                                        <p>This URL has no authentication associated with it so users outside of FireLight can access the form. The URL path is unique for each organization, contains the org partition code, and either the Form ID or Form Name. It is structured similar to the following example: </p>
+                                        <p>https://www.firelighteapp.com/egapp/unsecure/PrintForm?formid=NQ1234&amp;org=pli (least secure) </p>
+                                        <p><b class="Bold">NOTE:</b> The fillable PDFs can include FireLight field properties and rules.</p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>Designer/<MadCap:xref href="../Design/Wizard Library/Wizard Library.htm" alt="Wizard Library">Wizard Library</MadCap:xref> page: create the wizard for the Print Forms activity. </li>
+                            <li>Designer/<MadCap:xref href="../Design/Wizards/Wizard Designer.htm" alt="Wizard Designer">Wizard Designer</MadCap:xref> page: add the fields needed to control the inclusion/exclusion of forms to the wizard.</li>
+                            <li>Product Configuration/<MadCap:xref href="../Product Configuration/Rule Sets.htm" alt="Rule Sets">Rule Sets</MadCap:xref> page: add a rule set and create rules for the inclusion/exclusion of forms for the wizard.</li>
+                            <li>Product Configuration/<MadCap:xref href="../Product Configuration/Activities.htm" alt="Activities">Activities</MadCap:xref> page: add a new <b class="Bold">Print Forms</b> activity. Set <b class="Bold">ACORD Type</b> to <b class="Bold">Print Forms (310)</b>. Enter a Font Awesome Icon in <b class="Bold">Branding Icon</b>. Update the settings for your organization.  Click <b class="Bold">Save Activity</b>.</li>
+                            <li>Product Configuration/<MadCap:xref href="../Product Configuration/Products.htm" alt="Products">Products</MadCap:xref> page: add a new Print Forms product and select the <strong>Product Type</strong>. Because FireLight requires a product in the setup and it does not apply to Print Forms, set <b>Product Type</b> to <b>Non-Insurance Product</b> and set <strong>Product Category</strong> to <b>Non-Insurance Product</b>. In the <b>States Approved</b> grid, select the states where the Print Forms product is approved.</li>
+                            <li>Product Configuration/<MadCap:xref href="../Product Configuration/Packages.htm" alt="Packages">Packages</MadCap:xref> page: add a new <b class="Bold">Print Forms</b> package and set <b class="Bold">ACORD Type</b> to <b class="Bold">Print Forms (310)</b>. On the<b class="Bold"> Forms/Wizards in Package</b> tab, add the Print Forms wizard and the applicable forms to the <b class="Bold">Forms/Wizards in Package</b> list. For the Print Forms wizard, set the inclusion option to <strong>Required</strong>. On the <b class="Bold">Rule Sets in Package</b> tab, add the rule sets for Print Forms to the <b class="Bold">Rule Sets in Package</b> list.</li>
+                            <li>Product Configuration/<MadCap:xref href="../Product Configuration/SalesAgreements.htm" alt="Sales Agreements">Sales Agreements</MadCap:xref> page: add a sales agreement for Print Forms. Enter details, select the approved states, add the <b class="Bold">Print Forms</b> package to <b class="Bold">Assigned Packages</b>, and set <strong>Package Duty</strong> to <strong>Required</strong>.</li>
+                            <li>Organization Configuration/<MadCap:xref href="../Organization Configuration/Groups.htm" alt="Groups">Groups</MadCap:xref> page: select the <b>Print Forms</b> checkbox on the <strong>Activity Access</strong> tab and select the <strong>Print Forms</strong> (Print Forms product name) checkbox on the <strong>Product Access</strong> tab for the applicable role codes.</li>
+                            <li>Utilities/<MadCap:xref href="../Utilities/Deployments/Deployments.htm" alt="Deployments">Deployments</MadCap:xref> page: for the <b class="Bold">Print Forms</b> activity, deploy the <b class="Bold">All Configuration</b> (includes Product, Package, Forms, Wizard, Rule Sets, Sales Agreement) and the <b class="Bold">Group Configuration</b> to the applicable environments.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <p>Print Forms activity users in FireLight:</p>
+                        <ol>
+                            <li>
+                                <p>Start a new Print Forms activity in FireLight via SSO post-over or on the FireLight Home page under <strong>Start New</strong> or on the navigation bar under <strong>New Activity</strong>, click <strong>Print Forms</strong>.</p>
+                            </li>
+                            <li>On the Create New Print Forms page, select a <strong>Jurisdiction</strong>, <strong>Product Type</strong>, and <b class="Bold">Organization</b> (if applicable) in the lists, then click the <b class="Bold">Print Forms</b> link. The product and jurisdiction (and Organization, when applicable) help to identify the correct forms.</li>
+                            <li>On the Required Forms page, click <strong>Create</strong>. </li>
+                            <li>
+                                <p>Fill in the information on the Print Forms wizard and the forms and wizards in the package. On the Print Forms navigation bar, click <b class="Bold">Print</b>. </p>
+                                <p>The Print button is enabled when no  validation errors exist (Alerts check mark is green) or the organization has <b class="Bold">Allow NIGO Printing</b> enabled in Organization Configuration/Organization Settings on the <MadCap:xref href="../Organization Configuration/Organizations/Activity.htm" alt="Activity">Activity</MadCap:xref> tab. </p>
+                            </li>
+                            <li>
+                                <p>In the <b class="Bold">Select Documents to Print</b> dialog, select the forms to print and click the <b class="Bold">Print Selected Documents</b> button.</p>
+                                <p>FireLight generates and opens a PDF file with all  selected forms. You can save the file to your computer. Close the file when finished.</p>
+                            </li>
+                            <li>
+                                <p>Use the buttons on the FireLight navigation bar to go to the <b class="Bold">Home</b> page, <b class="Bold">Log Off</b>, or open the <b class="Bold">Other Actions</b> list and select an option: </p>
+                                <ul>
+                                    <li> Click <b class="Bold">Rename/Summary</b> to view a Summary of the Print Forms activity.</li>
+                                    <li> Click <b class="Bold">Display/Print PDF</b> to open the <b class="Bold">Select Documents to Print</b> dialog and select forms to print. Print the forms, then save the printed forms.</li>
+                                </ul>
+                                <p><b class="Bold">NOTE:</b> After the activity is printed, it is unlocked and available for editing of the inputs. The Print button is still available for additional printing. Print Form cases are hidden and do not appear in the Home page or All Activities page. Once the case is closed it will not be accessible in FireLight.</p>
+                            </li>
+                        </ol>
+                        <p>Other users outside of FireLight:</p>
+                        <MadCap:snippetBlock src="../Resources/Snippets/PrintFormsURL.flsnp" />
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help  – Design Document: Current -<MadCap:conditionalText MadCap:conditions="General.PDF"> CMR 257701</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"> <a href="../Resources/DesignDocs/257701 Print Form PDF Enhancements.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 257701</a></MadCap:conditionalText>, Previous -<MadCap:conditionalText MadCap:conditions="General.PDF"> CMR 252240</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"> <a href="../Resources/DesignDocs/252240 Print Form PDF Enhancements.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 252240</a></MadCap:conditionalText>, <MadCap:conditionalText MadCap:conditions="General.PDF"> CMR 242368</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"> <a href="../Resources/DesignDocs/242368 Fillable PDF Outside of FireLight.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 242368</a></MadCap:conditionalText>,  <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 190206 </MadCap:conditionalText><a href="../Resources/DesignDocs/190206 Print Forms Design Approach.pdf" target="_blank" title="CMR 190206" alt="CMR 190206" MadCap:conditions="General.Online">CMR 190206</a></p>
+                        <p>User Guide  – <em>FireLight Platform User Guide</em>, New Activity section, <MadCap:conditionalText MadCap:conditions="General.PDF">"Print Forms" </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../UserGuide/New Activity/Print Forms.htm" alt="Print Forms">Print Forms [User Instructions]</MadCap:xref> </MadCap:conditionalText>topic </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

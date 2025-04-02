@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Barcode</h1>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FormLockUnlock.flsnp" />
+        </p>
+        <p>Use the Barcode control to add a barcode to the form.</p>
+        <ol>
+            <li>On the left of the Form Designer page under <b>Add Control to Form</b>, click <b>Barcode</b>.</li>
+            <li>
+                <p>Drag the <b>Barcode</b> control from the upper left of the form to the signature area on the form and re-size it to fit the field space.</p>
+            </li>
+            <li>
+                <p>On the left under <b>Input Control</b>, click <b>Field Properties</b>.</p>
+            </li>
+            <li>
+                <p>Enter or change settings in Field Properties.</p>
+                <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+                    <caption class="Table">Barcode Field Properties </caption>
+                    <col style="width: 194px;" class="TableStyle-2017_IT-Simple2-Column-Regular" />
+                    <col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+                    <thead>
+                        <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                            <th class="TableStyle-2017_IT-Simple2-HeadE-Regular-Header1">Field Property</th>
+                            <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Field Name</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <p>
+                                    <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsFieldName.flsnp" /> </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Top, Left</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsTopLeft.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Width, Height</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsWidthHeight.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b>Format </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows"> Type the barcode format. This can be whatever value you type into the field or it can be dynamically set with a data item value. To set it dynamically with a data item, enclose the data item name in curly brackets, for example, {Transaction ID}.</td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b>Barcode Type </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <p>In the list, select the barcode type (Datamatrix or QRCode). </p>
+                                <p><b>NOTE:</b> Datamatrix type is visible in the application process during all phases (data entry, e-sign, submission) and it is visible online and in the PDF/printed version. QRCode type is not visible in the application process and is visible online and in the PDF/printed version.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Data Group</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <p>Select a Data Group if applicable. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Custom List</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <p>In the list, select a Custom List if this control is associated with a Custom List Data Group. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Data Group Property</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <p> Select an option in Data Group Property when a field is associated with a Data Group. Select the type of data to pull in the Data Group Property for the selected Data Group and dataitem. When Data Group is a Custom List, select a custom list column from which to pull the data for the  field. </p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b>Global Scope </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsGlobalScope.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b>Exclude from PDF </b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                                <p>By default the Barcode control is selected and locked, which means the control does not appear on the printed or submitted form.</p>
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Passcode Only Validation</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                                <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FormsPasscodeOnlyVal.flsnp" />
+                            </td>
+                        </tr>
+                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                            <td class="TableStyle-2017_IT-Simple2-BodyB-Regular-DarkerRows"><b class="Bold">Z Order</b>
+                            </td>
+                            <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                                <MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsZOrder1.flsnp" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsZOrder4.flsnp" />
+                </p>
+            </li>
+            <li>Click the <b>Update</b> button to update the field properties and lock the form for editing.</li>
+            <li>Click the <b>Close</b> button to close the Field Properties dialog.</li>
+            <li>Click the <b>SAVE</b> button on the upper left of the Form Designer page to save the form, which unlocks the form for editing by other users. <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FormSaveOtherUser.flsnp" /></li>
+            <li>
+                <MadCap:snippetText src="../../Resources/Snippets/Rules/UpdateRuleSetsDB.flsnp" />
+            </li>
+        </ol>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

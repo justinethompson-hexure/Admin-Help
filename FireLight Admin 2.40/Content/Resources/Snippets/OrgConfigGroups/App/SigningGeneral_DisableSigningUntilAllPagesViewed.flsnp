@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable Signing Until All Pages Viewed</b> checkbox to disable signing until the end user views all pages within the document set. Once all pages have been viewed for the document, the acknowledgment checkbox is visible.</body>
+</html>

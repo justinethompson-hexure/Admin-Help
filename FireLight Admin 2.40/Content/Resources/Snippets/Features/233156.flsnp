@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>With this feature clients will have the ability to export search results from all available views on All Activities and Review Queue screens on the App side into a Comma Separated File (CSV). Clients will then be able to take that data in CSV and use it for further research.</p>
+        <p>Impacts:</p>
+        <p class="Indent">A new icon is added on both the screens below to allow exporting data visible on the screen, either from the default view or after a search is performed.</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>FL App -&gt; Manage -&gt; All Activities - "Export" functionality</p>
+            </li>
+            <li>
+                <p>FL App -&gt; Manage -&gt; Review Queue -&gt; Queues - "Export" functionality</p>
+            </li>
+        </ul>
+    </body>
+</html>

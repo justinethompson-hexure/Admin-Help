@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The current use of the SOAP API service for pre-signature review limits clients to completing an activity inside of FireLight when it is rejected. When an activity is rejected, agents are required to copy the application and send it back through to review instead of responding/correcting the reason for rejection and sending it back to review. Post signature review also has limitations due to the older SOAP technology. Creation of a new REST API for pre and post signature review will allow clients greater flexibility, faster integration and a truly automated technical solution for pre and post signature review.</p>
+        <p>Impacts:</p>
+        <ul>
+            <li>
+                <p>Pre and post signature review queue supports the use of REST API calls.</p>
+            </li>
+            <li>
+                <p>Unlock capability supported in the REST API for pre-signature review. ie: Activity is submitted to pre-signature review, reviewer rejects activity due to missing requirements, agent is able to resolve items as instructed and send back through to reviewer.</p>
+            </li>
+            <li>
+                <p>Accept and Reject Reason/response code can be returned in the call for display to the user, along with any notes entered by the reviewer.</p>
+            </li>
+        </ul>
+    </body>
+</html>

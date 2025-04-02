@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+	<head>
+		<link href="../../Resources/TableStyles/2017-ITPatternedRows2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+		<meta name="description" content="Case Access; User Share Options; Comparison of case access by Group Role Code, Firm ID, and User Share" />
+		<link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h1><a name="top"></a>Case Access and User Share Comparison</h1>
+		<p>Four different Case Access and User Share options in FireLight<sup MadCap:conditions="General.Online">®</sup> allow a user or users to see another user’s activities. Typically only one option is selected as they may conflict with each other.</p>
+		<h2>Case Access and User Share Options</h2>
+		<ol>
+			<li>Case Access allows all users within a group or groups to view all activities within the specified group or groups.</li>
+			<li>Case Access by Firm ID allows users within a firm to view activities only within the same Firm ID when Case Access By Firm ID is enabled for a group. Case Access by Firm ID can be hierarchical with different levels of access per group (e.g., agent, branch manager, region manager, top manager, etc.).</li>
+			<li>User sharing allows a user to share all activities with another user within an organization when Enable All Activities User Share is enabled for a group or groups.</li>
+			<li>
+				<p>User sharing allows a user to share a single activity with another user within an organization when Allow Activity Share is enabled for a group or groups.</p>
+			</li>
+		</ol>
+		<p><b class="Bold">Case Access</b>
+		</p>
+		<p>Case Access is enabled at the group level. You can elect which group or groups to share activities with. This includes all activities within the specified group or groups. You are able to selectively define this for each group. You can also limit case access within a group by Firm ID.</p>
+		<p>Case Access by Firm ID is used as a second level filter along with the Case Access by Group Role Code. The carrier or distributor sets up Firm IDs through the tx1228 when users SSO in to FireLight or through FireLight Access and the user accounts. Firm ID can be as simple as the organization ID or a number such as "1" or it can be a hierarchical Firm ID. FireLight filters Firm ID by comparing the Firm ID of the application using a "starts with" comparison. The Firm ID is pipe (|) delimited between hierarchical levels. Each level can be defined with any alphanumeric designations (for example, by Firm|Region|Branch|BranchAgent as in ABC|Western|ABC001|Agent0001, ABC|1|001|0001, etc.).</p>
+		<MadCap:pageBreak />
+		<p><b class="Bold">User Share</b>
+		</p>
+		<p>User share, all activities and single activity, allows you to share with a specific user. It is enabled at the group level but applies to all users within the organization.</p>
+		<p>There are two types of user share:</p>
+		<ol>
+			<li>Global share all activities (Enable All Activities User Share) – allows you to share all your activities with another user.</li>
+			<li>Single share one activity (Allow Activity Share)&#160;– allows you to share one activity with another user.</li>
+		</ol>
+		<p>The available users to share with are based on the ‘Organization’ and the ‘Groups’ that have the user share option enabled.</p>
+		<p>When setting up the user share with another user, the information that appears during a search for a user is:</p>
+		<ol>
+			<li>User Name, which is the ID passed in the SSO or entered in a direct login.</li>
+			<li>User Full Name, which is entered in the Preferences. It may also be passed in the SSO.</li>
+			<li>External Map Code, often mapped to the user email address.</li>
+			<li>You can search on any of the above 3 items.</li>
+		</ol>
+		<p>This again is based on any user from the organization and groups that have the user share option enabled and that matches the entered string for the search.</p>
+		<p>When a user share request is sent to a user, he or she must accept the share request. When that user logs in to FireLight, only the user who created the user share request appears in the User List dialog on the All Activities page. If multiple shares are created, more than one user name will appear in the User List dialog. A user clicks the search <img src="../../Resources/ImagesAdmin/SearchButton.jpg" alt="Search Button" title="Search Button" /> button next to the User List to open the User List dialog and uses the search text box and button to locate a new user to add them to the User List dialog.</p>
+		<p><b>RepCode</b>
+		</p>
+		<p>RepCode provides activity visibility and security for organizations and their representatives. Each rep can have their own RepCode and a RepCodeVisibility list that contains other reps’ RepCodes to allow them to access those reps’ activities.</p>
+		<p>The RepCode is provided and controlled by the organization through the SSO data provided during an SSO login from their rep. The organization handles all the security and provides us with a primary RepCode (for the user via “IsPrimary” attribute) and any other RepCodes.</p>
+		<ol>
+			<li>
+				<p>When the user is logged in they will have SessionState variables that are populated.</p>
+			</li>
+			<li>
+				<p>The RepCodeCreation session variable is populated with the value in a &lt;RepCode IsPrimary=true&gt;&lt;/RepCode&gt; tag. This will be used to assign the OwnerRepCode for every activity created in that session by the user.</p>
+			</li>
+			<li>
+				<p>The RepCodeVisibility SessionState variable is assigned from the list of RepCodes provided in the SSO login data.</p>
+			</li>
+		</ol>
+		<p class="note"><b class="Bold">NOTE:</b> The <b class="Bold">Disable Editing Other Users' Activities</b> checkbox on the Groups, App tab, needs to be cleared (unchecked) for the following options to work.</p>
+		<h2>Case Access by Group Role Code, Firm ID, and User Share&#160;</h2>
+		<table style="border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;mc-table-style: url('../../Resources/TableStyles/2017-ITPatternedRows2.css');margin-left: 0;margin-right: auto;mc-caption-repeat: true;" class="TableStyle-2017-ITPatternedRows2" cellspacing="0">
+			<caption class="Table">Comparison: Case Access by Group Role Code, Firm ID, and User Share</caption>
+			<col class="TableStyle-2017-ITPatternedRows2-Column-Regular" />
+			<col class="TableStyle-2017-ITPatternedRows2-Column-Regular" />
+			<col class="TableStyle-2017-ITPatternedRows2-Column-Regular" />
+			<col class="TableStyle-2017-ITPatternedRows2-Column-Regular" />
+			<thead>
+				<tr class="TableStyle-2017-ITPatternedRows2-Head-Header1">
+					<th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">&#160;</th>
+					<th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Case Access by<br />Group Role Code</th>
+					<th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Case Access by Firm ID</th>
+					<th class="TableStyle-2017-ITPatternedRows2-HeadD-Regular-Header1">User Share</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+					<td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>Enable on Groups<br />page in Admin</b>
+					</td>
+					<td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>Case Access</b>
+						<p>(Case Access tab)</p>
+					</td>
+					<td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>Case Access by Firm ID</b> <br />(App tab)</td>
+					<td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows"><b>Enable All Activities User Share / Allow Activity Share</b> <br />(App tab)</td>
+				</tr>
+				<tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+					<td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>Function Description</b>
+					</td>
+					<td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Group is able to view and edit all activities of all users in the selected role code groups.</td>
+					<td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+						<p>Group is able to view and edit all activities of all agents in the same Firm. <strong>Case Access by Firm ID </strong>is used as a second level filter along with the Case Access by Group Role Code. </p>
+					</td>
+					<td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+						<p><b class="Bold">Enable All Activities User Share:</b> User is able to view and edit, if allowed, all activities of another user including creating an activity on behalf of the other user.</p>
+						<p><b class="Bold">Allow Activity Share:</b> User is able to view and edit, if allowed, a single activity of another user.</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+					<td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b class="Bold">Can Set Control Level</b>
+					</td>
+					<td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Full Control</td>
+					<td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Full Control</td>
+					<td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">User defined as Full Control or Read Only</td>
+				</tr>
+				<tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+					<td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>Scope</b>
+					</td>
+					<td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Group Level</td>
+					<td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Firm Level</td>
+					<td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">One-to-one between two users</td>
+				</tr>
+				<tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+					<td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-LightRows"><b>Ownership of Activities</b> </td>
+					<td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-LightRows">Agent</td>
+					<td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-LightRows">Agent</td>
+					<td class="TableStyle-2017-ITPatternedRows2-BodyA-Regular-LightRows">The original user who created the user share</td>
+				</tr>
+			</tbody>
+		</table>
+		<p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+		</p>
+	</body>
+</html>

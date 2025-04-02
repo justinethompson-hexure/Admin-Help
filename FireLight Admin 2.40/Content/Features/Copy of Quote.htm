@@ -1,0 +1,915 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="General.Postpone">
+    <head>
+        <link href="../Resources/TableStyles/2017-ITPatternedRows2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Instructions for preparation, setup and usage of the Quote activity for annuity and term life product quotes within FireLight. Also includes sample annuity and life rate file templates." />
+    </head>
+    <body>
+        <h1><a name="top"></a>Quote</h1>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Quote</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Preparation, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>There are two types of quotes in FireLight<sup MadCap:conditions="General.Online">®</sup>. Users are able to use the Annuity quoting provided by FireLight and the embedded IXN tool for Life quoting capabilities. Data is transferable between the two quote product types.</p>
+                        <ul>
+                            <li>
+                                <p>The FireLight Annuity Quote activity includes a standard wizard for data entry along with the ability to upload product rates and rules through the Admin. The Annuity Quote layout displays information on each quote, which includes the ability to launch product documents, such as a product guide, to print a proposal and email the proposal to the advisor or client, and to launch into an Illustration or e-Application. The Quote activity supports multi-product selection, column sorting, and filtering to easily find the appropriate quotes in the list. Once the quotes are selected, you can create a PDF proposal and send the quote to the advisor  or client  in an email. Save logic is included for the activity. An audit will show an entry in the Illustration or e-Application indicating it was created from a quote along with the PDF Proposal output for the quote in Other Action, Documents.</p>
+                            </li>
+                            <li>
+                                <p>IXN provides a Life Quoting tool that is embedded in FireLight, which includes the ability to print, email, and text the proposal to the advisor and to launch into a FireLight e-Application.</p>
+                                <p>IXN is not expected to be WCAG level A-compliant for this release. We will work with IXN to meet compliance in a future release. </p>
+                                <p>IXN does not currently support Localization. </p>
+                                <p>FireLight is embedded in IXN, which allows IXN users access to FireLight.</p>
+                            </li>
+                        </ul>
+                        <p>The ability to view quotes depends on the type of organization:</p>
+                        <ul>
+                            <li>A carrier organization can see only their own annuity and life quotes, which means they cannot see other carriers’ quotes. </li>
+                            <li>A distributor organization can see all carrier annuity and life quotes.</li>
+                        </ul>
+                        <p>There is a licensing component for the Quote activity. Contact your Strategic Account Manager for details.</p>
+                        <p><b class="Bold">NOTE:</b> Life products are Guaranteed Universal Life, Term Life, Whole Life, and Final Expense Insurance. Annuity products are Fixed, Fixed Indexed, and Multi-Year Guaranteed Annuity products.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Preparation</p>
+                        <p class="note"><b class="Bold">NOTE:</b> There are different rates and rules for fixed and fixed indexed annuity products.</p>
+                        <h2>Annuity Proposal Templates</h2>
+                        <p>Hexure provides two proposal templates for annuity product quotes. If it exists, the client logo is added automatically to all proposal templates. The templates are standard and cannot be modified by clients. Provide your logo in .png format to the Strategic Account Manager for adding it to your organization so it appears in the Quote proposals.</p>
+                        <ul>
+                            <li>Annuity Basic Proposal displays quote information for each selected product in list format.</li>
+                            <li>Annuity Comparison Proposal displays quote information for each selected product, up to three products per page, in side-by-side columnar format. If more than three products are selected, the next three selected products display after the first three selected products on a new set of pages and so on until all selected products are displayed.</li>
+                        </ul>
+                        <h2>Annuity Products</h2>
+                        <h3>Annuity Rates</h3>
+                        <p>Prepare the rate files for the fixed, fixed indexed, and multi-year guaranteed (MYGA) Annuity products.</p>
+                        <ul>
+                            <li>Rate files can be in Excel .xlsx or .csv file formats.</li>
+                            <li>You can supply rates for multiple products in a single rate file or in multiple rates files.</li>
+                            <li>You can supply multiple rates for a single product to support different product rates by firm.</li>
+                            <li>Ensure the rate files for the products are saved in a secure location with a meaningful name.</li>
+                            <li>
+                                <p>Rate files need to be in the following format for Fixed and Fixed Indexed Annuity Products.</p>
+                                <p><b class="Bold">NOTE:</b> Hexure can convert existing rate files into the FireLight format if desired.</p>
+                            </li>
+                        </ul>
+                        <p><b class="DRNumberBold">Rates - Fixed and Multi-Year Guaranteed Annuity Products</b>
+                        </p>
+                        <p>There are 19 columns in the following order:</p>
+                        <ul>
+                            <li>Product Type for Fixed Annuity products in FireLight is 5 for Fixed and 16 for Multi-Year Guaranteed. This is a required field.</li>
+                            <li>Product Name is the name as it should appear in FireLight. Note that the carrier name appears on the Quote page and the PDF Proposal output so you do not need to include the carrier name in the product name. This is a required field.</li>
+                            <li>CUSIP is a unique value for each annuity product. It is alphanumeric format and must be nine characters. This is a required field.</li>
+                            <li>
+                                <p>Rider Name is entered when rates vary based on rider. If applicable, add one row for each rider variance in addition to the base policy rates. <b class="Bold">NOTE:</b> The Rider Name and Rider Product Code are both required when entered in a specific row. This is not a required field.</p>
+                            </li>
+                            <li>
+                                <p>Rider Product Code is entered when rates vary based on rider. Rider Product Code that matches PPfA for rider listed in "Rider Name" column. PPfA path = /TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct/FeatureProduct/FeatureOptProduct/<br />ProductCode. If applicable, add one row for each rider variance in addition to the base policy rates. <b class="Bold">NOTE:</b> The Rider Name and Rider Product Code are both required when entered in a specific row. This is not a required field.</p>
+                            </li>
+                            <li>
+                                <p>Jurisdiction is formatted as a unique number to group jurisdictions for the applicable rates. This is a required field. You can calculate the number following these steps:</p>
+                                <ul style="list-style-type: circle;">
+                                   
+                                    <li>Select the jurisdictions that apply. For assistance, use the <b class="Bold">Select All</b> and <b class="Bold">Clear All</b> buttons in cells <b class="Bold">K1</b> and <b class="Bold">L1</b>.</li>
+                                    <li>
+                                        <p>When finished, copy the number in cell <b class="Bold">J1</b> and paste it into the <b class="Bold">Jurisdiction</b> column on the <b class="Bold">Rate File</b> tab using the <b class="Bold">Paste Values</b> option in Excel.</p>
+                                        <p MadCap:conditions="General.Online">
+                                            <img src="../Resources/ImagesAdmin/Capture81.png" alt="Sample Jurisdiction Column" title="Sample Jurisdiction Column" MadCap:conditions="General.Online" />
+                                        </p>
+                                    </li>
+                                    <li>You can include rates for multiple jurisdiction groups in a single rate file or break them out into separate rate files.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Distributor ID is the Firm ID that applies to the rates and is used to filter which firms will see the rates for the product.  The format is typically four characters (but may be longer) and alphanumeric. This is not a required field because blank is allowed.</p>
+                                <ul style="list-style-type: circle;">
+                                    <li>If the rates apply to all firms, leave the distributor ID blank.</li>
+                                    <li>If there are rates for all firms but one, provide two sets of rates, one with the distributor ID blank and a second set with the distributor ID for the specific firm. Users logging in with the specific firm ID will see these rates and all other users will see the rates with the blank distributor ID.</li>
+                                    <li>If a product is specific to one firm, set  the distributor ID for the specific firm. Users logging in with the firm ID will see only the product.</li>
+                                    <li>
+                                        <p>Distributor ID is equal to the organization level DTCC Member ID. If you are not a DTCC Member, an ID is assigned by Hexure.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Minimum Premium Band and Maximum Premium Band are the premium bands for the rates. These values must be positive numeric values with two decimals. These are required fields.</p>
+                            </li>
+                            <li>Free Withdrawal Year 1 is the year one free withdrawal option. Valid options are a percentage, such as 0.00 for 0% or 0.10 for 10%, Interest, or None. You can specify the percentage as any numeric value up to 1.0 or 100%. This is an alphanumeric format. This is a required field.</li>
+                            <li>Free Withdrawal Years 2+ is the year two and greater free withdrawal option. Valid options are a percentage, such as 0.00 for 0% or 0.10 for 10%. You can specify the percentage as any numeric value up to 1.0 or 100%. This is a numeric format. This is a required field.</li>
+                            <li>Interest Guaranteed Years is the number of years the rate is guaranteed, such as 5. This is a required field.</li>
+                            <li>Minimum Rate is the guaranteed minimum interest rate (GMIR) on a fixed annuity and the guaranteed interest rate on a multi-year guaranteed annuity. The format is numeric, such as 0.04 for 4.00%. This is a required field.</li>
+                            <li>Current Rate is the current interest rate on the product. The format is numeric, such as 0.0425 for 4.25%. This is a required field.</li>
+                            <li>Base Rate is the base interest rate on a fixed annuity. Beginning in year 2 and each year thereafter the projected interest rate projected is the base rate. The format is numeric, such as 0.03 for 3.00%. This is a required field.</li>
+                            <li>Current Yield to Surrender Rate is the annualized yield of the annuity calculated over the time the surrender charge exists on a fixed annuity; it is calculated using the guaranteed interest rate, if guaranteed, then it uses the base rate. The format is numeric, such as 0.0525 for 5.25%. This is not a required field.</li>
+                            <li>Guaranteed Yield to Surrender Rate is the annualized yield of the annuity calculated over the time the surrender charge exists on a fixed annuity; it is calculated using the guaranteed interest rate. The format is numeric, such as 0.0325 for 3.25%. This is not a required field.</li>
+                            <li>Premium Bonus Rate is the rate used in upfront premium bonuses, which are the first year interest rate bonuses for fixed annuities. The format is numeric, such as 0.07 for 7.00%. This is not a required field.</li>
+                            <li>
+                                <p>Effective Date is the date the rates become effective for the product. The format is mm/dd/yyyy. This is a required field.</p>
+                                <p><b class="Bold">NOTE:</b> If you need to replace an existing rate file with the same effective date, simply upload a new rate file, which will completely replace the existing rates loaded for the product. This must be a complete rate file. If you need to replace rates with a more recent effective date, upload a new rate file with a complete set of rates. This will replace all previous rates, including additions and deletions in the replacement file. You can use an effective date in the future. These rates will not become effective until that date is reached. In this example, previous rates is shown until the effective date of the new rates is reached.</p>
+                            </li>
+                        </ul>
+                        <p MadCap:conditions="General.Online" class="Indent"><b class="Bold">Click the following thumbnail to view an example of a MYGA and Fixed Annuity rate file format. </b>
+                        </p>
+                        <p MadCap:conditions="General.Online" class="Indent">
+                            <img src="../Resources/ImagesAdmin/Capture92.png" alt="Sample Fixed Annuity Rate File Format" title="Sample Fixed Annuity Rate File Format" MadCap:conditions="General.Online" class="Thumbnail" />
+                        </p>
+                        <p><b class="DRNumberBold">Rates—Fixed Indexed</b>
+                        </p>
+                        <p>There are 24 columns in the following order:</p>
+                        <ul>
+                            <li>Product Type for Fixed Indexed Annuity products in FireLight is 13. This is a required field.</li>
+                            <li>Product Name is as it should appear in FireLight. Note that the carrier name appears on the Quote page and the PDF Proposal output so you do not need to include the carrier name in the product name. This is a required field.</li>
+                            <li>CUSIP is a unique value for each annuity product. It is alphanumeric format and must be nine characters. This is a required field.</li>
+                            <li>
+                                <p>Rider Name is entered when rates vary based on rider. If applicable, add one row for each rider variance in addition to the base policy rates. <b class="Bold">NOTE:</b> The Rider Name and Rider Product Code are both required when entered in a specific row. This is not a required field.</p>
+                            </li>
+                            <li>
+                                <p>Rider Product Code is entered when rates vary based on rider. Rider Product Code that matches PPfA for rider listed in "Rider Name" column. PPfA path = /TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct/FeatureProduct/FeatureOptProduct/<br />ProductCode. If applicable, add one row for each rider variance in addition to the base policy rates. <b class="Bold">NOTE:</b> The Rider Name and Rider Product Code are both required when entered in a specific row.  This is not a required field.</p>
+                            </li>
+                            <li>
+                                <p>Jurisdiction is formatted as a unique number to group jurisdictions for the applicable rates. This is a required field. You can calculate the number following these steps:</p>
+                                <ul style="list-style-type: circle;">
+                                    <li>Select the jurisdictions that apply. For assistance, use the <b class="Bold">Select All</b> and <b class="Bold">Clear All</b> buttons in cells <b class="Bold">K1</b> and <b class="Bold">L1</b>.</li>
+                                    <li>
+                                        <p>When finished, copy the number in cell <b class="Bold">J1</b> and paste it into the <b class="Bold">Jurisdiction</b> column on the <b class="Bold">Rate File</b> tab using the <b class="Bold">Paste Values</b> option in Excel.</p>
+                                        <p>
+                                            <img src="../Resources/ImagesAdmin/Capture81.png" alt="Sample Jurisdiction Column" title="Sample Jurisdiction Column" MadCap:conditions="General.Online" />
+                                        </p>
+                                    </li>
+                                    <li>You can include rates for multiple jurisdiction groups in a single rate file or break them out into separate rate files.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Distributor ID is the Firm ID that applies to the rates and is used to filter which firms will see the rates for the product.  The format is typically four characters (but may be longer) and alphanumeric. This is not a required field because blank is allowed.</p>
+                                <ul style="list-style-type: circle;">
+                                    <li>If the rates apply to all firms, leave the distributor ID blank.</li>
+                                    <li>If there are rates for all firms but one, provide two sets of rates, one with the distributor ID  blank and a second set with the distributor ID  for the specific firm. Users logging in with the specific firm ID will see these rates and all other users will see the rates with the blank distributor ID.</li>
+                                    <li>If a product is specific to one firm, set with the distributor ID  for the specific firm. Users logging in with the firm ID will see only the product.</li>
+                                    <li>Distributor ID is equal to the organization level DTCC Member ID. If you are not a DTCC Member, an ID is assigned by Hexure.</li>
+                                </ul>
+                            </li>
+                            <li>Minimum Premium Band and Maximum Premium Band are the premium bands for the rates. These values must be positive numeric values with two decimals. These are required fields.</li>
+                            <li>
+                                <p>Free Withdrawal Year 1 is the year one free withdrawal option. Valid options are a percentage, such as 0.00 for 0% or 0.10 for 10%, Interest, or None. You may specify the percentage as any numeric value up to 1.0 or 100%. This is an alphanumeric format. This is a required field.</p>
+                            </li>
+                            <li>Free Withdrawal Years 2+ is the year two and greater free withdrawal option. Valid options are a percentage, such as 0.00 for 0% or 0.10 for 10%. You can specify the percentage as any numeric value up to 1.0 or 100%. This is a numeric format. This is a required field.</li>
+                            <li>Initial Fixed Rate is the fixed rate that applies to the fixed account. The format is numeric, such as 0.03 for 3.00%. This is not a required field.</li>
+                            <li>Guaranteed Minimum Rate is the guaranteed fixed rate that applies to the fixed account. The format is numeric, such as 0.03 for 3.00%. This is not a required field.</li>
+                            <li>Index Name is the index or fixed account name. The format is a string. This is a required field.</li>
+                            <li>Investment Product Code matches the Investment Product Code on the PPfA for each strategy/index. PPfA path =/TXLife/TXLifeRequest/OLifE/InvestProduct/ProductCode. This is not a required field.</li>
+                            <li>Cap Type is the index cap type, which applies to index funds with a cap. The format is a string. This is not a required field.</li>
+                            <li>Strategy Type is the index account strategy type. Valid options are Participation, Spread, or Triggered. The format is a string. This is not a required field.</li>
+                            <li>Initial Index Rate is the initial index rate that applies to the indexed fund. The format is numeric, such as 0.03 for 3.00%. This is not a required field.</li>
+                            <li>Minimum Index Rate is the minimum index rate that applies to the indexed fund. The format is numeric, such as 0.02 for 2.00%. This is not a required field.</li>
+                            <li>Maximum Index Rate is the maximum index rate that applies to the indexed fund. The format is numeric, such as 0.06 for 6.00%. This is not a required field.</li>
+                            <li>Initial Index Cap Rate is the initial index cap rate that applies to the indexed fund. The format is numeric, such as 0.02 for 2.00%. This is not a required field.</li>
+                            <li>Minimum Index Cap Rate During CDSC (Yrs 2+) is the minimum index cap rate during the CDSC years that applies to the indexed fund. The format is numeric, such as 0.015 for 1.50%. This is not a required field.</li>
+                            <li>Premium Bonus Rate is the rate used in upfront premium bonuses, which are typical in fixed indexed annuity products. The format is numeric, such as 0.07 for 7.00%. This is not a required field.</li>
+                            <li>
+                                <p>Effective Date is the date the rates become effective for the product. The format is mm/dd/yyyy. This is a required field.</p>
+                                <p><b class="Bold">NOTE:</b> If you need to replace an existing rate file with the same effective date, simply upload a new rate file, which will completely replace the existing rates loaded for the product. This must be a complete rate file. If you need to replace rates with a more recent effective date, upload a new rate file with a complete set of rates. This will replace all previous rates, including additions and deletions in the replacement file. You can use an effective date in the future. These rates will not become effective until that date is reached. In this example, previous rates is shown until the effective date of the new rates is reached.</p>
+                            </li>
+                        </ul>
+                        <p MadCap:conditions="General.Online" class="Indent"><b class="Bold">Click the following thumbnail to view an example of a fixed indexed rate file format.</b> </p>
+                        <p MadCap:conditions="General.Online" class="Indent">
+                            <img src="../Resources/ImagesAdmin/Capture93.png" alt="Sample Fixed Indexed Annuity Rate File Format" title="Sample Fixed Indexed Annuity Rate File Format" MadCap:conditions="General.Online" class="Thumbnail" />
+                        </p>
+                        <h3>Annuity Rules</h3>
+                        <p>Prepare the Rules for Annuity Products.</p>
+                        <p>The annuity product rules are provided through a PPfA (Product Profile for Annuities) file. The following data is required.</p>
+                        <table style="mc-table-style: url('../Resources/TableStyles/2017-ITPatternedRows2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle-2017-ITPatternedRows2" cellspacing="0">
+                            <caption class="Table">Required PPfA Data for Annuity Products</caption>
+                            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" style="width: 226px;" />
+                            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" style="width: 526px;" />
+                            <thead>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Head-Header1">
+                                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Field</th>
+                                    <th class="TableStyle-2017-ITPatternedRows2-HeadD-Regular-Header1">Location</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <th style="text-align: left;" class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Product</th>
+                                    <th style="text-align: left;" class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Product Information</th>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Cusip</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/CusipNum/</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">OrgId</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Current Org or Selected Org From DropDown</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">ProductName</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/MarketingName</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Description</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/Description</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">CarrierCode</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/CarrierCode</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">PolicyProductTypeCode</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/PolicyProductTypeCode/tc</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">ProductCode</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/ProductCode</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">JurisdictionApproval</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Combined From List of <br />/TXLife/TXLifeRequest/OLifE/PolicyProduct/JurisdictionApproval</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">SaleEffective</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/SaleEffectiveDate</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">SaleExpiration</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/SaleExpirationDate</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b class="Bold">Fees</b>
+                                    </td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows"><b class="Bold">Product</b>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">FeeAmt</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/Fee/FeeAmt</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">FeePct</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/Fee/FeePct</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">FeeType</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/Fee/FeeType</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">FeeTypeQualifier</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/Fee/FeeTypeQualifier/tc</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">FeeMode</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/Fee/FeeMode</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">FeeWaiverBasedOn</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/Fee/FeeWaiverBasedOn</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">JurisdictionApproval</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Combined From List of <br />/TXLife/TXLifeRequest/OLifE/PolicyProduct/JurisdictionApproval</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">EndDate</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/Fee/EndDate</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">StartDate</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/Fee/StartDate</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b class="Bold">Policy Information</b>
+                                    </td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows"><b class="Bold">Ownership Information</b>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">PlanType</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/Ownership<br />/QualifiedPlanEntity/
+QualifiedPlanOption/QualifiedPlan/tc
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">EntityType</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/Ownership<br />/QualifiedPlanEntity/
+EntityType/PartyTypeCode/tc
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">OwnershipType</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/Ownership<br />/QualifiedPlanEntity/
+AccountDesignationCC/AccountDesignation/tc
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">MinPremium</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/Ownership<br />/MinPremiumInitialAmt</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">MaxPremium</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/Ownership<br />/MaxPremiumInitialAmt</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">MinAge</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/Ownership<br />/AllowedRelationship /MinAgeRelatedRolePlayer (where <br />OriginationRole and Related Role are both Owner)</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">MaxAge</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/Ownership<br />/AllowedRelationship /MaxAgeRelatedRolePlayer (where <br />OriginationRole and Related Role are both Owner)</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">JurisdictionApproval</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Combined From List of /TXLife/TXLifeRequest/OLifE<br />/PolicyProduct/Ownership /JurisdictionApproval</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b class="Bold">Riders</b>
+                                    </td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows"><b class="Bold">Rider Types</b>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">RiderType</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct
+/RiderTypeCode/tc
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Sequence</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct
+/Sequence
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">JurisdictionApproval</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Combined From List of /TXLife/TXLifeRequest/OLifE/PolicyProduct/
+AnnuityProduct/FeatureProduct/JurisdictionApproval
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Description</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct/Description
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">FeatureCode</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct/FeatureCode
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b class="Bold">Riders</b>
+                                    </td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows"><b class="Bold">Options</b>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">FeatureOption</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct
+/FeatureOptProduct/ProductCode
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">MinAge</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct
+/FeatureOptProduct/AllowedRelationship<br />/MinAgeRelatedRolePlayer (where OriginationRole and Related <br />Role are both Owner)
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">MaxAge</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct
+/FeatureOptProduct/AllowedRelationship<br />/MaxAgeRelatedRolePlayer (where OriginationRole and Related<br /> Role are both Owner)
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">FilterOnOwnershipType</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Set To true if there is nodes under /TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct
+/FeatureOptProduct/QualifiedPlanEntity<br />/AccountDesignationCC/AccountDesignation</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">FilterOnPlanTypes</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Set To true if there is nodes under /TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct
+/FeatureOptProduct/QualifiedPlanEntity<br />/QualifiedPlanOption
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">JurisdictionApproval</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Combined From List /TXLife/TXLifeRequest/OLifE/PolicyProduct/
+AnnuityProduct/FeatureProduct<br />/FeatureOptProductJurisdictionApproval
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">SaleEffectiveDate</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct
+/FeatureOptProduct/SaleEffectiveDate
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">SaleExpirationDate</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct/FeatureOptProduct/SaleExpirationDate
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">RiderSubTypeCode</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct/FeatureOptProduct/RiderSubTypeCode/tc
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Name</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct/FeatureOptProduct/Name
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Description</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct
+/FeatureOptProduct/Description
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">ScheduleYear</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Surrender Charge Schedule Year. -1 if not applicable.</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Sequence</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct/FeatureOptProduct/Sequence
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b class="Bold">Riders</b>
+                                    </td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows"><b class="Bold">Plan Types</b>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">EntityType</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct
+/FeatureOptProduct/QualifiedPlanEntity<br />/EntityType/PartyTypeCode/tc
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">OwnerType</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct
+/FeatureOptProduct/QualifiedPlanEntity<br />/AccountDesignationCC/AccountDesignation/tc</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">PlanType</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct/FeatureOptProduct/QualifiedPlanEntity<br />/QualifiedPlanOption/QualifiedPlan/tc
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">PlanSubType</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct
+/FeatureOptProduct/QualifiedPlanEntity<br />/QualifiedPlanOption/QualifiedPlanSubType/tc
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b class="Bold">Fees</b>
+                                    </td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows"><b class="Bold">Rider Options</b>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">FeeAmt</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct
+/FeatureOptProduct/Fee/FeeAmt
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">FeePct</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                                        <p>/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct/Fee/FeePct</p>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">FeeType</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct/Fee/FeeType</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">FeeTypeQualifier</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct/Fee/
+FeeTypeQualifier/tc
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">FeeMode</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct/Fee/FeeMode</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">FeeWaiverBasedOn</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct/Fee/FeeWaiverBasedOn
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">JurisdictionApproval</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Combined From List of /TXLife/TXLifeRequest/OLifE/PolicyProduct<br />/AnnuityProduct/FeatureProduct/
+JurisdictionApproval
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">EndDate</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct/Fee/EndDate</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">StartDate</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/AnnuityProduct<br />/FeatureProduct<br />/Fee/StartDate</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows" MadCap:conditions="">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b class="Bold">Product</b>
+                                    </td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows"><b class="Bold">Investment Options</b>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows" MadCap:conditions="">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">ProductCode</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/InvestProductInfo<br />/ProductCode</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows" MadCap:conditions="">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b class="Bold">Fees</b>
+                                    </td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows"><b class="Bold">Investment</b>
+                                    </td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows" MadCap:conditions="">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">FullName</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/InvestProductInfo<br />/FullName</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows" MadCap:conditions="">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">FeeAmt</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/InvestProductInfo<br />/Fee/FeeAmt</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows" MadCap:conditions="">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">FeePct</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/InvestProductInfo<br />/Fee/FeePct</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows" MadCap:conditions="">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">FeeType</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/InvestProductInfo<br />/Fee/FeeType</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows" MadCap:conditions="">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">FeeTypeQualifier</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/InvestProductInfo<br />/Fee<br />/FeeTypeQualifier/tc</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows" MadCap:conditions="">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">FeeMode</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/InvestProductInfo<br />/Fee/FeeMode</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows" MadCap:conditions="">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">FeeWaiverBasedOn</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/InvestProductInfo/Fee<br />/FeeWaiverBasedOn</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows" MadCap:conditions="">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">JurisdictionApproval</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Combined From List of /TXLife/TXLifeRequest/OLifE/PolicyProduct<br />/InvestProductInfo/
+JurisdictionApproval
+</td>
+                                </tr>
+                                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows" MadCap:conditions="">
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-LightRows">EndDate</td>
+                                    <td class="TableStyle-2017-ITPatternedRows2-BodyA-Regular-LightRows">/TXLife/TXLifeRequest/OLifE/PolicyProduct/InvestProductInfo<br />/Fee/EndDate</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <h3>Annuity Admin Setup and User Experience</h3>
+                        <p class="thead1">Admin Setup</p>
+                        <p>When you license the Quote activity, Hexure adds the Quote Activity to the grid at the top of the Activities page in Product Configuration. Do the following to set up FireLight Admin for Quote.</p>
+                        <p><b class="DRNumberBold">Organization Configuration/Groups page:</b>
+                            <ol>
+                                <li>Select a user group in the grid at the top of the Groups page.</li>
+                                <li>
+                                    <p>On the <MadCap:xref href="../Organization Configuration/Groups/Activity Access.htm" alt="Activity Access">Activity Access</MadCap:xref> tab, select the <b class="Bold">Quote</b> checkbox to enable the Quote activity.</p>
+                                    <p>Change the <b class="Bold">Quote Email Expiration</b> number of days setting as applicable for your organization. The default is 3 days, which means the email will expire at the same time on the third day (72 hours) from the time it is sent to the client.</p>
+                                </li>
+                                <li>
+                                    <p>On the <MadCap:xref href="../Organization Configuration/Groups/App.htm" alt="App">App</MadCap:xref> tab:</p>
+                                    <ul>
+                                        <li>
+                                            <p>Select the checkbox for the type of Quote to disable if both quote types are not sold by the user group:</p>
+                                            <ul style="list-style-type: circle;">
+                                                <li><b class="Bold">Disable Annuity Quotes</b> disables the Quote activity for annuity quotes</li>
+                                                <li><b class="Bold">Disable Life Quotes</b> disables the Quote activity for Life quotes</li>
+                                            </ul>
+                                        </li>
+                                        <li>Select the <b class="Bold">Sales Agreement Products Only</b> checkbox to filter quotes based on whether a sales agreement exists for a product with a package that has an ACORD Type of Application 103. When selected, only the quotes with a sales agreement and a package with an ACORD Type of Application 103 are shown on the Quote page if the logged-in user has access to the products. This applies to carrier sponsored and InsTech Managed products.</li>
+                                    </ul>
+                                </li>
+                                <li>Click <b class="Bold">Save</b>.</li>
+                            </ol>
+                        </p>
+                        <p>
+                            <p><b class="DRNumberBold">Organization Configuration/Email page:</b>
+                            </p>
+                            <ol>
+                                <li>In <b class="Bold">Email Category</b>, select <b MadCap:conditions="General.PDF" class="Bold">Quote</b><b class="Bold"><MadCap:xref href="../Organization Configuration/Email/Quote/Quote Email Category.htm" MadCap:conditions="General.Online" alt="Quote Email Category">Quote Email Category</MadCap:xref></b>.</li>
+                                <li>Make any desired modifications to the Client Quote Proposal and Annuity Rate Quote email templates that reside in the Quote email category in Organization Configuration on the Email page.</li>
+                                <li>
+                                    <p>Click <b class="Bold">Save Email Template</b>.</p>
+                                </li>
+                            </ol>
+                        </p>
+                        <p>
+                            <p><b class="DRNumberBold">Add Company Ratings</b>
+                            </p>
+                            <p>You must add company ratings for annuity quotes at the Organization level.</p>
+                            <ol>
+                                <li>
+                                    <p>On the <b class="Bold">Organization Configuration/Organization Settings/Organization</b> tab, enter the Company Ratings for <b class="Bold">A.M. Best</b>.</p>
+                                    <p><b class="Bold">NOTE:</b> Only the A.M. Best rating is shown in Annuity quotes. The A.M. Best rating is <em>required</em> for annuity quotes since the rating field is located on the annuity quote wizard and used to filter the quote results.</p>
+                                </li>
+                                <li>Click <b class="Bold">Save Organization</b>.</li>
+                            </ol>
+                            <p><b class="DRNumberBold">Add a Product</b>
+                            </p>
+                            <p>Add your carrier annuity products for the Quote activity in FireLight. If a product, application and/or illustration package, and sales agreement are set up in FireLight for the product, this enables the ability for users to start an application or illustration from the Quote activity. </p>
+                            <p>1.	On the upper left of the Products page, click <b class="Bold">Add New Product</b>.</p>
+                            <p>2.	Enter the <b class="Bold">Product Name</b>, <b class="Bold">Product Category</b>, and <b class="Bold">CUSIP</b>.</p>
+                            <p>3.	Select the applicable <b class="Bold">State Approved</b> checkboxes.</p>
+                            <p>4.	At the end of the page, click <b class="Bold">Save Product Config</b>.</p>
+                            <p><b class="Bold">NOTE:</b> Add the Annuity products that is used for the Quote activity for licensed carriers in FireLight. See "Add a Product" in <MadCap:xref href="../Product Configuration/Products.htm" alt="Products">Products</MadCap:xref> for more information. </p>
+                        </p>
+                        <p>
+                            <p><b class="DRNumberBold">Add a Product Package</b>
+                            </p>
+                            <ol>
+                                <li>On the upper left of the <b class="Bold">Product Configuration/Packages</b> page, click <b class="Bold">Add New Package</b>.</li>
+                                <li>In <b class="Bold">Package Name</b>, enter the product name.</li>
+                                <li>In <b class="Bold">ACORD Type</b>, select <b class="Bold">Application (103)</b> for an application package or select <b class="Bold">Illustration (111)</b> for an illustration package.</li>
+                                <li>
+                                    <p>Ensure <b class="Bold">Area Type</b> is set to <b class="Bold">Activity</b>.</p>
+                                </li>
+                                <li>Click the <b class="Bold">Forms/Wizards in Package</b> tab. Add the forms and wizards to be included in the package to the <b class="Bold">Forms/Wizards in Package</b> list.</li>
+                                <li>Click the <b class="Bold">Rule Sets In Package</b> tab. Add the Rule Sets to be included in the package to the <b class="Bold">Rule Sets In Package</b> list.</li>
+                                <li>At the end of the page, click the <b class="Bold">Save Package</b> button.</li>
+                            </ol>
+                        </p>
+                        <p>
+                            <p><b class="DRNumberBold">Add a Sales Agreement.</b>
+                            </p>
+                            <ol>
+                                <li>In the top section of the <b class="Bold">Product Configuration/Sales Agreements</b> page in the grid, select an annuity product.</li>
+                                <li>Move the  packages created for the product (e.g., product Illustration package and product Application package) from the Available Packages to the <b class="Bold">Assigned Packages</b> list. </li>
+                                <li>Select the applicable <b class="Bold">State Approvals</b> checkboxes. </li>
+                                <li>At the end of the page, click <b class="Bold">Save Sales Agreement</b>.</li>
+                            </ol>
+                        </p>
+                        <p class="thead1">User Experience</p>
+                        <ol>
+                            <li>On the <b class="Bold">Home</b> page under <b class="Bold">Start New</b> or on the <b class="Bold">New Activity</b> menu, click <b class="Bold">Quote</b> to open the Quote wizard.</li>
+                            <li>On the Quote toolbar, click <b class="Bold">Annuity</b>.</li>
+                            <li>In <b class="Bold">Jurisdiction</b>, select a jurisdiction in the list.</li>
+                            <li>In <b class="Bold">Product Type</b>, select the type of product (Fixed, Fixed Indexed, Multi-Year Guaranteed) in the list.</li>
+                            <li>Enter the <b class="Bold">Age</b> of the client.</li>
+                            <li>Select the A.M. Best <b class="Bold">Rating</b> to filter quotes.</li>
+                            <li>In <b class="Bold">Product Information</b> select a <b class="Bold">Market Type</b> (Non-Qualified, Qualified) in the list and enter an <b class="Bold">Initial Premium Amount</b>.</li>
+                            <li>In the <b class="Bold">Agent</b> section, optionally select the <b class="Bold">Enter Agent Name</b> checkbox to add the agent First Name and Last Name to the quote proposal. It defaults to the agent first and last name from the Agent section in the Preferences page.</li>
+                            <li>
+                                <p>To filter the Annuity quotes, select the applicable <b class="Bold">Carriers</b>, <b class="Bold">Features and Riders</b>, and <b class="Bold">Surrender Charge Years</b> (Fixed Indexed) or <b class="Bold">Guarantee Periods</b> (Fixed or MYGA), or select the <b class="Bold">Select All</b> checkbox above each column to select all.</p>
+                            </li>
+                            <li>When data entry is complete, the tool bar above the Quote displays Alerts with a green check mark.</li>
+                            <li>On the lower right of the wizard, click <b class="Bold">Get Quote</b> to display the quote results. The Quote Results grid columns contain the carrier name, product name and A.M. Best financial rating, various product rates, and an Actions column with links to available product documents. If the product is carrier sponsored, the Actions column can also contain an Apply link to start an application and an Illustrate link to start an illustration. If the product is not carrier sponsored, the Actions column can also contain a Print link to start an application, which can be completed and printed.</li>
+                            <li>
+                                <p>In the column title row of the Quote page, do any of the following for viewing and sorting quote results:</p>
+                                <ul>
+                                    <li>On the left in the <b class="Bold">Select All</b> column, select the  checkbox to select all Quote Results. Clear the checkbox to select individual Quote Results in the column. When at least one quote is selected the Print and Send Email options are enabled.</li>
+                                    <li>Expand the grid to view more columns in the scrollable column section. When additional columns are available to view to the right, click the right directional arrow <img src="../Resources/ImagesAdmin/Capture85.png" alt="Arrow Button" title="Arrow Button" /> button. When additional columns are available to view to the left, click the left directional arrow <img src="../Resources/ImagesAdmin/Capture86.png" alt="Arrow Button Left" title="Arrow Button Left" /> button. The arrow buttons appear only if there are columns to view in the applicable direction.</li>
+                                    <li>Click on a column to make it the primary sort column. Click on the column header to switch between ascending and descending order.</li>
+                                    <li>
+                                        <p>For Fixed Indexed Annuity quotes, in the left column title row, click the <img src="../Resources/ImagesAdmin/Capture112.png" alt="" title="" /> button to expand all the product rows in the grid to view the indexed funds for the products and click the <img src="../Resources/ImagesAdmin/Capture113.png" alt="" title="" /> button to collapse the rows. In a product row, click the  <img src="../Resources/ImagesAdmin/Capture112.png" alt="" title="" /> button in the left column to expand the row vertically to view the indexed funds for the product. Click the <img src="../Resources/ImagesAdmin/Capture113.png" alt="" title="" /> button to collapse the row. </p>
+                                        <p><b class="Bold">NOTES:</b>
+                                        </p>
+                                        <ul style="list-style-type: circle;">
+                                            <li>When a row is collapsed and only the product row is visible, the row contains the maximum value for Fixed Rate, Premium Bonus, and Index Rate Cap from all related indexed funds.</li>
+                                            <li>When a row is expanded, the index fund rows display the actual values associated to the index fund. These are Fixed Rate, Premium Bonus, Index Rate Cap, Cap Type, and Free Withdrawal Yr 1 | Yrs 2+.</li>
+                                            <li>
+                                                <p>Columns with sort capability may be sorted when rows are collapsed or expanded.  When rows are expanded the values for the selected column are sorted by the indexed funds within each product.</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Optionally, return to the Quote wizard data entry to change inputs: on the lower right, click <b class="Bold">Back to Inputs</b>.</li>
+                            <li>View and download product documents: in the <b class="Bold">Actions</b> column, click the <b class="Bold">Documents</b> link and click a document type (<b class="Bold">Product Guide</b>, etc.) to open the product document in PDF format in a separate browser tab or window. Use the pdf reader controls to save or print the document.</li>
+                            <li>
+                                <p>View available riders for a product: in the <b class="Bold">Available Riders</b> column, pause the mouse over the <b class="Bold">Riders</b> link to view the available riders for the product.</p>
+                            </li>
+                            <li>Save the quote results: on the top navigation bar, click <b class="Bold">Save</b>, enter a <b class="Bold">Name</b> for the quote and click <b class="Bold">Save</b> on the Save Quote dialog.</li>
+                            <li>Print the quote results: in the grid, select the quotes to print. On the toolbar above the Quote grid, click <b class="Bold">Print</b>. In the Print dialog, select the Quote Documents (Basic Proposal, Comparison Proposal) and Optional Documents (Product Disclosures, Product Guide, Specimen Policy) to print and click the <b class="Bold">Print</b> button. The quote proposal opens in a separate browser tab or window. The Basic Proposal displays the quotes in list format. The Comparison Proposal compares up to three product quotes at a time in a columnar format. If more than three products are selected for a Comparison Proposal, the next three selected products display after the first three selected products on a new set of pages and so on until all selected products are displayed. Use the pdf reader controls to save or print the document. <b class="Bold">NOTE:</b> The optional documents generate only one copy per product in the document set provided either via print or email.</li>
+                            <li>
+                                <p>Email the quote proposal to the advisor: on the toolbar, click <b class="Bold">Send Email</b>. Enter the advisor’s name and address in <b class="Bold">To Name</b> and <b class="Bold">To Address</b>, select the <b class="Bold">Quote Documents</b> and <b class="Bold">Optional Documents</b> and click <b class="Bold">Send</b>. </p>
+                                <p>The advisor receives the email and clicks the URL link within the email to open the quote file. The advisor can use the pdf reader controls to save and print the file.</p>
+                            </li>
+                            <li>View summary information, audit history and sent emails or share the quote with another user: on the top navigation bar, click <b class="Bold">Other Actions</b> and click <b class="Bold">Summary</b> to view summary information, click <b class="Bold">History</b> to view audit history, click <b class="Bold">Sent Emails</b> to view emails sent to the client, or click <b class="Bold">Share</b> to begin the process of sharing the quote with another user. The Share and Transfer options are available after you save the quote.</li>
+                            <li>(Optional - only for products that are set up with a product, package and sales agreement for Application or Illustration in FireLight) Apply or Illustrate an annuity product: in the <b class="Bold">Actions</b> column of the grid, click <b class="Bold">Apply</b> to begin the application process or click <b class="Bold">Illustrate</b> to begin the illustration process for the selected annuity product quote. FireLight attaches the basic and comparison PDF proposal output to the application or illustration, which can be accessed from <b class="Bold">Other Actions &gt; Documents</b> within the application or illustration activity. If the product is not carrier sponsored, the Actions column can also contain a Print link to start an application, which can be completed and printed.</li>
+                        </ol>
+                        <h2>Life Products </h2>
+                        <p class="note"><b class="Bold">Short Demo Video:</b> <a href="https://vimeo.com/561839429/be6236f1d5" target="_blank" title="Quote to e-Application" alt="Quote to e-Application">Quote to e-Application</a></p>
+                        <h3>Life Admin Setup and User Experience</h3>
+                        <p>IXN provides a Life Quoting tool that is embedded in FireLight, which includes the ability to print, email and text the proposal to the advisor, and to launch into a FireLight e-Application. IXN Life Quotes can be saved, shared and transferred. A Quote Activity Report is available. The report includes activity for both IXN Life quotes and Annuity quotes. See <MadCap:xref href="../Utilities/Reports/Detail Reports.htm" alt="Detailed Activity Reports">Detailed Activity Reports</MadCap:xref> in Admin Help for a description and sample report.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p>When you license the Quote activity, Hexure adds the Quote Activity to the grid at the top of the Activities page in Product Configuration. Also have an additional DocType of IXNQuote with a Document Tag of IXNQuote added to your organization's List Profile.</p>
+                        <p>Do the following to set up FireLight and Life Quotes.</p>
+                        <p><b class="DRNumberBold">Organization Configuration/Organization Settings/Security tab (FireLight Embedded in IXN):</b>
+                        </p>
+                        <p>With the enhancement to IXN for embedding the FireLight e-Application, IXN certificate/service record enhancements are required within FireLight to easily support the connection between the two systems.</p>
+                        <p>Enhanced certificate support allows ease of certificate security management for IXN access and updates to the IXN certificate expiration that eliminates the need for user interaction. This further expands the client access to FireLight and IXN clients alike for both systems. See <MadCap:xref href="../Organization Configuration/Organizations/Security.htm" alt="Security">Security</MadCap:xref> for more information.</p>
+                        <p>Add a new integration service record for enhanced certificate support to set up a relationship for IXN.</p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>Below the supported services table, click the <b class="Bold">Add New Integration Service Record</b> link to open the Integrated Services Configuration dialog. </p>
+                            </li>
+                            <li>
+                                <p>In the <b class="Bold">Name</b> list, select <b class="Bold">IXN Integrated Service</b>. Select the applicable <b>Supported Services</b> checkboxes (Embedded, Illustration API, API Access, Token SSO).</p>
+                            </li>
+                            <li>
+                                <p>In <b class="Bold">Client Secret</b>, click the <b class="Bold">New </b>button. On the <b class="Bold">Confirm</b> dialog, click <b class="Bold">Update</b>. Next, click <b class="Bold">Save</b>.</p>
+                            </li>
+                            <li>
+                                <p>FireLight adds the IXN Integrated Service to the table.</p>
+                            </li>
+                        </ol>
+                        <p>
+                            <p>
+                                <p><b class="DRNumberBold">Organization Configuration/Organization Settings/Admin tab (IXN Embedded in FireLight):</b>
+                                </p>
+                                <p>Set up the IXN service credentials. IXN supplies the configuration ALQ_ID and value. </p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>Click the <b>Click to Edit</b> link next to <b>Third-Party Service Config</b>. </li>
+                                    <li>
+                                        <p>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>ALQ_ID</b>. In <b>Config Value</b>, type the ALQ_ID  value provided by IXN. In <b>Service Type</b>, select <b>IXN</b> and click the <b>Add Config</b> button. </p>
+                                    </li>
+                                </ol>
+                                <p class="Indent"><b class="Bold">NOTE:</b> Config Group is an optional configuration used by the <MadCap:xref href="DocuSign.htm" alt="DocuSign Integration">DocuSign Integration</MadCap:xref> integration.</p>
+                                <p MadCap:conditions="General.Online">Examples:</p>
+                                <p MadCap:conditions="General.Online" class="Indent">
+                                    <img src="../Resources/ImagesAdmin/Capture123.png" alt="Third Party Service Configuration - Add New" title="Third Party Service Configuration - Add New" MadCap:conditions="General.Online" />
+                                </p>
+                                <p MadCap:conditions="General.Online" class="Indent">
+                                    <img src="../Resources/ImagesAdmin/Capture124.png" alt="IXN Configuration ALQ_ID and Value" title="IXN Configuration ALQ_ID and Value" MadCap:conditions="General.Online" />
+                                </p>
+                                <p><b class="DRNumberBold">Organization Configuration/Groups page:</b>
+                                </p>
+                                <ol>
+                                    <li>Select a user group in the grid at the top of the Groups page.</li>
+                                    <li>
+                                        <p>On the <MadCap:xref href="../Organization Configuration/Groups/Activity Access.htm" alt="Activity Access">Activity Access</MadCap:xref> tab, select the <b class="Bold">Quote</b> checkbox to enable the Quote activity.</p>
+                                        <p>Change the <b class="Bold">Quote Email Expiration</b> number of days setting as applicable for your organization. The default is 3 days, which means the email will expire at the same time on the third day (72 hours) from the time it is sent to the client.</p>
+                                    </li>
+                                    <li>
+                                        <p>On the <MadCap:xref href="../Organization Configuration/Groups/App.htm" alt="App">App</MadCap:xref> tab:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Select the checkbox for the type of Quote to disable if both quote types are not sold by the user group:</p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li><b class="Bold">Disable Annuity Quotes</b> disables the Quote activity for annuity quotes</li>
+                                                    <li><b class="Bold">Disable Life Quotes</b> disables the Quote activity for Life quotes</li>
+                                                </ul>
+                                            </li>
+                                            <li>Select the <b class="Bold">Sales Agreement Products Only</b> checkbox to filter quotes based on whether a sales agreement exists for a product with a package that has an ACORD Type of Application 103. When selected, only the quotes with a sales agreement and a package with an ACORD Type of Application 103 are shown on the Quote page if the logged-in user has access to the products. This applies to carrier sponsored and InsTech Managed products.</li>
+                                        </ul>
+                                    </li>
+                                    <li>Click <b class="Bold">Save</b>.</li>
+                                </ol>
+                                <p><b class="DRNumberBold">(Optional)&#160;Add an IXN Quote Document Template Form to the Life Quote App:</b>
+                                </p>
+                                <p>Add an IXN quote document template form with a Signature Box control. This adds a document tag for signatures to the IXN Life Quote attached to the FireLight e-Application, so it can be electronically signed as a way of receipt confirmation. <b class="Bold">NOTE:</b> Contact your Strategic Account Manager to have the integration team add an additional DocType of IXNQuote with a Document Tag of IXN Quote.</p>
+                                <ol>
+                                    <li>
+                                        <p>On the <b class="Bold">Designer/Form Library</b> page, upload the IXN Quote Document template form. In the list, select the template form, e.g., select <b class="Bold">IXN Quote Document</b>. In <b class="Bold">Document Tag</b>, select <b class="Bold">IXNQuote</b> and click the <b class="Bold">Save</b> button. Click the <b class="Bold">Form Designer</b> button.</p>
+                                    </li>
+                                    <li>
+                                        <p>On the <b class="Bold">Designer/Form Designer</b> page, add a <b class="Bold">Signature Box</b> control. Select the <b class="Bold">Signer Type</b>, <b class="Bold">Control Type</b> and <b class="Bold">Data Group</b>. Click the <b class="Bold">Update</b> button.</p>
+                                    </li>
+                                    <li>
+                                        <p>On the <b class="Bold">Product Configuration/Packages</b> page, select the <b class="Bold">Life Quote App</b> in the list at the top of the page. </p>
+                                        <p>On the <b class="Bold">Forms/Wizards in Package</b> tab: move the IXN Quote Document from the <b class="Bold">All Forms/Wizards</b> list to the <b class="Bold">Forms/Wizards in Package</b> list and click the <b class="Bold">Save Package</b> button.</p>
+                                    </li>
+                                </ol>
+                            </p>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience - Life Products</p>
+                        <ol>
+                            <li>On the <b class="Bold">Home</b> page under <b class="Bold">Start New</b> or on the <b class="Bold">New Activity</b> menu, click <b class="Bold">Quote</b> to open the Quote wizard.</li>
+                            <li>On the Quote toolbar, click <b class="Bold">Life</b>.</li>
+                            <li>
+                                <p>In the left column <b class="Bold">Proposed Insured</b> section, enter the information for the proposed insured.</p>
+                                <ul>
+                                    <li>
+                                        <p>First Name</p>
+                                    </li>
+                                    <li>
+                                        <p>Last Name</p>
+                                    </li>
+                                    <li>
+                                        <p>Date of Birth or Age</p>
+                                    </li>
+                                    <li>
+                                        <p>Gender</p>
+                                    </li>
+                                    <li>
+                                        <p>Tobacco Use</p>
+                                    </li>
+                                    <li>
+                                        <p>State</p>
+                                    </li>
+                                    <li>
+                                        <p>Health Options - The number of health options may need to be reduced if other options are selected. For example, you cannot select all health options with all carriers, but all health options can be selected with a single carrier.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>In the center column <b class="Bold">Product</b> section, select the product types (Term Periods, To Age, Term ROP, Whole Life, and Final Expense) and carriers to filter the quotes by product and carrier. Up to five product types can be selected when the user selects all carriers. When the number of carriers is limited, more than five product types can be selected.</p>
+                            </li>
+                            <li>
+                                <p>In the right column Coverage and Agent sections, enter or select the coverage and agent information. Up to three Face Amounts can be entered. Optionally, click the <b class="Bold">Calculate Needs</b> link to calculate the face amount based on the Debts and Expenses, Income, and Assets.</p>
+                            </li>
+                            <li>
+                                <p>On the lower right of the wizard, click <b class="Bold">Run Quote</b>.</p>
+                                <p>The Quote Results contain the client information, Coverage, and Agent information followed by the number of results and a search field. Term Quote results display on separate tabs for each Term duration. Click <b class="Bold">Show Details</b> at the bottom of a product quote to show product details. Click a tab to show product Features, Forms, Carrier Overview, Premiums, and Important Information on separate tabs. Click <b class="Bold">Hide Details</b> to hide product details.</p>
+                            </li>
+                            <li>
+                                <p>(Optional)&#160;Click the button to the right of the search field to expand the dialog. Enter a Carrier name if applicable. Select search options to Sort By, Group By, Filter By, and select Product Features to filter the quote results.</p>
+                            </li>
+                            <li>
+                                <p>On one or more tabs for the desired term period, select the checkbox for one or more product quotes. The <b class="Bold">Share</b>  and <b class="Bold">Compare</b>  buttons become visible. </p>
+                            </li>
+                            <li>
+                                <p>Click the <b class="Bold">Compare</b> button to open the Comparing Quotes dialog. Use the scroll bar to scroll left and right through the columns of the comparison. On the lower right of the comparison, click the <b class="Bold">Share</b> button to select a delivery method and share the Quote.</p>
+                            </li>
+                            <li>
+                                <p>Click the <b class="Bold">Share</b> button above the product selection or click the <b class="Bold">Share</b> button on the Comparing Quotes dialog to open the Select a Delivery dialog.</p>
+                            </li>
+                            <li>
+                                <p>On the Select a Delivery Method dialog, click a <b class="Bold">Download</b>, <b class="Bold">Email</b> or <b class="Bold">Text</b> button for the delivery method and click the <b class="Bold">Next</b> button. Download is the default method.</p>
+                            </li>
+                            <li>
+                                <p>On the Select a PDF Layout dialog, click a PDF layout for the quotes: <b class="Bold">Detailed Comparison</b>, <b class="Bold">Condensed Premium Comparison</b>, <b class="Bold">Premium Comparison</b>, or <b class="Bold">Feature Comparison</b> and click the <b class="Bold">Next</b> button.</p>
+                            </li>
+                            <li>
+                                <p>On the Enter Information dialog, enter <b class="Bold">Agent Information</b> and ensure <b class="Bold">Recipient Information</b> is correct. Click the applicable<b class="Bold">Download</b>, <b class="Bold">Email</b> or <b class="Bold">Text</b> button for the delivery method.</p>
+                            </li>
+                            <li>
+                                <p>On the Success dialog: </p>
+                                <p>Download delivery method: Click <b class="Bold">View PDF</b> to open and view the quote PDF document.</p>
+                                <p>Email delivery method: Click <b class="Bold">Send</b> to deliver the email to the client.</p>
+                                <p>Text delivery method: Click <b class="Bold">Send</b> to deliver the text to the client.</p>
+                            </li>
+                            <li>
+                                <p>Click the <b class="Bold">X</b> on the upper right to close the dialog.</p>
+                            </li>
+                            <li>
+                                <p>Save the quote: on the navigation bar, click <b class="Bold">Save</b>. In the Save Quote dialog, enter a <b class="Bold">Name</b> for the quote and click <b class="Bold">Save</b>. Save the quote under a new name: on the navigation bar, click the Save down arrow and click <b class="Bold">Save As</b>. In the Save As dialog, enter a new name for the quote and click <b class="Bold">OK</b>.</p>
+                            </li>
+                            <li>
+                                <p>After saving a quote, the Share and Transfer options become available on the Other Actions menu.  </p>
+                            </li>
+                            <li>
+                                <p>On the Quote page, to the right of the Quote, pause the mouse (hover) over the premium amounts of a quote and click the <b class="Bold">Get Started</b> button.</p>
+                            </li>
+                            <li>
+                                <p>On the Pick An Action dialog, click the <b class="Bold">Apply</b> button to begin an application in FireLight. Product availability in FireLight varies, dependent on Carrier participation. If a product is not available in FireLight, the Apply button will not be displayed.</p>
+                            </li>
+                            <li>
+                                <p>Complete the application in FireLight. </p>
+                                <p><b class="Bold">NOTE:</b> In the application on the <b class="Bold">Other Actions</b> menu, click <b class="Bold">Display/Print PDF</b>, select the documents to print including the Quote, and click <b class="Bold">Print Selected Documents</b> to create a PDF file with the selected application and quote documents.</p>
+                            </li>
+                            <li>
+                                <p> On the upper right of the Life Quote page, click the <b class="Bold">New Quote</b> button to start a new quote.</p>
+                            </li>
+                            <li>
+                                <p>The current design of IXN Quote in FireLight does not allow client detail entered into Life quotes to be Saved to the FireLight dashboard/home page. This enhancement is targeted for a future release.</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <h2>Additional Information</h2>
+                        <p>Admin Help – Design Documents: </p>
+                        <ul>
+                            <li>Life and Annuity Quotes: <MadCap:conditionalText MadCap:conditions="General.PDF"> current: 240184 Add support for state specific quote product documents, intermediate: 227668, 209806, original: 201858</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.Online"> current: <b class="DRnumber"><a href="../Resources/DesignDocs/240184 Add support for state specific quote product documents.pdf" target="_blank" title="240184" alt="240184">240184</a></b> Add support for state specific quote product documents, intermediate: <a href="../Resources/DesignDocs/227668 Quote 2.18 August.pdf" target="_blank" title="227668" alt="227668">227668</a>, <a href="../Resources/DesignDocs/209806 New Life Quote Features.pdf" target="_blank" title="209806" alt="209806">209806</a>, original: <a href="../Resources/DesignDocs/201858 Add Quote Activity.pdf" target="_blank" alt="201858">201858</a></MadCap:conditionalText></li>
+                            <li>Annuity Rates: <MadCap:conditionalText MadCap:conditions="General.PDF"> 204852 </MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.Online"> <a href="../Resources/DesignDocs/204852 Annuity Rate Management.pdf" target="_blank" title="204852" alt="204852">204852</a> </MadCap:conditionalText></li>
+                            <li>Annuity Comparison Proposal: current:<MadCap:conditionalText MadCap:conditions="General.PDF"> 240184</MadCap:conditionalText> <a href="../Resources/DesignDocs/240184 Annuity Quote Basic and Comparison Proposals.pdf" target="_blank" title="240184" alt="240184" MadCap:conditions="General.Online">240184</a>, original: <MadCap:conditionalText MadCap:conditions="General.PDF"> 227675</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"> <a href="../Resources/DesignDocs/227675 Annuity Quote Output-New Product Comparison Proposal Document.pdf" target="_blank" title="227675" alt="227675">227675</a></MadCap:conditionalText></li>
+                        </ul>
+                        <p>User Guide – <em>FireLight Platform User Guide</em>, New Activity section, <MadCap:conditionalText MadCap:conditions="General.PDF">"Quote"</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../UserGuide/New Activity/Quote.htm" alt="Quote">Quote [User Instructions]</MadCap:xref></MadCap:conditionalText> topic</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:pageBreak />
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

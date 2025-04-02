@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Enable Single User to Sign Multi Signer Types</b> checkbox to enable a single signing ceremony across signature types rather than per type. For example, when a person is both the Insured and Owner signer types, selecting this feature allows the person to sign for both types in a single signing ceremony. This feature is only for the client signer types. It is not available for agent signer types. <strong>Spotlight Video:</strong> See the <a href="https://vimeo.com/406913264/43b4ac38ea" target="_blank" title="FireLight Multi Sign Activity Enhancement" alt="FireLight Multi Sign Activity Enhancement">Multi Sign Activity Enhancement</a> Spotlight Feature Video for more information.</body>
+</html>

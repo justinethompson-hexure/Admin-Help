@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This project integrates FireLight<sup MadCap:conditions="General.Online">®</sup> with Milliman’s automated underwriting engine – Irix, which will allow agents to perform quality, real-time risk assessment on individual life insurance applicants while simultaneously completing a FireLight life application.</p>
+        <p>Irix interprets application data, Prescription Data, Medical Data, MIB, and MVR data to identify potential conditions (including severity) so that insurers can make better underwriting decisions faster.  This tool can be tailored to address each insurer’s unique underwriting guidelines.  Irix enables more consistent and efficient underwriting and improves the insurer’s business performance.</p>
+        <p>IntelliScript web services return Irix data in the form of overall rate class decisions and individual rules.  As a result, the XML data returned will contain additional elements not present for implementations utilizing Prescription Data alone.</p>
+        <p>The information returned from IntelliScript’s web services is leverageable via FireLight rules engine for validation within data entry. </p>
+        <p><b class="Bold">NOTE:</b> The Milliman integration is available in Wizard only.                                                                                                                                                                                                                                                                                    </p>
+        <p>Impacts:                                                                                                                                                                                                                                             </p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Workflow-&gt; Ensure proper signatures and/or client authorization (HIPAA) is secured prior to initiating external calls to Milliman                                                                                                                                                                                                                                    </p>
+            </li>
+            <li>
+                <p>Organization Configuration-&gt; Organization Settings-&gt;Admin-&gt;Third-Party Config                                                                                                                    </p>
+            </li>
+            <li>
+                <p>Designer-&gt; Form or Wizard Designer-&gt; Custom Action to trigger calls to Milliman                                                                                                                                                                                                                                                                                                                                                                           </p>
+            </li>
+            <li>
+                <p>Designer-&gt; Form and/or Wizard-&gt; Data Group Properties  to identify both data to be sent to Milliman as well as to receive return results                                                                                                                                                                          </p>
+            </li>
+            <li>
+                <p>Rule Sets-&gt; Evaluation of essential elements required to send data to Milliman as well as potential rules need to evaluate results based on carrier requirements.</p>
+            </li>
+            <li>
+                <p>Provider: Milliman Response file is routed to the provider so that all information returned can be accessible and utilized by the carrier.</p>
+            </li>
+        </ul>
+    </body>
+</html>

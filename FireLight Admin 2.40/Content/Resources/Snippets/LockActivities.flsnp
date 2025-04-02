@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>When Data Entry is completed, FireLight runs lock rules only before locking the activity in both the wizard and legacy forms UI. After running lock rules, FireLight verifies no validation errors exist before allowing the lock, which eliminates the possibility of locking and continuing into signatures when not at 100%. This includes consideration of Client Fill and Sign scenarios in all cases.</body>
+</html>

@@ -1,0 +1,926 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight v2.12 Release History</h1>
+        <p class="note"><b>NOTE:</b> If a design document is associated with an enhancement, click the link in the iConnect number to open the design document.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>2.12.0.394 September 14, 2018 Minor Production Release</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2>Enhancements</h2>
+                <p><b class="DRNumberBold">1035YellowPages</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 185303 </b> Updated FireLight to pull back the business street address from 1035YellowPages.com as default instead of pulling back the mailing address as default. If the street address is not found, FireLight pulls back the first address provided.</li>
+                </ul>
+                <p><b class="DRNumberBold">Integration</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 185353 </b>  Enhanced FireLight base to pass dataitems to integration on integration initialization.  Providers that Clear Mapped Data will have to remove it to prevent losing passed in dataitems.</li>
+                </ul>
+                <p><b class="DRNumberBold">Product Types</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 181617 </b> Added a new Pre Sale Suitability Review product type to FireLight.</li>
+                </ul>
+                <h2>Fixed Defects</h2>
+                <p><b class="DRNumberBold">Admin</b>
+                </p>
+                <ul>
+                    <li MadCap:conditions="General.Postpone"><b class="DRnumber">DR 182381 </b> Delete Rule tooltip did not disappear until navigating away from the page. Also, the message asking if the user wanted to overwrite changes was appearing when only one user was in the rule set. User had to cancel Save to close the message. This was fixed.</li>
+                    <li><b class="DRnumber">DR 182565 </b> Saving of rule sets was taking too long. This was fixed by making a change in the application firewall and by fixing the 'user has changed rule set' error by disabling the ability to click Save while the system is in process of saving a rule set. </li>
+                    <li><b class="DRnumber">DR 184056 </b> Rules were not being reset for the search option in packages until either the package rules were saved or the search cleared. This was fixed.</li>
+                    <li><b class="DRnumber">DR 184958 </b> Deployments page did not clearly state the timezone that is used for scheduled deployments. This was fixed by changing the name of the "Schedule Deployment at" box to Schedule Deployment at (Mountain Time). </li>
+                    <li><b class="DRnumber">DR 185197 </b> If a custom CRM was configured, it was not possible for the organization to also use a Redtail CRM. This was fixed. Enter a CRM Parameter of Redtail to specify Redtail CRM. Patched UAT/Staging/Production 7/17/2018.</li>
+                    <li><b class="DRnumber">DR 186328 </b> Unable to access rule sets to set approved states. Audit records were being written for all rules in a rule set regardless of whether they were changed, which was causing a timeout while loading the rule set. This was fixed by adding a check to ensure audit records are only written for rules that have changed.</li>
+                    <li><b class="DRnumber">DR 186715 </b> A Standard email template was being sent when a Branded email template should have been sent. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Applications</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 181970 </b> New applications incorrectly had an override date defined when they should not. This was fixed. Patched Production 8/7/18.</li>
+                    <li><b class="DRnumber">DR 184640 </b> Input-only pdfs were showing up in the external signature process, and should not have been. This was fixed by adding a check to ensure document visibility was taken into account for external signature pdf viewing.</li>
+                    <li><b class="DRnumber">DR 184835 </b> An error occurred when entering the signing ceremony if the application had e-sign declined. This was fixed.</li>
+                    <li><b class="DRnumber">DR 185343 </b> Product Type drop-down list on the new application view should be sorted alphabetically. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Check Boxes</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 184204 </b> Check boxes were not allowing users to select multiple checkboxes and were functioning like radio buttons. This was fixed by updating the system to check for an empty group name in a checkbox. If the group name is empty, the system only updates that checkbox. Otherwise, the system updates all items in the group.</li>
+                </ul>
+                <p><b class="DRNumberBold">Client Sign Request</b>
+                </p>
+                <ul>
+                    <li>
+                        <p><b class="DRnumber">DR 184640 </b> Input-only PDFs were showing up in external signature process, and should not have been. This was fixed by adding in a check to make sure document visibility was taken into account for external signature PDF viewing.</p>
+                    </li>
+                    <li><b class="DRnumber">DR 185368 </b> Requests dialog was showing the signature request was complete when it was not complete. This was fixed. Now the dialog will not show the signature request is complete until all document sets have been signed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Combo Boxes</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 183346 </b>  Rolled back the fix for this as it introduced a new bug. Initial default values of combo boxes are being set to an empty value when the dropdown options do not contain an empty option. The previous resolution was to set the dropdown value to the default option (1st option) if the value is empty. Because the combo control is updated with a value, but the data item is still blank, the combo displays a value, but a required rule on the field generates a validation message, since the data item is empty. This is working as expected and is not a bug.</li>
+                </ul>
+                <p><b class="DRNumberBold">CRM and Commission Lookups</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 187121 </b> CRM lookups and commission options selection were not populating the information in applications. A bug was introduced in the UAT release on 8/17/2018. This was fixed. Patched UAT 9/6/2018. </li>
+                </ul>
+                <p><b class="DRNumberBold">Document Upload</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 185267 </b> When uploading a document template, the selected document type in the combo box did not always match the internal document type of the document being uploaded. This was fixed. Patched UAT/Staging/Production 7/17/2018.</li>
+                </ul>
+                <p><b class="DRNumberBold">DTCC Codes</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 185200 </b> Updated to DTCC September 2018 spreadsheet and added new DTCC Codes (RI - RIA and AP - Authorized Party) to FireLight base.</li>
+                </ul>
+                <p><b class="DRNumberBold">FireLight Console</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 182763 </b> For a checked out application on the Console, client information such as SS# and name was not pre-filled on the applications. This was fixed by adding new rule nodes to the Console and having the Console update the dataitem of current form location on page update.</li>
+                    <li><b class="DRnumber">DR 184442 </b> Console was repeatedly bringing up e-signature forms to sign. The document set was repeating because it did not know it was complete. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Needs Determination</b>
+                </p>
+                <ul>
+                    <li MadCap:conditions="General.Postpone"><b class="DRnumber">DR 176881 </b> After completing a Needs Determination, Firelight was preventing users from selecting another product after navigating to a Product Type that had no products in it. This was fixed.</li>
+                    <li><b class="DRnumber">DR 186387 </b> In the application workflow, the Needs Determination PDF file was not being included in the application Documents list. This was fixed.</li>
+                </ul>
+                <p MadCap:conditions="General.Postpone"><b class="DRNumberBold">Signatures</b>
+                </p>
+                <ul>
+                    <li MadCap:conditions="General.Postpone"><b class="DRnumber">DR 184427 </b> On the Client Identification Verification page, the validation message for an invalid email address appeared as "The field ToEmail is invalid" instead of the expected "Email entered is invalid" message. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Wizards</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 185111 </b> In wizard fields that had diset rules, fields would not repopulate with the default value when the user entered blank in the field. The user had to go to another page and return to the field for the field to repopulate with the default value. This was fixed.</li>
+                    <li MadCap:conditions="General.Postpone"><b class="DRnumber">DR 186850 </b> Conditional forms with enabled signature controls were not added to the signing ceremony for wizard products. This was fixed.</li>
+                    <li MadCap:conditions="General.Postpone"><b class="DRnumber">DR 186875 </b> Validation was not getting triggered on required fields when an activity was opened and when a new page appeared. This was fixed. Required fields now display with a red background.</li>
+                </ul>
+                <p MadCap:conditions="General.Online"><a href="#top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>2.12.0.223 July 13, 2018 Production Release</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2>Enhancements</h2>
+                <p><b class="DRNumberBold">Applications</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/147808-Auto Submit Design Doc.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 147808</a></b> Added the ability to automatically submit after the signatures are complete for an application, and optionally notify the agent by email, when the Pre-Submit (Manual) review step is either not available, skipped or declined. In FireLight Admin in  Profiles/Groups/App tab, added the "Enable Auto Submit" and "Enable Auto Submit Email Notification" role code options. In Profiles/Email, added a new Auto Submit Email template. Added a new FLI_AUTO_SUBMIT data item that can be used in a rule to override functionality of the Enable Auto Submit role code option. </li>
+                    <li><b class="DRnumber">CMR 182071 </b> FireLight now prevents users from deleting applications that have been submitted or complete.</li>
+                </ul>
+                <p><b class="DRNumberBold">Comm100 Chat Service</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/179243-Design Comm100 Chat Service.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 179243</a></b> Added the ability to integrate with the Comm100 chat service across FireLight for customer support. The Comm100 chat service portal allows for real time communication and email between the User and Agent when help is needed. FireLight clients must contract directly with Comm100 to use their chat service. See <MadCap:xref href="../Features/Comm100 Chat Service Integration.htm">Comm100 Chat Service Integration</MadCap:xref> in the Admin Help for setup information. </li>
+                </ul>
+                <p><b class="DRNumberBold">FireLight Access</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/181602-Design MDE PGP Encrypt and Sign v2.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 181602</a></b> Added config settings and signing options to MDE Provider and config, which allow MDE providers to encrypt and sign the XML Payload for FireLight Access.</li>
+                </ul>
+                <p><b class="DRNumberBold">Groups</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 150199 </b> In FireLight Admin, added a Disable View Review Queue option on the Admin tab of the Groups page in Profiles. When the option is selected, the Review Queue option under Profiles on the Admin home page and the Review Queue option under Profiles on the navigation bar will not be visible. The user will not be able to edit the review queues or the review queue script in FireLight. </li>
+                </ul>
+                <p><b class="DRNumberBold">Integration - Remote Signature Request</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/184096-103 Signature Requests Design Approach.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 184096</a></b> Created a new web service endpoint that allows an organization to initiate a remote signature request when the 103 comes in with no interaction from the agent. Patched UAT.</li>
+                </ul>
+                <p><b class="DRNumberBold">Product Type</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 182819 </b> Added product type Hospital Indemnity to the Health product category/line of business in FireLight.</li>
+                </ul>
+                <p><b class="DRNumberBold">Reports</b>
+                </p>
+                <ul>
+                    <li>
+                        <p>Added the following ten Activity reports to FireLight:</p>
+                        <ul style="list-style-type: circle;">
+                            <li>Carrier Transactions by Product Type / Distributor Transactions by Product Type</li>
+                            <li>Carrier Transactions by Distributor / Distributor Transactions by Carrier</li>
+                            <li>Carrier Transactions by Distributor by Product Type / Distributor Transactions by Carrier by Product Type</li>
+                            <li>Number of Active Users by Organization (for Carriers and Distributors)</li>
+                            <li>Number of Registered Users by Organization ID  (for Carriers and Distributors)</li>
+                            <li>Number of Users with Submissions by Organization  (for Carriers and Distributors)</li>
+                            <li>Number of users with Only 1 Submission by Organization  (for Carriers and Distributors)</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><b class="DRNumberBold">Review Queue</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 181385 </b> Added sort order for review queues. Review queues now display in sequential order.</li>
+                </ul>
+                <p><b class="DRNumberBold">Salesforce</b>
+                </p>
+                <ul>
+                    <li>Added detailed setup instructions for adding a FireLight Integration connected app in Salesforce. See the <MadCap:xref href="../Features/Salesforce Integration.htm">Salesforce Integration</MadCap:xref>  topic in the Admin Help and the "Salesforce Integration Setup" topic in the user guide.</li>
+                </ul>
+                <h2>Fixed Defects</h2>
+                <p><b class="DRNumberBold">Admin</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 181472 </b> In wizards, rules were not running on an invalid or unformatted date. This was fixed. Modified the date picker control to send all values when the user navigates off the control, even if the value is not a valid date.</li>
+                    <li><b class="DRnumber">DR 182176 </b> In the wizard designer, setcomboitems rules did not work (they would not replace or append). This was fixed.</li>
+                    <li><b class="DRnumber">DR 182382 </b> Saving of Mappings was not working. This was fixed. Applied database change to QE, UAT, Staging, and Production 5/15/2018.</li>
+                    <li><b class="DRnumber">DR 182397 </b> Mappings were not showing up for deployment after saving. This was fixed by updating the timestamp when saving or deleting mappings. Also updated button captions to be plural to indicate that all mappings is saved/deleted.</li>
+                    <li><b class="DRnumber">DR 182487 </b> In the wizard designer, wizard pages were getting deleted when adding new items to previous pages. This was fixed by modifying the page selection dropdown change handler. Patched UAT 5/17/18.</li>
+                    <li><b class="DRnumber">DR 182612 </b> The setpackagestatebyname rule caused an exception if a form had the "Will Be Replaced By" property set. The real problem is the logic that loads package names for the application forms does not take into account forms that are replaced by another form, leading to the exception due to a null package name. A workaround is to use "This Form Expires On" property for the  form to be replaced and use "This Form Begins On" property for the new form instead of using the "Will Be Replaced By" property.</li>
+                    <li><b class="DRnumber">DR 182769 </b> Include source organization and environment in deployment notification emails. This was completed.</li>
+                    <li><b class="DRnumber">DR 182809 </b> In the wizard designer, if a date picker or dropdown was placed next to a text box, the fields did not align properly. This was fixed by changing the CSS class. Patched UAT 5/25/18.</li>
+                    <li><b class="DRnumber">DR 183169 </b> In Profiles/Email, the Branding Firm option  was not working correctly when there was no locale. This was fixed.</li>
+                    <li><b class="DRnumber">DR 183771 </b> In the Rules window for the form designer and the Rules window for the wizard designer, the Yes and No buttons were in reverse order in the save rule set confirmation dialog. This was fixed. Now the Yes button is on the left and the No button is on the right for both save rule set confirmation dialoges.</li>
+                    <li><b class="DRnumber">DR 184746 </b> Distributor organizations could not save sales agreements that had a Start and/or End date because the Time Zone, Start, End and Replaced Product fields were not being posted to the server. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Activities</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 181599 </b> When users with Role Codes that had the Disable Save Activities option selected in Groups tried to save an activity when data entry reached 100%, the standard Error page did not redirect to the Error view. This was fixed by disabling all actions that result in saving the application (continue, print, custom action, transfer, etc.). </li>
+                </ul>
+                <p><b class="DRNumberBold">All Activities</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 180209 </b> All Activities page did not have the ability to filter by Locale. A new Locale dropdown list control was added above the grid on the All Activities page. The Locale list is available only when activities exist for more than one locale.</li>
+                    <li><b class="DRnumber">DR 182962 </b> The rule editor dialog would randomly close without providing any error information. Fixed server-side error handling within the wizard designer and rule editor so the user is provided with the proper information and dialogs are not closed improperly.</li>
+                    <li><b class="DRnumber">DR 183969 </b> Filter by Activity type, Status and Sort were missing in UAT. This was fixed in the code to prevent this and added a migration script to prevent this from happening in Staging and Production.</li>
+                    <li><b class="DRnumber">DR 184591 </b> Search results in All Activities were not retained past the first page of results. When the user went to the next page, the search results were lost. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Applications</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 181580</b> After declining signatures and clicking Continue to submit the application, the user would be returned to the edit application view where the Continue button would still be enabled. The application was being rolled back to locked status due to the conflicting settings of the distributor's environment and the carrier's for the Allow Submit on E-Sign Decline option.   This was fixed. The app will now be set to submitted rather than rolled back to locked in the case where the application is transmitted through the carrier when their Allow Submit on E-Sign Decline option is turned on and the distributor's setting is off.</li>
+                    <li><b class="DRnumber">DR 182243 </b> Client data for delayed 103 was being saved off, but was not populating the form fields. This was fixed by adding the missing session ID at application creation to allow the delayed 103 data to populate the form fields. Patched Production 5/16/2018.</li>
+                    <li><b class="DRnumber">DR 182460 </b> When Enable Residence State option was enabled in the Sales Agreement and the user chose to cancel or change Jurisdiction or Product Type, FireLight did not display any products.</li>
+                    <li><b class="DRnumber">DR 183382 </b> An error locked an application if a form contained a Calendar control with a Date Format and the date value was invalid. This was fixed by modifying the code to ignore errors parsing the date.</li>
+                    <li><b class="DRnumber">DR 183765 </b> Conditional packages not always shown on initial creation of application; after adding a package containing a required template document, upload of the document within the same session was not required. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Check Boxes</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 184204 </b> Check boxes were not allowing users to select multiple checkboxes and were functioning like radio buttons. This was fixed by updating the system to check for an empty group name in a checkbox. If the group name is empty, the system only updates that checkbox. Otherwise, the system updates all items in the group.</li>
+                </ul>
+                <p><b class="DRNumberBold">Client Fill and Sign</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 182247 </b> Client Fill and Sign parties were not populating if the application had not been saved. This was fixed. Patched UAT, Staging, and Production 5/12/18.</li>
+                </ul>
+                <p><b class="DRNumberBold">Combo Fields</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 181513 </b> Read only combo fields did not always display a red error border indicating an error message. This was fixed.</li>
+                    <li>
+                        <p><b class="DRnumber">DR 183346 </b> Initial default values of drop-downs were being set to an empty value when the drop-down options did not contain an empty option. Set the drop-down value to the default option (1st option) if the value is empty. Patched UAT 7/11/2018.</p>
+                    </li>
+                    <li><b class="DRnumber">DR 184412 </b> Read only combo fields did not work correctly in Internet Explorer and Edge web browsers. This was fixed.</li>
+                    <li>
+                        <p><b class="DRnumber">DR 184872 </b> Disabled combo box and calendar control not re-enabled if disabled and then made read-only. This was fixed. Patched UAT 7/11/2018.</p>
+                    </li>
+                </ul>
+                <p><b class="DRNumberBold">Error Messages</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 181513 </b> Read only combo fields did not always display a red error border. This was fixed by modifying the combos to behave like read-only controls instead of disabling.</li>
+                </ul>
+                <p><b class="DRNumberBold">FireLight Access</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 182339 </b> An error occurred when loading the Update User page. This was fixed. Patched Production 5/16/18.</li>
+                </ul>
+                <p><b class="DRNumberBold">FireLight Console</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 182767 </b> Console crashed when the user moved off a field with a SSN format. This was fixed by removing recursive logic that was causing an issue in the Console.</li>
+                </ul>
+                <p><b class="DRNumberBold">Other Actions - Document Upload</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 183085 </b> Staging/Production are inconsistent in showing Browse button for upload initiated from the form and showing Choose File button for uploads initiated from Other Actions -&gt; Documents. The button is intended to be labeled Choose File and not Browse. Also a weird screen appeared in UAT. This was caused by an incomplete deployment to UAT, which was fixed. </li>
+                    <li><b class="DRnumber">DR 183220 </b> Upload of a PDF file redirected to a blank white screen after upload. This was caused by an incomplete deployment to UAT, which was fixed.  </li>
+                </ul>
+                <p><b class="DRNumberBold">Preferences</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 182302 </b> When changing and saving either Jurisdiction or Product Type in Preferences, the Product Type was empty when creating a New Activity unless the user logged out and logged back in. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Review Queue</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 184613 </b> Documents were not showing in the documents list in the Review Queue. The document link tag was defaulting to white color. This was fixed. The document link tag now shows in the normal blue link color.</li>
+                </ul>
+                <p><b class="DRNumberBold">Upload Document Types</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 182044</b> Modified FireLight to combine the carrier and distributor Upload Document Types list profile so that the distributors do not need to be updated with carrier document types. Included any carrier template document types not defined in the distributor, following the distributor types. Patched Production 5/16/2018 and updated patch in UAT 5/24/2018. Additional patch applied to UAT 7/11/2018: when uploading on a carrier form in a distributor environment, first include any carrier template document types, then add any distributor document types with a different description than the carrier template document types.</li>
+                </ul>
+                <p><b class="DRNumberBold">Wizards</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 179778 </b> Wizard CRM button needs alphabetical search option for Salesforce and Red Tail. This was fixed by adding an alphabetical search  to the dialog that is launched from the CRM button. </li>
+                    <li><b class="DRnumber">DR 183589 </b> Wizard date picker field was defaulting to current date instead of blank. This was fixed. Now it defaults to blank. Patched UAT 7/11/2018.</li>
+                    <li><b class="DRnumber">DR 183913 </b> Wizard date picker fields were showing as required. The date picker field was not showing errors properly. Error alignment was off and the input field did not have the same styling as other inputs. This was fixed by adding error logic and appropriate CSS classes to match other inputs. Patched UAT 7/11/2018.</li>
+                    <li><b class="DRnumber">DR 183939 </b> Wizard background color was not extending with the screen. This was fixed. Patched UAT 6/19/18.</li>
+                </ul>
+                <p MadCap:conditions="General.Online"><a href="#top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>2.12.0.162 May 11, 2018 Production Release</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2>Enhancements</h2>
+                <p><b class="DRNumberBold">Account Opening</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170065 Account Opening.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170065</a> </b>  Added a new Account Opening pre-sale transaction type. Account Opening is a submitted transaction separate from other transaction types for reporting and downstream processing.  Account Opening has its own Post Over transaction type to send users directly into the Account Opening transaction or users can click Account Opening on the FireLight Home page.  The initial transaction screen includes the Jurisdiction list and a Custodian list if more than one Custodian exists.</li>
+                </ul>
+                <p><b class="DRNumberBold">All Activities</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/163505_Retain results of the last search.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 163505</a> </b>  Added the ability for users to retain the last search criteria used during the session. When searching for a particular activity in All Activities, the user can go into an activity to view the details and then come back to the search results. FireLight retains the search criteria in All Activities during the session until the user clears the search criteria. </li>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/169972_User search in All Applications.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 169972</a><![CDATA[  ]]></b> Added a search feature for the User List (formerly Owner List) on the All Activities page. This allows a user who has visibility into multiple agents’ applications, through either User Share or Group code access, to search for a specific user name.</li>
+                </ul>
+                <p><b class="DRNumberBold">Allow Submit on E-Sign Decline</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 174621 </b> Added the ability to allow the carrier to receive submission even if the distributor has Allow Submit on E-Sign Decline feature disabled in Organizations.  Implemented as another workflow type, SubmitCarrierOnly, which will call the carrier provider only when the user completes an application if: 1) in a distributor environment, 2) the distributor has the Allow Submit on E-Sign Decline checkbox cleared (disabled) in Organizations, and 3) the carrier has Submit on E-Sign Decline selected (enabled) in Organizations.</li>
+                </ul>
+                <p><b class="DRNumberBold">API Layer to Call FireLight to Run Illustrations</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 172089 </b> Added a flexible API layer to FireLight. The API returns calculation results based on the provided request values. This API forwards the request to the ForeSight Illustration Services web service to provide the calculation results. Part of what FireLight adds is a call to the Rules engine to validate the inputs before ForeSight Illustration Services is called. </li>
+                </ul>
+                <p><b class="DRNumberBold">Auto Save</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170040_Auto_Save_When_Reaching_100%25_Updated.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170040</a> </b>  Added auto save functionality so when an activity reaches 100%, it is automatically saved. This enables other actions (e.g., print options) immediately after an activity reaches 100%, without the user having to first click the Save button. In FireLight Admin&gt; Profiles/Groups/App tab, select Enable Auto Save to enable the Auto Save feature for each applicable role code.</li>
+                </ul>
+                <p><b class="DRNumberBold">Benchmark Tool</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/164112 Benchmarking compare data items.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 164112</a> </b> Added a "Data Item Properties (P)" test condition to compare data item properties (value, visible, enabled, read-only) for pass/fail of benchmarks. See the <i>FireLight Platform User Guide</i> for Benchmark tool instructions.</li>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170466 Benchmarking compare form numbers.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170466</a> </b> Added a "Form Name/Number (N)" test condition to compare form name and number that are in the benchmark so users can quickly identify incorrect forms.</li>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170491 Updating Benchmarking Mass .pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170491</a><![CDATA[  ]]></b> Added the ability to update multiple benchmarks using a new Accept button. For example, after a new release, you can select multiple failed benchmarks and click the Accept button to accept the benchmark run results as the new benchmarks. </li>
+                </ul>
+                <p><b class="DRNumberBold">Client Fill and Client Fill &amp; Sign Requests</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170556-AttachDocumentsWithClientFillClientFillSign.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170556</a> </b> Added the ability for clients to attach documents during the Request Client to Fill App and Request Client to Fill &amp; Sign requests. Clients can click the “Documents” link on the top navigation bar in “Client Fill” and “Client Fill and Sign” pages, which uses the existing FireLight functionality for uploading outside documentation, including the upload dialog buttons to quick-launch an upload, template functionality, notification that a template is required, document type association with a template, signature tags on the template, inclusion in the percent complete if a template is required, and to remove attached documents.</li>
+                </ul>
+                <p><b class="DRNumberBold">CSS Enhancements</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 177593 </b> Added the ability to hide e-signature tags during form entry.</li>
+                    <li><b class="DRnumber">CMR 177601 </b> Added the ability to hide e-signature tags during the signing ceremony.</li>
+                    <li><b class="DRnumber">CMR&#160;177611 </b> Added the ability to add branding and customize the text on the session expired page.</li>
+                </ul>
+                <p><b class="DRNumberBold">Deploy Mappings</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 170107 </b> Added the ability to deploy mappings to other environments via a new Mapping Configuration synchronization scope on the Deploy page/Deployment tab in FireLight Admin.</li>
+                </ul>
+                <p><b class="DRNumberBold">Designer (Forms and Wizards)</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/150069-UpdateFunctionalityOfRulesForMultipleFields.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 150069</a> </b> In FireLight Admin, added the ability to add a new rule for multiple fields in the forms Designer. Because users need to select multiple fields in a form, this feature is available only in the Designer/Form Designer page and its associated Rules Window. It is not available in the Rule Sets page in Profiles. This feature is for new rules only and cannot be used for updating rules.</li>
+                    <li><b class="DRnumber">CMR 170106 </b> In FireLight Admin, enhanced checkbox controls to support export values just like a radio button.</li>
+                </ul>
+                <p><b class="DRNumberBold">Direct Login Clients</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/157909 Password Reset.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 157909</a> </b> Added the ability for direct login client users to reset their own password for the FireLight application and FireLight Admin.</li>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170214-DesignDocument-TwoFactorAuthentication.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170214</a> </b> In FireLight Admin, added a setting on the Organizations page in Profiles that requires Two-Factor authentication before allowing direct login access to FireLight. See the "Two-Factor Authentication (Direct Login Users Only)" topic in the FireLight Platform User Guide and 2-Factor Authentication on the Organizations page. </li>
+                </ul>
+                <p><b class="DRNumberBold">DTCC</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 178903 </b> Extended the FireLight base class to allow the providers to set the new options reflected in the latest DTCC record layout from March, 2018.</li>
+                </ul>
+                <p><b class="DRNumberBold">Edit Masks</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/165125-NumericCurrencyMask.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 165125</a> </b> In FireLight Admin, added a numeric currency Edit Mask for currency or dollar amount on the Organizations page in Profiles. You can apply the mask to Text Box fields in the forms Designer. </li>
+                </ul>
+                <p><b class="DRNumberBold">Email – Sub Firm Branding</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 180598 </b> Added the ability to brand the email templates for sub firms on the Email page.  To add branding for sub firm emails, contact your Strategic Account Manager to have the FireLight team create the list of Branding Firms for you. Once that list is created, you can manage the sub firm emails on your own by selecting an email template and then selecting a sub firm in the Branding Firm list on the Email page. NOTE: Organizations that currently have Branding Firms have had their Branding Firm list created in their environments.</li>
+                </ul>
+                <p><b class="DRNumberBold">FireLight Access</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 180032 </b> FireLight Access distributors were generating duplicate policy numbers as their respective carriers. This was fixed.</li>
+                    <li><b class="DRnumber">CMR 181149 </b> Modified the CSV import to update existing users.</li>
+                </ul>
+                <p><b class="DRNumberBold">FireLight Illustration</b>
+                </p>
+                <ul>
+                    <li>Added the optional FireLight Illustration feature. FireLight Illustration  adds basic illustration components (user interface wizards, rule sets, illustration engine, and output) that provide the Guided Illustration and Illustration activities in FireLight. FireLight Illustration currently uses the ForeSight<sup>®</sup> illustration engine to provide the calculations and output for illustrations.   (Hosting of third-party engines in FireLight Illustration is available in a future release.) The FireLight Illustration feature supports only wizards (no forms) for data entry. Contact your Strategic Account Manager for detailed information. See <MadCap:xref href="../Features/FireLight Illustration.htm">FireLight Illustration</MadCap:xref> in Features for an overview.</li>
+                </ul>
+                <p><b class="DRNumberBold">FireLight Statuses</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/169970-FireLightStatusUpdate.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 169970</a><![CDATA[  ]]></b> Updated application statuses to reflect the true status of the application order from a client and agent perspective in Recent Activity, All Activities, History, and the Audit trail. See <MadCap:xref href="../Getting Started/FireLight Display Status Workflows.htm">FireLight Display Status Workflows</MadCap:xref>.</li>
+                </ul>
+                <p><b class="DRNumberBold">Global Data Item: FLI_REQUIREMANUALREVIEW</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 173296 </b>  When the organization setting for Allow E-Approval (manual PreSubmit review) was selected and the FLI_REQUIREMANUALREVIEW global data item was set to "false" and the user clicked the Continue button, the user was still seeing the sub menu with the "Request Review" and "Submit" options. This was updated. Now when the organization setting for Allow E-Approval  is selected and the FLI_REQUIREMANUALREVIEW data item is set to "false," the system will not show the Review step or the sub menu with the "Request Review" and "Submit" options. When the organization setting for Allow E-Approval  is selected and FLI_REQUIREMANUALREVIEW is set to "true," FireLight takes the user directly to the PreSubmit review process and does not show the sub menu with the "Request Review" and "Submit" options.</li>
+                </ul>
+                <p><b class="DRNumberBold">Groups</b>
+                </p>
+                <ul>
+                    <li>In FireLight Admin on the Profiles/Groups page, several options were renamed to match the name change from "application" to "activity" in FireLight. </li>
+                    <li><b class="DRnumber">CMR 177603 </b> In Profiles/Groups on the App tab, added a new Disable Log Off option. Select the Disable Log Off checkbox to hide/remove the Log Off option on the top navigation bar in FireLight.</li>
+                    <li><b class="DRnumber">CMR 177604 </b> In Profiles/Groups on the App tab, added a new  Disable Show Annotations option.  Select the Disable Show Annotations checkbox to disable the Show Annotations feature on the Other Actions menu in FireLight.</li>
+                    <li><b class="DRnumber">CMR 177609 </b> In Profiles/Groups on the App tab, added a new Enable Custom Submit Page option that enables a custom submit page by role code. When enabled, the client is directed to a custom page after submission that can be branded by organization. </li>
+                </ul>
+                <p><b class="DRNumberBold">Home Page Styling</b>
+                </p>
+                <ul>
+                    <li>
+                        <p>Beginning with FireLight v2.12, we updated the styling for the Home page because we needed to adjust the layout of the Home page to support all of the new activities. Based on feedback from clients, we made some additional changes to the Home page so that if you enable 3 activities or less the Home buttons will stack vertically like they did in v2.11.  Once you exceed 3 activities, the Home buttons will shift to a two-buttons-per-row layout that you see today in v2.12.</p>
+                        <p>You do also have the ability to customize the icons on the home page.  We now support the usage of Font Awesome but can also include custom images if you had custom images defined in 2.11. More details about font awesome can be found on their website, <a href="https://fontawesome.com/v4.7.0/icons/" target="_blank">https://fontawesome.com/v4.7.0/icons/</a></p>
+                    </li>
+                </ul>
+                <p><b class="DRNumberBold">Localization</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 148022 </b> Added the ability to support multiple languages/locales in FireLight. Added the ability for an agent to select from multiple languages/locales in FireLight in which to select products and view lists, labels and messages in the localized language for an activity. Contact your Strategic Account Manager to initiate the localization process for your organization, including translation updates, database updates, and possible Provider changes. See <MadCap:xref href="../Features/Localization.htm">Localization</MadCap:xref> in the Admin Help or Admin Guide for setup instructions. </li>
+                </ul>
+                <p><b class="DRNumberBold">Notifications</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/157022_Deployment Notifications.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 157022</a> </b> In FireLight Admin, added the ability to send an additional email notification to each organization receiving the deployment. In addition, added support to enter multiple email addresses for each organization separated by a semicolon  in the Deployment Notification Email field on the Organizations page in Profiles. If distributors add one or more deployment notification email addresses in this field, notifications of Distributor configurations that any of their carriers deploy will also be sent to the distributor.</li>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/163150_add X to close validation message.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 163150</a> </b>  In FireLight application, added an 'X' to validation messages so users can close a validation message to view the field beneath the message.</li>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170425_Automatic Notify if a RuleSet is in use by another user.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170425</a> </b> In FireLight Admin, added an automatic notification if an unlocked Rule Set is in use by another user and has been saved by that user since they began their work. The notification asks the second user if they want to overwrite the first user's saved changes, discard their own changes, or cancel their own changes. </li>
+                    <li><b class="DRnumber"><a href="../Resources/DesignDocs/170426_Automatic Notify if a Form is in use by another user.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170426</a> </b>  In FireLight Admin, added an automatic notification if an unlocked Form is in use by another user and has been saved by that user since they began their work. The notification asks the second user if they want to overwrite the first user's saved changes, discard their own changes, or cancel their own changes.</li>
+                </ul>
+                <p><b class="DRNumberBold">Product Type</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 180645 </b> Added the Indexed Variable Annuity product type to FireLight base.</li>
+                </ul>
+                <p><b class="DRNumberBold">Required Templates</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170776_RequiredTemplates.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170776</a> </b> FireLight now includes required templates in the application % complete indicator and displays an error if the required template form is missing by highlighting the template form in red font in the Open form list. Clicking the missing template form in the form list opens the template warning message with links to complete the requirement (upload the missing form).</li>
+                </ul>
+                <p><b class="DRNumberBold">Reports</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="../Resources/DesignDocs/170244_Create Abandon Report.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170244</a> </b>  Added a new Admin report for abandoned activity. Abandoned Activity Report  lists the applications that are not submitted where the last updated date is X days. Report includes Application name, Policy Number, App Created Date, Carrier, Product, Product Type, Agent ID, Agent Role Code, Current Status of App, Last Updated Date and Time passed from today to last updated (days).</li>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170245_New Report for How the Client Signed.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170245</a> </b>  Added a new Admin report for how the client signed (Remote, Sign Now) and indicates whether Client Fill or Client Fill &amp; Sign was used. Report includes Carrier, Distributor, Agent ID, Agent Role code, App ID, Number of signer roles on the application, Client role type, Signing session ID, Signer, Signer multiple roles, Signing Type, Client Fill (Y/N), and Client Fill and Sign (Y/N).</li>
+                </ul>
+                <p><b class="DRNumberBold">Restrict Size of Attachments</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170075_Restrict size of attachments.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170075</a></b> To reduce transmission errors caused by users uploading extremely large attachment documents, added a "Maximum Upload File Size" setting in FireLight Admin on the Organizations page that allows organizations to set a maximum file size limit on documents uploaded by their users. Users can upload files from the Other Actions menu/Documents, from a Button control with Action Type set to Custom File Upload, or from attaching documents in the Review Queue or from Client Fill and Client Fill and Sign requests. If a carrier and distributor both have a maximum upload file size set, FireLight will use the most restrictive  setting.</li>
+                </ul>
+                <p><b class="DRNumberBold">Review Queue</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170326 Enhance Reviewer forms functionality.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170326</a><![CDATA[  ]]></b> Enhanced Reviewer forms functionality in the  post-submission review queue workflows to allow the reviewer to manage the reviewer only forms and access them when they are needed. In FireLight Admin, you can now set reviewer forms to optional or required. In FireLight Admin/Profiles/Packages page, added Reviewer Optional in the Package Type list for the optional reviewer forms package.  Only one type of reviewer-only package is available per Sales Agreement—a Sales Agreement cannot have both a ‘Reviewer’ (required) type package and a ‘Reviewer Optional’ type package. If a Sales Agreement contains this combination, an error message will display when the Save button is clicked and the Sales Agreement will not be saved. In FireLight Admin on the Profiles/Sales Agreement page, the Package Duty list is hidden on all Reviewer and Reviewer Optional packages and those packages default to Required. Additionally, the Review button can now be branded through the CSS to be named in a manner that the firm will understand (e.g., "Lock" instead of "Review"). Contact your Strategic Account Manager if you would like to rename the review button.</li>
+                </ul>
+                <p><b class="DRNumberBold">Salesforce Integration</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="../Resources/DesignDocs/180269-Salesforce Integration.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 180269</a> </b> Added integration with Salesforce CRM that allows data to be pulled from Salesforce into FireLight using a custom action button on a form. For setup instructions, see <MadCap:xref href="../Features/Salesforce Integration.htm">Salesforce Integration</MadCap:xref> in Features.</li>
+                </ul>
+                <p><b class="DRNumberBold">Signer Types</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 178970 </b> Made adding signer types configurable without a code change. Now, only a SignerType list profile change is needed to add a signer type. There are no changes from a user interface perspective for existing signer types.</li>
+                </ul>
+                <p><b class="DRNumberBold">Wizard User Interface</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 172087 </b> Enhanced FireLight Admin to include a Designer tool for Wizards. Carriers and distributors can build their own user interface with reflexive questions in a wizard presentation layer, create rule sets for the wizards, and assign them to a product, package, and selling agreement. Contact your Strategic Account Manager to learn more. See <MadCap:xref href="../Design/Wizards/Wizard Designer.htm">Wizards</MadCap:xref> for detailed information.</li>
+                    <li><b class="DRnumber">CMR 172088 </b> Enhanced rendering of wizards created in FireLight Admin and merging carrier and distributor wizards into one user interface (UI). Using this workflow, the PDFs do not display to the end user during data collection, but are filled out based on the wizard entry and presented during the signing ceremony.</li>
+                </ul>
+                <h2>Fixed Defects</h2>
+                <p><b class="DRNumberBold">Admin</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 177354 </b> In FireLight Admin, increased the delay before purging deleted configuration data (Group, Product, Sales Agreement, etc.) to 1 year (instead of using the purge uncompleted applications purge policy) to mitigate the likelihood of the data getting purged before being deployed.</li>
+                    <li><b class="DRnumber">DR 178138 </b> Deployment notification emails did not indicate success or failure status. This was fixed.</li>
+                    <li><b class="DRnumber">DR 179990 </b> There were issues with the sign out email in Production changing to what was set up in UAT. This was fixed by excluding the Support Email and App Signout URL from the Organization deployment scope and also indicating which fields are not deployed.</li>
+                    <li><b class="DRnumber">DR 180373 </b> An error occurred in Deployment when loading a large number of forms. This was fixed by increasing the number of forms limit.</li>
+                    <li><b class="DRnumber">DR 180445 </b> When form fields were uploaded into FireLight, they were being retained in an interactive form, which could get removed before transmission during back-end processing. This was fixed. Now form fields are flattened onto PDFs when they are uploaded into FireLight so they do not get removed before transmission during back-end processing.</li>
+                    <li><b class="DRnumber">DR 181086 </b> On the Wizard UI, copyappstatus tag was not working correctly. This was fixed.</li>
+                    <li><b class="DRnumber">DR 181821 </b> The isnewapp and copyappstatus nodes were not working. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">All Activities</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 180804 </b> An error occurred when opening purged applications that had no forms. This was fixed.</li>
+                    <li><b class="DRnumber">DR 181550 </b> The Advanced Search drop-down list was showing incorrect items. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Applications</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 179814 </b>  When an application was submitted in one browser instance while it was open in another browser instance, the application submitted with missing information because a form was changed in the second browser instance before submission in the first browser instance. This was fixed by checking for whether the application has errors before locking the application, in case it was updated and saved with errors in another browser tab or window.</li>
+                    <li><b class="DRnumber">DR 181970 </b> A base bug was causing the System Override Date to be defined on all new applications created in FireLight, which also (incorrectly) fed into the 103 XML document TransEffDate. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Benchmark Tool</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 175490 </b> Benchmark run application was not hidden if error occurred while generating the application. This was fixed.</li>
+                    <li><b class="DRnumber">DR 181964 </b> Export benchmarks was failing for a benchmark that had no run data. This was fixed.</li>
+                    <li><b class="DRnumber">DR 182014 </b> The comparison logic was not matching correctly for forms with multiple instances. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Client Fill &amp; Sign</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 176769 </b> Client fill and sign requests expired after 1 day instead of using the Requests Timeout organization setting.  This was fixed. </li>
+                </ul>
+                <p><b class="DRNumberBold">Client Signature Request</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 179135 </b> When typing in the Client Name field, a blank line was added to the end of the message body with each character that was typed. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Copy Application</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 179217 </b> FLI_ROLE_CODE does not update when an application is created using "copy as is." This was fixed.</li>
+                    <li><b class="DRnumber">DR 180046 </b> Read-only data items could prevent completion of an application after copying with changes. This was fixed by making non-system (FLI_) data items non-read-only when copying an application. </li>
+                </ul>
+                <p><b class="DRNumberBold">Document Upload</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 152414 </b> In the Document Upload dialog, the Upload button was being improperly enabled and disabled, which induced an Internet Explorer rendering bug. This was fixed.</li>
+                    <li><b class="DRnumber">DR 181420 </b> Received "The requested URL was rejected..." errors when uploading documents that exceeded the maximum 20 MB for file upload size. This was fixed by changing the Maximum Upload File Size setting in Admin from 24 to 20 MB to reflect the actual maximum.</li>
+                    <li>DR <b class="DRnumber">181933 </b> Timeouts occurred when uploading large documents. This was fixed by increasing the request timeout from 110 to 300 seconds.</li>
+                </ul>
+                <p><b class="DRNumberBold">FireLight Statuses</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 180345 </b> Update display status to show reviewer comments from every post-submission review queue in the Review Status. Approval comments are now saved in the application audit for each review queue that it is approved in.  The display status for these are set at In Review because we don't know if it is the last queue.  Added a separate audit to record the ReviewComplete display status at the end of the review process.</li>
+                    <li><b class="DRnumber">DR 180798 </b> In the UAT environment, application status was showing Signatures Complete when only 1 of 5 signatures were completed. This was fixed. </li>
+                </ul>
+                <p><b class="DRNumberBold">Form Generation</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 180440 </b> When form entry reached 100% and you saved and went back into the application, form entry would be 99%. The form entry was not always recalculating so that the UI would reflect any new validation messages. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Illustration Upload Pop-Up Message</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 181272</b> An Illustration Upload pop-up message did not appear when agents created or clicked on a Life application with a jurisdiction of Pennsylvania. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Navigation Popups</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 181008 </b> Some popups that were showing in FireLight v2.11 after the Signatures step were not showing in v2.12. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Needs Determination Product Filtering</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 179474 </b> After completing a needs determination package, a pop-up was stating that no product was available for the application. This was fixed. Now the pop-up does not show when products are still available to the agent (previously, it would show if there were no products listed for the given jurisdiction and/or product type selection). Patched v2.11 UAT 4/6/2018.</li>
+                    <li><b class="DRnumber">DR 156446 </b> Request for more information to be provided to the user when no products were available after needs determination product filtering occurred. This has been addressed. Now, when no products are available based on a Needs Determination app, a pop-up displays, "No products are available based on your needs." When  no products are available based on a Needs Determination app, but other products are still available that are not included in the needs determination product filtering, the pop-up does not appear.</li>
+                </ul>
+                <p><b class="DRNumberBold">Network Traffic</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 179888 </b> Network traffic was showing a 404 error when navigating to the Home page. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Popup Messages</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 181823 </b> When testing the Copy functionality from the Create Family Application page, popup messages appeared in error instead of the expected popup message. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Preferences</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 179862 </b> After selecting a Jurisdiction in Preferences, it could not be "unselected." This was fixed.</li>
+                    <li><b class="DRnumber">DR 179886 </b> Adding reviewers in Preferences produced a generic error. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Review Queue</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 174995 </b> When a review request was sent to the pre-submission review queue, the Pending Request dialog showed the entire body of the email request in the agent's view. This was fixed.</li>
+                    <li><b class="DRnumber">DR 178053 </b> Unable to approve or reject in review queue when name in SSO contains newlines. This was fixed by trimming newline characters from the SSO user info and escaping newlines in the username within the Review Queue.</li>
+                    <li><b class="DRnumber">DR 178959 </b> When there was no post-submission (OSJ) review queue script, and an application was approved in the pre-submission (manual) review queue, the request remained in pending status. This was fixed.</li>
+                    <li><b class="DRnumber">DR 180145 </b> The application name was not showing in the Application History window in the Review Queue. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Rules</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 180661 </b> In FireLight Admin, an error message was not given on a malformed rule. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Upload Document Button</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 152414 </b> When adding a button to a form to allow the user to upload a document other than a PDF, the Upload button was not viewable until pausing over the word "upload" in Internet Explorer. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Signatures/Signing Ceremony</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 175192 </b> If an agent signed and sent a signature request to the client, and then the agent attempted to re-sign  after client signatures were completed without first refreshing the page, an exception occurred. This was fixed.</li>
+                    <li><b class="DRnumber">DR 176710 </b> In the signing ceremony when the birth date is pre-filled into the Client Identification Verification, if the value was removed to type a new value, the input was no longer formatted. This was fixed by adding a mask to the field in order to format the input values if the pre-filled values are cleared. The full date values are required in order to clear the error message when you leave the field. </li>
+                    <li><b class="DRnumber">DR 181309 </b> The threshold for the minimum pixels required for a signed signature was set too high.  For example, the system would not accept a 5 character first and last name. This was fixed by changing the threshold for the minimum required pixels for the signature pad to 500 pixels to allow for short names.</li>
+                </ul>
+                <p><b class="DRNumberBold">Tab Order</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 179256 </b> Tab Order was not working for Radio button or Check box on Firefox. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Wizards/Consumer Portal</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 181887 </b> Check box fields were not updating in wizards and throwing errors. This was fixed.</li>
+                </ul>
+                <p MadCap:conditions="General.Online"><a href="#top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown MadCap:conditions="General.Postpone">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>2.12.0.149 April 27, 2018 UAT Release</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2>Enhancements</h2>
+                <p><b class="DRNumberBold">Home Page Styling</b>
+                </p>
+                <ul>
+                    <li>
+                        <p>Beginning with FireLight v2.12, we updated the styling for the Home page because we needed to adjust the layout of the Home page to support all of the new activities. Based on feedback from clients, we made some additional changes to the Home page so that if you enable 3 activities or less the Home buttons will stack vertically like they did in v2.11.  Once you exceed 3 activities, the Home buttons will shift to a two-buttons-per-row layout that you see today in v2.12.</p>
+                        <p>You do also have the ability to customize the icons on the home page.  We now support the usage of Font Awesome but can also include custom images if you had custom images defined in 2.11. More details about font awesome can be found on their website, <a href="https://fontawesome.com/v4.7.0/icons/" target="_blank">https://fontawesome.com/v4.7.0/icons/</a></p>
+                    </li>
+                </ul>
+                <p><b class="DRNumberBold">Localization</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/148022-FireLight Localization Design.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 148022</a> </b> Added the ability to support multiple languages/locales in FireLight. Added the ability for an agent to select from multiple languages/locales in FireLight in which to select products and view lists, labels and messages in the localized language for an activity. Contact your Strategic Account Manager to initiate the localization process for your organization, including translation updates, database updates, and possible Provider changes. See <MadCap:xref href="../Features/Localization.htm">Localization</MadCap:xref> in the Admin Help or Admin Guide for setup instructions. </li>
+                </ul>
+                <p><b class="DRNumberBold">Product Type</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 180645 </b> Added the Indexed Variable Annuity product type to FireLight base.</li>
+                </ul>
+                <h2>Fixed Defects</h2>
+                <p><b class="DRNumberBold">Illustration Upload Pop-Up Message</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 181272</b> An Illustration Upload pop-up message did not appear when agents created or clicked on a Life application with a jurisdiction of Pennsylvania. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Signatures/Signing Ceremony</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 175192 </b> If an agent signed and sent a signature request to the client, and then the agent attempted to re-sign  after client signatures were completed without first refreshing the page, an exception occurred. This was fixed.</li>
+                    <li><b class="DRnumber">DR 181309 </b> The threshold for the minimum pixels required for a signed signature was set too high.  For example, the system would not accept a 5 character first and last name. This was fixed by changing the threshold for the minimum required pixels for the signature pad to 500 pixels to allow for short names.</li>
+                </ul>
+                <p MadCap:conditions="General.Online"><a href="#top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown MadCap:conditions="General.Postpone">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>2.12.0.144 April 20, 2018 UAT Release</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2>Enhancements</h2>
+                <p><b class="DRNumberBold">Review Queue</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170326 Enhance Reviewer forms functionality.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170326</a> </b> Updated the Enhanced Reviewer forms functionality    in the post-submission review queue in FireLight Admin so that only one type of reviewer-only package is available per Sales Agreement—a Sales Agreement cannot have both a ‘Reviewer’ (required) type package and a ‘Reviewer Optional’ type package. If a Sales Agreement contains this combination, an error message will display when the Save button is clicked and the Sales Agreement will not be saved. In FireLight Admin on the Profiles/Sales Agreement page, the Package Duty list is hidden on all Reviewer and Reviewer Optional packages and those packages default to Required.</li>
+                </ul>
+                <h2>Fixed Defects</h2>
+                <p><b class="DRNumberBold">All Activities</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 180804 </b> An error occurred when opening purged applications that had no forms. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">FireLight Statuses</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 180798 </b> In the UAT environment, application status was showing Signatures Complete when only 1 of 5 signatures were completed. This was fixed. </li>
+                </ul>
+                <p><b class="DRNumberBold">Form Generation</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 180440 </b> When form entry reached 100% and you saved and went back into the application, form entry would be 99%. The form entry was not always recalculating so that the UI would reflect any new validation messages. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Navigation Popups</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 181008 </b> Some popups that were showing in FireLight v2.11 after the Signatures step were not showing in v2.12. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Rules</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 180661 </b> In FireLight Admin, an error message was not given on a malformed rule. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Signing Ceremony</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 176710 </b> In the signing ceremony when the birth date is pre-filled into the Client Identification Verification, if the value was removed to type a new value, the input was no longer formatted. This was fixed by adding a mask to the field in order to format the input values if the pre-filled values are cleared. The full date values are required in order to clear the error message when you leave the field. </li>
+                </ul>
+                <p MadCap:conditions="General.Online"><a href="#top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown MadCap:conditions="General.Postpone">
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>2.12.0.136 April 13, 2018 UAT Release</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2>Enhancements</h2>
+                <p><b class="DRNumberBold">Account Opening</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170065 Account Opening.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170065</a> </b>  Added a new Account Opening pre-sale transaction type. Account Opening is a submitted transaction separate from other transaction types for reporting and downstream processing.  Account Opening has its own Post Over transaction type to send users directly into the Account Opening transaction or users can click Account Opening on the FireLight Home page.  The initial transaction screen includes the Jurisdiction list and a Custodian list if more than one Custodian exists.</li>
+                </ul>
+                <p><b class="DRNumberBold">All Activities</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/163505_Retain results of the last search.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 163505</a> </b>  Added the ability for users to retain the last search criteria used during the session. When searching for a particular activity in All Activities, the user can go into an activity to view the details and then come back to the search results. FireLight retains the search criteria in All Activities during the session until the user clears the search criteria. </li>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/169972_User search in All Applications.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 169972</a><![CDATA[  ]]></b> Added a search feature for the User List (formerly Owner List) on the All Activities page. This allows a user who has visibility into multiple agents’ applications, through either User Share or Group code access, to search for a specific user name.</li>
+                </ul>
+                <p><b class="DRNumberBold">Allow Submit on E-Sign Decline</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 174621 </b> Added the ability to allow the carrier to receive submission even if the distributor has Allow Submit on E-Sign Decline feature disabled in Organizations.  Implemented as another workflow type, SubmitCarrierOnly, which will call the carrier provider only when the user completes an application if: 1) in a distributor environment, 2) the distributor has the Allow Submit on E-Sign Decline checkbox cleared (disabled) in Organizations, and 3) the carrier has Submit on E-Sign Decline selected (enabled) in Organizations.</li>
+                </ul>
+                <p><b class="DRNumberBold">API Layer to Call FireLight to Run Illustrations</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 172089 </b> Added a flexible API layer to FireLight. The API returns calculation results based on the provided request values. This API forwards the request to the ForeSight Illustration Services web service to provide the calculation results. Part of what FireLight adds is a call to the Rules engine to validate the inputs before ForeSight Illustration Services is called. </li>
+                </ul>
+                <p><b class="DRNumberBold">Auto Save</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170040_Auto_Save_When_Reaching_100%25_Updated.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170040</a> </b>  Added auto save functionality so when an activity reaches 100%, it is automatically saved. This enables other actions (e.g., print options) immediately after an activity reaches 100%, without the user having to first click the Save button. In FireLight Admin&gt; Profiles/Groups/App tab, select Enable Auto Save to enable the Auto Save feature for each applicable role code.</li>
+                </ul>
+                <p><b class="DRNumberBold">Benchmark Tool</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/164112 Benchmarking compare data items.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 164112</a> </b> Added a "Data Item Properties (P)" test condition to compare data item properties (value, visible, enabled, read-only) for pass/fail of benchmarks. See the <i>FireLight Platform User Guide</i> for Benchmark tool instructions.</li>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170466 Benchmarking compare form numbers.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170466</a> </b> Added a "Form Name/Number (N)" test condition to compare form name and number that are in the benchmark so users can quickly identify incorrect forms.</li>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170491 Updating Benchmarking Mass .pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170491</a><![CDATA[  ]]></b> Added the ability to update multiple benchmarks using a new Accept button. For example, after a new release, you can select multiple failed benchmarks and click the Accept button to accept the benchmark run results as the new benchmarks. </li>
+                </ul>
+                <p><b class="DRNumberBold">Client Fill and Client Fill &amp; Sign Requests</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170556-AttachDocumentsWithClientFillClientFillSign.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170556</a> </b> Added the ability for clients to attach documents during the Request Client to Fill App and Request Client to Fill &amp; Sign requests. Clients can click the “Documents” link on the top navigation bar in “Client Fill” and “Client Fill and Sign” pages, which uses the existing FireLight functionality for uploading outside documentation, including the upload dialog buttons to quick-launch an upload, template functionality, notification that a template is required, document type association with a template, signature tags on the template, inclusion in the percent complete if a template is required, and to remove attached documents.</li>
+                </ul>
+                <p><b class="DRNumberBold">CSS Enhancements</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 177593 </b> Added the ability to hide e-signature tags during form entry.</li>
+                    <li><b class="DRnumber">CMR 177601 </b> Added the ability to hide e-signature tags during the signing ceremony.</li>
+                    <li><b class="DRnumber">CMR&#160;177611 </b> Added the ability to add branding and customize the text on the session expired page.</li>
+                </ul>
+                <p><b class="DRNumberBold">Deploy Mappings</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 170107 </b> Added the ability to deploy mappings to other environments via a new Mapping Configuration synchronization scope on the Deploy page/Deployment tab in FireLight Admin.</li>
+                </ul>
+                <p><b class="DRNumberBold">Design (Forms and Wizards)</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/150069-UpdateFunctionalityOfRulesForMultipleFields.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 150069</a> </b> In FireLight Admin, added the ability to add a new rule for multiple fields in the forms Designer. Because users need to select multiple fields in a form, this feature is available only in the Designer/Form Designer page and its associated Rules Window. It is not available in the Rule Sets page in Profiles. This feature is for new rules only and cannot be used for updating rules.</li>
+                    <li><b class="DRnumber">CMR 170106 </b> In FireLight Admin, enhanced checkbox controls to support export values just like a radio button.</li>
+                </ul>
+                <p><b class="DRNumberBold">Direct Login Clients</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/157909 Password Reset.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 157909</a> </b> Added the ability for direct login client users to reset their own password for the FireLight application and FireLight Admin.</li>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170214-DesignDocument-TwoFactorAuthentication.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170214</a> </b> In FireLight Admin, added a setting on the Organizations page in Profiles that requires Two-Factor authentication before allowing direct login access to FireLight. See the "Two-Factor Authentication (Direct Login Users Only)" topic in the FireLight Platform User Guide and 2-Factor Authentication on the Organizations page. </li>
+                </ul>
+                <p><b class="DRNumberBold">DTCC</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 178903 </b> Extended the FireLight base class to allow the providers to set the new options reflected in the latest DTCC record layout from March, 2018.</li>
+                </ul>
+                <p><b class="DRNumberBold">Edit Masks</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/165125-NumericCurrencyMask.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 165125</a> </b> In FireLight Admin, added a numeric currency Edit Mask for currency or dollar amount on the Organizations page in Profiles. You can apply the mask to Text Box fields in the forms Designer. </li>
+                </ul>
+                <p><b class="DRNumberBold">Email – Sub Firm Branding</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 180598 </b> Added the ability to brand the email templates for sub firms on the Email page.  To add branding for sub firm emails, contact your Strategic Account Manager to have the FireLight team create the list of Branding Firms for you. Once that list is created, you can manage the sub firm emails on your own by selecting an email template and then selecting a sub firm in the Branding Firm list on the Email page. NOTE: Organizations that currently have Branding Firms have had their Branding Firm list created in their environments.</li>
+                </ul>
+                <p><b class="DRNumberBold">FireLight Access</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 180032 </b> FireLight Access distributors were generating duplicate policy numbers as their respective carriers. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">FireLight Statuses</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/169970-FireLightStatusUpdate.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 169970</a><![CDATA[  ]]></b> Updated application statuses to reflect the true status of the application order from a client and agent perspective in Recent Activity, All Activities, History, and the Audit trail. See <MadCap:xref href="../Getting Started/FireLight Display Status Workflows.htm">FireLight Display Status Workflows</MadCap:xref>.</li>
+                </ul>
+                <p><b class="DRNumberBold">Global Data Item: FLI_REQUIREMANUALREVIEW</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 173296 </b>  When the organization setting for Allow E-Approval (manual PreSubmit review) was selected and the FLI_REQUIREMANUALREVIEW global data item was set to "false" and the user clicked the Continue button, the user was still seeing the sub menu with the "Request Review" and "Submit" options. This was updated. Now when the organization setting for Allow E-Approval  is selected and the FLI_REQUIREMANUALREVIEW data item is set to "false," the system will not show the Review step or the sub menu with the "Request Review" and "Submit" options. When the organization setting for Allow E-Approval  is selected and FLI_REQUIREMANUALREVIEW is set to "true," FireLight takes the user directly to the PreSubmit review process and does not show the sub menu with the "Request Review" and "Submit" options.</li>
+                </ul>
+                <p><b class="DRNumberBold">Groups</b>
+                </p>
+                <ul>
+                    <li>In FireLight Admin on the Profiles/Groups page, several options were renamed to match the name change from "application" to "activity" in FireLight. </li>
+                    <li><b class="DRnumber">CMR 177603 </b> In Profiles/Groups on the App tab, added a new Disable Log Off option. Select the Disable Log Off checkbox to hide/remove the Log Off option on the top navigation bar in FireLight.</li>
+                    <li><b class="DRnumber">CMR 177604 </b> In Profiles/Groups on the App tab, added a new  Disable Show Annotations option.  Select the Disable Show Annotations checkbox to disable the Show Annotations feature on the Other Actions menu in FireLight.</li>
+                    <li><b class="DRnumber">CMR 177609 </b> In Profiles/Groups on the App tab, added a new Enable Custom Submit Page option that enables a custom submit page by role code. When enabled, the client is directed to a custom page after submission that can be branded by organization. </li>
+                </ul>
+                <p MadCap:conditions="General.Postpone"><b class="DRNumberBold">Localization</b>
+                </p>
+                <ul MadCap:conditions="General.Postpone">
+                    <li MadCap:conditions="General.Postpone"><b class="DRnumber">CMR 148022 </b> Added the ability to support multiple languages/locales in FireLight. Added the ability for an agent to select from multiple languages/locales in FireLight in which to select products and view lists, labels and messages in the localized language for an activity. Contact your Strategic Account Manager to initiate the localization process for your organization, including translation updates, database update for jurisdictions, and possible Provider changes. See <MadCap:xref href="../Features/Localization.htm">Localization</MadCap:xref> in the Admin Help or Admin Guide for setup instructions. </li>
+                </ul>
+                <p><b class="DRNumberBold">Notifications</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/157022_Deployment Notifications.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 157022</a> </b> In FireLight Admin, added the ability to send an additional email notification to each organization receiving the deployment. In addition, added support to enter multiple email addresses for each organization separated by a semicolon  in the Deployment Notification Email field on the Organizations page in Profiles. If distributors add one or more deployment notification email addresses in this field, notifications of Distributor configurations that any of their carriers deploy will also be sent to the distributor.</li>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/163150_add X to close validation message.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 163150</a> </b>  In FireLight application, added an 'X' to validation messages so users can close a validation message to view the field beneath the message.</li>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170425_Automatic Notify if a RuleSet is in use by another user.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170425</a> </b> In FireLight Admin, added an automatic notification if an unlocked Rule Set is in use by another user and has been saved by that user since they began their work. The notification asks the second user if they want to overwrite the first user's saved changes, discard their own changes, or cancel their own changes. </li>
+                    <li><b class="DRnumber"><a href="../Resources/DesignDocs/170426_Automatic Notify if a Form is in use by another user.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170426</a> </b>  In FireLight Admin, added an automatic notification if an unlocked Form is in use by another user and has been saved by that user since they began their work. The notification asks the second user if they want to overwrite the first user's saved changes, discard their own changes, or cancel their own changes.</li>
+                </ul>
+                <p><b class="DRNumberBold">Required Templates</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170776_RequiredTemplates.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170776</a> </b> FireLight now includes required templates in the application % complete indicator and displays an error if the required template form is missing by highlighting the template form in red font in the Open form list. Clicking the missing template form in the form list opens the template warning message with links to complete the requirement (upload the missing form).</li>
+                </ul>
+                <p><b class="DRNumberBold">Reports</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="../Resources/DesignDocs/170244_Create Abandon Report.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170244</a> </b>  Added a new Admin report for abandoned activity. Abandoned Activity Report  lists the applications that are not submitted where the last updated date is X days. Report includes Application name, Policy Number, App Created Date, Carrier, Product, Product Type, Agent ID, Agent Role Code, Current Status of App, Last Updated Date and Time passed from today to last updated (days).</li>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170245_New Report for How the Client Signed.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170245</a> </b>  Added a new Admin report for how the client signed (Remote, Sign Now) and indicates whether Client Fill or Client Fill &amp; Sign was used. Report includes Carrier, Distributor, Agent ID, Agent Role code, App ID, Number of signer roles on the application, Client role type, Signing session ID, Signer, Signer multiple roles, Signing Type, Client Fill (Y/N), and Client Fill and Sign (Y/N).</li>
+                </ul>
+                <p><b class="DRNumberBold">Restrict Size of Attachments</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170075_Restrict size of attachments.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170075</a></b> To reduce transmission errors caused by users uploading extremely large attachment documents, added a "Maximum Upload File Size" setting in FireLight Admin on the Organizations page that allows organizations to set a maximum file size limit on documents uploaded by their users. Users can upload files from the Other Actions menu/Documents, from a Button control with Action Type set to Custom File Upload, or from attaching documents in the Review Queue or from Client Fill and Client Fill and Sign requests. If a carrier and distributor both have a maximum upload file size set, FireLight will use the most restrictive  setting.</li>
+                </ul>
+                <p><b class="DRNumberBold">Review Queue</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/170326 Enhance Reviewer forms functionality.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 170326</a><![CDATA[  ]]></b> Enhanced Reviewer forms functionality in the  post-submission review queue workflows to allow the reviewer to manage the reviewer only forms and access them when they are needed. In FireLight Admin, you can now set reviewer forms to optional or required. In FireLight Admin/Profiles/Packages page, added Reviewer Optional in the Package Type list for the optional reviewer forms package.  Additionally, the Review button can now be branded through the CSS to be named in a manner that the firm will understand (e.g., "Lock" instead of "Review"). Contact your Strategic Account Manager if you would like to rename the review button.</li>
+                </ul>
+                <p><b class="DRNumberBold">Salesforce Integration</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="../Resources/DesignDocs/180269-Salesforce Integration.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 180269</a> </b> Added integration with Salesforce CRM that allows data to be pulled from Salesforce into FireLight using a custom action button on a form. For setup instructions, see <MadCap:xref href="../Features/Salesforce Integration.htm">Salesforce Integration</MadCap:xref> in Features.</li>
+                </ul>
+                <p><b class="DRNumberBold">Signer Types</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 178970 </b> Made adding signer types configurable without a code change. Now, only a SignerType list profile change is needed to add a signer type. There are no changes from a user interface perspective for existing signer types.</li>
+                </ul>
+                <p><b class="DRNumberBold">Wizard User Interface</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 172087 </b> Enhanced FireLight Admin to include a Designer tool for Wizards. Carriers and distributors can build their own user interface with reflexive questions in a wizard presentation layer, create rule sets for the wizards, and assign them to a product, package, and selling agreement. Contact your Strategic Account Manager to learn more. See <MadCap:xref href="../Design/Wizards/Wizard Designer.htm">Wizards</MadCap:xref> for detailed information.</li>
+                    <li><b class="DRnumber">CMR 172088 </b> Enhanced rendering of wizards created in FireLight Admin and merging carrier and distributor wizards into one user interface (UI). Using this workflow, the PDFs do not display to the end user during data collection, but are filled out based on the wizard entry and presented during the signing ceremony.</li>
+                </ul>
+                <h2>Fixed Defects</h2>
+                <p><b class="DRNumberBold">Admin</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 177354 </b> In FireLight Admin, increased the delay before purging deleted configuration data (Group, Product, Sales Agreement, etc.) to 1 year (instead of using the purge uncompleted applications purge policy) to mitigate the likelihood of the data getting purged before being deployed.</li>
+                    <li><b class="DRnumber">DR 178138 </b> Deployment notification emails did not indicate success or failure status. This was fixed.</li>
+                    <li><b class="DRnumber">DR 179990 </b> There were issues with the sign out email in Production changing to what was set up in UAT. This was fixed by excluding the Support Email and App Signout URL from the Organization deployment scope and also indicating which fields are not deployed.</li>
+                    <li><b class="DRnumber">DR 180373 </b> An error occurred in Deployment when loading a large number of forms. This was fixed by increasing the number of forms limit.</li>
+                    <li><b class="DRnumber">DR 180445 </b> When form fields were uploaded into FireLight, they were being retained in an interactive form, which could get removed before transmission during back-end processing. This was fixed. Now form fields are flattened onto PDFs when they are uploaded into FireLight so they do not get removed before transmission during back-end processing.</li>
+                </ul>
+                <p><b class="DRNumberBold">Application Submission</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 179814 </b>  When an application was submitted in one browser instance while it was open in another browser instance, the application submitted with missing information because a form was changed in the second browser instance before submission in the first browser instance. This was fixed by checking for whether the application has errors before locking the application, in case it was updated and saved with errors in another browser tab or window.</li>
+                </ul>
+                <p><b class="DRNumberBold">Benchmark Tool</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 175490 </b> Benchmark run application was not hidden if error occurred while generating the application. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Client Fill &amp; Sign</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 176769 </b> Client fill and sign requests expired after 1 day instead of using the Requests Timeout organization setting.  This was fixed. </li>
+                </ul>
+                <p><b class="DRNumberBold">Client Signature Request</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 179135 </b> When typing in the Client Name field, a blank line was added to the end of the message body with each character that was typed. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Copy Application</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 179217 </b> FLI_ROLE_CODE does not update when an application is created using "copy as is." This was fixed.</li>
+                    <li><b class="DRnumber">DR 180046 </b> Read-only data items could prevent completion of an application after copying with changes. This was fixed by making non-system (FLI_) data items non-read-only when copying an application. </li>
+                </ul>
+                <p><b class="DRNumberBold">Document Upload Button</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 152414 </b> In the Document Upload dialog, the Upload button was being improperly enabled and disabled, which induced an Internet Explorer rendering bug. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">FireLight Statuses</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 180345 </b> Update display status to show reviewer comments from every post-submission review queue in the Review Status. Approval comments are now saved in the application audit for each review queue that it is approved in.  The display status for these are set at In Review because we don't know if it is the last queue.  Added a separate audit to record the ReviewComplete display status at the end of the review process.</li>
+                </ul>
+                <p><b class="DRNumberBold">Needs Determination Product Filtering</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 179474 </b> After completing a needs determination package, a pop-up was stating that no product was available for the application. This was fixed. Now the pop-up does not show when products are still available to the agent (previously, it would show if there were no products listed for the given jurisdiction and/or product type selection). Patched v2.11 UAT 4/6/2018.</li>
+                    <li><b class="DRnumber">DR 156446 </b> Request for more information to be provided to the user when no products were available after needs determination product filtering occurred. This has been addressed. Now, when no products are available based on a Needs Determination app, a pop-up displays, "No products are available based on your needs." When  no products are available based on a Needs Determination app, but other products are still available that are not included in the needs determination product filtering, the pop-up does not appear.</li>
+                </ul>
+                <p><b class="DRNumberBold">Network Traffic</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 179888 </b> Network traffic was showing a 404 error when navigating to the Home page. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Preferences</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 179862 </b> After selecting a Jurisdiction in Preferences, it could not be "unselected." This was fixed.</li>
+                    <li><b class="DRnumber">DR 179886 </b> Adding reviewers in Preferences produced a generic error. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Review Queue</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 174995 </b> When a review request was sent to the pre-submission review queue, the Pending Request dialog showed the entire body of the email request in the agent's view. This was fixed.</li>
+                    <li><b class="DRnumber">DR 178053 </b> Unable to approve or reject in review queue when name in SSO contains newlines. This was fixed by trimming newline characters from the SSO user info and escaping newlines in the username within the Review Queue.</li>
+                    <li><b class="DRnumber">DR 178959 </b> When there was no post-submission (OSJ) review queue script, and an application was approved in the pre-submission (manual) review queue, the request remained in pending status. This was fixed.</li>
+                    <li><b class="DRnumber">DR 180145 </b> The application name was not showing in the Application History window in the Review Queue. This was fixed.</li>
+                </ul>
+                <p MadCap:conditions="General.Postpone"><b class="DRNumberBold">Signer Types</b>
+                </p>
+                <ul MadCap:conditions="General.Postpone">
+                    <li MadCap:conditions="General.Postpone"><b class="DRnumber">DR 179785 </b> Incorrect ordering of the signer list. This was fixed with CMR 178970. The signer types will now be sorted as ordered in the SignerType list profile.</li>
+                </ul>
+                <p><b class="DRNumberBold">Upload Document Button</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 152414 </b> When adding a button to a form to allow the user to upload a document other than a PDF, the Upload button was not viewable until pausing over the word "upload" in Internet Explorer. This was fixed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Tab Order</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">DR 179256 </b> Tab Order was not working for Radio button or Check box on Firefox. This was fixed.</li>
+                </ul>
+                <p MadCap:conditions="General.Online"><a href="#top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

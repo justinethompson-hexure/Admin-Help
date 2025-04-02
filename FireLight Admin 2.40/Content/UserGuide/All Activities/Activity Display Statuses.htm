@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Activity Display Statuses<MadCap:conditionalText MadCap:conditions="General.Online"> [User Instructions]</MadCap:conditionalText></h1>
+        <p><b class="Bold">NOTE:</b> Status also appears in the <MadCap:xref href="../FireLight Basics/Recent Activity.htm" target="_blank" alt="Recent Activity">Recent Activity [User Instructions]</MadCap:xref> pane on the Home page.</p>
+        <p>Click a status on the upper right of an activity to view the history of the status.</p>
+        <p>
+            <img src="../../Resources/ImagesUserGuide/New Activity/Capture417.png" alt="Alll Activities - History" title="Alll Activities - History" />
+        </p>
+        <p>Depending on workflow, the status can include the following as well as activity-specific display statuses:</p>
+        <p class="hangingindent"><b class="Bold">Admin Transfer</b> – When an Admin user transfers all activities from one User ID to another User ID.</p>
+        <p class="hangingindent"><b class="Bold">Agent Signature Required</b> – When a client has signed and an agent signature is required for e-Delivery of client applications.</p>
+        <p class="hangingindent"><b class="Bold">Application Locked</b> – When Data Entry reaches 100% and the activity is ready for signature and review processing.</p>
+        <p class="hangingindent"><b class="Bold">Application Generated</b> – When an agent completes an illustration and clicks Apply to generate an application.</p>
+        <p class="hangingindent"><b class="Bold">Canceled DocuSign Signatures</b>  – When a signer selects an option in DocuSign or in FireLight to cancel the DocuSign signature process. This unlocks the application in FireLight and returns it to Data Entry status.</p>
+        <p class="hangingindent"><b class="Bold">Checked Out</b> – When an agent checks out an application from the FireLight<sup MadCap:conditions="General.Online">®</sup> web server to the FireLight Console to do offline editing. FireLight locks the application so the agent cannot edit the application in the FireLight web program.</p>
+        <p class="hangingindent"><b class="Bold">Client Request Complete</b> – Shown with Client Fill or Client Fill &amp; Sign when the client has completed the request and sent it back to the agent (<b>Note</b>: application may not be 100% complete).</p>
+        <ul>
+            <li>On a Client Fill request (or on a Client Fill &amp; Sign request prior to 100% complete), when the client clicks or taps <b class="Bold">Complete/Logoff</b> followed by <b class="Bold">Submit and logoff</b>, the status proceeds to Client Request Complete, then to Data Entry for the agent to complete the order.</li>
+            <li>On a Client Fill and Sign request, prior to 100% complete or signature, when the client clicks or taps <b class="Bold">Complete/Logoff</b> followed by <b class="Bold">Submit and logoff</b>, the status proceeds to Client Request Complete, then to Data Entry for the agent to complete the order.</li>
+            <li>On a Client Fill &amp; Sign request, once the application reaches 100% and the client clicks or taps <b class="Bold">CONTINUE</b> or <b class="Bold">Sign Application</b> from the menu, followed by <b class="Bold">OK</b> to lock the application, status is set to Client Request Complete followed by Pending Signatures. Next, when the client clicks or taps <b class="Bold">Sign Application</b>, the status changes to In Signatures. Once complete and client has logged off, the status typically remains In Signatures, assuming the agent still needs to sign.</li>
+        </ul>
+        <p class="hangingindent"><b class="Bold">Complete</b> – Normally triggered when the transmission of the application to the back-office system successfully completes. This is the final status prior to being purged.</p>
+        <p class="hangingindent"><b class="Bold">Data Entry</b> – When an agent creates a new activity, creates a copy of an existing activity, or unlocks an activity.</p>
+        <p class="hangingindent"><b class="Bold">DocuSign Signatures Complete</b>   – When all DocuSign signatures are complete for the activity/application and are sent back to FireLight.</p>
+        <p class="hangingindent"><b class="Bold">DocuSign Signatures Complete PDF Copy Created</b>   – When DocuSign signatures are complete for an activity/application, are sent back to FireLight, and a PDF copy of the activity was created by the user.</p>
+        <p class="hangingindent"><b class="Bold">In DocuSign Signatures</b>  – When an activity/application is in DocuSign for signature capture. A web service call on behalf of the organization was sent to DocuSign to obtain signatures on the activity/application.</p>
+        <p class="hangingindent"><b>In Data Entry Review</b> - When an application is locked for review, reviewer can accept application, reject application, make corrections, and request more information from the agent.</p>
+        <p class="hangingindent"><b class="Bold">In Signatures</b> – When one or more signatures are complete but one or more signatures are still outstanding. If the email signature request expires, but one or more signers have completed the signature process, the status will remain In Signatures.</p>
+        <p class="hangingindent"><b class="Bold">Pending Client Request</b> – When a Client Fill or Client Fill &amp; Sign request is sent and is pending client completion. If the client clicks <b class="Bold">Complete/Logoff</b> followed by <b class="Bold">Save – Finish later</b>, the status remains at Pending Client Request.</p>
+        <p class="hangingindent"><b class="Bold">Pending Signatures</b> – When a user clicks or taps <b class="Bold">Use e-Signature</b>. This is one status for all signature types (e.g., owner and agent). If the email signature request expires, the status remains in Pending Signatures if no other signer has started the signature process. </p>
+        <p class="hangingindent"><b class="Bold">Pending Transmission</b> – Triggered when review is complete (if applicable) or the user clicks or taps <b class="Bold">Submit</b> when there is no Review Queue, or if the user clicks or taps <b class="Bold">Decline e-Sign</b> and it should be transmitted (no Review Queue), or Rejected from a Review Queue and it should be transmitted. If the transmission fails, it stays in Pending Transmission until it successfully transmits to all endpoints.</p>
+        <p class="hangingindent"><b class="Bold">Signatures Complete</b> – When all signatures are complete. Stays in this status until the user clicks or taps <b class="Bold">Submit</b> or <b class="Bold">Review Queue</b> if there is a manual (pre-submit) review queue.</p>
+        <p class="hangingindent"><b class="Bold">Signature Submission Invalid</b>  – When the State Signing Error option is enabled in Admin and the state selected is not the state where the activity is being signed. A new activity will need to be created/activity copied to proceed; the activity is no longer active or available for additional edits. </p>
+        <p class="hangingindent"><b class="Bold">Submit Requested</b> – When an activity is pending submission. This applies to the review queue and to activities after the review queue or bypassed the review queue process.</p>
+        <p><b class="Bold">e-Delivery Display Statuses:</b>
+        </p>
+        <ul>
+            <li><b class="Bold">Agent Approved</b> – When an agent has reviewed and approved an e-Delivery activity.</li>
+            <li>
+                <p><b>Agent Review Undeliverable</b> – Email is undeliverable.</p>
+            </li>
+            <li><b class="Bold">Change Requested by Agent</b> – If the agent clicks “Request Reissue” for any reason in the Fill and Sign workflow, the case is set to the terminal status of “Change Requested by Agent.” A newly generated, corrected case will need to be sent in by the carrier to proceed. Only the Fill and Sign workflow has this option. In a Client Directed workflow, the parent and child cases are set to this status if the client clicks “Request Reissue.” This is considered a terminal status in a Client Directed workflow. A newly generated, corrected case will need to be sent in by the carrier to proceed.</li>
+            <li><b class="Bold">Change Requested by Client</b> – In a Fill and Sign Agent Directed workflow; the child case(s) are set to this status if a client clicks “Request Reissue.” Only the Fill and Sign workflow has this option.</li>
+            <li><b class="Bold">Client Approved</b> – When a client has reviewed and approved an e-Delivery activity.</li>
+            <li><b>Client Signatures Complete</b> – The agent signing process is started, and all other signatures are complete. Created for eDelivery client apps.</li>
+            <li><b class="Bold">Complete</b> – When all child cases are complete, the parent case is updated to this status. The case is delivered to the carrier for processing.</li>
+            <li><b>DocuSign Pending Initiation</b> – When the application signatures have been voided in DocuSign.</li>
+            <li><b class="Bold">Download Complete</b> – When the child cases download their documents, the child cases is set to “Download Complete.” This status applies only to the child case display status.</li>
+            <li><b class="Bold">eDelivery Complete</b> – When an e-Delivery activity is complete.</li>
+            <li><b class="Bold">In Agent Review</b> – When an e-Delivery activity is in agent review.</li>
+            <li><b class="Bold">In Agent Signatures</b> – When the agent begins the signing process, the case display status transitions to “In Agent Signatures.” This option is available only for Agent Directed workflows.</li>
+            <li><b class="Bold">In Client Review</b> – When an e-Delivery activity is in client review.</li>
+            <li><b class="Bold">In Signatures</b> – This status triggers on the child cases when any party has started the signature process.</li>
+            <li><b>Locked</b> - Locked.</li>
+            <li><b>Manual Review</b> – Pre-submit review.</li>
+            <li><b>Manual Review Finished</b> – Pre-submit review complete.</li>
+            <li><b>Manual Review More Info</b> – Pre-submit review: information requested.</li>
+            <li><b class="Bold">Pending</b> – When an e-Delivery activity is pending.</li>
+            <li><b class="Bold">Pending Agent Review</b> – In an agent directed workflow, the parent case is set to this status when it is sent into FireLight. It is also set on the parent case if a client clicks “Request Reissue.” This status will not appear in a client directed workflow and will repeat any time a policy is sent back to the agent for review.</li>
+            <li><b class="Bold">Pending Agent Signatures</b> – For agent-directed workflows, if agent signatures are required on either the agent portion or the client portion of the e-Delivery case, after the client signatures are captured, the display status changes to “Pending Agent Signatures.” Only Agent Directed cases can have an agent signature. If there is an agent signature, you will need to send the case through agent directed.</li>
+            <li><b class="Bold">Pending Client Review</b> – Once child cases are sent, the parent and child cases are set to Pending Client Review. This status will remain for the parent case until all child cases are complete or a reissue is requested.</li>
+            <li><b>Pending Response</b> – Pending response.</li>
+            <li><b class="Bold">Policy Canceled</b> – If the agent clicks “Cancel E-Delivery” for any reason, the case is set to the terminal status of “Policy Canceled.” A newly generated, corrected case will need to be sent in by the carrier to proceed if applicable. This will also be the status for cases where delivery of an email failed (except for Agent Directed Fill &amp; Sign). The carrier can issue a reversal with an updated email address in this situation (See 2.6.2).</li>
+            <li><b class="Bold">Policy Expired</b> – The requested date for the parent case in requirement info (&lt;RequestedDate&gt;2018-10-05&lt;/RequestedDate&gt;) sent in the 121 will determine the e-delivery expiration date. Once this date has passed, if the case is not complete it is set to a terminal status of expired. A newly generated case would need to be sent in by the carrier to proceed. As noted above, carriers can change the expiration date using the 121 prior to the expiration.</li>
+            <li><b>Policy Rejected</b> – Policy rejected.</li>
+            <li><b class="Bold">Print Requested</b> – This workflow applies only to the Deliver Only and Sign Only. When the agent or child selects “Request Print,” the status is updated to Print Requested.</li>
+            <li><b>Response Received</b> – Response received.</li>
+            <li><b class="Bold">Signatures Complete</b> – Indicates that the child case has been signed and no further actions are required for that child case.</li>
+        </ul>
+        <p><b class="Bold">Post Submission Display Statuses:</b>
+        </p>
+        <ul>
+            <li><b class="Bold">Approved (Carrier status)</b> – When a carrier approves a post-submission activity according to the Provider polling call.</li>
+            <li><b class="Bold">Declined (Carrier status)</b> – When a carrier declines a post-submission activity according to the Provider polling call.</li>
+            <li><b class="Bold">Carrier Review Complete</b> – When a carrier completes the post-submission activity review.</li>
+            <li><b class="Bold">Further Review (Carrier status)</b> – When a carrier is performing further review for a post-submission activity according to the Provider polling call.</li>
+            <li><b class="Bold">In Carrier Review</b> – When a carrier is still reviewing a post-submission activity according to the Provider polling call.</li>
+        </ul>
+        <p><b class="Bold">Review Queue Display Statuses:</b>
+        </p>
+        <ul>
+            <li><b>Data Entry Review</b> – Allows for review of an incomplete application during the data entry process; allows an incomplete PDF package and associated data to be sent for an external review, if desired.</li>
+            <li>
+                <p style="font-weight: normal;"><b>In Data Entry Review</b>  – When an application is sent for review, in-between data entry, using custom action button. Application is locked for review and sent into Pre-Submit Review Queue. Reviewer can accept application, reject application, make corrections, and request more information from agent.</p>
+            </li>
+            <li>
+                <p><b>Data Entry Review: Info Requested</b> – Triggered when the reviewer has requested more information for an activity in data entry review via a More Info request from the Pre-Submit Review Queue.</p>
+            </li>
+            <li>
+                <p><b>Data Entry Review: Rejected</b> – Triggered when the reviewer has rejected an activity in data entry review via Reject request from Pre-Submit Review Queue.</p>
+            </li>
+            <li><b class="Bold">In Pre-Submit Review</b> – When a reviewer locks an application order in the Pre-Submit review queue; remains In Review status when a reviewer approves the application order, and it moves to the post-submission review queue. Remains in In Review status if the reviewer clicks More Info.</li>
+            <li><b class="Bold">In Review</b> – When a reviewer locks an application order in a Review Queue; when multiple simultaneous review queues exist and a reviewer locks the application order in any of the multiple review queues; when multiple sequential review queues exist and a reviewer locks the application order in the first review queue, also remains In Review status when a reviewer approves the application order, and it moves to the next sequential review queue, regardless of whether it is locked or not. Remains in In Review status if the reviewer clicks More Info.</li>
+            <li><b class="Bold">Pending Pre-Submit Review</b> – Triggered when the application goes to a Pre-Submit review queue. Does not apply if there is no Pre-Submit review process or the application order skips the review process.</li>
+            <li><b class="Bold">Pending Review</b> – Triggered when the application receives the last signature and the application goes to a post-submission Review Queue or when an application order is moved from one review queue to another. Does not apply if there are no review queues or the application order skips the review process.</li>
+            <li><b class="Bold">Pending Review Queue</b> – Triggered when an error exists in the review queue script workflow and the case moves into the retry process.</li>
+            <li><b class="Bold">Pre-Submit Review: Approved</b> – Triggered when a reviewer has approved the application order in the Pre-Submit review queue.</li>
+            <li><b class="Bold">Pre-Submit Review: Declined</b> – Triggered when the reviewer rejects or declines the application in the Pre-Submit review queue. Captures text comments regarding why the reviewer rejected the application order in History, Review Queue audit history, and the message center. If the application order is not set up to transmit on decline, it is moved back into data entry and is unlocked for corrections.</li>
+            <li><b>Purged</b> – Activity has been purged.</li>
+            <li><b class="Bold">Review: Approved</b> – Triggered when the reviewer has approved the application in the post-submission Review Queue in any review queue.</li>
+            <li><b class="Bold">Review: Declined</b> – Triggered when the reviewer rejects or declines the application in the post-submission Review Queues in any review queue. Captures text comments why the reviewer rejected the application order in History, Review Queue audit history, and the message center. If the application order is not set up to transmit on decline, it will remain in Review Declined status until it is purged.</li>
+            <li><b class="Bold">Review: Info Requested</b> – Triggered when the review has requested more information via a More Info request from the Review Queue.</li>
+            <li><b>Review Queue</b> – Activity is in review queue.</li>
+            <li><b>Review Queue Finished</b> – More information was requested on review.</li>
+            <li><b>Review Queue More Info</b> – More information was requested on review.</li>
+        </ul>
+        <p MadCap:conditions="General.Online">Click the browser <b class="Bold">Back</b> button to return to the previous topic.</p>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

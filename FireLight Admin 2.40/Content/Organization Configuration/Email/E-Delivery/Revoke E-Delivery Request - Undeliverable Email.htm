@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Revoke E-Delivery Request (Undeliverable Email)</h1>
+        <p>
+            <MadCap:snippetText src="../../../Resources/Snippets/Email/EmailColumnDesc.flsnp">
+            </MadCap:snippetText>
+        </p>
+        <table style="border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;mc-table-style: url('../../../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Revoke E-Delivery Request (Undeliverable Email) </caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular">
+            </col>
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Action, To Name/Email, From Name/Email, CC Address, Available Tags, and Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Action</p>
+                        <p>This email goes to clients to notify them that the transaction was canceled due to an undeliverable email.</p>
+                        <p>Template Name: Revoke E-Delivery Request </p>
+                        <p>Email Subject Line: &lt;ACTIVITY_NAME&gt; request for &lt;APPLICATION_NAME&gt; Canceled</p>
+                        <p>Message:</p>
+                        <p class="Indent2">Transaction has been canceled due to an undeliverable email.  Client cases have now been revoked.</p>
+                        <p>This template is available for sending when the <a href="../../Groups/Activity Access.htm#E-Delivery" alt="E-Delivery">E-Delivery</a> option is selected in Organization Configuration/Groups page, Activity Access tab.
+						</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">To Name / Email</p>
+                        <p>Client Name/Email typed in email fields or pre-filled from mapped dataitems</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">From Name / Email</p>
+                        <p>Default: Session User’s Preference Name/ Email<sup>2</sup><![CDATA[
+							]]><br></br>Use Agent: Owning Agent’s Preference Name/Email
+						</p>
+                        <p>Use DMARC<sup>1</sup>: Organization's Support Email</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">CC Address</p>
+                        <p>If <a href="../../Groups/App.htm#EnableCcSenderInAllRequests" target="_blank" alt="Enable Cc Sender In All Requests">Enable Cc Sender In All Requests</a> is set in Organization Configuration/Groups on the App tab, cc email sent to ‘From Email’ address.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Available Tags<sup>3</sup></p>
+                        <p>&lt;AGENT_NAME&gt;<br />&lt;ACTIVITY_NAME&gt;<br />&lt;APPLICATION_ID&gt;<br />&lt;APPLICATION_NAME&gt;<br />&lt;CLIENT_NAME&gt;<br />&lt;REQUESTDATE&gt;<br />&lt;STATUS&gt;<br />&lt;TRANSACTION_TYPE&gt;<br />ApplicationSearchItem<sup>4</sup>  (e.g., add &lt;CLIENT_NAME&gt;)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                        <p class="thead1">Notes:</p>
+                        <p>
+                            <MadCap:snippetText src="../../../Resources/Snippets/Email/EmailNote1.flsnp">
+                            </MadCap:snippetText>
+                        </p>
+                        <p><sup>2</sup>You can disable preference fields and send with the incoming FireLight<sup MadCap:conditions="General.Online">®</sup> request. If template fields are not disabled, users can also type the From name and Email. There are two ways that the preference fields can be disabled. One is using the Organization Configuration/Groups, <MadCap:xref href="../../Groups/App.htm">App</MadCap:xref> tab setting 'Disable Edit Preferences'. The other is done automatically, similar to the DMARC option. If the user comes in through an external FireLight request, the preference fields are disabled automatically. If the Groups, App tab setting ‘Enable Override SSO’ is enabled, the name and email fields are never editable in the send email screen even with the enable override SSO for e-Delivery transactions. The name and email fields can be mapped to allow them to be edited and passed into signing through data items.  If the organization does not want them to be editable, they can implement a comparison rule that would require the case to be reissued if the field is changed.</p>
+                        <p><sup>3</sup>Available replacement variables are the names of the data items that are saved in the activity. For example, AGENT_NAME is the name the user entered for the Agent_FullName data item on the activity form. If replacement tags are being used directly in the app portal template view, pipe enclosure must be used in the tag as browsers will not allow direct replacement of brackets. For example, use |AGENT_NAME| rather than &lt;AGENT_NAME&gt;. Additionally, use of unavailable tags may result in email and other browser view errors. You do not need a field named Agent_FullName on the form to pre-fill these.  Like the client names, it is coming from the 121 that is posted over.  It may be able to edit through the use of data items that are mapped using the Admin <MadCap:xref href="../../Mapping.htm" target="_blank" title="Mapping" alt="Mapping">Mapping</MadCap:xref> tool, but it is not what is filling the agent name for e-Delivery.</p>
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Email/EmailNote4.flsnp">
+                        </MadCap:snippetBlock>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:snippetBlock src="../../../Resources/Snippets/Email/EmailSeeAlso.flsnp">
+        </MadCap:snippetBlock>
+        <p colspan="5" MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

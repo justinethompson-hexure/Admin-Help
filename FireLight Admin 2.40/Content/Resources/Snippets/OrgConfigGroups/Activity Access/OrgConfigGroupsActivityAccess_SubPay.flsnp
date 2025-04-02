@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p class="hangingindent">Select the <b class="Bold">SubPay</b> checkbox to provide group access to the Subsequent Payment activity. See <MadCap:xref href="../../../../Features/Subsequent Payment Support.htm" target="_blank" alt="Subsequent Payment Support">Subsequent Payment Support</MadCap:xref> inFeatures. <MadCap:conditionalText MadCap:conditions="General.Online">See also <MadCap:xref href="../../../../UserGuide/New Activity/Subsequent Payment.htm" target="_blank" alt="Subsequent Payment [User Instructions]">Subsequent Payment [User Instructions]</MadCap:xref>.</MadCap:conditionalText></p>
+    </body>
+</html>

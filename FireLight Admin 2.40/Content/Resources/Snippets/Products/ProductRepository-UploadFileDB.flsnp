@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <ol>
+            <li>On the upper right of the Product Repository page, click <b class="Bold">Upload File</b>.</li>
+            <li>
+                <p>In <b class="Bold">File Type</b>, select <b class="Bold">PPfA</b>.</p>
+            </li>
+            <li>On the <b class="Bold">Upload File</b> dialog, click the <b class="Bold">Browse</b> or <b>Choose File</b> button depending on the browser.</li>
+            <li>On the <b class="Bold">Choose File to Upload</b> dialog, locate the file to upload and click <b class="Bold">Open</b>.</li>
+            <li>On the <b class="Bold">Upload File</b> dialog, click the <b class="Bold">Upload</b> button to upload the file. Upon successful upload, the Upload File dialog displays a Success message. If an error occurs, correct the error in the file and upload it again. To load more files, choose another rate or PPfA file and repeat the process for all files. For example, rates for different products may be in separate rate files. Click <b class="Bold">Close</b> to close the Upload File dialog.</li>
+        </ol>
+    </body>
+</html>

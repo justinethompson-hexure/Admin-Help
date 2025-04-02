@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <a name="top">
+            </a>FireLight v2.33-p Release Notes</h1>
+        <h2>February 2024 Release—2/22/2024 </h2>
+        <h2>New Functionality</h2>
+        <h3>Activity Reports Scheduler: DIST-1234</h3>
+        <p>The new Reports Scheduler Tool will allow our clients to schedule any available Detailed, Summary or Custom (per Org) activity reports from the admin tool. They is able to configure sending of the required reports at a specific frequency (Daily/Weekly/Monthly), format (CSV/PDF) and send mode (Email or SFTP).</p>
+        <p>Reports Scheduler can be accessed, in UAT&#160;only, by the users with permission to configure activity reports. These permissions can be granted to FL admin at client’s side and to FL support (Vendor role).</p>
+        <h4>Impact</h4>
+        <ul>
+            <li>New group setting to grant permissions to schedule activity reports.<ul><li><p>FL Admin &gt; Organization Settings &gt; Groups &gt; Admin (tab) &gt; “Enable View Report Scheduler” (new checkbox)</p></li></ul></li>
+            <li>Incorporate report scheduler into the admin tool to allow admin users to:</li>
+            <li>Schedule required activity reports.</li>
+            <ul>
+                <li>Set their frequency, format, send mode and key parameter values.</li>
+                <li>Manage schedules of existing activity reports.</li>
+                <li>View which reports can be usable to them so that they can configure for their environment.</li>
+            </ul>
+            <p>•	Report scheduler is located at:</p>
+            <p>EG Admin &gt; Home &gt; Utilities &gt; Report Scheduler (New button).</p>
+        </ul>
+        <h2>Resolved Issues</h2>
+        <h3>Integration LexisNexis - Application Audit and LexisNexis DDP Report Is Not Showing Complete Party Name When LN Emailage Service Is Called in Signature Workflow: CR-1629</h3>
+        <p>We resolved an issue where when using the LN Emailage service, Party Name is not printing correctly in LN DDP and Application Audit reports. The functionality now works as designed.</p>
+        <h3>Integration GIACT - Error Calling GIACT API If Date of Birth Is Not Mapped: CR-1820</h3>
+        <p>We resolved an issue where, when GIACT was called to validate bank information, an error was returned. Validating bank information via GIACT now operates as designed.</p>
+        <h3>Integration Magnum – Product Benefits/Riders presented in the wrong order in the outbound file: CR-1814</h3>
+        <p>We resolved an issue where the outbound file presented the benefits/riders in the wrong order if five or more were selected.   The outbound file elements are now consistently in the correct order.</p>
+        <h3>FireLight Administration Tool - Unlock Button Showing on Purged View History: CR-1607</h3>
+        <p>We resolved an issue in the Administration Tool where, when viewing a Purged App in Pending Request status, the Unlock button displayed incorrectly. The Unlock button is now not present in this circumstance.</p>
+        <h3>FireLight Administration Tool - Not Able to Save Any Changes in the Sales Agreement After "Use Resident State In Form Selection" Setting Is Saved Once: DIST-2311</h3>
+        <p>We resolved an issue where checking and then unchecking “Use Resident State in Form Selection” in the Sales Agreement and attempting to save the Sales Agreement resulted in an alert message. Now, users can save Sales Agreements as expected, with no alert messages.</p>
+        <h3>FireLight Administration Tool - Cancellation of Scheduled Deployments Not Working as Expected: EAES-3082</h3>
+        <p>We resolved an issue where the “Cancel Scheduled Deployment” button did not work as expected, allowing the deployment to proceed. Now, this functionality is working as designed.</p>
+        <h3>FireLight Application - Data Copied from a Non-Masked Field to any Numeric Masked Field Does Not Show the Mask Format (Forms): CR-1643</h3>
+        <p>We resolved an issue where, when creating Forms Only applications, copying data from a non-masked field to a numeric masked field did not display the mask format. Now, such data copied to a numeric masked field from a non-masked field is formatted correctly.</p>
+        <h3>FireLight Application - Issue on Wizard When Copying Phone Number from One Masked Field to Another: EAES-2919</h3>
+        <p>We resolved an issue where using a wizard and copying a phone number from one masked field to another did not work as expected. Now this operation works as designed.</p>
+        <h3>FireLight Application – Certain Asynchronous Calls in the System Were Calling the Wrong Integration Provider: PC-1564</h3>
+        <p>We resolved an issue where certain asynchronous calls generated during the data entry process were incorrectly directed to the selling organization integration provider, resulting in errors. These calls are now directed to the integration provider associated with the correct organization.</p>
+        <h3>FireLight Application - Rule Referencing “FLI_Percent_Complete” Is Executing Prematurely: EAES-3089</h3>
+        <p>We resolved an issue where the “FLI_Percent_Complete” data item was not initialized properly, causing rules that were using that data item to process incorrectly.</p>
+        <h3>eApplication – Unlock Option not Appearing as Expected in the Activity Summary or “Other Actions” Menu CR-1944</h3>
+        <p>We resolved an issue where the Unlock option was not available for an application that was locked but not complete.   The Unlock option is now showing as expected in the Activity Summary and on the “Other Actions” Menu.</p>
+        <h3>eSignature - On External Signer Page, Passcode Section Not Showing Properly: CR-1612</h3>
+        <p>We resolved an issue where, when creating a Spanish application and then sending an external signer request, the Passcode Enter field did not display properly. The Passcode Enter field now appears correctly when performing this action.</p>
+        <h3>eSignature – Improved Performance of Wizard Application Client Fill and Sign Email: DI-643</h3>
+        <p>We resolved an issue where sending email requests took longer than designated in the SLA. Sending email requests now takes the expected amount of time and adheres to SLAs.</p>
+        <h3>eSignature - On "Request Clients to Complete Filling and Signing Application" Page, Primary Signer Selection Functionality Not Working Properly: DIST-2495</h3>
+        <p>We resolved an issue where, after clicking Generate Link Without E-mail on the “Request Clients to Complete Filling and Signing” Application page, two different signers appeared as the primary signer and the Remove button appeared incorrectly. Now, the primary signer is displayed correctly and the Remove button appears as expected.</p>
+        <h3>eSignature - Error During External Signing If the Application's Agent Has No Role Code: EAES-3085</h3>
+        <p>We resolved an issue where, during external signing, if the agent for the application lacked a role code, an error was received. External signing with these conditions is now working properly.</p>
+        <h3>eSignature - User Is Able to Override the Entry in the "Your Name" and Your Email Field on the "Send Email to Client to Request Signatures" Page While Enable Override SSO Group Setting Is Unchecked: CR-1605</h3>
+        <p>We resolved an issue where users were able to override the entry in the "Your Name" and “Your Email” fields on the "Send Email to Client to Request Signatures" page, even when the Enable Override SSO Group setting was not selected. The functionality now works as designed.</p>
+        <h3>eSignature - Unable to Edit the Your Name Field on Send Email Request Form: EAES-3361</h3>
+        <p>We resolved an issue where the Your Name Field in the Send eMail process was not editable when it should have been.   Users can now edit the name when appropriate, as expected.</p>
+        <h3>eSignature - When External Signers Complete the Signing and Want to Log In Again with the Same Link, an Incorrect Message Was Presented: EAES-2826</h3>
+        <p>We resolved an issue where, when used a second time, the external signer login link worked differently depending on whether the signer logged in using SSN/DOB or the passcode. Now, both SSN/DOB and passcode logins for external signers work as expected.</p>
+        <h3>eSignature (React) - "Re-Sign" Button Not Working on React E-Signature Using External Fill &amp; Sign Request: DIST-2496</h3>
+        <p>We resolved an issue where, when creating an Activity and then using Request Client Fill &amp; Sign, users were unable to complete the re-signing process. Both Request Client Fill &amp; Sign and re-signing are now working as designed.</p>
+        <h3>eSignature (React) - Unable to Select Multi-Signer After Agent Signature Is Completed: DIST-2491</h3>
+        <p>We resolved an issue where, following completion of the agent signature, multiple signers could not be selected. Multi-signer functionality is now working as designed.</p>
+        <h3>eSignature – Timestamp Error Is Occasionally Generated When User Clicks “Send Email Request” or “Generate Link Without Email” When Validate Identity Verification Is Enabled: EAES-3254</h3>
+        <p>We resolved an issue where a timestamp error was generated rather than the appropriate validation message for SSN or DOB data mismatch.</p>
+        <h3>eSignature (eDelivery) Error Occurs When Trying to Sign an eDelivery Case in Certain Circumstances: EAES-3192</h3>
+        <p>We resolved an issue where external eSignature was not always working as expected on eDelivery.</p>
+        <h3>Embedded – In Certain Circumstances an Error Is Generated When Moving from App Data Entry to eSignature If Pre-Submit Review Is Enabled: EAES-3067</h3>
+        <p>We resolved an issue, specific to embedded implementations with pre-submit review enabled, where the user received an error when moving to the signing ceremony.    The user is now able to move to the signing ceremony as expected.</p>
+        <h3>Embedded - The Initial CanSell Message Is Not Provided for Embedded Solutions: EAES-2921</h3>
+        <p>We resolved an issue where, when using Embedded solutions, a message was not presented to users as expected. Now, the message is delivered properly to users.</p>
+        <h3>Embedded – Auto Submit Not Working as Expected when Pre-Submit Review Is Enabled for Embedded Implementations</h3>
+        <p>We resolved an issue where the Auto Submit functionality was not working correctly in combination with pre-submit review queue, for embedded Implementation.   Embedded implementations with pre-submit review can now successfully utilize the auto submit functionality as desired.</p>
+        <h3>Review Queue - "Modal Error Alert" Upon the Double-Click Action on "Reviewer Documents" Button in the Review Queues Page: DIST-2319</h3>
+        <p>We resolved an issue where clicking the Reviewer Document tab twice resulted in an error. The system now works as designed.</p>
+        <h3>Review Queue - After Pre-Sign Review Sent, Wrong Popup Appearing (Forms + Wiz Only): DIST-2321</h3>
+        <p>We resolved an issue where an incorrect popup appeared when sending a reviewer request for Pre-Signature review. The system now works as designed.</p>
+        <h3>Review Queue – Document Upload Process Not Working as Expected During Post Submit Review: EAES-1990</h3>
+        <p>We resolved an issue where for submitted applications template document types were included in the list of document types to upload. The functionality now works as designed.</p>
+        <h3>Password Reset – Error Created When Password Reset Requested Multiple Times: DIST-2650</h3>
+        <p>We resolved an issue where users attempting to send a ResetPassword email more than once within an hour resulted in an error. Now, users can send the ResetPassword email more than once an hour without an error occurring.</p>
+        <p>&#160;</p>
+        <p>***Please note that the JIRA ticket numbers are provided for reference. JIRA tickets are not accessible to users outside Hexure.***</p>
+        <p>&#160;</p>
+        <p data-mc-conditions="General.Online">
+            <a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

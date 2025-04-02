@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>In the <b class="Bold">Quote Email Expiration</b> text box, enter an expiration in days (1 – 7) for the Client Quote Proposal and Annuity Rate Quote email templates that are in the Quote email category on the Email page. In the list, select the number of days before the email expires. The default is 3 days. If set to 3 days, the email expires on day 3. For example, email sent on Monday at 3 PM (day 1) expires on Thursday at 3 PM (3 days later).<MadCap:conditionalText MadCap:conditions="General.Online"> See <MadCap:xref href="../../../../Organization Configuration/Email/Quote/Quote Email Category.htm" target="_blank" alt="Quote Email Category">Quote Email Category</MadCap:xref> templates.</MadCap:conditionalText></body>
+</html>

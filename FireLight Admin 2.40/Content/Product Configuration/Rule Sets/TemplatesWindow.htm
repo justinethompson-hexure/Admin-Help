@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Rule Templates" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Templates Window</h1>
+        <p>On the Rule Sets page, the Templates Window includes Pre-Built Rule Templates in <MadCap:variable name="General.ProductName" /><sup MadCap:conditions="General.Online">®</sup> for the most common rules that are used with input controls.</p>
+        <h2>View Pre-Built Rule Templates</h2>
+        <ol>
+            <li>On the navigation bar, click <b>Product Config</b> and click <b>Rule Sets</b> to go to the Rule Sets page.</li>
+            <li>On the <b>Rule Set Detail</b> tab, click <b>Templates Window</b> to open the Templates Window and view the pre-built rule templates.</li>
+            <li>
+                <p>On the left click a rule template to view the Xml tab.</p>
+            </li>
+            <li>
+                <p>Click the <b>Template Values</b> tab to view the template values and the rule description.</p>
+            </li>
+            <li>Click the <b>X</b> on the upper right to close the Templates Window.</li>
+        </ol>
+        <h2>Add a New Rule Template</h2>
+        <p>When a rule is going to be used multiple times, you can add a new rule template using the Templates Window. This will add the template to the standard Templates Window for common usage.</p>
+        <p><strong>New Rule Template Basics</strong>
+        </p>
+        <p><MadCap:variable name="General.ProductName" /> will check the validity of the rule when you click the Save button. The rule can be saved with warnings, but any errors will prohibit the rule from being saved.</p>
+        <p>A template rule requires you to fill in required data to make the rule complete. What values must be provided and where they are placed within the resulting rule is determined by tagging areas of the template with “{}”. Each unique name with “{}” will define one required replacement value. For example, if you define a “{OwnerAge}” within the template rule, the user of the template rule is asked to supply an “OwnerAge” value. If the tag name within the “{}” contains the string “DataItemId”, the Rules Editor will require you to type in a valid control name for the replacement parameter.</p>
+        <p><strong>Add a New Rule Template</strong>
+        </p>
+        <ol>
+            <li>On the navigation bar, click <b>Product Config</b> and click <b>Rule Sets</b> to go to the Rule Sets page.</li>
+            <li>
+                <p>On the <b>Rule Set Detail</b> tab, click <b>Templates Window</b>.</p>
+            </li>
+            <li>On the Templates Window, click the <b>New</b> button.</li>
+            <li>
+                <p>In <b>Template Name</b>, type a name for the new rule template. </p>
+                <p>For example, type <b>Age Nearest Birthday</b>.</p>
+            </li>
+            <li>
+                <p>On the <b>Xml</b> tab, type the XML for the new rule.</p>
+            </li>
+            <li>
+                <p>On the <b>Template Values</b> tab, type a description of the template in <b>Description</b>.</p>
+            </li>
+            <li>
+                <p>In <b>Template Type</b>, select an option in the list. The Template Type is used to tell the Rules engine which rule to load for the template you are defining. This leverages a different rule (e.g., diget, diset, compare, etc.) depending on where the rules engine is used.</p>
+                <p><b>Rules</b> is the normal rule template type you use to define rules to be used within forms. This is the default.</p>
+                <p><b>Validation</b> is a rule used to define validation rules you can apply to the parameters you define within a template. This functionality is inaccessible.</p>
+                <p><b>BackOffice</b> is a rule used to define rules to be used by back office. This functionality is inaccessible.</p>
+            </li>
+            <li>
+                <p>Under <b>Template Type</b>, type parameter values as applicable.</p>
+            </li>
+            <li>
+                <p>(Optional) Click the <b>Edit Validation</b> button and write validation logic in the <b>Validation Script</b> text box to ensure you type in correct values for the parameters within your script template. Click the <b>Back</b> button to return to the Template Values tab.</p>
+            </li>
+            <li>
+                <p>On the upper right, click the <b>Save</b> button.</p>
+                <p>The new rule template appears in the list on the left.</p>
+            </li>
+            <li>Click the <b>X</b> on the upper right to close the Templates Window.</li>
+        </ol>
+        <h2>Delete a Rule Template</h2>
+        <ol>
+            <li>On the navigation bar, click <b>Product Config</b> and click <b>Rule Sets</b> to go to the Rule Sets page.</li>
+            <li>On the <b>Rule Set Detail</b> tab, click <b>Templates Window</b> link.</li>
+            <li>On the left of the Templates Window, select the rule template to delete and click the red <b style="color: #ff0000;">X</b> to the right of the template name.</li>
+            <li>
+                <p>On the Delete Confirmation dialog, click <b>Yes</b> to delete the rule template.</p>
+            </li>
+            <li>Click the <b>X</b> on the upper right to close the Templates Window.</li>
+        </ol>
+        <p><strong>See Also</strong>
+        </p>
+        <p>
+            <MadCap:xref href="Pre-BuiltRuleTemplates.htm" alt="Pre-Built Rule Templates">Pre-Built Rule Templates</MadCap:xref>
+        </p>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>InsTech Managed</h1>
+        <p>This page displays a grid of carrier-sponsored products and InsTech Managed products that is viewable by organizations. The products are viewable on this page in FireLight Admin, but the data is leveraged inside activity data, such as Quote.</p>
+        <ul>
+            <li>
+                <p>If the Allow Outside Repository Management option is selected, Hexure can load the InsTech Managed product data along with high-level product rules within a separate organization per company. However, carriers currently on FireLight can upload files to the repository for their own organization.</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>In Admin/Organization Configuration/Organization Settings/Admin tab, organizations can choose whether to enable the following two settings:</p>
+                        <ul style="list-style-type: square;">
+                            <li>Select the <b class="Bold">Enable InsTech Managed Products</b> checkbox to enable support for InsTech Managed products, which are products and forms and/or rule sets and quotes for carriers that are not currently on FireLight or products or Quote rates that have not been implemented by existing carriers on FireLight. Clear the checkbox to support only existing carrier-sponsored products on FireLight.</li>
+                        </ul>
+                    </li>
+                    <li>In Admin/Product Configuration/Activities, organizations can select the <b class="Bold">Include Print Only Products</b> checkbox to include the InsTech Managed products for the selected activity/package type, except E-Delivery. FireLight will include both the carrier-sponsored products and packages in the activity and the InsTech Managed products that are set up for that activity. Example, if Include Print Only Products is selected for the Application activity, then the state, carrier, and product dropdown will include all carrier-sponsored (per selling agreement) and InsTech Managed products. If an InsTech Managed product is selected, only the print forms logic is displayed.</li>
+                </ul>
+            </li>
+            <li>The InsTech Managed products, forms, and rule sets are deployed to distribution. Since the forms are not owned by a sponsor company, Hexure bills the distributor for using these forms.</li>
+            <li>InsTech Managed products can be used for carriers, mutual fund companies, 529 firms, etc., that are not on FireLight, by carriers that are on FireLight for one line of business (LOB), but do not want to support additional LOBs, and also by fully sponsored products with InsTech Managed Quote Rates. </li>
+            <li>Quote Billing is based on licensing to the distributor and active users for the distributor organization. Billing occurs from the amount of active users listed in the Active User Report.</li>
+            <li>Distributors are able to access these forms using the same carrier/product/jurisdiction selection available today in FireLight, but when the user clicks on the InsTech Managed product, the print logic will open. When the user clicks Continue, only Print Forms is available as these forms are not owned by a sponsor company.</li>
+            <li>E-Signature is not available for InsTech Managed forms. The forms are set up to use the Print Forms logic.</li>
+            <li>Distributors can opt to still have access to the Print Forms activity button, but that will have a mix of Application, Post Issue, Subpay, etc., since the forms are not grouped into an activity. This is more of a repository type setup for older demographic clients that want to print only forms.</li>
+        </ul>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

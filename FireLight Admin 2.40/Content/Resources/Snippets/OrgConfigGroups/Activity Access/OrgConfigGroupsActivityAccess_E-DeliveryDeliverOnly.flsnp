@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p class="hangingindent">Select the <b class="Bold">E-Delivery Deliver Only</b> checkbox to provide group access to the E-Delivery Deliver Only activity workflow. See <MadCap:xref href="../../../../Features/E-Delivery Deliver Only.htm">E-Delivery Deliver Only</MadCap:xref> in Features. <MadCap:conditionalText MadCap:conditions="General.Online">See also <MadCap:xref href="../../../../UserGuide/Manage/E-Delivery Deliver Only.htm" target="_blank" alt="E-Delivery Deliver Only [User Instructions]">E-Delivery Deliver Only  [User Instructions]</MadCap:xref>.</MadCap:conditionalText></p>
+    </body>
+</html>

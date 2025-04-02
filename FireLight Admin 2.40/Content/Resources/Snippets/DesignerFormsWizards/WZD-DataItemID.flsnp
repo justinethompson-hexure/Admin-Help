@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>Enter the name of the data item associated with the field. Use any characters except apostrophes. This does not need to be unique among all fields in the wizard.   Optionally, type search text in the empty search box and select from the list of common tags to autocomplete the field name.</body>
+</html>

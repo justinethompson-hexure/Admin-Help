@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable View Sales Agreement</b> checkbox to disable viewing <MadCap:xref href="../../../../Product Configuration/SalesAgreements.htm" alt="Sales Agreements">Sales Agreements</MadCap:xref>. The Sales Agreement option under Product Configuration on the Admin home page and the Sales Agreement option under Product Config on the navigation bar will not be visible when this option is selected. The user will not be able to enable sales agreements or make changes to the packages or jurisdictions for each sales agreement.</body>
+</html>

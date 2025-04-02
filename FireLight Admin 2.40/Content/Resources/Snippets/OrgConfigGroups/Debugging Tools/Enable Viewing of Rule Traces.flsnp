@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <strong>Enable Viewing of Rule Traces</strong> checkbox to enable the ability for the Admin user to view rule traces in the Support section of Admin. See the <MadCap:xref href="../../../../Support/Rule Tracing.htm" target="_blank" alt="Rule Tracing">Rule Tracing</MadCap:xref> topic for instructions on using the Rule Tracing support tool to view rule traces recorded by the FireLight user.</body>
+</html>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This feature will allow carriers to upload the Distributor Profile file (DPfA) into FireLight<sup MadCap:conditions="General.Online">®</sup> for the purpose of calculating the commission amount. This file contains the distribution agreements between the carrier and distributor, including commission information. FireLight will then use this file to calculate the commissions amount for use when creating the DTCC file for Commission Netting and Money Settlement. </p>
+        <p>Impacts: Admin-&gt; Product Configuration -&gt; Commissions </p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>DTCC App Sub will have the value available for firms that are running the calculation. DTCC App/Sub files will require provider changes to use the new value.</p>
+            </li>
+        </ul>
+    </body>
+</html>

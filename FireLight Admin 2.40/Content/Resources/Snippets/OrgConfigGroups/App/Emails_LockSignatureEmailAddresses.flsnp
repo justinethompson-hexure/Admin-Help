@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b>Lock Signature Email&#160;Addresses</b>  checkbox so that when an agent sends a signature request they are unable to update/change the email address to which the request is sent.</body>
+</html>

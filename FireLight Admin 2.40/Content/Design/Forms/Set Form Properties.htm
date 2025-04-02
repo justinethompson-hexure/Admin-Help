@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Set Form Properties<a name="top"></a></h1>
+        <p>The Form Properties dialog is where you set default form settings that affect the appearance and protection level of the form. These settings are used by the form except for where they are overridden by individual field properties.</p>
+        <p>
+            <ol>
+                <li>On the navigation bar, click <b class="Bold">Design/Form Designer</b>.</li>
+                <li>On the upper left of the Form Designer page, select a form name in the list.</li>
+                <li>
+                    <p>On the upper left, click the <b>Form Properties</b> link and select the following form settings on the Form Properties dialog. To change a setting, click the current setting to open a list of options and then click the preferred option.</p>
+                    <p><b>Font Family </b>sets the default font family for the form (for example, Arial).</p>
+                    <p><b>Font Size</b> sets the default font size for the form (for example, 12 point).</p>
+                    <p><b>Print Color</b> sets the font print color (for example, Blue).</p>
+                    <p><b>Protection</b> sets the protection level and visibility for the form. Be sure to use the Protection feature to hide any agent or review forms from the client.</p>
+                    <ul>
+                        <li><b>Public</b> is visible to everyone.  Reviewer dashboard forms must always be set to Public.</li>
+                        <li><b>Private</b> is visible only to the Form Designer.</li>
+                        <li><b>Client</b> <MadCap:conditionalText MadCap:conditions="General.Postpone">is visible only to the client. This is used for the client’s private information, such as medical information.</MadCap:conditionalText> Protection was not implemented in FireLight.</li>
+                        <li><b>Agent</b> is visible only to the agent. This is used for agent information, such as commission splits. The agent protected indicates that it is filled out by the agent and not visible in external <MadCap:xref href="../../Features/Client Fill and Sign.htm" title="Client Fill and Sign" alt="Client Fill and Sign">Client Fill and Sign</MadCap:xref> requests.  As such, it is treated as "Office Use Only," and all required fields must be filled out before the Request Client Fill &amp; Sign option appears in the Other Actions menu.</li>
+                        <li><b>Signer</b> is visible only to the signer.</li>
+                        <li><b>Reviewer</b> is visible only to the reviewer.</li>
+                    </ul>
+                </li>
+                <li>Click the <b>Update</b> button to save the selected form properties and lock the form for editing.</li>
+                <li>Click the <b>SAVE</b> button on the upper left of the Form Designer page to save the changes  to the form, which unlocks the form for editing by other users. </li>
+            </ol>
+        </p><a href="#top" alt="Return to Top">Return to Top</a>
+    </body>
+</html>

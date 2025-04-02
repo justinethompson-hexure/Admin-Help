@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight v2.14 Release History</h1>
+        <h2>2.14.0.112 April 26, 2019 Production Release </h2>
+        <h3>Enhancements</h3>
+        <p><b class="DRNumberBold">Admin</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">CMR 191551 </b> In Reports, added a new Wizard Field Report to the Admin Reports that lists field information for the selected wizard (similar to the Form Field Report). The CSV file is an extended version of the report with additional field properties. In the Admin Help, see <MadCap:xref href="../Utilities/Reports/Admin Reports.htm" MadCap:conditions="General.Online">Admin Reports</MadCap:xref><MadCap:conditionalText MadCap:conditions="General.PDF">"Admin Reports"</MadCap:conditionalText> to view a sample Wizard Fields Report. Contact your Strategic Account Manager to request this report for your organization.</li>
+            <li><b class="DRnumber"><a href="../Resources/DesignDocs/195320_Wizards and Forms in Same UI.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 195320</a></b> Added the ability to co-mingle wizards and forms within the same activity, which allows data entry  in any order based on the order of the forms and wizards in FireLight<sup>®</sup> Admin on the Profiles &gt; Packages page. Both wizards and forms are seen or hidden in the UI using the existing FireLight visibility logic. Forms can be required, conditional, print only, optional, signing ceremony, and signing ceremony only: conditional. Wizards can be required, conditional or optional in a Package. Forms with signing ceremony only are hidden in the UI, but included in the signing ceremony. Templates continue to use the existing FireLight logic. When wizards and forms are in the Package and Sales Agreement, the UI uses Previous and Next buttons that are in a fixed position near the bottom of the form and wizard screen unless the current activity is a consumer portal activity. Also added the ability to customize wizard pop-up text by client. In Admin Help, see "Add and Edit a Package" in Profiles &gt; <MadCap:xref href="../Product Configuration/Packages.htm" MadCap:conditions="General.Online">Packages</MadCap:xref> for more information. In Profiles &gt; Packages, enhanced the Signing Ceremony Only form inclusion type so it can be used to present data that was filled in via a wizard and allow signatures and submission to a carrier's back office by default. Also added a Signing Ceremony Only: Conditional version of the Signing Ceremony Only form, which requires a rule to be added to trigger the form. The Signing Ceremony Only and Signing Ceremony Only: Conditional forms can be excluded by setting the document  type in the provider to SigningCeremonyOnly. See <a href="../Product Configuration/Packages.htm#SigningCeremonyOnly" MadCap:conditions="General.Online">Signing Ceremony Only</a> in form inclusion types in Profiles &gt; Packages for more information.  </li>
+            <li><b class="DRnumber">CMR 195323 </b> In Profiles &gt; Organizations &gt; Activity tab, added a Purge Uncompleted E-Delivery setting. In the text box, enter the number of days after an E-Delivery case was finished (this includes Expired, Canceled, Re-Issued and Completed cases) before purging the case. The default is 10 days. The default is much lower because E-Delivery cases use more space than other Activities and we need to limit the space used. The number of days allowable before purge of E-Delivery cases must be between 7 and 30 days. </li>
+            <li><b class="DRnumber">CMR 195671 </b> In Utilities, added three new utilities for converting dataitem tags from old tags to new tags: (1) Download Tag List utility for downloading a spreadsheet of existing  dataitem tags within a package that can be manually updated to include old dataitem tags to new dataitem tags and list value columns; (2) Package Conversion utility for converting dataitem tags in forms, wizards and rule sets within a package to new forms, wizards and rule sets with new dataitem tags from the mapping spreadsheet, and setting an expiration date when the new forms, wizards, and rule sets will replace the old ones within a package; (3) Generate Mapping Rule Set for building a mapping rule set between one set of dataitem tags and another set of tags based on a mapping spreadsheet. These utilities are especially useful for converting tags to common tags. Contact your Strategic Account Manager for scheduling and development assistance with converting tags in the Provider. To enable the three new utilities, select the Enable Mapping Utilities checkbox on the Profiles &gt; Groups page, Admin tab. In Admin Help &gt; <MadCap:xref href="../Utilities/Utilities.htm">Utilities</MadCap:xref>, see "Download Tag List," "Package Conversion," and "Generate Mapping Rule Set" topics for instructions. </li>
+            <li><b class="DRnumber">CMR 195790 </b> In Reports, added a Case Access Verification Report that lists applications that were viewed by someone other than the owning agent. The report provides an Exclude Role Code parameter to exclude designated group role codes from the report for support personnel that have a legitimate reason to view an agent's application. In Admin Help, see <MadCap:xref href="../Utilities/Reports/Detail Reports.htm" MadCap:conditions="General.Online">Detailed Activity Reports</MadCap:xref><MadCap:conditionalText MadCap:conditions="General.PDF">"Detailed Activity Reports"</MadCap:conditionalText> for a sample report and details.</li>
+            <li><b class="DRnumber">CMR 197481 </b> In the form designer, added "Client" to the Signer Type list in the Properties for the Signature Box. </li>
+            <li>Added new rule nodes to search for forms or wizards and set their data entry visibility: getformbyname, getformbynumber, getallforms, getallwizards, getformsbypackage, getwizardsbypackage, and setdataentryvisibility.</li>
+            <li MadCap:conditions="General.Postpone">
+                <p><b class="DRnumber">CMR 180273 </b> Added three new Admin reports that show which forms, wizards, packages and rule sets are not found in any package/sales agreement. This allows Admin users to quickly determine which forms, wizards, rule sets, and packages can be deleted from the system. </p>
+                <ul style="list-style-type: circle;">
+                    <li>Report that shows which forms and wizards are not found in any package.</li>
+                    <li>Report that shows which rule sets are not found in any package.</li>
+                    <li>Report that shows which packages are not found in any sales agreement.</li>
+                </ul>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Admin Help</b>
+        </p>
+        <ul>
+            <li>In the "Design" section of the Admin Help, <MadCap:xref href="../Design/Common Tagging/Common Tags.htm">Common Tags</MadCap:xref> topic, added an updated CommonTags.xlsx spreadsheet and an updated CommonTags_ListName.xlsx spreadsheet that include all common tags along with the new additions for the April 26, 2019 Production release. Removed the "FireLight Global Data Items" topic from the Admin Help.</li>
+            <li>In the "Getting Started" section, added a new <MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../Getting Started/Spotlight Feature Videos.htm">Spotlight Feature Videos</MadCap:xref></MadCap:conditionalText> topic with URL links to videos of FireLight features from recorded Spotlight presentations.</li>
+            <li>Added teal highlighting to search results for locating search words and phrases more quickly in long topics. Click the Remove Highlights <img src="../Resources/ImagesAdmin/RemoveHighlightsButton.png" alt="Remove Highlights Button" title="Remove Highlights Button" /> button on the upper right of a search result topic to remove the highlighting from the topic.</li>
+        </ul>
+        <p><b class="DRNumberBold">All Activities</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber"><a href="../Resources/DesignDocs/192074 Share Activity.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 192074</a></b> Added the ability for a user to share a single activity with one or more other users while an activity is in edit mode (unlocked) from the Other Actions menu. This applies to all activities except e-Delivery child cases. For example, an agent can share an activity with the sales desk or an assistant to complete the activity. In FireLight Admin on the Profiles &gt; Groups &gt; App tab, select the "Allow Share Activity" checkbox to enable this feature. When enabled, in FireLight Admin on the Profiles &gt; Email page, the "Accept User Share - Single Activity," "User Share Request - Single Activity" and "Revoke User Share - Single Activity" email templates become available for sending. We renamed the existing User Share all activities email templates to "Accept User Share - All Activities," "User Share Request - All Activities," and "Revoke User Share - All Activities" to differentiate among the emails for sharing a single activity and for sharing all activities. On the Profiles &gt; Groups page &gt; App tab, we renamed the "Enable User Share" option to "Enable All Activities User Share." Added a User Share Report in Admin Reports. To streamline the process, we also removed the ability to Resend a user share request that has not been accepted. See the "Share" topic in the <i>FireLight Platform User Guide</i> under FireLight Basics &gt; Other Actions for instructions.</li>
+        </ul>
+        <p><b class="DRNumberBold">Common Tags</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">CMR 199065 </b> Spreadsheets with only new common tags and list values for  the April 26, 2019 Production release including FireLight Base FLI common tags, Whole Life common tags added to Life, Schedule common tags added to Annuity and Life products, and other miscellaneous common tags and associated list names are available in iConnect.  </li>
+        </ul>
+        <p><b class="DRNumberBold">E-Delivery</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">CMR 195226 </b>&#160;Added the ability for the agent to sign documents within the e-Delivery workflow. The agent's ability to sign becomes available when the application package has required agent signature controls and after all other parties have signed the child applications. In FireLight Admin on the Profiles &gt; Email page, added an E-Delivery Pending Agent Signature email template that is sent to the agent when the agent signature is required. See the  <em>FireLight E-Delivery Guide</em>&#160;in <MadCap:xref href="../Getting Started/PDFGuides.htm">PDF Guides</MadCap:xref> for detailed information.</li>
+            <li><b class="DRnumber">CMR 195322 </b> Added the ability to have a consumer (client) directed workflow in e-Delivery. An e-Delivery case sent into FireLight can now go directly to the client without requiring any agent involvement. Added audits specific to client directed workflow and implemented base outbound messaging for client directed workflow.</li>
+        </ul>
+        <p><b class="DRNumberBold">FireLight Embedded API Updates</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">CMR 195324 </b> Added several new enhancements to FireLight Embedded via the activity and client side APIs. </p>
+                <ul style="list-style-type: circle;">
+                    <li>Activity API updates include: support the ability to pass in documents to FireLight when calling the create activity API and the ability to use the FireLight product selection dialog within FireLight from Embedded. </li>
+                    <li>Client side API updates include: Navigation system can now be utilized when integrating with FireLight through embedded, support the ability to continue from one activity to another via client API call, and can show all validation messages via client API call.</li>
+                    <li>CSS updates include CSS split into two levels for wizard: a bare minimum that renders the wizard (required CSS controls grid layout, responsive layout, etc.) and a default styling (implementer no longer has to create everything from scratch).</li>
+                    <li MadCap:conditions="General.Postpone">Added versioning to both APIs to make it easier to transition between new features within the API.</li>
+                </ul>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Illustrations</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">CMR 192396 </b> Changed where the Save occurs on illustrations in FireLight because illustrations are often run as ‘what-if’ scenarios and do not need to be saved. After selecting a Jurisdiction and Product, removed the dialog for adding an illustration Name. FireLight no longer shows unsaved illustrations in the Recent list or All Activities page. If the illustration has not been saved and the user clicks Save on the navigation bar, a Save  Illustration dialog opens where the user can enter an illustration Name and click Save to save the illustration. ‘Save As’ logic similar to ForeSight<sup>®</sup> (same as ‘Copy As Is’ while in activity edit mode) has been added to all activity types except e-Delivery. </li>
+            <li><b class="DRnumber">CMR 195321 </b> In the Wizard Designer, added the ability to add a schedule to an illustration wizard. Four pre-built rule templates provide common schedule configurations for one-input, two-input, three-input and four-input column schedules. See <MadCap:xref href="../Design/Wizards/Schedule.htm">Schedule</MadCap:xref> in Admin Help for guidelines, instructions and rule samples. </li>
+        </ul>
+        <p><b class="DRNumberBold">Navigation Bar</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">CMR 181446 </b> In wizards and combined wizard and forms UI, updated the navigation bar so the header row (Alerts, % complete, steps, Other Actions, Home button, Save, Save As, etc.) is locked at the top of the screen when the user scrolls down.</li>
+            <li><b class="DRnumber">CMR 195668 </b> Updated the FireLight navigation bar. Added a link icon on the right if there are any linked cases with the current activity. Click the link icon and click a linked activity name in the dialog to open a linked activity (e.g., e-Delivery cases). In Wizards, near the top left, replaced the Open/Close button name with the name of the page the user is visiting. Open/Close button remains the same in forms only UI. The content displayed in the dropdown did not change. Any client specific branding pertaining to the Open/Close button remains unchanged.</li>
+        </ul>
+        <p><b class="DRNumberBold">Needs Determination</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">CMR 195673 </b> Added the ability to rename the Needs Determination activity to the organization's desired name and skip the product and jurisdiction selection for the subsequent activity. Clients is able to change the name of the existing FireLight Needs Determination system wide, which includes the UI, the audit history, emails and reports. In April, the rename must be completed by the FireLight team.  Contact your Strategic Account Manager to submit a work order for changing the Needs Determination activity name. </p>
+                <p>Additionally, clients now have the option of selecting product and state in the presale activity that will pre-fill into the next activity such as the application.  This adds the ability to skip the Product and Jurisdiction selections for e-Application when they have been selected in the presale activity.  In order to skip the application product and state selections in the next activity, clients need to set two new FireLight global data items (FLI_NEXT_ACTIVITY_PRODUCT_CUSIP and FLI_NEXT_ACTIVITY_JURISDICTION).  Clients can collect these values in input controls (dropdown lists or custom lists) in the presale activity, set the data items, and then use these values for the subsequent application.  If the values are specified and are available, the user will automatically move into the next activity with these values.  If the selections are not valid, or the user does not have access to create the product and jurisdiction, FireLight displays a message to the user and the user needs to go through the normal activity creation workflow. In the Admin Help, see FLI_NEXT_ACTIVITY_PRODUCT_CUSIP and FLI_NEXT_ACTIVITY_JURISDICTION in the <MadCap:conditionalText MadCap:conditions="General.PDF">"Common Tags" topic in Admin Help</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../Design/Common Tagging/Common Tags.htm">Common Tags</MadCap:xref></MadCap:conditionalText> spreadsheet for more information.</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Security</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">CMR 196193 </b> Need the ability to disable a direct login account after 120 days of inactivity. Added a check for last login time before validating a user. If it is more than 120 days, prevent login. Vendor Admin can reset the last login time to allow old user account to be re-enabled. NOTE: The same account types that are not required to change the password after 90 days are excluded from the logic to disable accounts after 120 days.</li>
+        </ul>
+        <p><b class="DRNumberBold">Signatures</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">CMR 188205 </b> Updated the Send Email to Client for Signatures screen. Changed the word "Client" to "Signer" in the field names on the Send Email to Client for Signatures screen. Now the field names are: Signer Name, Signer Email, Your Name, Your Email, Signer Last 4 Digits of SSN/Government ID, Signer Birth Date, and Signer Mobile Number (if SMS Text Authentication is enabled).</li>
+            <li>
+                <p><b class="DRnumber">CMR 196717 </b> Changed the wording  for the Require Signature Capture popup. This applies to anyone with a Group setting of "Require Signature Capture" or if you have the Cooperative Technologies  integration that could force the live sign on the 1035 forms per the ceding carrier rules.</p>
+                <p>Old Verbiage: You are required to sign your signature on the signature pad.</p>
+                <p>Approved New Verbiage: A signature capture is required. Please sign using a mouse, your finger, or a stylus.</p>
+            </li>
+        </ul>
+        <h3>Fixed Defects</h3>
+        <p><b class="DRNumberBold">Admin</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 182842 </b> In the Wizard, when using a rule template to create a rule, the template name was not auto-populating the Rule Name. This was fixed.</li>
+            <li><b class="DRnumber">DR 182880 </b> Custom List download was only downloading up to the first 500 rows, instead of the entire list. This was fixed.</li>
+            <li><b class="DRnumber">DR 184064 </b> Performance - Rule Set and Library views in Admin need turning. Paging was implemented in the audit history tab of Form Library and Rule Sets.  Performance has vastly improved even for very large sets of history.</li>
+            <li><b class="DRnumber">DR 185115 </b> In Design &gt; Wizard Designer, date fields did not have the ability to add a mask and would not format correctly unless the calendar was clicked. Added masks to the field properties for date fields in wizards.</li>
+            <li><b class="DRnumber">DR 185189 </b> Form Design issue occurred when asking if you would like to save changes Yes/No/Cancel. Firelight presented a pop-up if you would like to keep the changes to a form, but automatically went to the next form after a very moments and saved the changes. This was fixed as part of another change. The popup now behaves as expected, and will not change forms until an action is selected.</li>
+            <li><b class="DRnumber">DR 189003 </b> In Profiles &gt; Email, added Agent Name as an available replacement tag for the Review Queue Message email template.  The name used is the User Full Name in the application owning agent's Preferences page.</li>
+            <li><b class="DRnumber">DR 189635 </b> In Design &gt; Wizard Designer, the Custom Action buttons did not have an option to specify which forms can be printed. This was fixed by adding the ability to specify an attachment ID in the Custom Action Parameter property in the Custom Action field properties. If an attachment ID is specified in the Custom Action Parameter, clicking the print button will only allow forms to be downloaded that have the specified attachment ID.</li>
+            <li><b class="DRnumber">DR 190177 </b>  In Profiles &gt; Groups, an exception occurred when updating the Groups profile. On the Needs Filter tab, when selecting a product for product access, the Filter drop-down data was not getting set up on the server. This was fixed by adding logic to fill out the filter product drop-down for the URL action that handles selection of product access.</li>
+            <li><b class="DRnumber">DR 191527 </b> Unable to export forms when logging in via SSO. You needed to specify a USER_ROLE of Carrier rather than Agent in the SAML for the form export feature to work properly. This was fixed by also authorizing the Agent role in admin SSO.</li>
+            <li><b class="DRnumber">DR 191553 </b> Email for auto-submit would be sent when the agent declined e-sign and the group options for Enable Auto Submit and Enable Auto Submit Email Notification were turned on, but the application was not submitted. This was fixed by verifying the Organization setting for Allow Submit on E-Sign Decline is turned on in addition to the Enable Auto Submit option in Groups.  If Allow Submit on E-Sign Decline is turned off, the Auto Submit Notification Email is not sent, the application does not attempt submission, and the user is returned to instructions on e-sign decline. </li>
+            <li><b class="DRnumber">DR 191759 </b> In Design &gt; Wizard Designer, the Custom Action buttons did not have an option to allow for non-PDF document type upload in the Custom Action button properties. Implemented the missing properties for Allow Non PDF File and Disable Change Document Type in Wizards. </li>
+            <li><b class="DRnumber">DR 192044</b> In Profiles &gt; Sales Agreements, when using the Zoom feature in the Firefox browser the Time Zone was missing from the page. Fixed a layout bug that applied only to Firefox on the Sales Agreement page.</li>
+            <li><b class="DRnumber">DR 192562 </b> Issue when using setcomboitem rule. If a drop-down list changed, and the new values did not contain the data item's current value, the data item's current value would not be displayed (which is why the 'required' rule appeared to not work) - additionally, a new additional blank space would be shown in the drop-down list. This was fixed. When the drop-down list changes via rules, the data item's current value will clear if it is not available in the new drop-down list.</li>
+            <li><b class="DRnumber">DR 193392 </b> Issue with secontrolstate and multiple dataitemids with radio buttons. Clear On Disabled was triggered when selecting an option lower in the order of the radio button. This meant there was a brief state where the rules ran, and everything was disabled. This was fixed by updating the Radio button to send over the checked item as the first dataitem so the update field will trigger the dataitem value change in the correct order.</li>
+            <li><b class="DRnumber">DR 193562 </b> In the Rule Set Window in the Wizard Designer, the box for filter rule sets was too tall. The default height for the Rule Set Window is 30%, which was overwritten in the client .css file by 85%. This was fixed by removing unused client .css from disk and adjusting the Rule Set Window height.</li>
+            <li><b class="DRnumber">DR 194459 </b> Address Autocomplete fields are not working with the Rules Engine. The fields should work with errormessage, setvisibility, and setcontrolstate rules to force the user to enter data and then use the setvisibility rule to hide it after data is entered into the underlying address field. The field should work with setcontrolstate to control when the field can be used (i.e., if no joint owner, it should be disabled). Hid autocomplete clear 'X' button when field should not be shown.</li>
+            <li><b class="DRnumber">DR 194462 </b> When deleting a row from one Custom List, a row was deleted from all Custom Lists instead of just the list being edited. This was fixed by passing the list ID and row number so only the row in the list being edited is deleted.</li>
+            <li><b class="DRnumber">DR 194762 </b> FLI_ Data Elements do not update to the new product when using the Replace Product (product replacement) in the sales agreement. This was fixed by updating the product related dataitems at the time that the app is opened to reflect the updated product.</li>
+            <li><b class="DRnumber">DR 195343 </b> Policy Block Settings Clarification. On the Profiles &gt; Organizations tab, Policy Block Settings are not deployed via the Organization Configuration synchronization scope and the item is not marked with an asterisk like all other items which are not deployed. This was fixed by adding an asterisk to the Policy Block Settings* item on the Admin tab in Organizations.</li>
+            <li><b class="DRnumber">DR 196383 </b> When creating a Package and adding a rule set to the package, FireLight added all rule sets to the package instead of letting you select the rule sets when using the Search feature. All rule sets were added to the package after clicking the Search button. Search was not working if a package had been updated or created, but not saved. This was fixed by not refreshing the list on Search.</li>
+            <li><b class="DRnumber">DR 197163 </b> In the Wizard Designer &gt; Text Properties dialog, the checkbox options at the bottom of the dialog had a sizing issue. The styling for the checkboxes was set to take up entire width. This was fixed by modifying styling to only take up checkbox and text width as checkable (selectable).</li>
+        </ul>
+        <p><b class="DRNumberBold">Address Validation and Autocomplete</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 195834 </b> Address validation issues occurred when manually entering an address and selecting "Decline" on the Address Validation popup. This was fixed by modifying the address validation to have options and fixed a bug.</li>
+            <li><b class="DRnumber">DR 195545 </b> Illegal characters in the path with Google address autocomplete call. The issue turned out to be the result of an outdated config on production that didn't have the Google url/address information. This is fixed with the next deployment.</li>
+        </ul>
+        <p><b class="DRNumberBold">All Activities</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 190271 </b> When logging into the system as an Agency role code, general agents' User List was displaying all users that had ever been created under the agency. Added an 'Active Agent User List' group option on the Profiles &gt; Groups &gt; App tab, which when selected, the User List displays only agents with activity since the last purge date. </li>
+            <li><b class="DRnumber">DR 192383 </b> In a distributor environment, when an agent attempted to Copy With Changes on an application and changed the product to another carrier's product, the new application included all data from the other carrier's application. Because the Provider did not know about the other carrier's data, the Provider didn't know what data to "clean." This was fixed by clearing out the values of all FireLight base "FLI_" data items during the Copy/Activity creation process. This limits the copied data to just the Activity data, which is what the user needs.</li>
+            <li><b class="DRnumber">DR 193471 </b> The All Activities page was showing the wrong Created date. The Created date on the All Activities page was set to the audit date. This was fixed by setting the Create date to the date the activity was created.</li>
+            <li><b class="DRnumber">DR 197094 </b> Remove the People icon in All Activities. The People icon was inadvertently added back to the All Activities page. This was fixed by removing the icon. It was replaced by the User list when Share by Activity feature was added in v2.14.</li>
+            <li><b class="DRnumber">DR 197756 </b> Requests Popup Box disappears in All Activities. This was fixed by modifying the Field Properties window. It now follows the screen when scrolling and no longer jumps when moving it while scrolled down the page.</li>
+        </ul>
+        <p><b class="DRNumberBold">Applications</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 195707 </b> Display/Print PDF not working correctly in Production. This was fixed by updating fade logic when transitioning pages.</li>
+            <li><b class="DRnumber">DR 196108 </b> Exception canceling unlocking of application. This was fixed by adding null checks for the server-side correction of null reference exceptions. This may affect unlocking in general</li>
+        </ul>
+        <p><b class="DRNumberBold">Benchmarking</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 191688 </b> Excessive load time was occurring for the Benchmarking tool. This was fixed by adding paging, pages based on the list size set in Preferences.</li>
+            <li><b class="DRnumber">DR 196271, 196269 </b> When running benchmarks or selecting "Export" in the benchmarking system, FireLight was throwing a generic error. This was fixed by ensuring correct data is being passed to the server.</li>
+        </ul>
+        <p><b class="DRNumberBold">Console</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 161631 </b> The Agent ID was not carrying over to the signature screens on the Console requiring additional entry on each of the signatures required. This was fixed by updating the Client Verification page to initialize Agent ID and Signer ID based on data items.</li>
+        </ul>
+        <p><b class="DRNumberBold">Data Entry</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 182842 </b> In the Wizard, when using a rule template to create a rule, the template name was not auto-populating the Rule Name. This was fixed.</li>
+            <li><b class="DRnumber">DR 184034, 185493, 191628</b> Text and Radio Button controls were not aligning properly in Wizards, error messages were not rendering as expected, and edits were overlapping and poorly padded. This was fixed by modifying all wizard input components so they center-align withing their respective rows.</li>
+            <li><b class="DRnumber">DR 184081 </b> Error messages were overlapping in wizards. This was fixed.</li>
+            <li><b class="DRnumber">DR 184112 </b> Text and Radio Button fields were overlapping in wizards. This was fixed.</li>
+            <li><b class="DRnumber">DR 185117 </b> Autocomplete was not working in the rules editor for wizards. The CSS for the autocomplete was too low in the priority to be shown. This was fixed by moving the CSS to display autocomplete to the global level instead of the element level.</li>
+            <li><b class="DRnumber">DR 189633 </b> HTML text was not rendering correctly in the Wizard UI. The EGApp .css for the client had an override for the tag to set the font-weight to normal. This was fixed by deleting the override for the font-weight so that the default font-weight would be used for tags.</li>
+            <li><b class="DRnumber">DR 192385 </b> Wizard error messages were overlapping the radio buttons if the component hosting them was too small to contain the message. This was fixed by modifying the error message container so the error message is hidden and a tooltip is used when the container is too small to fit the message.</li>
+            <li><b class="DRnumber">DR 193532 </b> Multi-line text box fields were not displaying as Required. Error styling was only implemented for input fields (single-line text boxes) and not for textarea fields (multiple-line text boxes). This was fixed by adding styling for textarea fields so they appear with the proper error background and border.</li>
+            <li><b class="DRnumber">DR 196086 </b> Slow saving of wizards. This was fixed by removing double-sanitize to improve save speed because the second sanitize isn't necessary.</li>
+            <li><b class="DRnumber">DR 197157 </b> Labels on forms were not working in the forms within wizards UI. This was fixed by making modifications to forms within wizard UI so that labels more closely match that of native forms.</li>
+            <li><b class="DRnumber">DR 197159 </b> Wizard spacing issue: (1) Font sizes were incorrect when rending forms in the new UI. This was fixed by updating font size mapping logic in the new UI to match legacy forms rendering. (2) Prior to 2.14, we were allowing all text to show in field labels, which often resulted in label text overflowing other fields on the page. In 2.14, this was changed so label text is truncated and an ellipsis is shown if there is not enough room for the entire label, which meant there was not enough room for standard yes/no, true/false labels in 1-wide checkboxes within panels. This was fixed by restructuring styles and eliminating unnecessary horizontal spacing between components. Yes/no, true/false will now fit. Note that longer labels will require expanding the width of the field in the designer.</li>
+            <li><b class="DRnumber">DR 197549 </b> Partial application was not saved or recovered in Internet Explorer browser. Session expiration times were not being updated unless at least half the session had passed. Because of this, if data was entered in the first half of a session, but not after the halfway point, the session would already be expired by the time the UI attempted to save data. This was fixed by adding a keep-alive check at specific intervals based on the configured authentication timeout.</li>
+            <li><b class="DRnumber">DR 197571 </b> On the product selection screen, the product type filter was not working correctly. This was fixed by initializing product type first.</li>
+            <li><b class="DRnumber">DR 197598</b> Unable to edit an application name in 2.14. If an application name is too long, the edit icon gets hidden behind tool buttons so the user was unable to click the edit icon. This was fixed. If application name is too long, it will wrap to the next line.</li>
+            <li>
+                <p><b class="DRnumber">DR 197606 </b> v2.14 introduced the capability to edit and view forms and wizards together in the wizard user interface (iConnect 195320).  The intended behavior is for forms-only applications to continue to use the legacy forms-only user interface, and for applications with wizards to also be able to show and edit forms.  The system was checking for a non-null wizard definition to determine if an application contained any wizards and redirect to the wizard UI, but due to a data issue where the wizard definition was not null, but blank in some cases, for many organizations with the first UAT release on 3/22, even forms-only applications were opening in the new wizard user interface, which exposed various problems with forms in the new wizard interface, including alignment issues, circular radio buttons, controls displaying on the wrong page, issues with execution of rules, etc. </p>
+                <p>The problem was reported on 3/25, the issue above was identified on the morning of 3/26, and the database was corrected in UAT Next at noon on 3/26, correcting the problem and causing forms-only applications to continue to use the legacy forms user interface.  The code was also modified to correctly handle the scenario of a non-null, but blank wizard definition, in case that scenario should recur in the future.</p>
+                <p>Some of the wizard UI issues that this exposed have also been resolved for the 3/29/2019 UAT release, and these are being tracked separately.  Work will continue to achieve feature parity between the new wizard user interface and the legacy forms UI.</p>
+            </li>
+            <li><b class="DRnumber">DR 197335 </b> Wizard Issue: when 100% complete cannot view forms or sign. The issues were blue screen after completing all required fields (fixed in 3/29/19 UAT release), error messages on disabled fields, truncated yes/no text on radio button controls. Removed error messaging style if field is disabled.  Truncated yes/no text is due to the addition of the Help text on a radio button field.  If the help text is added, the field width must be set to a minimum width of 2 to accommodate text and help text.</li>
+            <li><b class="DRnumber">DR 197916 </b> Need to turn off Save As feature on Forms Entry. This was fixed by updating the CSS to hide the Save As button.</li>
+            <li><b class="DRnumber">DR 198164</b> Optional forms did not show up in wizard applications. An optional form in a package with wizards in the sales agreement do not show up in the wizard UI.  They are visible in the print/display pdf, but never show in the edit  view or in the menu drop-down.</li>
+        </ul>
+        <p><b class="DRNumberBold">Documents</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 176567 </b> Uploaded PDF documents were invalid after processing in FireLight. This was fixed by modifying the upload functionality to verify that the document can still be loaded by the ABCpdf component, and if not, store the original PDF content instead.</li>
+            <li><b class="DRnumber">DR 186010 </b> Addendum page review. The addendum page that is used for clients that prefer a soft limit in their forms looked very tight and didn't have spaces between items. This was fixed by adding spaces after each addendum for better readability.</li>
+            <li><b class="DRnumber">DR 188849 </b> In the Other Actions &gt; Documents dialog, after uploading a supplemental document, the uploaded file name still appeared in the Choose File text box. This was fixed by clearing the file name after successful upload of a document.</li>
+            <li><b class="DRnumber">DR 189395 </b> Documents were clear and legible after scanning, but were not legible after upload and were being declined. This was fixed by changing the document upload functionality to use 200 DPI instead of 150 DPI when compressing, and if the document grows in size, store the original PDF content instead.</li>
+            <li><b class="DRnumber">DR 192517 </b> Both the uploaded document and the template name were listed in the Document list for print after the e-Delivery wizard is locked.  Remove link was shown although uploaded documents cannot be removed after lock. This was fixed by hiding the Remove link when the activity is no longer active and by removing the original template from the Documents list so it is only listed once.</li>
+            <li><b class="DRnumber">DR 197369 </b> Able to upload 2 illustrations. The user was not being blocked from uploading a document before the previous upload was complete. This was fixed by adding blocking logic to the document upload dialog to prevent duplicate submission of files and by changing illustration doctype to only allow a single uploaded document.</li>
+            <li><b class="DRnumber">DR 197591 </b> Remove uploaded documents tied to templates. Uploaded documents and the template forms were both being stored within the package, which duplicated the storage needs of the application once the application was submitted. This was fixed by removing any uploaded template documents at submission, because the application template form documents have been updated with the uploaded document content and the uploaded documents are no longer needed.</li>
+        </ul>
+        <p><b class="DRNumberBold">E-Delivery</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 192696 </b> Updated the e-Delivery child case icon from the users icon to the link icon.</li>
+            <li><b class="DRnumber">DR 196580 </b> Expiration reminder emails were being sent for expired requests. This was fixed by using the application's expiration date for the reminder emails and updating the email text. <MadCap:conditionalText MadCap:conditions="General.Postpone">A SQL statement was checking the expiration on the child app, but the parent app had the expiration and the child app had a null expiration. This resulted in always returning no parties. Fixed the SQL statement to look at the parent app's expiration instead. Also, the E-Delivery Timeout option was removed from the Profiles &gt; Organizations &gt; Activity tab as it is no longer used.</MadCap:conditionalText></li>
+            <li><b class="DRnumber">DR 197995 </b> Child cases were seeing link icon in e-delivery cases. Linked activities were available for external requests. This was fixed by hiding the link icon/linked activities for external requests.</li>
+        </ul>
+        <p><b class="DRNumberBold">Email</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 162524 </b> Email address with an ending longer than 6 characters was not accepted. This was fixed by setting the ending (.com, .net, .insurance) length limit to 16 when validating email addresses in FireLight.</li>
+            <li><b class="DRnumber">DR 198151 </b> &lt;AGENT_NAME&gt; in Agent Completed Application email. The To name on the agent completion email was setting to the organization name. This was fixed by setting the From name and address in the agent completion email to the agent's email/name because the From information was being used as the To address in the email template formatting for the agent name tag.</li>
+        </ul>
+        <p><b class="DRNumberBold">FireLight Embedded</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 192097 </b> Embedded wizard radio buttons and combo boxes were not centered when embedded. This was fixed. Combo boxes and radio buttons are now aligned correctly in embedded.</li>
+        </ul>
+        <p><b class="DRNumberBold">FireLight UI</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 197272, 197273 </b> Search in My Messages and Commission Netting were misaligned at 90% Zoom. Fixed the FireLight UI to support zooms between 80–120%.</li>
+        </ul>
+        <p><b class="DRNumberBold">Integration</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 186547 </b> Sporadic issues with SFTP file transfers truncated or not received/processed. Because SFTP transfers can give partial files sometimes, added an optional sftp context flag that allows Providers to enable the SFTP process to double check the file size on the file that was just written, and compare that size to the intended data size.</li>
+            <li><b class="DRnumber">DR 194613 </b> Custom List provider call did not work. The call to the integration provider did not provide enough information for the provider to determine what list to override. This was fixed by modifying the call from the controller to the provider to include the ListName, which along with the Org ID gives the provider enough information to determine what list to override.</li>
+        </ul>
+        <p><b class="DRNumberBold">Localization</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 196496 </b> In the All Activities page, there was an error loading audits for non-English locale if not defined in the database. Production workaround was to define English versions of these audit templates. Added a null check in the Localization Manager to prevent an exception if an audit is not defined.</li>
+            <li><b class="DRnumber">DR 197378 </b> Custom Copy was not working for Canada French. This was fixed by moving new app-specific properties and methods out of product availability implementation to fix default jurisdiction.</li>
+        </ul>
+        <p><b class="DRNumberBold">Message Center</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 189182 </b> Add back date and timestamp next to items in the Message Center. Date and timestamp were not displaying in the My Messages listing of sent and received messages. This was fixed by adding back a missing symbol that was removed in localization changes to allow the timestamp to render correctly.</li>
+        </ul>
+        <p><b class="DRNumberBold">Outstanding/Pending Requests</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 185369 </b> On the Outstanding Requests popup dialog, timestamps were being shown in UTC instead of user's timezone (from their preferences). This was fixed by converting timestamps on requests to the user's Preferences timezone before sending data back to the page to be rendered.</li>
+        </ul>
+        <p><b class="DRNumberBold">Performance</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 184064 </b> RuleSet and Library view in Admin needed tuning. Paging was implemented in audit history tab of Form Library and Rule Sets.  Performance has vastly improved even for very large sets of history.</li>
+        </ul>
+        <p><b class="DRNumberBold">Reports</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 198801 </b> User Share report throws error with Generate PDF. This was fixed by correcting the QE Next and UAT Next databases.</li>
+        </ul>
+        <p><b class="DRNumberBold">Review Queue</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 187698 </b> Unable to lock application in review queue if application name contains special characters. This was fixed by sanitizing the application name when populating JavaScript strings from .Net.</li>
+            <li><b class="DRnumber">DR 190672 </b> Review Queue history was not in chronological order. This was fixed by updating the sorting of Review Queue items by last action date. This change affects only the Review Queue history.</li>
+            <li><b class="DRnumber">DR 191827 </b> More Info request was being removed in the Review Queue when the Reviewer Documents were set to Complete. This was fixed by changing the logic to look for outstanding More Info requests messages regardless of the status.</li>
+            <li><b class="DRnumber">DR 192866 </b> In the Review Queue, the Reviewer History page was showing the correct count for the selected reviewer, but displaying items for a different user, so the count looked incorrect compared to what was displayed. This was fixed by showing only items for the selected Reviewer.</li>
+            <li><b class="DRnumber">DR 193262 </b> Signing Ceremony documents appears in View Additional Documents legacy review queue. This was fixed by correcting reverse logic that was including rather than excluding signing ceremony documents.</li>
+            <li><b class="DRnumber">DR 195641 </b> When doing an Advanced Search in the Review Queue History and then clicking on a page number, the results reverted to showing all history items so it was not possible to navigate to other pages in the results. Advanced Search results were being cleared after loading the page so navigation among pages could not occur. This was fixed by retaining search results data until cleared by clicking the "Clear" link or creating a new search.</li>
+            <li><b class="DRnumber">DR 195973 </b> Rules that are using option="Warning" were causing reviewer only forms not to be completed. The Complete button did not update right away if there was an error and a warning and the error validation was removed.  It would update correctly if there was only a warning error or if you went out and came back in. This was fixed by adding a warning error color on the percent label back into the review queue as it is used in edit application even though it is hard to see.  Fixed the issue of the Complete button not updating right away when there are only warning errors.</li>
+            <li><b class="DRnumber">DR 196267 </b> Error when electing to use PreSubmit Review in QE Next 2.14. Error occurred on clicking "Send Request To Reviewer(s)" button due to misplaced extension method. This was fixed by adding an extension method for Dictionary.</li>
+            <li><b class="DRnumber">DR 196441, 192179</b> Exceptions occurred when adding to Review Queue history because the user entered a message that exceeded the maximum length of the database field (2048 characters) for message length. This was fixed by increasing the maximum length of the database field.</li>
+        </ul>
+        <p><b class="DRNumberBold">Session Time Out</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 190734 </b> FireLight did not save partial applications when the session timed out. This was fixed. Added logic to save application edits when a user's session times out. Next time the user logs in and opens the application, they is given the option to recover and restore the data they had entered at the time the session previously expired. This change affects data entry in forms and wizards.</li>
+        </ul>
+        <p><b class="DRNumberBold">Share Cases and Transfer Application Search</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 191892 </b> Search fields in the Share My Activities dialog in All Activities and in the Application Transfer dialog in Other Actions did not allow users to type '@' characters, so users were unable to search other users by email address. Removed the restriction for '@' characters for the two dialoges and verified that '.' period characters can be entered, so users can now search other users by email address. </li>
+        </ul>
+        <p><b class="DRNumberBold">Signatures</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 182688 </b> Revoke signature request could be triggered by clicking anywhere in the button and not on the Revoke Request link causing a request to be unintentionally revoked. Added a confirmation dialog for the revoke signature request in the signing ceremony and made only the Revoke Request link active on the button. </li>
+            <li><b class="DRnumber">189264, 182119</b> Deployments were sometimes causing corrupted form data that prevented signing. This was fixed by modifying the deployment process to detect and correct invalid form deployments.</li>
+            <li><b class="DRnumber">DR 190552 </b> In signer roles that are a trust, sometimes the signature fields were too small to capture the signature. This was fixed by changing the maximum text length to 60 characters instead of 35 in agent and client signature fields.</li>
+            <li><b class="DRnumber">DR 191196 </b> Issues with mapping of Agent Name in Auto Sign case. Preferences were being saved for user on Auto Sign service, so the email to the signatories was not able to get through with the agent's name in the Preferences (unless it was being sent in on the 103). This was fixed by stopping saving Preferences for the Auto Sign service as well as other services using the same process.</li>
+            <li><b class="DRnumber">DR 192472 </b> Agent signature did not display on the completed application. The captured signature size was below the minimum image size. This was fixed by implementing server-side validation of minimum signature image size and non-blank signature.</li>
+            <li><b class="DRnumber">DR 192932 </b>  Agent name did not map into the List of Required Signers page.  It also did not map with the agent Preferences information. This was fixed. Agent name was only mapping with Agent_Full_Name and Agent_FName, Agent_LName.  These data items were not being pre-filled by the Preferences info.  Added a check for FLI_Agent_Name if the previous values return empty.  Also added the agent name to the signer list as it was only being added for non-agent signer types.</li>
+            <li><b class="DRnumber">DR 193331 </b> The Signatures automated service to initiate the signing ceremony was using the wrong email template. This was fixed. It now uses ESignature instead of EAppFill. </li>
+            <li><b class="DRnumber">DR 194042 </b> Require signature pad requirement was enforced even if form was excluded from the application. This was fixed.</li>
+            <li><b class="DRnumber">DR 198589 </b> Signing ceremony only forms were shown in edit application UI after entering signing when previous version did not show them. This was fixed by hiding the signing ceremony only forms in the edit application UI.  Even if forms contain signatures, they can be viewed in the Print/Display PDF view. </li>
+        </ul>
+        <p><b class="DRNumberBold">SMS Text</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 196622 </b> Was getting an error when sending SMS Text on Client Identification Verification screen. This was fixed by passing the application name into the SMS audit.</li>
+        </ul>
+        <p><b class="DRNumberBold">Topaz Signature Pad</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 194474 </b> An agent had an issue using the Topaz<sup>®</sup> signature pad. It stopped working because the Topaz HTTPS certificate expired on 1/25/2019. To fix the issue, users need to go to <a href="http://www.topazsystems.com/sigweb.html" target="_blank">http://www.topazsystems.com/sigweb.html</a> and follow directions in the webpage to update their Topaz Certificate by downloading the SigWeb Certificate Updater. </li>
+        </ul>
+        <p><b class="DRNumberBold">Warning Messages</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 193488 </b> Warning validation messages did not show when a field got focus. Fixed the issue that was causing the warnings to get skipped when a field was clicked. </li>
+        </ul>
+        <p MadCap:conditions="General.Online"><a href="#top">Return to Top</a>
+        </p>
+    </body>
+</html>

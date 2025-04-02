@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>If you make a change to the Field Name property in a wizard control, an Update Rule Sets dialog appears and asks, "One or more field names have been changed. Would you like to update rules referencing the field data item ids?" Click a button to choose whether to <b>UPDATE ALL RULE SETS</b>, <b>UPDATE PRIMARY RULE SET</b>, or <b>DO NOT UPDATE</b> any rule set that are included in the packages in which the wizard resides. <b class="Bold">CAUTION:</b> This does not update rule sets that are not included within the same packages as the wizard being updated.</body>
+</html>

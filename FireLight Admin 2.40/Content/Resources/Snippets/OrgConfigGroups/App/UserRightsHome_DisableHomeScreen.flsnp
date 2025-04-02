@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <strong>Disable Home Screen</strong> checkbox to disable navigation to the Home page in FireLight. This option is to be used in combination with an incoming single sign-on request that launches a user into an edit activity page. If Disable Home Screen  and Enable Multiple Open Activities options are enabled, the Open Activities menu does not appear in data entry. <MadCap:conditionalText MadCap:conditions="General.Online">See also <MadCap:xref href="../../../../UserGuide/New Activity/Multiple Activities.htm" target="_blank" alt="Multiple Activities [User Instructions]">Multiple Activities [User Instructions]</MadCap:xref>.</MadCap:conditionalText></body>
+</html>

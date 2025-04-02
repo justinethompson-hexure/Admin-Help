@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1><a name="top"></a>Copy Fields to a Wizard from a Form</h1>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WzdLockUnlock.flsnp" />
+        </p>
+        <h2>Copy Fields to a Wizard from a Form</h2>
+        <p>In the Page Options section of the Wizard Designer, use the Copy Form Fields feature to copy fields to a wizard from a form. </p>
+        <ol>
+            <li>
+                <p>Go to the <b class="Bold">Designer/Wizard Designer</b> page. </p>
+            </li>
+            <li>
+                <p>In the lists, select a <b class="Bold">Wizard</b> and select a <b>Page</b>.</p>
+            </li>
+            <li>
+                <p>On the lower left of the wizard page in the <b class="Bold">Page Options</b> section of the page, click the <b class="Bold">Copy Form Fields</b> link to open the <b class="Bold">Wizard Copy Fields</b> dialog. </p>
+                <p>Search for a form and field name.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>On the upper left of the dialog under <b class="Bold">Copy From</b>, type a search word or phrase for a form name. For example, type "Annuity" to search for forms with the word "Annuity" in the form name. </p>
+                        <p>In the list of form names, click the name of a form.</p>
+                    </li>
+                    <li>
+                        <p>Below the title row of the grid, enter any or all of the following form data: Field Name, Page number, Field Type, and Data Item ID to further filter the fields on the selected form.</p>
+                    </li>
+                </ol>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/Capture248.png" alt="Wizard Copy Fields dialog" title="Wizard Copy Fields dialog" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+            <li>
+                <p>Select the checkboxes for the individual form fields to copy to the wizard. Or, select the checkbox in the title row of the <b class="Bold">Wizard Copy Fields</b> dialog to select all the fields displayed on the dialog to copy to the wizard. </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>When mapping from a source form to a destination wizard page, if data items from the source form are not located anywhere within the destination wizard, the checkbox column on the Wizard Copy Fields dialog adjacent to the "Field Name" is checked and the checkboxes in the "Already Exists" column is notchecked.</p>
+                    </li>
+                    <li>
+                        <p>If a data item on the source form already exists in the destination wizard, the checkbox column adjacent to the "Field Name" is unchecked and the checkboxes in the "Already Exists" column are checked. This is the case even when a copy from a source form to a destination wizard has been completed but the wizard has not yet been saved. The copy process sees that these fields already exist on the destination wizard. They can be copied again but the boxes have to be checked as they are not auto selected for mapping.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>On the lower right, click the <b class="Bold">Copy Selected Fields</b> button. FireLight copies the selected form fields to the open wizard page in the Wizard Designer.</p>
+            </li>
+            <li>
+                <p>On the upper left of the wizard, click the <b class="Bold">Save Wizard</b> button to save the wizard.</p>
+            </li>
+        </ol>
+        <h2>System Rules for the Copy Form Fields Feature</h2>
+        <ol>
+            <li>
+                <p>The following controls are available for copying from a Form to a Wizard: Text Box, Calendar (equates to wizard DatePicker), Radio Button, CheckBox (equates to wizard Check Box), Combo Box (equates to wizard Dropdown List), Custom Action, Address Autocomplete, and Label (equates to wizard Text). </p>
+            </li>
+            <li>
+                <p>The following form controls are not available for copying from a form to a wizard: Signature Box, Signature Initials, and BarCode.</p>
+            </li>
+            <li>
+                <p>When a "Copy Form Fields" process completes, the form fields display on the wizard as follows: </p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>No matter the size of the control as it exists on the source form, the Default size of the control in the destination wizard environment is used for the fields/controls upon landing on the destination wizard page. Controls can then be moved and adjusted as necessary to fit wizard requirements. The default size for each control is listed below: </p>
+                        <ul style="list-style-type: circle;">
+                            <li>
+                                <p>Combo Box (wizard Dropdown List), Text Box, CheckBox, Radio Buttons, Button (wizard Custom Action) and Address Autocomplete controls appears on the destination wizard with the default size of 6.</p>
+                            </li>
+                            <li>
+                                <p>Calendar (wizard DatePicker) appears on the destination wizard with the default size of 3.</p>
+                            </li>
+                            <li>
+                                <p>Label (wizard Text) appears on the destination wizard with the default size of 12.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>All copied source form fields land on the destination wizard page beginning at the top left of the wizard, moving left to right across the page, and then down to the next line until all fields selected for copying are listed on the current wizard page. </p>
+                    </li>
+                    <li>
+                        <p>Where there is a one-to-one relationship between destination wizard data field properties and source form data field properties, the data field is to retain the same field properties on the destination wizard as they existed on the data item from the source form. </p>
+                        <ul style="list-style-type: circle;">
+                            <li>
+                                <p>Destination wizard Text Box fields retain the following Field Properties from the source form data source: Field Name, Common Tag Name, Error Placement, Input Type, Placeholder Text, Text Mask, SSN Format, Data Group, Data Group Property, Max Length, Read Only, and Office Use Only.</p>
+                            </li>
+                            <li>
+                                <p>Destination wizard Dropdown Lists (form Combo Boxes) retain the following Field Properties from the Form data source: Field Name, Common Tag Name, List Values, Data Group, Data Group Property, Read Only, Office Use Only, Error Placement, and Help Text.</p>
+                            </li>
+                            <li>
+                                <p>Destination wizard Check Boxes and Radio Buttons should retain the following Field Properties from the source form data source: Field Name, Common Tag Name, Export Value, Group Name, Error Placement, Help Text, Display Style / Border Style, Data Group, Data Group Property, Read Only, and Office Use Only.</p>
+                            </li>
+                        </ul>
+                        <ul style="list-style-type: circle;">
+                            <li>
+                                <p>Destination wizard Custom Action (form Button) controls should retain the following Field Properties from the source form data source: Field Name, Common Tag Name, Help Text, Data Group, Custom Action, Custom Action Type, and Action Parameter. </p>
+                                <p><b class="Bold">NOTE:</b> All custom action buttons that are available in the form environment are also available in the Wizard environment. However, the reverse is not true as not all custom actions available in the Wizard environment are available in the Forms Only environment. Custom Action of 'External Source' and Custom Action Type of 'Milliman' are not available in the Form environment.</p>
+                            </li>
+                        </ul>
+                        <ul style="list-style-type: circle;">
+                            <li>
+                                <p>Destination wizard DatePicker (form Calendar) controls retain the following Field Properties from the Wizard data source: Field Name, Custom Tag Name, Error Placement, Help Text, Data Group, Data Group Property, Text Mask, and Read Only. </p>
+                            </li>
+                        </ul>
+                        <ul style="list-style-type: circle;">
+                            <li>
+                                <p>Destination wizard Address Autocomplete controls retain the following Field Properties from the Wizard data source: Field Name, Common Tag Name, Placeholder Text, Help Text, and Data Group.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>When CheckBox controls are mapped from a source form, they map to the destination wizard but appears as a Radio Button control in the wizard. This is by design as wizard Check Box controls are Radio Button controls and they behave the same.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>When mapping from a source form to a destination wizard page, if data items from the source form are not located anywhere within the destination wizard, the checkbox column on the Wizard Copy Fields dialog adjacent to the "Field Name" are checked and the checkboxes in the "Already Exists" column are notchecked.</p>
+            </li>
+        </ol>
+        <p><b class="Bold">See Also:</b> <MadCap:xref href="../Forms/Copy Fields to Form from Form or Wizard.htm" title="Copy Fields to a Form from a Form or Wizard" alt="Copy Fields to a Form from a Form or Wizard">Copy Fields to a Form from a Form or Wizard</MadCap:xref></p>
+        <p MadCap:conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

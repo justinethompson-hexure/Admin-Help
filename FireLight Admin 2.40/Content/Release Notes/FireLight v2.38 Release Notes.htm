@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight v2.38 Release Notes</h1>
+        <h1><a name="top"></a>What's New in FireLight</h1>
+        <p><span style="color: #000000;">The following enhancements are now available for all clients unless noted otherwise. See the "FireLight v2.38" Release History" topic in Admin Help for fixed defects and links to design documents and Admin Help topics.</span>
+        </p>
+        <h1><a name="top"></a><b style="font-size: 16pt;">New Functionality</b>
+        </h1>
+        <p><b style="font-size: 14pt;">DTCC Producer Authorization to Support Can Sell: CR-1807</b>
+        </p>
+        <p>Hexure has developed the Producer Authorization integration with DTCC to verify producer requirements for licensing, appointment, and training.</p>
+        <p><b>Impact</b>
+        </p>
+        <p>Enabling DTCC Producer Authorization in Admin</p>
+        <ul>
+            <li>
+                <p>Groups &gt; App &gt; Select DTCC Producer Authorization from Can Sell dropdown</p>
+            </li>
+        </ul>
+        <p>New Application Selection updates</p>
+        <ul>
+            <li>
+                <p>New Application showing DTCC Producer Authorization responses: FireLight Homescreen &gt; Applications &gt; Product Selection &gt; Pick State. DTCC validates producer requirements, soft stop or hard stop for an application, and eligibility to sell the product.</p>
+            </li>
+            <li>
+                <p>Default behavior is soft stop. The Producer will be alerted if they fail to meet the expected criteria set by the carrier.</p>
+            </li>
+        </ul>
+        <p><b style="font-size: 14pt;">Perform Call DTCC Producer Authorization Service: CR-2128</b>
+        </p>
+        <p>We have added the ability to call the DTCC Producer Authorization Service so that DTCC can provide the status of the producer to perform business within a Jurisdiction, Carrier, and selected Product.</p>
+        <p><b style="font-size: 14pt;">Move Enable SuranceBay Checkbox from Admin Tab to App Tab of Firelight Admin: CR-2129</b>
+        </p>
+        <p>Selection updates have been made in FL Admin &gt; Groups &gt; App to account for multiple Can Sell options. Available options include the following:</p>
+        <ol>
+            <li>
+                <p>None</p>
+            </li>
+            <li>
+                <p>DTCC Producer Authorization</p>
+            </li>
+            <li>
+                <p>SuranceBay Producer Eligibility</p>
+            </li>
+        </ol>
+        <p><b style="font-size: 14pt;">Capture DTCC Producer Authorization  Calls as Part of Audit History: CR-3876</b>
+        </p>
+        <p>We have added the ability to view call history (sending and receiving calls to/from DTCC) as part of the Audit history in FireLight.</p>
+        <p><b style="font-size: 14pt;">Enhancements Related to Smart Controls: DIST-2244</b>
+        </p>
+        <p>The enhancements below have been made to the Smart Text Box control on the Wizard Designer.</p>
+        <ol>
+            <li>
+                <p>Allow spaces while entering values with input type selected as Alpha Chars.</p>
+            </li>
+            <li>
+                <p>New property to allow converting text to uppercase.</p>
+            </li>
+            <li>
+                <p>Display system-generated rules selected via the field properties in a separate dialog for view only.</p>
+            </li>
+            <li>
+                <p>Add two more input types to specify the text inputs: alpha numeric and alpha only.</p>
+            </li>
+        </ol>
+        <p><b style="font-size: 14pt;">Maintain Consistency in the Behavior and Background Color of Office Use Only Fields on Both Forms and Wizards: DIST-2608</b>
+        </p>
+        <p>The following changes have been made to make behavior of office use fields consistent between forms and wizards:</p>
+        <ul>
+            <li>
+                <p>Display the office use only fields with a green background (in base CSS) without applying the Required rule on both Forms and Wizards.</p>
+            </li>
+            <li>
+                <p>Display the office use only field and its error messages in the error list with a green background when the fields are enabled/made visible via a condition/rule.</p>
+            </li>
+        </ul>
+        <p><b style="font-size: 14pt;">Font Color Property for the Inputs Fields: DIST-4056</b>
+        </p>
+        <p>On the Form Designer, for the below input fields, the font color option "Transparent" will be removed because it is redundant with the "White" option.</p>
+        <ul>
+            <li>
+                <p>Text Box</p>
+            </li>
+            <li>
+                <p>Combo Box</p>
+            </li>
+            <li>
+                <p>Label</p>
+            </li>
+            <li>
+                <p>Calendar</p>
+            </li>
+            <li>
+                <p>Button</p>
+            </li>
+            <li>
+                <p>Signature Box</p>
+            </li>
+        </ul>
+        <p><b style="font-size: 14pt;">Display Custom List Name in Form and Wizard History: DIST-4400</b>
+        </p>
+        <p>We enhanced Form and Wizard History to display any custom list names linked to a dropdown field on the form or wizard.</p>
+        <p><b style="font-size: 14pt;">Position the Import Button Correctly on Dropdown Dialog: DIST-4447</b>
+        </p>
+        <p>In the Form and Wizard Designer, we have moved the OK and Cancel buttons to the lower far right.</p>
+        <p><b style="font-size: 14pt;">New Activity Reports: DIST-4187, DIST-4602, DIST-4647</b>
+        </p>
+        <p>Two new activity reports are available to be scheduled from Reports Scheduler:</p>
+        <ol>
+            <li>
+                <p>Summary Report: Submission Summary Report Grouped by Jurisdiction</p>
+            </li>
+            <li>
+                <p>Detail Report: Applications that Bypassed Post Submit Review</p>
+            </li>
+        </ol>
+        <p><b style="font-size: 14pt;">Manage CSS for the Error Messages Displayed for Office Use Only Fields: DIST-4501</b>
+        </p>
+        <p>We updated Office Use Only field error messages to appear with a green background instead of a red one.</p>
+        <p><b style="font-size: 14pt;">Update Error Messages for Alpha Only, Alpha Chars, and Alpha Symbols Input Types: DIST-4504</b>
+        </p>
+        <p>We have changed the text on the Wizard Designer in the Admin tool for the Smart Text Box and in the FireLight App for the input types Alpha Only and AlphaNumeric from "Alphabet" to "AlphaChar."</p>
+        <p><b style="font-size: 14pt;">Enhancements Related to Client Fill &amp; Sign Option: DIST-4510 and DIST-4037</b>
+        </p>
+        <p>With this change, an agent-protected form added to a combined (Forms + Wizards) UI will be taken into consideration when enabling the Client Fill &amp; Sign option. Along with this change, only the required fields placed on an agent-protected form available to the application are considered while enabling the Client Fill &amp; Sign option.</p>
+        <p><b style="font-size: 14pt;">Update Controls on Sales Agreement Admin Page to Keep User on Current Tab upon Save: EAES-3936</b>
+        </p>
+        <p>We have enhanced the Sales Agreement page in the Admin tool so that when a user clicks Save Sales Agreement to save any changes, the user stays on the same tab. Additionally, when there are multiple items in the selection window and the user wants to move them down the list by clicking the up or down arrow button, that item moves up or down one line at a time, and focus remains on the selected item.</p>
+        <p><b style="font-size: 14pt;">Implement a Wizard View for Purged Activities: EAES-4346</b>
+        </p>
+        <p>We have implemented a React View for purged activities, including the name of the purged activity, the date and time the activity was purged, and other relevant details.</p>
+        <p><b style="font-size: 14pt;">Add ApplicationId to Exception Logging for External Requests: EAES-4401</b>
+        </p>
+        <p>We added the ApplicationId to exception logging for external requests to improve troubleshooting and maintenance.</p>
+        <p><b style="font-size: 14pt;">Pop-up Messages in the Embedded Environment: PC-2776</b>
+        </p>
+        <p>We now support pop-up messages in the embedded environment that are similar to those in the legacy and native application.</p>
+        <p><b>Impact</b>
+        </p>
+        <p>The customer will not have to do anything for the feature to be activated as it is on by default.</p>
+        <p><b style="font-size: 14pt;">Sunset the Legacy Forms UI - Phase 2: PC-2960</b>
+        </p>
+        <p>We enhanced system efficiency by removing UI code related to legacy forms, resolving issues for clients moving off the legacy user interface. Following the 2.38 release, all implementations will use the forms and wizard user interface. There will not be an impact to inflight applications.</p>
+        <p><b style="font-size: 16pt;">Resolved Issues</b>
+        </p>
+        <p><b style="font-size: 14pt;">Miscellaneous SuranceBay Enhancements and Bug Fixes: CR-3858, CR-3890, CR-3835</b>
+        </p>
+        <p>SuranceBay enhancements and bug fixes include the following:</p>
+        <ol>
+            <li>
+                <p>Removed SuranceBay checkbox in FL Admin &gt; Groups &gt; Admin tab and replacing it with SuranceBay selection option in FL Admin &gt; Groups &gt; App tab &gt; Can Sell dropdown.</p>
+            </li>
+            <li>
+                <p>Corrected an issue that was preventing the user from accessing and navigating to the Signature page for non-insurance products.</p>
+            </li>
+            <li>
+                <p>Corrected an issue so that users are now able to access and navigate to the Signature page for unmapped products for which SuranceBay will not return a decision.</p>
+            </li>
+        </ol>
+        <p><b style="font-size: 14pt;">System Does Not Update Sales Agreement Status: CR-3933</b>
+        </p>
+        <p>We resolved an issue where after a sales agreement was deleted the agreement status did not change from true to false until the browser was refreshed. Now, following a sales agreement deletion, the agreement status updates automatically without requiring a browser refresh.</p>
+        <p><b style="font-size: 14pt;">Confirmation Dialog Buttons Labeled Incorrectly: CR-3964</b>
+        </p>
+        <p>We resolved an issue where forms only application confirmation dialog buttons were incorrectly labeled “OK” and “Cancel” instead of “Yes” and “No.” The dialog buttons are now labeled correctly.</p>
+        <p><b style="font-size: 14pt;">Confirmation Dialog Text Displayed Inconsistently: CR-3965</b>
+        </p>
+        <p>We resolved an issue where forms only application confirmation dialog text displayed as red instead of black. The dialog text now displays as black, as designed.</p>
+        <p><b style="font-size: 14pt;">Fill &amp; Sign Not Properly Accounting for Agent Protection Forms: DIST-4037</b>
+        </p>
+        <p>We resolved an issue where the Request Client Fill &amp; Sign option was not available even after filling out all the agent-required information in an application. This option is now available, as designed.</p>
+        <p><b style="font-size: 14pt;">Office Use Only Field Displaying Required Instead of Office Use Only When Forms Only App Using the Data Entry View Mode Other than “Disable Legacy Mode”: DIST-4357</b>
+        </p>
+        <p>We resolved an issue where when creating a Forms Only app using the Data Entry View Mode, drop-down fields displayed "Required" instead of "Office Use Only." These fields now display "Office Use Only" as designed.</p>
+        <p><b style="font-size: 14pt;">Client Fill &amp; Sign Option Shows Enable While a New Wizard (Having Required Office Use Only Fields) Is Added in the Application: DIST-4492</b>
+        </p>
+        <p>We resolved an issue where the Client Fill &amp; Sign option incorrectly appeared as enabled on a new wizard with required office use only fields.</p>
+        <p><b style="font-size: 14pt;">External Login Page Showing Same Validation When Enter Incorrect Value on Both SSN/DOB and Passcode: EAES-3918</b>
+        </p>
+        <p>We resolved an issue where entering an incorrect value for SSN and for DOB resulted in the same validation error. Now in this scenario the correct validation errors appear.</p>
+        <p><b style="font-size: 14pt;">Unable to Open Documents Dialog If There Are No Forms in the Activity: EAES-3972</b>
+        </p>
+        <p>We resolved an issue where attempting to open the Documents dialog in an Activity with no forms resulted in an error. The Documents dialog now opens as expected.</p>
+        <p><b style="font-size: 14pt;">Application Is Currently in a Status (Locked) That Will Not Allow the Application to Be Locked for Signature or Review Processing: EAES-4376</b>
+        </p>
+        <p>We resolved an issue where an error was received when attempting to lock for signature or review processing an application already in Locked status. No error is received now in this scenario.</p>
+        <p><b style="font-size: 14pt;">Reply To Address Can Incorrectly Include Multiple Email Addresses: EAES-5190</b>
+        </p>
+        <p>We resolved an issue where multiple email addresses were incorrectly allowed in the Reply To address field. The Reply To address field now allows only a single email address.</p>
+        <p><b style="font-size: 14pt;">Application Is Currently in a Status (Submitted) That Will Not Allow the Application to Be Completed: EAES-5280</b>
+        </p>
+        <p>We resolved an issue where cases were stuck in the Production workflow. Cases are now processed as designed.</p>
+        <p><b style="font-size: 14pt;">Product Type Information Is Not Showing Correctly on Next Activity: EAES-5314</b>
+        </p>
+        <p>We resolved an issue in the Annuity Quoter where user-entered information, such as Product Type, Carriers, and Tax Qualification, did not appear as entered. This information now appears as entered by the user.</p>
+        <p><b style="font-size: 14pt;">Form Designer - For Every Trigger of Rule Size Warning Message Popup It Creates New Web Elements Resulting in Multiple Reference for Locators: EAES-5315</b>
+        </p>
+        <p>We resolved an issue in the Form Designer where multiple web elements, including popup windows, Keep buttons, and Cancel buttons, were being erroneously generated. The Form Designer is now working as designed.</p>
+        <p><b style="font-size: 14pt;">Error During Custom Action Print: EAES-5426</b>
+        </p>
+        <p>We resolved an issue where attempting to print while creating an application resulted in an error. Printing now works as designed.</p>
+        <p><b style="font-size: 14pt;">Drop-Down Field Is Bolded in Legacy Forms UI but Not in Combined Wizard + Forms UI: EAES-5440</b>
+        </p>
+        <p>We resolved an issue where in the combined Wizard + Forms user interface the dropdown fields value and text fields values did not appear bold. These values now appear bold as designed.</p>
+        <p><b style="font-size: 14pt;">Server Health Check Failing Because It Doesn't Ignore Deleted Organizations: EAES-5461</b>
+        </p>
+        <p>We resolved an issue where due to not excluding deleted organizations, the server health check failed. The server health check is now working as designed.</p>
+        <p><b style="font-size: 14pt;">Wizard UI Purged View Page Have Some Differences from Legacy Purged App UI Page: EAES-5475</b>
+        </p>
+        <p>We resolved an issue where row names displayed in two lines instead of one and headers were misaligned. Row names now display in one line and headers are aligned properly.</p>
+        <p><b style="font-size: 14pt;">Error After Uploading Document: EAES-5523</b>
+        </p>
+        <p>We resolved an issue where an error was received after document upload. Document upload now works as designed.</p>
+        <p><b style="font-size: 14pt;">"E-Signature Process Declined" Audit Not Visible at the History, When Decline eSign is Selected Item ID: EAES-5566</b>
+        </p>
+        <p>We resolved an issue where when in an activity a user selects Decline eSign and the  "FLI_DECLINED_ESIGN" Data Item ID is set to true, this action is not reflected in the Audit when the user selects History under the Other Activities menu. In this scenario, the audit is now visible.</p>
+        <p><b style="font-size: 14pt;">Getting Undefined When User Enters DOB at Forms Using the Keyboard Input and Date Picker Modal: EAES-5557</b>
+        </p>
+        <p>We resolved an issue where entering a date of birth on Forms using the keyboard and Date Picker resulted in undefined data fields being visible. Using keyboard input and the date picker to enter a date of birth now works as designed.</p>
+        <p><b style="font-size: 14pt;">Not Showing Submit Confirmation on MVC App When No Signers Available or FLI_DECLINED_ESIGN Is True: EAES-5576</b>
+        </p>
+        <p>We resolved an issue where if no signers were available or FLI_DECLINED_ESIGN is true, the Submit Confirmation dialog failed to appear. The dialog now appears as designed.</p>
+        <p><b style="font-size: 14pt;">Data Entry - Submit App - Confirmation Dialog Text Changed: EAES-5577</b>
+        </p>
+        <p>We resolved an issue where, when submitting from data entry an application lacking signatures, an incorrect pop-up confirmation message appeared. The correct confirmation message now appears in this scenario: "This will complete the application process and permanently lock all forms. No further edits will be allowed. Are you sure?"</p>
+        <p><b style="font-size: 14pt;">Default Font Text Color of Fields Is Affected by Fix for Drop-Down Field Text Color: EAES-5655</b>
+        </p>
+        <p>We resolved an issue where selecting a font color for drop-down field text in the Wizard updated all font colors, resulting in readability issues. Updating the drop-down field text font color now works as designed, affecting only the drop-down field text color.</p>
+        <p><b style="font-size: 14pt;">First Workflow Retry Time Should Be 2 Hours Instead of 10: EAES-5743</b>
+        </p>
+        <p>We resolved an issue where workflow failure/retry logic working incorrectly resulted in the first retry happening after 10 hours instead of 4.  Because the retry time is now progressively increased, retries happen after 2 hours, then 4 hours, then 8 hours, up to a maximum of 24 hours.</p>
+        <p><b style="font-size: 14pt;">After App Creation, Unwanted Data/Code Appears in the Browser Console, Potentially Exposing Sensitive Information: EAES-5749</b>
+        </p>
+        <p>We resolved an issue where after creating an application and opening the browser console, extraneous data was displayed. In this scenario, only pertinent data now appears in the browser console.</p>
+        <p><b style="font-size: 14pt;">Requests That Never Expire: PC-1447</b>
+        </p>
+        <p>We resolved an issue where Requests Timeout and E-Delivery Timeout settings could be set to expire after 100 years. The updated timeout settings are now a minimum of 5 days and a maximum of 180 days.</p>
+        <p><b style="font-size: 14pt;">Utilities Options No Longer Available Due to Enable Read Only Access Setting: PC-2443</b>
+        </p>
+        <p>We resolved an issue where the Enable Read Only Access setting prevented the Utilities option from appearing in the top bar. The Utilities option now appears as designed.</p>
+        <p><b style="font-size: 14pt;">Improve Error Messaging When Unable to Reset Password: PC-2886</b>
+        </p>
+        <p>We resolved an issue where the error message sent when users were unable to reset passwords said only "User account has been locked out" without providing a reason or additional information. New error messages are more meaningful and provide a greater level of detail.</p>
+        <p><b style="font-size: 14pt;">Field with Error and Warning Displays Red in Legacy Forms UI but Yellow in Combined Wizard+Forms UI: PC-2956</b>
+        </p>
+        <p>We resolved an issue where fields with errors and warnings incorrectly displayed yellow in the combined Wizard+Forms user interface. These fields with errors and warning now display red in the combined Wizard+Forms user interface, as designed.</p>
+        <p><b style="font-size: 14pt;">Multiple Validation Messages Should Be Displayed in Separate Lines: PC-2978</b>
+        </p>
+        <p>We resolved an issue where, if multiple validation messages were present, they appeared on a single line. In this scenario these messages now appear on separate lines, as designed.</p>
+        <p><b style="font-size: 14pt;">Close Icon Has Both X and Minus Sign on Data Entry Pop-Up: PC-3084</b>
+        </p>
+        <p>We resolved an issue in embedded FireLight where during product creation the data entry met pop-up message included as a close icon both an X and a minus sign in the upper right corner. The pop-up message close icon is now just an X.</p>
+        <p><b style="font-size: 14pt;">Dynamic Redirect on Submit URL Should Also Validate Product Organization Settings: PC-3300</b>
+        </p>
+        <p>We resolved an issue where dynamic redirect on submit URL did not also validate product organization settings.</p>
+        <p><b style="font-size: 14pt;">Field with Errors and Warnings Displays as Yellow Instead of Red: PC-3390</b>
+        </p>
+        <p>We resolved an issue where fields with error and warning messages displayed as yellow instead of red. Fields with error and warning messages now display as red, as designed.</p>
+        <h1>Known Issues</h1>
+        <p><b style="font-size: 14pt;">Review Queue</b>
+        </p>
+        <p><b style="font-size: 12pt;">Pagination Not Working for Reviewers on Review Queue: DIST-4711</b>
+        </p>
+        <p>On the Review Queue page, queues extending past one page display applications for the prior queue on the second page.</p>
+        <p><b style="font-size: 12pt;">Complete Button of Reviewer Documents on Review Queue Is Not Working Properly: DIST-4774</b>
+        </p>
+        <p>In the Review Queue, clicking the Lock and Complete button on the Finish Reviewer Documents pop-up is not working properly; users need to return to the Review Queue page to complete the review process.</p>
+        <p><b style="font-size: 14pt;">Administration Tool</b>
+        </p>
+        <p><b style="font-size: 12pt;">In Package Dropdown Is Not Showing Any Packages in the Wizard Library: DIST-4786</b>
+        </p>
+        <p>In the Wizard Library, “Searching by Package” is not working as expected. On the Search Fields in Wizard Packages tab, selecting the In Package dropdown list currently displays no packages.</p>
+        <p><b style="font-size: 12pt;">Changes Icon Disappears on Changing the Page in the Form Designer: PC-3411</b>
+        </p>
+        <p>In the Form Designer, the green new changes icon that appears on the first page of a form being edited fails to appear on subsequent form pages.</p>
+        <p><b style="font-size: 12pt;">Form/Wizard History Tabs Are Not Showing the Edition's Old and New Value: PC-3424</b>
+        </p>
+        <p>The Form History and Wizard History tabs are failing to display edition old and new values.</p>
+        <p><b style="font-size: 12pt;">Search Rules in Package Does Not Show Rule Set Edition Value: PC-3426</b>
+        </p>
+        <p>On the Seach Rules in Package tab, the Rule Sets in Package drop-down is failing to display a value for Rule Set edition.</p>
+        <p><b style="font-size: 14pt;">eSignature</b>
+        </p>
+        <p><b style="font-size: 12pt;">App Status Showing “Client Signatures Complete” After Re-sign Process Initiated: EAES-5822</b>
+        </p>
+        <p>After client signing of an application is complete and clicking Resign, application status displays as Client Signature Complete instead the expected In Signatures and Request Canceled.</p>
+        <p><b style="font-size: 12pt;">Initial Text Box Shows Signature Instead of Name/Initial but Downloaded PDF Shows Initials: EAES-5866</b>
+        </p>
+        <p>In applications, the Initial text box in the UI displays the signature instead of the name/initial; in downloaded PDFs this appears correctly, displaying initials.</p>
+        <p><span style="font-size: 16pt; font-weight: bold;">Removed from Release</span>
+        </p>
+        <p><b style="font-size: 14pt;">Implement Custom Class to Handle the DocuSign Envelope: CR-3860</b>
+        </p>
+        <p>This enhancement develops new ways to manage JSON payload received from ConnectHook API by DocuSign, eventually replacing the current system for handling DocuSign envelopes with this new structure.</p>
+        <p style="font-size: 12pt;font-weight: normal;"><span style="font-size: 10pt;">***Please note that the JIRA ticket numbers are provided for reference. JIRA tickets are not accessible to users outside Hexure.***</span>
+        </p>
+        <p data-mc-conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>For this enhancement, we are opening up more services within the FireLight platform that is of benefit to our embedded clients. A configuration query was added to the REST API through GetAvailableActions so the organizations can know what services are available. This could include the copy functionality, pre-submit review queues, signing, submitting, etc.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>REST API - expanding the GetAvailableActions functionality</p>
+            </li>
+            <li>
+                <p>API documentation is updated.</p>
+            </li>
+        </ul>
+    </body>
+</html>

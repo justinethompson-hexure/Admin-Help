@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>This is where you add third-party service configurations. Next to <b class="Bold">Third-Party Service Config</b>, click the <b>Click to Edit</b> link. On the Third-Party Service Configuration dialog, click the <b>Add New</b> link. Type a <b>Config Name</b>, <b>Config Value</b>, <b class="Bold">Config Group</b> (if applicable), and select a <b>Service Type</b> from the list. Click the <b>Add Config</b> button. For specific setup instructions, see the applicable FireLight integration topics in <MadCap:xref href="../../../Features/Features.htm" target="_blank" alt="Features">Features</MadCap:xref>.</body>
+</html>

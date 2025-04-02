@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>FireLight v2.31 Release History</h1>
+        <p><b class="Bold">NOTE: Documentation for this release is currently incomplete and in a "DRAFT" status.</b>
+        </p>
+        <h2>July 10, 2023, Production</h2>
+        <h2>Updates</h2>
+        <p>An Activity Completion Report showing the completion duration of activities sent for remote Client signatures is now available. The report tracks how long it takes a client to complete a case, from login to signature completed. Report inputs are similar to the Application Audit report filters, and the Application dropdown lists only those activities whose signatures are completed.</p>
+        <h2>Resolved Defects</h2>
+        <ul>
+            <li>
+                <p>We resolved an issue where, in Organization Settings under the Security tab, certificates could not be deleted from the Global Certificates list. Expected/Current Result: Deleting a certificate from the Global Certificates list results in the certificate’s removal.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>We resolved an issue where, in Organization Settings under the Security tab, supported service records were added to the Global Certificates list instead of the Supported Service Records list. Expected/Current Result: The supported service record is added to the Supported Service Records list.</p>
+            </li>
+            <li>
+                <p>We resolved an issue where initializing an embedded session when the Enable Open Multiple Activities group is checked did not work as expected. Expected/Current Result: Initiating an embedded session works as expected.</p>
+            </li>
+            <li>
+                <p>We resolved an issue where external login requests for non-FireLight users were not being timestamped. Expected/Current Result: When external users log in using an external FireLight link, the date timestamp is recorded for each login.</p>
+            </li>
+            <li>
+                <p>We resolved an issue where applications with signatures for all parties, including the Agent, were not appearing in the Application dropdown in Activity Compilation reports. Expected/Current Result: The Application dropdown lists activities whose signatures are completed.</p>
+            </li>
+            <li>
+                <p>We resolved an issue where Total Time Making Changes (minutes) was not being calculated properly in Activity Compilation reports. Expected/Current Result: Total Time Making Changes (minutes) is calculated properly in Activity Compilation reports.</p>
+            </li>
+            <li>
+                <p>We resolved an issue where secondary signer information did not appear in FireLight Admin Activity Compilation reports. Expected/Current Result: Secondary signer information appears in FireLight Activity Compilation reports.</p>
+            </li>
+            <li>
+                <p>We resolved an issue where multiple application launches for a pre-sale activity were not working as expected when Next Activity is applied by a rule set. Expected/Current Result: Multiple application launches for a pre-sale activity work properly when Next Activity is applied by a rule set.</p>
+            </li>
+            <li>
+                <p>We resolved an issue where required active fields of client-protected Forms/Wizard were hidden from Agent view and active fields of agent-protected Forms/Wizard were hidden from Client view. Expected/Current Result: Active fields of client-protected Forms/Wizards are visible to Agents, and active fields of agent-protected Forms/Wizards are visible to Clients.</p>
+            </li>
+            <li>
+                <p>We resolved an issue where validation text overlapped the navigation panel in the Forms Only and Forms with Wizards apps. Former Active Result: Validation text overlapped the navigation panel in the Forms Only and Forms with Wizards apps. Expected/Current Result: Validation text does not overlap the navigation panel in the Forms Only and Forms with Wizards apps.</p>
+            </li>
+            <li>
+                <p>We resolved an issue where AppCues script did not load as expected due to a content security policy violation. Expected/Current Result: AppCues script loads properly.</p>
+            </li>
+            <li>
+                <p>We resolved an issue where AppCues integration caused a JavaScript error. Former Active Result: AppCues integration caused a JavaScript error. Expected/Current Result: AppCues integration causes no errors.</p>
+            </li>
+            <li>
+                <p>We resolved an issue where multiple applications were created from the same Needs Determination activity. Expected/Current Result: Only single application is created from a Needs Determination activity.</p>
+            </li>
+            <li>
+                <p>We resolved an issue where an error appeared when navigating to Groups &gt; Need Filter, clicking New Category, entering a value, and clicking Save. Current/Expected Result: Navigating to Groups &gt; Need Filter, clicking New Category, entering a value, and clicking Save works properly, without error.</p>
+            </li>
+            <li>
+                <p>We resolved an issue where an error appeared when creating a Lifetime Income application. Current/Expected Result: Creating a Lifetime Income Application works properly, without error.</p>
+            </li>
+            <li>
+                <p>We resolved an issue where RGA AURA tags did not work as expected. Current/Expected Result: RGA AURA tags work properly.</p>
+            </li>
+            <li>
+                <p>We resolved an issue where AURA did not launch as expected, instead returning the message “Aura service returned an error. Please contact your system administrator.” Current/Expected Result: AURA launches properly.</p>
+            </li>
+        </ul>
+    </body>
+</html>

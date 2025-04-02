@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Enable Tele-Sign Email Link</b> checkbox to enable the ability to use the Send Email button to send the <MadCap:conditionalText MadCap:conditions="General.PDF">"Tele-Sign Document Delivery" </MadCap:conditionalText><MadCap:xref href="../../../../Organization Configuration/Email/Activities/Tele-Sign Document Delivery.htm" MadCap:conditions="General.Online" target="_blank" alt="Tele-Sign Document Delivery">Tele-Sign Document Delivery</MadCap:xref> email to the client for access to the Tele-Sign PDF forms.</body>
+</html>

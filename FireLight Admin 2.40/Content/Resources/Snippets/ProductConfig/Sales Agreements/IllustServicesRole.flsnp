@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>The Illust Services Role text box is available when Illustration activities are available for your organization. Enter the <b class="Bold">Illust Services Role</b> code in the text box to define the role code to use when a carrier has a distributor selling their product. The Illustration Services Rode Code is used when calling the Illustration Services for calculation results for Quick View and Illustration PDF files.  Illustration Services uses the role code to determine what results to return or what reports to return. See <a href="../../../../Organization Configuration/Groups/Create and Edit Groups.htm#IllustrationServicesRoleCode" target="_blank" alt="Illustration Services Role Code">Illustration Services Role Code</a> in Organization Configuration/Groups for more information.</body>
+</html>

@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>LexisNexis Risk Classifier Integration</h1>
+        <p class="note"><b class="Bold">Spotlight Video:</b> See the <a href="https://vimeo.com/486623922/a3cf277c5e" target="_blank" title="LexisNexis RDP Quiz, Instant ID, and Risk Classifier Demo" alt="LexisNexis RDP Quiz, Instant ID, and Risk Classifier Demo">LexisNexis RDP Quiz, Instant ID, and Risk Classifier Demo</a> Spotlight feature video for demos of the three LexisNexis integrations.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">LexisNexis Risk Classifier Feature</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Requirements, Description, Integration, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Contracting and Legal Requirements</p>
+                        <p><strong>IMPORTANT!</strong>
+                        </p>
+                        <p>All clients that use the LexisNexis service are required to contract directly with LexisNexis for their IDs.  Please note LexisNexis imposes reporting and auditing requirements based on data returned from MVR, ScriptCheck, Experian, and any other service utilized by LexisNexis Risk Classifier.  It is up to the client to understand their requirements and work with LexisNexis to ensure they are meeting their contractual requirements. We have highlighted a few of the requirements as they pertain to FireLight.</p>
+                        <p>Following are a few areas that are the responsibility of the client:</p>
+                        <ul>
+                            <li>
+                                <p>To ensure that firms have the data to meet the reporting requirements, firms will need to receive the signed approvals for completed orders (if done in FireLight) and pending orders that hit the service.  Firms will work with their provider to receive the documents. See the Provider section below.  </p>
+                            </li>
+                            <li>
+                                <p>Clients that implement LexisNexis Risk Classifier are held to regulatory requirements to gather client approval prior to hitting the FCRA-regulated services that LexisNexis Risk Classifier will call. Hexure recommends achieving this within a presale workflow. Please contact your Strategic Account Manager to discuss this further.</p>
+                            </li>
+                            <li>
+                                <p>Clients that implement LexisNexis Risk Classifier must use the Reason codes in the XML Response to generate any potential Adverse Action Letter for their users.</p>
+                            </li>
+                            <li>
+                                <p>Clients that implement LexisNexis Risk Classifier must use the Reason codes in the XML Response to generate any potential address discrepancy, Consumer statement, subject deceased,  or any other sensitive situation that needs to be communicated to their users.</p>
+                            </li>
+                            <li>
+                                <p>FireLight can use rules to display messages to clients per reason or error code that is received back from the LexisNexis Risk Classifier. However, these rules will need to be customized per client, and can be implemented by either the FireLight Implementation team, or the clients.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Description</p>
+                        <p>The LexisNexis Risk Classifier service provides clients the ability to call into LexisNexis to access their Risk Classifier functionality. In FireLight, this requires a Custom Action call for this service that can be used prior to the activity reaching 100% completion. </p>
+                        <p>Upon clicking this button, the custom action call sends back scores, descriptions, and general information from the Motor Vehicle Department and Consumer Credit bureaus on the user that can be used by the company's underwriting department to return a faster approval/rejection rating than what occurs today.</p>
+                        <p>The Reason Code and Description  are sent back to the client both in the name/value pair XML and in a PDF format as part of the application package through the outbound process. This can be added to the application package via a form template that  utilizes document types.</p>
+                        <p>These scores and general information will also be available within the application's audit history and report, which can be referenced until the application's purge from FireLight. </p>
+                        <p><b class="Bold">LexisNexis Usage Detailed Activity Report</b>
+                        </p>
+                        <p>This report assists users in triaging any activity associated with the LexisNexis services: including, but not limited to, the RDP Quiz, Instant ID, and the Risk Classifier. Following are items specifically available in the LexisNexis Usage Report to help clients triage their LexisNexis activities. See <MadCap:xref href="../Utilities/Reports/Detail Reports.htm" title="Detailed Activity Reports" alt="Detailed Activity Reports">Detailed Activity Reports</MadCap:xref> in Admin Help for a sample report.</p>
+                        <ul>
+                            <li>  Instead of showing the "Status during time of call" on the LexisNexis Usage Report, the column is now renamed to the "Service Type" column. The Service Type column shows "Instant ID," "Quiz," or "Risk Classifier" to distinguish among the various LexisNexis web services.  </li>
+                            <li>The new "Quoteback ID" column shows the QuoteBack sent in the XML response in the following order: Application ID/Selling Org/Product Org/Application Name.  This value is up to 60 characters long.</li>
+                        </ul>
+                        <p><b class="Bold">LexisNexis Rick Classifier Admin Report</b> </p>
+                        <p>This report provides an Admin report that includes LexisNexis Risk Classifier Ref ID, Quoteback ID, Result Code(s), Risk Score, and Reason Code(s) during the dates specified. See <MadCap:xref href="../Utilities/Reports/Admin Reports.htm" title="Admin Reports" alt="Admin Reports">Admin Reports</MadCap:xref> in Admin Help for a sample report.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Submission Endpoint</p>
+                        <p>The LexisNexis implementation requires the client to ensure their submission endpoint contains the necessary data points from the LexisNexis call to satisfy the reporting requirements outlined in the LexisNexis contracting. Due to those contracting requirements, clients also need to design into their workflow the ability to receive the LexisNexis data points and any returned documents for incomplete orders that were never transmitted.  Please see the Provider Integration for steps to ensure you receive the necessary data.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">FireLight Provider/Integration Setup</p>
+                        <p>Provider Work needs to be completed to use the LexisNexis Services.  Please contact your Strategic Account Manager to contact the Implementation team to complete this work. </p>
+                        <p>For LexisNexis Risk Classifier, FireLight creates a hook from the provider into the base system of the service request table to be able to send the Name/Value pair XML to the client.  This hook limits the information that it is pulling back, so as not to create any memory issues or size limitations on what is sent to the client.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <ol>
+                            <li>
+                                <p>In Organization Configuration on the Organization Settings page, <MadCap:xref href="../Organization Configuration/Organizations/Admin.htm" alt="Admin">Admin</MadCap:xref> tab: set up the LexisNexisRisk  credentials. LexisNexis supplies the configuration AccountID, ClientID, and values. <b class="Bold">NOTE: </b> A Provider Work Needed popup message appears when you click the Add Config button. Click the <b class="Bold">OK</b> button to close the popup. The Provider work is referring to the development work for  data in the datafeed for processing in the backoffice. Contact your Strategic Account Manager for assistance.</p>
+                                <p MadCap:conditions="General.Online" class="Indent">
+                                    <img src="../Resources/ImagesAdmin/Capture149.png" alt="Provider Work Needed Dialog" title="Provider Work Needed Dialog" MadCap:conditions="General.Online" />
+                                </p>
+                                <p>Click the <b>Click to Edit</b> link next to <b>Third-Party Service Config</b> and enter the LexisNexisRisk service credentials (configuration IDs and values):</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>
+                                        <p>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>AccountID</b>. In <b>Config Value</b>, type the LexisNexis AccountID value. In <b>Service Type</b>, select <b>LexisNexisRisk</b> and click the <b>Add Config</b> button.</p>
+                                    </li>
+                                    <li>
+                                        <p>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>ClientID</b>. In <b>Config Value</b>, type the  LexisNexis ClientID value. In <b>Service Type</b>, select <b>LexisNexisRisk</b> and click the <b>Add Config</b> button.</p>
+                                    </li>
+                                    <li>
+                                        <p>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>CarrierCode</b>. In <b>Config Value</b>, type the  LexisNexis CarrierCode value. In <b>Service Type</b>, select <b>LexisNexisRisk</b> and click the <b>Add Config</b> button.</p>
+                                    </li>
+                                    <li>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>Password</b>. In <b>Config Value</b>, type the LexisNexis Password value. In <b>Service Type</b>, select <b>LexisNexisRisk</b> and click the <b>Add Config</b> button.</li>
+                                    <li>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>Username</b>. In <b>Config Value</b>, type the LexisNexis Username value. In <b>Service Type</b>, select <b>LexisNexisRisk</b> and click the <b>Add Config</b> button.</li>
+                                    <li>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>Workflow</b>. In <b>Config Value</b>, type the LexisNexis Workflow value. In <b>Service Type</b>, select <b>LexisNexisRisk</b> and click the <b>Add Config</b> button.</li>
+                                </ol>
+                                <p><b class="Bold">NOTE:</b> Config Group is an optional configuration used by the <MadCap:xref href="DocuSign.htm" alt="DocuSign Integration">DocuSign Integration</MadCap:xref> integration.</p>
+                                <p MadCap:conditions="General.Online">Examples:</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/Capture114.png" alt="" title="" />
+                                </p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/Capture115.png" alt="" title="" />
+                                </p>
+                                <p><b class="Bold">NOTE: </b> To update a config value: clear the current value, enter a new value, and click the <b class="Bold">Update</b> link next to the value. To delete a config value: click the <b class="Bold">Delete</b> link next to the value and click <b class="Bold">OK</b> on the confirmation dialog.</p>
+                            </li>
+                            <li>
+                                <p>Designer/Form Designer and Wizard Designer  (if wizard is applicable):</p>
+                                <p>Add a custom action button to the form/wizard that will initiate a web service call to LexisNexis  for the signer type (excluding the Agent). The LexisNexis Risk Classifier information needs to be entered in a form. The organization can add a wizard for capturing the information in wizard controls that will fill the matching form controls on the form.</p>
+                                <p>Form: </p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>Add a <MadCap:xref href="../Design/Forms/Button.htm" alt="Button">Button</MadCap:xref> control to the form.</li>
+                                    <li>Double-click the <b class="Bold">Button</b> control to open the Field Properties dialog. </li>
+                                    <li>Enter the dataitem name for the button in <b class="Bold">Name</b>.</li>
+                                    <li>Select the signer type (e.g., Owner) in the <b class="Bold">Data Group</b> list.</li>
+                                    <li>Select <b class="Bold">Custom Action</b> in the <b class="Bold">Action Type</b> list.</li>
+                                    <li>Enter <b class="Bold">LexisNexisRisk</b> in <b class="Bold">Action Parameter</b> and click <b class="Bold">Update</b>.</li>
+                                </ol>
+                                <p>Wizard:</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>Add a <MadCap:xref href="../Design/Wizards/Custom Action.htm" alt="Custom Action">Custom Action</MadCap:xref> control to the wizard.</li>
+                                    <li>Double-click the <b class="Bold">Custom Action</b> control to open the Custom Action Properties dialog.</li>
+                                    <li>Enter the dataitem name for the custom action button in <b class="Bold">Name</b>.</li>
+                                    <li>Select the signer type (e.g., Owner) in the <b class="Bold">Data Group</b> list.</li>
+                                    <li>Select<b class="Bold"> Custom Action</b> in the <b class="Bold">Custom Action</b> list.</li>
+                                    <li>Select <b class="Bold">LexisNexis</b> in the <b class="Bold">Custom Action Type</b> list.</li>
+                                    <li>Enter <b class="Bold">LexisNexisRisk</b> in <b class="Bold">Custom Action Parameter</b> and click <b class="Bold">OK</b>.</li>
+                                </ol>
+                                <p>Examples (Form and Wizard):</p>
+                                <p class="Indent" MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/Capture117.png" alt="" title="" /> <img src="../Resources/ImagesAdmin/Capture118.png" alt="LexisNexis Risk Button Field Properties - Wizard" title="LexisNexis Risk Button Field Properties - Wizard" /></p>
+                            </li>
+                            <li>
+                                <p>Add  input controls for the data items and set the Data Group to the signer type and Data Group Property of each data item used by LexisNexis Risk Classifier for each signer type  that will get a LexisNexis Risk Classifier.</p>
+                                <p><b>IMPORTANT!</b>  FireLight now supports triggering a custom action call from any page within the same package, regardless of whether the button or fields to trigger that call are on that same page. LexisNexis cannot be used on multiple-instance forms. (See <MadCap:xref href="../Design/Forms/Add Multiple Copies of a Form.htm" alt="Add Multiple Copies of a Form">Add Multiple Copies of a Form</MadCap:xref> for a description of multiple-instance forms.) </p>
+                                <p>If using Wizards to set the Data Group and Data Group Property of each data item, FireLight requires that the same Data Group and Data Group Property of each data item must also be set in the Form for the mapping to work properly. </p>
+                                <p>Add the following required data items (common tags) and two recommended data items (SSN and DriverLicense_Number), Data Group, and Data Group Properties for the Signer type (e.g., Owner) information and the LexisNexisRisk response information to the form. </p>
+                                <p><b class="Bold">NOTE:</b> If the additional 4 digits for the zip code are added, they is parsed out and added to a separate field called "zip4."</p>
+                                <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');width: 640px;caption-side: top;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+                                    <caption class="Table">LexisNexis Risk Required Data Items, Data Group, and Data Group Properties</caption>
+                                    <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 323px;" />
+                                    <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 353px;" />
+                                    <tbody>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <th class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">Data Item</th>
+                                            <th class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Data Group | Data Group Property</th>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">[Signer]_Policy_Face_Amount</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">[Signer] | Policy_Face_Amount</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">[Signer]_Policy_Issuance_State</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">[Signer] | Policy_Issuance_State</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">[Signer]_FirstName</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">[Signer] | FirstName</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">[Signer]_LastName</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">[Signer] | LastName</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">[Signer]_ResidentialAddress1</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">[Signer] | Line 1</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">[Signer]_ResidentialAddress_City</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">[Signer] | City</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">[Signer]_ResidentialAddress_State</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">[Signer] | AddressStateTC</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">[Signer]_ResidentialAddress_Zipcode</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">[Signer] | Zip</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">[Signer]_DOB</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">[Signer] | BirthDate</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">[Signer]_Gender</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">[Signer] | Gender</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">[Signer]_Age</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">[Signer] | Age</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">[Signer]_SSN </td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">[Signer] | SSN</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">[Signer]_DriverLicense_Number <br /></td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">[Signer] | DriverLicense_Number</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">[Signer]_DriverLicense_State</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">[Signer] | DriverLicense_State</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">[Signer]_LexisNexisRisk_Score</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">[Signer] | LexisNexisRisk_Score</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">[Signer]_LexisNexisRisk_ResultCode</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">[Signer] | LexisNexisRisk_ResultCode</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">[Signer]_LexisNexisRisk_OrderNumber</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">[Signer] | LexisNexisRisk_OrderNumber</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">[Signer]_LexisNexisRisk_ReasonCode1</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">[Signer] | LexisNexisRisk_ReasonCode1</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">[Signer]_LexisNexisRisk_ReasonCode2</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">[Signer] | LexisNexisRisk_ReasonCode2</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">[Signer]_LexisNexisRisk_ReasonCode3</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">[Signer] | LexisNexisRisk_ReasonCode3</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">[Signer]_LexisNexisRisk_ReasonCode4</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">[Signer] | LexisNexisRisk_ReasonCode4</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">[Signer]_LexisNexisRisk_Description1</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">[Signer] | LexisNexisRisk_Description1</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">[Signer]_LexisNexisRisk_Description2</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">[Signer] | LexisNexisRisk_Description2</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">[Signer]_LexisNexisRisk_Description3</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">[Signer] | LexisNexisRisk_Description3</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">[Signer]_LexisNexisRisk_Description4</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">[Signer] | LexisNexisRisk_Description4</td>
+                                        </tr>
+                                        <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                                            <td class="TableStyle-2017_IT-Simple2-BodyB-Regular-LightRows">[Signer]_LexisNexisRisk_ResultMessage</td>
+                                            <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">[Signer] | LexisNexisRisk_ResultMessage</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                            <li>
+                                <p>Add applicable form rules. </p>
+                                <p>FireLight will associate form rules with client-defined dataitems through data groups and data group properties. For example, the client can use the Score in the “background” to determine an underwriting decision. FireLight uses the values sent back from LexisNexis to trigger error messages. If an error is sent back to Firelight, the response will state in the high-level message what the error is related to. The client can take this information and code within the form rules a message to return to the user on the error and what the next steps are to take.</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <p>Prior to the activity reaching 100% completion in the FireLight data entry process for a signer type with LexisNexis Risk Classifier enabled:</p>
+                        <ol>
+                            <li>The agent enters the LexisNexis Risk Classifier required (and recommended if available) signer information into the associated signer information fields and the policy issue state and policy face amount on the form or wizard. </li>
+                            <li>The agent clicks the LexisNexis Risk custom action button to initiate a call to the LexisNexis Risk web service.</li>
+                            <li>LexisNexis Risk Classifier service returns Risk Scores, Result Codes, up to 4 Reason Codes and 4 Descriptions, a Result Message, and an Order Number in the associated fields on the form or wizard.</li>
+                            <li>The company's underwriting department uses the risk scores, descriptions, and general information from the Motor Vehicle Department and Consumer Credit Bureaus on the signer  to return back a faster approval/rejection rating. </li>
+                            <li>
+                                <p>All of the actions taken with the LexisNexis Risk Classifier are included in the audit history and the report that is returned back to the client. </p>
+                                <p>For example, "FireLight made a web service call on behalf of Hexure to LexisNexis Risk Classifier for the `Owner` for activity `test riskclassifier - APM Test LN Service` and received score_result, national_credit_file, motor_vehicle_report pdf reports with Order Number HJ4654." </p>
+                                <p>If an error occurs and no files are sent, a "no" is added to show no reports were received. For example, "FireLight made a web service call on behalf of Hexure to LexisNexis Risk Classifier for the `Owner` for activity `LN RC test - JB Forms Only` and received no PDF reports with Order Number KI4657." </p>
+                                <p>If an error occurs during the LexisNexis Call, no order number is added to the audit. For example, "FireLight made a web service call on behalf of Hexure to LexisNexis Risk Classifier for the `Owner` for activity `LN RC test - JB Forms Only` and received no pdf reports."</p>
+                            </li>
+                        </ol>
+                        <p><strong>NOTE:</strong> When the custom action call has occurred, the application is able to be copied, but the LexisNexis values (Risk Score, Result Code, Result Message, Reason Code 1-4, and Reason Messages 1-4) will not be copied over to the next application.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help – Design Document: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 226630</MadCap:conditionalText><a href="../Resources/DesignDocs/226630 LexisNexis Risk Classifier 2.0 Enhancement.pdf" target="_blank" title="CMR 226630" alt="CMR 226630" MadCap:conditions="General.Online">CMR 226630</a></p>
+                        <p>Spotlight Feature Videos: <a href="https://vimeo.com/486623922/a3cf277c5e" target="_blank" title="LexisNexis RDP Quiz, Instant ID, and Risk Classifier Demo" alt="LexisNexis RDP Quiz, Instant ID, and Risk Classifier Demo">LexisNexis RDP Quiz, Instant ID, and Risk Classifier Demo</a></p>
+                        <p>User Guide: <em>FireLight Platform User Guide</em>, New Activity, Data Entry, <MadCap:conditionalText MadCap:conditions="General.PDF">Action Buttons </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../UserGuide/New Activity/Data Entry/Action Buttons.htm" alt="Action Buttons">Action Buttons [User Instructions]</MadCap:xref> </MadCap:conditionalText>topic in "Example: LexisNexis Risk Classifier"</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

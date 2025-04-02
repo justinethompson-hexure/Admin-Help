@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultDestination
+  Version="1"
+  Comment="FireLight Admin PDF destination"
+  Host=""
+  User="MyAccountId"
+  Password=""
+  Directory=""
+  Port=""
+  ViewUrl=""
+  Type="file"></CatapultDestination>

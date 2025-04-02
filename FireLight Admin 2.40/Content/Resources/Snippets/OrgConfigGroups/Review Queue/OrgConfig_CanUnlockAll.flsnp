@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <strong>Can Unlock All</strong> checkbox to allow the user role to unlock and review activities in the review queues that have been locked for review by other users.  The activity will then be released to the queue for other users to review.  If Can Unlock All is selected, the Read Only option and the Unlock Only option will be disabled.</body>
+</html>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Add a New Rule from a Pre-Built Rule Template</h1>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/Rules/RuleSetLockOtherUserv223.flsnp" />
+        </p>
+        <ol>
+            <li>
+                <p>On the navigation bar, click <b class="Bold">Designer/Wizard Designer</b>.</p>
+            </li>
+            <li>On the upper left of the Wizard Designer page, select a wizard name in the list.</li>
+            <li>On the wizard, click in a field. For example, click the <b class="Bold">Date of Birth</b> field for the owner. In the Text Box Properties, the Name is the <b>Owner_DOB</b> dataitem name. Rules are tied to dataitem names.</li>
+            <li>
+                <p>In the left pane, click <b>EDIT RULES</b> to open the Rules window.</p>
+            </li>
+            <li>In <b>Filter Rule Sets</b>, begin typing the name of the rule set to filter the list, then click the rule set name in the list.</li>
+            <li>The <b class="Bold">List only rules for [dataitem]</b> checkbox is selected by default. The rules list contains only rules for the selected dataitem on the wizard page.</li>
+            <li>(Optional) Clear the <b class="Bold">List only rules for [dataitem]</b> checkbox to view all the rules for the wizard page in the list. To search for rules associated with a single dataitem, type the dataitem name in <b class="Bold">Filter Rules with Field</b>.</li>
+            <li>Click <b class="Bold">NEW RULE</b> on the upper right.</li>
+            <li>
+                <p>Select a <b class="Bold">Rule Scope</b> in the list.</p>
+                <MadCap:snippetBlock src="../../Resources/Snippets/Rules/RuleScopes.flsnp" />
+            </li>
+            <li>
+                <p>Select a pre-built rule in the <b>Template</b> list. For example, select <b>Date Past</b>.</p>
+            </li>
+            <li>If applicable, select an option in <b class="Bold">dataitemid</b>.</li>
+            <li>Enter a <b>Rule Name</b> for the new rule. For example, add the dataitem name to the rule, as in <b class="Bold">Date Past: Owner_DOB</b>. </li>
+            <li>
+                <p>On the upper right, click <b class="Bold">CREATE RULE</b>. </p>
+            </li>
+            <li>
+                <p>On the lower right, click <b class="Bold">SAVE RULE SET</b> to save the rule set, which unlocks the rule set for editing by other users.  </p>
+                <p><b>NOTE:</b> If the <a href="../../Organization Configuration/Organizations/Admin.htm#ValidateRuleNameUniqueness" target="_blank" alt="Validate Rule Name Uniqueness">Validate Rule Name Uniqueness</a> checkbox is selected in Organization Configuration/Organization Settings on the Admin tab, the new rule cannot be saved unless it has a unique name. Click <b class="Bold">OK</b> on the <b class="Bold">Rule name must be unique</b> dialog.</p>
+            </li>
+            <li>
+                <p>Click <b class="Bold">CLOSE</b> to exit the Rules window.</p>
+            </li>
+            <li>After adding new rules and saving a rule set, add the rule set to the applicable <MadCap:xref href="../../Product Configuration/Packages.htm" alt="Packages">Packages</MadCap:xref>.</li>
+        </ol>
+    </body>
+</html>

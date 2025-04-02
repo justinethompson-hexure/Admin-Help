@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+	<head>
+		<link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+		<meta name="description" content="Section Breaks (Wizards)" />
+	</head>
+	<body>
+		<h1><a name="top"></a>Add and Delete Pages and Section Breaks</h1>
+		<MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/WzdLockUnlock.flsnp" />
+		<p>A wizard page comprises its properties and one or more elements on the page, which includes section breaks, containers and fields.</p>
+		<p MadCap:conditions="General.Online">
+			<img src="../../Resources/ImagesAdmin/Wizard6.jpg" alt="Work with Pages in the Wizard" title="Work with Pages in the Wizard" MadCap:conditions="General.Online">
+			</img>
+		</p>
+		<h2>About Section Breaks</h2>
+		<p>If an activity has a wizard with a section break, the user cannot jump from one page to another or from one form/wizard to another unless data entry on pages prior to the section break are 100% complete. The data entry flow occurs from top to bottom (first page of the first form/wizard to the next). For the design document, see<MadCap:conditionalText MadCap:conditions="General.Online"> <a href="../../../../DesignDocs/239391 Workflow Separator.pdf" target="_blank" title="CMR&#160;239391" alt="CMR&#160;239391">CMR&#160;239391</a>.</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PDF"> "CMR 239391" in the Admin Help.</MadCap:conditionalText></p>
+		<ul>
+			<li>
+				<p>A Section Break must have a page prior to it. </p>
+			</li>
+			<li>
+				<p>Section Breaks cannot be next to each other.</p>
+			</li>
+			<li>
+				<p>When adding a new Section Break, it is by default added after the last page in the wizard. If there is already a Section Break present at that position, the new Section Break is not added, and FireLight alerts the admin user to change position of the previous Section Break.</p>
+			</li>
+			<li>
+				<p>The admin user changes position of a Section Break by using the drag and drop function.</p>
+			</li>
+			<li>
+				<p>During data entry, pages after the first section break are disabled or non-editable (greyed out) and once all those pages prior to the section break are 100% complete, FireLight enables the Next button to allow movement to the next page/form/wizard. </p>
+			</li>
+			<li>
+				<p>For FireLight embedded users, the API for embedded that returns the wizard pages and navigation graph show the section breaks and pages within the section breaks.</p>
+			</li>
+			<li>
+				<p>During data entry, when errors are on one or more pages within a section break, the red triangle alert icon displays at the left side of the section name in the Page List. Also, on the last page of the section break with errors, the Next button is disabled. On remaining pages within that section, the Next button is enabled for the user to move among the section pages for data entry. For user instructions, see "Page List" in the<MadCap:conditionalText MadCap:conditions="General.Online"> <a href="../../UserGuide/New Activity/Data Entry/Page Navigation.htm" target="_blank" title="Page Navigation " alt="Page Navigation ">Page Navigation</a></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PDF"> Page Navigation</MadCap:conditionalText> topic<MadCap:conditionalText MadCap:conditions="General.PDF"> in the <em>FireLight Platform User Guide</em></MadCap:conditionalText>.</p>
+			</li>
+			<li>
+				<p>When data entry is 100% complete in all the pages within a section, a green check mark icon appears to the left of the section name in the Page List. In this case, the green check mark icon also appears to the left of page names.</p>
+			</li>
+			<li>
+				<p>Wizards that do not contain section breaks allow the user to navigate to any page without the requirement to complete a previous section.</p>
+			</li>
+		</ul>
+		<h2> Add Pages and Section Breaks</h2>
+		<ol>
+			<li>On the navigation bar, click <b class="Bold">Designer/Wizard Designer</b>.</li>
+			<li>Near the top left of the Wizard Designer page, select a wizard in the list.</li>
+			<li>To add a page, click <strong>Add New Page</strong> on the left bar. In the <b class="Bold">Page Properties</b> dialog, enter the <strong>Name</strong>, <strong>Title</strong>, and <strong>Subtitle</strong> for the page. Optionally, add <b class="Bold">Navigation Text</b> for page, which replaces the Previous and Next button names when navigating to the page. The Name uniquely identifies the page for usage in rules. The Title and Subtitle are displayed when the wizard is rendered. Click <b class="Bold">Edit Page</b> on the left bar to open the Page Properties dialog and change any of the settings.</li>
+			<li>To begin editing a page, select the page you want to edit in the <strong>Page</strong> dropdown.</li>
+			<li>To edit the page properties, click <strong>Edit Page</strong> on the left bar.</li>
+			<li>To show dataitem names for the fields, select the <b>Show Tags</b> checkbox on the upper right of the page.</li>
+			<li>To delete a page, click <strong>Delete Page</strong> on the left bar. The designer automatically opens the last page in the wizard if it applies.</li>
+			<li>To copy a page, click <strong>Copy Page</strong> on the left bar. The designer opens the new copy.</li>
+			<li>
+				<p>To set the page workflow, click <strong>Set Page Workflow</strong> on the left bar. In the <strong>Page Workflow</strong> dialog, click and drag each page into the desired order. </p>
+				<p>(Optional) Add a section break to the page workflow. A Section Break requires that all fields prior to the section break must be 100% complete before proceeding to the next page or section in the activity.</p>
+				<ol style="list-style-type: lower-alpha;">
+					<li>
+						<p>Click the <b class="Bold">ADD SECTION BREAK</b> button to add a section break to the page workflow. </p>
+						<p MadCap:conditions="General.Online">
+							<img src="../../Resources/ImagesAdmin/Wizard7.jpg" alt="Set Page Order" title="Set Page Order" MadCap:conditions="General.Online" />
+						</p>
+						<p MadCap:conditions="General.Online">
+							<img src="../../Resources/ImagesAdmin/Capture129.png" alt="Page Workflow - Add Section Break" title="Page Workflow - Add Section Break" MadCap:conditions="General.Online" />
+						</p>
+					</li>
+					<li>
+						<p MadCap:conditions="General.Online">(Optional) Click the information icon on the upper right for  Section Breaks guidelines.</p>
+						<p MadCap:conditions="General.Online">
+							<img src="../../Resources/ImagesAdmin/Capture137.png" alt="Section Breaks Help" title="Section Breaks Help" MadCap:conditions="General.Online" />
+						</p>
+					</li>
+					<li>
+						<p>Drag the <b class="Bold">Section Break</b>  icon to the desired location among the pages in the wizard. A Section Break can be placed between two pages or after the last page. It cannot be placed before the first page. </p>
+						<p MadCap:conditions="General.Online">
+							<img src="../../Resources/ImagesAdmin/Capture130.png" alt="Page Workflow - Drag Section Break" title="Page Workflow - Drag Section Break" MadCap:conditions="General.Online" />
+						</p>
+					</li>
+					<li>
+						<p>Double-click the <b class="Bold">Section Break</b> icon to open the Section Break Properties dialog. </p>
+						<p>Enter a new section break data item ID in <b class="Bold">Name</b> and enter new display text in <b class="Bold">Text</b>.  The maximum length is 75 characters for Name and for Text. The Name and Text fields cannot be empty. Do not duplicate section heading names within the wizard. </p>
+						<p>Click <b class="Bold">OK </b>to save the section break. Click <b class="Bold">REMOVE SECTION BREAK</b> to remove the section break from the Page Workflow. Click <b class="Bold">CANCEL</b> to cancel changes to section break properties. </p>
+						<p MadCap:conditions="General.Online">
+							<img src="../../Resources/ImagesAdmin/Capture127.png" alt="Section Break Properties Dialog" title="Section Break Properties Dialog" MadCap:conditions="General.Online" />
+						</p>
+					</li>
+					<li>
+						<p>Click the <strong>OK</strong> button once the page workflow is correct, or click the <strong>CANCEL</strong> button to ignore any changes made on the dialog.</p>
+						<p MadCap:conditions="General.Online">
+							<img src="../../Resources/ImagesAdmin/Capture128.png" alt="Page Workflow Dialog with a Section Break" title="Page Workflow Dialog with a Section Break" MadCap:conditions="General.Online" />
+						</p>
+					</li>
+				</ol>
+			</li>
+			<li>Click <b>SAVE WIZARD</b>, which unlocks the wizard for editing by other users.  </li>
+		</ol>
+		<h2>Delete Pages and Section Breaks</h2>
+		<ol>
+			<li>On the navigation bar, click <b class="Bold">Designer/Wizard Designer</b>.</li>
+			<li>Near the top left of the Wizard Designer page, select a wizard in the list.</li>
+			<li>On the left bar, select a <b class="Bold">Page</b> in the list.</li>
+			<li>On the left bar, click <b class="Bold">Delete Page</b>.</li>
+			<li>
+				<p>If a Section Break is impacted by the deleted page, a "Check Page Workflow after deletion to review potential removal of a Section Break." Alert message appears.  </p>
+				<p><b class="Bold">NOTE:</b> If deleting a page invalidates a section break condition, the section break containing the page is also deleted along with the page. For example, if a Section Break is after the first Page in a Page Workflow, and the first Page is deleted, the Section Break following the first page is also deleted because a Section Break cannot be before the first Page.</p>
+			</li>
+			<li>
+				<p>Click <b class="Bold">Close</b> on the message dialog to close the dialog and perform the delete/removal actions based on the Page and Section Break setup.</p>
+			</li>
+		</ol>
+		<p MadCap:conditions="General.Online"><a href="../../UserGuide/New Activity/Data Entry/Page Navigation.htm" alt="Return to Top">Return to Top</a>
+		</p>
+	</body>
+</html>

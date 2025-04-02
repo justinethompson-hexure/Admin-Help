@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable View Groups</b> checkbox to disable viewing the <MadCap:xref href="../../../../Organization Configuration/Groups.htm" target="_blank" alt="Groups">Groups</MadCap:xref> page. The Groups option under Organization Configuration on the Admin home page and the Groups option under Organization Config on the navigation bar will not be visible when this option is selected.</body>
+</html>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="General.Online">
+	<head>
+		<link href="../../../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+		<link href="../../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h1><a name="top"></a>Transfer Activity Request Expiration Warning</h1>
+		<p>
+			<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailColumnDesc.flsnp" />
+		</p>
+		<table style="border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;mc-table-style: url('../../../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+			<caption class="Table">Transfer Activity Request Expiration Warning </caption>
+			<col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+			<thead>
+				<tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+					<th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Action, To Name/Email, From Name/Email, CC Address, Available Tags, and Notes</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">Action</p>
+						<p>Notifies the Agent that a pending transfer activity request to the agent is nearing expiration<sup>1</sup><br />Template Name: Transfer Activity Request Expiration Warning</p>
+						<p>Email Subject Line: Transfer Activity Request about to Expire</p>
+						<p>Message:</p>
+						<p class="Indent2">Dear &lt;CLIENT_NAME&gt;<sup>3</sup>,</p>
+						<p class="Indent2">Your pending transfer activity request for &lt;ACTIVITY_NAME&gt; &lt;APPLICATION_NAME&gt; is about to expire in &lt;EXPIRY_DAYS&gt; days.  Please take all necessary actions that this requires.</p>
+						<p>The Expiration templates are available for sending when the "Expiration Warning Threshold" and "Requests Timeout" options are set in Organization Configuration/Organization Settings on the <MadCap:xref href="../../Organizations/Activity.htm">Activity</MadCap:xref> tab. </p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<p class="thead1">To Name / Email</p>
+						<p>Agent Name/Email used in original request</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">From Name / Email</p>
+						<p>Default: Session User’s Preference Name/ Email
+						<br /></p>
+						<p>Use DMARC<sup>1</sup>: Organization's Support Email
+						</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<p class="thead1">CC Address</p>
+						<p>No cc Sender</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">Available Tags<sup>3</sup></p>
+						<p>&lt;ACTIVITY_NAME&gt;<br />&lt;AGENT_NAME&gt;<br />&lt;APPLICATION_NAME&gt;<br />&lt;CLIENT_NAME&gt; - In this email template, CLIENT_NAME is the Agent's name.<br />&lt;DATE_TIME&gt; (current datetime in UTC)<br />&lt;EXPIRY_DAYS&gt;<sup>5</sup><br />&lt;HYPER_LINK&gt;<br />&lt;STATUS&gt;<br />&lt;URL_LINK&gt;<br /></p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+						<p class="thead1">Notes:</p>
+						<p>
+							<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailNote1.flsnp" />
+						</p>
+						<p>
+							<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailNote3.flsnp" />
+						</p>
+						<p><sup>5</sup>Add the &lt;EXPIRY_DAYS&gt; [count] variable in the expiration warning email template to convey the number of days until expiration. See the <a href="../../Organizations/Activity.htm#ExpirationReminderFrequency" target="_blank" alt="Expiration Reminder Frequency">Expiration Reminder Frequency</a> option on the Organization Configuration/Organizations Settings page/Activity tab, which allows organizations to set the frequency (Never, Daily, Weekly) of expiration warning emails.</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<MadCap:snippetBlock src="../../../Resources/Snippets/Email/EmailSeeAlso.flsnp" />
+		<p><a href="#top" alt="Return to Top">Return to Top</a>
+		</p>
+	</body>
+</html>

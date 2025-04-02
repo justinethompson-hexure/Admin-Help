@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Type one or more role codes in the <b>Role Codes</b> text box to make the package available for only the designated role codes. Users with the designated role codes will have access to only their designated package and will not see any other packages that may be in the sales agreement. </p>
+        <p>
+            <b class="Bold">NOTE:</b> Be sure to include a package with no designated role codes to allow the package with the role codes to be saved. </p>
+        <p MadCap:conditions="General.Online">
+            <img src="../../../ImagesAdmin/Capture264.png" alt="Role Codes Text Box" title="Role Codes Text Box" MadCap:conditions="General.Online">
+            </img>
+        </p>
+        <p>
+            <b class="Bold">NOTE:</b> When the Auto Add to These Role Codes text box on the right is used, the Role Codes text box is ignored.</p>
+    </body>
+</html>

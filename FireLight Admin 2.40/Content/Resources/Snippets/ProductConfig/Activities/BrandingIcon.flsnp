@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Defines the system Font Awesome icon used to represent the activity in the FireLight UI. To set the Branding Icon, click the <b class="Bold">Font Awesome Icons</b> link using a browser other than Internet Explorer (e.g., Chrome, etc.), click an icon,  type the icon style (far, fas, fal, fad), and type a full icon name, (e.g., fa-location-arrow) in the <b class="Bold">Branding Icon</b> text box.  </p>
+        <p class="Indent">
+            <b class="Bold">Example:</b> (1) Click the <b class="Bold">Font Awesome Icons</b> link. (2) On the left, click <b class="Bold">Free</b>. (3) Click the <img src="../../../ImagesAdmin/Capture32.png" alt="location-arrow font" title="location-arrow font" /> Solid icon. (4) Type the style and full name <b class="Bold">fas fa-location-arrow</b> in the <b class="Bold">Branding Icon</b> text box. (5) The FireLight Home page will display <img src="../../../ImagesAdmin/Capture33.png" alt="Branding Icon" title="Branding Icon" /> next to the activity name.  </p>
+        <p class="Indent">
+            <b class="Bold">NOTE:</b> The Internet Explorer browser cannot display the Font Awesome webpage, but it can correctly display the icon you add here in the FireLight UI.</p>
+    </body>
+</html>

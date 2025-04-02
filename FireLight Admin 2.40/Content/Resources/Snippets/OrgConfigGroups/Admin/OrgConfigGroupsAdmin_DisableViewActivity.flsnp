@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable View Activity</b> checkbox to disable viewing activities. The <MadCap:xref href="../../../../Product Configuration/Activities.htm" target="_blank" alt="Activities">Activities</MadCap:xref> option under Product Configuration on the Home page and the Activities option under Product Config on the navigation bar will not be visible when this option is selected. The user will not be able to create or edit activities.</body>
+</html>

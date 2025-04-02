@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>ACORD Type displays the ACORD type for the selected package. In the list, select an <b class="Bold">ACORD Type</b> for a new package. ACORD type is the combination of Type and Subtype separated by a dash (-).</p>
+    </body>
+</html>

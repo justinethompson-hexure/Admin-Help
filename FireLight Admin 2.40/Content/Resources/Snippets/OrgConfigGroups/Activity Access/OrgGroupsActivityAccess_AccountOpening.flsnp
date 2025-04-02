@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Account Opening</b> checkbox to provide group access to the Account Opening activity. See <MadCap:xref href="../../../../Features/Account Opening.htm" target="_blank" alt="Account Opening Activity">Account Opening Activity</MadCap:xref> in Features. <MadCap:conditionalText MadCap:conditions="General.Online">See also <MadCap:xref href="../../../../UserGuide/New Activity/Account Opening.htm" target="_blank" alt="Account Opening [User Instructions]">Account Opening [User Instructions]</MadCap:xref>.</MadCap:conditionalText></body>
+</html>

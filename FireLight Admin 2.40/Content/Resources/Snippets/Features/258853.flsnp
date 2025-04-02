@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This enhancement will display designation text "TTEE" as a suffix on the signature line in case a trustee is signing the application. This text will appear on the signature control only for the signer type "Trustee." This is a suitability requirement and to implement it currently the agent advises clients to add TTEE on their signature when sending an email request. If the user fails to suffix their signatures with the text "TTEE," the application goes into NIGO. This enhancement will fulfill the suitability requirement and eliminate one reason of NIGO applications. </p>
+        <p>Impact:&#160;Applications containing forms that require to be signed by a Trustee. Text "TTEE" is placed as a suffix on the trustee signature field at below places:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Form/application</p>
+            </li>
+            <li>
+                <p>Addendum document</p>
+            </li>
+            <li>
+                <p>Application PDF</p>
+            </li>
+            <li>
+                <p>Application Audit Report</p>
+            </li>
+        </ul>
+    </body>
+</html>

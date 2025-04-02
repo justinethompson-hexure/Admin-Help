@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <b class="DRNumberBold">Admin</b>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 248486 </b> Wizard designer data grid control storing custom list GUID instead of list name. Problem: In the wizard designer, custom lists were being identified by Guid (internal ID) rather than name.  So if a wizard was exported and imported into another organization, an error would occur in data entry for the app because the custom list could not be loaded (even if the referenced custom was added for that org, because it would have a different ID). Resolution: With the fix, it now also stores the custom list name in the wizard definition, and then looks up the custom list (for that org) by name, so the above scenario will now work (if the org has that custom list defined). <br />Areas Impacted: Wizard designer Data Grid and Custom Lists</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 255475 </b> Unable to load rule set with rule nodes containing XML character entities. Problem: In the rules editor, popup nodes were being decoded twice, resulting in an error parsing the XML if the content contained character entities. Resolution: Removed the double decoding logic. <br />Areas Impacted: Rules editor</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 255503 </b> Data Group Property has unexpected value when uploading PDF. Problem: logic for displaying dropdown was expecting "None" in the Data Group. when it is uploaded a null is stored instead. Resolution: made the logic for displaying dropdown to handle null. <br />Areas Impacted: Form Designer</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 255549</b> React DatePicker is not localized. Problem: react calendar not localized. Resolution: added localization with date-fns. <br />Areas Impacted: Wizard DatePicker</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 255729 </b> Wizard designer - show a busy indicator during save. Problem: 1) No indicator was displayed while saving a wizard, 2) If the app firewall blocked the request, the user was not informed of the blockage. Resolution: 1) Show a spinner during save, 2) Show the firewall error to the user.<br />Areas Impacted: Wizard Designer save</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">E-Delivery</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 255708 </b> Database timeout in e-Delivery workflow. Problem: apps in the e-Delivery pre-submit workflow were failing with a DB timeout when locking the activity.  Previously in 2.22 when using the wrapped DAL, the app lock step was failing with "There is already an open DataReader associated with this Command which must be closed first." Resolution: if a DB timeout occurs during lock when using a separate DAL, attempt to use the wrapped DAL. Also see iConnect 256130 for a related e-delivery fix that was made. <br />Areas Impacted: Locking of activities in the e-Delivery pre-submit workflow</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 256130 </b> e-Delivery presubmit workflow fails if child app is submitted. Problem: e-Delivery pre-submit workflow was failing without submitting the parent app if any of the child apps were already submitted. Resolution: In e-Delivery pre-submit workflow, submit child e-delivery apps only if they are not already submitted. <br />Areas Impacted: e-Delivery pre-submit workflow</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Email</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 256247 </b> Search Items in Automated Emails Not Filling. Problem: The replacement values were not being filled for the passcode email template when used for the final download email. Resolution:  The data was not being passed into the formatting of the template as the default template uses only the passcode value.  Added the application data, as well as the to and from name as other uses of the passcode email have this data available. <br />Areas Impacted: The final and leave behind passcode email that is used when the passcode validation option is selected in the org settings.  Additional data is available for replacement values.</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">FireLight Embedded</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 253796 </b> FireLight Embedded not notifying the host page when Confirmation Dialogue is canceled. Problem: When a user canceled proceed to signatures or Finish activity, it was impossible for embedded clients to detect and re-enable the button. Resolution: A canceled property has been added to the signatureStatusEvent response. The API now triggers this event with cancelled = true when the dialog is declined. <br />Areas Impacted: Embedded</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">FireLight Illustration</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 250340 </b> Exception on Illustration when Clicking on Update Button and the Child Application is Signed. Problem: Updating an illustration that already have linked signed application will throw an exception. Resolution: Error message for updating Illustration with linked signed application. <br />Areas Impacted: Updating illustration</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Home Page</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 256443 </b> User unable to login - unknown Activity Type. Resolution: Added null checks to handle null activity type for application. <br />Areas Impacted: Home view, All activities</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Print Forms</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 256586 </b> Print forms activity - Error printing forms when data item doesn't exist. Problem: Null reference when data item not found for field. Resolution: Add null checks. <br />Areas Impacted: print for Print Forms activity with optional forms</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Requests</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR&#160;249554 </b> Firelight Esign Bug Allows Sending Reminder with Expired Link. Problem: The logic to retrieve the sent email requests was showing expired email requests. Resolution: Modified logic to retrieve the emails to not show expired requests. Moved the previous spot to a new location to allow iConnect 255610 to work as well. <br />Areas Impacted: Outstanding Requests dialog</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Review Queue</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 252775 </b> User Preferences - Reviewer Name and Address not populating in review step email. Problem: If data items (FLI_REVIEWER_NAMES, FLI_REVIEWER_EMAILS) exist in application data with null or empty values then user preferences data was overwritten by null or empty values. Resolution: Add a condition to check for null or empty values if data items exist (FLI_REVIEWER_NAMES, FLI_REVIEWER_EMAILS) exist in application data. If data items values are not null or empty, we overwrite user preference data, else not. <br />Areas Impacted: Application &gt; Review page</p>
+            </li>
+        </ul>
+        <p>
+            <b class="DRNumberBold">Wizards and Forms</b>
+        </p>
+        <ul>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 250889 </b> Wizard error - HTML Style of name 'background-position-x' is not allowed. Problem: Wizard designer would not save if html style included background css property and had error on background position x. Resolution:  The decoded html sets defaults for background position x and y, among other properties as background is short-hand way of setting background-color.  Added background position x and background position y to list of allowed css properties for the sanitizer.  Also added all errors instead of just the first to the error message dialog. <br />Areas Impacted: Wizard designer save when html checkbox is checked</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR&#160;255745 </b> Conditional Packages Not Printing. Problem: The problem for this is they are using conditional packages and print forms. For printing to work with conditional packages its needs to be saved and print forms does not save never has. Resolution: Made it so the print form pulls the application's package list the model instead of the DB when the ACORD type is print forms. <br />Areas Impacted: Wizard print dialog</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR 255803 </b> Next Button is disrupting a wizard panel. Resolution: Other changes to code resolved this issue. <br />Areas Impacted: Wizards</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR&#160;256165 </b> Wizard - client exception reading null DataItem property. Problem: A null reference error was occurring in some situations in the wizard CRM UI. Resolution: Added null checks. <br />Areas Impacted: Wizard CRM</p>
+            </li>
+            <li>
+                <p>
+                    <b class="DRnumber">DR&#160;256594 </b> Illustration - Client exception on apply. Resolution: Added null checks. <br></br>Areas Impacted:&#160;Wizard UI</p>
+            </li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

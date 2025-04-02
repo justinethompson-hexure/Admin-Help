@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>With the implementation of the Agent Remote Sign functionality, carriers should have the ability to disable "Send Email" or disable "Sign Now" for a client and/or an agent separately. To allow this, organization group setting will have separate flags available using which carriers should be able to perform the following actions on the E-signature for client and agent signers:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>  Disable Send Email - Agent</p>
+            </li>
+            <li>
+                <p>  Disable Send Email - Client</p>
+            </li>
+            <li>
+                <p>  Disable Send Email - Client and Agent</p>
+            </li>
+            <li>
+                <p>  Disable Sign Now - Agent</p>
+            </li>
+            <li>
+                <p>  Disable Sign Now - Client</p>
+            </li>
+            <li>
+                <p>  Disable Sign Now - Client and Agent</p>
+            </li>
+        </ul>
+        <p>Impacts: </p>
+        <p>Four settings is available on the screen, FLAdmin &gt; Organization Config &gt; Groups &gt; App (tab) &gt; Signing: General (section):</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>  Disable Send Email Request for Agent</p>
+            </li>
+            <li>
+                <p>  Disable Send Email Request for Client</p>
+            </li>
+            <li>
+                <p>  Disable Sign Now for Agent</p>
+            </li>
+            <li>
+                <p>  Disable Sign Now for Client</p>
+            </li>
+        </ul>
+    </body>
+</html>

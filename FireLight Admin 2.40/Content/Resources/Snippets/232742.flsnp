@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../DesignDocs/232742 Hyperlink URLs in Email Templates.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 232742</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone" style="background-color: #32cd32;">Abi, Keerti</MadCap:conditionalText> <em>Complete</em> (Carriers and Distributors) This enhancement will add the ability to support hyperlink text for an embedded URL link in emails. Base is enhanced to add a new replacement variable and syntax combination that admins can place in email templates. Using this new replacement variable, clients will have the ability to add hyperlink text like "Click Here" with the URL hidden behind that text. This feature can be used to add a hyperlink in both HTML and non-HTML email templates.</p>
+                <p>Impacts: </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>FL Admin -&gt; Organization Config -&gt; Email - A new replacement variable added that can be used by clients in the email templates</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>

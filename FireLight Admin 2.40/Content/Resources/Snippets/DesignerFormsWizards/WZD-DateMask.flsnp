@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p> (Optional) Select a Date Mask from a list of defined <a href="../../../Organization Configuration/Organizations/Activity.htm#EditMasks" alt="Edit Masks">Edit Masks</a> in Organization Configuration/Organization Settings on the Activity tab. The Date Mask is used to place the user input into the specified format. <b class="Bold">NOTE:</b> Placeholder Text will not be shown if a Date Mask is set.</p>
+    </body>
+</html>

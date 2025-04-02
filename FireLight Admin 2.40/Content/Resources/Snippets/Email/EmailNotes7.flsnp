@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body><sup>7</sup>Add the &lt;EXPIRY_DAYS&gt; [count] variable in the expiration warning email template to convey the number of days until expiration. See the <a href="../../../Organization Configuration/Organizations/Activity.htm#ExpirationReminderFrequency">Expiration Reminder Frequency</a> option on the Organization Configuration/Organization Settings page/Activity tab, which allows organizations to set the frequency (Never, Daily, Weekly) of expiration warning emails.</body>
+</html>

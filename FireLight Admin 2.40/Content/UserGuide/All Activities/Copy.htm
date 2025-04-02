@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Copy When a User Is Associated with Multiple Firms; Copy with LexisNexis Integration; Copy As Is; Copy with Changes" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Copy<MadCap:conditionalText MadCap:conditions="General.Online"> [User Instructions]</MadCap:conditionalText></h1>
+        <p><b class="Bold">NOTE:</b> If your organization enabled the Localization feature, you must update the copy of an activity in the same locale as the original activity.</p>
+        <p>The Copy feature is helpful when a new activity is nearly identical to an existing one.</p>
+        <p>Do one of the following to copy an activity or click the <b class="Bold">Cancel</b> button on the <b class="Bold">Copy</b> dialog to return to the All Activities page without making a copy.</p>
+        <p>When “Copy As Is” or "Copy With Changes" is initiated, FireLight<sup MadCap:conditions="General.Online">®</sup> removes the original activity's unused data from the new activity at the time it is created. Additionally, when an activity is locked, any unused conditional data that may have been added and then subsequently made inactive is removed. This prevents the extra data from interfering with rules and from being sent when the activity is submitted.</p>
+        <p><b class="Bold">When a User Is Associated with Multiple Firms</b>
+        </p>
+        <p>When a user is associated with multiple firms, the user has visibility and access to activities that were created under firms other than the firm for the current session. The copy feature for activities in FireLight behave in the following way and do so consistently.</p>
+        <p>Saved/Inflight activities are always associated with the firm under which they were originally created regardless of the firm ID associated with the current session. Different firms will likely have different sales agreements/product availability. For this reason, the following is the behavior for “Copy As Is” and “Copy with Changes” functionality.</p>
+        <ul>
+            <li>
+                <p>“Copy As Is” copies the case and leverages the Firm ID information under which the case was originally created. This ensures that a case is not created under the firm for the current session as that firm may not have that product included in their sales agreement with the associated carrier.</p>
+            </li>
+            <li>
+                <p>“Copy with Changes” allows the user to reuse common demographic information in the newly created activity. The Firm ID and Role Codes associated with the current session are used in the “Copy with Changes” scenario. As part of the “Copy with Changes” workflow, the user goes through the selection process for the new jurisdiction, product type, product, etc., and those options are driven by the credentials for the current session.</p>
+            </li>
+        </ul>
+        <p><strong>LexisNexis Integration</strong>
+        </p>
+        <p>When either the "LexisNexis" or "LexisNexisRisk" custom action call has occurred, the application is able to be copied, but the LexisNexis values will not be copied over to the next application.</p>
+        <ul>
+            <li>
+                <p>For InstantID, those data items include LexID, NAS Score, NAP Score, CTI Score, Risk Indicators, and Pass/Fail Score.</p>
+            </li>
+            <li>
+                <p>For Risk Classifier, those data items include Risk Score, Result Code, Result Message, Reason Code 1-4, and Reason Messages 1-4.</p>
+            </li>
+        </ul>
+        <h3>Copy As Is</h3>
+        <ol>
+            <li>
+                <p>In an activity, click the <b class="Bold">Copy</b> button to open the Copy dialog.</p>
+                <p>
+                    <img src="../../Resources/ImagesUserGuide/All Activities/Capture39.png" alt="Copy dialog" title="Copy dialog" />
+                </p>
+            </li>
+            <li>
+                <p>Click the <b class="Bold">Copy As Is</b> button to copy the activity as-is (without changes to the Jurisdiction, Product, etc., or optional forms).</p>
+            </li>
+            <li>
+                <p>Enter the new <b class="Bold">Name</b> in the Copy Activity dialog and click <b class="Bold">OK</b>. The new application opens in the Form Entry mode.</p>
+                <p>
+                    <img src="../../Resources/ImagesUserGuide/All Activities/Capture40.png" alt="Copy Case dialog" title="Copy Case dialog" />
+                </p>
+            </li>
+        </ol>
+        <h3>Copy with Changes</h3>
+        <p>Copy with Changes will clear the original product codes, CUSIP number, carrier codes, provider data, and rule scope data. The user-entered data and pre-filled values are retained.</p>
+        <p><b class="Bold">NOTE for Admin Users</b>:If using Copy with C hanges for wizards that contain Data Grids, the Clear Grid Data Item rule needs to be added to the wizard rule set in FireLight Admin. See the "Data Grid" topic in Admin Help.</p>
+        <ol>
+            <li>
+                <p>In an activity, click the <b class="Bold">Copy</b> button to open the <b class="Bold">Copy</b> dialog.</p>
+                <p>
+                    <img src="../../Resources/ImagesUserGuide/All Activities/Capture39.png" alt="Copy dialog" title="Copy dialog" />
+                </p>
+            </li>
+            <li>
+                <p>Click the <b class="Bold">Copy with Changes</b> button to change the Jurisdiction, Product, etc., on the activity copy on the Create New activity page.</p>
+            </li>
+            <li>
+                <p>In the following example of a copied application, select the <b class="Bold">Jurisdiction</b>, <b class="Bold">Product Type</b>, and Carrier in <b class="Bold">Create New Application</b> and click a product name in the list to create the new application with changes. </p>
+                <p>
+                    <img src="../../Resources/ImagesUserGuide/All Activities/Capture41.png" alt="Create a New Application" title="Create a New Application" />
+                </p>
+            </li>
+        </ol>
+        <h4>How Admin Group Settings Affect the Copy Feature</h4>
+        <p><b class="Bold">NOTE:</b> If the "Disable Copy As Is" option or the "Disable Copy with Changes" option is selected in Admin, FireLight hides the Copy dialog and launches the correct copy option.</p>
+        <p><b class="Bold">Disable Change Carrier Copy with Changes (Distributors Only)</b>
+        </p>
+        <p class="Indent">In FireLight Admin on the Groups page, App tab, distributors can select the "Disable Change Carrier Copy with Changes" option to hide the Carrier selection list during the copy process. In All Activities, when a user clicks the Copy button,  FireLight opens the Create New activity page instead of the Copy  dialog and  shows only the active carrier's products.</p>
+        <p class="Indent">
+            <img src="../../Resources/ImagesUserGuide/New Activity/Capture433.png" alt="Create New Application Without Carrier Selection" title="Create New Application Without Carrier Selection" />
+        </p>
+        <p><b class="Bold">Disable Copy As Is</b>
+        </p>
+        <p class="Indent">In FireLight Admin on the Groups page, App tab, organizations can select the "Disable Copy As Is" option to disable the ability to copy an activity "as is." In All Activities, when a user clicks the Copy button,  FireLight opens the Create New activity page instead of the Copy  dialog.</p>
+        <p class="Indent">
+            <img src="../../Resources/ImagesUserGuide/All Activities/Capture41.png" alt="Create a New Application" title="Create a New Application" />
+        </p>
+        <p><b class="Bold">Disable Copy with Changes</b>
+        </p>
+        <p class="Indent">In FireLight Admin on the Groups page, App tab, organizations can select the "Disable Copy with Changes" option to disable the ability to copy an activity with changes. In All Activities, when a user clicks the Copy button,  FireLight opens the Copy Activity dialog instead of the Copy dialog.</p>
+        <p class="Indent">
+            <img src="../../Resources/ImagesUserGuide/All Activities/Capture40.png" alt="Copy Case dialog" title="Copy Case dialog" />
+        </p>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

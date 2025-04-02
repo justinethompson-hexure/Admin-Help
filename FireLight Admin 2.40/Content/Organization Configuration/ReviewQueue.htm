@@ -1,0 +1,691 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Review Queue</h1>
+        <p class="note"><b class="Bold">Spotlight Video:</b> See the <a href="https://vimeo.com/406914031/6370cadca5" target="_blank" title="FireLight Review Queue Script Workflow" alt="FireLight Review Queue Script Workflow">Review Queue Script Workflow</a> Spotlight Feature Video for more information.</p>
+        <p>On the navigation bar, click <b>Organization Config</b> and click <b>Review Queue</b> to go to the Review Queue page.</p>
+        <p>This is where you create a post-submission queue stop workflow prior to the orders being transmitted to the carrier’s back office. The review queue can be  a reviewer post-submission review queue or an automated post-submission review queue through the provider that does not require reviewer interference.</p>
+        <p>
+            <img src="../Resources/ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" />  See the <em MadCap:conditions="General.PDF">FireLight  Review Queue Guide</em><a href="../Resources/PDFGuides/FireLight_Review_Queue_Guide.pdf" target="_blank" title="FireLight Review Queue Guide" alt="FireLight Review Queue Guide" MadCap:conditions="General.Online">FireLight Review Queue Guide</a> for pre-submission  and  post-submission reviewer instructions. In the <em MadCap:conditions="General.PDF">FireLight Platform User Guide</em><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/PDFGuides/FireLight_Platform_User_Guide.pdf" target="_blank" title="FireLight Platform User Guide" alt="FireLight Platform User Guide">FireLight Platform User Guide</a></MadCap:conditionalText>, New Activity section, see the<MadCap:conditionalText MadCap:conditions="General.PDF"> "Pre-Submission Review Step"</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../UserGuide/New Activity/Review/Pre-Submission Review.htm" target="_blank" alt="Pre-Submission Review Step [User Instructions]">Pre-Submission Review Step [User Instructions]</MadCap:xref></MadCap:conditionalText> topic for agent  pre-submission review instructions. </p>
+        <h2>PreSubmit Review Queue Guidelines</h2>
+        <p><b class="Bold">NOTE:</b> If the organization uses a Pre-Signature Review Queue, Client Fill and Sign is disabled. Client fill is still available.</p>
+        <ul>
+            <li>
+                <p>If your organization uses the pre-submission review process, FireLight<sup MadCap:conditions="General.Online">®</sup> automatically creates a "read only" PreSubmit review queue. The PreSubmit review queue cannot be edited or change its name. </p>
+            </li>
+            <li>
+                <p>To enable the PreSubmit review queue, select the <b class="Bold">Allow Pre-Signature Review</b> or <b class="Bold">Allow  Post-Signature Review</b> checkbox on the Product Configuration, <MadCap:xref href="../Product Configuration/Activities.htm" target="_blank" alt="Activities">Activities</MadCap:xref> page. </p>
+            </li>
+            <li>
+                <p>Firms can auto send applications to the PreSubmit queue by setting a data item. In FireLight on the Preferences page in the Reviewers section, users need to add the pre-submission reviewers' names and email addresses if the firm is not using auto send. </p>
+            </li>
+            <li>
+                <p>To force or require a pre-submission review using rules, see FLI_REQUIREMANUALREVIEW on the FireLightBase tab in the <MadCap:xref href="../Design/Common Tagging/Common Tags1.htm" target="_blank" alt="Common Tags" title="Common Tags">Common Tags</MadCap:xref> spreadsheet for information. On the same tab in the spreadsheet, also see the FLI_LOCK_REVIEWERS (prevent users from adding or clearing reviewers), FLI_REVIEWER_NAMES (semicolon-separated list of reviewer names) and FLI_REVIEWER_EMAILS (semicolon-separated list of reviewer email addresses) data items for information on how to conditionally pre-populate and disable reviewers.</p>
+            </li>
+        </ul>
+        <p><strong>IMPORTANT!</strong> The PreSubmit review queue does not use a client organization's review queue script.<br /></p>
+        <h2 MadCap:conditions="General.PDF">Add a Post-Submission Review Queue</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Add a Post-Submission Review Queue</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p><b class="Bold">Set Up a Review Queue</b>
+                </p>
+                <ol>
+                    <li>
+                        <p>On the navigation bar, click <b>Organization Configuration</b> and then click <b>Review Queue</b>.</p>
+                    </li>
+                    <li>
+                        <p> Click the <b>Add New Queue</b> link on the upper left and add review queue information below the grid.</p>
+                        <p><b>Queue Name</b> is the name of the review queue.</p>
+                        <p><b class="Bold">Queue Number</b> is a unique number for the review queue.</p>
+                        <p><b>Email Group</b> is the email address or distribution list of the review queue group that receives a notification email when an application is submitted for review. Leave blank if you do not want to send an email notification to a review queue group. The format of the email address is validated. If incorrect, an error message appears in red at the bottom of the page. The Email page contains the template, Review Queue Email, which can be modified except for the QUEUE_NAME, QUEUE_NUMBER, and CASE_NAME tags. See "Edit Email Subject Lines, Locale, and TemplateText" in <MadCap:xref href="Email.htm" target="_blank" alt="Email">Email</MadCap:xref>.</p>
+                        <p><b>Remarks</b> field contains any additional explanatory information for the review queue.  </p>
+                        <p><strong>Additional Info</strong> </p>
+                        <p class="Indent">Adds optional sub-header text for each activity in the Review Queue in <MadCap:variable name="General.ProductName" />. For example, type <b>Policy Number: [Policy Number]</b> in the <b>Additional Info</b> text box to have the policy number display  below the activity name in the <MadCap:variable name="General.ProductName" /> Review Queue for each activity.</p>
+                        <ul>
+                            <li>Values must be entered in template format.</li>
+                            <li>Values must be included in the  List Profile, which is specific to each organization and their database.</li>
+                            <li>
+                                <p>Multiple items can be used as Additional Info values with the use of a semi-colon. For example, type <b>Product Name: [Product Name]; Issue State: [Issue State]</b> to display the Product Name and Issue State in the sub-header for each activity in the Review Queue in FireLight.</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/RevQueue10.jpg" alt="Additional Info Options" title="Additional Info Options" MadCap:conditions="General.Online" />
+                                </p>
+                                <p><b class="Bold">NOTE:</b> To add a dataitem to the Additional Info text box, the dataitem needs to be included in the List Profile, along with the description of the dataitem (ex: Owner_FirstName is Owner First Name), in the organization's database. To add a dataitem and description to your organization’s current List Profile,  contact the Strategic Account Manager. After the database update, add the description of that dataitem (e.g., Owner Name: [Owner Full Name]) to the Additional Info text.<br /></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Select applicable checkboxes.</p>
+                        <p>Select the following checkboxes for Review Queues with applications that have more than one part, such as an agent-submitted application for part one and a medical history questionnaire from a tele-interviewer for part two. Application packages with more than one part will have an OpenApp button available for viewing the application after the Reviewer clicks the Review button and locks the application.<br /></p>
+                        <p><b>Disable Approval Actions</b> hides the Approve, Reject, and More Info buttons when the reviewer clicks the Review button.<br /><b>Disable Show Application On Lock</b> does not automatically open the application when the reviewer clicks the Review button.<br /><b>Enable Children Links</b> shows the OpenApp button. The reviewer clicks the OpenApp button to open the application for review.</p>
+                    </li>
+                    <li>
+                        <p>Go to the <b class="Bold">Review Queue Deadline</b> section to add a review deadline (the number of business days orders can remain in the queue). </p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>In the <b class="Bold">At Deadline</b> list, select an option:</p>
+                                <ul>
+                                    <li><b class="Bold">Rejected</b> to have the system automatically reject orders when they reach the review Deadline Length. </li>
+                                    <li><b class="Bold">Approved</b> to have the system automatically approve orders when they reach the review Deadline Length.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>In <b class="Bold">Deadline Length</b>, enter the number of business days to count for the deadline expiration day count for the queue. If the activity in the queue is not reviewed by the number of days entered here, the activity is automatically approved or rejected from the  review queue within an hour of the time and day when the deadline expires. The default is 0, which means no deadline is set. See "Enable the Review Queue Expiration Deadline Date" on this page for more details.</p>
+                                <p>Select the checkbox for any of the following options for types of days you would like to count as days to be included in the deadline expiration day count.</p>
+                                <ul>
+                                    <li>
+                                        <p><b class="Bold">Deadline Date - Include Weekends</b> includes weekend days in the deadline expiration day count.</p>
+                                    </li>
+                                    <li><b class="Bold">Deadline Date - Include FINRA Holidays</b> includes FINRA holidays in the deadline expiration day  count. Click the <b class="Bold">FINRA Holidays</b> link to open a calendar of FINRA holidays for the current year. FINRA holidays do not include a half day of Market Day.</li>
+                                    <li><b class="Bold">Deadline Date - Include Market Days</b> includes market days in the deadline expiration day  count.</li>
+                                    <li><b class="Bold">Deadline Date - Continue from Previous Queue</b> is for sequential queues, where the deadline date counter is carried over to the next queue or for a PreSubmit queue where the deadline date is carried over to a post-submission review queue. </li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>Click the <b>Edit Review Queue Script</b> link to edit the workflow script for back office processing to include this review queue. See “Edit Review Queue Script”  on this page for instructions.</li>
+                    <li>
+                        <p>Click the <b>Save</b> button to save the review queue entries.</p>
+                        <p>The new review queue is added to the grid with a Queue Type of Post-Submit.</p>
+                        <p MadCap:conditions="General.Online">
+                            <img src="../Resources/ImagesAdmin/Profiles-NewReviewQueue.jpg" alt="New Review Queue" title="New Review Queue" MadCap:conditions="General.Online" />
+                        </p>
+                        <p><b class="Bold">NOTE:</b> To edit a review queue, select the review queue in the grid and then edit the review queue information below the grid. Edit the review queue script if applicable.</p>
+                    </li>
+                    <li>Deploy the Review Queue Script using the Review Queue Configuration in Deployment.</li>
+                    <li>Add designated reviewers access to the review queues by a reviewer role code in Groups  so they can review, approve or reject orders electronically using the <MadCap:variable name="General.ProductName" /> application. See the <MadCap:xref href="Groups/Review Queue.htm" target="_blank" alt="Review Queue">Review Queue</MadCap:xref> tab  in Groups.</li>
+                    <li>To ensure Review Queue emails are sent to an agent: on the Review Queue tab in Groups, ensure the <a href="Groups/Review Queue.htm#DisableActionEmail" target="_blank" alt="Disable Action Email Notifications">Disable Action Email Notifications</a> checkbox is cleared (unchecked) for the reviewer role code. In <MadCap:xref href="Email.htm" target="_blank" alt="Email">Email</MadCap:xref> on the  and Post-Submit Review Queue Approve and Post-Submit Review Queue Decline email templates, ensure the |MESSAGE| or &lt;MESSAGE&gt; replacement marker is somewhere within the email body. In FireLight on the agent's My Preferences page, ensure the agent's <strong>Send Message Center Emails</strong> checkbox is selected.</li>
+                </ol>
+                <p><b class="Bold">Review Queue Workflow</b>
+                </p>
+                <ol>
+                    <li>An application is submitted by an agent after all the prerequisite steps are finished (such as PreSubmit review, Signatures).</li>
+                    <li>According to the organization’s Review Queue script, the application is then inserted into one or more review queue(s).</li>
+                    <li>A reviewer logs in to FireLight and opens the Review Queue page. The reviewer's role code that is set on the Groups page determines the review queues that the reviewer can access.</li>
+                    <li>
+                        <p>Reviewer opens the applicable Queue, locks the order for review, reviews the documents and history for the order, and clicks a button to approve the order, reject the order, or request more information from the agent.</p>
+                        <ul>
+                            <li>When the reviewer approves an order, the order is automatically submitted to the back office for processing.</li>
+                            <li> When the reviewer rejects an order, the agent needs to copy the order and provide the requested changes in a new order.</li>
+                            <li>When a reviewer sends a request to the agent for more information, the order is in "Request Sent, Pending Reply" status until the agent replies to the review queue message with the requested information. Upon receiving the requested information, the reviewer can proceed with reviewing the order. </li>
+                        </ul>
+                    </li>
+                </ol>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Add an Automated Review Queue</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">Add an Automated Review Queue</h2>
+                <p class="note"><b class="Bold">NOTE:</b> Contact your Strategic Account Manager to arrange for your Provider module to be set up to handle the logic of processing each item that gets inserted to an automated queue.</p>
+                <p><b class="Bold">Requirements</b>
+                </p>
+                <ul>
+                    <li>The queue must be set to automated by selecting the Automated checkbox and by entering required Automation Retry Interval and Deadline Length.</li>
+                    <li>
+                        <p>The automated queue must have any associated logic, including insertion logic, put in place with the Review Queue Script for the organization, just like all other queues.</p>
+                    </li>
+                    <li>
+                        <p>Your organization’s Provider module must be set up to handle the logic of processing each item that gets inserted to an automated queue. Contact your Strategic Account Manager to arrange for the Provider work.</p>
+                    </li>
+                </ul>
+                <p><b class="Bold">Set Up an Automated Queue</b>
+                </p>
+                <ol>
+                    <li>
+                        <p>On the navigation bar, click <b>Organization Configuration</b> and then click <b>Review Queue</b>.</p>
+                    </li>
+                    <li>
+                        <p> Click the <b>Add New Queue</b> link on the upper left and add review queue information below the grid.</p>
+                        <p><b>Queue Name</b> is the name of the review queue. This can be a combination of alphanumeric characters.</p>
+                        <p><b class="Bold">Queue Number</b> is a unique number for the review queue. This can be a combination of alphanumeric characters.</p>
+                        <p><b>Email Group</b> (Optional) is the email address or distribution list of the review queue group that receives a notification email when an order is submitted for review. Leave blank if you do not want to send an email notification to a review queue group. The format of the email address is validated. If incorrect, an error message appears in red at the bottom of the page. The Email page contains the template, Review Queue Email, which can be modified except for the QUEUE_NAME, QUEUE_NUMBER, and CASE_NAME tags. See "Edit Email Subject Lines, Locale, and TemplateText" in <MadCap:xref href="Email.htm" target="_blank" alt="Email">Email</MadCap:xref>.</p>
+                        <p><b>Remarks</b> field contains any additional explanatory information for the review queue.  </p>
+                        <p><strong>Additional Info</strong> (Optional) Adds optional sub-header text for each application in the Review Queue in <MadCap:variable name="General.ProductName" />. For example, type <b>Policy Number: [Policy Number]</b> in the <b>Additional Info</b> text box to have the policy number display  below the application name in the <MadCap:variable name="General.ProductName" /> Review Queue for each application. Values must be entered in template format.</p>
+                    </li>
+                    <li>
+                        <p>Select applicable checkboxes.</p>
+                        <p>Select the following checkboxes for Review Queues with applications that have more than one part, such as an agent-submitted application for part one and a medical history questionnaire from a tele-interviewer for part two. Application packages with more than one part will have an OpenApp button available for viewing the application after the Reviewer clicks the Review button and locks the application.<br /></p>
+                        <p><b>Disable Approval Actions</b> hides the Approve, Reject, and More Info buttons when the reviewer clicks the Review button.<br /><b>Disable Show Application On Lock</b> does not automatically open the application when the reviewer clicks the Review button.<br /><b>Enable Children Links</b> shows the OpenApp button. The reviewer clicks the OpenApp button to open the application for review.</p>
+                    </li>
+                    <li><b class="Bold">Automated</b> Select this checkbox to set this queue as an automated review queue. You must enter an Automation Retry Interval and Deadline Length for an automated queue. Clear the checkbox to set the queue as a standard reviewer post-submission review queue. </li>
+                    <li>
+                        <p><b class="Bold">Automation Retry Interval</b> (Required) Enter a retry interval in minutes for the automated review queue to check for items to add to the automated review queue. The interval is in 5-minute increments. The minimum is 5 and the maximum is 720. An entry is required for an automated queue.</p>
+                    </li>
+                    <li>
+                        <p>
+                            <p>(Optional) Go to the <b class="Bold">Review Queue Deadline</b> section to add a review deadline (the number of business days orders can remain in the queue). </p>
+                            <ol style="list-style-type: lower-alpha;">
+                                <li>
+                                    <p>In the <b class="Bold">At Deadline</b> list, select an option:</p>
+                                    <ul>
+                                        <li><b class="Bold">Rejected</b> to have the system automatically reject orders when they reach the review Deadline Length. </li>
+                                        <li><b class="Bold">Approved</b> to have the system automatically approve orders when they reach the review Deadline Length.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>In <b class="Bold">Deadline Length</b>, enter the number of business days to count for the deadline expiration day count for the queue. If the activity in the queue is not reviewed by the number of days entered here, the activity is automatically approved or rejected from the  review queue within an hour of the time and day when the deadline expires. The default is 0, which means no deadline is set. See "Enable the Review Queue Expiration Deadline Date" on this page for more details.</p>
+                                    <p>Select the checkbox for any of the following options for types of days you would like to count as days to be included in the deadline expiration day count.</p>
+                                    <ul>
+                                        <li>
+                                            <p><b class="Bold">Deadline Date - Include Weekends</b> includes weekend days in the deadline expiration day count.</p>
+                                        </li>
+                                        <li><b class="Bold">Deadline Date - Include FINRA Holidays</b> includes FINRA holidays in the deadline expiration day  count. Click the <b class="Bold">FINRA Holidays</b> link to open a calendar of FINRA holidays for the current year. FINRA holidays do not include a half day of Market Day.</li>
+                                        <li><b class="Bold">Deadline Date - Include Market Days</b> includes market days in the deadline expiration day  count.</li>
+                                        <li><b class="Bold">Deadline Date - Continue from Previous Queue</b> is for sequential queues, where the deadline date counter is carried over to the next queue or for a PreSubmit queue where the deadline date is carried over to a post-submission review queue. </li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </p>
+                    </li>
+                    <li>Click the <b>Edit Review Queue Script</b> link to edit the workflow script for back office processing to include the automated review queue. The queue must have any associated logic, including insertion logic, put in place with the Review Queue Script for the organization, just like all other queues. See “Edit Review Queue Script”  on this page for instructions.</li>
+                    <li>
+                        <p>Click the <b>Save</b> button to save the review queue entries.</p>
+                        <p>The new review queue is added to the grid with the word "Automated" in the Queue Type column.</p>
+                        <p MadCap:conditions="General.Online">
+                            <img src="../Resources/ImagesAdmin/Capture71.png" alt="" title="" MadCap:conditions="General.Online" />
+                        </p>
+                        <p><b class="Bold">NOTE:</b> To edit a review queue, select the review queue in the grid and then edit the review queue information below the grid. Edit the review queue script if applicable.</p>
+                    </li>
+                    <li>Add designated reviewers access to the review queues by a reviewer role code in Groups  so they can review, approve, or reject orders electronically using the <MadCap:variable name="General.ProductName" /> application. See the <MadCap:xref href="Groups/Review Queue.htm" target="_blank" alt="Review Queue">Review Queue</MadCap:xref> tab in Groups.</li>
+                    <li>To ensure Review Queue emails are sent to an agent: on the Review Queue tab in Groups, ensure the <a href="Groups/Review Queue.htm#DisableActionEmail" target="_blank" alt="Disable Action Email Notifications">Disable Action Email Notifications</a> checkbox is cleared (unchecked) for the reviewer role code. In <MadCap:xref href="Email.htm" alt="Email" target="_blank">Email</MadCap:xref> on the Post-Submit Review Queue Approve and Post-Submit Review Queue Decline email templates, ensure the |MESSAGE| or &lt;MESSAGE&gt; replacement marker is somewhere within the email body. In FireLight on the agent's My Preferences page, ensure the agent's <strong>Send Message Center Emails</strong> checkbox is selected.</li>
+                </ol>
+                <p><b class="Bold">Automated Review Queue Workflow</b>
+                </p>
+                <p>An automated review queue operates in an automated state, which approves or rejects a post-submission review without manual intervention by a reviewer. </p>
+                <ol>
+                    <li>An app is submitted by an agent after all the prerequisite steps are finished (such as PreSubmit review, Signatures).</li>
+                    <li>According to the organization’s Review Queue script, the app is then inserted into one or more Automated queue(s).</li>
+                    <li>The Automated queue logic gets started and immediately tells the organization’s Provider to run the logic it has in place for the Automated Review process, whatever that may be (defined by client organization in conjunction with their Strategic Account Manager and the Integration team).</li>
+                    <li>The Provider may need to wait some time for the organization’s process to finish, which can take up to hours or days. During this time, the base system continues to trigger the Provider to check whether the process is finished. It will trigger the Provider every amount of minutes as defined in the queue’s Automation Retry Interval setting.</li>
+                    <li>Once the Provider understands that the process is finished (could take a while, or could be immediate), it will then tell the base system to either Approve or Reject the review item.</li>
+                    <li>The review script is rerun at this point, just like with regular queues, to determine whether the app should be inserted into any other queues, whether automated or not. If automated, the process starts over again, just for a different queue. Additionally, if the app was inserted into multiple Automated queues, the next queue’s item (related to the same app) will run through the same process. Only one Automated queue item can run at a time for a given app.</li>
+                    <li>The Provider will have access to the Queue names and numbers to help it understand contextual differences for review items: which queues they belong to. This allows for diversification of business requirements.</li>
+                    <li>Once an application is finished with all possible queues, it will move on to the final Submission logic.</li>
+                </ol>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Assign Reviewers to Specific Activities</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Assign Reviewers to Specific Activities</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p><b class="Bold">NOTE:</b> Organizations can add the ability to assign reviewers to a specific activity, product, or type in the Post Submission and Automatic Review Queues only. </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/AssignReviewer.flsnp" />
+                <p> <b class="Bold">FireLight Admin</b></p>
+                <ol>
+                    <li>
+                        <p>Click the <b class="Bold">Edit Review Queue Script</b> link to open the <b class="Bold">Review Queue Script Window</b>.</p>
+                        <p>Locate an activity, product, or type in the script. Add a new "ReviewerID" attribute to the review queue script to automatically assign the reviewer who will review the activity, product, or type. </p>
+                        <p><b class="Bold">NOTE:</b> In an automated review queue, the assigned person will always show as "Backoffice user" instead of a specific assigned person, even if a reviewer has been assigned within the script.</p>
+                        <MadCap:codeSnippet>
+                            <MadCap:codeSnippetCopyButton />
+                            <MadCap:codeSnippetCaption>
+                                <p>Example: Add a ReviewerID attribute to a Product Type.</p>
+                            </MadCap:codeSnippetCaption>
+                            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;if&gt;
+  &lt;condition&gt;
+      &lt;qisstart /&gt;
+      &lt;compare op='=='&gt;
+        &lt;diget dataitemid='FLI_PRODUCT_TYPE' /&gt; 
+        &lt;const value='Life' /&gt;
+      &lt;/compare&gt;     
+  &lt;/condition&gt;
+  &lt;setqincluded reviewerid="ABC123"&gt;
+    &lt;qid name="1" /&gt;
+    &lt;const value="true" /&gt;
+  &lt;/setqincluded&gt; 
+&lt;/if&gt;</MadCap:codeSnippetBody>
+                        </MadCap:codeSnippet>
+                        <MadCap:codeSnippet>
+                            <MadCap:codeSnippetCopyButton />
+                            <MadCap:codeSnippetCaption>Example: Activity without reviewer assignment.</MadCap:codeSnippetCaption>
+                            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;if&gt;
+  &lt;condition&gt;
+      &lt;qisstart /&gt;
+      &lt;compare op='=='&gt;
+        &lt;diget dataitemid="FLI_PRODUCT_TYPE" /&gt; 
+        &lt;const value="Life" /&gt;
+      &lt;/compare&gt;     
+  &lt;/condition&gt;
+  &lt;setqincluded&gt;
+    &lt;qid name="1" /&gt;
+    &lt;const value="true" /&gt;
+  &lt;/setqincluded&gt; 
+&lt;/if&gt;</MadCap:codeSnippetBody>
+                        </MadCap:codeSnippet>
+                    </li>
+                    <li>If applicable, make edits to the  <MadCap:conditionalText MadCap:conditions="General.PDF">Post-Submit Review Queue Request (Assigned Reviewer)</MadCap:conditionalText><MadCap:xref href="Email/Review Queue/Post-Submit Review Queue Request (Assigned Reviewer).htm" MadCap:conditions="General.Online" target="_blank" alt="Post-Submit Review Queue Request (Assigned Reviewer)">Post-Submit Review Queue Request (Assigned Reviewer)</MadCap:xref> email template in the Review Queue email category. This is the notification email that is sent to the assigned reviewer when the system assigns a case to them for review and when a user manually assigns a case to them using the Assign Reviewer button and associated list from within a review queue case. The assigned reviewer must have a name and email address added to the General section on the Preferences page in FireLight (or this is sent in through the 1228, which will pre-fill into the General section on the Preferences page).</li>
+                    <li>To add the ability to manually assign reviewers to specific activities within the Post-Submission or Automated Review Queues, do the following. In <b class="Bold">Groups</b> on the <MadCap:xref href="Groups/Review Queue.htm" target="_blank" alt="Review Queue">Review Queue</MadCap:xref> tab, select a <b class="Bold">TC Role Code</b> in the grid and select the checkbox for <b class="Bold">Enable Assign Reviewer Button</b>. The Enable Assign Reviewer Button option is based on role code and not configurable among specific review queues. Selecting this option will make the Assign Reviewer button and associated dropdown list visible within the Post Submission and Automated review queues. <b class="Bold">NOTE:</b> This is a separate option from assigning a reviewer from the review queue script. The script will use the logic where if the ReviewerID is present, FireLight will assign the reviewer regardless of this button being active on the UI. </li>
+                </ol>
+                <p MadCap:conditions="General.PDF">&#160;</p>
+                <p><b class="Bold">FireLight App</b>
+                </p>
+                <ol>
+                    <li>
+                        <p>FireLight sends an email to the specified reviewer once the case is assigned to notify them it is ready for review. Another email is sent when the review has been completed. The emails are sent to the reviewer's User Full Name and User Email Address that are entered in the General section of the Preferences page for the reviewer in FireLight. An email address has to be entered in the Preferences Section for the reviewer to receive an email. Also, FireLight sends an email to any email address that is listed within the Email group text box within the Review Queue tab in the Admin tool. If an email address has been added to this text box, the same email that is being sent to reviewers is sent to this email address regardless whether an email is being sent to a reviewer email.</p>
+                    </li>
+                    <li>
+                        <p>The reviewer logs in to FireLight and clicks the <b class="Bold">Review Queue</b> button on the Home page.</p>
+                    </li>
+                    <li>
+                        <p>The reviewer opens the order with a default order status of "My Locked orders."</p>
+                        <p><b class="Bold">NOTE:</b> The reviewer can access any other status from the Status dropdown at any time.</p>
+                    </li>
+                    <li>
+                        <p>If enabled in FireLight Admin, the reviewer can manually assign the order to another reviewer. <MadCap:conditionalText MadCap:conditions="General.Online">See <MadCap:xref href="../Review Queue Guide/Queues/Step 6. Move Assign or Unlock an Order.htm" target="_blank" alt="Step 6. Move, Assign, or Unlock an Order [Reviewer Instructions]">Step 6. Move, Assign, or Unlock an Order  [Reviewer Instructions]</MadCap:xref> in the Review Queue Guide.</MadCap:conditionalText></p>
+                    </li>
+                </ol>
+                <p><b class="Bold">Audit Report</b>
+                </p>
+                <p>The audit report will capture the following:</p>
+                <ul>
+                    <li>
+                        <p>Assignment of a specific reviewer if manually assigned or "Back Office Assigned" if assigned automatically via the Review Queue script, Case Name, and Review Queue Name. </p>
+                    </li>
+                    <li>
+                        <p>Status changes from "Pending Review" to "In Review" to "Locked for Review."</p>
+                    </li>
+                    <li>
+                        <p>Email notifications including the Application Name, Review Queue Name, and email address the email was sent to.</p>
+                    </li>
+                </ul>
+                <p><b class="Bold">Review Queue Report</b>
+                </p>
+                <ul>
+                    <li>
+                        <p>Includes the Reviewer Name column to capture the assigned reviewer and unassigned reviewer and a Reviewer ID column to capture the reviewer's map code.</p>
+                    </li>
+                    <li>
+                        <p> If a case has not been assigned to a reviewer, the Reviewer Name and Reviewer ID columns display "Unassigned."  See <MadCap:xref href="../Utilities/Reports/Detail Reports.htm" target="_blank" alt="Detailed Activity Reports">Detailed Activity Reports</MadCap:xref> for more information.</p>
+                    </li>
+                </ul>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Data Item to Include in Review Audit</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Data Item to Include in Review Audit</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p><b class="Bold">*These values apply to all queues.</b>
+                </p>
+                <p>Enter the data items in a comma-separated value list to be included in the review audit. One or more data items can be entered and saved. For example, enter <b>Reviewer_Comment,Supervisor_Comment</b> data items in the text box. Any data items in this box that appear in the reviewer documents is stored in the review queue history and audit report. This allows reviewers to view comments made by other reviewers in the Reviewer Documents. Data items to include in the Review Audit section appear for each queue, but the values are not unique per Queue.</p>
+                <p><b>NOTE:</b> When using Sequential Review Queues, FireLight retains reviewer documents and their comments in the original queue. However, because each queue has a brand-new document set, FireLight does not retain these comments across sequential review queues. Despite this, these comments can be copied through a client's provider. If interested in this option, reach out to your Strategic Account Manager. For more information, see the <a href="../Resources/DesignDocs/216981 Addition of Reviewer notes to audit history 2.18.pdf" target="_blank" title="Design Document" alt="Design Document">Design Document</a>.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Edit the Review Queue Script</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Edit the Review Queue Script</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Use the Edit Review Queue Script feature to update the rule used to submit post-submission reviewed orders to the back office provider. You are typically writing a rule that will key on specific data or data ranges to determine whether the order meets the requirements you are defining to require the order be reviewed and in which review queue it is reviewed. This is extremely flexible and enables your firm to define your own post submission review requirements. Each organization has one review queue script that applies to all of the organization's review queues. </p>
+                <ol>
+                    <li>On the navigation bar, click <b>Organization Config </b>and click <b>Review Queue</b> to open the Review Queue page.</li>
+                    <li>
+                        <p>In the grid, select an existing review <b>Queue Name</b>.</p>
+                    </li>
+                    <li>Click the <b>Edit Review Queue Script</b> link.</li>
+                    <li>
+                        <p>In the Review Queue Script Window, edit the review queue script and click <b>Save</b>.</p>
+                        <MadCap:dropDown>
+                            <MadCap:dropDownHead>
+                                <MadCap:dropDownHotspot>EXAMPLE: Go into Review Queue by Product Code</MadCap:dropDownHotspot>
+                            </MadCap:dropDownHead>
+                            <MadCap:dropDownBody>
+                                <MadCap:codeSnippet>
+                                    <MadCap:codeSnippetCopyButton />
+                                    <MadCap:codeSnippetCaption>
+                                        <p>Go into Review Queue by Product Code</p>
+                                    </MadCap:codeSnippetCaption>
+                                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;block&gt;
+    &lt;if&gt;
+        &lt;condition&gt;
+            &lt;qisstart /&gt;
+            &lt;compare op="=="&gt;
+                &lt;diget dataitemid="FLI_PRODUCT_CUSPID"/&gt;
+                &lt;const value="PLI11111"
+            &lt;/compare&gt;
+        &lt;/condition&gt;
+        &lt;setqincluded&gt;
+            &lt;qid name="HIV" /&gt;
+            &lt;const value="true" /&gt;
+        &lt;/setqincluded&gt;
+    &lt;/if&gt;
+    &lt;if&gt;
+        &lt;condition&gt;
+            &lt;qisstart /&gt;
+            &lt;compare op="=="&gt;
+                &lt;diget dataitemid="FLI_PRODUCT_CUSPID"/&gt;
+                &lt;const value="PLI22222"
+            &lt;/compare&gt;
+        &lt;/condition&gt;
+        &lt;setqincluded&gt;
+            &lt;qid name="1035E" /&gt;
+            &lt;const value="true" /&gt;
+        &lt;/setqincluded&gt;
+    &lt;/if&gt;
+&lt;/block&gt;</MadCap:codeSnippetBody>
+                                </MadCap:codeSnippet>
+                            </MadCap:dropDownBody>
+                        </MadCap:dropDown>
+                        <MadCap:dropDown>
+                            <MadCap:dropDownHead>
+                                <MadCap:dropDownHotspot>EXAMPLE: Basic (Everything Goes to Review Queue)</MadCap:dropDownHotspot>
+                            </MadCap:dropDownHead>
+                            <MadCap:dropDownBody>
+                                <MadCap:codeSnippet>
+                                    <MadCap:codeSnippetCopyButton />
+                                    <MadCap:codeSnippetCaption>
+                                        <p>Basic (Everything Goes to Review Queue)</p>
+                                    </MadCap:codeSnippetCaption>
+                                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;block&gt;
+    &lt;if&gt;
+        &lt;condition&gt;
+            &lt;qisstart/&gt;
+        &lt;/condition&gt;
+        &lt;setqincluded&gt;
+            &lt;qid name="1" /&gt;
+            &lt;const value="true" /&gt;
+        &lt;/setqincluded&gt;
+    &lt;/if&gt;
+&lt;/block&gt;</MadCap:codeSnippetBody>
+                                </MadCap:codeSnippet>
+                            </MadCap:dropDownBody>
+                        </MadCap:dropDown>
+                        <MadCap:dropDown>
+                            <MadCap:dropDownHead>
+                                <MadCap:dropDownHotspot>EXAMPLE: Go into Multiple Queues at Same Time</MadCap:dropDownHotspot>
+                            </MadCap:dropDownHead>
+                            <MadCap:dropDownBody>
+                                <MadCap:codeSnippet>
+                                    <MadCap:codeSnippetCopyButton />
+                                    <MadCap:codeSnippetCaption>
+                                        <p>Go into Multiple Queues at Same Time</p>
+                                    </MadCap:codeSnippetCaption>
+                                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;block&gt;
+    &lt;if&gt;
+        &lt;condition&gt;
+            &lt;qisstart/&gt;
+        &lt;/condition&gt;
+        &lt;setqincluded&gt;
+            &lt;qid name="1" /&gt;
+            &lt;const value="true" /&gt;
+        &lt;/setqincluded&gt;
+        &lt;setqincluded&gt;
+            &lt;qid name="2" /&gt;
+            &lt;const value="true" /&gt;
+        &lt;/setqincluded&gt;
+    &lt;/if&gt;
+&lt;/block&gt;
+</MadCap:codeSnippetBody>
+                                </MadCap:codeSnippet>
+                            </MadCap:dropDownBody>
+                        </MadCap:dropDown>
+                        <MadCap:dropDown>
+                            <MadCap:dropDownHead>
+                                <MadCap:dropDownHotspot>EXAMPLE: Go into One Queue, and if Approved, Go into Another Queue</MadCap:dropDownHotspot>
+                            </MadCap:dropDownHead>
+                            <MadCap:dropDownBody>
+                                <MadCap:codeSnippet>
+                                    <MadCap:codeSnippetCopyButton />
+                                    <MadCap:codeSnippetCaption>
+                                        <p>Go into One Queue, and if Approved, Go into Another Queue</p>
+                                    </MadCap:codeSnippetCaption>
+                                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;block&gt;
+    &lt;if&gt;
+        &lt;condition&gt;
+            &lt;qisstart/&gt;
+        &lt;/condition&gt;
+        &lt;setqincluded&gt;
+            &lt;qid name="1" /&gt;
+            &lt;const value="true" /&gt;
+        &lt;/setqincluded&gt;
+    &lt;/if&gt;
+    &lt;if&gt;
+        &lt;condition&gt;
+            &lt;qisaction name="Approved"&gt;
+                &lt;qsource /&gt;
+            &lt;/qisaction&gt;
+            &lt;compare op="=="&gt;
+                &lt;qsource /&gt;
+                &lt;qid name="1" /&gt;
+            &lt;/compare&gt;
+        &lt;/condition&gt;
+        &lt;setqincluded&gt;
+            &lt;qid name="2" /&gt;
+            &lt;const value="true" /&gt;
+        &lt;/setqincluded&gt;
+    &lt;/if&gt;
+&lt;/block&gt;</MadCap:codeSnippetBody>
+                                </MadCap:codeSnippet>
+                            </MadCap:dropDownBody>
+                        </MadCap:dropDown>
+                        <MadCap:dropDown>
+                            <MadCap:dropDownHead>
+                                <MadCap:dropDownHotspot>EXAMPLE: Go into Different Queue Based on Role Code</MadCap:dropDownHotspot>
+                            </MadCap:dropDownHead>
+                            <MadCap:dropDownBody>
+                                <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+                                    <MadCap:codeSnippetCopyButton />
+                                    <MadCap:codeSnippetCaption>
+                                        <p>Go into Different Queue Based on Role Code</p>
+                                    </MadCap:codeSnippetCaption>
+                                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;block&gt;
+    &lt;if&gt;
+        &lt;condition&gt;
+            &lt;qisstart/&gt;
+        &lt;/condition&gt;
+    &lt;if&gt;
+        &lt;condition&gt;
+            &lt;compare op="=="&gt;
+                &lt;diget dataitemid="FLI_ROLE_CODE" /&gt;
+                &lt;const value="1001" /&gt;
+            &lt;/compare&gt;
+        &lt;/condition&gt;
+        &lt;setqincluded&gt;
+            &lt;qid name="1" /&gt;
+            &lt;const value="true" /&gt;
+        &lt;/setqincluded&gt;
+    &lt;/if&gt;
+        &lt;if&gt;
+            &lt;condition&gt;
+                &lt;compare op="=="&gt;
+                    &lt;diget dataitemid="FLI_ROLE_CODE" /&gt;
+                    &lt;const value="1002" /&gt;
+                &lt;/compare&gt;
+            &lt;/condition&gt;
+            &lt;setqincluded&gt;
+                &lt;qid name="2" /&gt;
+                &lt;const value="true" /&gt;
+            &lt;/setqincluded&gt;
+        &lt;/if&gt;
+    &lt;/if&gt;
+&lt;/block&gt;</MadCap:codeSnippetBody>
+                                </MadCap:codeSnippet>
+                            </MadCap:dropDownBody>
+                        </MadCap:dropDown>
+                        <MadCap:dropDown>
+                            <MadCap:dropDownHead>
+                                <MadCap:dropDownHotspot>EXAMPLE: Put Part 2 of All Apps in Queue and Remove when Part 2 Starts (NOTE: Part 2 Apps Need Provider Work)</MadCap:dropDownHotspot>
+                            </MadCap:dropDownHead>
+                            <MadCap:dropDownBody>
+                                <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+                                    <MadCap:codeSnippetCopyButton />
+                                    <MadCap:codeSnippetCaption>
+                                        <p>Put Part 2 of All Apps in Queue and Remove when Part 2 Starts</p>
+                                    </MadCap:codeSnippetCaption>
+                                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;block&gt;
+    &lt;if&gt;
+        &lt;condition&gt;
+            &lt;qisstart/&gt;
+        &lt;/condition&gt;
+        &lt;setqincluded&gt;
+            &lt;qid name="1" /&gt;
+            &lt;const value="true" /&gt;
+        &lt;/setqincluded&gt;
+    &lt;/if&gt;
+    &lt;if&gt;
+        &lt;condition&gt;
+            &lt;qisaction name="ChildClicked"&gt;
+                &lt;qsource /&gt;
+            &lt;/qisaction&gt;
+        &lt;/condition&gt;
+        &lt;setqincluded&gt;
+            &lt;qsource /&gt;
+            &lt;const value="false" /&gt;
+        &lt;/setqincluded&gt;
+    &lt;/if&gt;
+&lt;/block&gt;</MadCap:codeSnippetBody>
+                                </MadCap:codeSnippet>
+                            </MadCap:dropDownBody>
+                        </MadCap:dropDown>
+                        <p><b>NOTE:</b> You can set the Review Queue priority status level in the review queue script via rules. If priority is not set in the review queue script, the priority status will default to "Normal" in the green font color. <MadCap:conditionalText MadCap:conditions="General.Online">See the following example for setting priority status levels.</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.PDF">See the Admin Help for an example.</MadCap:conditionalText></p>
+                        <MadCap:dropDown>
+                            <MadCap:dropDownHead>
+                                <MadCap:dropDownHotspot> EXAMPLE: Priority Status Levels</MadCap:dropDownHotspot>
+                            </MadCap:dropDownHead>
+                            <MadCap:dropDownBody>
+                                <p> Font color reflects priority status level:</p>
+                                <p class="Indent"><b>Normal</b> = Green<br /><b>Urgent</b> = Red<br /><b>Low</b> = Blue</p>
+                                <p>Priority status level values: <b>Low</b> = -1, <b>Normal</b> = 0, <b>Urgent</b> = 1</p>
+                                <MadCap:codeSnippet>
+                                    <MadCap:codeSnippetCopyButton />
+                                    <MadCap:codeSnippetCaption>
+                                        <p>Priority Status Levels</p>
+                                    </MadCap:codeSnippetCaption>
+                                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;setqincluded&gt;
+    &lt;qid name="334" /&gt;
+    &lt;const value="true" /&gt;
+        &lt;conditional&gt;
+&lt;compare op="&amp;lt;="&gt;
+    &lt;diget dataitemid="TestBox_25" type="Int32"/&gt;
+        &lt;const value="-1" /&gt;
+    &lt;/compare&gt;
+            &lt;const value="-1" /&gt;
+        &lt;conditional&gt;
+        &lt;compare op="&amp;gt;="&gt;
+            &lt;const value="20" type=""Int32"/&gt;
+    &lt;diget dataitemid="TextBox_25"/&gt;
+        &lt;const value="17" type="Int32" /&gt;
+        &lt;/compare&gt;
+            &lt;const value="1" /&gt;
+            &lt;const value="0" /&gt;
+        &lt;/conditional&gt;
+    &lt;/conditional&gt;
+&lt;/setqincluded&gt;</MadCap:codeSnippetBody>
+                                </MadCap:codeSnippet>
+                            </MadCap:dropDownBody>
+                        </MadCap:dropDown>
+                    </li>
+                    <li>
+                        <p>Click <b>Save</b> on the Review Queue page to save the Review Queue Script.</p>
+                    </li>
+                    <li>Deploy the Review Queue Script using the Review Queue Configuration in Deployment.</li>
+                </ol>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Delete a Review Queue</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Delete a Review Queue</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ol>
+                    <li>On the navigation bar, click <b>Organization Configuration</b> and then click <b>Review Queue</b>.</li>
+                    <li>In the grid, select a <b>Queue Name</b> in the grid.</li>
+                    <li>
+                        <p>On the right of the selected Queue Name row in the grid, click the red <b>X</b>.</p>
+                    </li>
+                    <li>
+                        <p>Click <b>Yes</b> on the confirmation dialog to delete the review queue from the system.</p>
+                        <p MadCap:conditions="General.Online">
+                            <img src="../Resources/ImagesAdmin/Profiles-DeleteReviewQueue.jpg" alt="Delete Review Queue" title="Delete Review Queue" MadCap:conditions="General.Online" />
+                        </p>
+                    </li>
+                </ol>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Enable the Review Queue Expiration Deadline Date</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Enable the Review Queue Expiration Deadline Date</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p><a name="ExpirationDeadline"></a>FireLight can track the number of days that an activity has not been reviewed in the Review Queue on a per-queue basis by setting a deadline expiration day count for each applicable queue. For example, it can track the  timeframe for the FINRA 2330 rule that requires Variable Annuities to be completed and processed before a 7-day timeframe, which expires within an hour of the time of day on the  7th day set in the Deadline Length field. </p>
+                <p>The system checks the Review Queue for expiration deadlines every hour. Deadline dates expire within an hour of their designated time and day, which is the time the application was added to the queue plus the  Deadline Length number of days.</p>
+                <p>Do the following to have FireLight track a deadline expiration in the Review Queue, set the types of days to include in the deadline day count, and notify the agent via email when the expiration deadline date is reached. </p>
+                <p>In FireLight Admin:</p>
+                <ol>
+                    <li>In Organization Configuration/<MadCap:xref href="#" target="_blank" alt="Review Queue">Review Queue</MadCap:xref> page in <b class="Bold">Deadline Length</b>, enter the number of business days to count for the deadline expiration day count. If the activity in the queue is not reviewed by the number of days entered here, the activity is automatically rejected from the  review queue within an hour of the time and day when the deadline expires.  The default is 0, which means no deadline is set. </li>
+                    <li>
+                        <p>Select the checkbox for any of the following options for types of days you would like to count as business days to be included in the deadline expiration day count. The default setting is "cleared" for each of the checkboxes.</p>
+                        <ul>
+                            <li>
+                                <p><b class="Bold">Deadline Date - Include Weekends</b> includes weekend days in the deadline expiration day count.</p>
+                            </li>
+                            <li><b class="Bold">Deadline Date - Include FINRA Holidays</b> includes FINRA holidays in the deadline expiration day  count. Click the <b class="Bold">FINRA Holidays</b> link to open a calendar of FINRA holidays for the current year. FINRA holidays do not include a half day of Market Day.</li>
+                            <li> <b class="Bold">Deadline Date - Include Market Days</b> includes market days in the deadline expiration day  count.</li>
+                            <li><b class="Bold">Deadline Date - Continue From Previous Queue</b> If the Enable Manual Queue Move option is enabled in Organization Configuration/Groups on the Review Queue tab or your organization has a sequential review queue set up, select this checkbox to honor the Deadline Length reflected for the current queue in the next queue when the reviewer moves an order from the current review queue to another review queue. If the checkbox is cleared, this means the continue counter  will start over at 0 in the new queue to count the days until the deadline date.</li>
+                        </ul>
+                    </li>
+                    <li>If the Enable Manual Queue Move option is enabled in Organization Configuration/Groups on the <MadCap:xref href="Groups/Review Queue.htm" target="_blank" alt="Review Queue">Review Queue</MadCap:xref> tab or you have a sequential review queue set up, you can select the <b class="Bold">Deadline Date - Continue From Previous Queue</b> checkbox to honor the Deadline Length reflected for the current queue in the next queue when the reviewer moves an order from the current review queue to another review queue. If the checkbox is cleared, this means the continue counter  will start over at 0 in the new queue to count the days until the deadline date.</li>
+                    <li>Click <b class="Bold">Save</b> at the bottom of the Review Queue page.</li>
+                    <li>
+                        <p>In Organization Configuration/<MadCap:xref href="Email.htm" target="_blank" alt="Email">Email</MadCap:xref> page: </p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>In <b class="Bold">Email Category</b>, select <b class="Bold">Review Queue</b>. </li>
+                            <li>In <b class="Bold">Email Template Type</b>, select <b class="Bold">Deadline Expiration</b> email template.</li>
+                            <li>Make any applicable changes to the template text for your organization.</li>
+                            <li> Click <b class="Bold">Save Email Template</b> at the bottom of the page.</li>
+                        </ol>
+                    </li>
+                </ol>
+                <p>In FireLight:</p>
+                <p class="Indent">The Review Queue order in the FireLight Review Queue displays an <em>Expires</em> date when a deadline is set for a review queue. This text turns red when two or fewer business days remain for the review deadline. </p>
+                <p class="Indent" MadCap:conditions="General.Online">
+                    <img src="../Resources/ImagesAdmin/Capture41.png" alt="Expires Text in Review Queue" title="Expires Text in Review Queue" MadCap:conditions="General.Online" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Ensure Review Queue Emails Are Sent to the Agent</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Ensure Review Queue Emails Are Sent to the Agent</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The following settings must be in place in FireLight Admin and FireLight to ensure the agent receives Review Queue emails.</p>
+                <p>In FireLight Admin:</p>
+                <ul>
+                    <li>In Groups on the <MadCap:xref href="Groups/Review Queue.htm" target="_blank" alt="Review Queue">Review Queue</MadCap:xref> tab, ensure the <strong>Disable Action Email Notifications</strong> checkbox is cleared (unchecked) for the reviewer role code.</li>
+                    <li>In Organization Configuration on the <MadCap:xref href="Email.htm" target="_blank" alt="Email">Email</MadCap:xref> page: on the   email templates, ensure the |MESSAGE| or &lt;MESSAGE&gt; replacement marker is somewhere within the email body.</li>
+                </ul>
+                <p>In FireLight:</p>
+                <ul>
+                    <li> On the <b class="Bold">My Preferences</b> page, ensure the agent's <strong>Send Message Center Emails</strong> checkbox is selected (checked). See the "Preferences" topic in the <i>FireLight Platform User Guide</i> for more information.</li>
+                </ul>
+                <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:pageBreak />
+    </body>
+</html>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <ol>
+            <li>
+                <p>Enter the Form URL link into a browser and press Enter to open the original fillable PDF.</p>
+            </li>
+            <li>
+                <p>If the link is no longer valid, an Error message displays: "The link is no longer valid. Please reach out to your organization to receive a new URL for this form."</p>
+            </li>
+            <li>
+                <p>Download the fillable PDF form.</p>
+            </li>
+            <li>
+                <p>Fill information in the form if applicable.</p>
+            </li>
+            <li>
+                <p>Save the form.</p>
+            </li>
+        </ol>
+    </body>
+</html>

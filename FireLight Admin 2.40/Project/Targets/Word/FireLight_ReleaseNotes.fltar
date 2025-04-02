@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="FireLight v2.16 Release Notes "
+  Type="MsWord"
+  Destinations=""
+  MasterToc="/Project/TOCs/Release Notes WordTOC.fltoc"
+  MasterPageLayout="/Content/Resources/PageLayouts/Word8_5X11/2022ReleaseNotesNormal8_5X11.flpgl"
+  ConditionTagExpression="include[General.PDF]exclude[General.Internal or General.Online or General.Postpone]"
+  PatchHeadingLevels="false"
+  InjectBookHeadings="false"
+  MasterStylesheet="/Content/Resources/Stylesheets/2017MainStyles.css"
+  AutoSizeCaptureCaptions="true"
+  RemoveImagesFromHeadings="true">
+  <PrintedOutput
+    CollapseMargins="false"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false"
+    ExpandingTextConversion="expand"
+    PopupConversion="remove-body"
+    OutputFormat="docx" />
+  <DocumentProperties
+    Title="FireLight v2.10 Release Notes"
+    Author="" />
+  <PDF
+    ShowUsedBookmarks="true"
+    Tagged="true"
+    PageLayout="OneColumn"
+    TitleBar="FileName" />
+  <Destinations></Destinations>
+  <Glossaries />
+</CatapultTarget>

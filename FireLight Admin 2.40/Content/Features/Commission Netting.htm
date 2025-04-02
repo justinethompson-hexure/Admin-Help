@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="Top"></a>Commission Netting</h1>
+        <p>See <a href="../Resources/PDFGuides/Commission Netting - Mapping and Configuration_SOP_V2.pdf" target="_blank" title="Commission Netting - Mapping and Configuration" alt="Commission Netting - Mapping and Configuration" MadCap:conditions="General.Online">Commission Netting - Mapping and Configuration</a> for additional information.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Commission Netting </caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <MadCap:snippetBlock src="../Resources/Snippets/Features/252605.flsnp" />
+                        <p>Guidelines:</p>
+                        <ul>
+                            <li>
+                                <p>There is only one distributor per DPfA. The distributor is identified as the TXLife/TXLifeRequest/OLife/Party aggregate that has a child Producer aggregate.</p>
+                            </li>
+                            <li>
+                                <p>The distributor will match a valid organization in FireLight (the Distributor's OrgCode in the DPfA should match an Organization's External Map Code).</p>
+                            </li>
+                            <li>
+                                <p>While there can be multiple instances of a carrier/distributor combination, they will differ on the start date. If a match on carrier, distributor, and start date is found, the user is prompted to confirm they wish to overwrite the existing file to avoid an accidental overwrite.</p>
+                            </li>
+                            <li>
+                                <p>Any DPfA file contains data of a 1204 message type and conforms to ACORD Life and Annuity Transaction Specifications with version 4.0.1.</p>
+                            </li>
+                        </ul>
+                        <p>Calculating the Net Commission:</p>
+                        <p class="Indent">There are two ways to calculate the commissions for an application:</p>
+                        <ul>
+                            <li>
+                                <p>When a carrier knows that their rates do not vary, the first rate found is used to multiply the amount by to get the commission for the whole application.</p>
+                            </li>
+                            <li>
+                                <p>When the rates do vary based on the Comm Event, the total commission amount is the sum of the amounts associated with the Comm Event multiplied by the rate associated with the comm event. At the current time the following events are supported: Cash with App, Internal Exchange, External Exchange.</p>
+                            </li>
+                        </ul>
+                        <p class="Indent">The value for the commission is returned as 0 if a rate cannot be found for any reason. Depending on the result, the provider will then decide if the App/Sub file should be sent or not.</p>
+                        <p>Audit Administrative DPfA Activity:</p>
+                        <p class="Indent">Administrative auditing consists of keeping an account of all imports, updates, and/or deletions of a client’s Distribution Profiles (DPfAs), which include information for Commission Netting. Each audit will account for the user responsible, the date of the action, the action itself  as well as a message with more information.</p>
+                        <p>Purge Old DPfAs from the System:</p>
+                        <p class="Indent">There can be multiple DPfAs for a particular Carrier and Distributor due to the carrier being able to upload a file before it is scheduled to go live. The process is created following the standard data purge policy in FireLight for DPfA entries that are no longer valid as they have been replaced with a new version (via the Start Date) after the new version goes live.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Commission Netting Setup</p>
+                        <p>See <a href="../Resources/PDFGuides/Commission Netting - Mapping and Configuration_SOP_V2.pdf" target="_blank" title="Commission Netting - Mapping and Configuration" alt="Commission Netting - Mapping and Configuration" MadCap:conditions="General.Online">Commission Netting - Mapping and Configuration</a> for additional information.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <MadCap:snippetBlock src="../Resources/Snippets/Features/AddEditDistributionAgmnt.flsnp" />
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help Design Document: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 252605 </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online">CMR 252605</MadCap:conditionalText></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a name="top"></a><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

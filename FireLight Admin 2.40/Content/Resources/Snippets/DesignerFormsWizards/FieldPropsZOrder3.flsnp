@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body><b>Bring to Front </b> displays this control in front of the other control. <br /><b>Send to Back </b> displays this control behind the other control. <br /><img src="../../ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" /> Z Order uses the order of the controls to determine which control is placed on top. You can use the setvisibility rule node to conditionally set the visibility of the control you want to hide. See <a href="../../../Product Configuration/Rule Sets/AdvancedRulesCategoryElementDefinitionsReference.htm#setvisibility">|setvisibility</a> under "|Get Set" in the "Advanced Rules Category and Element Definitions Reference" topic. </body>
+</html>

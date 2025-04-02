@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileProperties>
+    <ImageOverlay>
+        <OriginalImage Type="Image" ShapeTimeSpan="10000" EnableGrayScaleFormat="false" ExportFormat="png" DPI="96" medium_print_ExportFormat="png" medium_screen_and__max_width__64_063em__ExportFormat="png" medium_screen_and__max_width__40em__ExportFormat="png" Title="FireLight Audit Summary" Alt="FireLight Audit Summary" ComputedWidth="93" ComputedHeight="99" Format="png">iVBORw0KGgoAAAANSUhEUgAAAF0AAABjCAYAAAD5AQweAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAQLSURBVHhe7ZyxaxNRHMe/1ZYEI16wg1sMom5C50h1bkVxEhdx07H9AwTdHYyjXV3ESRTrXMXM1YqDDRK7dbAkYiWllfp7917iVWuNd6Xf2Hw/EJJ799Ikn3fv93rfCxmavlPdhNgV7t2eCo925kC4F3tI90ivnrgaN4h/Z/rjo/heR3ofI+kEJJ2ApBOQdAKSTkDSCUg6AUknIOkEJJ2ApBOQdAKSTkDSCUg6AUknIOkEJJ2ApBPoD+nlCJvXRlEthu19TmbplbFRE3YMm5cOoxLaeqJ4GIv2vNly2B4gMkofwZXSMOqtDSDK4UraI7XRwtDDz5huuo08Zm0wFsdG4l37kWzSizlciDbw/OUqXmAYF8pBVLJcbDmiR1C9ZLPCzYxzOdfg6fZx+yNMWNPJM0f/ffb8J2SSXinncLK1hsfNNp4smahSbmdJ5UOYskG6/2wZZ13/0PyTdUw/bdkAAvWFFQw9/Yqa37GvyCDdlxZYaXFiZj61/1pibhzPW383SECtsYZ6aB800kuPS4vdl1wpsXIxbkKTJUb8kdTS49KCNm4+XLZF0N1WcL/1e4nx/TzvEgtusn3QSC3dl5bveBe2XT1+vBSkNr/ZAAxj6uIxvLYa7mq0ozb/Zdv2rYT1YR8vpPrW7i6gb+3+B0g6AUknIOkEJJ1AJuk3zoccxd3Ou5Mj0QvppZcjPCj5HMWdHN1EYWDy8Kykll4p2slRgpm5EM3+KWGMH0eodvL3uN3HuFtmSq/9QgTc6dM9kYpfP8JsPAtHsehSzcRJVjw7ySddqaXX5n2c684ue7/qk8dUtNqNDCbGC/jgZsqrNlBKzpRe+rUx2Ykgnq2iHhVwq3tBJI8J+Iz+eucsOX5OHpdLQH1pjZpeZqjp/kOfXbAPFeT3chXohUsjsY73JrOTOKL5HXX7G6cTA/f3fols/mLhlxzHyt4b9/xOmumDuMpYwQZjA88b6/E+FpkWUkdt/rMdUT4DP1Xcu4SxMnbEZkMI3NyRHtp/o/kVd+Os/xBuxXlRGEAiqaW72tg9sq2+n7K7xebWI2jPksTiwR1fx2f9VnIim0Fv+RdGUkufmbN5P/5zemNhBZMN29HYPmHcbfyakscD9/rj7jpt2LEdVmL8+2jjiXuPZAYkZXT/6USYWLLFdc7X+t1EKeN2WJlzF7v94sxnMKTHX/FY9uWvDxgM6X2GpBOQdAKSTkDSCUg6AUknIOkEJJ2ApBOQdAKSTkDSCUg6AUknIOkEJJ2ApBOQdAKSTkDSCUg6AUknIOkEJJ2ApBOQdAKSTkDSCUg6AUknIOkEJJ2ApBOQdAKSTkDSCUg6AUknIOkEJJ2ApBOQdAKSTkDSCUg6AUknIOkEuj8nJbKjn5PqW4Af3EVmv7Ex/AcAAAAASUVORK5CYII=</OriginalImage>
+        <Variables />
+        <Shapes />
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

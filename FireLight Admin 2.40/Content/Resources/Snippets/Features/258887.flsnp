@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Validate&#160;Identity Verification (VIV) is currently set up as&#160;an&#160;organizational setting. This&#160;can cause some organizations who use it to have applications&#160;stall&#160;with signatures that do not have the SSN/DOB within the application. For this enhancement, FireLight will now support sending a passcode for defined signature controls which will allow firms to bypass the normal DOB and SSN verification. To support this, an override&#160;for the&#160;Validate Identity Verification&#160;at the signature&#160;control level was added with a checkbox to indicate "passcode only." When checked for that signature control, it will override the Validate Identity Verification for that specific signature control&#160;only and only require the passcode.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Validate Identity Verification Functionality - can be overridden by signature controls</p>
+            </li>
+            <li>
+                <p>Signature/ Field Properties - adding a checkbox that will override the VIV functionality</p>
+            </li>
+            <li>
+                <p>Passcode Functionality - Allowing the use of passcode functionality when checked in a signature control</p>
+            </li>
+        </ul>
+    </body>
+</html>

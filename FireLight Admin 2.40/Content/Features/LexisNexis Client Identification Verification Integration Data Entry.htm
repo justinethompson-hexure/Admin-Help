@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Description and instructions for setup and usage of LexisNexis, a third party client authentication vendor" />
+    </head>
+    <body>
+        <h1><a name="Top"></a>LexisNexis Client Identification Verification During Data Entry</h1>
+        <p class="note"><a name="top"></a><b class="Bold">Spotlight Videos:</b> See the <a href="https://vimeo.com/486623922/a3cf277c5e" target="_blank" title="LexisNexis RDP Quiz, Instant ID, and Risk Classifier Demo" alt="LexisNexis RDP Quiz, Instant ID, and Risk Classifier Demo">LexisNexis RDP Quiz, Instant ID, and Risk Classifier Demo</a> Spotlight feature video for demos of the three LexisNexis integrations. See <a href="https://vimeo.com/406912096/d023b2049f" target="_blank" title="FireLight Lexis Nexis - Instant ID Prior to Signature Process" alt="FireLight Lexis Nexis - Instant ID Prior to Signature Process">Lexis Nexis - Instant ID Prior to Signature Process</a> for more LexisNexis Instant ID information.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">LexisNexis Client Identification Verification During Data Entry</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>FireLight can integrate with LexisNexis, a third-party client authentication vendor. FireLight clients contract directly with LexisNexis to obtain their access credentials. Organizations can configure LexisNexis for client identity verification during the data entry process and during the e-Signature process. Organizations work directly with LexisNexis to configure the number of questions required for a pass score for client authentication during the e-Signature process. This topic covers the LexisNexis client identity verification during the data entry process. </p>
+                        <p class="Indent"><b class="Bold">NOTE:</b> For LexisNexis client identity verification during the signature process, see <MadCap:xref href="LexisNexis Client Identification Verification Integration.htm" alt="LexisNexis Client Identification Verification During E-Signature">LexisNexis Client Identification Verification During E-Signature</MadCap:xref>.</p>
+                        <MadCap:snippetBlock src="../Resources/Snippets/Features/LexisNexisClientIdentityDataEntry.flsnp" />
+                        <p> Through rules, organizations can limit users  in how many custom action button clicks they are allowed to make per signer. For an example, see "Disable Custom Action Button After Three Attempts" below.</p>
+                        <p><b class="Bold">Guidelines</b>
+                        </p>
+                        <p>Currently, FireLight:</p>
+                        <ul>
+                            <li>Creates an audit record for the initial web service call to LexisNexis and a second audit at the conclusion of the authentication process. The CVI, NAS, NAP, status, score, and diversionary values is included in the application audit report within the Identity Authentication section and is available for use within the Provider.</li>
+                            <li>Provides an activity report with LexisNexis audits for all applications (including active applications not yet submitted) to aid in the reconciliation process with the details LexisNexis provides for billing.</li>
+                        </ul>
+                        <p><b class="Bold">LexisNexis Usage Report:</b>
+                        </p>
+                        <p>This report assists users in triaging any activity associated with the LexisNexis services, including but not limited to the RDP Quiz, Instant ID, and the Risk Classifier. Following are items specifically available in the LexisNexis Usage Report to help clients triage their LexisNexis activities. See <MadCap:xref href="../Utilities/Reports/Detail Reports.htm" alt="Detailed Activity Reports">Detailed Activity Reports</MadCap:xref> in Admin Help for a sample report.</p>
+                        <ul>
+                            <li>
+                                <p> Instead of showing the "Status during time of call" on the LexisNexis Usage Report, the column is now renamed to the "Service Type" column. The Service Type column shows "Instant ID," "Quiz," or "Risk Classifier" to distinguish among the various LexisNexis web services.  </p>
+                            </li>
+                            <li>
+                                <p>The new "Quoteback ID" column shows the QuoteBack sent in the XML response in the following order: Application ID/Selling Org/Product Org/Application Name.  This value is up to 60 characters long.</p>
+                            </li>
+                        </ul>
+                        <p><b class="Bold">LexisNexis Instant ID Admin Report</b>
+                        </p>
+                        <p>This report provides an Admin report that includes LexisNexis Ref ID, LexID/Order Number, CVA Score, NAS Score, IID Risk Indicator(s), and Pass/Fail Score during the dates specified. See <MadCap:xref href="../Utilities/Reports/Admin Reports.htm" title="Admin Reports" alt="Admin Reports">Admin Reports</MadCap:xref> in Admin Help for a sample report.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">FireLight Setup </p>
+                        <p>Provider work needs to be completed to use the LexisNexis Services.  Please contact the Implementation team to complete this work.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p><b class="Bold">Admin Setup for LexisNexis Client Validation During the Data Entry Process</b>
+                        </p>
+                        <ol>
+                            <li>
+                                <p>In Organization Configuration on the Organization Settings page, <MadCap:xref href="../Organization Configuration/Organizations/Admin.htm" alt="Admin">Admin</MadCap:xref> tab: set up the LexisNexis credentials. LexisNexis supplies the configuration IDs and values. </p>
+                                <p class="note"><b class="Bold">NOTE:</b> The credentials will always be the carrier credentials. If a carrier is going to deploy their product and forms to a distributor, the credentials from the carrier is used. For distributors, if credentials exist in both the carrier and distributor environments, FireLight uses the carrier's credentials.</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>
+                                        <p>Click the <b>Click to Edit</b> link next to <b>Third-Party Service Config</b> and enter the LexisNexis credentials (configuration IDs and values):&#160;Username, Password, AccountID, and Workflow. AccountID and Workflow are used to create the service endpoint; therefore, slashes(/) are not allowed.*</p>
+                                        <ul style="list-style-type: square;">
+                                            <li>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>Username</b>. In <b>Config Value</b>, type the accountID/username (e.g., 12345/LexisNexisUserID) LexisNexis provided. In <b>Service Type</b>, select <b>LexisNexis</b> and click the <b>Add Config</b> button.</li>
+                                            <li>
+                                                <p>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>Password</b>. In <b>Config Value</b>, type the password LexisNexis provided. In <b>Service Type</b>, select <b>LexisNexis</b> and click the <b>Add Config</b> button.</p>
+                                            </li>
+                                            <li>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>AccountID</b>. In <b>Config Value</b>, type the accountID  LexisNexis provided. In <b>Service Type</b>, select <b>LexisNexis</b> and click the <b>Add Config</b> button.</li>
+                                            <li>
+                                                <p>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>Workflow</b>. In <b>Config Value</b>, type the workflow ID LexisNexis provided for your organization. In <b>Service Type</b>, select <b>LexisNexis</b> and click the <b>Add Config</b> button.</p>
+                                                <p>*Config Group is an optional configuration used by the <MadCap:xref href="DocuSign.htm" alt="DocuSign Integration">DocuSign Integration</MadCap:xref> integration.</p>
+                                                <p MadCap:conditions="General.Online">Examples:</p>
+                                                <p MadCap:conditions="General.Online">
+                                                    <img src="../Resources/ImagesAdmin/Capture100.png" alt="Third Party Service Config - Add LexisNexis Config" title="Third Party Service Config - Add LexisNexis Config" MadCap:conditions="General.Online" />
+                                                </p>
+                                                <p MadCap:conditions="General.Online">
+                                                    <img src="../Resources/ImagesAdmin/Capture99.png" alt="Third Party Configuration - LexisNexis Credentials" title="Third Party Configuration - LexisNexis Credentials" MadCap:conditions="General.Online" />
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <p><b class="Bold">NOTE: </b>A Provider Work Needed pop-up message appears when you click the Add Config button. Click the <b class="Bold">OK</b> button to close the pop-up. The Provider work is referring to the forms development work of the CustomAction button and DataGroup for the PARTY (Insured, Owner, Payor, etc.). You will probably want the data in the datafeed for processing in the backoffice. Contact your Strategic Account Manager for assistance.</p>
+                                        <p MadCap:conditions="General.Online" class="Indent"> <img src="../Resources/ImagesAdmin/Capture149.png" alt="Provider Work Needed Dialog" title="Provider Work Needed Dialog" MadCap:conditions="General.Online" /></p>
+                                        <p>To update a config value: clear the current value, enter a new value, and click the <b class="Bold">Update</b> link next to the value. To delete a config value: click the <b class="Bold">Delete</b> link next to the value and click <b class="Bold">OK</b> on the confirmation dialog. </p>
+                                    </li>
+                                    <li>
+                                        <p>Click the <b>Save Organization</b> button on the Organization Settings page.</p>
+                                    </li>
+                                </ol>
+                                <p class="note"><b class="Bold">NOTE: </b> When in UAT or STAGING, use the staging credentials from LexisNexis.  LexisNexis PRODUCTION credentials will not work in the FireLight UAT and STAGING environments. When testing in UAT or STAGING, use the test data provided by LexisNexis in the spreadsheet <MadCap:conditionalText MadCap:conditions="General.PDF">within the Admin Help</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"> here: <a href="../Resources/DesignDocs/Insurance_Technologies_TestSeeds_December2019.xlsx" target="_blank" title="LexisNexis testing spreadsheet for UAT and STAGING" alt="LexisNexis testing spreadsheet for UAT and STAGING">Insurance_Technologies_TestSeeds_December2019.xlsx</a></MadCap:conditionalText>.</p>
+                            </li>
+                            <li>
+                                <p>Designer/Form Designer and Wizard Designer  (if wizard is applicable):</p>
+                                <p>
+                                    <p>
+                                        <p>Add a custom action button to the form/wizard that will initiate a web service call to LexisNexis for each signer type and add the associated fields for the data items.</p>
+                                        <p><b>IMPORTANT!</b>  FireLight now supports triggering a custom action call from any page within the same package, regardless of whether the button or fields to trigger that call are on that same page. LexisNexis cannot be used on multiple-instance forms. (See <MadCap:xref href="../Design/Forms/Add Multiple Copies of a Form.htm" alt="Add Multiple Copies of a Form">Add Multiple Copies of a Form</MadCap:xref> for a description of multiple-instance forms.)</p>
+                                        <p>Form: </p>
+                                        <ol style="list-style-type: lower-alpha;">
+                                            <li>Add a <MadCap:xref href="../Design/Forms/Button.htm" alt="Button">Button</MadCap:xref> control to the form.</li>
+                                            <li>Double-click the <b class="Bold">Button</b> control to open the Field Properties dialog. </li>
+                                            <li>Enter the dataitem name for the button in <b class="Bold">Name</b>.</li>
+                                            <li>Select the signer type (e.g., Owner) in the <b class="Bold">Data Group</b> list.</li>
+                                            <li>Select <b class="Bold">Custom Action</b> in the <b class="Bold">Action Type</b> list.</li>
+                                            <li>Enter <b class="Bold">LexisNexis</b> in <b class="Bold">Action Parameter</b> and click <b class="Bold">Update</b>.</li>
+                                        </ol>
+                                        <p>Wizard:</p>
+                                        <ol style="list-style-type: lower-alpha;">
+                                            <li>Add a <MadCap:xref href="../Design/Wizards/Custom Action.htm" alt="Custom Action">Custom Action</MadCap:xref> control to the wizard.</li>
+                                            <li>Double-click the <b class="Bold">Custom Action</b> control to open the Custom Action Properties dialog.</li>
+                                            <li>Enter the dataitem name for the custom action button in <b class="Bold">Name</b>.</li>
+                                            <li>Select the signer type (e.g., Owner) in the <b class="Bold">Data Group</b> list.</li>
+                                            <li>Select<b class="Bold"> Custom Action</b> in the <b class="Bold">Custom Action</b> list.</li>
+                                            <li>Select <b class="Bold">LexisNexis</b> in the <b class="Bold">Custom Action Type</b> list.</li>
+                                            <li>Enter <b class="Bold">LexisNexis</b> in <b class="Bold">Custom Action Parameter</b> and click <b class="Bold">OK</b>.</li>
+                                        </ol>
+                                    </p>
+                                </p>
+                            </li>
+                            <li>
+                                <p>Add Text Box field controls for the data items and set the Data Group and Data Group Property of each data item used by LexisNexis for each signer type in the Forms. Allowed signer types include Owner, Joint Owner, Insured, Annuitant, Joint Annuitant, and Payor. The First Name, Last Name, Street Address, City, State, Zip, DOB, SSN, and Phone Number data items are required to make the web service call to LexisNexis. </p>
+                                <p>If using Wizards to set the Data Group and Data Group Property of each data item, FireLight requires that the same Data Group and Data Group Property of each data item must also be set in the Form for the mapping to work properly. </p>
+                                <p><b class="Bold">Example</b>
+                                </p>
+                                <p>In the following example, field properties for the Name, Data Group, and Data Group Property are listed  for each required data item/Text Box control for the "Owner" signer type Data Group along with five sample LexisNexis data items for the LexisNexis call response.</p>
+                                <p class="note"><b class="Bold">NOTE:</b> Using Data Groups and Data Group Properties does not change any CRM/Custom Actions you previously set up. For example, if you are using Redtail CRM, you can also add a validate button for the LexisNexis call without having to change the data items that were previously set up for the Redtail call.</p>
+                                <table style="margin-left: 0;margin-right: auto;caption-side: top;">
+                                    <caption class="Table">Required Data Items and Field Properties for "Owner" Signer Type</caption>
+                                    <col style="width: 146px;" />
+                                    <col />
+                                    <thead>
+                                        <tr>
+                                            <th>Required Data Item</th>
+                                            <th>Text Box Control Common Tag Field Properties for "Owner" Signer Type</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>First Name</td>
+                                            <td>Name = Owner_FirstName, Data Group = Owner, Data Group Property = FirstName</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Last Name</td>
+                                            <td>Name = Owner_LastName, Data Group = Owner, Data Group Property = LastName</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Street Address</td>
+                                            <td>Name = Owner_ResidentialAddress1, Data Group = Owner, Data Group Property = Line1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>City</td>
+                                            <td>Name = Owner_ResidentialAddress_City, Data Group = Owner, Data Group Property = <br />City</td>
+                                        </tr>
+                                        <tr>
+                                            <td>State</td>
+                                            <td>Name = Owner_ResidentialAddress_State, Data Group = Owner, Data Group Property = AddressStateTC</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Zip</td>
+                                            <td>
+                                                <p>Name = Owner_ResidentialAddress_Zipcode, Data Group = Owner, Data Group Property </p>
+                                                <p>= Zip</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>DOB</td>
+                                            <td>Name = Owner_DOB, Data Group = Owner, Data Group Property = BirthDate</td>
+                                        </tr>
+                                        <tr>
+                                            <td>SSN</td>
+                                            <td>Name = Owner_SSN, Data Group = Owner, Data Group Property = SSN</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Phone Number</td>
+                                            <td>Name = Owner_Primary_PhoneNumber, Data Group = Owner, Data Group Property = DiaNumber</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b class="Bold">Sample Client Dataitem for LexisNexis Response</b>
+                                            </td>
+                                            <td><b class="Bold">Sample Text Box Control Field Properties for "Owner" Signer Type</b>
+                                                <p> (<b class="Bold">NOTE:</b> The audit report lists the return values in the Identity Verification Summary section.  Contact LexisNexis for descriptions of the return values.)</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>LexisNexis ID</td>
+                                            <td>Name = Owner_LexisNexis_ID, Data Group = Owner, Data Group Property = <br />LexisNexis_Id</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LexisNexis CVI Score</td>
+                                            <td>Name = Owner_LexisNexis_CVI, Data Group = Owner, Data Group Property = <br />LexisNexis_CVI_Score</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LexisNexis NAP Score</td>
+                                            <td>Name = Owner_LexisNexis_NAP, Data Group = Owner, Data Group Property = <br />LexisNexis_NAP_Score</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LexisNexis NAS Score</td>
+                                            <td>Name = Owner_LexisNexis_NAS, Data Group = Owner, Data Group Property = <br />LexisNexis_NAS_Score</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LexisNexis Pass/Fail</td>
+                                            <td>Name = Owner_LexisNexis_PassFail, Data Group = Owner, Data Group Property = <br />LexisNexis_Pass</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LexisNexis Instant ID Risk Indicator</td>
+                                            <td>Name = Owner_LexisNexis_InstantIDRiskIndicator = Owner, Data Group Property = LexisNexis_InstantIDRiskIndicator (multiple risk indicators are comma separated)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </li>
+                            <li>
+                                <p>Add Text Box controls for each signer type that LexisNexis will validate.</p>
+                            </li>
+                            <li>
+                                <p>Add Rules. </p>
+                                <p>Example: Disable Custom Action Button After Three Attempts Rule</p>
+                                <MadCap:codeSnippet>
+                                    <MadCap:codeSnippetCopyButton />
+                                    <MadCap:codeSnippetCaption>
+                                        <p>Disable custom action button after three attempts</p>
+                                    </MadCap:codeSnippetCaption>
+                                    <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;block&gt;
+    &lt;setcontrolstate dataitemid="{ButtonID}"&gt;
+        &lt;compare op="!="&gt;
+            &lt;const value="3" type="String" /&gt;
+            &lt;diget dataitemid="{ButtonID}" /&gt;
+        &lt;/compare&gt;
+        &lt;/and&gt;
+    &lt;/setcontrolstate&gt;
+    &lt;if&gt;
+        &lt;condition&gt;
+            &lt;and&gt;
+                &lt;compare op="=="&gt;
+                    &lt;const value="EFT" type="String" /&gt;
+                    &lt;diget dataitemid="FundingSource" /&gt;
+                &lt;/compare&gt;
+                &lt;compare op="=="&gt;
+                    &lt;const value="3" type="String" /&gt;
+                    &lt;diget dataitemid="{ButtonID}" /&gt;
+                &lt;/compare&gt;
+            &lt;/and&gt;
+        &lt;/condition&gt;
+        &lt;postmessage dataitemid="{Dataitem}"&gt;
+            &lt;const value="Maximum LexisNexis calls for this party have been reached." /&gt;
+        &lt;/postmessage&gt;
+        &lt;else /&gt;
+        &lt;removemessage dataitemid="FundingSource" /&gt;
+    &lt;/if&gt;
+&lt;/block&gt;</MadCap:codeSnippetBody>
+                                </MadCap:codeSnippet>
+                            </li>
+                        </ol>
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <p>In the FireLight data entry process for a signer type with LexisNexis validation enabled, the agent completes the data entry for the client First Name, Last Name, Street Address, City, State, Zip, DOB, SSN, and Phone Number for the signer type (Owner, Insured, Annuitant, Joint Owner, Joint Annuitant, Payor) on the form or wizard and clicks the custom action button on the form for LexisNexis to validate the client. </p>
+                        <p>When the agent clicks the custom action button, FireLight automatically saves any data that was entered on the activity. This includes any data group and data group properties that are populated (i.e., Owner First Name, Owner Last Name, etc.). </p>
+                        <p>In All Activities, FireLight disables the Delete button for activities with LexisNexis validation.</p>
+                        <p><strong>NOTE:</strong> When the custom action call has occurred, the application is able to be copied, but the LexisNexis values (LexID, NAS Score, NAP Score, CTI Score, Risk Indicators, and Pass/fail Score) will not be copied over to the next application.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information</p>
+                        <p class="hangingindent">Admin Help – Design Documents: Current:<MadCap:conditionalText MadCap:conditions="General.PDF"> CMR 240025</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"> <a href="../Resources/DesignDocs/240025 Adding LexisNexis Risk Indicators.pdf" target="_blank" title="CMR 240025" alt="CMR 240025">CMR 240025</a></MadCap:conditionalText>, Previous: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 211273</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/DesignDocs/211273 LexisNexis Support Instant ID in FireLight prior to Signature Process.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 211273</a></MadCap:conditionalText> </p>
+                        <p class="hangingindent">Spotlight Feature Videos: <a href="https://vimeo.com/486623922/a3cf277c5e" target="_blank" title="LexisNexis RDP Quiz, Instant ID, and Risk Classifier Demo" alt="LexisNexis RDP Quiz, Instant ID, and Risk Classifier Demo">LexisNexis RDP Quiz, Instant ID, and Risk Classifier Demo</a>, <a href="https://vimeo.com/406912096/d023b2049f" target="_blank" title="FireLight Lexis Nexis - Instant ID Prior to Signature Process" alt="FireLight Lexis Nexis - Instant ID Prior to Signature Process">Lexis Nexis - Instant ID Prior to Signature Process</a>, <a href="https://vimeo.com/406911795/271befdd9d" target="_blank" title="FireLight Lexis Nexis Upgrade to New Service" alt="FireLight Lexis Nexis Upgrade to New Service">Lexis Nexis Upgrade to New Service</a></p>
+                        <p class="hangingindent">User Guide – <em>FireLight Platform User Guide</em>, New Activity, Data Entry,<MadCap:conditionalText MadCap:conditions="General.PDF"> Action Buttons</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"> <MadCap:xref href="../UserGuide/New Activity/Data Entry/Action Buttons.htm" alt="Action Buttons">Action Buttons [User Instructions]</MadCap:xref></MadCap:conditionalText> topic, "Example: LexisNexis Client Validation" </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

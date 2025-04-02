@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileProperties>
+    <ImageOverlay Profile="D:\Documents\My Profiles\FireLightUserGuide.capro" ProfileHash="17ab8a245f347468213ad253f12e292d50527913" ScreenRectangle="706,464,59,28">
+        <OriginalImage Type="Image" ShapeTimeSpan="10000" AutoAdjust="true" DPI="96" medium_print_EnableFormat="true" medium_print_DPI="300" Folder="D:\Documents\My Projects\FireLight Admin 2.18\Content\Resources\ImagesUserGuide" ExportFormat="png" medium_print_ExportFormat="png" BorderColor="#4682b4" Border="solid" FileName="Capture{n}" EnableGrayScaleFormat="false" medium_screen_and__max_width__64_063em__ExportFormat="png" medium_screen_and__max_width__64_063em__DPI="96" medium_screen_and__max_width__40em__ExportFormat="png" Title="Minus and Plus Buttons" Alt="Minus and Plus Buttons" ComputedWidth="59" ComputedHeight="28" medium_print_OutputScaleFactor="3.12" medium_print_ColorDepth="32">SUkqAHYBAACAAMpKR/gCDQeEQmFQuGQ2HQ+IRGJROKRWLReMRkAAMoqKCxqQSGRSOSSWTSQBlBQR+Ty2XS+YTGYgMnp2WTKcTmdTudAMnJubzyhUOiUWIgMmpmg0amU2nTgBkxL0un1WrVeMAMlpWqVivV+wQcBkpJ12w2e0UwBklI2a02+4VAkI63XG7SZrpwwgBsON2gAooFZVcBkdGXW74mQtdOmK+ON3YBALDCEZFYjFZmLtdPGS+OK/lFAK/CEVEZjNamDG0oDMAI81ESMgQjImigIhobUSd+rw8w1kNdygAdm1RaqXthQme+OG/lA/KyrgIhITd8jsQpsKI0812AAoH1V9MgoLr9n0XxRGvP98oHxU9MgIDz+n7WgBD8+/X7/2vAEHw9v4/0CKeAQejzAcCwW24eDvBUGQinYBB2OsIQlDCYgEHQ5wvDMPpOAQcjjD0QRMkQBBwN0SxPFqMAEG42RZF0aImAQbDVGcax2hyAgQAP4ABAABAAAAAAAAAAABBAABAAAAOwAAAAEBBAABAAAAHAAAAAIBAwAEAAAAPAIAAAMBAwABAAAABQAAAAYBAwABAAAAAgAAABEBBAABAAAACAAAABUBAwABAAAABAAAABYBBAABAAAAHAAAABcBBAABAAAAbgEAABoBBQABAAAARAIAABsBBQABAAAATAIAABwBAwABAAAAAQAAACgBAwABAAAAAgAAAD0BAwABAAAAAgAAAFIBAwABAAAAAgAAAAAAAAAIAAgACAAIAAB3AQDoAwAAAHcBAOgDAAA=</OriginalImage>
+        <Shapes />
+        <Variables />
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

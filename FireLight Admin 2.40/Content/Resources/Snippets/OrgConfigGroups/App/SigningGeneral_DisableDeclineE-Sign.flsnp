@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable Decline E-Sign</b> checkbox to block the user from declining to use e-signature. The user will proceed from the sign now choice to the client verification page, without the option to decline e-signature page. If Disable Decline ESign is set for the users group FireLight accepts e-signature and continues to Signatures. Otherwise, FireLight checks for the FLI_DECLINED_ESIGN data item and continues based on its contents. See the spreadsheet in the <MadCap:xref href="../../../../Design/Common Tagging/Common Tags1.htm" target="_blank" alt="Common Tags" title="Common Tags">Common Tags</MadCap:xref> topic for information about using the FLI_DECLINED_ESIGN common tag in rules.</body>
+</html>

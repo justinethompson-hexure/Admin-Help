@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p>Add the product documents for each Annuity product as applicable.</p>
+        <p><b class="Bold">NOTE:</b> Documents must be in PDF format and no larger than 5 MB.</p>
+        <ol>
+            <li>At the top of the page, select a product in the grid.</li>
+            <li>On the upper right of the page, click the <b class="Bold">Product Documents</b> link to open the Product Documents dialog.</li>
+            <li>
+                <p>In <b class="Bold">Document Type</b>, select the type of document to upload for the selected product. The product type determines the file types available in the Document Type list:</p>
+                <ul>
+                    <li>Annuity - select <b>Product Disclosures</b>, <b>Product Guide</b> or <b class="Bold">Specimen Policy</b>.</li>
+                </ul>
+            </li>
+            <li>Click <b class="Bold">Choose File</b>. Browse to the document location, click the document and click <b class="Bold">Open</b>.</li>
+            <li>
+                <p>In the State list, clear the <b class="Bold">Approved</b> checkboxes for the states where the product document does not apply. (All states are selected by default.) </p>
+                <ul>
+                    <li>
+                        <p>Duplicate product documents for the same state are not allowed.</p>
+                    </li>
+                    <li>
+                        <p>If a document type needs to be replaced, it must first be deleted, then uploaded again.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Click <b class="Bold">Upload</b>.</p>
+                <p>The uploaded file appears at the top of the dialog along with links to <b class="Bold">View</b> or <b class="Bold">Remove</b> the document.</p>
+            </li>
+            <li>Upload another document type if applicable.</li>
+            <li>Close the dialog.</li>
+        </ol>
+    </body>
+</html>

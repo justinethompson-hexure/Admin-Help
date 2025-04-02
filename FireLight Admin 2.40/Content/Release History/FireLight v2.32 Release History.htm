@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <a name="top">
+            </a>FireLight v2.32 Release History</h1>
+        <p>
+            <b class="Bold">NOTE: </b>Documentation for this release is currently incomplete and in a "DRAFT" status<b class="Bold">.</b></p>
+        <h2>October 2023 Release—10/13/2023 Production</h2>
+        <h2>Enhancements</h2>
+        <h3>Ability to Reject an Activity in Data Entry Review: DIST-1266</h3>
+        <p>We added the ability to reject applications in the data entry review queue. The ability to reject applications is now available on all the review queues, including the data entry review queue. This option is also available to the API call to allow rejecting an activity from Data Entry Review.</p>
+        <h4>Impact</h4>
+        <ul>
+            <li>
+                <p>New display status when activity is rejected from data entry review.</p>
+            </li>
+            <li>
+                <p>Update Review Queue API (ReviewQueue.UpdateReviewQueueState) to allow rejecting an activity for data entry review.</p>
+            </li>
+            <li>
+                <p>Update Review Queue page (FL App) to allow rejecting an activity for data entry review.</p>
+            </li>
+            <li>
+                <p>Lock / set read-only an activity when it is rejected from data entry review.</p>
+            </li>
+            <li>
+                <p>Update audit history to manage rejection of data entry review.</p>
+            </li>
+            <li>
+                <p>Update admin reports to include new display status for required conditions.</p>
+            </li>
+            <li>
+                <p>Update activity reports to include new display status for required conditions.</p>
+            </li>
+        </ul>
+        <h3>LexisNexis—One-Time Passcode: CR-574</h3>
+        <p>We added the ability to add the LexisNexis - One-Time Passcode service to be used within either the Date Entry or eSignature workflow.</p>
+        <h4>Impact</h4>
+        <ul>
+            <li>
+                <p>New Custom Action Parameter for LexisNexis - One-Time Passcode.</p>
+            </li>
+            <li>
+                <p>Update Audit History to include new display of One-Time Phone Finder service calls made and responses received.</p>
+            </li>
+            <li>
+                <p>Update Admin reports to include the new display section of One-Time Passcode service being utilized and responses returned.</p>
+            </li>
+            <li>
+                <p>Updated Activity reports to include the new display section of One-Time Passcode service being utilized and responses returned.</p>
+            </li>
+        </ul>
+        <h3>LexisNexis—Phone Finder: CR-539</h3>
+        <p>We added the ability to add the LexisNexis - Phone Finder service to be utilized within either the Date Entry or eSignature workflow.</p>
+        <h4>Impact:</h4>
+        <ul>
+            <li>
+                <p>New Custom Action Parameter for LexisNexis - Phone Finder.</p>
+            </li>
+            <li>
+                <p>Update Audit History to include new display of Phone Finder service calls made and responses received.</p>
+            </li>
+            <li>
+                <p>Update Admin and Activity reports to include the new display section of Phone Finder service being utilized and responses returned.</p>
+            </li>
+        </ul>
+        <h3>LexisNexis - Emailage - Additional Data Inputs for Service Call: CR-969</h3>
+        <p>This enhancement adds a section to the data entry section of the Emailageaudit reports to verify information that was entered in that section of the application.</p>
+        <h4>Impact:</h4>
+        <p>•	Emailage integration</p>
+        <p>•	Emailage audit reports</p>
+        <p>New Inclusion Option</p>
+        <p>We added the ability to create two new options for a form in a package: "Signing Ceremony Only: All" and "Signing Ceremony Only: All Conditional." These new options differ from "Signing Ceremony Only" versions in that the form is displayed to all users during the signing ceremony if a signature control is on it, as opposed to only the user whose signature needs to be collected.</p>
+        <h4>Impact</h4>
+        <ul>
+            <li>
+                <p>Admin Packages: Form duty</p>
+            </li>
+            <li>
+                <p>Signing Ceremony: Forms displayed</p>
+            </li>
+        </ul>
+        <h3>Signature Option: CS-12926</h3>
+        <p>We added the ability to add two new group options in Admin, both on the App tab. The first option, Lock Signature Email Addresses, is under the Emails category. When that option is selected, when an agent sends a signature request, they will not be able to update/change the email address to which the request is sent. The second option, under the Signing: General category, is Hide Recipient Link for Agent. When this option is selected, the link the user uses to log in is displayed to the agent on the Signature Request screen.</p>
+        <h4>Impact</h4>
+        <ul>
+            <li>
+                <p>Admin: Group Options</p>
+            </li>
+            <li>
+                <p>Signature Requests</p>
+            </li>
+        </ul>
+        <p>Replace ID Issue Jurisdiction Selection with Country Selection: iConnect 278642</p>
+        <p>We have extended the ListProfile for ID verification to include an info node. This node is used to specify whether the issuing jurisdiction should be a Country or a Jurisdiction/State dropdown.</p>
+        <p>Impact</p>
+        <p>•	Client ID Verification</p>
+        <h3>Work Groups Participation/Coordination (Intra Org)</h3>
+        <p>We enabled intra organization workflows, allowing users to have shared visibility into an activity and receive notifications for the activity life cycle. This also allows multiple individuals to access an activity without being required to take a specific action, such as Transfer, Share, etc. Status and notification functionality is enhanced to add a list of individuals to receive notifications/have visibility of a single activity from start to finish, enabling a "Team Like" activity visibility.</p>
+        <h4>Impact</h4>
+        <p>•	Admin: Organization, Admin tab: New group option</p>
+        <p>•	Admin: Group Options, App tab: New Work Groups section</p>
+        <p>•	Admin: Audits</p>
+        <p>•	App: Communications</p>
+        <p>•	App: Preferences</p>
+        <h3>Updates to AURA Next Integration</h3>
+        <p>We completed various updates to the integration with RGA AURA Next to complete the XML passed to AURA Next and update navigation data for button logic passed into the AURA Next User interface.</p>
+        <h4>Impact</h4>
+        <ul>
+            <li>
+                <p>Update XML Content for Holding/Insured relationship.</p>
+            </li>
+            <li>
+                <p>Update Tracking ID to reflect application ID.</p>
+            </li>
+            <li>
+                <p>Update JSON passed to AURA to correct navigation buttons.</p>
+            </li>
+        </ul>
+        <h2>Resolved Issues</h2>
+        <h3>HTML Content in Failed Email Notifications Do Not Match Original Message Content: PC-1380</h3>
+        <p>Bounce-back emails from FireLight contained raw HTML, making it difficult to forward as-is to the client or agent. Agents had to scrub the HTML before forwarding. This started with the implementation of SendGrid.</p>
+        <h3>Embedded—Navigation Graph Content Is Incorrect after Changing Field and Page PC-1247</h3>
+        <p>When using the UpdateField API in conjunction with the Load API, content was not updated as expected.</p>
+        <p>In some cases, the navigation graph was updated to an incorrect version, causing the sidebar to be out of sync.</p>
+        <h3>Admin Error Displayed When User Clicks on “Replace Form/Wizard” or “Replace Rule Set” Button: PC-1163</h3>
+        <p>Clicking on the Admin/Packages page, in the Replace Form/Wizard/Rule Set in Package window, then clicking the Replace Form/Wizard or Replace Rule Set button, resulted in both an Admin Error and a 500 server error.</p>
+        <h3>Inconsistent List Profile Use for Verification Jurisdiction: EAES-1881</h3>
+        <p>An object error occured when verifying jurisdiction in an application if the organization does not have info nodes set in the list profile.</p>
+        <h3>Carrier-Approved Products Not Showing in Firm Role Codes: EAES-1810</h3>
+        <p>When defining a new sales agreement between a carrier and distributor with firm access enabled, no products displayed for firm-associated role codes.</p>
+        <h3>All External Request Links (Review, Signing, etc.) Showing Error: EAES-1699</h3>
+        <p>In the FireLight App, when sending external requests, an error appeared after entering an external link in a browser.</p>
+        <h3>Application ID Not Always Stored in External Link Table: EAES-1607</h3>
+        <p>The ApplicationID field in the External Link Table was not populated with an external link specific to an app as it should be.</p>
+        <h3>HTML Emails with No Body (or Body Disabled from Org/Group Options) Causes Error in Sending: EAES-1606</h3>
+        <p>When sending a new email message from an existing one in the Message Center and the body is disabled, there was no email body to send, resulting in empty email being sent.</p>
+        <h3>404 Error Due to Incorrect Action URL: EAES-1598</h3>
+        <p>In any application activity, clicking Display/Print PDF then clicking Print Selected Documents resulted in a 404 error.</p>
+        <h3>Captured Signature Not Shown in UI Until Activity Is Submitted: EAES-1583</h3>
+        <p>During the Signing Ceremony, the captured signature was absent from the UI until activity submittal.</p>
+        <h3>"Signing Ceremony Only" Forms Ignoring "Remove Excluded Forms from Print" Attribute: EAES-1202</h3>
+        <p>Forms with the Forms Library attribute “Remove Excluded Forms From Print” appeared in the print menu even when disabled as “Signing Ceremony Only: Conditional.”</p>
+        <h3>Remove Text Box for Members Field (Removed for Work Group Name, Producer, Admin): EAES-1112</h3>
+        <p>When All Workgroups was selected in the Admin App, the FireLight App Preference page was erroneously displaying the Member field.</p>
+        <h3>Workflow: Created Multiple Work Groups Not Sorted Properly: EAES-1105</h3>
+        <p>On the Manage Work Groups window, work groups were not sorted alphanumerically as they should be.</p>
+        <h3>Workflow: Admin User Not Able to Delete a Work Group When There Is No Producer: EAES-896</h3>
+        <p>In the Admin App, when no producer was specified for a work group, the work group could not be deleted from the App Preference page.</p>
+        <h3>Work Groups: After Work Group Created, Work Group Members Not Displaying Correctly on All Activities Page: EAES-660</h3>
+        <p>Work Group member information was not displaying correctly on the All Activities page.</p>
+        <h3>Workflow: Without Clicking on Create New Button, User Can Create a New Work Group: EAES-893</h3>
+        <p>New work groups could erroneously be created without the Create New button being clicked.</p>
+        <h3>Workflow: User Not Able to Remove Members by X Button If No Producer or Admin Given (While Creating New Group): EAES-895</h3>
+        <p>When a new work group was created, if no producer or admin is provided, clicking X to delete the group is not working as expected.</p>
+        <h3>DTCC Transmission Service—Failure to Process App Sub Causes All Transmissions to Fail: DI-750</h3>
+        <p>Application submittal encryption was not working as expected, causing submittal transmission failure.</p>
+        <h3>Data Entry Review Queue—Correction dialog—Edited Correction Message Not Showing in Application History: DIST-1765</h3>
+        <p>For applications in the Pre-Submit queue of Data Entry Review, Application History was not properly displaying message changes made during Corrections Activity.</p>
+        <h3>Redtail CRM Service Generating 500 Error: CR-850</h3>
+        <p>When creating an application in FireLight with CRM setup, clicking Lookup Owner in CRM resulted in a 500 Error instead of providing contact information.</p>
+        <h3>React Signing: When "Use LexisNexis" Is Checked for Any Signer, "LexisNexis Emailage" Service Audit Generated in App History After Signatures Completed: CR-835</h3>
+        <p>In React Signing, a LexisNexis Emailage service audit was being erroneously generated even when the LexisNexis Emailage option is not selected.</p>
+        <h3>Exclude Internal Form Flags from Admin Reports: DIST-1549</h3>
+        <p>An internal report, IsBlobStorageDefinition, was being erroneously included in external admin reports.</p>
+        <h3>eDelivery PreSubmit—Apps Stuck Due to Already Complete: EAES-1497 and EAES-1498</h3>
+        <p>Applications in Pending Approval status were failing to move through the proper workflow due to incomplete Interested Parties.</p>
+        <h3>Empty FirmID on Group Causing All Products to Be Filtered: EAES-1840</h3>
+        <p>After selecting Jurisdiction and Locale for an application, the Product Type filter erroneously showed only the “All” option. The returned list was empty of any jurisdiction and locale, and there was no product with which to proceed.</p>
+        <h3>User Unable to Add "Work Group Producer" in a New Work Group: EAES-1956</h3>
+        <p>In the FireLight App, attempting to add a Work Group Producer in a newly created work group resulted in a 500 error instead of working as expected.</p>
+        <h3>Sporadic Database Error "A Severe Error Occurred on the Current Command": PC-1561</h3>
+        <p>We resolved a database access error.</p>
+        <h3>Load Deployment Information Is Not Working: PC-1490</h3>
+        <p>We resolved a FireLight Admin issue preventing deployment information from populating the Deployment Information table.</p>
+        <h3>REST API Not Returning Products If No Org Filter Specified: PC-1484</h3>
+        <p>We resolved an issue where REST API was not working as expected.</p>
+        <h3>Disclosure Engine Request XML: Gender and Birthdate Not Applicable to Owner, Payor, Beneficiaries and Agent: CR-1047</h3>
+        <p>We resolved an issue where excess information was associated with the Owner, Payor, and Beneficiaries.</p>
+        <h3>Admin Reports—LexisNexis DDP Report Option Is Not Showing to Generate PDF: CR-1060</h3>
+        <p>We resolved an issue where the LexisNexis DDP report was not an option in Available Reports. The LexisNexis DDP report is now available in Available Reports.</p>
+        <h3>Admin Reports—LexisNexis Emailage Report Is Throwing Timestamp Error: CR-1061</h3>
+        <p>We resolved an issue where the LexisNexis Emailage report was not generating and resulted in a Timestamp error. The LexisNexis Emailage report now generates successfully with no errors.</p>
+        <h3>Timestamp Error after Validating Signer Using Passcode Email Verification If the User Has Use LexisNexis Emailage Checked: CR-1145</h3>
+        <p>We resolved an issue where a timestamp error was generated when an application whose owner has Use LexisNexis Emailage selected is validated by passcode by a user without Use LexisNexis Emailage.</p>
+        <h3>Lexis Nexis Risk Classifier Giving Authentication Failure in Response: CR-1147</h3>
+        <p>We resolved an issue where the Lexis Nexis Risk Classifier was not operating as expected.</p>
+        <h3>When "Use Lexis Nexis Emailage" Checked for Any Signer Then User Not Able to Proceed for Signing (REACT Signing Only Now): CR-1160</h3>
+        <p>We resolved an issue where when the Use Lexis Nexis Emailage option is selected for any signer, if that user creates an app and wants to do signing for that signer, clicking Verified on the Client Identification Verification pages results in a 500 error for react signing. Now, when the Use Lexis Nexis Emailage option is selected for any signer, no error appears, and the user can proceed to and complete the signing.</p>
+        <h3>Fix for Invalid Container Name and Support for Multiple Filename Formats: DI-891</h3>
+        <p>We resolved an issue where file name convention misalignment prevented proper file retrieval from Azure Storage. Support tool code has been modified to support old and new file name conventions, and files can now be retrieved properly from Azure Storage.</p>
+        <h3>Feature Flag Refresh: DI-958</h3>
+        <p>We resolved an issue where feature flags were not refreshing. Feature flags now refresh as expected.</p>
+        <h3>Illustration Wizards Are Showing Empty: DI-996</h3>
+        <p>We resolved an issue were illustration wizards for various products displayed no content. Illustration wizards are now working as expected.</p>
+        <h3>Admin History Report—Auto Deploy Value Is Incorrect: DIST-1700</h3>
+        <p>We resolved an issue where the Auto Deploy Value in the Admin History Report was incorrect. This value now appears as expected in the report.</p>
+        <h3>ReportScheduler: Schedule History—Old Value and New Value Mix Their Values with Each Other and Shading Is Missing for Alternate Rows: DIST-1767</h3>
+        <p>We resolved an issue where details of the Schedule History tab displayed incorrectly. Details on the Schedule History tab now display as expected.</p>
+        <h3>Application Get Auto Submit after Post Signature Review Approved: DIST-1768</h3>
+        <p>We resolved an issue where auto-submit of applications was not operating as designed. Auto submit is now operating as expected.</p>
+        <h3>Data Entry Review Queue—Reject Message Not Showing Correctly in Application History: DIST-1780</h3>
+        <p>We resolved an issue where Data Entry Review rejection messages did not display correctly in Application History. Data Entry Review rejection messages now display correctly in Application History.</p>
+        <h3>All Activities Advanced Search Button Is Not Working: DIST-1782</h3>
+        <p>We resolved an issue where the Advanced Search button on the All Activities page was not operating as expected. The Advanced Search button now operates as expected.</p>
+        <h3>User Activities Search Button Is Missing from the All Activities Tab: DIST-1783</h3>
+        <p>We resolved an issue where the Activities Search button did not appear on the All Activities tab as expected. The Activities Search button now appears on the tab.</p>
+        <h3>All Activities—Error When User Selects My Activities After Selecting Any Other User: DIST-1805</h3>
+        <p>We resolved an issue where a timestamp error resulted from selecting any user from the User dropdown after selecting My Activities on the Case Access tab. The UI now operates as expected.</p>
+        <h3>When We Send Request to Multiple Reviewers Then It's Showing Only One Reviewer in Pending Request Dialog: DIST-1806</h3>
+        <p>We resolved an issue where in Pre- or Post-Signature Review, applications sent to multiple reviewers show only one reviewer in the Pending Request dialog. Now the Pending Request dialog reflects the correct number of reviewers.</p>
+        <h3>Review Queue "Advance Search" Not Working When a Particular User Is Selected in the Filter of Advance Search: DIST-1877</h3>
+        <p>We resolved an issue where the Advance Search feature on the Review Queue page failed to return results. The Advance Search feature is now working as expected.</p>
+        <h3>Error When Reviewer Approves the Pre Signature Request: DIST-1880</h3>
+        <p>We resolved an issue where a timestamp error was received during Pre-Signature Review when reviewers approved external requests. In addition, application status failed to update to Approved, and the Continue link was erroneously disabled. During Post-Signature Review, application status failed to update to Approved, and the Continue link was erroneously disabled. Now both Pre- and Post-Signature Review operate successfully, applications status updates to Approved, and the Continue button is enabled in the application UI after review approval.</p>
+        <h3>Clicking the Reviewer Documents after Complete Does Not Open PDF: DIST-1885</h3>
+        <p>We resolved an issue where the link to open PDFs from the Reviewer dialog did not work. The link now functions properly.</p>
+        <h3>Firelight Admin: When No Activity in Any Admin Setting Page for Some Time, “0 Status Returned " Alert Popup Appearing: EAES-1841</h3>
+        <p>We resolved an issue where a period of inactivity on the Admin Setting page resulted in a “0 status returned” alert popup. Now no “0 status returned” alert popup appears after inactivity.</p>
+        <h3>eSigning Ceremony Not Triggering Intermittently: EAES-1850</h3>
+        <p>We resolved an issue where during the eSigning ceremony no prompt to continue occurred. The eSigning ceremony is now functioning as intended.</p>
+        <h3>Spurious Alert Message Being Shown in the Admin Tool Randomly: EAES-1864</h3>
+        <p>We resolved an issue where a spurious alert message appeared randomly in the Admin App. The Admin App now functions as designed.</p>
+        <h3>Surrender Schedule Data Item Not Updating Properly after Copy With Changes: EAES-1934</h3>
+        <p>We resolved an issue where surrender schedule data failed to update properly after copying with updates occurred. Surrender schedule data now updates properly.</p>
+        <h3>More Info Pop-Up Not Generating in Production: EAES-1937</h3>
+        <p>We resolved an issue where the More Info pop-up did not display correctly. The pop-up now works as designed.</p>
+        <h3>Trying to Click an Application in QA Next Does Not Load the New Application Page: EAES-1949</h3>
+        <p>We resolved an issue where the Create and Cancel buttons on the New Application page did not load properly. The buttons now work as intended.</p>
+        <h3>Section Breaks Are Not Working Until the Page Is Refreshed, User Still Able to Access the Locked Sections If the Previous Section Break Is Unchecked: EAES-1970</h3>
+        <p>We resolved an issue where section breaks in applications did not work as expected. Section breaks are now functioning properly.</p>
+        <h3>Text Is Overlapping on Display/Print PDF Box If Signing Ceremony Only: All Conditional Is Selected for Form in Admin: EAES-1974</h3>
+        <p>We resolved an issue on the Select Documents to Print screen where the “Signing Ceremony Only: All Conditional” text displayed improperly. The text now appears on the screen as expected.</p>
+        <h3>(Signing Ceremony Only: -All) Status Is Not Showing on Print PDF Select Documents Screen after Signature Complete by Users: EAES-1975</h3>
+        <p>We resolved an issue where “Signing Ceremony Only: -All” failed to appear on the Print PDF Select Documents screen. The text now appears as expected on the screen.</p>
+        <h3>"Military ID" Option Not Showing in “Form Of Identification“ Dropdown, on Client Identification Verification Page: EAES-1977</h3>
+        <p>We resolved an issue where Military ID failed to appear as a Form of Identification on the Client Identification Verification screen. The option now appears in the dropdown as expected.</p>
+        <h3>Messages Sent from Firelight Via the Message Center: From Email Address Editable Even If Lock Signature Email Addresses Setting Is Enabled: EAES-1991</h3>
+        <p>We resolved an issue where the Lock Signature Email Addresses functionality did not work as expected, allowing the From email address to be editable. The functionality now operates as designed.</p>
+        <h3>Identification Verification—For “Resident Alien ID” Option “ID Issue Jurisdiction” Label Should Display: EAES-1992</h3>
+        <p>We resolved an issue where on the Identification Verification page the ID Jurisdiction Issue field was mislabeled as “Country of Passport.” The field is now properly labeled.</p>
+        <h3>When User Do Not Do Any Activity In Firelight Admin, Then It Shows 503 (Service Unavailable) Alert Pop Up on Page: EAES-1994</h3>
+        <p>We resolved an issue where a period of inactivity led to a 503 (Service Unavailable) pop-up appearing. Now a period of inactivity does not result in a pop-up.</p>
+        <h3>If There Is Only One Workgroup Created and If that Admin User Wants to Remove Himself, Then Page Not Refreshing and Workgroup Still Shows (Showing 500 Error in Console): EAES-1997</h3>
+        <p>We resolved an issue where an admin user attempting to remove self from a single workgroup resulted in a 500 error and that admin user remaining in the workgroup. The operation now works as intended.</p>
+        <h3>For Auto Orgs Applications Being Stuck in “Pending Transmission” State : EAES-1998</h3>
+        <p>We resolved an issue where submitted applications were stuck in “Pending Transmission” status. Applications now complete submission as expected.</p>
+        <h3>Input Type in the Field Property for Wizard &amp; Form Both Is Not Working: EAES-2086</h3>
+        <p>We resolved an issue where input fields did not work properly. All input fields now work as designed.</p>
+        <h3>If Admin User Assigned as Member by Producer Then Admin Assignment Search Field Not Appearing (Producer Not Able to Reassign a New Admin): EAES-2093</h3>
+        <p>We resolved an issue where a Producer in a workgroup could not reassign a new admin. Producers can now reassign new admins as designed.</p>
+        <h3>Workgroup: If “Enable Read-Only Activity" Is Enabled from Groups Page for Producer Role Code, Then Workgroup Members Still Can Edit the Activities for That Producer's Workgroup: EAES-2096</h3>
+        <p>We resolved an issue where Enable Read-Only Activity did not work as expected. Enable Read-Only Activity now works as designed.</p>
+        <h3>Exceptions Occurring When Sending Email, Attempting to Insert Same Email Record Multiple Times: EAES-2102</h3>
+        <p>We resolved an issue where multiple email records were inserted when sending email. Sending email now works as designed.</p>
+        <h3>Signing Ceremony Only Conditional Forms Are Checked in the Print Dialog But Shouldn't Be:  EAES-2113</h3>
+        <p>We resolved an issue where Signing Ceremony PDF page count exceeded set limits. PDF page counts are now within set limits.</p>
+        <h3>For "Client Request About to Expire" Email, Workgroup Members Not Showing in CC Email List: EAES-2117</h3>
+        <p>We resolved an issue where workgroup members did not appear as expected in CC email lists. Workgroup members now appear as designed in CC email lists.</p>
+        <h3>Not Able to Trigger the “Post Submission Pending Case Status" Email And “In Carrier Review" Status:  EAES-2118</h3>
+        <p>We resolved an issue where In Carrier Review status was not reflected for completed applications, and agents and clients did not receive email regarding Post-Submission Pending Case Status.</p>
+        <h3>Admin “Rule Tracing" System “OutOfMemoryException" Error: PC-1483</h3>
+        <p>We resolved an issue where clients with complicated XML forms experienced OutOfMemoryException errors. These OutOfMemoryException errors are no longer encountered.</p>
+        <h3>ProductAvailability REST API Not Returning Products If No Org Filter Specified: PC-1484</h3>
+        <p>We resolved an issue where the REST API failed to return products when no organization filter was specified. The REST API is now working as designed.</p>
+        <h3>Update Agent Information When Transferring an Activity: PC-1485</h3>
+        <p>We resolved an issue where application originators rather than newly accepted advisors were being asked to sign the application even after transfer. Transfer of applications is now working as intended.</p>
+        <h3>Wizard Page Break Logic Problem Prevents Application from Rendering: PC-1487</h3>
+        <p>We resolved an issue where applications failed to render properly due to a wizard page break logic problem. Applications now render as designed.</p>
+        <h3>Wizard Unable to Render Application Due to Missing Next Step Icon: PC-1488</h3>
+        <p>We resolved an issue where the Next Step icon failed to appear, making the wizard unable to render applications. Applications now render as designed.</p>
+        <h3>Remove SMS Passcode on External Request Page: PC-1439</h3>
+        <p>SMS OTP service replaces this functionality.</p>
+        <h2>Unresolved High Issues</h2>
+        <h3>Fix Confusing Auto Deploy Logic: DI-930</h3>
+        <p>Current functionality allows the user to complete deployments without issues. This update is designed to improve the user experience in the administration tool.</p>
+        <h3>When "Enable Read-Only Activity" Group Setting Is on Then User Still Able to Share Full Control &amp; Share Limited Control Share (Although for That User Activity Opens in Read Only Mode): DIST-1882</h3>
+        <p>Workaround for this issue is to uncheck group setting “Allow Activity Share” when group setting "Enable Read-Only Activity" is checked.</p>
+        <h3>Inconsistencies in Popup Messages Configured at the Activity Level: EAES-1865</h3>
+        <p>Work effort on this issue is in progress.</p>
+        <h3>User "Not able to access Signatures," When It Declines the Signatures for the First Time and Then Unlocks the Activity (Forms Only): EAES-1935</h3>
+        <p>Existing issue that was not specific to this release.</p>
+        <h3>Client Is Not Receiving the "Passcode Email" of the Leave Behind Email (Print or Download Your Signed Application) after Completing the Signatures (REACT SIGNATURES): EAES-2002</h3>
+        <p>Existing issue that was not specific to this release.</p>
+        <h3>In Read Only Share, User Can Add Child Activities and Can Change Data in Already Added Child Activity by Parent Activity: EAES-2094</h3>
+        <p>Existing issue that was not specific to this release.</p>
+        <h3>Read Only Activity Shared User Should Not Allow to Edit Activity Name: EAES-2095</h3>
+        <p>Existing issue that was not specific to this release.</p>
+        <h3>React eSign—External Link Get Invalid for Send Email Request for Signature [Automation]: EAES-2109</h3>
+        <p>Existing issue that was not specific to this release.</p>
+        <h3>When Request Client to Fill &amp; Sign to Multi Signers Then in Scheduler Reminder Email, We Are Receiving All Signers Email: EAES-2120</h3>
+        <p>This issue is isolated to the timing of the reminder email. It does not negatively impact the ability for any signers to sign.</p>
+        <h3>"Carrier Only Rule Set Configuration" Deployment Scope Filtering Incorrectly: PC-1482</h3>
+        <p>The workaround for this issue is to type the organization into the filter field.</p>
+        <h3>Admin—Package Conversion Is Not Working: PC-1489</h3>
+        <p>The workaround for this item is to manually update tags, forms, rules, dropdown items.</p>
+        <h3>When There Are Multiple Signers for an Application, I Receive Two Emails. One of These Emails Contains a Valid Passcode, While the Other One Contains an Invalid Passcode: PC-1529</h3>
+        <p>This issue does not prevent signatures from being completed. Resolution is scheduled for the November Patch release.</p>
+        <h3>Deployment Scopes Not Loading: PC-1565</h3>
+        <p>Due to the complexity of this issue, it has been deferred to allow for a more exhaustive approach. Updates is scheduled for future releases.</p>
+        <h2>Unresolved Medium-Low</h2>
+        <h3>Admin—Application Audit Report-LexisNexis DDP Section—Response Details from Phone Finder Service Are Misaligned in PDF Report: CR-1059</h3>
+        <h3>When the User Returns to the Aura Next Screen it Navigates to Top of Section Rather Than Unanswered Question in Part 2 Interview: CR-1074</h3>
+        <h3>Click Custom Action Call Enhancement Is Not Working as Expected for GIACT Services : CR-1075</h3>
+        <h3>Product Type Feeding Common Tag Incorrectly: CR-1149</h3>
+        <h3>Admin Reports—LexisNexis DDP Report—PDF Page Title Showing as “LexisNexis Emailage Report”: CR-1159</h3>
+        <h3>Scheduler Executed Same Assembly Twice Within Seconds: DI-886</h3>
+        <h3>Email Data Is Not Purged for Submitted/Completed Activities: DI-887</h3>
+        <h3>All Configuration Scope Always Deploys Activity Changes Which Inhibits Testing: DI-928</h3>
+        <h3>Improve Resiliency of Activity Reports for Invalid Organization Config: DI-929</h3>
+        <h3>Update Auto Deploy Logic to Correct Confusing workflow: DI-930</h3>
+        <h3>Fix Project Issues That Are Causing Regular Build and Deployment Problems: DI-931</h3>
+        <h3>Default Workflow Retry Time Should Be 4 Hours Instead of 10: DI-932</h3>
+        <h3>Generate a New Transrefguid for DTCC Attachment Retransmission: DI-933</h3>
+        <h3>Documents Added in Pre-Sale with Pre-Sig Review Do Not Transfer over to The Application: DIST-1770</h3>
+        <h3>For "Data Entry Met Popup" Continue Text Link &amp; "Enter More Data" Link Not Appearing DIST-1913</h3>
+        <h3>Home Tab Does Not Have Proper Link on Purged Activity View Page: DIST-1914</h3>
+        <h3>"Red Bubble" Icon Disappears Whenever User Navigates To Same Page From "Expand Form Menu " and " Validation Error List": EAES-1843</h3>
+        <h3>Legacy Forms UI Showing Signature Info Twice for Submitted Activities: EAES-1854</h3>
+        <h3>Simplify Management of Deployment Notifications from Carrier to Distributor: EAES-1855</h3>
+        <h3>eDelivery Popup When Agent Opts Out: EAES-1856</h3>
+        <h3>Unable to Upload any Document as Document Type Is Not Defined: EAES-1932</h3>
+        <h3>Issue with Length or Characters in App Name When Approving in Review Queue: EAES-1936</h3>
+        <h3>External Links: When External User Completes the Activity Then Page Throws Error as "Can't Reach This Page": EAES-1938</h3>
+        <h3>Track Last Send of Reminder Notifications to Prevent Spamming: EAES-1953</h3>
+        <h3>Template Documents Uploaded after Submit Do Not Get Transmitted: EAES-1990</h3>
+        <h3>React Signing Missing Email for Decline Sign When Declining from the Signature Pad: EAES-1995</h3>
+        <h3>Error Going into Signing from External Fill and Sign: EAES-2075</h3>
+        <h3>Product Feature Functionality Not Working As Expected.   Display Preview Not Working as Expected for Admin Users : EAES-2098</h3>
+        <h3>For "Print Or Download Your Application" External Link There Is No Alert for Invalid Credentials and Time Stamp Error after Few Unsuccessful Attempts: EAES-2099</h3>
+        <h3>Application Was Not Auto Submitted Even though Option Is Set: EAES-2116</h3>
+        <h3>Work Group Shares Should Not Show up in The All Activities Share List for Adding/Removing: EAES-2119</h3>
+        <h3>Activity Sometimes Cannot Be Submitted after Completing All Signatures: EAES-2121</h3>
+        <h3>Firefox Specific Issue: Downloaded PDF Pages Are "BLANK" When Downloaded through Display/Printpdf: EAES-2124</h3>
+        <h3>No Required Validation On Activity Name Field When Changing Name of Activity (Rename): EAES-2126</h3>
+        <h3>External Rolecode Not Set To External for Fill Requests: EAES-2127</h3>
+        <h3>Fix Duplication of Call For Workgroup CC List in Emails: EAES-2128</h3>
+        <h3>&lt;Signertype&gt; Not Always Being Replaced with Actual Signer Type in Audit Messages: EAES-2129</h3>
+        <h3>Facing Error When Trying to Simultaneously Check Out Multiple Applications: EAES-2130</h3>
+        <h3>E-Sign React—Unable to Select Multiple Signers When Agent Signature Is Done First on Distributor Login: EAES-2131</h3>
+        <h3>After Scheduled Deployment, the Items List Is Not Showing Properly: EAES-2133</h3>
+        <h3>Workgroup Scheduler Reminder Emails Not Working As Expected in Certain Cases: EAES-2134</h3>
+        <h3>Update to FireLight Developer Guide—New Display Status 3300: PC-1451</h3>
+        <h3>Illustration Activity—"Recover Unsaved Data" Popup Not Showing on Direct closing of browser/tab without save: PC-1481</h3>
+        <h3>In Download Tag List For by Default Selected Package "Generate Package Tag List" button is disabled: PC-1560</h3>
+        <h3>CallAsyncAction Making a Call to the Selling Organization in Error: PC-1564</h3>
+        <h3>Add Additional GIACT Validation Points: CR-1161</h3>
+        <h3>GetActivityPDF Should Not Audit Entire Document List: DI-532</h3>
+        <p>&#160;</p>
+        <p>*** Please note that the JIRA ticket numbers are provided for reference. JIRA tickets are not accessible to users outside Hexure.***</p>
+        <p data-mc-conditions="General.Online">
+            <a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

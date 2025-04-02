@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>If the form is not locked and another user has saved changes to the form since you began your work, a <strong>Form Changes</strong> dialog opens. You can choose  <strong>Overwrite Changes</strong> to overwrite the changes that the other user made and update the form with the latest changes,<b> Discard Changes</b> to discard the changes that you made and open the last saved version of the form, or <b>Cancel Save</b> to close the dialog and return to the last active page in the form. See <MadCap:xref href="../../../Design/Form Library/Lock and Unlock Forms for Editing.htm" title="Lock and Unlock Forms for Editing" alt="Lock and Unlock Forms for Editing">Lock and Unlock Forms for Editing</MadCap:xref> for instructions on how to lock the form to prevent others from editing the form.</body>
+</html>

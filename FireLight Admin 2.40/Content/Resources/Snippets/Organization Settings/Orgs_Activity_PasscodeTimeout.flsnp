@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>In the <b class="Bold">Passcode Timeout</b> text box, enter range between 10 and 180 minutes to specify the time to elapse before the passcode times out, or enter 0 for it to never time out.</body>
+</html>

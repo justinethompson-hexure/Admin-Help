@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Add a New Rule to Multiple Fields<a name="top"></a></h1>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FormLockUnlock.flsnp" />
+        </p>
+        <p>You can select multiple fields on a form and create a new custom rule or pre-built template rule for the multiple fields using the Create Multiple button on the Rules Window. This feature is for new rules only and cannot be used for updating rules.</p>
+        <p>The following example adds the pre-built template Required rule to the Owner_FirstName, Owner_MiddleName, and Owner_LastName controls. </p>
+        <ol>
+            <li>On the navigation bar, click <b class="Bold">Designer/Form Designer</b>.</li>
+            <li>On the upper left of the Form Designer page, select a form in the list.</li>
+            <li>
+                <p>On the form, select the multiple controls (data items) that have the same rule.</p>
+                <p>For example, select <strong>Owner_FirstName</strong>, <strong>Owner_MiddleName</strong>, and <strong>Owner_LastName</strong> controls.</p>
+            </li>
+            <li>On the left in Input Control, click <strong>Rules Window</strong>.</li>
+            <li>In Rules Window, click <strong>New</strong>.</li>
+            <li>On the left of the New Rule Template dialog, click a pre-built rule template (or enter your own custom rule) (e.g., click the <strong>Required</strong> rule) and click <b class="Bold">OK</b>. </li>
+            <li>
+                <p>On the Rules Window, click <strong>Create Multiple</strong>.</p>
+                <p><b class="Bold">NOTE:</b> If the <a href="../../Organization Configuration/Organizations/Admin.htm#ValidateRuleNameUniqueness" target="_blank" alt="Validate Rule Name Uniqueness">Validate Rule Name Uniqueness</a> checkbox is selected in Organization Configuration/Organization Settings on the Admin tab, a "Rule name must be unique!" message appears if the rule name is not unique. Click <b class="Bold">OK</b> and change the rule names to be unique.</p>
+            </li>
+            <p>The new rules names and details appear on the left of the Add Rule to Multiple Fields dialog. The rules XML appears on the right of the dialog with item number replacing the name of the dataitem name (e.g., {item1}).</p>
+            <li>
+                <p>On the lower right, click <b>Create Rules</b>.</p>
+            </li>
+            <li>On the Save Multiple Rules dialog, click <strong>OK</strong>.</li>
+            <li>The new rules appear in the list of rules for the selected rule set on the Rules Window. Close the Rules Window.</li>
+            <li>On the Rule Set Changes dialog, click <strong>Yes</strong> to save the rule set changes.</li>
+        </ol><a href="#top" alt="Return to Top">Return to Top</a>
+    </body>
+</html>

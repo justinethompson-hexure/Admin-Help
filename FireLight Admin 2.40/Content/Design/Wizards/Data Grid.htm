@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Data Grid</h1>
+        <p class="note"><b class="Bold">Spotlight Video:</b> See the <a href="https://vimeo.com/406915707/721ffa2a2f" target="_blank" title="FireLight Wizard Grid Enhancements" alt="FireLight Wizard Grid Enhancements">Wizard Grid Enhancements</a> Spotlight Feature Video for more information.</p>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WzdLockUnlock.flsnp" />
+        </p>
+        <h2>Purpose</h2>
+        <p class="Indent">Provides a grid structure that is bound to a custom list.  Common uses are Fund Allocation and Contingent Beneficiary/Other Insured lists. </p>
+        <ol>
+            <li>Add a new data grid to a wizard.</li>
+            <li>Select a custom list as a backing data source for the grid.</li>
+            <li>The data in the custom list is used to pre-populate the values in the grid.</li>
+            <li>FireLight<sup MadCap:conditions="General.Online">®</sup> supports Unicode characters (e.g., registered trademark, etc.) in Custom Lists and data grids. Additionally, Unicode characters render correctly on PDF documents.</li>
+            <li>Specify in the Wizard Designer what can be done with the data in the columns. Click the <b class="Bold">ADD COLUMN</b> button to add new columns up to a total of 9 columns. Available column types are Key (uniquely identifies each row of data), Text (display only), Text Box (editable text), Check Box (multiple selection), Radio Button (single selection), and Navigation Link (internal and external). Click the trashcan <img src="../../Resources/ImagesAdmin/TrashcanButton.png" alt="Trashcan Button" title="Trashcan Button" /> button at the top of a column to delete the column. <b class="Bold">NOTE:</b> Wizard grid text fields have a maximum length of 100.  </li>
+            <li>Use rules to change data within the data grid, set visibility on a row in the data grid, change the custom list to which the data grid is bound, or extract data from individual cells within the data grid.</li>
+            <li>
+                <p>If the custom list that is used in a data grid within an existing activity is changed, either within the Admin or by a rule, the data within the data grid re-defaults the next time the activity is loaded.</p>
+            </li>
+            <li>FireLight displays data grid validation per-row only to ensure controls do not move or re-size within the grid.</li>
+            <li>To include an allocation total in the last row of the data grid, add a row to the end of the custom list. Because data grids are sorted alphabetically, this row should have an ID key that ensures the row appears at the bottom of the grid, such as <b class="Bold">ZZZ</b>. All other values in this row can be blank, but the row must have the proper number of tabs in it for the amount of columns in the list.</li>
+            <li>Fields that are separate from the grid should be placed above or below the data grid.</li>
+            <li>On the upper left, click <b class="Bold">SAVE WIZARD</b> to save the wizard, which unlocks the wizard for editing by other users. </li>
+            <li>
+                <MadCap:snippetText src="../../Resources/Snippets/Rules/UpdateRulesWizard.flsnp" />
+            </li>
+        </ol>
+        <h2>Data Grid Properties</h2>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Data Grid Properties </caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 284px;" />
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadE-Regular-Header1">Property</th>
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Place Field on a New Row</b>
+                    </td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">  Regardless of the width of the Data Grid and the width of the fields in the current row, force the Data Grid to be placed at the beginning of a new row. See <MadCap:xref href="Wizard Grid Layout.htm" alt="Wizard Grid Layout">Wizard Grid Layout</MadCap:xref> for more information.</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Field Name</b>
+                    </td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows"> <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsFieldName.flsnp" /> </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Width</b>
+                    </td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Width of the Data Grid. The maximum is 12. </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Mobile Width</b>
+                    </td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Mobile width of the Data Grid.</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Class Name</b>
+                    </td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">(Optional) <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-ClassName.flsnp" /></td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">List Name</b>
+                    </td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Name of the Custom List associated with the Data Grid (see <MadCap:xref href="../../Organization Configuration/Custom Lists.htm" alt="Custom Lists">Custom Lists</MadCap:xref>). The column data in the Custom List fills the column data in the Data Grid. A List Name and its associated Custom List are required.</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Column ID</b>
+                    </td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Column ID must match the Name of the associated column in the Custom List.</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Column Name</b>
+                    </td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Column Name is what the user sees as the header caption when the Data Grid renders. </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Column Type</b>
+                    </td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p>The following column types are available in Data Grids:</p>
+                        <ul>
+                            <li><b class="Bold">Key (Not Displayed)</b> – A column is created in the data source for the Data Grid, but the column is not visible. This is useful for providing a unique identifier for each row of data.</li>
+                            <li><b class="Bold">Text</b> – A column of display-only data is created.</li>
+                            <li><b class="Bold">Text Box</b> – A column of editable data is created. Optionally, a Text Mask can be specified for formatting the data in the text box. The Text Mask selection is visible only if one of the columns has been assigned as a Text Box.</li>
+                            <li><b class="Bold">Check Box</b> – A column of selectable data is created. Multiple row selections are allowed.</li>
+                            <li><b class="Bold">Radio Button</b> – A column of selectable data is created. Only a single row can be selected.</li>
+                            <li><b class="Bold">Navigation Link</b>  – A column of navigation links is created. This enables the Link Type dropdown list in the Navigation Link Type row of the Data Grid Properties.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Width</b>
+                    </td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Width of the column. Add the column width for each column in the Data Grid. After closing the Data Grid Properties dialog, a column width can easily be changed on the designer page by clicking a blue column title in the grid, then clicking a <b class="Bold">&lt;</b> and <b class="Bold">&gt;</b> button in the orange <b class="Bold">Width</b> field to reduce or increase the width of the column. <b class="Bold">NOTE:</b> Column widths can adjust based on the information entered by a user.</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Class Name</b>
+                    </td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">(Optional) The class within the CSS branding file that determines the styling for the column cells.</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Navigation Link Type</b>
+                    </td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p>If the Column Type is set to Navigation Link, select a <b class="Bold">Link Type</b> in the list:</p>
+                        <ul>
+                            <li> <b class="Bold">None</b> - no navigation link is associated with the Navigation Link column.</li>
+                            <li><b class="Bold">Internal</b> - FireLight requires entries in the associated <b class="Bold">Form Number Column</b> and <b class="Bold">Page Number Column</b> fields that correspond to the column names in the associated Custom List.</li>
+                            <li><b class="Bold">External</b> - FireLight requires a <b class="Bold">URL Column</b> entry. This is the column name within the Custom List where the URL exists for the navigation link. (Optional) Select the <b class="Bold">Open in a New Window</b> checkbox to open the URL link in a new window when a user clicks the external navigation link.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Text Mask</b>
+                    </td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p>The Text Mask selection is only available for a Column Type of Text Box. Add a  text mask to a column by clicking the down arrow next to None and selecting the  text mask from the list. </p>
+                        <p><b class="Bold">NOTE:</b> Add a Text Mask to the organization by clicking the <b class="Bold">Add</b> button next to <b class="Bold">Edit Masks</b> on the <MadCap:xref href="../../Organization Configuration/Organizations/Activity.htm" alt="Activity">Activity</MadCap:xref> tab in Organization Settings under Organization Configuration.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Maximum Length</b>
+                    </td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Maximum number of alpha numeric characters that can be entered in the column. FireLight allows 999 maximum characters. </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Number of Lines</b>
+                    </td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Maximum number of lines that can be entered in the column. FireLight allows 999 maximum lines.</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Text Alignment</b>
+                    </td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Text alignment within the column (Left, Center, Right).</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Font Size</b>
+                    </td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">Font size of text entered in the column (Default, Small, Medium, Large, Extra Large, Extra Extra Large).</td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows" MadCap:conditions="General.Postpone">
+                    <td class="TableStyle-2017_IT-Simple2-BodyB-Regular-DarkerRows"><b class="Bold">Super Script Column Id</b>
+                    </td>
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Example - Add a Subaccount Allocation Data Grid</h2>
+        <ol>
+            <li>
+                <p>Use an existing custom list or add a new custom list in FireLight Admin that contains the information for the subaccounts (see <MadCap:xref href="../../Organization Configuration/Custom Lists.htm" alt="Custom Lists">Custom Lists</MadCap:xref>). For this example, add a <b class="Bold">VA SubAccounts</b> list that contains seven columns: Subaccount ID, Subaccount Name, Subaccount Info, Link URL, Asset Class, Inception Date, and Allocation. If you are going to use footnotes in the grid, add a second custom list for the footnotes. For this example, add a <b class="Bold">Footnote</b> custom list. </p>
+                <p>For this example, include an Allocation Total in the last row of the data grid. Add a row to the end of the custom list. Because data grids are sorted alphabetically, this row has <b class="Bold">ZZZ</b> for the ID key, which ensures the row appears at the bottom of the grid. All other values in this row can be blank, but the row must have the proper number of tabs in it for the amount of columns in the custom list. In this example, type <b class="Bold">Allocation Total</b> in the <b class="Bold">Inception Date</b> column of the custom list. The information in the custom list is used when initially populating the data source for the grid.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/DataGrid1.png" alt="VA SubAccounts Custom List" title="VA SubAccounts Custom List" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+            <li>Drag a new <b class="Bold">Data Grid</b> from the toolbox on the right side of the screen into the designer surface.</li>
+            <li>
+                <p>Double-click the <b class="Bold">Data Grid</b> to open the Data Grid Properties dialog.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/Wizard10.png" alt="Sample Grid" title="Sample Grid" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+            <li>Do not select the <strong>Place Field on a New Row</strong>  checkbox near the top of the data grid.  </li>
+            <li>Do not enter a <b class="Bold">Class Name</b> near the top of the data grid. </li>
+            <li>In the <b class="Bold">Field Name</b> field, enter a name that is easy to remember because this is used later when writing rules. In this example, the Name is <b class="Bold">Subaccounts</b>.  </li>
+            <li>In <b class="Bold">List Name</b>, select the name of the custom list that was uploaded in step 1. In this example, the List Name is <b class="Bold">VA SubAccounts</b>.</li>
+            <li>Initially, the grid has a single column. Add five more columns by clicking the <b class="Bold">Add Column</b> button  at the top of the left column.</li>
+            <li>
+                <p>Enter a <b class="Bold">Column ID</b> and <b class="Bold">Column Name</b> for each column. The Column ID should match the name of the column in the custom list that was uploaded in step 1. The Column Name is what the user sees as the header caption when the grid is rendered. Columns with a Column Type of Key (Not Displayed) are hidden in FireLight.</p>
+                <p>For this example, the Column ID/Column Name for the data grid columns are from left to right: Subaccount ID/Key Column, Subaccount Name/Subaccount Name, Subaccount Info/SubAccount Info, Asset Class/Asset Class, Inception Date/Inception Date and Allocation/Allocation.</p>
+            </li>
+            <li>
+                <p>Select the <b class="Bold">Column Type</b> for each column.  </p>
+                <ul>
+                    <li><b class="Bold">Subaccount ID</b> column - select <b class="Bold">Key (Not Displayed)</b> in the list. The column will not be visible.</li>
+                    <li><b class="Bold">Subaccount Name</b> column - select <b class="Bold">Text</b> in the list. The column contains display-only data.</li>
+                    <li><b class="Bold">Subaccount Info</b> column - select <b class="Bold">Navigation Link</b> in the list. In this example, the column contains a link to an external website.  This enables the Link Type dropdown list in the Navigation Link Type row of the Data Grid Properties.</li>
+                    <li><b class="Bold">Asset Class</b> column - select <b class="Bold">Text</b> in the list. The column contains display-only data.</li>
+                    <li><b class="Bold">Inception Date</b> column - select <b class="Bold">Text</b> in the list. The column contains display-only data.</li>
+                    <li><b class="Bold">Allocation</b> column - select <b class="Bold">Text Box</b> in the list. The column contains user entered data. The Text Mask option is available for the Text Box. </li>
+                </ul>
+            </li>
+            <li>In <b class="Bold">Width</b>, add the column widths for each column in the data grid. </li>
+            <li>For this example, do not enter a <b class="Bold">Class Name</b> for any of the columns.</li>
+            <li>
+                <p>Because the Column Type is set to Navigation Link, in the <b class="Bold">Link Type</b> list, select <b class="Bold">External</b>. </p>
+            </li>
+            <li>
+                <p>In the Subaccount Info column, go to <b class="Bold">Navigation Link Type</b>. </p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>In the <b class="Bold">Link Type</b> list, select <b class="Bold">External</b>. </li>
+                    <li>In <b class="Bold">URL Column</b>, enter <b class="Bold">LinkURL</b>, which is the name of the column in the VA SubAccounts custom list that contains the external URL links. </li>
+                    <li>Select the <b class="Bold">Open in a New Window</b> checkbox to open the URL link in a new window when a user clicks the external navigation link URL.</li>
+                </ol>
+            </li>
+            <li>
+                <p>In the Allocation column, do the following:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>Go to <b class="Bold">Text Mask</b>. Click the down arrow next to None and select the <b class="Bold">Percent (9,999,999%)</b> text mask from the list. This adds a percent sign (%) after the numeric entry in the column.</li>
+                    <li>In  <b class="Bold">Maximum Length</b>, enter <b class="Bold">3</b>, which is the maximum number of characters allowed to be entered in the column.</li>
+                    <li>In <b class="Bold">Number Of Lines</b>, enter <b class="Bold">1</b>, which is the maximum number of lines allowed for the column.</li>
+                </ol>
+            </li>
+            <li>In the <b class="Bold">Text Alignment</b> list, select an option for the text alignment (Left, Centered, Right)  for each column in the data grid.</li>
+            <li>In <b class="Bold">Font Size</b>, select a font size in the list (Default, Small, Medium, Large, Extra Large, Extra Extra Large)  for each column in the data grid.</li>
+            <li>Click the <b class="Bold">OK</b> button to save and close the Data Grid Properties dialog and then click the <b class="Bold">Save Wizard</b> button on the upper left of the designer page to save the wizard.</li>
+            <li>
+                <p>Add rules to the data grid as applicable. Sample rules and a Rule Node Reference for data grids are provided<MadCap:conditionalText MadCap:conditions="General.Online"> below</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PDF"> in the Admin Help</MadCap:conditionalText>. </p>
+                <p MadCap:conditions="General.Online">Following is the rendered data grid within the Subaccounts panel in FireLight with the Allocation Total field in the last row of the data grid.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/DataGrid3.png" alt="Rendered Subaccounts Data Grid" title="Rendered Subaccounts Data Grid" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+            <li>Data Grid rows can be hidden using rules via the &lt;setrowvisibility&gt; node. See the Rule Node Reference below for an example. For example, include/exclude funds based on a firm ID or product feature such as a living benefit.</li>
+            <li>At this point, no further changes are necessary. The grid is bound to the custom list when a new activity is created in FireLight.</li>
+        </ol>
+        <h2>Clear Grid Data Item Rule for Copy with Changes</h2>
+        <p>Add the following rule for clearing the data item the Data Grid is in when using the Copy with Changes feature in FireLight.</p>
+        <p>The grid and tables are reinitialized when cleared.</p>
+        <p>Check for the copy app status, and if it is copy with changes, then clear out the data item the grid is stored in to reset it to its initial state.</p>
+        <p>The following rule will do the task. Just replace GridDataItemName with the name of the grid’s data item.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>Clear Grid Data Item</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: JavaScript;">&lt;if&gt;
+				&lt;condition&gt;
+				&lt;isnew&gt;
+				&lt;compare op="=="&gt;
+				&lt;const value="copychanges"/&gt; 
+				&lt;copyappstatus/&gt;
+				&lt;/compare &gt;
+				&lt;/condition &gt;
+				&lt;diset dataitemid="GridDataItemName"&gt;
+				&lt;const value="" /&gt;
+				&lt;/diset &gt;
+				&lt;/if&gt;
+			</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <h2 MadCap:conditions="General.Online">Sample Rules with Common Scenarios for Data Grids</h2>
+        <p MadCap:conditions="General.Online">Click the link to view sample rules with common scenarios for Data Grids. </p>
+        <p class="Indent" MadCap:conditions="General.Online"><a href="https://uat.firelighteapp.com/EGAdmin/Help/2.40/Online Output/Rules/GridRuleSet.xml" target="_blank" title="Data Grid Rules" alt="Data Grid Rules">GridRuleSet.xml</a>
+        </p>
+        <h2>Rule Node Reference</h2>
+        <table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Rule Nodes</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 593px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Node Name, Description, Attributes and Parameters</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p>&#160;</p>
+                        <p><b class="Bold">Node Name:</b> setrowvisibility</p>
+                        <p><b class="Bold">Description:</b> Set the visibility of a data grid row</p>
+                        <p><b class="Bold">Attributes:</b> </p>
+                        <ul>
+                            <li>dataitemId: The ID of the Data Grid</li>
+                            <li>key: The ID of the column to match (which also matches the Custom List column)</li>
+                            <li>value: The mapped string value of the Data Grid cell for the row that should be hidden </li>
+                        </ul>
+                        <p><b class="Bold">Example:</b> </p>
+                        <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+                            <MadCap:codeSnippetCopyButton />
+                            <MadCap:codeSnippetCaption>
+                                <p>Set visibility of a data grid row</p>
+                            </MadCap:codeSnippetCaption>
+                            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;!--Shows or hides the row within a data grid.--&gt;
+								&lt;setrowvisibility dataitemid="gridId" key="columnId" value="rowvalue"&gt;
+								&lt;const value="true"/&gt;
+							&lt;/setrowvisibility&gt;</MadCap:codeSnippetBody>
+                        </MadCap:codeSnippet>
+                        <p>The setrowvisibility rule does not work properly in some cases.  If the data grid has not been populated by the time the visibility rule is initialized (which is likely for new apps), it will not be able to process the grid content for visibility. And if the content does change via rules during data entry, there is no coordination between changes to the data and execution of the visibility rule.</p>
+                        <p>An alternative to the setrowvisibility rule is the <a href="../../Product Configuration/Rule Sets/AdvancedRulesCategoryElementDefinitionsReference.htm#rowpropset" target="_blank">rowpropset</a> rule, which is called as follows:</p>
+                        <MadCap:codeSnippet>
+                            <MadCap:codeSnippetCopyButton />
+                            <MadCap:codeSnippetCaption>
+                                <p> Call rowpropset rule</p>
+                            </MadCap:codeSnippetCaption>
+                            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: JavaScript;">
+								&lt;rowpropset prop="IsVisible"&gt;
+								&lt;get name="row" /&gt;
+								&lt;const value="false" /&gt;
+							&lt;/rowpropset&gt;</MadCap:codeSnippetBody>
+                        </MadCap:codeSnippet>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <br /><b class="Bold">Node Name:</b> prop<p><b class="Bold">Description:</b> Represents a property or a cell in a table. The name is used to specify which one it represents.</p><p><b class="Bold">Attributes:</b></p><ul><li>name: The name of the cell or property to be set.</li><li>(optional) format: The formatting provided for the first parameter</li></ul><p><b class="Bold">Parameters:</b></p><ul><li>[string] The value for the cell/prop</li><li>(optional) [bool] The isDisabled state for the property/cell</li></ul></td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p>&#160;</p><b class="Bold">Node Name:</b> table<p><b class="Bold">Description:</b> Opens and then saves the table stored in a dataitem for manipulation. When exiting the node it will save all changes to the dataitem and trigger its change event. Any messages set is posted to the validation collection.</p><p><b class="Bold">Attributes:</b></p><ul><li>type: The type of table. Currently, only Grid is supported.</li><li>list: The name of the custom list to which a grid is bound.</li><li>dataitemId: The DataItem that holds the grid, i.e. the name of the field set in the designer.</li><li>name: The local variable containing the loaded list of rows that represent the table.</li></ul><p><b class="Bold">Parameters:</b> any nodes.</p></td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p>&#160;</p><b class="Bold">Node Name:</b> propset<p><b class="Bold">Description:</b> Sets a property on the loaded table. It only works within the context of the table node.</p><p><b class="Bold">Attributes:</b></p><ul><li>name: The name of the property of the table.</li><li>prop: The property on the item (ListName).</li></ul><p><b class="Bold">Parameters:</b></p><ul><li>[table] The variable of the loaded table.</li><li>[any] The value to set the property.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p>&#160;</p><b class="Bold">Node Name:</b> propget<p><b class="Bold">Description:</b> Gets a property on the loaded table. It only works within the context of the table node.</p><p><b class="Bold">Attributes:</b></p><ul><li>name: The name of the property of the table.</li><li>prop: The property on the item (ListName).</li></ul><p><b class="Bold">Parameters:</b></p><ul><li>[table] The variable of the loaded table.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p>&#160;</p><b class="Bold">Node Name:</b> cellget<p><b class="Bold">Description:</b> Gets the value of a cell in a row. This only works in the context of the table node. A row must be accessed through a list node on the loaded table, such as foreach or listget.</p><p><b class="Bold">Attributes:</b></p><ul><li>name: The name of the column of the row.</li><li>prop: The property on the item (Value, IsDisabled, Message).</li><li>(optional) type: The type the value is parsed into (int, bool, double, etc.).</li><li>(optional) failvalue: The value to return if the parsing fails.</li><li>(optional) parseformatting: Indicates if special formatting should be removed in the parse.</li></ul><p><b class="Bold">Parameters:</b></p><ul><li>A row object pulled from a loaded table.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p>&#160;</p><b class="Bold">Node Name:</b> cellset<p><b class="Bold">Description:</b> Sets the value on cell in a row. This only works in the context of the table node. A row must be accessed through a list node on the loaded table like foreach or listget.</p><p><b class="Bold">Attributes:</b></p><ul><li>name: The name of the column of the row</li><li>prop: The property on the item (Value, IsDisabled, Message)</li><li>(optional) format: How to format the input. Only applies to Message and Value properties.</li></ul><p><b class="Bold">Parameters:</b></p><ul><li>A row object pulled from a loaded table.</li><li>The value to set for the specified property of the cell.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p>&#160;</p><b class="Bold">Node Name:</b> select<p><b class="Bold">Description:</b> Allows Selection and transformation of data in a list. It goes through the list and lets the second parameter change it. I.e. return a column in a row or modify a number.</p><p><b class="Bold">Attributes:</b></p><ul><li>name: The local variable name where the current item in the list is placed.</li></ul><p><b class="Bold">Parameters:</b></p><ul><li>A list.</li><li>The transformation. The result of this is stored in the list that is returned by the node. It can access the current item stored in name.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p>&#160;</p><b class="Bold">Node Name:</b> where<p><b class="Bold">Description:</b> Reduces a list based on the condition. The first node is the list to be reduced. The second node must return a Boolean.</p><p><b class="Bold">Attributes:</b></p><ul><li>name: The local variable name where the current item in the list is placed.</li></ul><p><b class="Bold">Parameters:</b></p><ul><li>A list</li><li>The node with returns if the current item is added. It can access the current item stored in name.</li></ul></td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows" MadCap:conditions="General.Next Release">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                        <p><b class="Bold">Node Name:</b> copytabletodirange</p>
+                        <p class="hangingindent"><b class="Bold">Description:</b> This is a rule node that copies values from a table into a range of dataitems. Both the dataitemids and value to be set are determined by the  format provided for each. The format uses a {VarName} notation where VarName is either INDEX, INDEXPLUSONE or the name of the column in the table/list. The VarName plus the encompassing braces are wholly replaced by the specified value. INDEX denotes the row position starting with 0. Where INDEXPLUSONE denotes the same but starts a 1. The rule goes through each of the rows in the table and uses the formats to generate both the dataitemid and the value for that dataitem. If the dataitem specified does not exist, it is skipped. This rule will still run if none of the dataitems specified exist but will do nothing. If a potential dataitemid exists but insufficient rows are in the table, it will not be set. The {VarName} allows the use of C# string formatting where a colon is used to specify a format. Where using {INDEX:00} will ensure the index will result in values like 00, 01, etc. Since the columns are stored as string only, formats for the string class will work.</p>
+                        <p><b class="Bold">Attributes:</b>
+                        </p>
+                        <ul>
+                            <li>
+                                <p>List: the name of the variable that the table/list is stored.</p>
+                            </li>
+                            <li>
+                                <p>Idformat: the format to generate the dataitemid to set.</p>
+                            </li>
+                            <li>
+                                <p>Valueformat: the format to generate the value being set to the dataitem.</p>
+                            </li>
+                        </ul>
+                        <p><b class="Bold">Example:</b>
+                        </p>
+                        <MadCap:codeSnippet>
+                            <MadCap:codeSnippetCopyButton />
+                            <MadCap:codeSnippetCaption>
+                                <p>copytabletodirange</p>
+                            </MadCap:codeSnippetCaption>
+                            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;table type="Grid" list="nameofcustomlist" name="mylist" dataitemid="mygrid"&gt;
+								&lt;copytabletodirange list="mylist" idformat="Column1_{INDEX}" valueformat="{Column1} Test" /&gt;
+							&lt;/table&gt;</MadCap:codeSnippetBody>
+                        </MadCap:codeSnippet>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

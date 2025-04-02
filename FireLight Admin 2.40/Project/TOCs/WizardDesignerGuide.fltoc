@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Print Only Topics/WizardDesignerGuideTitle.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    conditions="General.PDF" />
+  <TocEntry
+    Title="WordCopyright"
+    Link="/Content/Print Only Topics/WordCopyright.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.PDF"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Word8_5X11/2017WordCopyright8_5X11.flpgl"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same"
+    ChapterNumberReset="continue"
+    ComputeToc="false"
+    ReplaceMergeNode="false" />
+  <TocEntry
+    Title="WizardDesignerGuide"
+    Link="/Project/TOCs/WizardDesignerGuide.fltoc"
+    conditions="General.PDF"
+    StartSection="false"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same"
+    ChapterNumberReset="continue"
+    ComputeToc="false" />
+  <TocEntry
+    Title="Wizard Designer"
+    Link="/Content/Design/Wizards/Wizard Designer.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <TocEntry
+      Title="Create a Wizard Workflow"
+      Link="/Content/Design/Wizards/Create a Wizard Workflow.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Locking of Wizards, Rule Sets, and Rules in the Wizard Designer"
+      Link="/Content/Design/Wizards/Locking of Wizards Rule Sets and Rules in the Wizard Designer.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Open a Wizard"
+      Link="/Content/Design/Wizards/Open a Wizard.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Wizard Grid Layout"
+      Link="/Content/Design/Wizards/Wizard Grid Layout.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Add and Delete Pages and Section Breaks"
+      Link="/Content/Design/Wizards/Add and Delete Pages and Section Breaks.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Add Containers and Fields"
+      Link="/Content/Design/Wizards/Add Containers and Fields.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+      <TocEntry
+        Title="Address Autocomplete"
+        Link="/Content/Design/Wizards/Address Autocomplete.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Check Box"
+        Link="/Content/Design/Wizards/Check Box.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Comment Box"
+        Link="/Content/Design/Wizards/Comment Box.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Custom Action"
+        Link="/Content/Design/Wizards/Custom Action.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Data Grid"
+        Link="/Content/Design/Wizards/Data Grid.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Date Picker"
+        Link="/Content/Design/Wizards/DatePicker.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Divider"
+        Link="/Content/Design/Wizards/Divider.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Dropdown List"
+        Link="/Content/Design/Wizards/Dropdown List.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Group"
+        Link="/Content/Design/Wizards/Group.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Image"
+        Link="/Content/Design/Wizards/Image.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Increment Button"
+        Link="/Content/Design/Wizards/Increment Button.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Navigation Link"
+        Link="/Content/Design/Wizards/Navigation Link.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Panel"
+        Link="/Content/Design/Wizards/Panel.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Radio Button"
+        Link="/Content/Design/Wizards/Radio Button.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Schedule"
+        Link="/Content/Design/Wizards/Schedule.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Slider"
+        Link="/Content/Design/Wizards/Slider.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Text"
+        Link="/Content/Design/Wizards/Text.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Text Box"
+        Link="/Content/Design/Wizards/Text Box.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Copy Fields to a Wizard from a Form"
+      Link="/Content/Design/Wizards/Copy Fields to a Wizard from a Form.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="View a Wizard in the Wizard Library"
+      Link="/Content/Design/Wizards/View a Wizard in the Wizard Library.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Rules Window"
+      Link="/Content/Design/Wizards/Rules Window - Wizards.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+      <TocEntry
+        Title="Add a New Rule from a Pre-Built Rule Template"
+        Link="/Content/Design/Wizards/Add a New Rule from a Pre-Built Rule Template.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Add a Custom Rule for a Selected Field"
+        Link="/Content/Design/Wizards/Add a Custom Rule for a Selected Field.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Delete Rules"
+        Link="/Content/Design/Wizards/Delete Rules.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Export Rules to a Text File"
+        Link="/Content/Design/Wizards/Export Rules to a Text File.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Search and Filter Rules for a Field"
+        Link="/Content/Design/Wizards/Search and Filter Rules for a Field.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Save a Wizard"
+      Link="/Content/Design/Wizards/Save a Wizard.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  </TocEntry>
+  <TocEntry
+    Title="Wizard Library"
+    Link="/Content/Design/Wizard Library/Wizard Library.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <TocEntry
+      Title="Create a Wizard"
+      Link="/Content/Design/Wizard Library/Create a Wizard.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Add a Template Wizard and a Rule Set"
+      Link="/Content/Design/Wizard Library/Add a Template Wizard and Rule Set.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Delete a Wizard"
+      Link="/Content/Design/Wizard Library/Delete a Wizard.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Export a Wizard"
+      Link="/Content/Design/Wizard Library/Export a Wizard.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Go to the Wizard Designer"
+      Link="/Content/Design/Wizard Library/Go to the Wizard Designer.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Import a Wizard"
+      Link="/Content/Design/Wizard Library/Import a Wizard.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Lock and Unlock Wizards for Editing"
+      Link="/Content/Design/Wizard Library/Lock and Unlock Wizards for Editing.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Search for a Wizard"
+      Link="/Content/Design/Wizard Library/Search for a Wizard.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Search for Fields in Wizard Packages"
+      Link="/Content/Design/Wizard Library/Search Fields in Wizard Packages.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="View Wizard History"
+      Link="/Content/Design/Wizard Library/Wizard History.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  </TocEntry>
+</CatapultToc>

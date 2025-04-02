@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The FireLight team has been working toward meeting compliance of AA W3C standards for Web Content Accessibility Guidelines (WCAG) version 2.1 over a series of base releases. As of the August 2.21 release, the platform is now AA compliant, with documented exceptions for Reflow text (WCAG 1.4.10) and Dialog on Dialog (WCAG 2.1.1, 2.1.2). These items are not able to be resolved without a full redesign of the FireLight UI. We will continue to provide options to clients via the CSS and Admin to control how they want to meet the standards, as some compliance items are handled via client-controlled settings.</p>
+        <p>For the February release, we will resolve issues related to orientation with localized text and resizing text. These items are mostly isolated to iPads and similar tablet devices, but is corrected with this release for a better user experience. The orientation in portrait mode on an iPad when the pages were localized were causing text to be cut off the page or require the user to scroll unnecessarily. The same type of issues were also being seen when the entire page was resized/zoom utilized.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Orientation works as expected in portrait modes on iPad when text is localized (French or Spanish).</p>
+            </li>
+            <li>
+                <p>Resizing text/adjusting zoom of page does not cause text to be cut off the page.</p>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="General.Online">
+	<head>
+		<link href="../../../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+		<link href="../../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+		<meta name="description" content="Client Quote Proposal email template guidelines and usage." />
+	</head>
+	<body>
+		<h1><a name="top"></a>Client Quote Proposal</h1>
+		<p><b class="Bold">NOTE:</b> Annuity product quotes are not yet fully functional.</p>
+		<p>
+			<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailColumnDesc.flsnp" />
+		</p>
+		<p><b class="Bold">NOTE:</b> Hexure provides the proposal template with the Quote Activity. The client logo is added automatically if it exists. The template is standard and cannot be modified by clients. Provide your logo in .png format to the Strategic Account Manager for adding it to your organization so it appears in the proposal.</p>
+		<table style="border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;mc-table-style: url('../../../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+			<caption class="Table">Client Quote Proposal </caption>
+			<col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+			<thead>
+				<tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+					<th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Action, To Name/Email, From Name/Email, CC Address, Available Tags, and Notes</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">Action</p>
+						<p>Sends the quote proposal to the client</p>
+						<p>Template Name: Client Quote Proposal<sup>1</sup></p>
+						<p>Email Subject Line: Quote Proposal for &lt;CLIENT_NAME&gt;</p>
+						<p>Message:</p>
+						<p class="Indent2">Dear &lt;CLIENT_NAME&gt;,</p>
+						<p class="Indent2">You are receiving this notice in reference to the quote you recently requested.  Please use the link below to review the quote outlining the products we discussed.  This email link expires in &lt;EXPIRY_DAYS&gt; days. Please take action prior to the expiration.</p>
+						<p class="Indent2">This quote was prepared based on information provided such as age, gender, risk class, product type, coverage amount and term length.  These rates may be different from the final application or approval received from the issuing company.</p>
+						<p class="Indent2">Thank you for your interest in these products.</p>
+						<p class="Indent2">&lt;AGENT_NAME&gt;</p>
+						<p class="Indent2">To review the quote, click on &lt;URL_LINK&gt;.  If a new window does not automatically appear, you may have to copy the link and paste it into the address bar of a new browser window.</p>
+						<p>This template is available for sending when the <b class="Bold">Quote</b> checkbox is selected in Organization Configuration/Groups page on the <MadCap:xref href="../../Groups/Activity Access.htm" target="_blank" alt="Activity Access">Activity Access</MadCap:xref> tab. Also, select the number of days in the <b class="Bold">Quote Email Expiration</b> list on the Activity Access tab.</p>
+						<p><b class="Bold">See Also:</b>
+						</p>
+						<MadCap:snippetBlock src="../../../Resources/Snippets/Features/QuoteTopics.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<p class="thead1">To Name / Email</p>
+						<p>Client Name/Email typed in email fields or pre-filled from mapped dataitems</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">From Name / Email</p>
+						<p>Default: Session User’s Preference Name/ Email<sup>2</sup></p>
+						<p>Use Agent: Owning Agent’s Preference Name/Email</p>
+						<p>Use DMARC<sup>1</sup>: Organization's Support Email</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<p class="thead1">CC Address</p>
+						<p> If <a href="../../Groups/App.htm#EnableCcSenderInAllRequests" target="_blank" alt="Enable Cc Sender In All Requests">Enable Cc Sender In All Requests</a> is set in Organization Configuration/Groups page on the App tab, cc email sent to ‘From Email’ address</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">Available Tags<sup>3</sup></p>
+						<p>&lt;AGENT_NAME&gt;</p>
+						<p>&lt;CLIENT_NAME&gt;<sup>4</sup></p>
+						<p>&lt;COMPANY_NAME&gt;</p>
+						<p>&lt;DATE_TIME&gt; (current datetime in UTC)</p>
+						<p>&lt;HYPER_LINK&gt;</p>
+						<p>&lt;EXPIRY_DAYS&gt;<sup>5</sup></p>
+						<p>&lt;URL_LINK&gt;</p>
+						<p>ApplicationSearchItem<sup>4</sup>  (e.g., add &lt;CLIENT_NAME&gt;)</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+						<p class="thead1">Notes:</p>
+						<p>
+							<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailNote1.flsnp" />
+						</p>
+						<p>
+							<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailNote2.flsnp" />
+						</p>
+						<p>
+							<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailNote3.flsnp" />
+						</p>
+						<MadCap:snippetBlock src="../../../Resources/Snippets/Email/EmailNote4.flsnp" />
+						<p><sup>5</sup>Add the &lt;EXPIRY_DAYS&gt; [count] variable in the quote proposal email template to convey the number of days until expiration. See the <b class="Bold">Quote Email Expiration</b> days option on the Organization Configuration/Groups page/<MadCap:xref href="../../Groups/Activity Access.htm" alt="Activity Access">Activity Access</MadCap:xref> tab.</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<MadCap:snippetBlock src="../../../Resources/Snippets/Email/EmailSeeAlso.flsnp" />
+		<p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+		</p>
+	</body>
+</html>

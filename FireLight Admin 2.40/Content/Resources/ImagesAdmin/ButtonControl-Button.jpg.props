@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileProperties>
+    <ImageOverlay Profile="D:\Documents\My Profiles\FireLightHighQualityPRINTProfile.capro" ProfileHash="523a992a8c67c4dbfe7dfa4d982e1701b6912727" ScreenRectangle="2556,264,19,19">
+        <OriginalImage Type="Image" ShapeTimeSpan="10000" Folder="D:\Documents\My Projects\FireLightAdmin-TopNavigation\Content\Resources\Images" Border="solid" ExportFormat="jpg" medium_print_EnableFormat="true" AutoAdjust="true" ComputedWidth="20" ComputedHeight="21" EnableGrayScaleFormat="false" DPI="96" medium_print_ExportFormat="jpg" medium_screen_and__max_width__64_063em__ExportFormat="jpg" medium_screen_and__max_width__40em__ExportFormat="jpg" Title="Button Control" Alt="Button Control" medium_print_DPI="300" medium_print_OutputScaleFactor="3" medium_print_ColorDepth="32" medium_print_JPEGQuality="100" EnableCropRectangle="true" CropRectangle="0,0,18,19" medium_screen_and__max_width__64_063em__OutputScaleFactor="1" medium_screen_and__max_width__64_063em__DPI="96" OutputScaleFactor="1" BorderWidth="1" BorderColor="#4682b4" ImageBlurFactor="2" ImageShadeFactor="5" JPEGQuality="100" FileName="" PaddingLeft="0" PaddingRight="0" PaddingTop="0" PaddingBottom="0">SUkqAAIBAACAPx0JF/gCDQeEQmFQuGQ2HQkAgcRgABBAkwcBAB9uE2wWHx+QSGQAIIlSKA0fRqOR6RS2XSEBA+LzGLxuOy+cTmFzSKTKVTedUGczyeTaWUKkTCfUWVw1wmYAEVNCIAMmdPYAJAzIIAGIPy+iT6jSBmHMAA5XhWXGgongAIoaUGwzWmyAagBPJIpgA4OmHhdvABnm5NACJ3Kl2K6yKy2e0w22W64UmezPFUCW3e83u+wfAYLCYbKZXSWOc420WrI2+46ODXOf0eX5pTjEAD8s4XD67SUzMbzga/E3Tf8HebDTcbgcjF8rXczi86k9DZdKkSQpScgACAgAEAD+AAQAAQAAAAAAAAAAAQQAAQAAABMAAAABAQQAAQAAABMAAAACAQMABAAAAMgBAAADAQMAAQAAAAUAAAAGAQMAAQAAAAIAAAARAQQAAQAAAAgAAAAVAQMAAQAAAAQAAAAWAQQAAQAAABMAAAAXAQQAAQAAAPkAAAAaAQUAAQAAANABAAAbAQUAAQAAANgBAAAcAQMAAQAAAAEAAAAoAQMAAQAAAAIAAAA9AQMAAQAAAAIAAABSAQMAAQAAAAIAAAAAAAAACAAIAAgACAAAdwEA6AMAAAB3AQDoAwAA</OriginalImage>
+        <Shapes>
+        </Shapes>
+        <Variables />
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

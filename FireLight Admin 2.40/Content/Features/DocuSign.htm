@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="DocuSign feature; DocuSight setup; DocuSign user instructions" />
+    </head>
+    <body>
+        <h1><a name="top"></a>DocuSign Integration</h1>
+        <table style="border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;mc-hide-bottom-ruling: true;">
+            <caption class="Table">DocuSign Integration</caption>
+            <col style="width: 770px;" />
+            <thead>
+                <tr>
+                    <th>Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p class="thead1">Description</p>
+                        <p>The FireLight<sup MadCap:conditions="General.Online">®</sup> integration with DocuSign allows the option for clients to use the DocuSign services for their e-signature captures. </p>
+                        <ul>
+                            <li>
+                                <p>DocuSign must be honored any time it is enabled regardless of the organization initiating the activity. When carriers enable DocuSign and deploy the activity to distribution, FireLight must honor DocuSign for the distribution as well as honor it in the carrier organization.</p>
+                            </li>
+                            <li>
+                                <p>DocuSign will support Remote Sign only.</p>
+                            </li>
+                            <li>
+                                <p>FireLight hands off the signing process for remote sign when DocuSign is enabled (email notifications and signing are completed by DocuSign). </p>
+                                <p>When the activity has been signed, Firelight receives back the signature on the original documents. These documents include the signatures of the user, and each document is individually hashed as to secure the authentication of these signatures. </p>
+                                <p>A full audit recorded with the DocuSign signatures is captured as a signature certificate. This is not appended to the FireLight audit report but is sent as a separate document to carriers along with the Audit report. Additionally, the DocuSign signature certificate is listed in the Application Packet Definition to identify the additional certificate to the organization.</p>
+                                <p>The Envelope ID is added to the Audit report to be able to tie the FireLight Audit Report and the DocuSign Signature certificate together.</p>
+                                <p>When the signatures are canceled through DocuSign, the Signing Certificate is deleted automatically, and the new Signing Certificate is uploaded.</p>
+                                <p>When the documents are received, a FireLight audit is made within the audit history and audit report.  The display status is "DocuSign Signatures Complete" along with the timestamp and the session user of "DocuSign." The FireLight Audit message says "All parties have signed {0} through DocuSign." {0} is the Application Name.  The DocuSign Signing Certificate is attached to the FireLight Audit Report. The FireLight Audit and DocuSign Signing Certificate are available for review when the application is submitted. This includes the FireLight Admin Report, Review Queue, and the outbound via the provider. The FireLight Audit message within the audit history can be localized.</p>
+                            </li>
+                            <li>
+                                <p>The DocuSign service can be used at an organizational level or set by a data item for a more detailed process (i.e., for a specific product, state, etc.).</p>
+                            </li>
+                            <li>
+                                <p>When DocuSign is enabled, the Signature Audit is not captured within the FireLight Signing audit. However, FireLight  receives a signature audit back from DocuSign that is attached to the application and sent within the client's payload.</p>
+                            </li>
+                            <li>
+                                <p>FireLight needs the signed documents with the digital signature applied and the DocuSign signature audit returned 100% complete to FireLight. The clients that need DocuSign implemented have the DocuSign digital signature, tamper evidence, and audit approved.</p>
+                            </li>
+                            <li>
+                                <p>FireLight is notified of status changes via the DocuSign Webhook. If the call to notify FireLight that signatures are complete fails, FireLight will remain in “Signatures” status. However, DocuSign does resend the notification after 24 hours of the failure. DocuSign also provides the ability to manage failed notifications from their portal. This is a manual process and cannot be managed by FireLight support. It can be managed only by a client organization admin with authority to access the DocuSign portal.  For information about viewing errors in DocuSign Connect that may have occurred when DocuSign attempts to communicate with FireLight, see the <MadCap:conditionalText MadCap:conditions="General.PDF"><em>DocuSign Connect Failures.pdf</em></MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.Online"><![CDATA[  ]]><a href="../Resources/DesignDocs/DocuSign Connect Failures.pdf" target="_blank" title="DocuSign Connect Failures.pdf" alt="DocuSign Connect Failures.pdf">DocuSign Connect Failures.pdf</a></MadCap:conditionalText> in Admin Help.</p>
+                            </li>
+                            <li>
+                                <p>A user can cancel the signature from FireLight and from DocuSign up until the last signer has signed.</p>
+                            </li>
+                            <li>
+                                <p>The user must have authentication when sending Personally Identifiable Information (PII) to DocuSign, so FireLight will still send the last 4 digits of the SSN and DOB as well as the mobile phone number of each party to DocuSign.</p>
+                            </li>
+                            <li>
+                                <p>SMS Text Verification is used to verify each signer, including the agent.</p>
+                            </li>
+                            <li>
+                                <p>Supplemental documentation is hidden from DocuSign signers if a signature control is not present. If a Signature control is present, the Admin user needs to set the form protection to "Signer" so only the applicable signer sees this document. Supplemental documentation is sent back to FireLight and attached to the application to be submitted to the carrier organization.</p>
+                            </li>
+                            <li>
+                                <p>The Third-Party Usage report includes a Config Group column for DocuSign. See <MadCap:xref href="../Utilities/Reports/Detail Reports.htm" alt="Detailed Activity Reports">Detailed Activity Reports</MadCap:xref> in Admin Help for a description and sample report.</p>
+                            </li>
+                        </ul>
+                        <p>Impacts:</p>
+                        <ul style="list-style-type: circle;">
+                            <li>
+                                <p>FireLight E-Signatures - Specifically the "Send Email Request" or Remote Signing capability</p>
+                            </li>
+                            <li>
+                                <p>Organization Settings - Enabling the DocuSign option.</p>
+                            </li>
+                            <li>
+                                <p>Third-Party Configuration Table - Service type for DocuSign, new column for sub firm "Control Group."</p>
+                            </li>
+                            <li>
+                                <p>App Changes - New UI page for "DocuSign Signing Ceremony" information that can be entered and initiate the call to DocuSign.</p>
+                            </li>
+                            <li>
+                                <p>Reports - The Third-Party configuration report is altered to show the DocuSign signed applications and add the Control Group.</p>
+                            </li>
+                            <li>
+                                <p>Audits - New audits is created to capture the calls to DocuSign, any cancellations, and the completion of the signature process.</p>
+                            </li>
+                            <li>
+                                <p>Display Statuses - New display statuses show when the signature process is in process, canceled, or completed through DocuSign.</p>
+                            </li>
+                            <li>
+                                <p>Transfer - Transfer is disabled when DocuSign is used, even if it is selected within the Groups settings. Share is not impacted.</p>
+                            </li>
+                            <li>
+                                <p>Client Fill and Sign - Client Fill and Sign is disabled when DocuSign is used, but also notifies the user of this through a tool tip.</p>
+                            </li>
+                        </ul>
+                        <MadCap:pageBreak />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="thead1">DocuSign Services Setup</p>
+                        <p>To use the DocuSign services, contracting needs to be established between your organization and DocuSign.  Please reach out to DocuSign to start this process.</p>
+                        <p>To validate and authenticate a user through FireLight using DocuSign, SMS Text Verification is used. SMS verification incurs a per use fee and must be enabled throughout the account’s recipient security settings through DocuSign.  For more information, please review <a href="https://support.docusign.com/guides/ndse-user-guide-recipient-authentication" target="_blank" title="https://support.docusign.com/guides/ndse-user-guide-recipient-authentication" alt="https://support.docusign.com/guides/ndse-user-guide-recipient-authentication">https://support.docusign.com/guides/ndse-user-guide-recipient-authentication</a>.</p>
+                        <p><b class="Bold">NOTE:</b> Use of SMS Text Verification requires the user to have a mobile phone to receive the SMS text. This is currently enabled only for U.S. numbers.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="thead1">FireLight Setup</p>
+                        <p>Clients wanting to use the DocuSign service will need to contact Hexure to enable the service. Contact your <MadCap:variable name="General.ProductName" /> Strategic Account Manager to create an addendum to the contract to support the DocuSign integration. Once the licensing agreement is completed, the DocuSign features in the Admin tool is available for setup.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="thead1">Admin Setup</p>
+                        <p class="note"><b class="Bold">NOTE:</b> See the <em MadCap:conditions="General.PDF">DocuSign Setup Guide</em><a href="../Resources/PDFGuides/DocuSign Setup Guide.pdf" target="_blank" title="DocuSign Setup Guide" alt="DocuSign Setup Guide"><MadCap:conditionalText MadCap:conditions="General.Online">DocuSign Setup Guide</MadCap:conditionalText></a> in Admin Help for more detailed setup information.</p>
+                        <ol>
+                            <li>
+                                <p>To use DocuSign at an organization level: </p>
+                                <ul>
+                                    <li>
+                                        <p>In Organization Configuration, Organization Settings on the <b class="Bold">Signature</b> tab: in the <b class="Bold">Signature System</b> list, select <b class="Bold">DocuSign</b> to enable DocuSign at the organization level. This forces use of DocuSign at the organization level. This setting is honored even if a carrier's products are deployed into a distributor's environment. </p>
+                                    </li>
+                                    <li>
+                                        <p>Ensure the <b class="Bold">Allow E-Signature</b> checkbox is selected. DocuSign requires e-signature. <b>NOTE</b>: If "FLI_DECLINED_ESIGN=true, this data item overrides the "Use DocuSign Signature" checkbox and the user will need to wet sign</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>In Organization Configuration, Organization Settings on the <b class="Bold">Admin</b> tab, add the Third-Party Configuration settings for DocuSign. DocuSign provides the configuration IDs and values. For more information on the setup, please see the <em MadCap:conditions="General.PDF">DocuSign Setup Guide</em><a href="../Resources/PDFGuides/DocuSign Setup Guide.pdf" target="_blank" title="DocuSign Setup Guide" alt="DocuSign Setup Guide"><MadCap:conditionalText MadCap:conditions="General.Online">DocuSign Setup Guide</MadCap:conditionalText></a> provided in the home dashboard of the Admin Help.</p>
+                                <p><b class="Bold">NOTE:</b> For each DocuSign credential, adding the optional Config Group value provides the distributor a way to have credentials associated to certain carriers and can even write rules enabling DocuSign if a certain subfirm value is passed through. </p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>Click the <b>Click to Edit</b> link next to <b>Third-Party Service Config</b> to open the <b class="Bold">Third-Party Configuration</b> dialog.</li>
+                                    <li>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>ClientID</b>. In <b>Config Value</b>, type the Client ID that DocuSign provided. If applicable, add an optional <b class="Bold">Config Group</b>. In <b>Service Type</b>, select <b>DocuSign</b> and click the <b>Add Config</b> button.</li>
+                                    <li>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>HMACKey</b>. In <b>Config Value</b>, type the HMAC Key that DocuSign provided. If applicable, add an optional <b class="Bold">Config Group</b>. In <b>Service Type</b>, select <b>DocuSign</b> and click the <b>Add Config</b> button.</li>
+                                    <li>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>RSAPrivateKey</b>. In <b>Config Value</b>, type the RSA Private Key that DocuSign provided. If applicable, add an optional <b class="Bold">Config Group</b>. In <b>Service Type</b>, select <b>DocuSign</b> and click the <b>Add Config</b> button.</li>
+                                    <li>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>UserID</b>. In <b>Config Value</b>, type the User ID that DocuSign provided. If applicable, add an optional <b class="Bold">Config Group</b>. In <b>Service Type</b>, select <b>DocuSign</b> and click the <b>Add Config</b> button.</li>
+                                    <li>
+                                        <p>Click the <b>Add Config</b> button. </p>
+                                    </li>
+                                </ol>
+                                <p MadCap:conditions="General.Online">Examples:</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/Capture125.png" alt="" title="" MadCap:conditions="General.Online" />
+                                </p>
+                                <p MadCap:conditions="General.Online">Without Config Groups</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/Capture126.png" alt="Third Party Service Configuration - DocuSign" title="Third Party Service Configuration - DocuSign" MadCap:conditions="General.Online" />
+                                </p>
+                                <p MadCap:conditions="General.Online">With Config Groups</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/Capture140.png" alt="Third Party Configuration: DocuSign with Config Groups" title="Third Party Configuration: DocuSign with Config Groups" MadCap:conditions="General.Online" />
+                                </p>
+                            </li>
+                        </ol>
+                        <p><b class="TableBlue">Designer/Forms</b>
+                        </p>
+                        <p>Forms with signature controls need to have the <b class="Bold">Protection</b> option set to <b class="Bold">Signer</b> in the Form Properties so it is visible only to the applicable signer. If there are multiple signers, those signers will see the document as well. Any document that they don't need to sign will have its visibility determined by the form Protection property. See <MadCap:xref href="../Design/Forms/Set Form Properties.htm" alt="Set Form Properties">Set Form Properties</MadCap:xref> for instructions.</p>
+                        <p>All documents are sent to DocuSign, even in cases where no signers can see the document. Any document that no-one needs to sign is a supplemental document that will display in a collapsed view for people who can still see it.</p>
+                        <p><b class="TableBlue">Rules</b>
+                        </p>
+                        <p>Distributors can use the FLI_DOCUSIGN_ESIGN to write rules that force the use of the DocuSign functionality if the carrier does not have the organization setting selected. However, this data item will not be able to turn off the use of DocuSign. </p>
+                        <ul>
+                            <li>
+                                <p>If FLI_DOCUSIGN_ESIGN = true, the distributor who has this set is able to force the use of the DocuSign functionality for that Product or Products that contain the rule set.</p>
+                            </li>
+                            <li>
+                                <p>If FLI_DOCUSIGN_ESIGN = false, this will not produce any values.</p>
+                            </li>
+                        </ul>
+                        <p>When turning this functionality on, the distributors will need to use the following rule template.</p>
+                        <MadCap:codeSnippet>
+                            <MadCap:codeSnippetCopyButton />
+                            <MadCap:codeSnippetCaption>
+                                <p>FLI_DOCUSIGN_ESIGN</p>
+                            </MadCap:codeSnippetCaption>
+                            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">&lt;diset dataitemid="FLI_DOCUSIGN_ESIGN"&gt;
+    &lt;const value="true" type="String" /&gt;
+&lt;/diset&gt;</MadCap:codeSnippetBody>
+                        </MadCap:codeSnippet>
+                        <p>In addition, when a distributor wants to associate the config group value (a unique identifier much like Firm ID) with a specified organization, they can use the following rule for that value to be used with the DocuSign credentials. </p>
+                        <p>For example, if Distributor 1 has a firm ID of "ABCD" for a carrier that needs to use DocuSign, then within the third-party configuration, this Distributor can set up this firm with the DocuSign credentials, and then write a rule that when this FIRM ID is sent in via the SSO, that the DocuSign credentials are used associated with the same firm ID.</p>
+                        <MadCap:codeSnippet>
+                            <MadCap:codeSnippetCopyButton />
+                            <MadCap:codeSnippetCaption>
+                                <p>FLI_DOCUSIGN_ESIGN with FLI_FIRM_ID</p>
+                            </MadCap:codeSnippetCaption>
+                            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">&lt;if&gt;
+  &lt;condition&gt;
+    &lt;compare op="=="&gt;
+      &lt;diget dataitemid="FLI_FIRM_ID" /&gt;
+      &lt;const value="ABCD" /&gt;
+    &lt;/compare&gt;
+  &lt;/condition&gt;
+  &lt;diset dataitemid="FLI_DOCUSIGN_ESIGN"&gt;
+      &lt;const value="true" type="String" /&gt;
+  &lt;/diset&gt;
+
+  &lt;diset dataitemid="qwq"&gt;
+      &lt;const value="ABCD" type="String" /&gt;
+  &lt;/diset&gt;
+&lt;/if&gt;
+</MadCap:codeSnippetBody>
+                        </MadCap:codeSnippet>
+                        <p>Use the FLI_THIRDPARTY_CONFIG_GROUP data item to associate the config group value within the third-party configuration table inside rules. This is helpful when a distributor wants to associate the DocuSign credentials to a specific carrier organization but needs to identify that org using the unique identifier that is stored within the third-party configuration table. If FLI_THIRDPARTY_CONFIG_GROUP has a wrong value, then no organization is associated with the DocuSign and is used universally across all carrier organizations (get a 500 error). Currently, the FLI_THIRDPARTY_CONFIG_GROUP is used only by DocuSign.</p>
+                        <p>The following rule can be used to associate the Config Group found in the third-party configuration table to the DocuSign functionality. The FLI_THIRDPARTY_CONFIG_GROUP data item can be used within any rule template or rule set within FireLight.</p>
+                        <MadCap:codeSnippet>
+                            <MadCap:codeSnippetCopyButton />
+                            <MadCap:codeSnippetCaption>
+                                <p>FLI_THIRDPARTY_CONFIG_GROUP</p>
+                            </MadCap:codeSnippetCaption>
+                            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: JavaScript;">&lt;if&gt;
+  &lt;condition&gt;
+    &lt;compare op="=="&gt;
+      &lt;diget dataitemid="FLI_FIRM_ID" /&gt;
+      &lt;const value="ABCD" /&gt;
+    &lt;/compare&gt;
+  &lt;/condition&gt;
+  &lt;diset dataitemid="FLI_DOCUSIGN_ESIGN"&gt;
+      &lt;const value="true" type="String" /&gt;
+  &lt;/diset&gt;
+  &lt;diset dataitemid="FLI_THIRDPARTY_CONFIG_GROUP"&gt;
+      &lt;const value="ABCD" type="String" /&gt;
+  &lt;/diset&gt;
+&lt;/if&gt;</MadCap:codeSnippetBody>
+                        </MadCap:codeSnippet>
+                        <p><b class="Bold">NOTE:</b> Communication between the activity and DocuSign (web service calls, initiation, cancels, their response, etc.) can be viewed within the <MadCap:xref href="../Support/API Insights.htm" alt="API Insights">API Insights</MadCap:xref> tool.  This ensures the ability to help troubleshoot for the clients that is using the DocuSign functionality.</p>
+                        <p><b class="TableBlue">SMS Text Verification Setup</b>
+                        </p>
+                        <p>See <MadCap:xref href="SMS Text Authentication.htm" target="_blank" title="SMS Text Authentication" alt="SMS Text Authentication">SMS Text Authentication</MadCap:xref> for setup instructions (includes Validate Identity Verification setup). We recommend also using the Validate Identity Verification, as it would be an additional validation method when using the DocuSign services.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="thead1">User Experience</p>
+                        <ol>
+                            <li>
+                                <p>User clicks <b class="Bold">CONTINUE</b> on the requirements notification or clicks the <b class="Bold">CONTINUE</b> button on the upper right to access Signatures.</p>
+                            </li>
+                            <li>
+                                <p>User clicks <b class="Bold">Use E-Signature</b> to start the E-Signature process in DocuSign. Optionally, user clicks <b class="Bold">Decline E-Signature</b> to have the client sign paper copies of the application. </p>
+                            </li>
+                            <li>
+                                <p>User fills in Agent and Client signer type information, including the signer's name and email, agent's name and email, and any authentication for the signer, which includes the last 4 of the SSN, DOB, and the Mobile Phone Number. The Agent information will always show at the top. User clicks <b class="Bold">Initiate DocuSign</b>. If there is a failure with the call, a message states, "An error occurred while attempting to reach DocuSign. Please try initiating this service again." The user can then select the <b class="Bold">Initiate DocuSign</b> button again to make another call to DocuSign.</p>
+                            </li>
+                            <li>
+                                <p>The DocuSign Signatures page displays the signer status as Pending Signatures for each signer type.</p>
+                                <p> In FireLight, the signatures are in Pending Signatures or Signatures status until the signatures are completed.</p>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>Optionally, the user can click <b class="Bold">Cancel DocuSign Signatures</b> to cancel the DocuSign Signatures and return to the Data Entry step. The signers receive an email from DocuSign that the signatures were voided.</p>
+                                    </li>
+                                    <li>
+                                        <p>Optionally, the user can click <b class="Bold">Unlock Application</b> on the upper right of the Signatures page and click <b class="Bold">Unlock Application</b> on the Unlock Application dialog to cancel the signature process, unlock the activity, and return to the Data Entry step.</p>
+                                    </li>
+                                    <li>
+                                        <p>Optionally, the user can click <b class="Bold">Back to Application</b> on the upper right of the Signatures page to return to the activity in the data entry view without leaving the Signatures step. The user clicks <b class="Bold">CONTINUE</b> to return to the Signatures step.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>The agent and client signers each receive an email from DocuSign that provides the names of the documents for them to sign, DocuSign instructions, and a Review Documents button they can click to proceed to the signing ceremony in DocuSign. In the email, the signer clicks the <b class="Bold">Review Documents</b> button to proceed to the signature capture in DocuSign.</p>
+                            </li>
+                            <li>
+                                <p>The signer receives an email for SMS Authentication. The signer verifies the phone number and clicks <b class="Bold">SEND SMS</b>. The signer enters the code they received in the SMS message and clicks <b class="Bold">CONFIRM CODE</b>.</p>
+                            </li>
+                            <li>
+                                <p>The DocuSign home page opens. The signer does the following.</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>
+                                        <p>Signer clicks the  <b class="Bold">Electronic Record and Signature Disclosure</b> link to read the disclosures and then selects <b class="Bold">I agree to use electronic records and signatures</b> checkbox. The CONTINUE button becomes available. </p>
+                                    </li>
+                                    <li>
+                                        <p>The signer clicks the <b class="Bold">CONTINUE</b> button.</p>
+                                    </li>
+                                    <li>
+                                        <p>On the upper left, the signer clicks <b class="Bold">START</b>.</p>
+                                    </li>
+                                    <li>
+                                        <p>The signer scrolls down to review each document and clicks the <b class="Bold">Sign</b> button where applicable for their signer role. </p>
+                                    </li>
+                                    <li>
+                                        <p>On the Adopt Your Signature dialog, the signer confirms their name, initials, and signature, views the Preview, and clicks the <b class="Bold">ADOPT AND SIGN</b> button to complete the signature. Optionally, the signer can click CANCEL to cancel the signature. The Adopt Your Signature dialog appears only once for the first signature adoption. </p>
+                                    </li>
+                                    <li>
+                                        <p>The signer reviews the next document and clicks the <b class="Bold">Sign</b> button  to automatically fill their signature into the signature blocks until no Sign buttons remain in the documents. The signer may also need to enter the city and state where they are signing the documents.</p>
+                                    </li>
+                                    <li>
+                                        <p>After reaching the end of the documents, the signer clicks the <b class="Bold">FINISH</b> button.</p>
+                                    </li>
+                                    <li>
+                                        <p>In the Save a Copy of Your Document dialog, the signer can use the controls on the upper right to download and print their documents. </p>
+                                        <p>Signer clicks <b class="Bold">NO THANKS</b> to close the dialog without signing up for a free DocuSign account.</p>
+                                        <p>For downloaded documents, a dialog opens. In the notification bar at the bottom of the window, the signer uses the browser settings to open or save the document. Signer clicks <b class="Bold">CLOSE</b> to close the DocuSign dialog.</p>
+                                        <p>For printed documents, DocuSign generates a PDF file and opens the file. Signer uses the PDF controls to print or save the file and closes the PDF file.</p>
+                                        <p>Optionally, the signer can sign up for a free DocuSign account by entering their Password and Confirm Password, selecting their country, and clicking the <b class="Bold">SUBMIT</b> button. Signer clicks <b class="Bold">NO THANKS</b> to close the dialog without signing up for a free DocuSign account.</p>
+                                    </li>
+                                    <li>
+                                        <p>DocuSign displays the "You're All Done!" page. Signer will receive a copy once everyone has signed. Signer closes the browser to exit DocuSign. </p>
+                                    </li>
+                                    <li>
+                                        <p>When all parties have completed the required document signatures, each signer receives an email from DocuSign with PDF documents attached. The signer can open and save the PDF file attachments or click the <b class="Bold">VIEW COMPLETED DOCUMENTS</b> button to view the documents in a browser window or tab.</p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>When the Signatures are completed within DocuSign, they is sent back to FireLight with the documents.  In the Recent Activity list and in All Activities, the Display status will show "DocuSign Signatures Complete" and in the audit, the timestamp and session user of "DocuSign Signatures Complete."  The message will say "All Signatures have been successfully completed through DocuSign for {0}" where the {0} is the Application Name. </p>
+                            </li>
+                            <li>
+                                <p>The user can access the application documents by opening the application from either the <b class="Bold">Recent Activity</b> list on the <b class="Bold">Home</b> page or from <b class="Bold">All Activities</b>. On the <b class="Bold">Other Actions</b> menu, the user clicks <b class="Bold">Documents</b> to open, view, save, and print the application documents.</p>
+                            </li>
+                            <li>
+                                <p>Optionally, the user can unlock the application, cancel all signatures, and return to the Data Entry step. On the <b class="Bold">Other Actions</b> menu, the user clicks <b class="Bold">Unlock Application</b>. On the Unlock Application dialog, the user clicks <b class="Bold">Unlock Application</b> to cancel the signature process, unlock the activity, and return to the Data Entry step.</p>
+                            </li>
+                            <li>
+                                <p>The user clicks the <b class="Bold">CONTINUE</b> button to proceed to the next step after Signatures (Review or Finalize).</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help – </p>
+                        <ul>
+                            <li>
+                                <p>Design Document:<MadCap:conditionalText MadCap:conditions="General.PDF"> CMR 237379</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"> <a href="../Resources/DesignDocs/237379 Support the use of DocuSign in FireLight.pdf" target="_blank" title="CMR 237379" alt="CMR 237379">CMR 237379</a></MadCap:conditionalText></p>
+                            </li>
+                            <li>
+                                <p><em MadCap:conditions="General.PDF">DocuSign Setup Guide</em><a href="../Resources/PDFGuides/DocuSign Setup Guide.pdf" target="_blank" title="DocuSign Setup Guide" alt="DocuSign Setup Guide"><MadCap:conditionalText MadCap:conditions="General.Online">DocuSign Setup Guide</MadCap:conditionalText></a>
+                                </p>
+                            </li>
+                        </ul>
+                        <p>User Guide – <em>FireLight Platform User Guide</em>, New Activity, Signatures Step,<MadCap:conditionalText MadCap:conditions="General.PDF"> "E-Signature in DocuSign"</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"> <MadCap:xref href="../UserGuide/New Activity/Signatures/E-Signature in DocuSign.htm" alt="E-Signature in DocuSign User Instructions">E-Signature in DocuSign [User Instructions]</MadCap:xref></MadCap:conditionalText> topic</p>
+                        <p>DocuSign Connect –<MadCap:conditionalText MadCap:conditions="General.PDF"> <em>DocuSign Connect Failures.pdf</em></MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.Online"><![CDATA[  ]]><a href="../Resources/DesignDocs/DocuSign Connect Failures.pdf" target="_blank" title="DocuSign Connect Failures.pdf" alt="DocuSign Connect Failures.pdf">DocuSign Connect Failures.pdf</a></MadCap:conditionalText></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:pageBreak />
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

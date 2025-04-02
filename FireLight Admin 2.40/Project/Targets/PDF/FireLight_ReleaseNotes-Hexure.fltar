@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="FireLight v2.27  Release Notes "
+  Type="PDF"
+  Destinations=""
+  MasterToc="/Project/TOCs/Release Notes 2.27 Hexure WordTOC.fltoc"
+  MasterPageLayout="/Content/Resources/PageLayouts/Word8_5X11/2022ReleaseNotesNormal8_5X11.flpgl"
+  ConditionTagExpression="include[General.PDF]exclude[General.Internal or General.Online or General.Postpone]"
+  PatchHeadingLevels="false"
+  InjectBookHeadings="false"
+  MasterStylesheet="/Content/Resources/Stylesheets/2022HexureStyles.css"
+  AutoSizeCaptureCaptions="true"
+  RemoveImagesFromHeadings="true">
+  <PrintedOutput
+    CollapseMargins="false"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false"
+    ExpandingTextConversion="expand"
+    PopupConversion="remove-body"
+    PreserveTrackedChanges="true" />
+  <DocumentProperties
+    Title="FireLight v2.27 Release Notes"
+    Author="" />
+  <PDF
+    ShowUsedBookmarks="true"
+    Tagged="true"
+    PageLayout="OneColumn"
+    TitleBar="FileName" />
+  <Destinations></Destinations>
+  <Glossaries />
+  <Variables>
+    <Variable
+      Name="General/Year">2025</Variable>
+  </Variables>
+</CatapultTarget>

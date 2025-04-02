@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>If the rule set is not locked, and another user has saved changes since you began your work, a <strong>Save Rule Set Changes</strong> dialog opens. You can choose  <strong>Overwrite Changes</strong> to overwrite the changes that the other user made and update the rule set with the latest changes,<b> Discard Changes</b> to discard the changes that you made and open the last saved version of the rule set, or <b>Cancel Save</b> to close the dialog and return to the last active page in the rule set.</body>
+</html>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p> In the <b class="Bold">Company Ratings</b> section, type the industry standard ratings to be used for the organization in the Quote activity. See Product Configuration/<MadCap:xref href="../../../Product Configuration/Products.htm">Products</MadCap:xref>/"Product Features" for information on adding company ratings at the product/sub firm level. Type ratings for any of the following:</p>
+        <p class="Indent">
+            <b class="Bold">A.M. Best Rating </b>
+        </p>
+        <p class="Indent">
+            <b class="Bold">Fitch Rating </b>
+        </p>
+        <p class="Indent">
+            <b class="Bold">Moody's Rating </b>
+        </p>
+        <p class="Indent">
+            <b class="Bold">Standard &amp; Poor's Rating </b>
+        </p>
+    </body>
+</html>

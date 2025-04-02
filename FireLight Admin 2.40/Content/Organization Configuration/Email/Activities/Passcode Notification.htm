@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="General.Online">
+	<head>
+		<link href="../../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+		<meta name="description" content="Post-Submit Review Queue Passcode email template guidelines and usage." />
+	</head>
+	<body>
+		<h1><a name="top"></a>Passcode Notification</h1>
+		<p>
+			<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailColumnDesc.flsnp" />
+		</p>
+		<table style="border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;">
+			<caption class="Table">Passcode Notification </caption>
+			<col>
+			</col>
+			<thead>
+				<tr>
+					<th>Action, To Name/Email, From Name/Email, CC Address, Available Tags, and Notes</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<p class="thead1">Action</p>
+						<p>The Passcode Notificaton email template generates a unique passcode for the specific activity. It is sent in several scenarios within the system, for example: when the advisor selects the Request Client to Fill App or Request Client to Fill &amp; Sign option on the Other Actions menu, when the advisor selects the Send Email Request action during the signing ceremony, when the  advisor submits the Client activity/application for review, etc.</p>
+						<p>Template Name: Passcode Notification</p>
+						<p>Email Subject Line: Passcode Application</p>
+						<p>Message:</p>
+						<p class="Indent2">The Passcode For the Recent Request is &lt;PASSCODE&gt; for &lt;APPLICATION_NAME&gt;, &lt;APPLICATION_ID&gt;, &lt;DATE_TIME&gt;, &lt;PRODUCT_NAME&gt;, &lt;PRODUCT_TYPE&gt;, &lt;COMPANY_NAME&gt;.</p>
+						<p>This email is available for sending when the <b class="Bold">Allow PassCode Email</b> option is selected in Organization Configuration/Groups page on the <MadCap:xref href="../../Groups/App.htm" alt="App">App</MadCap:xref> tab in the <b class="Bold">Email</b> section.</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p class="thead1">To Name / Email</p>
+						<p>Addressee receives the email based on information used in the request.</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p class="thead1">From Name / Email</p>
+						<p>Based on info used in the request.</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p class="thead1">CC Address</p>
+						<p>No cc Sender</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p class="thead1">Available Tags<sup>3</sup></p>
+						<p>&lt;APPLICATION_NAME&gt;<br />&lt;APPLICATION_ID&gt;
+							<br />&lt;COMPANY_NAME&gt;<br />&lt;DATE_TIME&gt; (current datetime in UTC)<br />&lt;PASSCODE&gt;<br />&lt;PRODUCT_NAME&gt;
+							<br />&lt;PRODUCT_TYPE&gt;
+						<br />&lt;STATUS&gt;<br />ApplicationSearchItems<sup>4</sup> (e.g., add &lt;CLIENT_NAME&gt;)</p>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p class="thead1">Notes:</p>
+						<p>
+							<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailNote3.flsnp" />
+						</p>
+						<MadCap:snippetBlock src="../../../Resources/Snippets/Email/EmailNote4.flsnp" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<MadCap:snippetBlock src="../../../Resources/Snippets/Email/EmailSeeAlso.flsnp" />
+		<p><a href="#top" alt="Return to Top">Return to Top</a>
+		</p>
+	</body>
+</html>

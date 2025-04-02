@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Multiple Activities</b> checkbox to provide group access to the Multiple Activity. See <MadCap:xref href="../../../../Features/Multiple Activity.htm" target="_blank" alt="Multiple Activities">Multiple Activities</MadCap:xref> in Features. <MadCap:conditionalText MadCap:conditions="General.Online">See also <MadCap:xref href="../../../../UserGuide/New Activity/Multiple Activities.htm" target="_blank" alt="Multiple Activities [User Instructions]">Multiple Activities [User Instructions]</MadCap:xref>.</MadCap:conditionalText></body>
+</html>

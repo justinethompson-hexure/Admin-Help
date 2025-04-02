@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Select the <b class="Bold">2-Factor Authentication</b> checkbox to enable Two-Factor Authentication for FireLight<sup>®</sup> application and Admin direct login users. See the design document for <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../DesignDocs/170214-DesignDocument-TwoFactorAuthentication.pdf" target="_blank" title="CMR 170214" alt="CMR 170214">CMR 170214</a> in Release History</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PDF">CMR170214 in Admin Help</MadCap:conditionalText>.</p>
+        <p class="Indent">If the user needs to re-register their Two-Factor Secret, they need to contact a FireLight<sup MadCap:conditions="General.Online">®</sup> administrator to reset their Two-Factor Secret, after which they is prompted to register a new secret the next time they log in to FireLight.</p>
+        <p class="Indent" MadCap:conditions="General.Online">
+            <img src="../../ImagesAdmin/Organizations3.jpg" alt="Reset 2-Factor Secret" title="Reset 2-Factor Secret" MadCap:conditions="General.Online" />
+        </p>
+        <p><b class="Bold">NOTE:</b> For detailed setup instructions, refer to the website for your chosen authenticator application that supports time-based one-time passwords. The following websites provide setup instructions for Authy and Google Authenticator. </p>
+        <ul>
+            <li>
+                <p>Authy: <a href="https://support.authy.com/hc/en-us/articles/360006303934-Add-a-New-Two-Factor-Authentication-2FA-Account-Token-in-the-Authy-App" target="_blank" alt="Authy Link" title="Authy Link">https://support.authy.com/hc/en-us/articles/360006303934-Add-a-New-Two-Factor-Authentication-2FA-Account-Token-in-the-Authy-App</a></p>
+            </li>
+            <li>Google Authenticator: <a href="https://support.google.com/accounts/topic/2954345?hl=en&amp;ref_topic=7667090" target="_blank" alt="Google Authenticator Link">https://support.google.com/accounts/topic/2954345?hl=en&amp;ref_topic=7667090</a></li>
+        </ul>
+    </body>
+</html>

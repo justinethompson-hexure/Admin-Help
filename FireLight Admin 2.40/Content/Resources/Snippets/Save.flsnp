@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>A hard save (permanently saving the currently filled session data with the activity) occurs when:</p>
+        <ul>
+            <li>
+                <p>The Disable Save Activities option is disabled (cleared) in FireLight<sup MadCap:conditions="General.Online">®</sup> Admin. For all activities other than Illustration and Quote, the FireLight Auto Save functionality automatically saves the activity upon input and/or selection while editing an activity (Print, Continue, Custom Action, app transfer, initiate Fill &amp;Sign; Sign, uploading a document, when % complete gets to 100, switching between multiple open activities, etc.). "Auto Save Enabled" appears to the left of the top navigation bar in FireLight. The activity audits reflect the Auto Save (username, number of changes made/saved within the duration) and Last Updated timestamp. </p>
+                <p><b class="Bold">NOTE:</b> Auto Save is disabled if the Disable Save Activities option is enabled in FireLight Admin.</p>
+            </li>
+            <li>User clicks <b class="Bold">Save</b> on an Illustration or Quote activity.</li>
+            <li>User clicks <b class="Bold">Yes</b> when FireLight prompts the user to save changes when leaving an unsaved Illustration or Quote activity (i.e., go Home, Logoff, etc.).</li>
+        </ul>
+    </body>
+</html>

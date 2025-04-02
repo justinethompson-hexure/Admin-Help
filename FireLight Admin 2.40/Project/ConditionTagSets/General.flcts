@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultConditionTagSet>
+  <ConditionTag
+    Comment=""
+    Name="Online"
+    BackgroundColor="#90ee90" />
+  <ConditionTag
+    Comment=""
+    Name="PDF"
+    BackgroundColor="Red" />
+  <ConditionTag
+    BackgroundColor="#8b008b"
+    Name="Postpone"
+    Comment=""
+    OriginalName="Hide" />
+  <ConditionTag
+    BackgroundColor="#ff6600"
+    Name="Internal"
+    Comment=""
+    OriginalName="ITUsersOnly" />
+  <ConditionTag
+    BackgroundColor="#ffa500"
+    Name="PDF - UGuide"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#00ffff"
+    Name="FL 2.23"
+    Comment=""
+    OriginalName="FL 2.23" />
+  <ConditionTag
+    BackgroundColor="#0000ff"
+    Name="Next Release"
+    Comment=""
+    OriginalName="Next Release" />
+  <ConditionTag
+    BackgroundColor="#008000"
+    Name="Current Release"
+    Comment="" />
+</CatapultConditionTagSet>

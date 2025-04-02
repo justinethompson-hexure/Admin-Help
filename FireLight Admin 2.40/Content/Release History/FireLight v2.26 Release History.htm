@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight v2.26 Release History</h1>
+        <p MadCap:conditions="General.Postpone"> <b class="Bold">NOTE: Documentation for this release is currently </b><MadCap:conditionalText MadCap:conditions="General.Postpone"><b class="Bold">incomplete and </b></MadCap:conditionalText><b class="Bold">in a "DRAFT" status.</b></p>
+        <h2>2.26 November 2 UAT / November 4, 2022 Production Patch Release</h2>
+        <h2>Fixed Defects</h2>
+        <p><b class="DRNumberBold">DTCC</b> </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 270198 </b> Fall 2022 Updates to DTCC App-Sub mappings. Updated the client's App-Sub mappings for the DTCC Fall enhancements that are scheduled to go into production on 11/11/2022.</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Embedded</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 264487 </b> Activity stuck in pending_signatures status. Problem: If the last signer was an external sign request, the activity would not correctly update to signatures complete/auto-submit. Resolution: Fixed. <br />Areas Impacted: Embedded</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Wizards and Forms</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 272125</b> No scroll bar in forms only packages. Problem: Scroll bars did not appear in certain view due to CSS styling. Resolution: Removed CSS that caused the issue. <br />Areas Impacted: Optional Forms window</p>
+            </li>
+        </ul>
+        <h2>2.26 October 22, 2022 Production Release</h2>
+        <h2>Enhancements</h2>
+        <h3>Foundation</h3>
+        <p><b class="DRNumberBold">Admin Help</b>
+        </p>
+        <ul>
+            <li>
+                <p>Added the following Spotlight Feature Video to Admin Help: </p>
+                <p><a href="https://vimeo.com/745013840/3fcd6a4c55" target="_blank" title="2.26 Release" alt="2.26 Release">2.26 Release</a>
+                </p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Firm Management - Phase 2</b> <a href="https://vimeo.com/745537888/e8f0668f5b" target="_blank" title="Firm Management - Phase 2" alt="Firm Management - Phase 2">Video</a></p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/268110_Firm_Management_Phase_2.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 268110</a> </b>
+                    <MadCap:conditionalText MadCap:conditions="General.Postpone"> Mitch &amp; Abi <span style="background-color: #ffff00;">in review</span></MadCap:conditionalText> <em>In Testing</em> (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/268110.flsnp" />
+            </li>
+        </ul>
+        <p MadCap:conditions="General.Postpone">Admin Help: Organizations/Admin: Enable Auto Deploy, Organizations/Groups/Product Access and Create and Edit Groups, Products/SalesAgreements &amp; Packages: Firm Orgs, Utilities/Deployments/Deploy Data:&#160;Firm Organization synchronization scope</p>
+        <p><b class="DRNumberBold">Illustration SDK to Connect to 3rd Party Engines (Multiple Release)</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/263822_Illustration Integrations APIs (SDK).pdf" target="_blank" title="Desgn Document" alt="Design Document">CMR 263822</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Erin <span style="background-color: #32cd32;">appproved</span></MadCap:conditionalText><em>In Testing</em> (Carriers and Distributors)</p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/263822.flsnp" />
+            </li>
+        </ul>
+        <p MadCap:conditions="General.Postpone">Admin Help: Organization Settings/External Integrations and Product Config/Products/Illustration Service</p>
+        <p style="font-weight: normal;"><b class="DRNumberBold">Prevent Application Unlock When Locked by Reviewer</b> <a href="https://vimeo.com/745535312/8d67040ee2" target="_blank" title="Prevent Application Unlock When Locked by Reviewer" alt="Prevent Application Unlock When Locked by Reviewer">Video</a></p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/257500 Prevent Application Unlock when Locked by Reviewer.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 257500</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Abi, Keerti <span style="background-color: #32cd32;">approved</span></MadCap:conditionalText><em>In Testing</em>  (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/257500.flsnp" />
+                <p MadCap:conditions="General.Postpone">User Guide: Other Actions/Unlock Application (Unlock) and Rename/Summary options, Pre-Submission Review, and Review Queue Guide: Step 2. Lock and Begin an Order Review</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Security - jQuery</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">CMR 254935 </b> <em>In Testing</em> (Carriers and Distributors)</p>
+                <MadCap:snippetBlock src="../Resources/Snippets/254935.flsnp" />
+            </li>
+        </ul>
+        <p MadCap:conditions="General.Postpone"><b class="DRNumberBold">Signatures: Agent Remote Sign</b> <a href="https://vimeo.com/745526043/48fd821e58" target="_blank" title="Agent Remote Sign" alt="Agent Remote Sign">Video</a></p>
+        <ul MadCap:conditions="General.Postpone">
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/258890 Agent Remote Sign.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 258890</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Keerti, Abi<span style="background-color: #32cd32;">approved</span></MadCap:conditionalText><em>In Testing</em> (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/258890.flsnp" />
+                <p MadCap:conditions="General.Postpone">Admin Help: Org. Config/Email/Agent Signature Request Email, User Guide: New Activity/Signatures/Agent Signature and E-Sign in React for Embedded Users</p>
+            </li>
+        </ul>
+        <MadCap:pageBreak />
+        <h3>Work Orders</h3>
+        <p><b class="DRNumberBold">Add More Info Dialog for Review Queue to Wizard UI</b> <a href="https://vimeo.com/745529763/bf5db52704" target="_blank" title="Add More Info Dialog for Review Queue to Wizard UI" alt="Add More Info Dialog for Review Queue to Wizard UI">Video</a></p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/263028 Add More Info Dialog to Wizard UI (263280).pdf" target="_blank" title="Design Document" alt="Design Document">CMR 263028</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Abi, Keerti <span style="background-color: #32cd32;">approved</span></MadCap:conditionalText><em>In Testing</em> (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/263028.flsnp" />
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Add New Rule Scopes to the System</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/258269 New Rule Scope.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 258269</a></b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Abi, Keerti <span style="background-color: #32cd32;">approved</span></MadCap:conditionalText><em>Complete</em> (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/258269.flsnp">
+                </MadCap:snippetBlock>
+            </li>
+        </ul>
+        <p> <b class="DRNumberBold"> Add "TTEE" Designation on Trustee Signature</b> <a href="https://vimeo.com/745530623/25c417b5d0" target="_blank" title="Add &quot;TTEE&quot; Designation on Trustee Signature" alt="Add &quot;TTEE&quot; Designation on Trustee Signature">Video</a></p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/258853 Add TTEE Designation on Trustee Signature.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 258853</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Abi, Keerti <span style="background-color: #ffff00;">in client review</span></MadCap:conditionalText><em>In Testing</em> (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/258853.flsnp" />
+                <p MadCap:conditions="General.Postpone">Admin Help/Designer/Forms/Signature Box and User Guide/New Activity/Signatures/Client Signature</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Allow Carriers to Change Product Organization Name on Sales Agreement</b> <a href="https://vimeo.com/745532218/654a499140" target="_blank" title="Allow Carriers to Change Product Organization Name on Sales Agreement" alt="Allow Carriers to Change Product Organization Name on Sales Agreement">Video</a></p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/264571 Allow Product Organization Name on Sales Agreement.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 264571</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Abi, Keerti <span style="background-color: #32cd32;">approved</span></MadCap:conditionalText><em>In Testing</em> (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/264571.flsnp" />
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Allow Configurable/Unlimited Attempts for "State Signing Error"</b> <a href="https://vimeo.com/745536643/9b525f472c" target="_blank" title="Allow Configurable/Unlimited Attempts for &quot;State Signing Error&quot;" alt="Allow Configurable/Unlimited Attempts for &quot;State Signing Error&quot;">Video</a></p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/259565 Allow Configurable Attempts for State Signing Error.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 259565</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Abi, Keerti <span style="background-color: #32cd32;">approved</span></MadCap:conditionalText><em>In Testing</em> (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/259565.flsnp" />
+                <p MadCap:conditions="General.Postpone">Admin Help/Organization Settings/Signature/State Signing Error and Design/Forms/Signature Box, User Guide/StateSigningError.flsnp</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Create REST API for Review Queue</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/263215 Create REST API Pre and Post Signature Review Queue.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 263215</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Abi </MadCap:conditionalText><em>In Testing</em> (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/263215.flsnp" />
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Maintain Search Results on Review Queue</b> <a href="https://vimeo.com/745537191/e4b6b2a3b3" target="_blank" title="Maintain Search Results in Review Queue" alt="Maintain Search Results in Review Queue">Video</a></p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/262374 Maintain Search results when closing an application.pdf" target="_blank" title="Design Document" alt="Design Document">CMR&#160;262374</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Abi <span style="background-color: #32cd32;">approved</span></MadCap:conditionalText><em>In Testing</em> (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/262374.flsnp" />
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Print Request for eDelivery to Be Controlled by Role Code</b> <a href="https://vimeo.com/745531421/32972975fc" target="_blank" title="Print Request for eDelivery to Be Controlled by Role Code" alt="Print Request for eDelivery to Be Controlled by Role Code">Video</a></p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="../Resources/DesignDocs/260015 Print Request to be controlled by Role Code.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 260015</a> </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Abi, Keerti <span style="background-color: #32cd32;">approved</span></MadCap:conditionalText><em>In Testing</em> (Carriers and Distributors)  </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/260015.flsnp" />
+            </li>
+        </ul>
+        <h2>Fixed Defects</h2>
+        <p><b class="DRNumberBold">Activities</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 256732 </b> Multi-Life applications not submitting. Problem: Batch Async Methods have not been updated for new Factory Design. Resolution: Moved to Async Runner for async call. <br></br>Areas Impacted: Batch App Page</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 264531 </b> Unable to Search by Policy Number in FireLight. Problem: If the FLI_CONFIRMATION_NUMBER data item was set from a callexternal rule, if the data item did not already exist, it would not get created (the rule system requires all data items to be initialized when the activity is loaded). A workaround for now is to write a rule to initialize the data item on new activities. Resolution: Modified the base system to always initialize FLI_CONFIRMATION_NUMBER and FLI_APPLICATION_CONTROL_NUMBER data items to an empty string at app creation.  It was already clearing an existing value on a copy.  Extended the logic to create the data item if it doesn't exist.  So if it is updated in a callexternal rule, the change will take effect. <br></br>Areas Impacted: Existence of above data items on new activities</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 266575 </b> Sporadic null reference exception opening activity. Problem: Null reference exception was occurring looking up OfficeUseOnly field property that did not exist, preventing load of the activity. Resolution: Added null checks to handle non-existent field property. <br></br>Areas Impacted: Load of activity for data entry</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 267543 </b> Client able to request passcode for expired fill &amp; sign request. Problem: There was no existing check for the request being expired before sending an SMS passcode. This led to the situation where a passcode could be sent for an expired request, causing the link to simply go back to the request page. Resolution: A check was added for whether or not the request was expired on the click of the 'Send SMS" button, and an error message was added for when the request is expired: "The Request is no longer valid. Please contact your agent and have them send you a new request." <br></br>Areas Impacted: External requests: specifically client fill and client fill and sign when SMS text is selected for a client</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 268909 </b> Drop-down items customized by a rule are retained when activity is copied. Problem: When a setcomboitems rule executes, the customized drop-down items are stored in a data item for the field that is suffixed with _ItemSource_GeneratedDataItem_PostFix. When an activity is copied, these data items are also copied, and if the copy is to a different carrier or product that does not dynamically set the drop-down values, the dynamic drop-down list from the previous product will still be in effect on the copy. Resolutions: Clear dynamic drop-down data items when copying an activity, and corrected the logic to clear the drop-down postfix data items before running rules instead of after<br></br>Areas Impacted: Copying of activities with rule-generated drop-down lists</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 268982 </b> Application creation time is longer than on-prem. Problem: A cache setting was not taking effect in the Azure environment. Resolution: The cache setting was corrected. <br></br>Areas Impacted: Activity load times</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 268989 </b> Application creation is missing the spinning indicator. Problem: Changes related to updating jquery-ui version for security finding (iConnect 254935) introduced a problem, and the id tag was no longer being set for buttons like the Create button on new activity, which prevented disabling the button. Resolution: Updated the jquery-ui library to assign the id tag. <br></br>Areas Impacted: Buttons and other elements in FireLight UI, and behavior tied to the element ID.</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Admin</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR&#160;265880 </b> Scroll position wasn’t passed as a parameter error when using "manage sales agreement" in UAT. Problem: SalesAgreement - Manage Sales Agreement dialog - due to the browser sending a floating point value instead of an int. Resolution: Modify code to convert double to int while passing from JQuery. <br></br>Areas Impacted: Manage Sales Agreement dialog</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 267889 </b> Admin - Organization security profile - Supported Services settings not updating. Problem: Updating of the supported services in admin Org -&gt; Security profile was not working. Resolution: Fixed it so it works again. <br></br>Areas Impacted: Admin org profile -&gt; Security -&gt; Supported Service Records</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 269065 </b> Receiving invalid primitive error for rules that work in previous branch. Problem: Issue was the word "Infinity" being converted as a Double. Resolution: Modified ITScript to replace "Infinity" with the infinity symbol(∞) when parsing. <br></br>Areas Impacted: Rule Sets</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 269872 </b> Receiving Generic Error Closing Firm Orgs on Sales Agreement Page. Problem: On closing Firm Org popup on Sales agreement, it was showing error. Resolution: Null check for missing , when firm org not presents, fixed. <br></br>Areas Impacted: Sales Agreements &gt; Firm Orgs</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">All Activities</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR&#160;269652 </b> All Activities Delete option not available. Problem: All activities doesn't show the option to delete applications. While working on TFS#34562, we fixed the issue on the All Activities page for Enrollment Activity when the "Disable Delete All Activities" group flag is on. This change will impact other activities, and we need to change our logic to fix this for all activities. Resolution: We need to add a group flag "Disable Delete All Activities" condition into the code for Enrollment Activity also. <br></br>Areas Impacted: All Activities page</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Console</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 269449 </b> Console version is not correct. Problem: During the test period for Azure, the on-prem URLs cannot be used, and temporary test URLs are used instead.  The console service endpoints had not been updated to use the temporary endpoints, so running the console app was failing when connecting to the console service. Resolution: Update the console service endpoints to the temporary test endpoints. <br></br>Areas Impacted: Offline Windows console</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 269836 </b> iPAD Console crashes when dropdown with a custom list is selected. Problem: Wasn't adding Empty items to list causing null exception. Resolution: Made sure each grid view cell has value. <br></br>Areas Impacted: Custom List IOS View</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Deployments</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 265480 </b> Index out of bounds error when initiating admin deployment. Problem: If the server side model got out of sync with the client, an error could occur when attempting a deployment, due to an index out of bounds error. Resolution: Add an index check to prevent the error. <br></br>Areas Impacted: Admin deployments</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 269268 </b> Deployments Synchronization Scope Mapping not loading. Problem: Changes to optimize loading of the deployment view for Azure introduced an issue that cause the Mapping deployment scope to encounter an error when loading. Resolution: Corrected the logic to prevent the error. <br></br>Areas Impacted: Mapping deployment scope</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 269272 </b> Deployment History Statistics Time Zone. Problem: In Azure, the app service operates in UTC, so converting to local time shows as UTC instead of Mountain time zone. Resolution: Explicitly convert the UTC time for deployment history to Mountain time zone, for compatibility with on-prem environment. <br></br>Areas Impacted: Deployment history timestamps</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 269273 </b> Deployment Schedule not triggering at scheduled time. Problem: In Azure, the app service operates in UTC time zone, so converting to UTC was not advancing the time from the user-entered time value to UTC, causing deployments scheduled a few minutes or hours in the future to run within minutes of when they were scheduled. Resolution: Explicitly convert the entered scheduled deployment time from Mountain time zone to UTC, for compatibility with on-prem environment. <br></br>Areas Impacted: Deployment times of scheduled deployments</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Email</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 269648 </b> Bounce Back Emails are not generating. Problem: There was a problem with the SendGrid configuration for the Azure environments. Resolution: This has been corrected. Additionally, a change was needed for UAT Azure to temporarily use the UATNext SendGrid account for the webhook settings, which required an appSettings change. <b class="Bold">NOTE:</b> STG and PROD Azure are not setup for the callback to get those notifications.  We are using the UATNext environment in SendGrid for UAT Azure (and regular UAT in SendGrid for UAT on-prem), but we don't have alternative accounts for Staging &amp; Production which are still servicing on-prem FireLight. After the Production release, SendGrid is pointing to FL Azure for all environments. <br></br>Areas Impacted: SendGrid emails </p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 270279</b> SendGrid - Add a throttle in FireLight to prevent multiple notifications to a user. Problem: A user was sent numerous failed email notifications for an erroneous email address that was used. Resolution: 1) Implemented throttling to not attempt to send a failure email notification more than 3 times to one email address per activity. 2) Also, do not send a failure email notification when the sender and receiver are the same email address (several thousand instances of this were found) 3) Fix processing of the email queue in the scheduler to only query the first 500 email records per org per run, to prevent the query error that occurred due to 82K emails in the queue for a client. <br></br>Areas Impacted: Sending of emails, particularly failure emails</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Embedded</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 264487 </b> Activity stuck in pending_signatures status. Problem: If the last signer was an external sign request, the activity would not correctly update to signatures complete/auto-submit. Resolution: Fixed <br></br>Areas Impacted: Embedded, Sign 2.0</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 267358 </b> Embedded: New session not created when using proxy. Problem: If the clients embedded workflow includes starting a new session using a new cookie without reloading the page, the proxy server will use the previous session. Resolution: When calling the FireLightAPI.init() function and starting a new session we reset the Authorization header information to force the Proxy to start a new session. This ensures a new session is started with the new token. <br></br>Areas Impacted: This affects Embedded clients. Primarily clients who repeatedly call the FireLightAPI.init() function with new auth tokens.</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 268205 </b> ValidateActivityData &amp; ValidateIllustrationData REST API not initializing activity data items. Problem 1: The API is not applying the data item updates prior to running rules.  It looks like this has been broken for a couple of releases. Resolution 1: Corrected the logic to commit data items changes prior to running rules from the REST API. Problem 2: ValidateActivityData was still returning validation errors for data that was being sent over in the request. Resolution 2: The data is not saved for the validateActivityData api call, so the application errors were being updated when the activity was first created, but not updated again after the dataitems were updated from the request.  Added the necessary call to update the application errors regardless of whether saved. <br></br>Areas Impacted: ValidateActivityData and ValidateIllustrationData methods; calls using the validateActivityData api, automated business service and batch new business service.</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 269873 </b> Embedded Esign iframe not working. Problem: The Front Door security policy (WAF) was overriding the X-FRAMES-ORIGIN policy preventing the embedded session. Resolution: Modified the FD rule to conditionally allow iframes. <br></br>Areas Impacted: Embedded Esign iframe</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Integration</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 269189 </b> Unable to connect to access and pre-fill data to the application - new business service. Problem: The FireLight WCF service endpoints were not responsive in Azure.  The first issue is that the app firewall was incorrectly flagging the endpoints as unsecure and blocking the request.  The second issue is that the endpoint URLs were configured as http because on-prem, SSL was being offloaded to the app firewall.  Since that is no longer the case in Azure, the endpoint was not listening on port 80. Resolution: 1) Adjusted the app firewall policy to allow the request to the service endpoints.  2) Converted the service bindings to https since SSL is no longer being offloaded. <br></br>Areas Impacted: FireLight WCF services</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DRs 269518, 269536</b> Remote Signing link is not working - keep receiving error message. Problem: Some of the config changes for iConnect 269189 caused authentication for external requests, SSO, and embedded to stop working. Resolution: These changes were not necessary to resolve 269189 and were reverted. <br></br>Areas Impacted: External requests, SSO, Embedded</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 269629 </b> Required Review not enforced. Problem: In Azure, some changes were made to how provider configs are loaded.  In some cases, those changes are resulting in the config file not being loaded properly and a null reference exception occurring when trying to read config values. This problem is not specific and impacts any provider that loads the config directly, including most external provider classes, as well as some regular providers. Resolution: A fix for this was implemented. <br></br>Areas Impacted: Provider config files</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">PDFs</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 266450 </b> Null reference exception in GetPrintPDFs. Problem: The GetActivityPDF API / GetPrintPDFs functionality was making 2 calls to GetFormDefinitionListForPrint, one with IncludeLockedForms = true and one without.  For the second call, the list of forms was being used during the PDF generation logic, which expected the collection to contain all forms to be printed, but due to the above discrepancy, it would not include all forms for locked activities, resulting in a null reference exception. Resolution: Modified the logic to only call GetFormDefinitionListForPrint once (which ensures consistency between collections being processed and is also more efficient since it avoids duplicate queries).  Also removed redundant calls for querying the application form list. <br></br>Areas Impacted: GetActivityPDF, GetPrintPDFs</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 269725 </b> Applications in a pending transmission status. DTCC is currently running in FireLight on-prem.  We will need to open a new test window for DTCC testing in Azure. Applications in a pending transmission status. Problem: Changes for the IllustServiceApi feature inadvertently introduced a problem with processing of documents out of FireLight, and in some cases, many/all documents were no longer being included due to changes in the value of visibility flags, because of how the All visibility flag is used (it is used both as a bitwise flag and also an actual visibility value in many providers, which means that its value cannot change). Resolution: Changed the visibility values back to what they were before. <br></br>Areas Impacted: PDF document generation in FireLight</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 271098 </b> Print Selected Documents Error Message. Problem: Changes for iConnect 266450 introduced a problem with print in other areas, because the form definitions are not passed through in all cases. Resolution: Corrected the logic in GetPrintDocuments to load the form definitions if not provided by the caller. <br></br>Areas Impacted: Print PDF</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Reports</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 266762 </b> Add SendGrid email to ActivityReports. Problem: The ActivityReports tool was configured to use the On-Prem SMTP server, which does not support TLS. A client's email server requires TLS on their inbound emails and they have not been able to receive Activity Reports for months because of this limitation. In the original move to SendGrid the ActivityReports tool was using SendGrid, but we encountered issues with attachments and had to revert back to the On-Prem SMTP server. Resolution: SendGrid email issues were resolved. <br></br>Areas Impacted: Activity Reports</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 267814 </b> Distributor Org column should be carrier Org in sales agreement report when report run under distributor instance. Problem: Column name was made dynamic based on the organization instance that is running the report. Column was incorrectly displaying distributor org name when running a report under a distributor instance. Resolution: Column was corrected to display Carrier name when running report under a distributor instance. <br></br>Areas Impacted: Admin report generation -&gt; Admin History Report -&gt; Sales Agreement Report</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Review Queue</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 268317 </b> Audit of review queue notification email is not being written. Problem: The notification emails for an activity being added to a review queue or manually moved in a review queue are no longer being audited.  This was introduced by changes for TFS 33088 "Issues with agent email addresses." Resolution: Corrected the logic to audit the review queue notification email. <br></br>Areas Impacted: Review Queue notification messages</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 268996 </b> Prevent Application Unlock when Locked by Reviewer - Agents can still cancel the request to unlock a case. Problem: When an application has been locked by a reviewer, it can still be unlocked by the agent. Resolution: This Enhancement now includes that the agent cannot cancel the request. The links "Cancel this request" and "Cancel" button will both be hidden for the agent when the activity is locked by the reviewer. <br></br>Areas Impacted: Review Queue locked activities</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 269194 </b> Review Queue errors out when selecting Approve Application. Problem: The list of multiple signers was not always initialized, which could result in a null reference exception in places where the code does not check for a null list. Resolution: Modified the model to always initialize the multiple signer list to an empty list, so that null checks are not needed, to eliminate the potential for null reference exceptions to occur.  Also moved multi signer check into a common method and removed unnecessary null checks. <br></br>Areas Impacted: eSign and review</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 269553 </b> Base Bug - Retain Search Results not working. Problem: Search criteria given in dropdowns are not maintained when user navigates to 'Reviewer Documents'. Resolution: State dropdown value (enum ActionType) was not setting selected value, as saved filter value coming in long, fixed. <br></br>Areas Impacted: Review Queue filters</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Signatures</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 261476 </b> Signing Ceremony - Focus initials controls based on Top and Left properties. Problem: On Legacy forms, signature initials were selecting in the order they were added to the form, instead of from top to bottom, left to right. Resolution: Signature Initials will now always select topmost, leftmost first. <br></br>Areas Impacted: Signing</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Wizards and Forms</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR&#160;266911 </b> Inconsistencies in form, wizard, and PDF hyperlink formatting. Problem: Labels and Hyperlinks in Wizards and PDFs were not displaying the same was as on Forms. Also, Admin Forms Designer label editor was not properly loading the "Url" field. Resolution: Updated Wizards and PDF display of labels and hyperlinks to match the display of those fields on Forms. Fixed the admin editor issue for hyperlinks. Note that some of these changes (to PDFAcroForm.cs) were reverted because they caused iConnect 268985. This may cause other breaking changes due to the code that was removed.<br />Areas Impacted: Admin, Wizards, PDF/Print Document</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 268127 </b> Data grid performance issues. Problem: Database queries taking extra time, unnecessary data was being passed around which increased the size, unnecessary cloning of data item. Resolution: Added caching when retrieving data grid item, removed hidden rows from data item, removed request to clone data item. <br />Areas Impacted: Data Grid data item</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR&#160;268985 </b> Fields are printing to the form inconsistent with the position in the designer. Problem: Changes for iConnect 266911 introduced a problem where stamping of labels on the PDF caused the vertical positioning of fields to be shifted down and not aligned to their position in the form designer. Resolution: Rolled back the changes that caused this change in behavior. <br />Areas Impacted: Print PDF for forms with labels</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 269140 </b> Combo Box fields displaying DI value instead of display value. Problem: Some Combo Box fields are showing the data item value instead of the display value. Resolution: Change logic to determine when to use the additional DI that includes the Item Source. The logic no longer checks for just null. It checks for null or empty string. This was changed in 5 places. <br />Areas Impacted: This affect rendering of combo boxes, but appears to only be affecting one client at the moment.</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 269183 </b> Currency Masks are causing required field rules to not fire. Problem: Fields (Text and multiline) that required a mask that has decimal in it (currency, decimal, etc) was behaving improperly. If the field was blank, it would add .00 to the blank field. This messed up the logic for required fields. Resolution: Put a check in before it appends to make sure the length of the value is greater than zero, so it will ignore empty values. <br />Areas Impacted: Forms UI and Wizard Forms</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 269185 </b> Wizard - Data entry values cleared when quickly filling fields. Problem 1: Wizard field entries could be reverted if users entered data into fields too quickly, due to the server response overwriting user entry.  Resolution 1: The system now checks for user entries made after server calls and prevents the server from replacing/reverting those entries. Problem 2: Certain control types, such as Data Grids, were still having input cleared after rapid input. Resolution 2: Since these controls function differently, they cannot easily use the solution of other controls. Instead, user input blocking has been added when modifying Data Grids, etc. Problem/Resolution 3: As per client request, Data Grids will now wait to send an update and block user after a short delay of moving to a new field with no input. When input is blocked this way, focus will now return to the last selected field once the update is complete. <br />Areas Impacted: Wizards, Embedded</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 270007 </b> Wizard - Max Length of 0 on a form prevents data entry. Problem: Customers are allowed to set a maxLength on a field in a wizard. Apparently we tell them to set maxLength to zero if they want it to be unlimited. This was not handled correctly by our developers, and the default functionality of a web browser was happening. That default functionality says that if the maxLength is zero, then don't allow any characters at all. We need to have custom programming to handle that differently, and that change was not implemented. Resolution: Made the development change that when we see a zero for the value of maxLength on a field of a wizard, we omit any setting of maxlength at all, which the browser then treats the way we want it, and allows no limit of characters specified. <br />Areas Impacted: All wizards with fields. This would only be a problem for customers who have set a field's non-default maxLength as zero.</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 270418 </b> Changing product name is very slow. Problem: One of the changes for iConnect 268127 introduced inconsistency in updates of data items, resulting in runaway data item updates and rule execution and non-responsiveness during data entry. Resolution: Rolled back the change to not clone the data item collection when syncing from rules. <br />Areas Impacted: Updating of fields and execution of rules during data entry in the combined wizards + forms UI and legacy forms UI</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 270461 </b> Arrows missing on SAM Page for Suitability review. Problem: When processing a Pre-Check Suitability Activity that the SAM review page is now missing the arrows that allow the user to move from page to page. Working on TFS#29482, QE tested internally and found the same issue and logged it as TFS#35098. Resolution: Due to many conflicts roll back all code changes related to this TFS#29482, under PR#2862. Now this issue can't be generated. <br />Areas Impacted: Form side application data entry page</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 270980 </b> All fields are completed but forms still showing validation errors until activity is reopened. Problem: One of the changes for iConnect 268127 introduced inconsistency in updates of data items, in some cases resulting in incorrect validation messages / form completion status during data entry. Resolution: Rolled back the change to not clone the data item collection when syncing from rules. <br />Areas Impacted: Updating of fields and execution of rules during data entry in the combined wizards + forms UI and legacy forms UI</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 271030 </b> Application Activity - Spinning / Can't complete orders. Problem: Application Activity - Spinning / Can't complete orders. Problem: One of the changes for iConnect 268127 introduced inconsistency in updates of data items, resulting in runaway data item updates and rule execution and non-responsiveness during data entry. Resolution: Rolled back the change to not clone the data item collection when syncing from rules. <br />Areas Impacted: Updating of fields and execution of rules during data entry in the combined wizards + forms UI and legacy forms UI</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR&#160;271065 </b> Wizard - Check box and radio buttons cannot be deselected. Problem: On Wizards, certain fields such as checkboxes could not be edited after reopening an Activity. Fields could sometimes not be updated. Resolution: Fixed an issue where overlapping rules could cause the system to prevent manual changes to fields.  <br />Areas Impacted: Wizards</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 271270 </b> Wizard Data Grid Rules setting combo boxes do not appear to be running again after case is closed then reopened. Problem: Hidden grid rows were not being recognized by the rules system after activity saving. This was caused by a system change made in 2.26 to reduce the amount of data being sent on network calls by not sending hidden rows to the server. Resolution: The system change was rolled back, as it was causing the above issue . Data Grids now send their hidden rows to and from the server, fixing the issue. <br />Areas Impacted: Wizards, Embedded</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 271414 </b> Wizard - Data item visible and enabled properties not being reset before running rules. Problem: When opening an activity, the system should reset all data items to Enabled = true, IsVisible = true, so that if there are no rules to alter the enabled or visible state of a data item, it is visible and enabled.  This is happening in the legacy forms UI, and when copying with changes, but not on copy-as is, and not when opening an existing activity in the combined wizard+forms UI, so if rules had previously set data items to invisible or disabled, but those rules were removed or commented out, data items would remain disabled or invisible. There was already logic to update and commit forms data collection changes to the rules collection, but it was happening before the Enabled/IsVisible state was reset prior to running rules, and also happening even when rules should not run (which is incorrect). Resolution: Moved the logic to commit forms collection changes to after initialization of Enabled/IsVisible property, and only when rules are being run.  Also move the logic to initialize paramed data items to only occur when rules are being run. <br />Areas Impacted: Initialization of Enable/IsVisible state of data items before rules execution in combined forms+wizard UI.</p>
+            </li>
+        </ul>
+        <p><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

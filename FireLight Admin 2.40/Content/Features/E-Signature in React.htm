@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>E-Signature in React</h1>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">E-Signature in React for Embedded Clients</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 749px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>E-Signature  in React takes the existing e-Signature process that is currently in place and makes it available within the React system for embedded clients.   This allows a user to move through the e-Signature process outside of the FireLight<sup MadCap:conditions="General.Online">®</sup> current Legacy system.  This is a phased approach: the majority of the current functionality will still be available, eventually allowing all of the Legacy e-Signature functionality to work within React.</p>
+                        <p>The current FireLight release focuses on the Client API, specifically using the Sign Now and Send Email Request functionality.  This enhancement allows embedded clients to enter into the e-Signature ceremony to complete the signing process for their parties.   This feature impacts the Initialization page, Client Signature Choice Page, Send Email to Signer Page, Client Consent Capture, Presentation of Required Signers and Completed Signatures, and the Sign Now and Send Email Request functionality, which includes Document Sets, Initials, and capturing a signature.  The only piece that is not “embedded” but was built for REACT is the external signer who comes back into the signing ceremony. This enhancement includes LexisNexis and SMS Text functionality. This enhancement does not include the  Tele-Sign or Topaz functionality.</p>
+                        <p>While this enhancement impacts the full Sign Now and Send Email Request functionality of the e-Signature process, it will not impact the existing Legacy feature, meaning this is impacting only Embedded clients at this time.</p>
+                        <p><b class="Bold">NOTE:</b> See the FireLight Developer Help that is accessible from the FireLight Home page for API information.</p>
+                        <p><b>NOTE</b>: The EXTERNAL role code governs the behavior of the signing ceremony for the signature request. The DEFAULT role code will be in effect for agents coming in a) without a role code, or b) with an invalid role code.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">E-Sign Management in React</p>
+                        <ol>
+                            <li>
+                                <p> Implement Routing: To support users clicking the back button, Google Analytics, and general tracing, it is necessary to implement Routing. Routing can be thought of as changing the URL to represent the view that is rendered. This means the URL doesn't actually change, but the E-Signature views are all rendered and managed from a single endpoint on the server. A standard Route a user may take during the signature process could be E-Sign Acceptance, Signers List, Identification, Document Review, Signature. The updated Sign view is presented in a Single Page App (SPA) style of views. Where all views are rendered within a single page (or URL). Each of these views is rendered from a single page but the URLs would look like this:</p>
+                                <p>./EGApp/Sign/#Consent</p>
+                                <p>./EGApp/Sign/#Signers</p>
+                                <p>./EGApp/Sign/#Identification</p>
+                                <p>./EGApp/Sign/#Review</p>
+                                <p>./EGApp/Sign/#Signature</p>
+                            </li>
+                            <li>
+                                <p>Initialize E-Signature Process: When E-Signature is first loaded, both the server and client (browser) must initialize any E-Signature model data. Note that a valid session is required prior to entering E-Signature. A session can be started by logging in to FireLight or using Embedded per documentation.</p>
+                                <p>If a valid session has already been started, the initialization call should include the ActivityID that is being signed.</p>
+                                <p>If a valid session has not been started, then a new Client API method must be called to start the session. This should work very similarly to the current logic except the server side model and state do not need to be initialized.</p>
+                            </li>
+                            <li>
+                                <p>E-Sign: Transition from Data Entry to the new E-Sign area: Both FireLight and Embedded clients will need to navigate to the new E-Signature views. This will work similarly to the new wizard Data Entry views where all views are rendered within a single HTML element on the page (&lt;div&gt;). The page that contains this HTML element must initialize E-Signature through a client API. This API will also work similarly to the wizard Data Entry views. </p>
+                                <p>Note that a valid session is required prior to entering E-Signature. A session can be started by logging into FireLight or using Embedded per documentation.</p>
+                            </li>
+                            <li>
+                                <p>Client API: The E-Signature client API is a means for the hosting page to receive notification of changes within E-Signature as well as call functions to initiate actions within E-Signature. This API should mimic the client API used in Data Entry where the hosting page can subscribe to events and call functions using the FireLightAPI global object.</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p>In Groups on the <MadCap:xref href="../Organization Configuration/Groups/App.htm" alt="App">App</MadCap:xref> tab in the <b class="Bold">Submit</b> section, select <b class="Bold">Enable Auto Submit</b>. This allows FireLight to automatically submit the activity after all signatures are completed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <p>A valid session is required prior to entering E-Signature. A session can be started by logging in to FireLight or using Embedded per documentation.</p>
+                        <p><b class="Bold">NOTE:</b> When FLI_DECLINE_ESIGN data item is set to either true or false, the Electronic Signatures page does not appear. If a null value is set for FLI_DELCLINE_ESIGN, the Electronic Signatures page displays. </p>
+                        <ol>
+                            <li>
+                                <p>Users decide  whether or not to use electronic signature (E-Signature) and click one of the following options in Electronic Signatures. Upon making this choice, FireLight locks the application. Users cannot make changes after signing without negating the captured e-signatures and requiring the re-capture of all e-signatures. </p>
+                                <p>On the Electronic Signatures page:</p>
+                                <ul>
+                                    <li>
+                                        <p>If users need to make changes to the application before signing, they click <b class="Bold">Back to Application</b> on the upper right to return to Data Entry.</p>
+                                        <p><b class="Bold">NOTE:</b> Upon making this choice, FireLight locks the application. If users need to unlock the application for additional data entry, on the navigation bar users click <b class="Bold">Other Actions</b> and then click <b class="Bold">Unlock Application</b>. If using the API process, the unlock will take users back to their original environment (example: If the organization is starting the signing process, and users unlock the application, users is redirected back to their organization's environment outside of FireLight to restart the signing process).</p>
+                                    </li>
+                                    <li>
+                                        <p>If Data Entry is complete and ready for signatures, users choose a signature process:</p>
+                                        <ul style="list-style-type: circle;">
+                                            <li>Click <b class="Bold">Use E-Signature</b> to start the E-Signature process.</li>
+                                            <li>
+                                                <p>Click <b class="Bold">Decline E-Signature</b> to have the client sign paper copies of the application</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <p><b class="Bold">(Optional) How to Stop the Signature Process</b>
+                                </p>
+                                <p>Two buttons on the upper right of the Request Signers page allow users to stop the signature process. Users click the <b class="Bold">Unlock Application</b> button to begin the unlock process, which clears all captured signatures (see the note for "Unlock Application" above for details). Users click the <b class="Bold">Back to Application</b> button to return to the application without clearing any captured signatures.</p>
+                                <p><b class="Bold">NOTE:</b> If the organization requires the agent to sign first, FireLight disables client signer buttons until after the agent signs. If the organization requires the agent to sign last, FireLight disables the Agent button   until after all clients sign.</p>
+                            </li>
+                            <li>
+                                <p>In <b class="Bold">Request Signers</b>, users click a signer type (Owner, Annuitant, Insured, Beneficiary, etc.) button. If enabled for their organization, users select the signer type buttons for the signer. A single signer can sign for multiple signer types (e.g., the client is the Insured and the Owner). </p>
+                                <p>Next, users click the <b class="Bold">Sign Now</b> or <b class="Bold">Send Email Request</b> button.</p>
+                            </li>
+                            <li>
+                                <p>Users fill in information in the <b class="Bold">Agent Identification Verification</b> and the <b class="Bold">Client Identification Verification</b> sections and click the <b class="Bold">Verified</b> button.</p>
+                            </li>
+                            <li>
+                                <p>If SMS Text authentication is enabled, the user enters the <b class="Bold">Mobile Number</b> in the field and clicks <b class="Bold">Send SMS Text</b>. A passcode is sent to the client's mobile phone. On the Verify Client dialog, the user enters the <b class="Bold">Passcode</b> and clicks <b class="Bold">Submit</b>. On the Identification Verification page, the user clicks <b class="Bold">Verified</b>.</p>
+                            </li>
+                            <li>
+                                <p>If LexisNexis  Client Identification Verification Authentication is enabled and the correct information is mapped to the Party's first name, last name, street address, city, state, zip, date of birth, phone number, and SSN, a Client Authentication page shows a series of questions that verify the user's identity upon selecting answers to the questions and clicking <b class="Bold">Submit</b>. The user moves forward to the Signing ceremony.  If the user clicks <b class="Bold">Cancel</b>, the user is taken back to the Client Identification Verification page.</p>
+                            </li>
+                            <li>
+                                <p>If signature initials are required, initials need to be completed before any signature is collected. When users enter the Initial signing ceremony, a toast alerts users that "Initials are Required. Click Initials box to begin." and the view scrolls to  the Enter Initials box. The signer clicks in the box and the Enter Initials dialog opens. Users enter the signer's initials and click the <b class="Bold">Apply Initials</b> button.</p>
+                                <p><b class="Bold">NOTE:</b> If more than one Document Sets are in the package, a "Document Set # or #" (e.g., Document Set 1 of 2) appears at the top of the view.</p>
+                            </li>
+                            <li>
+                                <p>Users click a document name button to review the document. After review, users select the <b class="Bold">I have reviewed and agree with the terms expressed within this document</b> checkbox to proceed. </p>
+                            </li>
+                            <li>
+                                <p>On the Capture Electronic Signature page, users fill in the information, select a font (if applicable) and do one of the following:</p>
+                                <ul>
+                                    <li>
+                                        <p>Click <b class="Bold">I Consent</b> to accept the electronic signature.</p>
+                                    </li>
+                                    <li>
+                                        <p>Click <b class="Bold">I Decline</b> to decline signing.</p>
+                                    </li>
+                                    <li>
+                                        <p>Click <b class="Bold">Cancel</b> to cancel the e-signature.</p>
+                                    </li>
+                                    <li>
+                                        <p>Click <b class="Bold">Clear Signature</b>, use a mouse to sign on the pad to override the text script, and click <b class="Bold">I Consent</b>.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>When signatures are complete for each signer, users click the <b class="Bold">OK</b> button in Electronic Signatures Complete. </p>
+                            </li>
+                            <li>
+                                <p>FireLight automatically submits the activity to the back office if the Enable Auto Submit option is enabled in FireLight Admin.</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help Design Document - Current: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 249647</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"> <a href="../Resources/DesignDocs/249647 ESign in React - External Sign.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 249647</a></MadCap:conditionalText> Previous: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR&#160;243571</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/DesignDocs/243571 E-Sign in React-Authentication.pdf" target="_blank" title="CMR&#160;243571" alt="CMR&#160;243571">CMR&#160;243571</a></MadCap:conditionalText>, <MadCap:conditionalText MadCap:conditions="General.PDF"> CMR 204256</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"> <a href="../Resources/DesignDocs/204256  E-Sign in React - Embedded.pdf" target="_blank" title="CMR 204256" alt="CMR 204256">CMR 204256</a></MadCap:conditionalText></p>
+                        <p>User Guide – <em>FireLight Platform User Guide</em>: Signatures section,<MadCap:conditionalText MadCap:conditions="General.PDF"> "E-Signature in React for Embedded Users" topic</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"> <MadCap:xref href="E-Signature in React.htm" alt="E-Signature in React for Embedded Clients [User Instructions]">E-Signature in React for Embedded Clients [User Instructions]</MadCap:xref></MadCap:conditionalText>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:pageBreak />
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

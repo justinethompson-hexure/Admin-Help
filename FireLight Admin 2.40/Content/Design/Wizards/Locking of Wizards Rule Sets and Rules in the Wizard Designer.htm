@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+	<head>
+	</head>
+	<body>
+		<h1>Locking of Wizards, Rule Sets, and Rules in the Wizard Designer<a name="top">
+		</a></h1>
+		<h2>Locking of Wizards</h2>
+		<p>The FireLight<sup MadCap:conditions="General.Online">®</sup> system automatically locks a wizard for the first user who starts to make changes to the wizard. This prevents other users from editing  the wizard at the same time. </p>
+		<p> For other users who attempt to open the wizard while it is locked by the first user, the system displays a "User &lt;user name&gt; is currently working on the wizard" message on the upper left of the wizard page above the Wizard and  disables the EDIT RULES and SAVE WIZARD buttons.  Other users can only view, navigate between the pages, or close the wizard while the wizard is locked.</p>
+		<p>Example: Default lock time is one hour (based on what is set in the organization's database). </p>
+		<ul>
+			<li>
+				<p>If the user clicks the EDIT RULES button, lock time for the wizard resets to that of the rule set timeout so that both wizard and rule set timeout are the same.</p>
+			</li>
+			<li>
+				<p>After 55 minutes of lock time, when the user continues to edit the wizard, lock time automatically rolls over to one more hour.</p>
+			</li>
+			<li>
+				<p>After 55 minutes of lock time, when the user is not continuing to make changes to the wizard, the system  alerts the user to save data. On the Alert box, the user can do any of the following: </p>
+				<ul style="list-style-type: circle;">
+					<li>
+						<p>Click the SAVE NOW button to save the changes and release the lock.</p>
+					</li>
+					<li>
+						<p>Click the EXTEND button to extend the lock time to one more hour.</p>
+					</li>
+					<li>
+						<p>Does not click a button. After 5 minutes of prompt, the system releases the lock without saving any changes, the lock icon turns gray, and the following text appears below the lock icon: "The application is inactive."</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p>When the user clicks the SAVE WIZARD button, navigates to another page, or exits the wizard, FireLight unlocks the wizard. Another user can then edit the wizard.</p>
+			</li>
+		</ul>
+		<p>If another user loads the Wizard without locking it and another user updates that Wizard, the system prompts the initial user to reload the Wizard to view latest changes.</p>
+		<h2> Locking of Rules Sets and Rules</h2>
+		<MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/LockRuleSetsWizard.flsnp" />
+		<a href="#top" alt="Return to Top">Return to Top</a>
+	</body>
+</html>

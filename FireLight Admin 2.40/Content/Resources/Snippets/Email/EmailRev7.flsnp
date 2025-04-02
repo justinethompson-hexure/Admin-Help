@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <sup>7</sup> To send the submitting agent a Review Queue Reject email that includes both the rejection instructions and the reviewer's rejection remarks, use the &lt;MESSAGE&gt; tag instead of the rejection instructions text in the Review Queue Reject Message template. The rejection instructions is pulled into the Review Queue Reject email from the  declined approval popup message in your organization's CSS. To receive the email, the agent needs to have the <strong>Send Message Center Emails</strong> checkbox selected on the My Preferences page in FireLight. On the Review Queue tab in Organization Configuration/Groups, the <a href="../../../Organization Configuration/Groups/Review Queue.htm#DisableActionEmail" target="_blank" alt="Disable Action Email Notifications">Disable Action Email Notifications</a> checkbox must be cleared for the reviewer role code.</body>
+</html>

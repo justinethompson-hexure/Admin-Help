@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Enable Override SSO</b> checkbox to enable the agent to override the entry in the Your Name field on the Send Email To Client To Request Signatures page (this overrides the User Full Name field entry on the Preferences page). This allows agents to use their preferred names on client signature requests. Without this option selected, the default behavior is to lock the User Full Name and the User Email Address fields within My Preferences to the values sent over in the Single Sign-on Request used to establish the <MadCap:variable name="General.ProductName" /> user session. </body>
+</html>

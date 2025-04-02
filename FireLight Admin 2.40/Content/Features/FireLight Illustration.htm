@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Setup and usage instructions for the Illustration activity in FireLight." />
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight Illustration</h1>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">FireLight Illustration Activity </caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>FireLight<sup>®</sup> Illustration   adds basic illustration components (user interface wizards, rule sets, illustration engine, and output), which provide the <MadCap:conditionalText MadCap:conditions="General.Postpone">Guided Illustration and </MadCap:conditionalText>Illustration activities in FireLight. FireLight Illustration currently uses the ForeSight<sup>®</sup> illustration engine to provide the calculations and output for illustrations.   (Hosting of third-party engines in FireLight Illustration is available in a future release.) The FireLight Illustration feature supports only wizards (no forms) for data entry. </p>
+                        <p>This first release of FireLight Illustration includes <MadCap:conditionalText MadCap:conditions="General.Postpone">base Guided Illustration wizards and </MadCap:conditionalText>base sample Illustration wizards and accompanying rule sets for Fixed Annuity (FA), Variable Annuity (VA), and Term Life product types. <MadCap:conditionalText MadCap:conditions="General.Postpone">In the initial release of the FireLight Illustration feature, the FireLight base team maintains the Guided Illustration wizards that are included, which means clients cannot copy, create, or modify the Guided Illustration wizards.</MadCap:conditionalText><![CDATA[  ]]></p>
+                        <p MadCap:conditions="General.Postpone">Prior to creating an illustration, an advisor can optionally enter data in a Guided Illustration activity. The Guided Illustration provides a consistent user experience for entering data in each product type and filters the list of available products before continuing to a product illustration. Data gathered in the Guided Illustration activity transfers to the product Illustration activity. Guided Illustrations remain in Data Entry mode and are used repeatedly to gather preliminary data for product Illustrations.</p>
+                        <p>If the client organization also has the Application activity implemented in FireLight, the advisor or agent can choose to start an Application activity in FireLight when the product Illustration is completed. Applicable data gathered in the Illustration activity transfers to the product Application activity along with the PDF output as an attachment.</p>
+                        <p MadCap:conditions="General.Online">The following image shows an Illustration to Application (if Application is implemented) workflow in FireLight.</p>
+                        <p MadCap:conditions="General.Online">
+                            <img src="../Resources/ImagesAdmin/Illustrations1.png" alt="Guided Illustration - Illustration Workflow" title="Guided Illustration - Illustration Workflow" MadCap:conditions="General.Online" />
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">FireLight Illustration Setup</p>
+                        <p>FireLight Illustration can be implemented for FireLight-only clients and for FireLight clients who are also ForeSight clients.</p>
+                        <ul>
+                            <li>FireLight Illustration requires illustration component licensing fees in addition to usage fees and a one-time implementation fee. Contact your Strategic Account Manager for details. </li>
+                            <li>
+                                <p>FireLight Illustration feature requires development effort for setup and testing of illustration calculations, output, interfaces, and any integration work that may need to be done.</p>
+                                <p class="note"><strong>IMPORTANT!</strong> All organizations calling Illust services must have a CalcRouter config in all environments to correctly set up communication with the ForeSight Illust Services layer.</p>
+                            </li>
+                            <li>Existing FireLight clients who are also ForeSight clients can contact their Strategic Account Manager to update or upgrade their ForeSight system to use the FireLight Illustration feature. This includes mapping for FireLight Illustration for each ForeSight product module that is in use.</li>
+                            <li>Support is available for using the FireLight Illustration content in an API for outside sources to consume the Illustration. Contact your FireLight PM for assistance.</li>
+                            <li>A multi-product SaaS web version of the TestBench test tool is available to support regression testing of illustration values and report output for ForeSight and FireLight Illustration.</li>
+                            <li>A ForeSight Admin Tool (FSAT) is available to support illustration rate updates, etc.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">FireLight Admin Setup</p>
+                        <p>The FireLight team provides sample base illustration wizards for supported product types. The carrier can create and self-manage the product Illustration wizards or the carrier can contact their Strategic Account Manager to have the FireLight team create and design their customized Illustration wizards. </p>
+                        <p>If the organization would like to have the illustrations included in application packages with the ability to print and view illustration PDF documents from the application package, have the FireLight team add a DocType of Illustration with a Document Tag of LinkedIllustration to the organization's list profile. Then add an Illustration template form to the applicable application packages.    If a template is not added, the document is visible only by viewing it in Other Actions/Documents and would then be included last in the final document package for submission to the provider.</p>
+                        <p><b class="Bold">NOTE:</b> Needs determination documents is attached as NeedsDetermination document tags, illustration as LinkedIllustration, and Account Opening documents as AccountOpening. All other attached documents coming from one activity to the next activity will come over as a document tag of Other.</p>
+                        <ol>
+                            <li>Designer/Wizard Library page: create the wizards for the client-specific product illustrations. See <MadCap:xref href="../Design/Wizard Library/Wizard Library.htm" alt="Wizard Library">Wizard Library</MadCap:xref>. </li>
+                            <li>
+                                <p>Designer/Wizard Designer page: create the pages, containers, and fields  for the illustration wizards. Click <b class="Bold">Edit Rules</b> and add new rules to the rule sets using the <MadCap:xref href="../Design/Wizards/Rules Window - Wizards.htm" alt="Rules Window">Rules Window</MadCap:xref> in the Wizard Designer. See <MadCap:xref href="../Design/Wizards/Wizard Designer.htm" alt="Wizard Designer">Wizard Designer</MadCap:xref>.</p>
+                                <p>Subfirm management:</p>
+                                <ul>
+                                    <li>
+                                        <p>FLI_AGENT_ID_NUMBER is now required. It is the agent identification number from the TX1228 used in the postover.</p>
+                                    </li>
+                                    <li>
+                                        <p>FLI_SUB_FIRM_NAME and FLI_SUB_FIRM_ID are now required in the FireLight Illustration API. FLI_SUB_FIRM_NAME is the name of the subfirm accessing the system and FLI_SUB_FIRM_ID is the unique ID of the subfirm accessing the system.&#160;A contracted firm (the firm setup in the FireLight organization) may have many subfirms under them. &#160;The FLI_SUB_FIRM_ID is used to identify the subfirm. The DTCC ID is used for firms that are DTCC members.&#160;When the subfirm is not a DTCC member, FireLight will assign a unique ID.&#160;Add a rule to control the validation at the subfirm level.</p>
+                                        <p>Following is a sample rule that checks for FLI_SUB_FIRM_ID. If it does not have a value then a validation message is posted. The same can be done for FLI_SUB_FIRM_NAME. If you do not have a FLI_SUB_FIRM _ID you can put a dummy ID in there. You can do a lot with this rule, which includes looking for specific values, including a generic dummy ID. Or, you can just look for the presence of a value. The following scenario is just looking for a value, not an exact ID.</p>
+                                        <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+                                            <MadCap:codeSnippetCopyButton />
+                                            <MadCap:codeSnippetCaption>
+                                                <p>Look for a value, not an exact ID</p>
+                                            </MadCap:codeSnippetCaption>
+                                            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;if&gt;
+    &lt;condition&gt;
+        &lt;isnullorwhitespace&gt;
+            &lt;diget dataitemid=”FLI_SUB_FIRM_ID" addifnotfound="true" /&gt;
+        &lt;/isnullorwhitespace&gt;
+    &lt;postmessage dataitemid=”FLI_SUB_FIRM_ID"&gt;
+        &lt;const value="Sub Firm ID must be provided." /&gt;
+    &lt;/postmessage&gt;
+    &lt;else /&gt;
+    &lt;removemessage dataitemid="FLI_SUB_FIRM_ID" /&gt;
+&lt;/if&gt;</MadCap:codeSnippetBody>
+                                        </MadCap:codeSnippet>
+                                        <p><b class="Bold">NOTE:</b> Carriers have two options to implement the Sub Firm rules.</p>
+                                        <ul style="list-style-type: circle;">
+                                            <li>
+                                                <p>Assign the FLI_ApiRoleCode to the package</p>
+                                                <p>Using FLI_ApiRoleCode is a heavy-handed approach because if a package is assigned FLI_ApiRoleCode, then only a package with FLI_ApiRoleCode will have the rule. Packages that do not have a Role set will not be loaded. This is very useful when users with a Role get one package and all others get the standard package. Be careful when using this feature.</p>
+                                            </li>
+                                            <li>
+                                                <p>Use FLI_API_INDICATOR DataItem in the rule</p>
+                                                <p>Using the FLI_API_INDICATOR gives them much more granular control. They can use it in the logic of an individual rule. Basically the rule logic would be:</p>
+                                                <p>If (FLI_API_INDICATOR is set) Then</p>
+                                                <p> Run My Rule logic.</p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Product Configuration/Activities page: in the grid at the top of the page, select the <b class="Bold">Illustration</b> activity. Ensure the <b class="Bold">ACORD Type</b> is set to <b class="Bold">Illustration (111)</b>. Update the settings for your organization. On the Next Activities tab, the Next Activity option is Application, which is added via a Product, Package, and Sales Agreement. See <MadCap:xref href="../Product Configuration/Activities.htm" alt="Activities">Activities</MadCap:xref>.</p>
+                            </li>
+                            <li> Product Configuration/Products page: select the product to be illustrated in the upper grid or add a new product, if applicable, and fill in the product settings including State Approved checkboxes. Save the Product Config. See <MadCap:xref href="../Product Configuration/Products.htm" alt="Products">Products</MadCap:xref>. </li>
+                            <li> Product Configuration/Packages page: add a new package for the illustration. Fill in the <b class="Bold">Package Name</b> and select <b class="Bold">Illustration (111)</b> in <b class="Bold">ACORD Type</b> on the Package Detail tab. On the <b class="Bold">Forms/Wizards In Package</b> tab, select and add the illustration wizard to the Forms/Wizards in Package list. On the <b class="Bold">Rule Sets In Package</b> tab, add the illustration rule sets to the Rule Sets in Package list and save the package. See <MadCap:xref href="../Product Configuration/Packages.htm" alt="Packages">Packages</MadCap:xref>.</li>
+                            <li> Product Configuration/Sales Agreements page: select the product in the upper grid. Select the <b class="Bold">Selling Org</b> in the list and fill in the applicable product information. Enter the <b class="Bold">Illust Services Role</b> code to use when the carrier has distributors selling their product. Move packages from the Available Packages list to the Assigned Packages list. Save the Sales Agreement. See <MadCap:xref href="../Product Configuration/SalesAgreements.htm" alt="Sales Agreements">Sales Agreements</MadCap:xref>.</li>
+                            <li>
+                                <p>Organization Configuration/<MadCap:xref href="../Organization Configuration/Groups.htm" alt="Groups">Groups</MadCap:xref> page: </p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>In the grid at the top of the page, select the <b class="Bold">TC Role Code</b> for the FireLight user group.</li>
+                                    <li>Enter the <b class="Bold">Illustration Services Role Code</b> if the selling organization is the same as the products organization (i.e., the Carrier). In this case, it essentially works as an override to the Sales Agreement role code. This allows the carrier to have Administrators or Quality Assurance users that can get more calculations or more PDF files for development and testing purposes. </li>
+                                    <li>On the <b class="Bold">Activity Access</b> tab, select the <b class="Bold">Illustration</b> checkbox. </li>
+                                    <li>On the <b class="Bold">Product Access</b> tab, select the checkbox for the new product.</li>
+                                </ol>
+                            </li>
+                            <li>Utilities/Deployments page: Deploy the Organization Configuration, Product Configuration and Group Configuration to the applicable environments. See <MadCap:xref href="../Utilities/Deployments/Deploy Data.htm" alt="Deploy Data">Deploy Data</MadCap:xref>.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <ol start="1">
+                            <li>
+                                <p>Start a new Illustration activity in FireLight via post-over or from the Home page under <strong>Start New</strong> or on the navigation bar under <strong>New Activity</strong>, click <b class="Bold">Illustration</b>.</p>
+                            </li>
+                            <li>On the Create New Illustration page, select a <strong>Jurisdiction</strong> and <strong>Product Type</strong> in the lists, then click a Product Name. (If Localization is enabled for your organization, select an option in the <b class="Bold">Locale</b> list if the locale is different from the default locale.)</li>
+                            <li>Fill in the information on the illustration wizard. </li>
+                            <li>Click <b class="Bold">Illustrate</b> on the toolbar to view illustration calculations in a Quick View dialog. On the lower right, click <b class="Bold">Close</b> to exit Quick View.</li>
+                            <li>Click <b class="Bold">Print</b> on the toolbar to view the illustration reports in a separate tab or window.</li>
+                            <li>
+                                <p>When no <b class="Bold">Alerts</b> are present, the product illustration is complete.</p>
+                            </li>
+                            <li>
+                                <p>To save the illustration, click <b class="Bold">Save</b> on the navigation bar, enter the <b class="Bold">Illustration Name</b> in the <b class="Bold">Save Illustration</b> dialog, and click <b class="Bold">Save</b>. If you do not save the illustration, it will not be added to the Recent Activity list on the Home page or to the All Activities page.</p>
+                            </li>
+                            <li>
+                                <p>(Optional) If your organization has the Agent Illustration PDF Output option enabled and you are sales desk, assistant, etc., click the <b class="Bold">Send Email</b> button next to the Print button on the illustration toolbar and fill in the information on the Send Email dialog. If a “|CLIENT_NAME|” tag appears in the Subject and Message, replace it with the client’s name. Click <b class="Bold">Send</b> to send an email to the agent with a link to the illustration PDF output. Repeat for each agent to receive the email. This allows the agent to click the link within the email and quickly print the illustration PDF output.</p>
+                            </li>
+                            <li>
+                                <p>(Optional) If your organization has the Application activity implemented, you can click <strong>Apply</strong> on the toolbar to begin a new application for the illustrated product. FireLight pre-fills  data entered on the illustration into matching fields on the application. The Apply button is unavailable when Alerts are present.</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>User Guide – <em>FireLight Platform User Guide</em>, New Activity/<MadCap:conditionalText MadCap:conditions="General.PDF">"Illustration" </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../UserGuide/New Activity/Illustration.htm" alt="Illustration">Illustration [User Instructions]</MadCap:xref> </MadCap:conditionalText>topic. </p>
+                        <p>Spotlight Feature Video – <a href="https://vimeo.com/335511665/86bc20bb89" target="_blank" title="FireLight Save As for Illustration" alt="FireLight Save As for Illustration">Save As for Illustration</a></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This enhancement will add the functionality to allow for the importing of a Rule Set.   We have the option on wizards and forms but not on Rule Sets. Adding this to aid with speed of implementation and help to reduce errors experienced due to manual copy and paste process. </p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>On Rule Set admin screen, link "View All Rule Definitions" is updated to "Import/View All Rule Definitions." FL Admin -&gt; Product Config -&gt; Rule Sets.</p>
+            </li>
+            <li>
+                <p>Import Rule Set process is added on Rule Set screen in the Admin tool under Rule Definitions Window.</p>
+            </li>
+        </ul>
+    </body>
+</html>

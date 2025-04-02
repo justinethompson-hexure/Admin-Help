@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="General.Postpone">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Tag Conversion Process, Common Tag Conversion Process, Generate the Mapping Rule Set, Upload Mapping Spreadsheet" />
+    </head>
+    <body>
+        <h1>
+            <a name="top">
+            </a>Generate Mapping Rule Set</h1>
+        <p class="note">
+            <b class="Bold">IMPORTANT!</b> To enable the Generate Mapping Rule Set utility, go to the <b class="Bold">Organization Configuration/Groups/</b><MadCap:xref href="../Organization Configuration/Groups/Admin.htm" target="_blank" alt="Admin">Admin</MadCap:xref> tab and select the <b class="Bold">Enable View Utilities</b> checkbox. This enables all utilities for your organization.</p>
+        <p>Use the Generate Mapping Rule Set to create a mapping rule set for mapping existing dataitem tags to new dataitem tags or from provider to provider. This rule set is used on in-flight activities that have not been locked. The rule set runs when the activity is opened and creates and sets all new tags that need to be mapped. The rule set should activate on the same date as the converted forms and wizards.</p>
+        <p>This utility is especially useful in converting existing tags to common tags (see <MadCap:xref href="../Design/Common Tagging/Common Tags.htm" target="_blank" alt="Common Tags">Common Tags</MadCap:xref> for common tag spreadsheets).</p>
+        <h2>Before Generating the Mapping Rule Set</h2>
+        <p>Use the Download Tag List utility to download a spreadsheet of existing dataitem tags, forms and rule sets within a package and add the mapping "to" dataitem tags to the spreadsheet. See <MadCap:xref href="Download Tag List.htm" target="_blank" alt="Download Tag List">Download Tag List</MadCap:xref> for instructions.</p>
+        <p class="note">
+            <b class="Bold">NOTE:</b> The client and the FireLight<sup MadCap:conditions="General.Online">®</sup> Strategic Account Manager and developers need to coordinate all updates to prevent issues with data. </p>
+        <h2>Generate the Mapping Rule Set</h2>
+        <ol>
+            <li>On the navigation bar, click <b class="Bold">Utilities/Generate Mapping Rule Set</b>.</li>
+            <li>
+                <p> Under <b class="Bold">Upload Mapping Spreadsheet</b>, drop the mapping spreadsheet or click in the box and select the mapping spreadsheet.</p>
+            </li>
+            <li>The mapping spreadsheet opens below the box. Click the <b class="Bold">PREVIOUS</b> and <b class="Bold">NEXT</b> buttons to move through the pages of the spreadsheet to verify the mappings from old to new tags.</li>
+            <li>
+                <p>Below the mapping spreadsheet under <b class="Bold">Rule Mapping Options</b>, select the applicable checkboxes.</p>
+                <p>
+                    <b class="Bold">Use getcontrolstate check</b> Checks if a dataitem is enabled or disabled. </p>
+                <p>
+                    <b class="Bold">Use isnullorwhitespace check</b> Checks if a dataitem is null or contains just whitespace characters.</p>
+                <p>
+                    <b class="Bold">Set the rule scope to "Property Change" (instead of "All")</b> </p>
+            </li>
+            <li>Click <b class="Bold">BUILD MAPPING</b>. </li>
+            <li>The rule mappings open below. Scroll down the rules to view and verify the mapping rules. </li>
+            <li>In <b class="Bold">Enter Rule Set Name</b> enter a mapping rule set name for the rule set and click <b class="Bold">SAVE RULE SET</b>.</li>
+            <li>
+                <p>Click <b class="Bold">OK</b> on the confirmation Message dialog.</p>
+                <p>FireLight adds the mapping rule set to the grid on the Product Configuration/<MadCap:xref href="../Product Configuration/Rule Sets.htm" target="_blank" alt="Rule Sets">Rule Sets</MadCap:xref> page.</p>
+            </li>
+            <li>On the navigation bar, click <b class="Bold">Product Config/Rule Sets</b>. Select the approved states in the <b class="Bold">State Approved</b> grid.</li>
+            <li>Add the mapping rule set to the corresponding product package on the Product Configuration/<MadCap:xref href="../Product Configuration/Packages.htm" target="_blank" alt="Packages">Packages</MadCap:xref> page.</li>
+        </ol>
+        <p MadCap:conditions="General.Online">
+            <a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

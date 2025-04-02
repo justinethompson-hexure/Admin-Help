@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Package Conversion</h1>
+        <p class="note"><b class="Bold">NOTE:</b> To enable the Package Conversion utility, go to the <b class="Bold">Organization Configuration/Groups</b> page <MadCap:xref href="../Organization Configuration/Groups/Admin.htm" target="_blank" alt="Admin">Admin</MadCap:xref> tab and select the <b class="Bold">Enable View Utilities</b> checkbox. This enables all utilities for your organization.</p>
+        <p>Use the Package Conversion utility to create new forms, wizards and rule sets within a package that contain the new dataitem tags from the mapping spreadsheet and then select an expiration date to stop using the existing forms, wizards and rule sets with the old tags and start using the new forms, wizards and rule sets with the new tags. </p>
+        <p>This utility is especially useful in converting existing tags to common tags (see <MadCap:xref href="../Design/Common Tagging/Common Tags1.htm" target="_blank" alt="Common Tags" title="Common Tags">Common Tags</MadCap:xref> for more information).</p>
+        <h2>Before Converting a Package</h2>
+        <p>Use the Download Tag List utility to download a spreadsheet of existing dataitem tags within a package and add the mapping "to" dataitem tags to the spreadsheet. See <MadCap:xref href="Download Tag List.htm" target="_blank" alt="Download Tag List">Download Tag List</MadCap:xref> for instructions. This is especially useful if most of the dataitem tags are going to be converted to common tags.</p>
+        <p class="note"><b class="Bold">NOTE:</b> The client and the Project Manager and developers need to coordinate all updates to prevent issues with data. </p>
+        <h2>Convert a Package</h2>
+        <ol>
+            <li>On the navigation bar, click <b class="Bold">Utilities/Package Conversion</b>. </li>
+            <li> Under <b class="Bold">Upload Mapping Spreadsheet</b>, drop the mapping spreadsheet or click in the box and select the mapping spreadsheet.</li>
+            <li>In the <b class="Bold">Package to Convert</b> list, select the applicable package to create new forms, wizards and rule sets with new tags from the mapping spreadsheet.</li>
+            <li>In the <b class="Bold">Package Items to Convert</b> grid, select or clear the checkboxes to include only the applicable items to convert to the new tags.</li>
+            <li>(Optional) Click in the <b class="Bold">Select Expiration Date</b> box and select a date to expire the current forms, wizards and rule sets within the package and start using the converted forms, wizards and rule sets with the new tags within the package. <b class="Bold">NOTE:</b> If you do not set an expiration date, you can update the package later after  verifying the converted forms and rule sets converted correctly to common tags (see step 10).</li>
+            <li>(Optional) In the <b class="Bold">TimeZone</b> list, select the time zone for the expiration date. </li>
+            <li>
+                <p>(Optional) Click <b class="Bold">APPLY EXPIRATION DATE</b>. NOTE: This step can be delayed until after you verify the converted forms, wizards and rule sets in the package. You can return to the Package Conversion utility and then set the expiration date. </p>
+                <p>The Expiration Date (Switchover Date) column displays the selected expiration date.</p>
+            </li>
+            <li>Select the <b class="Bold">Add converted items to the package</b> checkbox to add the new converted forms, wizards and rule sets to the package.</li>
+            <li>
+                <p>Click <b class="Bold">CONVERT PACKAGE</b> and wait for processing to complete.</p>
+                <p>When processing completes, the Package Items to Convert grid displays "Converted" in the Status column.</p>
+            </li>
+            <li>
+                <p>Verify the converted forms, wizards and rule sets. Converted items appear with "-Converted [DATE]" next to the form, wizard or rule set name in the grids at the top of the pages. </p>
+                <ul>
+                    <li>Go to Designer/<MadCap:xref href="../Design/Forms/Form Designer.htm" target="_blank" alt="Form Designer">Form Designer</MadCap:xref> page to view the dataitem names in the converted forms. Go to Designer/<MadCap:xref href="../Design/Form Library/Form Library.htm" target="_blank" alt="Form Library">Form Library</MadCap:xref> page and ensure "This Form Begins On" date is correct on the converted forms after you apply an expiration date.</li>
+                    <li>Go to Designer/<MadCap:xref href="../Design/Wizards/Wizard Designer.htm" target="_blank" alt="Wizard Designer">Wizard Designer</MadCap:xref> page to view the dataitem names in the converted wizards. Go to Designer/<MadCap:xref href="../Design/Wizard Library/Wizard Library.htm" target="_blank" alt="Wizard Library">Wizard Library</MadCap:xref> and ensure "This Wizard Begins On" date is correct on the converted wizards after you apply an expiration date.</li>
+                    <li>Go to the Product Configuration/<MadCap:xref href="../Product Configuration/Rule Sets.htm" target="_blank" alt="Rule Sets">Rule Sets</MadCap:xref> page to view the converted rule sets and ensure "This Rule Set Begins On" date is correct after you apply an expiration date. </li>
+                </ul>
+            </li>
+            <li>Go to the  Product Configuration/<MadCap:xref href="../Product Configuration/Packages.htm" target="_blank" alt="Packages">Packages</MadCap:xref> page. Verify the converted forms, wizards and rule sets are in the product Package. </li>
+            <li>When the begin date for the package conversion arrives, go to the  Utilities/<MadCap:xref href="Deployments/Deployments.htm" target="_blank" alt="Deployments">Deployments</MadCap:xref> page. Deploy the product Package Configuration or All Configuration for the applicable carrier or distributor environment.</li>
+            <li>Next Step: Contact your Strategic Account Manager for developer assistance with converting old tags to new tags in the Provider. Work with the FireLight integration team to schedule the converted Provider to be deployed when the new forms, wizards and rules begin.</li>
+        </ol>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

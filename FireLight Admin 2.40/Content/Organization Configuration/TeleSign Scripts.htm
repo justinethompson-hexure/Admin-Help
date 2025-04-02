@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <a name="top">
+            </a>Tele-Sign Scripts</h1>
+        <p class="note">
+            <b class="Bold">NOTE:</b> To enable the Tele-Sign feature, go to Organization Config/Groups, <MadCap:xref href="Groups/App.htm" target="_blank" alt="App">App</MadCap:xref> tab and select the <b class="Bold">Enable Tele-Sign</b> checkbox. See <MadCap:xref href="../Features/Tele-Sign.htm" target="_blank" alt="Tele-Sign">Tele-Sign</MadCap:xref> in Features for setup and user information.</p>
+        <p>On the navigation bar, click <b>Organization Config/Tele-Sign Scripts</b> to go to the Tele-Sign Scripts page.</p>
+        <p>Use the Tele-Sign Scripts page to add or edit Tele-Sign scripts for the applicable products with the Tele-Sign feature. </p>
+        <h2>Add or Edit a Tele-Sign Script</h2>
+        <MadCap:snippetBlock src="../Resources/Snippets/Signatures/TeleSignScriptAdd.flsnp" />
+        <h2>Sample Tele-Sign Script Template in HTML<MadCap:conditionalText MadCap:conditions="General.Online"> and Script Preview</MadCap:conditionalText></h2>
+        <p>
+            <b class="Bold">Sample Tele-Sign Script Template in HTML</b>
+        </p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>Sample Tele-Sign Script in HTML</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: HTML;">&lt;div style="margin: 10px; padding: 10px; border: 1px grey solid"&gt;
+    &lt;h2&gt;Tele-Sign Instructions - Term Product #1&lt;/h2&gt;
+    &lt;br /&gt;
+    &lt;br /&gt;&lt;div style="margin: 10px; padding: 10px; border: 1px grey solid"&gt;
+    &lt;h2&gt;Tele-Sign Instructions - Term Product #1&lt;/h2&gt;
+    &lt;br /&gt;
+    &lt;br /&gt;
+    &lt;p&gt;Please follow these instructions in order to complete the Tele-Sign process.
+    &lt;p style="margin-left: 20px;"&gt;
+        1. Please call &lt;b&gt;888-888-8888&lt;/b&gt;.
+        &lt;br /&gt;
+        2. When asked for the application ID, enter the code &lt;b&gt;|FLI_TELESIGN_APP_ID|&lt;/b&gt;.
+        &lt;br /&gt;
+        3. When asked for your date of birth, please enter &lt;b&gt;|FLI_TELESIGN_DOB|&lt;/b&gt;.
+        &lt;br /&gt;
+        4. Enter the PIN &lt;b&gt;|FLI_TELESIGN_PIN|&lt;/b&gt;.
+        &lt;br /&gt;
+        5. Complete the signing process.
+    &lt;/p&gt;
+&lt;/div&gt;</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p MadCap:conditions="General.Online">
+            <b class="Bold">Sample Script Preview</b>
+        </p>
+        <p MadCap:conditions="General.Online">Click the image thumbnails to expand the images. Click again to collapse the images to thumbnails.</p>
+        <p MadCap:conditions="General.Online">
+            <img src="../Resources/ImagesAdmin/Capture29.png" alt="TeleSign Script Preview" title="TeleSign Script Preview" MadCap:conditions="General.Online" />
+        </p>
+        <p MadCap:conditions="General.Online">The script above will look like the following in the FireLight application.</p>
+        <p MadCap:conditions="General.Online">
+            <img src="../Resources/ImagesAdmin/Capture39.png" alt="Agent Instructions Page - Tele-Sign Instructions" title="Agent Instructions Page - Tele-Sign Instructions" MadCap:conditions="General.Online" />
+        </p>
+        <p MadCap:conditions="General.Online">
+            <a href="#top" target="_blank" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

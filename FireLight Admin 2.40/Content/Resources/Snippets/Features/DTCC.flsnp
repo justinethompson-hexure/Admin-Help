@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This enhancement will revamp how we support getting attachments to the DTCC. We begin transferring the attachments to the DTCC from FireLight DTCC Subsystem as opposed to using the Provider. By doing so, this will allow us to track and receive status updates from the DTCC and Carriers regarding the attachments. For the May release, we are focusing on moving the transfer of the attachments from the Provider to the DTCC Subsystem. This will allow us to then have the status updates in the Support and Admin tools similar to the APP/SUB file in the July release.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>For May the framework for DTCC attachments will move from the provider to the DTCC Sub System. This is applied for all clients who use attachments.</p>
+            </li>
+        </ul>
+    </body>
+</html>

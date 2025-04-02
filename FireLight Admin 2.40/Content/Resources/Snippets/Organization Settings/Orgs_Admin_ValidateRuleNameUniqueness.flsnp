@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Select the <b class="Bold">Validate Rule Name Uniqueness</b> checkbox to require all new rule names to be unique. When this feature is enabled, on the  Form Designer or Wizard Designer page in the "Rules Window" when a new rule is added, it cannot be saved if the rule has the same name as any of the existing rules in Admin.  A "Rule name must be unique!" error message appears. You must provide a new name for the new rule. <img src="../../ImagesAdmin/Capture271.png" alt="Rule Name Must Be Unique Message" title="Rule Name Must Be Unique Message" MadCap:conditions="General.Online"></img></p>
+        <p>
+            <b class="Bold">NOTE:</b> It is recommended that you turn this feature either on or leave it off. Do not switch it on and off.</p>
+    </body>
+</html>

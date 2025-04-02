@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Advanced search for All Activities and Review Queue will feature a new search field for "Signature Type." When activities use the "FLI_DECLINED_ESIGN" tag, the activity is available for display in the Advanced Search. The options in the dropdown for "Signature Type" is "e-Signature" and "Wet Signature." Declining e-Signature in the FireLight UI will also cause the activity to display in the search results as "Wet Signature." The new "Signature Type" search field will first look at the Status before applying the search for the "Signature Type." For statuses of "Data Entry" and "Pre-Submit Review," the "Signature Type" may not be determined because the user has not yet accepted or declined e-Signature. In these instances, the activity will return in the search results under "e-Signature." For example, if the "Status" is "Data Entry" and "Signature Type" selected is "Wet Signature," the search results will come back with zero results. Exception to this scenario: “FLI_DECLINED_ESIGN” tag is used in rules and signature type is established by use of this tag.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>All Activities, Advanced Search-new "Signature Type" field</p>
+            </li>
+            <li>
+                <p>Review Queue, Advanced Search-new "Signature Type" field</p>
+            </li>
+        </ul>
+    </body>
+</html>

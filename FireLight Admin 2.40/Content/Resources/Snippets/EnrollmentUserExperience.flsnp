@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <ol>
+            <li>
+                <p>On the FireLight navigation bar, the user clicks <strong>New Activity</strong> and clicks <strong>Enrollment</strong>.</p>
+            </li>
+            <li>
+                <p>The Plan Design page opens.</p>
+                <p MadCap:conditions="General.Online,General.PDF - UGuide">
+                    <img src="../ImagesAdmin/Capture209.png" alt="Plan Design Page" title="Plan Design Page" MadCap:conditions="General.Online,General.PDF - UGuide" />
+                </p>
+                <p>On the wizard Plan Design page, the user enters data in the Agent Information section and in the Plan Information section. The Group ID is a required field that ties the application back to the participant. The CUSIP ID is a required field that ties the product to the participant in this batch enrollment.</p>
+                <p>This information is applied to all of the participant's applications and will tie these groups of applications together. </p>
+                <p><b class="Bold">NOTE:</b> Currently, the Enrollment process supports only the Primary Owner and the Primary Insured.</p>
+            </li>
+            <li>
+                <p>The user clicks <strong>Next</strong> to go to the Participants page. </p>
+                <p MadCap:conditions="General.Online,General.PDF - UGuide">
+                    <img src="../ImagesAdmin/Capture209.png" alt="Enrollment Participants Page" title="Enrollment Participants Page" MadCap:conditions="General.PDF - UGuide,General.Online" />
+                </p>
+                <p>When the upload is large, the user scrolls down to view the additional participants that do not fit on the current page. The user clicks page navigation buttons above the grid on the right side of the page, as outlined in red below, to move among multiple pages of participants.</p>
+                <p MadCap:conditions="General.PDF - UGuide,General.Online">
+                    <img src="../ImagesAdmin/Capture209.png" alt="Participants Multiple Page Navigation" title="Participants Multiple Page Navigation" MadCap:conditions="General.Online,General.PDF - UGuide" />
+                </p>
+                <p>This page displays seven sortable columns in a grid. </p>
+                <ul>
+                    <li>
+                        <p>Select/Deselect All </p>
+                        <p>The user can select/deselect all participants at once or individually. When the user clicks a checkbox, a row appears above the columns with Send Request and Delete buttons. The user can either resend the request or delete the participant. Or the user can clear the checkbox in the Select/Deselect All column.</p>
+                    </li>
+                    <li>
+                        <p>(Participant's) First Name </p>
+                        <p>The user clicks the First Name link to open the Edit Participant dialog where the user can edit the participant's First Name, Last Name, and Email Address. User clicks <strong>Update</strong> to save the edits. Or the user clicks <strong>Close</strong> to close the dialog without saving edits. </p>
+                        <p MadCap:conditions="General.PDF - UGuide,General.Online">
+                            <img src="../ImagesAdmin/Capture209.png" alt="Edit Participant dialog" title="Edit Participant dialog" MadCap:conditions="General.Online,General.PDF - UGuide" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>(Participant's) Last Name </p>
+                        <p>The user clicks the Last Name link to open the Edit Participant dialog where the user can edit the participant's First Name, Last Name, and Email Address. User clicks <strong>Update</strong> to save the edits. Or the user clicks <strong>Close</strong> to close the dialog without saving edits.</p>
+                    </li>
+                    <li>
+                        <p>Email Address </p>
+                        <p>A non-editable column that displays the participant's email address.</p>
+                    </li>
+                    <li>
+                        <p>Actions </p>
+                        <p>An unnamed column with a font awesome icon. The user clicks the icon to open the application the participant has chosen. There is only one application per participant. The application is based on the CUSIP ID&#160;that was uploaded in the census. The user can complete the application and proceed to the signature process.</p>
+                    </li>
+                    <li>
+                        <p>Status </p>
+                        <p>Status column displays the current status for each participant who has received the application to review, fill out, and sign. These display statuses are the same statuses that display on the All Activities page: Data Entry, Client Request Complete, Complete, In Signatures, Pending Client Request, Pending Signatures, Pending Transmission, Signatures Complete, Submit Requested, In Review, Pending Review, Review: Approved, Review: Declined, and Review: Info Requested. </p>
+                        <p>The Status column also displays the number of errors that are occurring in the application. The user clicks the Errors hyperlink to view the errors in an Errors dialog.</p>
+                    </li>
+                    <li>
+                        <p>Delete </p>
+                        <p>An unnamed column that contains a trash can icon. The user clicks the trash can icon to delete the participant from the page. A confirmation dialog asks, "Are you sure you want to delete this participant?" The user clicks the OK button on the dialog to delete the participant and close the dialog. Or the user clicks the Cancel button to close the dialog without deleting the participant. <b class="Bold">NOTE:</b> If any child applications that are associated with the parent app have been submitted, the parent application cannot be deleted.</p>
+                    </li>
+                </ul>
+                <p>Above the grid at the top of the page, the following buttons and fields are available from left to right.</p>
+                <ul>
+                    <li>
+                        <p>Prev and Next buttons</p>
+                        <p>The user clicks the Prev and Next buttons to navigate through the census list if the list is more than one page long. </p>
+                    </li>
+                    <li>
+                        <p>Search field, icon, and Clear link</p>
+                        <p>The user can enter search criteria into the unnamed search field and click the search <img src="../ImagesUserGuide/SearchBtnGray.png" alt="Search Button" title="Search Button" /> icon to search any of the fields that are showing. For example, the user can type in "Mary" and all of the values with "Mary" will show, whether it be the participants first name, last name, or if it is contained in the email address. The user clicks the Clear link to the right of the search icon to clear the search text.</p>
+                    </li>
+                    <li>
+                        <p>Import button </p>
+                        <p>The user can upload the Participant Census from a csv spreadsheet using the Import button. 	CSV Parsing will fail if errors occur. The user clicks the Import button to open the Import Participants dialog. </p>
+                        <p MadCap:conditions="General.Online,General.PDF - UGuide">
+                            <img src="../ImagesAdmin/Capture209.png" alt="Import Participants dialog" title="Import Participants dialog" MadCap:conditions="General.PDF - UGuide,General.Online" />
+                        </p>
+                        <p>Example: Choose File - CSV Census Upload Changes.csv</p>
+                        <p MadCap:conditions="General.PDF - UGuide,General.Online">
+                            <img src="../ImagesAdmin/Capture209.png" alt="Import Participants - Choose File" title="Import Participants - Choose File" MadCap:conditions="General.Online,General.PDF - UGuide" />
+                        </p>
+                        <p>The user clicks any of the following:</p>
+                        <ul style="list-style-type: circle;">
+                            <li>
+                                <p>View Sample CSV link  opens a sample CSV spreadsheet.</p>
+                            </li>
+                            <li>
+                                <p>Choose File button opens a dialog, chooses the file to upload, and clicks Open.</p>
+                            </li>
+                            <li>
+                                <p>Upload button uploads the selected file from the Choose File action.</p>
+                            </li>
+                            <li>
+                                <p>Close button closes the dialog.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Send Request button </p>
+                        <p>The user selects the checkbox for a primary participant in the participant census and clicks the Send Request button to send an email to the participant, which initiates the client fill and sign process. The participant fills and signs the application. The secondary signer (if applicable, listed on the plan page) will just sign the application after the primary participant has filled out the application.</p>
+                    </li>
+                    <li>
+                        <p>Delete button </p>
+                        <p>The user selects the checkbox for a primary participant in the participant census and clicks the Delete button. On the Confirm Delete dialog, the user clicks the OK button to delete the participant and all child applications. Or the user clicks the Cancel button to close the confirmation dialog without deleting the participant. <b class="Bold">NOTE:</b> If any child applications that are associated with the parent app have been submitted, the parent application cannot be deleted.</p>
+                        <p MadCap:conditions="General.Online,General.PDF - UGuide">
+                            <img src="../ImagesAdmin/Capture209.png" alt="Confirm Delete dialog" title="Confirm Delete dialog" MadCap:conditions="General.PDF - UGuide,General.Online" />
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>The user can receive the latest update on the status by leaving the Enrollment activity and re-entering the activity. The Participant page shows the last time the status was updated. An "Updated at DATE TIME" appears above the grid on the left side of the page as outlined in red below. </p>
+                <p MadCap:conditions="General.PDF - UGuide,General.Online">
+                    <img src="../ImagesAdmin/Capture209.png" alt="Updated Timestamp" title="Updated Timestamp" MadCap:conditions="General.PDF - UGuide,General.Online" />
+                </p>
+            </li>
+        </ol>
+    </body>
+</html>

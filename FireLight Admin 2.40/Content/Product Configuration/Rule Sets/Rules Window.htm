@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Rules Window</h1>
+        <p><b class="Bold">NOTE:</b> Use the Form Designer <MadCap:xref href="../../Design/Forms/RulesWindow.htm" target="_blank" alt="Rules Window">Rules Window</MadCap:xref> or the Wizard Designer <MadCap:xref href="../../Design/Wizards/Rules Window - Wizards.htm" target="_blank" alt="Rules Window">Rules Window</MadCap:xref> to create rules from pre-built templates or custom rules for specific dataitems on a form or wizard. Use the Rules Window on the Rule Sets page to modify existing rules or create custom rules, and to delete, export, or search for rules.</p>
+        <p>On the <b class="Bold">Rule Sets</b> page, select a rule set in the grid and click the <b class="Bold">Rules Window</b> link to open the Rules Window. </p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Rules/RulesBestPracticesNote.flsnp" />
+        <h2>Locking of Rule Sets and Rules on the Rules Window</h2>
+        <MadCap:snippetBlock src="../../Resources/Snippets/DesignerFormsWizards/LockRuleSetsWizard.flsnp" />
+        <h2>Node Help</h2>
+        <ol>
+            <li>On the upper right of the Rules Window, click <b class="Bold">Node Help</b> to open a dialog. </li>
+            <li>Select an option in the <b class="Bold">Node Help For Template Type</b> list to access descriptions and examples of nodes used in Rules, Validation, BackOffice, or Queues.</li>
+        </ol>
+        <h2>Tasks</h2>
+        <p>In Rule Sets, following are the tasks you can accomplish on the Rules Window.</p>
+        <p class="Indent" MadCap:conditions="General.Online"><a href="#AddCustomRule" alt="Add a Custom Rule for a Dataitem" title="Add a Custom Rule for a Dataitem">Add a Custom Rule for a Dataitem</a>
+        </p>
+        <p class="Indent" MadCap:conditions="General.Online"><a href="#DeleteRules" alt="Delete Rules">Delete Rules</a>
+        </p>
+        <p class="Indent" MadCap:conditions="General.Online"><a href="#SearchRules" alt="Search Rules for a Data Item">Search Rules for a Data Item</a>
+        </p>
+        <h3><a name="AddCustomRule"></a>Add a Custom Rule for a Dataitem</h3>
+        <p><b class="DRNumberBold">Basics for Authoring a Rule in the Rules Window</b>
+        </p>
+        <ul>
+            <li>Starting from a template is the easiest.</li>
+            <li>Review the lower pane of the Rules Window for validation errors.  Be sure to enclose multiple actions within a &lt;block&gt; node, unless the actions are within a &lt;switch&gt; or &lt;if&gt; node, which treat actions within the body or after the &lt;else/&gt; node as if a &lt;block&gt; node is present. “There can only be one root node” error usually indicates that the action is not within a block.</li>
+            <li>
+                <p>On the upper right of the Rules Window, click the <b>Node Help</b> link for help with creating rules.</p>
+                <p><b>NOTE:</b> If using the addifnotfound attribute in a &lt;diget&gt; or &lt;diset&gt; node in a rule, and the data item has multiple rules, be sure to add the node and addifnotfound attribute to all rules for the data item to ensure the rules will run when the data item is not in a package.  If the node and addifnotfound attribute are not added to all rules for the data item, and a rule without the addifnotfound attribute runs first, all rules for the data item will not run. The addifnotfound attribute is not available with &lt;setconstrolstate&gt; or &lt;postmessage&gt; nodes.</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Modify an Existing Rule to Create a Custom Rule</b>
+        </p>
+        <p>Following is an example of modifying an existing Required Field rule to add a date field format for the Owner_DOB calendar control. This ensures the owner’s date of birth is formatted in MM/DD/YYYY format on the application.</p>
+        <ol>
+            <li>On the navigation bar, click <b>Product Config</b> and click <b>Rule Sets</b> to go to the Rule Sets page.</li>
+            <li>Select a rule set in the upper grid. In this example, select the <b>Party</b> rule set.</li>
+            <li>
+                <p>On the <b>Rule Set Detail</b> tab, click <b>Rules Window</b>.</p>
+            </li>
+            <li>
+                <p>In the Rules Window, below Rule Set Name on the upper left in <b>Filter Rules with Field</b>, type the name of the dataitem, <b>Owner_DOB</b>, to find any existing rules for the Owner_DOB dataitem within the Owner rule set.</p>
+            </li>
+            <li>
+                <p>On the left, click the <b class="Bold">Required: Owner_DOB</b> rule to open the rule. </p>
+            </li>
+            <li>
+                <p>On the right of the Rules Window, add XML for the date format as follows and re-name the rule to <b>Required Field Date Formatted: Owner_DOB</b>.</p>
+                <p>&lt;diset dataitemid="Owner_DOB"&gt;</p>
+                <p class="Indent"> &lt;format format="MM/dd/yyyy"&gt;</p>
+                <p class="Indent2"> &lt;diget dataitemid="Owner_DOB" /&gt;</p>
+                <p class="Indent">&lt;/format&gt;</p>
+                <p>&lt;/diset&gt;</p>
+            </li>
+            <li>
+                <p>In <b>Rule Scope</b>, select an option to indicate when the rule is executed.</p>
+                <MadCap:snippetBlock src="../../Resources/Snippets/Rules/RuleScopes.flsnp" />
+            </li>
+            <li>
+                <p>Click the <b>Update</b> button on the Rules Window to save the new custom rule.</p>
+                <p>On the left, the new rule appears in the list of rules for the Owner_DOB control.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/RuleSets12.jpg" alt="Custom Rule" title="Custom Rule" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+            <li>On the lower right, click <b class="Bold">CLOSE</b> to close the Rules Window.</li>
+            <li>
+                <p>On the Rule Sets page, click the <b>Save Rule Set</b> button to save your changes to the Party rule set. <MadCap:snippetText src="../../Resources/Snippets/Rules/RuleSetSaveOtherUser.flsnp" /> </p>
+                <p><b>NOTE:</b> If the <a href="../../Organization Configuration/Organizations/Admin.htm#ValidateRuleNameUniqueness" target="_blank" alt="Validate Rule Name Uniqueness">Validate Rule Name Uniqueness</a> checkbox is selected in Organization Settings on the Admin tab, the new rule cannot be saved unless it has a unique name.</p>
+                <p>The date of the last update for the rule appears in the <b>Last Updated</b>  field on the <b>Rule Set Detail</b> tab of the Rule Sets page.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/RulesWindow4.jpg" alt="Rule Set Detail - Last Updated" title="Rule Set Detail - Last Updated" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+        </ol>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <h3><a name="DeleteRules"></a>Delete Rules</h3>
+        <ol>
+            <li>On the navigation bar, click <b>Product Config</b> and click <b>Rule Sets</b> to go to the Rule Sets page.</li>
+            <li>Select a rule set in the upper grid.</li>
+            <li>On the <b>Rule Set Detail</b> tab, click <b>Rules Window</b>.</li>
+            <li>
+                <p>On the upper left of the Rules Window in <b>Filter Rules with Field</b>, type a full or partial field name.</p>
+            </li>
+            <li>
+                <p> On the left, locate the rule in the list and click the trash can icon next to the rule name.</p>
+                <p>Or, click the <b>DELETE ALL</b> button below the rules list to delete all of the rules in the rule set.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/RulesWindow20.jpg" alt="Rule Sets - Rules Window - Delete Rule" title="Rule Sets - Rules Window - Delete Rule" />
+                </p>
+            </li>
+            <li>
+                <p>On the lower right of the Rules window, click the <b class="Bold">SAVE RULE SET</b> button  and then click the <b class="Bold">CLOSE</b> button.</p>
+            </li>
+        </ol>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <h3><a name="SearchRules"></a>Search Rules for a Data Item</h3>
+        <ol>
+            <li>On the navigation bar, click <b>Product Config</b> and click <b>Rule Sets</b> to go to the Rule Sets page.</li>
+            <li>Select a rule set in the upper grid. </li>
+            <li>On the <b>Rule Set Detail</b> tab, click <b>Rules Window</b>.</li>
+            <li>
+                <p>On the upper left of the Rules Window in <b>Filter Rules with Field</b>, type a full or partial field name.</p>
+                <p><b>Example:</b> In the Party rule set, type <b>Owner_DOB</b> in <b>Filter Rules with Field</b>. If the rule set has both Owner and Joint Owner rules, the search results include rules for both Owner_DOB and JointOwner_DOB. </p>
+            </li>
+        </ol>
+        <p><strong>See Also</strong>
+        </p>
+        <p class="Indent">
+            <MadCap:xref href="AdvancedRulesCategoryElementDefinitionsReference.htm" alt="Advanced Rules Category and Element Definitions Reference">Advanced Rules Category and Element Definitions Reference</MadCap:xref>
+        </p>
+        <p class="Indent">
+            <MadCap:xref href="AdvancedRulesSamples.htm" alt="Advanced Rules Samples">Advanced Rules Samples</MadCap:xref>
+        </p>
+        <p class="Indent">
+            <MadCap:xref href="Pre-BuiltRuleTemplates.htm" alt="Pre-Built Rule Templates">Pre-Built Rule Templates</MadCap:xref>
+        </p>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

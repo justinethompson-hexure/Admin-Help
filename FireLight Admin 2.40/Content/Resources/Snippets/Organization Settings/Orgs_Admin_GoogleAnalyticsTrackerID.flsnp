@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>In the <b class="Bold">Google Analytics Tracker ID</b> text box, enter the ID that can be set by the Client before posting over to FireLight or can be passed in to the idp‐initiated SSO so that the session can begin on the Client landing page and follow through the FireLight platform. The Google Analytics Tracker ID can be found on your Google Analytics account under Admin/Tracking Info/Tracking Code. <MadCap:conditionalText MadCap:conditions="General.Online">See <a href="../../../Release History/FireLight v2.11 Release History.htm#GoogleAnalytics" target="_blank" title="Google Analytics" alt="Google Analytics">Google Analytics</a> in Release History for more information.</MadCap:conditionalText></body>
+</html>

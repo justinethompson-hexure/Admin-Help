@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Bypass New Activity Prompts</b> checkbox to skip the product, carrier and state selection for the next activity if there is 1 product, 1 carrier, and all states are available. The activity is created using the single product and a default name is set. Generally used for non-insurance products like Pre-Sale activities. If more than one product exists, the new activity product, carrier, and state prompts will appear. <b>NOTE</b>: This option is disabled for the Quote activity to protect against a non-vendor updating vendor-only properties for the Quote activity.</body>
+</html>

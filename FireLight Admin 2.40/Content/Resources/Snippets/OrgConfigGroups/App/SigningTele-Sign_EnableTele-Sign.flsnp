@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Enable Tele-Sign</b> checkbox to enable the Tele-Sign feature. See <MadCap:xref href="../../../../Features/Tele-Sign.htm" target="_blank" alt="Tele-Sign">Tele-Sign</MadCap:xref> in Features for setup instructions. <MadCap:conditionalText MadCap:conditions="General.Online">See also "Tele-Sign" in <MadCap:xref href="../../../../UserGuide/New Activity/Signatures/Client Signature.htm" target="_blank" alt="Client Signature [User Instructions]">Client Signature [User Instructions]</MadCap:xref>.</MadCap:conditionalText></body>
+</html>

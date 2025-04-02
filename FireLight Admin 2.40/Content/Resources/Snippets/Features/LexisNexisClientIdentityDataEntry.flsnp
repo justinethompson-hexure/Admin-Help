@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p><b class="Bold">LexisNexis Client Identification Verification During the Data Entry Process</b>
+        </p>
+        <p> FireLight<sup MadCap:conditions="General.Online">®</sup> has the ability to call into LexisNexis for each signer type (Owner, Joint Owner, Insured, Annuitant, Joint Annuitant, Payor, etc.) other than Agent before accessing the e-Signature process. The advisor (user) validates each signer type through entering the client's  name, address, phone number, date of birth, and SSN and clicking a custom action button that initiates a web service call to LexisNexis. In the response, LexisNexis sends back an Instant ID code that validates the identity of the signer—it does not authenticate the signer. With this code, client organizations can write rules to display a message giving the user instructions on how to proceed. </p>
+    </body>
+</html>

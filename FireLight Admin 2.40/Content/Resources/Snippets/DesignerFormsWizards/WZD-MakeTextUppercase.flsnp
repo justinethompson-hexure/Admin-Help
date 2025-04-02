@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p>This option is available if Alpha Char, Alpha Numeric, or Alpha-Special characters are selected. Select the checkbox to convert entered text into all uppercase characters.</p>
+    </body>
+</html>

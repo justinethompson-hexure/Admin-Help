@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p class="note">
+            <b class="Bold">NOTE: </b> Do not use the PreSubmit review queue for activities that use e-Sign in React. The PreSubmit review queue is incompatible and will cause errors.</p>
+    </body>
+</html>

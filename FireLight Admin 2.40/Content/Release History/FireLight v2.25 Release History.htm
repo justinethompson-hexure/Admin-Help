@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight v2.25 Release History</h1>
+        <p MadCap:conditions="General.Postpone"><b class="Bold">NOTE: Documentation for this release is currently incomplete and in a "DRAFT" status.</b>
+        </p>
+        <h2>2.25.137 September 23 UAT and September 30, 2022 Production Patch Release</h2>
+        <h2>Fixed Defects</h2>
+        <p><b class="DRNumberBold">Console</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 268543 </b> Console Checkin fails to generate PDFs. Problem: Console check-in prevents apps from locking, but still continues check-in process on failure. Resolution: If there is an exception when locking and unlocking this should prevent check in. Also if checking in app, we should assume app is not checked out when locking. <br />Areas Impacted: Console check-in. Locking/unlocking apps</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 269691 </b> Console cases - display Signing Ceremony Only forms during data entry. Problem: When App was Initialize in the console, it was not taking into account the Form Duty Type. Resolution: Fixed Console Initialize Process. <br />Areas Impacted: Console Forms</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">DTCC</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 269875 </b> DTCC 99 items question/answer limit bug. Problem: There is a 99 items limit in the question/answers records, which needs to be fixed. Resolution: Loosened our validation requirements. <br />Areas Impacted:&#160;Apps going to the DTCC</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">E-Delivery</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 268446 </b> eDelivery Cases Coming back without Signatures on PDFs (2 Cases). Problem: Signature not included on PDFs for e-delivery cases in some instances. Resolution: If the agent signing is started and then exited, the wizard view changes to forms only and the continue button has an option for submit.  This will skip the agent signing process and begin the submission process.  Both cases were missing the agent party created when agent signing begins and were missing the agent signature.  As child case did not contain completed agent signatures, it could not be submitted along with the parent case and edelivery case would not contain the signatures. Fixed the return to form only view- e-delivery must always remain in wizard view to retain correct navigation options. <br />Areas Impacted: E-delivery after lock view and continue button options</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">PDFs</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 268824 </b> GetActivityPDF API returns documents not in package at lockdown. Problem: getactivitypdf and Print PDF pull latest forms in order to get optional forms. Resolution: If Locked, Don't get any required forms that are not filled out before lockdown. <br />Areas Impacted: getactivitypdf API and PrintPDF</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Wizards and Forms</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 262482 </b> Illustration glitch when changing withdrawal or subsequent payments “Start Type” to age &amp; other value not saving. Problem: Updating Schedule fields could cause the system to enter a constant update loop that caused erratic behavior and could prevent further schedule field updates. Resolution: Fixed. Schedules apply their update only once. <br />Areas Impacted: Wizards</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 266499 </b> Update field response contains masked values in DataItem.OriginalValue. Another issue was found with the current solution. The issue was found in an e-Delivery case that uses a rule that checks Original Value. Problem: The DataItem.OriginalValue was not getting saved to the Database because of the change to not serialize it. Resolution: The Original Value is only serialized when the value is not null AND the model is not getting passed to the UI. Otherwise, the Original Value gets serialized as usual and gets saved to the DB.<br />Areas Impacted: Clients using DataItem.OriginalValue for rules logic</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 269282 </b> Wizard - Fields being cleared and disabled, still showing validation messages after data entry. Problem: Under some situations, Wizards and Forms in Wizards would lose data entry when navigating between pages. Resolution: Fixed. <br />Areas Impacted: Wizards, Forms in Wizards</p>
+            </li>
+        </ul>
+        <h2>2.25.97 August 5 UAT and August 10, 2022 Production Patch Release</h2>
+        <p><b class="DRNumberBold">Activities</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 266921 </b> Activity FLI_FIRM_ID data item does not have a value on some cases. Problem: For backward compatibility, the activity FLI_FIRM_ID data item, and also the activity FirmID and the user's FirmID, should always be set to the FirmRegistrationNum from the user's 1228, in addition to setting the FLI_CASE_ACCESS data item (and the user's and activity's CaseAccess properties), when the user's group does not have a Firm Org.  This was not always happening. Resolution: Corrected all logic paths for updating of user information and creating of activities to properly set the FLI_FIRM_ID data item and FirmID property to the FirmRegistrationNum in the user's 1228 when the user's group does not have a Firm Org. <br />Areas Impacted: Assignment of FLI_FIRMID data item during activity creation</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Wizards and Forms</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 266167 </b> Wizard - Manage Optional forms dialog is not scrollable. Problem: Window would not scroll when 10 or more forms were available, hiding multiple options off-screen. Resolution: Changed from overflow: none, to overflow: auto, with some added CSS to hide scroll bar. <br />Areas Impacted: Other Actions, Optional Forms, when 10 or more are available.</p>
+            </li>
+        </ul>
+        <h2>2.25.84 July 22 UAT and July 26, 2022 Production Patch Release</h2>
+        <h2>Fixed Defects</h2>
+        <p><b class="DRNumberBold">Wizards and Forms</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 266424 </b> Wizard - Date Slash Field Issue. Problem: Fields with a date mask containing slashes displayed "D_te Sl_sh" instead of a gray blank area like usual. The field behaved correctly once it was enabled. Resolution: This issue is fixed by iConnect 266448, which should correct all date fields and all other fields that have a mask.<br></br>Areas Impacted: Wizard date fields containing slashes</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 266448 </b> Wizard - Error locating &amp; rendering field mask during data entry. Problem: Disabled or read-only DatePicker  fields with a mask were not implementing the mask. Resolution: Fixed the code to correctly lookup and enforce the field mask. <br></br>Areas Impacted: Disabled/readonly DatePicker fields with a mask in the combined wizard+forms UI</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 266455 </b> Wizard - Distributor mask is overriding carrier mask with the same name. 1) Problem: With the changes to masking in the 2.25 release, when the carrier and distributor define a mask with the same name but different format, the system was prioritizing the distributor's definition of the mask. Resolution: Utilize the mask defined by the form/wizard of the owning organization. 2) Problem: Testing did not pass in QE.  The correct org masks were being returned to the front-end with each page change, but the masks in the redux state were not being updated from returned model, so it was still using the wrong masks when changing from a distributor to carrier form. Resolution: Added the missing logic to update the masks in the redux state. <br></br>Areas Impacted: Field masks in the combined wizard+forms UI, in a distributor environment where carrier &amp; distributor define a mask with the same name and different value</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 266499 </b> Update field response contains masked values in DataItem.OriginalValue. Problem: In Wizards for fields with a Mask, the response from the server on UpdateField calls included the un-masked value in the Data.OriginalValue property. When these fields are masked the raw data should not be exposed in the response. This is a security risk. Resolution: We removed the serialization of the offending properties (OriginalValue). These properties are not needed in the browser and remove the security risk as well as slightly reduce the payload size. <br></br>Areas Impacted: Clients using Masked inputs in Wizards would be affected</p>
+            </li>
+        </ul>
+        <h2>2.25.76 July 15, 2022 Production Release</h2>
+        <h2>Enhancements</h2>
+        <h3>Foundation</h3>
+        <p><b class="DRNumberBold">Activity Share Enhancements: Case Access by Firm ID</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/263530 Activity Share Enhancements Case Access by Firm ID.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 263530</a></b>
+                    <MadCap:conditionalText MadCap:conditions="General.Postpone"> Abi <span style="background-color: #ffff00;">in review</span></MadCap:conditionalText><em>Complete</em>   (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/263530.flsnp">
+                </MadCap:snippetBlock>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Common Tags Organization Setting to Turn On/Off Common Tags</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/263802_CommonTagsOrganizationSettingTtoTurn On_Off Common Tags July 2.25.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 263802</a></b>
+                    <MadCap:conditionalText MadCap:conditions="General.Postpone">Lawrence <span style="background-color: #32cd32;">approved</span></MadCap:conditionalText><em>Complete</em>  (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/263802.flsnp">
+                </MadCap:snippetBlock>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Copy Data Fields</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/256113_Data Copy Enhancement 2.25 July.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 256113</a></b>
+                    <MadCap:conditionalText MadCap:conditions="General.Postpone">Lawrence <span style="background-color: #32cd32;">approved</span></MadCap:conditionalText><em>Complete</em> (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/256113.flsnp">
+                </MadCap:snippetBlock>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">DTCC - Updates to DTCC App Sub Wrapper for Digital Payment Codes</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">CMR 263658 </b><em>Complete</em> (Carriers) </p>
+                <p>New codes were implemented for DTCC APP in their Spring Release. The DTCC Subsystem needs to be updated.  In DTCCEntityAutoGen, added Digital_Payment "DP" to: </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Account_Type </p>
+                    </li>
+                    <li>
+                        <p>Payment_Type </p>
+                    </li>
+                    <li>
+                        <p>Premium_Method</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Firm Management - Phase 1</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/263816 Firm Management July 2.25.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 263816</a></b>
+                    <MadCap:conditionalText MadCap:conditions="General.Postpone"> Mitch &amp; Abi <span style="background-color: #ffff00;">in review</span></MadCap:conditionalText><em>In Development</em> (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/263816.flsnp">
+                </MadCap:snippetBlock>
+            </li>
+        </ul>
+        <p MadCap:conditions="General.Postpone" class="Indent2">Admin Help:</p>
+        <ul MadCap:conditions="General.Postpone">
+            <li>
+                <p>Groups/Admin, Enable Firm Management</p>
+            </li>
+            <li>
+                <p>Groups: Create and Edit Groups</p>
+            </li>
+            <li>
+                <p>Groups: Product Access</p>
+            </li>
+            <li>
+                <p>Organizations: Firm Management</p>
+            </li>
+            <li>
+                <p>Utilities: Deploy Data, View Deployment History</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Illustration SDK to Connect to 3rd Party Engines - Multiple Release</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">CMR 263822 </b>
+                    <MadCap:conditionalText MadCap:conditions="General.Postpone">Erin</MadCap:conditionalText>  (Carriers and Distributors)</p>
+                <p>Additional functionality is being added and is delivered in the September, 2.26 release.</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Import Rule Sets</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/261168 Import Rule Sets Using XML File.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 261168</a></b>
+                    <MadCap:conditionalText MadCap:conditions="General.Postpone">Lawrence, Keerti <span style="background-color: #32cd32;">approved</span></MadCap:conditionalText><em>Complete</em> (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/261168.flsnp">
+                </MadCap:snippetBlock>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Locked Wizard UI Display: Organization Setting</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/262470 Locked Wizard UI Display.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 262470</a></b>
+                    <MadCap:conditionalText MadCap:conditions="General.Postpone">Abi <span style="background-color: #32cd32;">approved</span></MadCap:conditionalText><em>Complete</em> (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/262470.flsnp">
+                </MadCap:snippetBlock>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Update MVC Legacy Forms to React-Based Code - Phase 2</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/263761 Update Legacy Forms to React July 2.25.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 263761</a></b>
+                    <MadCap:conditionalText MadCap:conditions="General.Postpone">Abi <span style="background-color: #32cd32;">approved</span></MadCap:conditionalText><i>Complete</i> (Carriers and Distributors)</p>
+                <MadCap:snippetBlock src="../Resources/Snippets/263761.flsnp">
+                </MadCap:snippetBlock>
+            </li>
+        </ul>
+        <h3>Work Orders</h3>
+        <p><b class="DRNumberBold">Add New Rule Scopes to the System</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">CMR 258269 </b>
+                    <MadCap:conditionalText MadCap:conditions="General.Postpone">Abi, Keerti </MadCap:conditionalText><em>In Re-Design</em> (Carriers and Distributors) </p>
+                <p>This new feature is being re-designed and is delivered in a potential patch.</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Add Signer Types</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">CMR 240423 </b><em>Compete</em> (Carriers and Distributors) </p>
+                <p>Added additional Signer Types specifically related to Life Insurance and "Other Insured" roles. Added Additional Insured 2 through 10 signer types.  Renamed "Other Insured" signer type to "Additional Insured" to match the field mapping identifier FLI_ADDITIONAL_INSURED*.  Also corrected sorting of numeric values to be in natural order instead of alphabetic order.</p>
+            </li>
+            <li><b class="DRnumber">CMR 263186 </b><em>Complete</em> (Carriers and Distributors) <p>Added additional Authorized Signer 6 through 10 signer types.  Also corrected sorting of numeric values to be in natural order instead of alphabetic order.</p></li>
+            <li>
+                <p><b class="DRnumber">CMR 264373 </b><em>Complete</em> (Carriers and Distributors) </p>
+                <p>Added additional Trustee 6 through 10 signer types.  Also corrected sorting of numeric values to be in natural order instead of alphabetic order.</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Add New Rule Node for DataGrid</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/257746 Rules Enhancement with Diset conditions for Data Grid.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 257746</a></b>
+                    <MadCap:conditionalText MadCap:conditions="General.Postpone">Abi <span style="background-color: #32cd32;">approved</span></MadCap:conditionalText><em>Complete</em> (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/257746.flsnp">
+                </MadCap:snippetBlock>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Show Uploaded File Name in Application Audit Report</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">CMR 262405 </b><em>Complete</em> (Carriers and Distributors) </p>
+                <p>This feature will show the uploaded file name within the Admin report entitled "Application Audit Report." See the <MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../Utilities/Reports/Admin Reports.htm" title="Admin Reports" alt="Admin Reports">Admin Reports</MadCap:xref></MadCap:conditionalText>topic for a sample report.</p>
+            </li>
+        </ul>
+        <h2>Fixed Defects</h2>
+        <p><b class="DRNumberBold">Activities</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 260014 </b> Copy activity logic and data item properties. Problem: The latest fix was found to cause a side effect of no longer locking data items for a next activity when Lock Transferred Data Items is enabled (TFS 33675). Resolution: Moved the logic into the correct location and do not reset data item properties if it is a next activity with Lock Transferred Data Items. Problem: The original fixes for this were incomplete. 1) The changes to reset Enabled / Visible / ReadOnly data item properties on a copy with changes were not having an effect because it was being done before the provider had been called to copy the original app data items. 2) The changes to reset Enabled / Visible properties when opening an activity for data entry corrected the issue for the combined wizard UI, but introduced the original problem in legacy forms UI (which worked correctly before this fix). Resolution: 1) Corrected the copy with changes logic to reset the data item properties after the provider copies the app data. 2) Modified the logic to reset properties when loading an activity to operate on the original data collection, rather than a clone of the data items, so they will not be incorrectly synced back to the rules collection in the legacy forms UI (the common tag sync logic is specific to data item values and doesn't handle other properties consistently). <br></br>Areas Impacted: Read-only state of data items on copy to next activity. Data item enabled/visible properties initialization on copy with changes and prior to rules execution</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 260682 </b> CRM - Remove popup that generates when Clear is selected for Product Search input fields. Problem: This is occurring not because a provider-base action isn't assigned.  The script code specifically checks for any button in the group being disabled, and if so, displays the Disabled message when clicking one of the buttons.  Since the SEARCH button is disabled, it results in the Disabled message being displayed when clicking on CLEAR.  Resolution: Removed the code to display the Disabled popup. <br></br>Areas Impacted: CRM</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 262149 </b> Rule that updates data item on 100% complete is not always working. Problem: The FLI_PERCENT_COMPLETE data item was not refreshing correctly because the rules updates were not synced back correctly. Resolution: </p>
+                <ol>
+                    <li>
+                        <p>Moved the updating and processing of the FLI_PERCENT_COMPLETE data item to be after the initial rules run, and after the Model.PageMap and the Model.ShowValidationMap got refreshed.</p>
+                    </li>
+                    <li>
+                        <p>Corrected the refreshing of the Model.PageMap to check for both user/UI changes and rules changes. Also moved the refreshing to be before reading its values.</p>
+                    </li>
+                    <li>
+                        <p>Also handled when the FLI_PERCENT_COMPLETE change is the only change. </p>
+                    </li>
+                </ol>
+                <p>Areas Impacted: Refreshing of the FLI_PERCENT_COMPLETE after user changes</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 263500 </b> Continue popup message showing for activity that has no Continue step. Problem: The data entry complete popup (for which the default text is "Data Entry has met the requirements. You may enter more data or CONTINUE to proceed to the next step.") is always displayed for an activity when it reaches 100%, and there is no way to suppress the message, but it is contradictory and confusing to display this message if there is no continue action possible for the activity (the reported example is Print Forms activity, which cannot be saved and does not have a continue action). Resolution: Modified the logic to not display the data entry complete popup if continue is not an available action (this includes activities that can't be saved, such as Print Forms, and also if Disable Save Applications is enabled in group options). NOTE: This fix is specific to activities in data entry status (for instance, excludes pending review, activity finished steps) and also excludes some activity types (fee inquiry and needs determination), which have their own popup messages, and these popups will not be suppressed even if continue is unavailable.  Some of these popups have default text that mentions Continue.  It would require more research to determine if and when it might be appropriate to suppress popup messages for other statuses and excluded activity types.  It may also be beneficial to allow/support empty messages to be configured for specific popups in Activity profile to suppress those popups. <br></br>Areas Impacted: Data entry complete popup at 100% complete</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 263663 </b> Error Message covering field. Problem: A legacy forms validation warning was blocking the input field. Resolution: Due to the design of the form designer, validation messages are positioned using the absolute position of the input on the page, plus an offset to make the message higher. This offset is designed for single-line messages. The warning message in this case was multi line message. I styled validation warning messages to force them to fit on a single line. This also matches the current styling for validation warnings, which are also forced to fit on one line. <br></br>Areas Impacted: Applications using legacy forms that contain validation warning messages</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 264953 </b> No values in the residence dropdown while creating new application. Problem: The changes to limit jurisdictions for products at the group level was not correctly handling groups that did not have jurisdiction limitations, resulting in no jurisdictions being listed in some situations. Resolution: Corrected the code to only limit jurisdictions when limitations are defined at the group level. <br />Areas Impacted: Resident jurisdiction list and product availability lists</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Admin</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 262455 </b> Form Designer Toolbox Copy Function not copying common tag field. Problem: When copying a field/control by utilizing the Toolbox "Copy Selected Fields on Page" functionality, "Common Tag Name" was not copying. Resolution: While cloning the FieldItem, we also need to clone Common Tag. <br></br>Areas Impacted: Copy Selected Fields on Page" functionality on Form Designer</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 263856 </b> Organization resets to default on click of role code. 1) Problem: When clicking a group role code in the grid on the Groups page, the previously selected Organization on the Product Access tab would reset to the default organization. Resolution: Retain previously selected organization on Product Access tab when selecting a different group. 2) Problem: The selected org was not being retained on save. Resolution: Corrected the code to always retain the selected org in Group profile. <br></br>Areas Impacted: Groups profile, Organization field</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 265274 </b> Admin groups - Remove validation that prevents duplicate role codes. Problem: When attempting to add a role code to Groups, received an error: "Save failed. Duplicate TC Role Codes." Resolution: Removed role code validation logic added by TFS 31127. <br></br>Areas Impacted: Groups profile.</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Branding</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 263771</b> Pencil Icon Missing. Problem: As per the CSS class .summaryModal color and background color are both white for this client. Resolution: In the client's .css file for the .summaryModal CSS class, we have now implemented an override class by changing its color to same as #lblAppName. <br></br>Areas Impacted: Client application page UI</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 263911 </b> Branding is not working correctly. Problem: Client/Branding CSS was not being properly applied for Wizard applications. Resolution: Modified the CSS loading to apply in this order: Base Wizard -&gt; Organization -&gt; Branding -&gt; Organization Wizard -&gt; Branding Wizard <br></br>Areas Impacted: Wizards</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Console</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 265139 </b> Unable to Sign in the Offline Console. Problem: Combined Signatures constructor is throwing an error due to utilities methods static function being null. it seems to be related to the new Obfuscator build process. Resolution: Excluded DeepCopyExtension from Obfuscator. <br></br>Areas Impacted: Console build</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">DTCC</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 265362 </b> Modify DTCC DTI sequence numbers to avoid duplicates in test environments. Problem: DTCC has one test region.  FireLight has 3 test environments (UAT, UATNext, &amp; Staging).  Clients needs to be able to submit apps from any or all of the 3 test environments to the DTCC test region.  This can result in duplicate DTI rejects by DTCC if the same DTI or sequence number is used for activities from multiple test environments. Resolution: To reduce the likelihood of a duplicate, modify the base system to use different prefixes for DTI_Number &amp; DTCC_Number counters returned from the appService.GetNextIncrementalNumber and BackOfficeProviderBase.GetSequenceNumber methods: in UATNext, the first digit of the number is replaced by the digit "5" and in UAT, the first digit of the returned number is replaced by the digit "9." NOTE: This could still result in duplicates if the current counter actually does start with 5 or 9, but it will reduce the possibility. <br></br>Areas Impacted: DTCC </p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 265488 </b> DTCC AppSub premium method value changed. Problem: There was a problem with the implementation of 263658, which had the result of altering the app sub values for some premium method / premium type / account type values for existing providers.  Because the digital payment enumeration was not added to the end of the list, existing values following it were all shifted up to the wrong value, when converting from the enumeration to the app sub value. Resolution: Corrected this issue so that existing provider value mapping will not be affected. NOTE: It is necessary for the  provider to be recompiled with the latest definitions after this is incorporated into the release. <br></br>Areas Impacted: DTCC app sub generation</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Email</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 262507</b> Email Queue not Catching SmtpException Types. During times of email failure and queue build-up, system was not catching SmtpException (which is the type of exception occuring), causing scheduler to loop through thousands of failing emails. Resolution: Added SmtpException to break-out logic. <br></br>Areas Impacted: Email Queue system (all emails)</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 262763 </b> Some email notifications are not recorded in the activity audits. Problem: Didn't have ESignLaterApproved/Declined audit. Resolution: Added audit. also added logic to trace possible un audited emails, to catch future needed audits. <br></br>Areas Impacted: Sending Emails in email manager.</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 263659 </b> Email Group and Failed Email Notification fields no longer allowing multiple email addresses. Problem: Previously, email validation in FireLight did accept multiple email addresses separated by a comma or semicolon character (in addition to invalid email addresses like abc@xyz@123.com). That ability was removed with the fixes for iConnects 260693, 262060, and 261044. The system now a) requires a single email address when validating email fields, and b) validates the email address at the point of sending, throwing an error instead of sending a message to a To address that is multiple addresses. Resolution: Modified email validation to accept multiple email addresses separated by semicolon or comma characters for the following fields: Organization -&gt; Failed Email Notifications, Review Queue -&gt; Email Group, and Sales Agreement -&gt; Deploy Email Group. Intentionally, the system will not allow multiple email addresses to be entered in most email fields (particularly not for fields that could be a From address, but also for cases where there is a To name also entered, and for legacy reasons this is not being enabled across the board). <br></br>Areas Impacted: Entry of email addresses in the above fields</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 264862 </b> Problem: Submission reminder emails were being sent even if there was no agent email address to send them to. Resolution: Check for blank agent email address and do not send reminder in that case.  Also removed duplicate logic to retrieve agent email address, skip e-delivery-specific logic for non-edelivery reminders, consistently use agent email and name in reminder messages, and store appId when sending reminder for a single activity. <br></br>Areas Impacted: Submission reminder notifications</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">FireLight Embedded</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 264346 </b> Agent signing order not respected with remote signatures. Problem: In Signing Version 2, Agent signing was being enabled if all remaining signatures were external requests, but should not have been. Resolution: Fixed. <br></br>Areas Impacted: FireLight Signing Version 2, Embedded</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">FireLight Illustrations</b>
+        </p>
+        <ul>
+            <li><b class="DRnumber">DR 256915 </b> Linked Illustration document from illustration not meeting template requirement in application. Problem: When we create Linked Illustration for an  app, we used "LinkedIllustration" for the doc tag rather than getting from the List Profile. Resolution: Get Document Tag from List Profile for LinkedIllustration rather than using "LinkedIllustration" for the doc tag. <br></br>Areas Impacted: Create a new App from Illustration</li>
+            <li><b class="DRnumber">DR 259673 </b> Illustration to Application Load Screen indicator. Problem: There was a bug in code that prevented the loading indicator from displaying correctly when Apply or Update button is clicked on the illustration page. Resolution: Fixed the loading indicator to correctly display.<br></br>Areas Impacted: Loading indicator in the illustration page.</li>
+            <li><b class="DRnumber">DR 263208 </b>  FireLight Illustrations - Send Email issue. Problem: Send Email button should hide/show based on Group setting. Resolution: Instead of enable/disable this button  based on the user's setting in Groups, hide/show this button.  <br></br>Areas Impacted: FireLight Illustrations. </li>
+        </ul>
+        <p><b class="DRNumberBold">Localization</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 264472 </b> The French Base error message for uploading an illustration contains incorrect phrases. Problem: Wizard and Forms use a different TextArea for localization. Resolution: Created Script to Updated wizard's fr-CA to match Form's translation. <br></br>Areas Impacted: Localization of template message</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Print Forms</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 264049 </b> Keep formatting in the addendum as in the original field. Problem: Text is appearing as a single line even new line char was in text while generating Addendum. Resolution: Handle new line char while generating Addendum. <br></br>Areas Impacted: Addendum PDFs</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 264431 </b> Issue with Print Forms URL. Problem: The issue is related to how the client's internal systems are interpreting the link. Resolution: Modified the Print Form URL by appending .pdf to it.  Handle the returning of the form URL with or without the ending .pdf. <br></br>Areas Impacted: Print Form URL</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 264902 </b> Text Alignment property of label controls not being honored on PDF. Resolution: Honor Text Alignment property of labels when generating PDF. <br></br>Areas Impacted: Labels on PDFs</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Reports</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 265723 </b> Packet Audit Report - Wrong audit report shown when there is a parent activity. Problem: The admin Audit Report was pulling the first audit report in the activity documents.  If the activity had a predecessor (i.e., PreSale activity), it was incorrectly loading the parent activity audit report. Resolution: Modified the admin audit report provider to use the newest audit report in the activity. <br></br>Areas Impacted: Admin reports -&gt; Audit Report</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Rules</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 254472 </b> Rulesets do not appear to run until saved. Problem: After removing of caching of rule definitions, the client was still experiencing scenarios where the rules were not executing properly, and saving the rule set (which would invalidate it out of the cache) would resolve the issue for a period of time, until it later cropped up again.  The cached rule script must have been getting modified and resulting in the inconsistent rule execution. Resolution: Removed all caching of rule script code and always load from the DB. <br></br>Areas Impacted: Loading of rules for data entry, review queue script, and submit only forms</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Wizards and Forms</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 259734 </b> Zipcode field with mask only retaining first 5 digit. Problem: This appears to be another boundary case for wizard masks. Resolution: This was resolved with wizard mask fixes for the July release. <br></br>Areas Impacted: Wizard masks</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 262266 </b> Wizard - Alignment issue with custom Continue button text on completed activity. Resolution: This was resolved with the latest fixes for the Lock Wizard UI feature. <br></br>Areas Impacted: Wizards</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 263767 </b> Annuitant Phone Number displaying as jumbled in Wizard Application. Problem: The initialization of a field with mask was not reformatting the value if the value was formatted differently.  Resolution: Reformatted the value on field with mask based on the current mask. <br></br>Areas Impacted: Fields with mask on wizards</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 263855 </b> Validation errors are displaying on all the fields for all pages after renaming activity. Problem: Renaming an activity in wizard was causing the client and backend model to get out of sync, resulting in validation messages no longer being updated from data entry until the activity is reopened. Resolution: fixed renaming of activity in wizard UI to keep backend model in sync, using UpdateField to change activity name.  Also merge duplicate SaveName and SaveActivityName methods, define privileges, and remove appId parameter; create and use common UpdateActivityName method. NOTE: There is still a remaining issue (which is not new), that if the FLI_ACTIVITY_NAME data item is on the current wizard or form page, it will not reflect the name change until switching to another page and back again.  This is related to the TODO comment "make it so the browser state is updated with the new activity name. right now the level of effort is too high as it requires a lot of rewriting." <br></br>Areas Impacted: Renaming of activities in the wizard UI</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DRs 265494, 265489 </b> Field could not be completed with any number selected - value cleared after entry. Problem: Additional issue found: masks on date field in wizard were not working correctly.  Resolution: Resolved by PR 1538. Problem: Merged PR 1260 into the 2.25 release branch this morning. This PR was missing in the previous release. Resolution: All previous comments are still valid. Just the change was not merged into the correct branch previously. Problem: Masking logic was not merging the masks correctly when copying. Masks had odd errors when selecting dates and with the copy paste logic. Resolution: Fixed a confusing merge that should fix the loading and usage of masks for numerical masks. Also, updated the new masking logic to work with copy paste. This fix was merged into the 2.25 branch on 7/12/2022.<br></br>Areas Impacted: Masks</p>
+            </li>
+            <li>
+                <p><b class="DRnumber">DR 265656 </b> Confirmation dialog is displayed in the background and user must click the box to read the message. Problem: Changes for TFS bug 32874 "On Request review &amp; Submit popup, "Close" button missing (Wizard + Form App)" introduced a bug, where if a dialog is displayed rather than a menu of actions after clicking Continue—the dialog was now being shown with opacity of 0.4, so that it did not appear as a topmost window. Resolution: Corrected the code to only change the opacity when an action menu of choices is about to be displayed (required for resolving the original bug). <br />Areas Impacted: Dialogs shown after clicking Continue</p>
+            </li>
+        </ul>
+        <p MadCap:conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

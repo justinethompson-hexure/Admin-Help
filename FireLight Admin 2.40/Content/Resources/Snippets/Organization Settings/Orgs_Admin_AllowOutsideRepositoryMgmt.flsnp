@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Allow Outside Repository Management</b> checkbox to allow Hexure to upload products identified by CUSIP ID, PPfAs, Annuity Rate Spreadsheets, Life rate files, and product documents into the carrier's organization in the . If the checkbox is cleared, only a user associated with the organization can load products for the organization into the Product Repository.</body>
+</html>

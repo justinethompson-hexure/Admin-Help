@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Download Tag List</h1>
+        <p class="note"><b class="Bold">IMPORTANT!</b> Be sure to enable the Download Tag List utility. Go to the <b class="Bold">Organization Configuration/Groups/</b><MadCap:xref href="../Organization Configuration/Groups/Admin.htm" target="_blank" alt="Admin">Admin</MadCap:xref> tab and select the <b class="Bold">Enable View Utilities</b> checkbox. This enables all utilities for the organization.<br /></p>
+        <p>Download Tag List is the first of four utilities for converting existing dataitem tags in forms, wizards, rule sets, packages and the provider to new tags (provider conversion is done only by the Hexure FireLight<sup MadCap:conditions="General.Online">®</sup> team). This utility is especially useful in converting existing tags to common tags (see <MadCap:xref href="../Design/Common Tagging/Common Tags1.htm" target="_blank" alt="Common Tags" title="Common Tags">Common Tags</MadCap:xref> for common tag spreadsheets).</p>
+        <h2>Additional Information about Common Tag Conversion</h2>
+        <h2>Step 1. Download Tag List</h2>
+        <ol>
+            <li>On the<b class="Bold"> Home</b> page or navigation bar, click <b class="Bold">Utilities/Download Tag List</b> to go to the Download Tag List page. </li>
+            <li>
+                <p>In <b class="Bold">Package</b>, select a package option from the list. (This is a list of Packages that are on the Product Configuration/Packages page.)</p>
+                <p class="note"><b class="Bold">TIP:</b> You could add all forms, wizards and rule sets to a "tag conversion" package to convert all your forms, wizards and rule sets in one run. Then move the new converted forms, wizards and rule sets to the applicable packages after verifying the converted tags. This would produce a very large spreadsheet for mapping dataitems, but would ensure that all form, wizard and rule set tags were converted at the same time.</p>
+            </li>
+            <li>
+                <p>(Optional) Select the <b class="Bold">Generate Non-Matching Common Tags</b> checkbox to generate a list to include only the dataitems and export values that are not common tags in FireLight.  You are still able to pull all values simply by not selecting the checkbox.</p>
+                <p><b class="Bold">NOTE:</b> When the Generate Non-Matching Common Tags checkbox is NOT selected and the Generate Package tag list is clicked, FireLight enables all tags found in the selected package.</p>
+            </li>
+            <li>
+                <p>Click the <b class="Bold">GENERATE PACKAGE TAG LIST</b> button.</p>
+                <p> FireLight  searches through all forms, wizards, and rule sets within the selected package and generates a spreadsheet in .csv format with all found dataitems and export values. </p>
+            </li>
+            <li>On the information bar at the bottom of the screen, choose an option to <b class="Bold">Open</b> or select a <b class="Bold">Save</b> option. Be sure to save the mapping .csv spreadsheet. You need it for the next step in the tag conversion process.</li>
+        </ol>
+        <h2>Step 2. Create the Mapping Spreadsheet</h2>
+        <p>
+            <p>
+                <ol>
+                    <li>
+                        <p>Open the mapping spreadsheet created in step 1.</p>
+                        <p>Rows 1 – 4 contain general information about the product (e.g., Carrier, Package, Product Type, Product). <b class="Bold">NOTE:</b> Product Type and Product fields are currently not supported for tag conversion.</p>
+                        <p>Row 5 contains the column titles.</p>
+                    </li>
+                    <li>
+                        <p>Add new tags and List Values to the mapping spreadsheet using the following as a guide and save the mapping spreadsheet.</p>
+                        <p><b class="Bold">Group</b> – the Group column is used to separate the Rule Mapping xml into multiple sections. It is not necessary to separate tags into different groups, but it can make things cleaner.</p>
+                        <p><b class="Bold">From Dataitem</b> – current data item tag name. This column is filled in when the .csv spreadsheet is created.</p>
+                        <p><b class="Bold">From Value</b> – current name and export value (List Value) in the field properties for the list option if the data item has options (dropdown list, radio buttons, etc.). This column is filled in when the .csv spreadsheet is created.</p>
+                        <p class="Indent"><b class="Bold">NOTE:</b> If the data item field has multiple export values, the generated spreadsheet has duplicate rows added for each dropdown item using the same From Dataitem on each row. Add the To Dataitem for each row, then populate the To Dataitem Value columns with the corresponding dropdown values. The To Dataitem Value contains the option name followed by a pipe character (|) List Value (export value). See the CommonTags_ListNames.xlsx in <MadCap:xref href="../Design/Common Tagging/Common Tags1.htm" title="Common Tags" alt="Common Tags">Common Tags</MadCap:xref>.</p>
+                        <p><b class="Bold">To Dataitem</b> – new data item tag name. See the CommonTags.xlsx in Common Tags.</p>
+                        <p><b class="Bold">To Dataitem Value</b> – new name and export value for the list option if the data item has options (dropdown list, radio buttons, etc.). </p>
+                        <p><b class="Bold">info</b> – additional information.</p>
+                        <p><b class="Bold">Forms</b> – form or wizard name where the data item resides (example: iSured Term Illustration).</p>
+                        <p><b class="Bold">Rule Sets</b> – form or wizard number followed by a colon and the rule name (example: iSured Term Illustration: Default Values; SetCorporationVisibility; SetIndividualVisibility).</p>
+                    </li>
+                </ol>
+            </p>
+        </p>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

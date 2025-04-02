@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body> &#160;Select the <b class="Bold">Enable Print Individual Forms After Lock</b> checkbox to enable the ability to select checkboxes in the Select Documents to Print dialog that appears when the user clicks Display/Print PDF on the Other Actions menu after an application has been locked in FireLight. The Enable Print Individual Forms After Lock option does not affect any custom print button control you may have on a form. <b>NOTE:</b> You cannot select the  Enable Print Individual Forms After Lock and Disable Print PDF checkboxes for the same role code. </body>
+</html>

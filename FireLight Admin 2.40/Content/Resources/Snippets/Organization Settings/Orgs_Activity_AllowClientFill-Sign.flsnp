@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p> Select the <b class="Bold">Allow Client Fill &amp; Sign</b> checkbox to allow agents/call center reps to send an activity for clients to complete and sign in one step. If form or wizard fields are required to be filled by the agent, on the form or wizard Designer page select the Office Use Only checkbox in the Field Properties for the required agent input controls. As soon as the client signs the activity, the next signer or review step is triggered. The option Request Client to Fill &amp; Sign is visible in the Other Actions menu of the activity when this option is enabled. </p>
+        <p><strong>Spotlight Video:</strong> See the <a href="https://vimeo.com/330049864/a6d508f2a1" target="_blank" title="FireLight Client Fill and Sign" alt="FireLight Client Fill and Sign">Client Fill and Sign</a> Spotlight Feature Video.</p>
+        <p class="note"><b class="Bold">NOTE: </b>Activities that have the Allow Pre-Signature Review option selected in Product Configuration on the <MadCap:xref href="../../../Product Configuration/Activities.htm" target="_blank" alt="Activities">Activities</MadCap:xref> page in Admin  cannot access/use the Request Client to Fill &amp; Sign option on the Other Actions menu.</p>
+    </body>
+</html>

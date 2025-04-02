@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Setup and usage instructions for supporting SMS Text Authentication and validation for all signature workflows including Sign Now, Remote Sign (Send Email Request), and Client Fill and Sign. This provides an additional layer of validation because both the email and the phone number would have to be compromised to forge the signature." />
+    </head>
+    <body>
+        <h1><a name="top"></a>SMS Text Authentication</h1>
+        <p class="note"><b class="Bold">Spotlight Video:</b> See the <a href="https://vimeo.com/480105161/eb72fd097c" target="_blank" title="SMS Text Demo for Twilio" alt="SMS Text Demo for Twilio">SMS Text Demo for Twilio</a> Spotlight feature video for a demo of SMS Text Authentication.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">SMS Text Authentication Feature</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>FireLight<sup>®</sup> supports SMS Text Authentication and validation for all signature workflows including Sign Now, Remote Sign (Send Email Request), and Client Fill and Sign. This provides an additional layer of validation because both the email and the phone number would have to be compromised to forge the signature.</p>
+                        <p> SMS Text Authentication is driven off the field properties of the signature tag per signer role and is no longer defined as an Admin Group role code setting. Doing it at this level allows you to write rules on the signature tags based on the signer type, which can account for a signer workflow where the client does not have a mobile number. </p>
+                        <p><b class="Bold">NOTE:</b> Use of SMS Text Verification requires the user to have a mobile phone to receive the SMS text.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p><b class="Bold">NOTE:</b> The Require Mobile Verification option on the Organization Configuration/Groups/App tab was removed from Admin. Use SMS Text Authentication instead. </p>
+                        <p>With the Use SMS Text option at the signature tag level, you can write rules so the agent can ask during application entry.</p>
+                        <ol>
+                            <li>
+                                <p>Designer/Form Designer: </p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>
+                                        <p>Open a form and select the <b class="Bold">Use SMS Text</b> checkbox in the <MadCap:xref href="../Design/Forms/Signature Box.htm" alt="Signature Box">Signature Box</MadCap:xref> field properties.</p>
+                                        <p>
+                                            <img src="../Resources/ImagesAdmin/SMSText1.png" alt="Use SMS Text Option" title="Use SMS Text Option" MadCap:conditions="General.Online" />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>Add a <b>Mobile Number</b> text box field for the signer role. In the field properties, add the data item ID in the <b>Name</b> property. Be sure to use the FLI data item (or its mapped equivalent in Organization Configuration/Mapping) for the signer role. For example, create an <b class="Bold">Owner Mobile Number</b> text box field and enter <b class="Bold">FLI_OWNER_MOBILENUMBER</b> in the <b class="Bold">Name</b> property. This allows it to be passed in the SSO and pre-populate that value in the signer verification screen. It also allows it to be entered during data entry and pre-fill it in the signer verification screen. Save the form.</p>
+                                        <p MadCap:conditions="General.Online"><a href="../Resources/ImagesAdmin/SMSText2.png"><img src="../Resources/ImagesAdmin/SMSText2.png" alt="FLI_OWNER_MOBILENUMBER Data Item" title="FLI_OWNER_MOBILENUMBER Data Item" MadCap:conditions="General.Online" /></a>
+                                        </p>
+                                        <p>Go to Organization Configuration/<MadCap:xref href="../Organization Configuration/Mapping.htm">Mapping</MadCap:xref> to find the FLI mobile number data items and enter them for each of the signer roles in the form. The FLI mobile number data item values are set to read-only by default.</p>
+                                        <p MadCap:conditions="General.Online">
+                                            <img src="../Resources/ImagesAdmin/SMSText3.png" alt="" title="" MadCap:conditions="General.Online" />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>Optional workflow configuration: Add rules to control when to use SMS Text. </p>
+                                        <p>Designer/Form Designer/Rules Window: If the client has a mobile number, you can use a rule to activate the signature tags with the Use SMS Text property selected.  If the client does not have a mobile number, you can use a rule to deactivate the signature tag with the Use SMS Text property selected and activate a standard signature tag.  (You can also set another flag to provide heightened review on these cases.) </p>
+                                        <p><b class="Bold">Example:</b>
+                                        </p>
+                                        <p>&lt;block&gt;</p>
+                                        <p>&lt;setcontrolstate dataitemid="OWNER_SIGNATURE_SMS"&gt;</p>
+                                        <p class="Indent">&lt;not&gt;</p>
+                                        <p class="Indent2">&lt;isnullorwhitespace&gt;</p>
+                                        <p class="Indent3">&lt;diget dataitemid="FLI_OWNER_MOBILENUMBER" /&gt;</p>
+                                        <p class="Indent2">&lt;/isnullorwhitespace&gt;</p>
+                                        <p class="Indent">&lt;/not&gt;</p>
+                                        <p>&lt;/setcontrolstate&gt;</p>
+                                        <p>&lt;setcontrolstate dataitemid="OWNER_SIGNATURE"&gt;</p>
+                                        <p class="Indent">&lt;isnullorwhitespace&gt;</p>
+                                        <p class="Indent2">&lt;diget dataitemid="FLI_OWNER_MOBILENUMBER" /&gt;</p>
+                                        <p class="Indent">&lt;/isnullorwhitespace&gt;</p>
+                                        <p>&lt;/setcontrolstate&gt;</p>
+                                        <p>&lt;/block&gt;</p>
+                                        <p>There would be two signature controls stacked, one named OWNER_SIGNATURE and one named OWNER_SIGNATURE_SMS. If FLI_OWNER_MOBILENUMBER is not null, enable the SMS signature. If it is null, enable the “regular” signature control. </p>
+                                        <p>There may be instances where you are enabling/disabling these signatures with a rule already (i.e., Joint Owner – if there is a joint owner). In this case, simply add the following logic to those rules:</p>
+                                        <p class="Indent">&lt;isnullorwhitespace&gt;</p>
+                                        <p class="Indent2">&lt;diget dataitemid="FLI_OWNER_MOBILENUMBER" /&gt;</p>
+                                        <p class="Indent">&lt;/isnullorwhitespace&gt;</p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>Organization Configuration/Groups/<MadCap:xref href="../Organization Configuration/Groups/App.htm" alt="App">App</MadCap:xref> tab – Optional workflow configurations for <a href="../Organization Configuration/Groups/App.htm#AllowEditsToMobile" alt="Allow Edits to Mobile">Allow Edits to Mobile</a> option. </p>
+                                <ul>
+                                    <li>
+                                        <p>Leave the <b class="Bold">Allow Edits to Mobile</b> checkbox cleared to lock down (disable) the Mobile Number in the signer verification step for the selected role code. This prevents the user from editing the Mobile Number during the signer verification step and ensures the mobile number collected for the signer during the application is not edited at the time of verification. </p>
+                                        <p MadCap:conditions="General.Online">
+                                            <img src="../Resources/ImagesAdmin/SMSText16.png" alt="Mobile Number Disabled" title="Mobile Number Disabled" MadCap:conditions="General.Online" />
+                                        </p>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <p>Select the <b class="Bold">Allow Edits to Mobile</b> checkbox to enable the Mobile Number in the signer verification step for the selected role code. This allows edits to the data item for all mobile number values for each signer type for the selected role code. You must select the Allow Edits to Mobile option if the Validate Identity Verification option is enabled in Organization Settings (see step 3).</p>
+                                        <p MadCap:conditions="General.Online">
+                                            <img src="../Resources/ImagesAdmin/SMSText4.png" alt="Allow Edits to Mobile Option" title="Allow Edits to Mobile Option" MadCap:conditions="General.Online" /> </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Optional workflow configuration:  Validate the mobile number entered on signing verification matches the number entered during the application creation.</p>
+                                <p>Organization Configuration/Organization Settings/<MadCap:xref href="../Organization Configuration/Organizations/Signature.htm" alt="Signature">Signature</MadCap:xref> tab: Add validation of the mobile number by selecting the <b class="Bold">Validate Identity Verification</b> checkbox on the <b class="Bold">Signature</b> tab. If a signature field has the Use SMS Text property selected, FireLight validates that the mobile number entered in the ID verification dialog matches what was entered in data entry in the activity. This is similar to the Date of Birth and SSN entered during the ID verification when <a href="../Organization Configuration/Organizations/Signature.htm#ValidateIdentityVerification" alt="Validate Identity Verification">Validate Identity Verification</a> is selected in Organization Settings.</p>
+                                <p><b class="Bold">NOTE:</b> If you select the <b class="Bold">Validate Identity Verification</b> option, you need to select the <b class="Bold">Allow Edits to Mobile</b> option in Organization Configuration/Groups so the mobile number is enabled. This allows the user to type in the mobile number for verification.</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/SMSText5.png" alt="Validate Identity Verification Option" title="Validate Identity Verification Option" MadCap:conditions="General.Online" />
+                                </p>
+                            </li>
+                            <li>
+                                <p>The SMS provider set up in FireLight for this enhancement is Twilio.</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>
+                                        <p>The “test” phone number you receive texts from, if testing from the QE, UAT, and Staging environments, is 1-970-760-6072. Following is a sample of what you receive on your mobile phone when testing from QE, UAT or Staging.</p>
+                                        <p MadCap:conditions="General.Online">
+                                            <img src="../Resources/ImagesAdmin/SMSText12.png" alt="Sample Passcode Texts" title="Sample Passcode Texts" MadCap:conditions="General.Online" />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>The “production” phone number you receive texts from while in the production environment is 1-720-619-8472.   The message will look the same as the image above, but it will come from the production number.</p>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">User Experience</p>
+                        <p><b class="Bold">Sign Now</b>
+                        </p>
+                        <ol>
+                            <li>
+                                <p>If any signature tags have the Use SMS Text property active (selected): On the Sign Now workflow, FireLight pre-fills the Mobile Number field on the Client Identification Verification page with the mobile number provided in the SSO or by data entry and the Send SMS Text button appears.</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/SMSText6.png" alt="Mobile Number and Send SMS Text" title="Mobile Number and Send SMS Text" MadCap:conditions="General.Online" />
+                                </p>
+                            </li>
+                            <li>
+                                <p>Enter client identification data as applicable and click the <b>Send SMS Text</b> button. FireLight sends a passcode to the client's mobile number and opens the Verify Client dialog. </p>
+                                <p><b class="Bold">NOTE:</b> If the Validate Identity Verification checkbox is selected in Organization Settings, you need to enter  the SSN and Birth Date information and Mobile Number. FireLight verifies whether your entries match the data entries in the activity.</p>
+                            </li>
+                            <li>
+                                <p>Enter the passcode sent to the client's mobile number in the dialog and click the <b class="Bold">Submit</b> button. FireLight verifies the mobile number and replaces the Send SMS Text button with a Verified button. Click the <b class="Bold">Verified</b> button and proceed with the normal Sign Now workflow.</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/SMSText7.png" alt="Verify Client dialog" title="Verify Client dialog" MadCap:conditions="General.Online" />
+                                </p>
+                            </li>
+                        </ol>
+                        <p><b class="Bold">Send Email Request</b>
+                        </p>
+                        <ol>
+                            <li>
+                                <p>On the Send Email Request workflow, enter the client identification data, including the Client Mobile Number if not pre-filled, and click the <b class="Bold">Send Email Request</b> button.</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/SMSText9.png" alt="SMS Text Authentication - Send Email Request" title="SMS Text Authentication - Send Email Request" MadCap:conditions="General.Online" />
+                                </p>
+                            </li>
+                            <li>
+                                <p>The client clicks the link in the email request to open the login dialog in FireLight. Client enters <b class="Bold">Last 4 Digits of SSN/Government ID</b> and <b class="Bold">Birth Date</b> and clicks the <b class="Bold">Send Passcode</b> button.</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/SMSText10.png" alt="Remote Login with SMS Text Option" title="Remote Login with SMS Text Option" MadCap:conditions="General.Online" />
+                                </p>
+                            </li>
+                            <li>
+                                <p>Client enters the Passcode for the recent request sent to their mobile number and clicks the <b class="Bold">Verify</b> button.</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/SMSText20.png" alt="Login dialog - Enter Passcode" title="Login dialog - Enter Passcode" MadCap:conditions="General.Online" />
+                                </p>
+                            </li>
+                            <li>Client completes the normal remote signing ceremony.</li>
+                            <li>
+                                <p>In the agent's view of FireLight, a Pending Request dialog appears.</p>
+                                <p MadCap:conditions="General.Online"> <img src="../Resources/ImagesAdmin/SMSText13.png" alt="Pending Request - SMS Text" title="Pending Request - SMS Text" MadCap:conditions="General.Online" /></p>
+                                <p>If the agent clicks the <b class="Bold">Send Passcode to [Client's] Cell Phone</b> link, a second Pending Request dialog appears. The agent enters the client's cell phone number and clicks the <b>Send SMS</b> button to send the client another Passcode.</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/SMSText14.png" alt="Send Passcode to Client's Email" title="Send Passcode to Client's Email" MadCap:conditions="General.Online" />
+                                </p>
+                            </li>
+                        </ol>
+                        <p><b class="Bold">Client Fill and Sign</b>
+                        </p>
+                        <ol>
+                            <li>On the <b class="Bold">Other Actions</b> menu, the agent clicks <b class="Bold">Request Client to Fill and Sign</b>.</li>
+                            <li>
+                                <p>Agent fills in any client identity information and clicks the <b class="Bold">Send Email</b> button.</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/SMSText15.png" alt="Request Client to Fill land Sign" title="Request Client to Fill land Sign" MadCap:conditions="General.Online" />
+                                </p>
+                            </li>
+                            <li>The client clicks the link in the email request to open the login dialog in FireLight. Client enters <b class="Bold">Last 4 Digits of SSN/Government ID</b> and <b class="Bold">Birth Date</b> and clicks the <b class="Bold">Send Passcode</b> button.</li>
+                            <li>Client enters the Passcode for the recent request sent to their mobile number and clicks the <b class="Bold">Verify</b> button.</li>
+                            <li>Client completes the normal Client Fill and Sign process.</li>
+                            <li>
+                                <p>In the agent's view of FireLight, a Pending Request dialog appears.</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/SMSText17.png" alt="Client Fill and Sign - Pending Request dialog" title="Client Fill and Sign - Pending Request dialog" MadCap:conditions="General.Online" />
+                                </p>
+                                <p>If the agent clicks the <b class="Bold">Send Passcode to [Client's] Cell Phone</b> link, a second Pending Request dialog appears. The agent enters the client's cell phone number and clicks the <b>Send SMS</b> button to send the client another Passcode.</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/SMSText18.png" alt="Client Fill and Sign - Send SMS Passcode to Phone Number" title="Client Fill and Sign - Send SMS Passcode to Phone Number" MadCap:conditions="General.Online" />
+                                </p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help – Design Document: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR180964 </MadCap:conditionalText><a href="../Resources/DesignDocs/180964 SMS Text Enhancment.pdf" target="_blank" title="CMR 180964" alt="CMR 180964" MadCap:conditions="General.Online">CMR 180964</a></p>
+                        <p>User Guide – <em>FireLight Platform User Guide</em>, New Activity, Signatures Step,<MadCap:conditionalText MadCap:conditions="General.PDF"> Client Signature</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"> <MadCap:xref href="../UserGuide/New Activity/Signatures/Client Signature.htm" alt="Client Signature">Client Signature [User Instructions]</MadCap:xref></MadCap:conditionalText> topic, "SMS Text Authentication" </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

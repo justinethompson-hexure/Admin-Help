@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>The Action row displays the type of event that triggers the email, the email template name, and any settings that need to be enabled or disabled to use the email template. The next three rows display the email data for the "to," "from," and "CC" email addresses. The Available Tags row displays the available data item tags you can use within the email template.</body>
+</html>

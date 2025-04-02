@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select  the <strong>Enable Manual Queue Move</strong> checkbox to allow the reviewer user to move activities from one queue to another. An initial review queue script must be present on the <MadCap:xref href="../../../../Organization Configuration/ReviewQueue.htm" target="_blank" alt="Review Queue">Review Queue</MadCap:xref> page in Organization Configuration to enter the activity into an initial review queue.</body>
+</html>

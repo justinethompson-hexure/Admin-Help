@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b>Disable Email After Submit</b> checkbox to disable the final email the system sends to each client role signer of the application. The final email contains links to download or view the signed documents. If selected, the email field in the client verification screen will not be visible. This option does not disable submit emails for agents and reviewers when the Enable Submit Email for Agent and Enable Submit Email for Reviewer options are selected.</body>
+</html>

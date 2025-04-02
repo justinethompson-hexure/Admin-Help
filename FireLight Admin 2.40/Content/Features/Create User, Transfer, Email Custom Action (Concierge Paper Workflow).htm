@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Create User, Transfer, Email Custom Action (Concierge Paper Workflow)</h1>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Create User, Transfer, Email Custom Action (Concierge Paper Workflow)</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>Organizations that are using FireLight<sup>®</sup> can extend their service to include a "concierge" workflow to convert paper transactions being submitted into digital transactions using FireLight Admin. The only optional functionality requiring Hexure involvement would be branding. This service is supported for both SSO and FireLight Access organizations.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p>The Custom Action functionality for Concierge Workflow may vary based on organization and specific workflow. One premise of the Concierge Workflow is  to convert an application submitted on paper to a digital application in FireLight.</p>
+                        <ol>
+                            <li>
+                                <p>Create a multi-parameter configurable Custom Action Button in a form or wizard, set the following required field properties for the button, and save the button and form or wizard.</p>
+                                <ul>
+                                    <li>Name - enter the data item name of the button.</li>
+                                    <li>Text - enter the display name of the button.</li>
+                                    <li>Action Type - select <b>Custom Action</b> in the list.</li>
+                                    <li>Custom Action Type - select <b class="Bold">Multiple Action</b> in the list.</li>
+                                    <li>Action Parameter (form), Custom Action Parameter (wizard) - select or enter the applicable action parameters. The format for entering parameters is "parameter 1," "parameter 2," etc. As the sample naming (CreateUser, TransferActivity, EmailUser) implies, the parameters identify the action and the entry order identifies the action sequence. It is not necessary to number parameters (e.g., CreateUser, TransferActivity, EmailUser). </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Create New User: If one of the custom action parameters is to create a new user in FireLight, add the following required fields/data items to the form or wizard for collecting user creation and authentication information.</p>
+                                <ul>
+                                    <li>CompanyProducerID - to be collected in field tagged FLI_NEW_USER_MAP_CODE</li>
+                                    <li>RelationRoleCode - to be collected in field tagged FLI_NEW_USER_ROLE_CODE</li>
+                                    <li>EMailAddress - to be collected in field tagged FLI_NEW_USER_EMAIL</li>
+                                    <li>FullName - to be collected in field tagged FLI_NEW_USER_NAME</li>
+                                </ul>
+                                <p>If the organization intends to use the last four of Government ID and DOB for authentication into FireLight, also add the following fields/data items to collect those data in the form or wizard:</p>
+                                <ul>
+                                    <li>NewUserDOB - to be collected in field tagged FLI_NEW_USER_DOB</li>
+                                    <li>NewUserSSNLast Four - to be collected in field tagged FLI_NEW_USER_SSN_LASTFOUR</li>
+                                </ul>
+                            </li>
+                            <li>Transfer: If one of the custom action parameters is to transfer the activity from the back office to a specified FireLight user, the transfer action is triggered on selection of the custom action button. A valid FireLight User ID must exist before the back office user clicks the custom action button—even if the user was created milliseconds prior to triggering the transfer action by clicking the custom action button. </li>
+                            <li>Email: If one of the custom action parameters is to send an email to the agent or advisor, ensure the Transfer Activity Request  and Transfer Activity with Direct Login Link concierge email templates are set up in the Organization Configuration &gt; Email &gt; <MadCap:conditionalText MadCap:conditions="General.PDF">Transfer Activities Email Category</MadCap:conditionalText><MadCap:xref href="../Organization Configuration/Email/Transfer Activities/Transfer Activities.htm" MadCap:conditions="General.Online" alt="Transfer Activities Email Category">Transfer Activities Email Category</MadCap:xref>.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">User Experience</p>
+                        <p>Back Office/Case Manager Workflow:</p>
+                        <ol>
+                            <li>
+                                <p>Back office user enters FireLight and keys in the paper application.</p>
+                                <p><b class="Bold">NOTE:</b> Some organizations are exploring alternative entry methods (i.e., OCR scanning, etc.). This step need not be manual, but that will depend on the back-office process defined by each organization. The significant aspect is that the application is initiated by someone other than the writing agent.</p>
+                            </li>
+                            <li>Back office user submits In Good Order (IGO) applications.</li>
+                            <li>
+                                <p>If the application is Not In Good Order (NIGO) and the agent is not an existing FireLight user, the back office user clicks a custom action button on a form or wizard in FireLight to initiate creation of the agent in FireLight, transfer ownership of the application to that agent, and notify and provide access to the application through an email to the agent.</p>
+                                <p>A popup message displays, "Activity has a pending transfer of ownership." If the agent/user already exists as a user in FireLight, based on the User ID entered, the activity will still be transferred to that user.</p>
+                            </li>
+                        </ol>
+                        <p>Agent/Advisor Experience:</p>
+                        <ol>
+                            <li>Agent receives an email with verbiage defined by the organization.</li>
+                            <li>After clicking  the Login link in the email, the agent is taken directly to Data Entry for the specific application that requires their attention. If desired, a branding code could be passed in the login to modify FireLight. </li>
+                            <li>Agent completes the requested changes and follows the particular workflow defined by the Organization.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help – Design Document: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 213304</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/DesignDocs/213304 Create User Transfer Application and provide Email Access.pdf" target="_blank" title="CMR 213304" alt="CMR 213304">CMR 213304</a></MadCap:conditionalText></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

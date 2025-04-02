@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Setup and usage instructions for the Fees, Expenses and Commissions Repository feature, which provides a repository of fees, expenses and commissions data in FireLight." />
+    </head>
+    <body>
+        <h1><a name="Top"></a>Fees, Expenses, and Commissions Repository</h1>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Fees, Expenses, and Commissions Repository Feature</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>This feature provides a repository of fees, expenses, and commissions data in FireLight<sup>®</sup> for use in fees,  expenses, and commissions disclosure forms. <MadCap:variable name="General.ProductName" /> stores and maintains a data repository along with common tags for each data item. FireLight supports the industry-defined formats for the data.</p>
+                        <ul>
+                            <li>
+                                <p>DTCC Fee &amp; Expense Transmittal (TXLife  1241) Data Dictionary (PPfA Lite)</p>
+                            </li>
+                            <li> DTCC Commission Schedule Transmittal (CST) Record Layouts</li>
+                        </ul>
+                        <p>There is a licensing component for both the carriers and distributors to support this feature. Clients interested in participating should contact their Strategic Account Manager  for pricing.</p>
+                        <p>Carriers are  required to tag their applications with data items for each Rider that will have a fee and set the export value to match the PPfA. Carriers need to add rules in their application form to define when the rider/feature/arrangement and funds are selected and which ProductCode to use to pull the fees from the repository.</p>
+                        <p><b>NOTE</b>: FireLight can support additional formats, on a custom basis, as needed.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Data Delivery</p>
+                        <p MadCap:conditions="General.Online">
+                            <img src="../Resources/ImagesAdmin/Fees1.jpg" alt="Fees and Expenses and Commissions Repository" title="Fees and Expenses and Commissions Repository" MadCap:conditions="General.Online" style="width: 7in;" />
+                        </p>
+                        <p><b>Data Delivery via DTCC</b>
+                        </p>
+                        <p>The distributors will license the data with the DTCC and request that Hexure is a destination. Carriers can send the PPfA and the CST files for these licensed clients through the DTCC and the files for the licensed clients will route to Hexure.</p>
+                        <p>FireLight is permitted to use only the data for the DTCC participant or participants who have requested that their data be shared with FireLight. In this scenario, FireLight receives a separate transmission of the data for each distributor so it knows who is a licensed client of Insurance Profile.</p>
+                        <p>The license could be at the top firm level or at a group level.</p>
+                        <p><b>Data Delivery via a Direct Upload to FireLight</b>
+                        </p>
+                        <p>FireLight also supports a manual upload using the same industry standard formats.  Firms choosing to use direct upload to FireLight can manually upload the files in the Admin.</p>
+                        <p class="Indent"><b>NOTE:</b> For non-street versions, <MadCap:variable name="General.ProductName" /> will support a file upload for unique versions.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">FireLight Setup</p>
+                        <p>Carriers and distributors pay a licensing fee to use the repository. Contact your Strategic Account Manager to set up a Work Order for licensing, form rules implementation, etc.</p>
+                        <ul>
+                            <li> Carriers set up rules and/or mapping for selection of features and arrangements that will incur a fee and set their export values to the PPfA ProductCode. Carriers must tag each option in <MadCap:variable name="General.ProductName" /> with the Common Tags for each RiderType TypeCode (TC) ) that applies to the product. The Export Option needs to match the ProductCode/FeatureOptProductCode in the PPfA. For variable products, the FundCode also needs to be defined in the carrier form.</li>
+                            <li>Distributors submit a Fees and Expenses disclosure form to pull in the fees for the application. The form needs to be tagged  with the common tags per RiderType TypeCode, Policy Level Fee, and Fund Fee. Rules also need to be written to run the query to pull in the rules. The FireLight Forms team can complete the tagging as part of a Work Order. Note that the disclosure form is a static PDF, but the content pulled for each fee is dynamic per the selection in the application. Form fields for fees that do not apply is left blank.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Admin Setup</p>
+                        <ol>
+                            <li>Design/Form Library page: Upload the fees, expenses, and commissions disclosure forms that contain the common tags and rules. <b>NOTE:</b> In the "Additional Information" section below, you can view/download a sample disclosure form. This form includes the common tags and rules.  Distributors, you can load it into FireLight and use the Copy Fields and Rules to move the tags and rules into your firm’s disclosure form.  Carriers, you can use this form for your testing along side your application tagging.</li>
+                            <li>Designer/Form Designer page: On the disclosure form, create a field to hold the fee and add a queryfee rule in the Rules Window to pull data from the repository. See the "|queryfee" rule under "|GetSet" in <MadCap:xref href="../Product Configuration/Rule Sets/AdvancedRulesCategoryElementDefinitionsReference.htm" alt="Advanced Rules Category and Element Definitions Reference">Advanced Rules Category and Element Definitions Reference</MadCap:xref> for a detailed description and examples.</li>
+                            <li>Organization Configuration/Organization Settings page: Carriers, enter the <b>DTCC Member ID</b> that matches the PPfA DTCCMemberID.  Distributors, enter the <b>DTCC Member ID</b> provided by the DTCC for your participant. Or if you are not a DTCC member, Hexure will need to make up a value, and that is the value the carriers will need to use in their upload.  </li>
+                            <li>Organization Configuration/Groups page: In the upper list select a <b>TC Role Code</b> for users who will have access to the repository. On the <b>Admin</b> tab, select the <b>Enable View Fees</b> checkbox. This allows access to the Fee Inquiry page in Product Configuration that supports  the manual upload and download of fee files.</li>
+                            <li>Product Configuration/Fee Inquiry page: Upload  fees, expenses, and commissions files (PPfA Lite, CST) by clicking the <b>Upload File</b> button.  Optionally, download files for backup or review. Note that the PPfA DTCC Member Code, ProductCode, and CUSIP must match the DTCC Member Code and the CUSIP ID and Product Code in the Product Profile.  Carriers then need to add rules and/or forms tagging to define the rider and arrangement options and set the Export Value to the FeatureOptProduct.ProductCode in the PPfA. <b>NOTE</b>: When you upload an updated version of a file, it overwrites the existing same-named file.</li>
+                            <li>Product Configuration/Products page: If a product has a different DTCC ID, such as a product variation for a unique state filing, enter the product DTCC ID number in <b>Product DTCC Member Id</b>. Carriers must update the Product with the <b>CUSIP ID</b> or <b>Carrier Code</b> and <b>Product Code</b> for each product with fees that is queried.</li>
+                            <li>Product Configuration/Packages page: Distributors add the fees and expenses disclosure form to the product application packages. This form needs to be tagged with the Common Tags and the rules to query for the data.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">User Experience</p>
+                        <ol>
+                            <li>If required, complete a Needs Determination before creating an application.</li>
+                            <li>Create an application. </li>
+                            <li>Fill in the information on the application. The data on the fees and expenses disclosure form will auto-complete based on the carrier’s tagging and rules.</li>
+                            <li>When Form Entry is 100%, continue to the electronic signature process.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help: </p>
+                        <p class="Indent">Design Document:  <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 150568</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/DesignDocs/150568-FeesAndExpenseRepositoryDesignApproach.pdf" target="_blank" title="CMR 150568" alt="CMR 150568">CMR 150568</a></MadCap:conditionalText></p>
+                        <p class="Indent">Sample Forms: <MadCap:conditionalText MadCap:conditions="General.PDF">Fees and Expense Disclosure Sample, PPfA Lite FireLight Sample (XML)</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/DesignDocs/PPfALiteFireLightSample.xml" target="_blank" title="PPfA Lite FireLight Sample" alt="PPfA Lite FireLight Sample">PPfA Lite FireLight Sample</a> (XML), <a href="../Resources/DesignDocs/Fees and Expense Disclosure Sample.pdf" target="_blank" title="Fees and Expense Disclosure Sample" alt="Fees and Expense Disclosure Sample">Fees and Expense Disclosure Sample</a> <b>(This is a sample Fee and Expense Disclosure Form that Hexure is providing for testing purposes only.  This is not a legal form and is not permitted to be re-purposed by a client as an actual legal disclosure form.)</b></MadCap:conditionalText></p>
+                        <p>Admin Guide and Help: <MadCap:xref href="../Product Configuration/Fee Inquiry.htm" alt="Fee Inquiry">Fee Inquiry</MadCap:xref>, <MadCap:xref href="../Design/Form Library/Form Library.htm" alt="Form Library">Form Library</MadCap:xref>, <MadCap:xref href="../Product Configuration/Rule Sets.htm" alt="Rule Sets">Rule Sets</MadCap:xref>, <MadCap:xref href="../Organization Configuration/Organization Settings.htm" alt="Organization Settings">Organization Settings</MadCap:xref> topics</p>
+                        <p MadCap:conditions="General.Online"><a href="#Top" alt="Return to Top">Return to Top</a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:pageBreak />
+    </body>
+</html>

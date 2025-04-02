@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p>An organization can use two methods to assign reviewers to specific activities.</p>
+        <ul>
+            <li>
+                <p>The organization assigns reviewers to specific activities using entries in the Review Queue Script in FireLight Admin, Review Queue. The assigned reviewer (or reviewer email group) receives a notification email that an order is ready for review. </p>
+            </li>
+            <li>
+                <p>The organization has the Enable Assign Reviewer Button option enabled in FireLight Admin, Groups. This allows a reviewer to manually assign an order to another reviewer. The assigned reviewer (or reviewer email group) receives a notification email that an order is ready for review. </p>
+            </li>
+        </ul>
+    </body>
+</html>

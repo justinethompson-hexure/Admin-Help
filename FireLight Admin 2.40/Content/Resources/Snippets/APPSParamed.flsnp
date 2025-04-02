@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body><big class="bold">APPS</big>
+        <p><b class="Bold">Pre Signature</b>
+        </p>
+        <p>Following is a sample wizard user experience for using APPS for scheduling a Paramed Examination prior to signing the application.</p>
+        <ol>
+            <li>
+                <p>Start an application.</p>
+            </li>
+            <li>
+                <p>Select the <b class="Bold">Use APPS for Paramed Examination</b> checkbox.</p>
+            </li>
+            <li>
+                <p>Enter the information for the Insured that is not pre-filled from the application. </p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../ImagesAdmin/Capture224.png" alt="APPS Paramed Exam Pre Signature" title="APPS Paramed Exam Pre Signature" />
+                </p>
+            </li>
+            <li>
+                <p>Next to <b class="Bold">Would you like to check and see if a specific date is available for the paramed exam?</b>, click the <b class="Bold">Yes</b> button.</p>
+            </li>
+            <li>
+                <p>Click in the <b class="Bold">Requested Exam Date</b> field and click an exam date in the calendar.</p>
+            </li>
+            <li>
+                <p>Click the <b class="Bold">Check Availability</b> button. A message displays: "Back Office Action is being performed. A validation is being performed." Wait for the back office action to conclude.</p>
+                <p>The Response field displays the number of available appointments for the requested exam date. </p>
+                <p>The following fields display the Examiner information for the selected exam date: Examiner ID, Address, City, State, Zip, Phone, and Email. </p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../ImagesAdmin/Capture235.png" alt="Available Appointments and Examiner Information" title="Available Appointments and Examiner Information" />
+                </p>
+            </li>
+            <li>
+                <p>In the <b class="Bold">Available Times</b> list, select  a date and time for the paramed exam appointment. </p>
+            </li>
+            <li>
+                <p>Click the <b class="Bold">Book Exam Appointment </b>button. A message displays: "Back Office Action is being performed. A validation is being performed." Wait for the back office action to conclude. If a specified time is not available, a message displays "Specified time is not available for this examiner [time - appointment number] in the Response field.</p>
+            </li>
+            <li>
+                <p>A confirmation number appears in the <b class="Bold">Confirmation ID</b> field. </p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../ImagesAdmin/Capture225.png" alt="Examiner Information and  Confirmation ID" title="Examiner Information and  Confirmation ID" />
+                </p>
+            </li>
+            <li>
+                <p>When data entry is 100%, click the <b class="Bold">CONTINUE</b> button on the upper right to proceed to the next step in the application process.</p>
+                <p><b class="Bold">NOTE:</b> Application History includes the information for the web service calls to APPS for the paramed exam scheduling.</p>
+            </li>
+        </ol>
+        <p><b class="Bold">Post Signature</b>
+        </p>
+        <p>Following is a sample wizard user experience for using APPS for scheduling a Paramed Examination after signing the application.</p>
+        <ol>
+            <li>
+                <p>Start an application. </p>
+            </li>
+            <li>
+                <p>Select the <b class="Bold">Use APPS for Paramed Examination</b> checkbox.</p>
+            </li>
+            <li>
+                <p>Enter the information for the Insured that is not pre-filled from the application. </p>
+            </li>
+            <li>
+                <p>Complete the application. When Data Entry reaches 100%, click <b class="Bold">CONTINUE</b> on the upper right to go to the next step of the application process.</p>
+            </li>
+            <li>
+                <p>The Insured completes the application signing process.</p>
+            </li>
+            <li>
+                <p>Enter a date to schedule the Paramed exam and click the <b class="Bold">Check Availability</b> button to proceed to the scheduling process as shown below. Or click the <b class="Bold">Skip</b> button to skip the Paramed exam and have the vendor contact the client directly.</p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../ImagesUserGuide/New Activity/Capture400.png" alt="Paramed Examination Scheduling - Post Signature" title="Paramed Examination Scheduling - Post Signature" MadCap:conditions="General.PDF - UGuide" />
+                </p>
+                <p>Select the date and time and click the <b class="Bold">Book Exam Appointment</b> button.</p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../ImagesUserGuide/New Activity/Capture401.png" alt="Book Exam Appointment" title="Book Exam Appointment" MadCap:conditions="General.PDF - UGuide" />
+                </p>
+                <p>Click the <b class="Bold">CONTINUE</b> button on the appointment success to return to the signature process if other signers remain, or go to the next step in the application process. </p>
+                <p MadCap:conditions="General.PDF - UGuide">
+                    <img src="../ImagesUserGuide/New Activity/Capture402.png" alt="Click Continue on Appointment Success" title="Click Continue on Appointment Success" MadCap:conditions="General.PDF - UGuide" />
+                </p>
+            </li>
+            <li>
+                <p>When a "post-signature" paramed order submission process has been completed and then there is a request to either "Unlock the Application" (which would void all previously captured signatures) or there is a request to have the insured "Re-Sign" the application, a cancellation request is sent to the vendor canceling any previous reservation and/or paramed order that has been sent. (This supports a carrier's position that a paramed order is only to be submitted on a signed case.) This process  then requires a repeat of the paramed scheduling / ordering workflow for the signer. </p>
+                <p><b class="Bold">NOTE:</b> Application History includes the information for the web service calls to APPS for the paramed exam scheduling and cancellation (if applicable).</p>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <sup>4</sup>A new replacement variable using an activity’s data items can be added to an email template by requesting a database change to add the new value to the activity search items list in the list profile.  These activity search items can be used in the Advanced Search in the All Activities page in FireLight<sup MadCap:conditions="General.Online">®</sup> or can simply be saved off for use in the email templates. Search parameters are specific to your organization and may differ from the ones listed in the FireLight base system.  Parameters are managed through a list profile that can be altered per your organization’s request.  For more information on this, please contact your Strategic Account Manager.<p>The Company ID search parameter is available when your organization enables Multi-Life in FireLight Admin. In Organization Configuration on the Groups page, App tab, see <a href="../../../Organization Configuration/Groups/App.htm#EnableMultiLife" alt="Enable Multi-Life">Enable Multi-Life</a>.</p><p>The CLIENT_NAME replacement tag requires a data item of the same name to be added to the activity and set to the name of the signer wanted for the replacement value.</p><p>For example, to set it to the owner name, a rule would be added to the form:</p><MadCap:codeSnippet><MadCap:codeSnippetCopyButton /><MadCap:codeSnippetCaption>Sample Rule - Get Owner Full Name</MadCap:codeSnippetCaption><MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">&lt;if&gt;
+  &lt;condition&gt;
+    &lt;not&gt;
+      &lt;isnullorwhitespace&gt;
+        &lt;diget dataitemid="Owner_FullName" /&gt;
+      &lt;/isnullorwhitespace&gt;
+    &lt;/not&gt;
+  &lt;/condition&gt;
+  &lt;diset dataitemid="Client_Name"&gt;
+    &lt;diget dataitemid="Owner_FullName" /&gt;
+  &lt;/diset&gt;
+&lt;/if&gt;
+</MadCap:codeSnippetBody></MadCap:codeSnippet></body>
+</html>

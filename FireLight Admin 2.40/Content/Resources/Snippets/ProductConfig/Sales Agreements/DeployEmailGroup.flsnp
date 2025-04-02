@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>(Carrier Only) Select a distributor in the <b class="Bold">Selling Org</b> list. In the <b class="Bold">Deploy Email Group</b> text box, add one or more distributor email addresses separated by a semi-colon to send carrier deployment notifications to the distributor's email addresses. This allows carriers to specify the distributor notification distro independent of the distributor configuring it themselves. This ensures that distributors have been notified of deployments that may change their users' experience relative to that carrier's activities regardless of Auto Deploy settings in the distributor environment. </p>
+        <p>
+            <strong>Spotlight Video:</strong> For more information, see the <a href="https://vimeo.com/371937774/74d1a3a1fb" target="_blank" title="FireLight Carrier Deploy Email Group Setting" alt="FireLight Carrier Deploy Email Group Setting">Carrier Deploy Email Group Setting</a> Spotlight Feature Video.</p>
+    </body>
+</html>

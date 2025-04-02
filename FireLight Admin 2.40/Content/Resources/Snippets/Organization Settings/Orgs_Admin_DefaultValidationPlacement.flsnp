@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>In the <b class="Bold">Default Validation Placement</b> list, select the default error placement location for form field validation messages to appear next to the fields (Left, Right, Top, Bottom). You can override this Organization level setting by setting the Error Placement property in individual form field properties as needed.</body>
+</html>

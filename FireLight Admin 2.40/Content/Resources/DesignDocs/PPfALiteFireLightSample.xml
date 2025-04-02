@@ -1,0 +1,1325 @@
+<!-- edited with XMLSpy v2011 rel. 3 sp1 (x64) (http://www.altova.com) by kod0218 (Insurance Technologies) -->
+<TXLife Version="2.37.00" xmlns="http://ACORD.org/Standards/Life/2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TXLifeRequest id="_617c3f63-b1d8-27ed-2f07-2b9730321278" PrimaryObjectID="PP5617PJ6789">
+		<TransRefGUID>_11869b23-5be2-1594-87b3-85d7bec47fb7</TransRefGUID>
+		<TransType tc="1241">Fee and Expense Disclosure Transmittal</TransType>
+		<TransSubType tc="24102">Fee and Expense Disclosure Transmittal for Annuities</TransSubType>
+		<TransExeDate>2016-12-16</TransExeDate>
+		<TransExeTime>12:39:50</TransExeTime>
+		<TransMode tc="2"/>
+		<NoResponseOK tc="1">true</NoResponseOK>
+		<TestIndicator tc="0">false</TestIndicator>
+		<PrimaryObjectType tc="35">PolicyProduct</PrimaryObjectType>
+		<OLifE>
+			<Party id='_4444rtyu-7894-41a2-9e17-43006213ffff"'>
+				<PartyTypeCode tc="2">Organization</PartyTypeCode>
+				<FullName>BlueSky Life Insurance Co of North America</FullName>
+				<!--BlueSky Fixed - 90611 - 4570 - BlueSky-->
+				<Organization>
+					<AbbrName>BlueSky</AbbrName>
+					<DBA>BlueSky</DBA>
+					<OrgCode>ABCD</OrgCode>
+					<DTCCMemberCode>ABCD</DTCCMemberCode>
+				</Organization>
+				<Carrier>
+					<CarrierCode>ABCD</CarrierCode>
+					<CarrierForm tc="1">Direct Carrier</CarrierForm>
+					<NAICCode>ABCD</NAICCode>
+					<NAICGroupCode>ABCD</NAICGroupCode>
+				</Carrier>
+			</Party>
+			<PolicyProduct id="PP5617PJ6789" PartyID='_4444rtyu-7894-41a2-9e17-43006213ffff"'>
+				<!--BlueSky FIA  Annuity with Benefit Rider-->
+				<CarrierCode>ABCD</CarrierCode>
+				<CarrierName>BlueSky Life Insurance Co of North America</CarrierName>
+				<PlanName>BlueSky Lifetime Income</PlanName>
+				<ProductCode>BlueSky</ProductCode>
+				<MarketingName>BlueSky Lifetime Income</MarketingName>
+				<PolicyProductTypeCode tc="11">Indexed Annuity</PolicyProductTypeCode>
+				<PolicyProductForm tc="1">Individual</PolicyProductForm>
+				<LineOfBusiness tc="2">Annuity</LineOfBusiness>
+				<CusipNum>123456789</CusipNum>
+				<SaleEffectiveDate>2011-01-01</SaleEffectiveDate>
+				<ShareClass tc="6">No Share Class</ShareClass>
+				<SECRegisteredInd tc="0">False</SECRegisteredInd>
+				<ProductCompensationType tc="2">Commission Based</ProductCompensationType>
+				<MarketValAdjustInd tc="1">True</MarketValAdjustInd>
+				<AnnuityProduct>
+					<PremType tc="2">Flexible</PremType>
+					<PayoutType tc="2">Deferred</PayoutType>
+					<FeatureProduct>
+						<!--BlueSky-->
+						<FeatureCode>SC</FeatureCode>
+						<Name>Surrender Charges</Name>
+						<FeatureMappingCode tc="86">AnnRider</FeatureMappingCode>
+						<RiderTypeCode tc="207">Surrender Charges</RiderTypeCode>
+						<FeatureOptProduct>
+							<!--Surrender Charge for BlueSky-->
+							<ProductCode>SC</ProductCode>
+							<Name>10, 10, 10, 8.75, 7.5, 6.25, 5, 3.75, 2.5, 1.25, 0</Name>
+							<RiderSubTypeCode tc="44">(207) No Share Class</RiderSubTypeCode>
+							<JurisdictionApproval>
+								<Jurisdiction tc="4">Arizona</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="5">Arkansas</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="7">Colorado</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="10">District of Columbia</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="12">Florida</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="13">Georgia</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="15">Hawaii</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="16">Idaho</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="17">Illinois</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="19">Iowa</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="20">Kansas</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="22">Louisiana</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="23">Maine</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="25">Maryland</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="26">Massachusetts</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="27">Michigan</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="32">Nebraska</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="34">New Hampshire</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="36">New Mexico</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="38">North Carolina</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="39">North Dakota</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="42">Oklahoma</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="47">Rhode Island</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="49">South Dakota</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="50">Tennessee</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="53">Vermont</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="55">Virginia</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="57">West Virginia</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="58">Wisconsin</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="59">Wyoming</Jurisdiction>
+							</JurisdictionApproval>
+							<SurrenderChargeSchedule>
+								<SurrenderChargeType tc="1">Standard based on Contract Date</SurrenderChargeType>
+								<ChargeBasedOn tc="2">Account Value</ChargeBasedOn>
+								<ChargePctSchedule>
+									<Percentage>10</Percentage>
+									<Duration>1</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>10</Percentage>
+									<Duration>2</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>10</Percentage>
+									<Duration>3</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>8.75</Percentage>
+									<Duration>4</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>7.5</Percentage>
+									<Duration>5</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>6.25</Percentage>
+									<Duration>6</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>5</Percentage>
+									<Duration>7</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>3.75</Percentage>
+									<Duration>8</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>2.5</Percentage>
+									<Duration>9</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>1.25</Percentage>
+									<Duration>10</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>0</Percentage>
+									<Duration>11</Duration>
+									<DurQualifier tc="40">Lifetime</DurQualifier>
+								</ChargePctSchedule>
+							</SurrenderChargeSchedule>
+						</FeatureOptProduct>
+						<FeatureOptProduct>
+							<!--Surrender Charge for BlueSky-->
+							<ProductCode>SC</ProductCode>
+							<Name>9,8,7,6,5,4,3,2,1,0.5,0</Name>
+							<RiderSubTypeCode tc="44">(207) No Share Class</RiderSubTypeCode>
+							<JurisdictionApproval>
+								<Jurisdiction tc="1">Alabama</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="2">Alaska</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="8">Connecticut</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="9">Delaware</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="18">Indiana</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="21">Kentucky</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="28">Minnesota</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="29">Mississippi</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="30">Missouri</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="31">Montana</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="33">Nevada</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="35">New Jersey</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="41">Ohio</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="43">Oregon</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="45">Pennsylvania</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="48">South Carolina</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="51">Texas</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="52">Utah</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="56">Washington</Jurisdiction>
+							</JurisdictionApproval>
+							<SurrenderChargeSchedule>
+								<SurrenderChargeType tc="1">Standard based on Contract Date</SurrenderChargeType>
+								<ChargeBasedOn tc="2">Account Value</ChargeBasedOn>
+								<ChargePctSchedule>
+									<Percentage>9</Percentage>
+									<Duration>1</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>8</Percentage>
+									<Duration>2</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>7</Percentage>
+									<Duration>3</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>6</Percentage>
+									<Duration>4</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>5</Percentage>
+									<Duration>5</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>4</Percentage>
+									<Duration>6</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>3</Percentage>
+									<Duration>7</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>2</Percentage>
+									<Duration>8</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>1</Percentage>
+									<Duration>9</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>.5</Percentage>
+									<Duration>10</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>0</Percentage>
+									<Duration>11</Duration>
+									<DurQualifier tc="40">Lifetime</DurQualifier>
+								</ChargePctSchedule>
+							</SurrenderChargeSchedule>
+						</FeatureOptProduct>
+						<FeatureOptProduct>
+							<!--Surrender Charge for BlueSky CA only-->
+							<ProductCode>SC</ProductCode>
+							<Name>8.6, 7.69, 6.78, 5.87, 4.96, 4.05, 3.14, 2.23, 1.32, .41, 0</Name>
+							<RiderSubTypeCode tc="44">(207) No Share Class</RiderSubTypeCode>
+							<JurisdictionApproval>
+								<Jurisdiction tc="6">California</Jurisdiction>
+							</JurisdictionApproval>
+							<SurrenderChargeSchedule>
+								<SurrenderChargeType tc="1">Standard based on Contract Date</SurrenderChargeType>
+								<ChargeBasedOn tc="2">Account Value</ChargeBasedOn>
+								<ChargePctSchedule>
+									<Percentage>8.6</Percentage>
+									<Duration>1</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>7.69</Percentage>
+									<Duration>2</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>6.78</Percentage>
+									<Duration>3</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>5.87</Percentage>
+									<Duration>4</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>4.96</Percentage>
+									<Duration>5</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>4.05</Percentage>
+									<Duration>6</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>3.14</Percentage>
+									<Duration>7</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>2.23</Percentage>
+									<Duration>8</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>1.32</Percentage>
+									<Duration>9</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>0.41</Percentage>
+									<Duration>10</Duration>
+									<DurQualifier tc="1">Annual</DurQualifier>
+								</ChargePctSchedule>
+								<ChargePctSchedule>
+									<Percentage>0</Percentage>
+									<Duration>11</Duration>
+									<DurQualifier tc="40">Lifetime</DurQualifier>
+								</ChargePctSchedule>
+							</SurrenderChargeSchedule>
+						</FeatureOptProduct>
+					</FeatureProduct>
+					<FeatureProduct>
+						<!--GWLB-->
+						<FeatureCode>GWLB</FeatureCode>
+						<Name>Lifetime Income Rider</Name>
+						<FeatureMappingCode tc="86">AnnRider</FeatureMappingCode>
+						<RiderTypeCode tc="215">Guaranteed Min Withdrawal for Life Benefit (GWLB)</RiderTypeCode>
+						<FeatureOptProduct>
+							<!--LI (Fixed Interest Option)-->
+							<ProductCode>GWLB1</ProductCode>
+							<Name>LI (Fixed Interest Option)</Name>
+							<RiderSubTypeCode tc="11">(215) Standard Guaranteed Withdrawal for Life Benefit</RiderSubTypeCode>
+							<Fee>
+								<FeeType tc="50">Feature/Rider Benefit Charge Fee </FeeType>
+								<FeeTypeQualifier tc="1">Current</FeeTypeQualifier>
+								<FeeMode tc="1">Annual</FeeMode>
+								<Name>Rider Charge Rate</Name>
+								<FeePct>1.25</FeePct>
+								<ChargeBasedOn tc="7">Benefit amount</ChargeBasedOn>
+								<AssessmentMethod tc="2">Explicit Transaction</AssessmentMethod>
+							</Fee>
+						</FeatureOptProduct>
+						<FeatureOptProduct>
+							<!--Fixed Interest with plus Income Base Credit-->
+							<ProductCode>GWLB2</ProductCode>
+							<Name>Fixed Interest with plus Income Base Credit</Name>
+							<RiderSubTypeCode tc="11">(215) Standard Guaranteed Withdrawal for Life Benefit</RiderSubTypeCode>
+							<Fee>
+								<FeeType tc="50">Feature/Rider Benefit Charge Fee </FeeType>
+								<FeeTypeQualifier tc="1">Current</FeeTypeQualifier>
+								<FeeMode tc="1">Annual</FeeMode>
+								<Name>Rider Charge Rate</Name>
+								<FeePct>1</FeePct>
+								<ChargeBasedOn tc="7">Benefit amount</ChargeBasedOn>
+								<AssessmentMethod tc="2">Explicit Transaction</AssessmentMethod>
+							</Fee>
+						</FeatureOptProduct>
+						<FeatureOptProduct>
+							<!--Fixed Interest with plus Income Base Credit-->
+							<ProductCode>GWLB3</ProductCode>
+							<Name>Fixed Interest with plus Income Base Credit</Name>
+							<RiderSubTypeCode tc="11">(215) Standard Guaranteed Withdrawal for Life Benefit</RiderSubTypeCode>
+							<Fee>
+								<FeeType tc="50">Feature/Rider Benefit Charge Fee </FeeType>
+								<FeeTypeQualifier tc="1">Current</FeeTypeQualifier>
+								<FeeMode tc="1">Annual</FeeMode>
+								<Name>Rider Charge Rate</Name>
+								<FeePct>0</FeePct>
+								<ChargeBasedOn tc="7">Benefit amount</ChargeBasedOn>
+								<AssessmentMethod tc="2">Explicit Transaction</AssessmentMethod>
+							</Fee>
+						</FeatureOptProduct>
+					</FeatureProduct>
+					<FeatureProduct>
+						<!--DBR-->
+						<FeatureCode>DB</FeatureCode>
+						<Name>Death Benefit Rider</Name>
+						<FeatureMappingCode tc="86">AnnRider</FeatureMappingCode>
+						<RiderTypeCode tc="206">Death Benefit</RiderTypeCode>
+						<FeatureOptProduct>
+							<!--DB-->
+							<ProductCode>DB1</ProductCode>
+							<Name>DB</Name>
+							<RiderSubTypeCode tc="3">(206) Growth</RiderSubTypeCode>
+							<Fee>
+								<FeeType tc="50">Feature/Rider Benefit Charge Fee </FeeType>
+								<FeeTypeQualifier tc="1">Current</FeeTypeQualifier>
+								<FeeMode tc="1">Annual</FeeMode>
+								<Name>Rider Charge Rate</Name>
+								<FeePct>0.5</FeePct>
+								<ChargeBasedOn tc="7">Benefit amount</ChargeBasedOn>
+								<AssessmentMethod tc="2">Explicit Transaction</AssessmentMethod>
+							</Fee>
+						</FeatureOptProduct>
+						<FeatureOptProduct>
+							<!--DB Max-->
+							<ProductCode>DB2</ProductCode>
+							<Name>DB MAX</Name>
+							<RiderSubTypeCode tc="3">(206) Growth</RiderSubTypeCode>
+							<Fee>
+								<FeeType tc="50">Feature/Rider Benefit Charge Fee </FeeType>
+								<FeeTypeQualifier tc="1">Current</FeeTypeQualifier>
+								<FeeMode tc="1">Annual</FeeMode>
+								<Name>Rider Charge Rate</Name>
+								<FeePct>0.5</FeePct>
+								<ChargeBasedOn tc="7">Benefit amount</ChargeBasedOn>
+								<AssessmentMethod tc="2">Explicit Transaction</AssessmentMethod>
+							</Fee>
+						</FeatureOptProduct>
+						<JurisdictionApproval>
+							<Jurisdiction tc="1">Alabama</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="4">Arizona</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="5">Arkansas</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="6">California</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="7">Colorado</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="10">District of Columbia</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="12">Florida</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="13">Georgia</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="16">Idaho</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="17">Illinois</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="18">Indiana</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="19">Iowa</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="20">Kansas</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="21">Kentucky</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="22">Louisiana</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="23">Maine</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="25">Maryland</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="27">Michigan</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="29">Mississippi</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="30">Missouri</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="31">Montana</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="32">Nebraska</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="34">New Hampshire</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="36">New Mexico</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="38">North Carolina</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="39">North Dakota</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="47">Rhode Island</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="49">South Dakota</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="50">Tennessee</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="53">Vermont</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="55">Virginia</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="57">West Virginia</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="58">Wisconsin</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="59">Wyoming</Jurisdiction>
+						</JurisdictionApproval>
+					</FeatureProduct>
+					<FeatureProduct>
+						<!--DBR with Premium Bonus-->
+						<FeatureCode>DB</FeatureCode>
+						<Name>Death Benefit  with Premium Bonus</Name>
+						<FeatureMappingCode tc="86">AnnRider</FeatureMappingCode>
+						<RiderTypeCode tc="206">Death Benefit</RiderTypeCode>
+						<FeatureOptProduct>
+							<!--DB-->
+							<ProductCode>DB3</ProductCode>
+							<Name>DB</Name>
+							<RiderSubTypeCode tc="3">(206) Growth</RiderSubTypeCode>
+							<Fee>
+								<FeeType tc="50">Feature/Rider Benefit Charge Fee </FeeType>
+								<FeeTypeQualifier tc="1">Current</FeeTypeQualifier>
+								<FeeMode tc="1">Annual</FeeMode>
+								<Name>Rider Charge Rate</Name>
+								<FeePct>0.85</FeePct>
+								<ChargeBasedOn tc="7">Benefit amount</ChargeBasedOn>
+								<AssessmentMethod tc="2">Explicit Transaction</AssessmentMethod>
+							</Fee>
+						</FeatureOptProduct>
+						<FeatureOptProduct>
+							<!--DB MAX-->
+							<ProductCode>DB4</ProductCode>
+							<Name>DB MAX</Name>
+							<RiderSubTypeCode tc="3">(206) Growth</RiderSubTypeCode>
+							<Fee>
+								<FeeType tc="50">Feature/Rider Benefit Charge Fee </FeeType>
+								<FeeTypeQualifier tc="1">Current</FeeTypeQualifier>
+								<FeeMode tc="1">Annual</FeeMode>
+								<Name>Rider Charge Rate</Name>
+								<FeePct>0.85</FeePct>
+								<ChargeBasedOn tc="7">Benefit amount</ChargeBasedOn>
+								<AssessmentMethod tc="2">Explicit Transaction</AssessmentMethod>
+							</Fee>
+						</FeatureOptProduct>
+						<JurisdictionApproval>
+							<Jurisdiction tc="1">Alabama</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="4">Arizona</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="5">Arkansas</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="6">California</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="7">Colorado</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="10">District of Columbia</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="12">Florida</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="13">Georgia</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="16">Idaho</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="17">Illinois</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="19">Iowa</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="20">Kansas</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="21">Kentucky</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="22">Louisiana</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="23">Maine</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="25">Maryland</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="27">Michigan</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="29">Mississippi</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="30">Missouri</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="31">Montana</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="32">Nebraska</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="34">New Hampshire</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="36">New Mexico</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="38">North Carolina</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="39">North Dakota</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="47">Rhode Island</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="49">South Dakota</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="50">Tennessee</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="53">Vermont</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="55">Virginia</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="57">West Virginia</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="58">Wisconsin</Jurisdiction>
+						</JurisdictionApproval>
+						<JurisdictionApproval>
+							<Jurisdiction tc="59">Wyoming</Jurisdiction>
+						</JurisdictionApproval>
+					</FeatureProduct>
+					<FeatureProduct>
+						<!--Flexible Withdrawal Rider-->
+						<FeatureCode>LTC</FeatureCode>
+						<Name>Flexible Withdrawal Rider</Name>
+						<FeatureMappingCode tc="86">AnnRider</FeatureMappingCode>
+						<RiderTypeCode tc="213">Health Insurance Rider</RiderTypeCode>
+						<FeatureOptProduct>
+							<!--Flexible Withdrawal Rider-->
+							<ProductCode>LTCR</ProductCode>
+							<Name>Flexible Withdrawal Rider</Name>
+							<LivesType tc="1">Single life</LivesType>
+							<RiderSubTypeCode tc="21">(213) Long Term Care</RiderSubTypeCode>
+							<JurisdictionApproval>
+								<Jurisdiction tc="1">Alabama</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="4">Arizona</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="5">Arkansas</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="7">Colorado</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="8">Connecticut</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="9">Delaware</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="10">District of Columbia</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="12">Florida</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="13">Georgia</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="15">Hawaii</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="16">Idaho</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="17">Illinois</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="18">Indiana</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="19">Iowa</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="20">Kansas</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="21">Kentucky</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="22">Louisiana</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="23">Maine</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="25">Maryland</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="27">Michigan</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="28">Minnesota</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="29">Mississippi</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="30">Missouri</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="31">Montana</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="32">Nebraska</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="33">Nevada</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="34">New Hampshire</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="35">New Jersey</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="36">New Mexico</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="38">North Carolina</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="39">North Dakota</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="41">Ohio</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="42">Oklahoma</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="45">Pennsylvania</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="47">Rhode Island</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="48">South Carolina</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="50">Tennessee</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="51">Texas</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="52">Utah</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="53">Vermont</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="55">Virginia</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="57">West Virginia</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="58">Wisconsin</Jurisdiction>
+							</JurisdictionApproval>
+							<JurisdictionApproval>
+								<Jurisdiction tc="59">Wyoming</Jurisdiction>
+							</JurisdictionApproval>
+							<Fee>
+								<FeeType tc="2">Administrative Fee</FeeType>
+								<FeeTypeQualifier tc="1">Current</FeeTypeQualifier>
+								<FeeMode tc="1">Annual</FeeMode>
+								<Name>Monthly charge is 0.008333% of annuitization value.</Name>
+								<FeePct>0.1</FeePct>
+								<JurisdictionApproval>
+									<Jurisdiction tc="1">Alabama</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="4">Arizona</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="5">Arkansas</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="7">Colorado</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="8">Connecticut</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="9">Delaware</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="10">District of Columbia</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="12">Florida</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="13">Georgia</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="15">Hawaii</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="16">Idaho</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="17">Illinois</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="18">Indiana</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="19">Iowa</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="20">Kansas</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="21">Kentucky</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="22">Louisiana</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="23">Maine</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="25">Maryland</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="27">Michigan</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="28">Minnesota</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="29">Mississippi</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="30">Missouri</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="31">Montana</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="32">Nebraska</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="33">Nevada</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="34">New Hampshire</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="35">New Jersey</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="36">New Mexico</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="38">North Carolina</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="39">North Dakota</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="41">Ohio</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="42">Oklahoma</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="45">Pennsylvania</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="47">Rhode Island</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="48">South Carolina</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="50">Tennessee</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="51">Texas</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="52">Utah</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="53">Vermont</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="55">Virginia</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="57">West Virginia</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="58">Wisconsin</Jurisdiction>
+								</JurisdictionApproval>
+								<JurisdictionApproval>
+									<Jurisdiction tc="59">Wyoming</Jurisdiction>
+								</JurisdictionApproval>
+							</Fee>
+						</FeatureOptProduct>
+					</FeatureProduct>
+				</AnnuityProduct>
+				<Fee>
+					<FeeType tc="4">Base M&amp;E Charges</FeeType>
+					<FeeTypeQualifier tc="1">Current</FeeTypeQualifier>
+					<FeeMode tc="1">Annual</FeeMode>
+					<Name>Annual Rider Charge Rate</Name>
+					<FeePct>1.10</FeePct>
+					<JurisdictionApproval>
+						<Jurisdiction tc="1">Alabama</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="2">Alaska</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="4">Arizona</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="5">Arkansas</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="6">California</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="7">Colorado</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="8">Connecticut</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="9">Delaware</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="10">District of Columbia</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="12">Florida</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="13">Georgia</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="15">Hawaii</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="16">Idaho</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="17">Illinois</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="18">Indiana</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="19">Iowa</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="20">Kansas</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="21">Kentucky</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="22">Louisiana</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="23">Maine</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="25">Maryland</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="26">Massachusetts</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="27">Michigan</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="28">Minnesota</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="29">Mississippi</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="30">Missouri</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="31">Montana</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="32">Nebraska</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="33">Nevada</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="34">New Hampshire</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="35">New Jersey</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="36">New Mexico</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="38">North Carolina</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="39">North Dakota</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="41">Ohio</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="42">Oklahoma</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="43">Oregon</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="45">Pennsylvania</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="47">Rhode Island</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="48">South Carolina</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="49">South Dakota</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="50">Tennessee</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="51">Texas</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="52">Utah</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="53">Vermont</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="55">Virginia</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="56">Washington</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="57">West Virginia</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="58">Wisconsin</Jurisdiction>
+					</JurisdictionApproval>
+					<JurisdictionApproval>
+						<Jurisdiction tc="59">Wyoming</Jurisdiction>
+					</JurisdictionApproval>
+				</Fee>
+				<JurisdictionApproval>
+					<Jurisdiction tc="1">Alabama</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="2">Alaska</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="4">Arizona</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="5">Arkansas</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="6">California</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="7">Colorado</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="8">Connecticut</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="9">Delaware</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="10">District of Columbia</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="12">Florida</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="13">Georgia</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="15">Hawaii</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="16">Idaho</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="17">Illinois</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="18">Indiana</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="19">Iowa</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="20">Kansas</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="21">Kentucky</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="22">Louisiana</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="23">Maine</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="25">Maryland</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="26">Massachusetts</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="27">Michigan</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="28">Minnesota</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="29">Mississippi</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="30">Missouri</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="31">Montana</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="32">Nebraska</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="33">Nevada</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="34">New Hampshire</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="35">New Jersey</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="36">New Mexico</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="38">North Carolina</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="39">North Dakota</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="41">Ohio</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="42">Oklahoma</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="43">Oregon</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="45">Pennsylvania</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="47">Rhode Island</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="48">South Carolina</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="49">South Dakota</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="50">Tennessee</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="51">Texas</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="52">Utah</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="53">Vermont</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="55">Virginia</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="56">Washington</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="57">West Virginia</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="58">Wisconsin</Jurisdiction>
+				</JurisdictionApproval>
+				<JurisdictionApproval>
+					<Jurisdiction tc="59">Wyoming</Jurisdiction>
+				</JurisdictionApproval>
+			</PolicyProduct>
+		</OLifE>
+	</TXLifeRequest>
+</TXLife>

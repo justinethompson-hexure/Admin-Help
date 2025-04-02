@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">E-Delivery</b> checkbox to provide group access to the E-Delivery activity Fill and Sign workflow. During the process, FireLight provides status messaging back to the carrier to keep track of the contract delivery. See <MadCap:xref href="../../../../Features/E-Delivery Fill and Sign.htm" target="_blank" alt="E-Delivery (Fill and Sign)">E-Delivery (Fill and Sign)</MadCap:xref> in Features. <MadCap:conditionalText MadCap:conditions="General.Online">See also <MadCap:xref href="../../../../UserGuide/Manage/E-Delivery.htm" target="_blank" alt="E-Delivery (Fill and Sign) [User Instructions]">E-Delivery  (Fill and Sign) [User Instructions]</MadCap:xref>.</MadCap:conditionalText></body>
+</html>

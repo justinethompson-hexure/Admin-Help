@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Select the <b class="Bold">Enable Multiple Open Activities</b> checkbox to allow users to have multiple open activities during the active session. This applies to Web only (not to Console) and to all activity ACORD types. When enabled, an Open Activities menu appears on the navigation bar  in FireLight. The menu name displays the number of open activities, e.g., Open Activities(3). Users click an activity name on the menu to navigate among open activities. If Disable Home Screen  and Enable Multiple Open Activities options are enabled, the Open Activities menu does not appear in data entry. </p>
+        <p>
+            <strong>Spotlight Video:</strong> See the <a href="https://vimeo.com/406909744/38f8474d8f" target="_blank" title="FireLight Multiple Open Activities" alt="FireLight Multiple Open Activities">Multiple Open Activities</a> Spotlight Feature Video for more information. <MadCap:conditionalText MadCap:conditions="General.Online">See also <MadCap:xref href="../../../../UserGuide/New Activity/Multiple Activities.htm" target="_blank" alt="Multiple Activities [User Instructions]">Multiple Activities [User Instructions]</MadCap:xref>.</MadCap:conditionalText></p>
+    </body>
+</html>

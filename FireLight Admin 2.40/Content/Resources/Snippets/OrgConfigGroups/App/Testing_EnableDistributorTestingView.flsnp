@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p class="Indent">(Carrier environment only)</p>
+        <p class="Indent"> Select the <strong>Enable Distributor Testing View</strong> checkbox to enable the carrier Admin user role to test the carrier's own products in Distributor environments that have <b class="Bold">Enable Carrier Testing View</b> checkbox selected and a role code selected in the associated list in the Distributor's Organization Settings page on the <MadCap:xref href="../../../../Organization Configuration/Organizations/Activity.htm" target="_blank" alt="Activity">Activity</MadCap:xref> tab. Only Admin role codes with this group option enabled is able to test in the distributor environments that allow carrier testing. </p>
+        <ul>
+            <li>
+                <p>Only the sales agreements that have been enabled by the distributor are available in the Distributor Testing View list that appears below the carrier logo on the FireLight Home page. </p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../../ImagesAdmin/Capture73.png" alt="Distributor Testing View List in FireLight" title="Distributor Testing View List in FireLight">
+                    </img>
+                </p>
+            </li>
+            <li>When the carrier Admin user selects a distributor in the Distributor Testing View list on the FireLight Home page, the user sees only the carrier products and activities for their own carrier organization that the distributor allows the carrier to access. This is done via a distributor role code that manages carrier product and activity access.</li>
+            <li>The carrier Admin user can submit an activity using the Distributor testing role code and the outbound submission (App/Sub or 103 or Name Value Pairs) is sent. This allows carriers to do full end-to-end testing on the distributor and make sure the outbound files are correct.</li>
+            <li>This view is only available in the UAT environment for testing. It is not available in Production. </li>
+        </ul>
+        <p class="Indent"><b class="Bold">See Also:</b>
+        </p>
+        <ul>
+            <li>
+                <MadCap:xref href="../../../../Features/Carrier Testing as a Distributor.htm" target="_blank" alt="Carrier Testing as a Distributor">Carrier Testing as a Distributor</MadCap:xref> in Features.</li>
+            <li><em MadCap:conditions="General.PDF">Carrier Testing as Distributor Guide </em><a href="../../../PDFGuides/Carrier Testing as Distributor Guide.pdf" target="_blank" title="Carrier Testing as Distributor Guide" alt="Carrier Testing as Distributor Guide" MadCap:conditions="General.Online">Carrier Testing as Distributor Guide</a>
+            </li>
+        </ul>
+    </body>
+</html>

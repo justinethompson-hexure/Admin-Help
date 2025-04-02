@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>In the <b class="Bold">State Signing Error Attempts</b> text box, enter the number of attempts the user can select a mismatched signing state before the system locks the application. If the number of state mismatch attempts is limited, on the final attempt to sign with the state not matching, a message to contact the agent appears to the user, and the agent receives a message and an email that the activity is no longer available for submission.</p>
+        <p>
+            <b class="Bold">NOTE:</b> When set to "0," the user can select a mismatching signing state any number of times. The alert dialog will display to the user after each invalid state selection but will not lock the application and prevent submission. </p>
+    </body>
+</html>

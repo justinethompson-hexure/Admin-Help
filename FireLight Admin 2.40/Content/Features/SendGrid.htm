@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="SendGrid Bounce Back Email Tracking; " />
+    </head>
+    <body>
+        <h1><a name="top"></a>SendGrid - Bounce Back Email Tracking</h1>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">SendGrid Tracking of Bounce Back Emails </caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1"><b class="TableBlue">Description</b>
+                        </p>
+                        <p>FireLight implemented a new system for queueing emails. The new queueing system is handled via a background process instead of sending emails in real-time. This results in a new queue table to track the status of an email being sent to the  SendGrid email provider so they can be resent in the event there was a failure in the transmission to the email provider. *Note that this table does not track the status of the delivery of the email, as that will still be handled via the bounce back notification process.</p>
+                        <ul>
+                            <li>
+                                <p>Every minute, the Scheduler polls for messages to send, either new messages or messages that failed and to be resent.  Once an email is successfully sent to the provider, it is removed from the queue.</p>
+                            </li>
+                            <li>
+                                <p>Though this new system is used only for the delivery of emails to the email provider [SendGrid] and not the delivery to the end user, the updates required to maintain the original formatting in the event of a failure, should result in the bounce back notification emails having the original formatting (i.e., HTML) as well.</p>
+                            </li>
+                        </ul>
+                        <p>With the SendGrid email delivery system, FireLight adds tracking of bounce back emails. </p>
+                        <ul>
+                            <li>
+                                <p>FireLight generates a GUID for each email sent to  SendGrid. This GUID is saved, along with any data needed to link it to the email to an activity or audit.</p>
+                            </li>
+                            <li>
+                                <p>FireLight sends the email to SendGrid via the queueing system, and gets the delivery status via a signed webhook from SendGrid contacting a FireLight API. If an email bounces or otherwise fails to send, SendGrid uses webhooks to contact a FireLight API.</p>
+                            </li>
+                            <li>
+                                <p>FireLight tracks the following events (all other events are sent before the email has fully completed sending):</p>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>Bounce – if we get this message, we should also get a reason returned (e.g., "500 unknown recipient").</p>
+                                    </li>
+                                    <li>
+                                        <p>Dropped – this could be for multiple reasons, including: Unsubscribed address, bounced address, Spam content, etc.</p>
+                                    </li>
+                                    <li>
+                                        <p>Delivered</p>
+                                    </li>
+                                    <li>
+                                        <p>Blocked – similar to a bounce  and if we get this message, we should also get a reason returned (e.g., "500 unknown recipient"). The receiving server could not, or would not, accept the message. </p>
+                                    </li>
+                                </ul>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>Deferred – indicates the initial send failed, but is retried.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>The data being requested for reporting purposes are:</p>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>Unique email ID</p>
+                                    </li>
+                                    <li>
+                                        <p>Organization id or org code</p>
+                                    </li>
+                                    <li>
+                                        <p>Activity ID</p>
+                                    </li>
+                                    <li>
+                                        <p>Activity Name</p>
+                                    </li>
+                                    <li>
+                                        <p>timestamp of error</p>
+                                    </li>
+                                    <li>
+                                        <p>Email address associated with the event</p>
+                                    </li>
+                                    <li>
+                                        <p>Where the email came from (i.e., FL, Agent X, carrier, etc.)</p>
+                                    </li>
+                                    <li>
+                                        <p>Email template, if used (i.e., Completed email; Request to Fill, etc.)</p>
+                                    </li>
+                                    <li>
+                                        <p>Status</p>
+                                    </li>
+                                    <li>
+                                        <p>Reason or Response if available</p>
+                                    </li>
+                                    <li>
+                                        <p>Activity Type (i.e., application, illustration, etc.)</p>
+                                    </li>
+                                    <li>
+                                        <p>status of activity </p>
+                                    </li>
+                                    <li>
+                                        <p>reason for email (i.e., remote sign, fill &amp; sign, etc.)</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>In addition to logging the failure in Email Audit, we will send an email to the organization. This will include the following information: </p>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>Who the email was from [Email From:]</p>
+                                    </li>
+                                    <li>
+                                        <p>Who the email was To (including CC) [Email To (including CC):]</p>
+                                    </li>
+                                    <li>
+                                        <p>Which email address it failed on [Failed Email Address:]</p>
+                                    </li>
+                                    <li>
+                                        <p>The failure reason [Failure Reason:]</p>
+                                    </li>
+                                    <li>
+                                        <p>The subject [Subject:]</p>
+                                    </li>
+                                    <li>
+                                        <p>The body of the original email that failed.</p>
+                                    </li>
+                                </ul>
+                                <p>This process will ensure that the email address the failure occurred for is not the address specified in the "Failed Email Notifications" setting. Passcode emails is ignored so it would not create a duplicate bounce. </p>
+                            </li>
+                            <li>
+                                <p>Agents are notified of any failures through a Message Center message. On screen notification appears if the agent is online. The agent also receives email notification if the agent has the "Send Message Center Emails" option selected in Preferences.</p>
+                            </li>
+                            <li>
+                                <p>FireLight added a detailed activity report named "FireLight Bounce Back Email Report." The report is grouped by Activity Type (Illustration, Application, e-Delivery Fill and Sign, etc.). <b>Note</b>: The report may be updated in the future to filter out errors that were resolved. See <MadCap:xref href="../Utilities/Reports/Detail Reports.htm" alt="Detailed Activity Reports" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">Detailed Activity Reports</MadCap:xref> for a sample.</p>
+                            </li>
+                            <li>
+                                <p>When inserting into the Audit History, the message is: "Email failure notification for &lt;email&gt; has been sent to &lt;org_email&gt;"</p>
+                            </li>
+                            <li MadCap:conditions="General.Postpone" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+                                <p>If SendGrid decides to add an email address to the bounced suppression list, SendGrid will drop the email and not even try to send the email. SendGrid does not notify FireLight that the email was dropped and added to the bounced suppression list. We need something from SendGrid to write an audit message that the email was added to the bounced suppression list.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p>In <b class="Bold">Organization Configuration</b> on the <b class="Bold">Organization</b> tab, enter the organization's email address for failed emails in the <b class="Bold">Failed Email Notifications</b> text box.  Click <b class="Bold">Save Organization</b>. </p>
+                        <p>Each environment can have a different email address configured.</p>
+                        <p>See <em MadCap:conditions="General.PDF" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">SendGrid Configuration Updates</em><a href="../Resources/DesignDocs/SendGrid Configuration Updates.pdf" target="_blank" title="SendGrid Configuration Updates" alt="SendGrid Configuration Updates" MadCap:conditions="General.Online" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">SendGrid Configuration Updates</a> in Admin Help for more information.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">User Experience</p>
+                        <p>If FireLight receives a permanent delivery failure message from SendGrid (event types "Dropped," "Bounce," "Blocked"), the message is sent to the agent via the Message Center. On screen notification appears if the agent is online. The agent also receives email notification if the agent has the "Send Message Center Emails" option selected in Preferences.<MadCap:conditionalText MadCap:conditions="General.Online" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"> In Admin Help, see the <MadCap:xref href="../Organization Configuration/Email/System/Email Delivery Failure Notification.htm" alt="Email Delivery Failure Notification (SendGrid)" target="_blank">Email Delivery Failure Notification (SendGrid)</MadCap:xref> topic in the Email/System section.</MadCap:conditionalText></p>
+                        <p><b class="TableBlue">Undeliverable Client Fill &amp; Sign Emails</b>
+                        </p>
+                        <MadCap:snippetBlock src="../Resources/Snippets/Email/UndeliverableEmailClientFillSign.flsnp" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+                        <p><b class="TableBlue">Undeliverable E-Delivery Emails</b>
+                        </p>
+                        <MadCap:snippetBlock src="../Resources/Snippets/Email/EDeliveryUndeliverableEmailAdmin.flsnp" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help – <em MadCap:conditions="General.PDF" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">SendGrid Configuration Updates</em><a href="../Resources/DesignDocs/SendGrid Configuration Updates.pdf" target="_blank" title="SendGrid Configuration Updates" alt="SendGrid Configuration Updates" MadCap:conditions="General.Online" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">SendGrid Configuration Updates</a>  document</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:pageBreak xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <p MadCap:conditions="General.Online" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

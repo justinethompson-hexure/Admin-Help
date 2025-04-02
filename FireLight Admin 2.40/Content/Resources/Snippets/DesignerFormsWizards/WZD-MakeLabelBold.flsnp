@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p>Select the checkbox to make the labels for text box controls bold. When this checkbox is selected for a text box, the label for the text box appears as bold on the app side.</p>
+    </body>
+</html>

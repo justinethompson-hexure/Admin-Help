@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>In the <b class="Bold">Lock Mode</b> list, select a view option for locked activities. Selecting "View Forms Only" does not display the Wizard view when an activity is in locked status. This is the Default setting. Selecting "View Forms and Wizard" displays the Wizard view with the forms when an activity is in locked status.</body>
+</html>

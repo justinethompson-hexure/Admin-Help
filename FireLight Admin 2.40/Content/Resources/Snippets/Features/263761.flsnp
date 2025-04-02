@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This project is closing out platform tech debt by creating all MVC functionality in React. Future projects is to migrate customers from MVC to React, and then a last project is to deprecate the MVC software.  This will have a positive impact on future UI development by reducing what SWAG of approximately 30% of UI project development.</p>
+        <p>Update legacy forms functionality to the React code for wizards. Currently, all legacy forms work needs to be done separately in ASP.NET MVC, which often requires double development and testing for forms and wizards. The goal is to get to a single code base for forms and wizards so we are not creating and maintaining code in two locations.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Mask name instead of mask definition in Admin so will see something different in Admin for Wizards - tool was run to update definition to name</p>
+            </li>
+            <li>
+                <p>Masking for Wizards rewritten to behave same as forms</p>
+            </li>
+            <li>
+                <p>"Manage Optional Forms" added to Wizard "Other Actions" dropdown list</p>
+            </li>
+        </ul>
+    </body>
+</html>

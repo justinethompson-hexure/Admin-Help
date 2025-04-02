@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable Send Email Request for Agent</b> checkbox to  disable the Send Email Request option for agent signers, which bypasses the Agent Signature Choice page, so agent signers go directly from the List of Required Signers page to the Agent Signature page for document review. E-signature capture can only be done through the Sign Now process. The base ForeSight tag FLI_DISABLE_SIGN_LATER is available for agent remote signing also. A value of "true" will disable the sign later option and "false" will allow sending email requests for remote signature.</body>
+</html>

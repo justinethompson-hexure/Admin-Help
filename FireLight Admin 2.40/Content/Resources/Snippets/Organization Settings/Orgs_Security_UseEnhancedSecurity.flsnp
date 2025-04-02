@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Use Enhanced Security</b> checkbox to enable enhanced security. This adds additional replay attack safeguards within the <MadCap:variable name="General.ProductName" /> standard form post version of SSO.  This option is not used if SAML 2.0 SSO is implemented for the subscription.</body>
+</html>

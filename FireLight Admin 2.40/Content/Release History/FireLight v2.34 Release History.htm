@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight v2.34 Release History</h1>
+        <h2>March 2024 Release—3/28/2024 Production</h2>
+        <h2>Enhancements</h2>
+        <h3>SuranceBay Integration to Support Can Sell Check</h3>
+        <p>This enhancement adds a base integration with SuranceBay. Clients who utilize SuranceBay for Can Sell check can now perform those CanSell checks within the Firelight system.</p>
+        <h4>Impact</h4>
+        <p>The agency sets up the SuranceBay credentials in the Organization Third-Party Settings.</p>
+        <h5>Admin Changes</h5>
+        <ul>
+            <li>
+                <p>Adding Group Options - FLAdmin &gt; Groups&gt; Admin(tab) &gt; Select "Enable SuranceBay" Box &gt; Message shown "Checking this service will automatically call SuranceBay Can-Sell integration.” &gt; Save</p>
+            </li>
+        </ul>
+        <h5>User Preference Changes</h5>
+        <ul>
+            <li>
+                <p>Adding SuranceBay Login - FL home screen &gt; Preferences &gt; SuranceBay Login (Only shows when SuranceBay has been approved in Admin) &gt; Input username and password &gt; Save</p>
+            </li>
+            <li>
+                <p>New Application Selection Changes:</p>
+            </li>
+            <li>
+                <p>New Application Showing SureLC Information widget from each product - FL home screen &gt; Applications &gt; (Make sure "Information from SureLC" is on top of screen, and producer profile from SureLC is showing) &gt; Product Selection &gt; Pick State &gt; Any insurance product that can be sold will have a CanSell widget on it.</p>
+            </li>
+        </ul>
+        <h5>New Application Selection Changes</h5>
+        <ul>
+            <li>
+                <p>New Application Showing SureLC Information widget from each product - FL home screen &gt; Applications &gt; (Make sure "Information from SureLC" is on top of screen, and producer profile from SureLC is showing) &gt; Product Selection &gt; Pick State &gt; Any insurance product that can be sold will have a CanSell widget on it.</p>
+            </li>
+        </ul>
+        <h5>Data Entry Changes</h5>
+        <ul>
+            <li>
+                <p>Prior to Signature Confirmation Box - Upon selecting Continue the SureLC CanSell Widget is displayed, providing the options to continue, stop, or launch into the SureLC Portal through the "Fix Issues" button.</p>
+            </li>
+        </ul>
+        <h3>Increase the File Size Limit of Single File Upload Up to 50 MB</h3>
+        <p>With this enhancement, the file size for attachments to activities has been increased.   The maximum available file size is now 50 MB. The maximum file size for your organization can be set in the FireLight administration tool. The feature can enable users to upload large files (up to 50 MB) without splitting them into multiple files.</p>
+        <h4>Impact</h4>
+        <ul>
+            <li>
+                <p>FL Admin &gt; Organization Config &gt; Organization Setting &gt; Activity (tab) &gt; Maximum Upload File Size - Single (dropdown)</p>
+            </li>
+            <li>
+                <p>FL App &gt; Activity &gt; Other Actions (menu) &gt; Documents (upload dialog)</p>
+            </li>
+        </ul>
+        <h3>Impact of Changes to Sales Agreement/Product Availability</h3>
+        <p>With this enhancement, an agent will not be able to submit an application (unlocked) for which the sales agreement is no longer valid. Currently, an agent cannot create an application for an invalid/expired sales agreement, but if the sales agreement became invalid while the application was not yet locked (in data entry), the agent is still able to continue to signature and submit the application. With this enhancement, when the agent tries to continue/submit an application in data entry, with an invalid sales agreement, FL will provide an alert and make the application read-only. They would still be allowed to submit a locked application.</p>
+        <h4>Impact</h4>
+        <ul>
+            <li>
+                <p>App: When an agent loads an activity in “Data Entry” with an invalid sales agreement, an alert will appear, disallowing the agent to proceed.</p>
+            </li>
+        </ul>
+        <h3>Enhancement for Custom Activity Pop-up Messages</h3>
+        <p>This enhancement allows suppressing pop-up message for an activity action. The FireLight Administration Tool User can save a blank message for an activity action so that no alert appears for that action within the FireLight workflow.  The default system message can be restored to enable the system alerts.</p>
+        <p>With this enhancement, admin users can also place links in the custom alert messages for activity action.</p>
+        <h4>Impact</h4>
+        <ul>
+            <li>
+                <p>FL Admin &gt; Product Config &gt; Activities &gt; Activity Details (tab) &gt; Edit Activity Pop-up Messages (link)</p>
+            </li>
+            <li>
+                <p>Allow saving blank message for an activity action.</p>
+            </li>
+            <li>
+                <p>Allow using workflow links to activity custom pop-up messages.</p>
+            </li>
+        </ul>
+        <h3>Manage Form Protection for Sign-Only Duty Types</h3>
+        <p>With this enhancement, Agent and Client protection on forms are applied to the duty types related to signing. Both the protections will apply when printing and signing these forms.</p>
+        <p>A client protected form will not be available to an agent for printing and signing unless agent signatures are required. Similarly, an agent protected will not be available to a client for print and signing unless client signatures are required.</p>
+        <p>Both of these protections are applicable to the following duty types:</p>
+        <ul>
+            <li>
+                <p>Signing Ceremony Only</p>
+            </li>
+            <li>
+                <p>Signing Ceremony Only: Conditional</p>
+            </li>
+            <li>
+                <p>Signing Ceremony Only: All</p>
+            </li>
+            <li>
+                <p>Signing Ceremony Only: All Conditional</p>
+            </li>
+            <li>
+                <p>Print Only</p>
+            </li>
+        </ul>
+        <h4>Impact</h4>
+        <ul>
+            <li>
+                <p>Agent and Client UI for App: Other Actions &gt; Display/Print PDF</p>
+            </li>
+            <li>
+                <p>Agent and Client UI for App: Activity &gt; Signatures</p>
+            </li>
+        </ul>
+        <h3>FireLight Administration Tool Changes for Ease of Use</h3>
+        <p>This enhancement includes several changes that will promote ease of use and faster access for the administration tool users.</p>
+        <h4>Impact</h4>
+        <ul>
+            <li>
+                <p>Ability to Search Package in Sales Agreement - FLAdmin &gt; Sales Agreements &gt; Sales Agreement Details (tab) &gt; Search Package in Sales Agreement (new link)</p>
+            </li>
+            <li>
+                <p>Expand Field Name dropdown on field properties for long values - FLAdmin &gt; Designer &gt; Form Designer &gt; Field Properties</p>
+            </li>
+            <li>
+                <p>	Enhance the forms/wizard search dropdown in Admin:</p>
+            </li>
+            <li>
+                <p>	FLAdmin &gt; Product Config &gt; Packages &gt; Package Detail (tab) &gt; Replace Form/Wizard/Rule Set in Package (link) &gt; Form/Wizard in Package (tab) &gt; Form/Wizard to Replace (dropdown)</p>
+            </li>
+            <li>
+                <p>FLAdmin &gt; Product Config &gt; Packages &gt; Package Detail (tab) &gt; Replace Form/Wizard/Rule Set in Package (link) &gt; Form/Wizard in Package (tab) &gt; Replace with Form/Wizard (dropdown)</p>
+            </li>
+            <li>
+                <p>FLAdmin &gt; Product Config &gt; Packages &gt; Package Detail (tab) &gt; Replace Form/Wizard/Rule Set in Package (link) &gt; Rule Set in Package (tab) &gt; Rule Set to Replace (dropdown)</p>
+            </li>
+            <li>
+                <p>FLAdmin &gt; Product Config &gt; Packages &gt; Package Detail (tab) &gt; Replace Form/Wizard/Rule Set in Package (link) &gt; Rule Set in Package (tab) &gt; Replace with Rule Set (dropdown)</p>
+            </li>
+            <li>
+                <p>FLAdmin &gt; Designer &gt; Form Designer &gt; Copy Fields (link) &gt; Copy From (dropdown)</p>
+            </li>
+        </ul>
+        <h3>Add Common Tag for Product Code</h3>
+        <p>This enhancement adds a new common tag to the FireLight system that maps to the product code</p>
+        <h4>Impact</h4>
+        <p>A product code will appear as a new common tag in Admin, mapping tool, the forms, wizard tools, and other locations that common tags will appear. The customer is not required to take any action for the new common tag to appear in FireLight. If the customer wants to use the new common tag, they will set the data item or rule to use the new common tag.</p>
+        <h3>Change Behavior of Case Firm ID When Copying Cases</h3>
+        <p>This enhancement allows the client’s first request for the Firm ID values to be derived from the firm ID of the user when copying activities, most of which are currently copied from the original case in FireLight today.</p>
+        <h4>Impact</h4>
+        <ul>
+            <li>
+                <p>The customer will not have to take any actions for the new functionality to work in FireLight.</p>
+            </li>
+            <li>
+                <p>When the customer copies or transfers an activity, the new functionality will automatically occur.</p>
+            </li>
+        </ul>
+        <h3>LexisNexis Enhancements</h3>
+        <p>This enhancement adds additional information to the LexisNexis section of the Application Audit report.</p>
+        <h2>Impact</h2>
+        <ul>
+            <li>
+                <p>The customer will not have to do any actions for the new functionality to work in FireLight.</p>
+            </li>
+        </ul>
+        <h2>Resolved Issues</h2>
+        <h3>Integration LexisNexis – Action Service Call from Different Forms Does Not Reflect the Output Values on Other Form: CR-1535</h3>
+        <p>This update supports the ability for the result of the Custom Action Service Call to the LexisNexis Risk (LNR) Classifier to autofill the LNR response fields on a different form.</p>
+        <h3>Integration Magnum - Error Is Presented When Closing out of Magnu: CR-2140</h3>
+        <p>Updates were made to the Magnum Integration to correct the error handling and allow the user to proceed as expected.</p>
+        <h3>Integration - GIACT Results Are Not Always Rendering as Expected When GIACT Integration Is Called via Rules: CR-2147</h3>
+        <p>Update the GIACT integration logic to ensure that the results fields are filled as expected when calling GIACT with either rules or a custom action button.</p>
+        <h3>Firelight Admin - Reports - LexisNexis Report Options Are Not Showing: CR-1911</h3>
+        <p>Missing LexisNexis Report options are now showing the FireLight Admin Activity Reports as expected.</p>
+        <h3>FireLight Admin - Simplify Management of Deployment Notifications from Carrier to Distributor: DIST-2314</h3>
+        <p>Updates were made to automate the deployment notification to distributors when carriers deploy to their distributor partners.</p>
+        <h3>FireLight Admin - Product Feature Functionality Not Working as Expected: DIST-2670</h3>
+        <p>Corrected an issue where Updates to Product Features added in Firelight Admin were not viewable as expected in the Display Preview or in the FireLight application.</p>
+        <h3>FireLight Admin – Typo in the Search Package Dialog Header for Sales Agreement: DIST-2975</h3>
+        <p>Corrected a misspelling in the Sales Agreement search window.</p>
+        <h3>FireLight Admin - Activity Profile Allows Strings with Special Characters in Activity Names: EAES-2821</h3>
+        <p>Updated the logic to prevent specials characters as a security measure.</p>
+        <h3>FireLight Admin - Group Setting "Require Signature Capture" Does Not Work for React E-Sign External Signature Request When Set on Agent Role Code or External Role Code: EAES-2911</h3>
+        <p>The Required Signature message is now showing as expected for external signature request if group setting "Require Signature Capture" is enabled for Agent Role code or External role code.</p>
+        <h3>FireLight Admin - Default Group Settings Are Overriding Agent Role Code Settings in FL App During Agent &amp; Client on Site Signature (Legacy Signing Only): EAES-3423</h3>
+        <p>This issue has been resolved on the Agent Role code settings are now working as expected.</p>
+        <h3>FireLight Admin - Firm Management - Getting Error When Try to Update “Firm Name” or “Associated Firm ID” with a Similar Value on Deleted Tab or Vice-Versa: EAES-667</h3>
+        <p>Error Handling on this functionality has been updated to work properly.   User can update the Firm Name as expected.</p>
+        <h3>FireLight Admin - Rule Editor Does Not Include All Required Data Types: PC-1320</h3>
+        <p>Rules editor has been updated to include needed data types for Math Operations</p>
+        <h3>FireLight - Email Notifications Not Always Being Sent to Agent When They Should Be and Vice-Versa: DIST-2315</h3>
+        <p>Updates were made to the system to ensure that appropriate notifications are being sent to the agent when the User Preference “Use Agent Email Address for All Communications” has been selected.</p>
+        <h3>FireLight - In the Other Actions Menu- "Copy Activity" Option Is Not Showing When "Disable Copy with Changes" Is Checked in Admin Group Settings: DIST-2672</h3>
+        <p>Corrected an issue where the Copy Activity option was incorrectly hidden when “Disable Copy With Changes” is checked in Group Settings in FireLight Admin.  The Copy Activity option is now present as expected from the Other Actions menu.</p>
+        <h3>FireLight – Incorrect (Old) Alert Message Displaying with New Alert Message When a Product Is Invalid, and the Application Is in Data Entry State: DIST-2773</h3>
+        <p>Corrected an issue where an obsolete message was showing in addition the correct message when a product was invalid.   User will now see only the correct message: “This product is no longer available”.</p>
+        <h3>FireLight - Cannot Rename Application on Activity Summary for Forms Only App in Special Case: EAES-2926</h3>
+        <p>This workflow issue has been resolved and the user is able to rename the activity as expected.</p>
+        <h3>FireLight – When Data Items Are Populated via Rules the Data Is Not Available as Expected to Async Action within Integration Provider: EAES-3267</h3>
+        <p>The workflow for data items that are required by the provider has been updated to accommodate data set via rules.</p>
+        <h3>FireLight - The Placement of the "Continue" Button Becomes Displaced When the Application Is Sent for Review and Then User Navigates Back to App: EAES-3389</h3>
+        <p>Issue with the navigation on the application when returning to the app has been resolved and the navigation buttons are displayed as expected.</p>
+        <h3>FireLight – Spacing on the Wizard User Interface Limits the Viewable Space: PC-1728</h3>
+        <p>Updated the logic to make the footer height reactive, which will provide more usable area for smaller screens. <b>Note</b>: Some spacing issues may be related to client-specific implementation choices that would be addressed as identified by that client.</p>
+        <h3>FireLight – Agent Reminder Email Contains Incorrect Variable Replacement Information</h3>
+        <p>Updated the variable replacement logic to ensure that the correct application data is included in the Agent Reminder email based on the associated application.</p>
+        <h3>FireLight Access - Showing Timestamp Error When Importing a CSV File Using "xxxxxxxxx" SSN Format</h3>
+        <p>This has been corrected and this format can now be imported as expected without generating an error message.</p>
+        <h3>eSignature - "Pending Request" Not Visible After We Request Clients to Complete Filling and Signing Application for Multiple Signers: DIST-2797</h3>
+        <p>Corrected an issue where, when creating an application in FireLight, and selecting “Request Client to Fill &amp; Sign” the Pending Request dialog box was not presented as expected.</p>
+        <h3>eSignature - Getting Overlapped Date and Signed State in the Activity: EAES-1592</h3>
+        <p>The system was updated to prevent data being placed in correctly on the signed application.</p>
+        <h3>eSignature – In Some Circumstances the Date Displayed on the Signature Page Is Incorrect When Using Forms and Wizards: EAES-678</h3>
+        <p>Modified the logic for the placement of the signature and date on the locked form to ensure that the signature and date are placed as expected.</p>
+        <h3>eSignature - &lt;Signertype&gt; Not Always Being Replaced with Actual Signer Type in Audit Messages: EAES-2129</h3>
+        <p>Updated the logic for the Audit messages associated with eSignature to ensure that the actual Signer Type is displayed as expected.</p>
+        <h3>eSignature - Signer for Optional Form Included through "Other Actions"-"Manage Optional Forms" Is Not Appearing in eSignature Ceremony As Expected: EAES-2967</h3>
+        <p>This functionality is now working as expected without requiring the user to refresh the screen.</p>
+        <h3>eSignature – Erroneously Presenting the Data Entry Met Popup Message after Decline eSignature: EAES-3059</h3>
+        <p>This popup is no longer showing up in this work flow.   Functionality is working as designed.</p>
+        <h3>eSignature - Client Unable to Download App Documents Via Notification Email after Signing On-Site Due to an Invalid Link: EAES-3193</h3>
+        <p>The request expiration logic associated with this link has been corrected to work as expected.</p>
+        <h3>eSignature - Localized Buttons (Localization: French and Spanish) Are Not Presented as Expected When "Request Client Fill or Fill &amp; Sign" Is Used: PC-1270</h3>
+        <p>The buttons have been reformatted to accommodate localized text as well as English.</p>
+        <h3>eSignature – Update Buttons for "Request Client Fill or Fill &amp; Sign" Dialog to Improve Readability in English: PC-2306</h3>
+        <p>English text has been reformatted on these buttons to improve readability.</p>
+        <h3>eSignature - (Localization: French and Spanish) When User Submits the "Request Client Fill or Fill &amp; Sign" or "Request Client Fill " Request the  Submission Pop-up Buttons Are Not Displayed Correctly: PC-1271</h3>
+        <p>The buttons have been reformatted to accommodate localized text as well as English.</p>
+        <h3>eSignature - Page Title Is Missing from the External Request Page: EAES-3506</h3>
+        <p>Updated the page title On the External Signatures dialog to correctly reflect External Signatures rather than Welcome.</p>
+        <h3>eSignature - Signature is Incorrectly Required on Forms That Are Marked As Print Only but Contain a Signature Tag: EAES-3520</h3>
+        <p>Corrected an issue where Signatures were being required on a form designated as “Print Only”.   The signing requirements is now respecting the Print Only designation.</p>
+        <h3>eSignature - Error Message Is Incorrectly Presented When Using SMS Passcode Functionality: EAES-3532</h3>
+        <p>Removed some outdated code that was occasionally causing errors in the SMS Passcode logic.   Passcode logic is now functioning as designed without unnecessary errors.</p>
+        <h3>eSignature - Localization - Buttons for French and Spanish Are in a Different Location Than in the English Version: PC-2042</h3>
+        <p>The buttons have been reformatted to accommodate localized text as well as English.</p>
+        <h3>eSignature - eSign/Decline eSignature Slow Load Time: PC-830</h3>
+        <p>System has been updated to improve the load time for eSign/Decline eSignature</p>
+        <h3>eSignature - Signer Type Ordering in Signing Ceremony is Not as Expected: PC-833</h3>
+        <p>When creating an application in FireLight, the signer list is currently not being sorted correctly on the Signing Ceremony page.</p>
+        <h3>eSignature - Multi Signer Requests Are Showing Separately: EAES-3505</h3>
+        <p>When creating a new request for a Multi signer the request is now showing as a single request as expected.</p>
+        <h3>eSignature - Receiving an Error When Clicking “Back To Application” Button From the List of Signers in Certain Circumstances: EAES 3424</h3>
+        <p>Updated the logic so that the “Back to Application Button” is working as expected in all circumstances.</p>
+        <h3>eSignature – When Multiple Signature Requests are Active and One Is Cancelled an Associated Request Is Incorrectly Cancelled: EAES-3584</h3>
+        <p>Cancellation logic has been updated to ensure that only the selected signature request is cancelled.</p>
+        <h3>eSignature – Client Fill and Sign Requests Not Handled as Expected for Secondary Signers: EAES-3674</h3>
+        <p>Corrected an issue where the secondary signers were incorrectly being handled as a multi-signer request.   Now the secondary signers are always handled as individual requests as expected.</p>
+        <h3>Review Queue - The Close Button for Various Review Queue Pop-Up Dialogs Is Hidden When It Should Be Accessible: Dist-2898</h3>
+        <p>Updated the Dialogs for Review Queue to ensure that the close button is always accessible when the dialog is open.</p>
+        <h3>Review Queue - Close Button Is Showing Behind the Review Queue Application History &amp; Queue History Pop-Up: DIST-2900</h3>
+        <p>Corrected an issue in the Review Queue workflow where Close button was absurd when viewing Application History and Queue History.</p>
+        <h3>Review Queue - Email to Reviewer Is Resent upon Page Refresh Resulting in Duplicate Emails: PC-1031</h3>
+        <p>The reviewer is now only receiving one email as expected.</p>
+        <h3>Embedded - Google Address Auto-complete Is Not Mapping the Apartment Number in Embedded: PC-1759</h3>
+        <p>Updated the logic that interacts with the Google API to ensure that Apartment number is properly mapped into the application.</p>
+        <h3>Embedded – Sharing Activity Is Not Working as Expected in Embedded and  Produces an Error: PC-1268</h3>
+        <p>Functionality is now working as expected in Embedded and does not produce an error.</p>
+        <h3>Embedded - Share Activity Is Throwing Null Parameter Error and Timestamp Error: PC-2206</h3>
+        <p>Sharing is now working as expected in Embedded.</p>
+        <h3>REST API - CreateActivity/UploadDocument Validation Is Not Present as Expected: PC-1310</h3>
+        <p>FireLight is now validating the documents correctly to use RightBRIDGE PDFs to replace RightBRIDGE templates attached to new applications.</p>
+        <h3>Rest API – Update Handling of Rest API Calls to Improve System Performance: DI-500</h3>
+        <p>Handling of multiple API calls to the same rest API has been updated to manage resources more appropriately.</p>
+        <h3>Activity Transfer - Attempt to Complete Transfer of a Deleted Activity Results in Repeated Email Notifications: EAES-1446</h3>
+        <p>Message Center Notification logic has been updated to ensure that emails are delivered only as expected.</p>
+        <h3>Popup Message - When Sharing Application with Another User Incorrect "You do not have permission..." Popup Appearing in Some Cases, for Forms Only Product Not for Wizard App: EAES-2364</h3>
+        <p>Workflow logic has been updated to ensure that popup messages for share applications are working as expected based on the settings in the FL Administration Tool.</p>
+        <h3>Popup Message – Occasionally the Popup message "You do not have permission to finalize the application. Your job is done!"  Is Appearing Twice (Wizard UI Only): EAES-2551</h3>
+        <p>Logic for this message has been updated to ensure that it is not appearing inappropriately.</p>
+        <h3>Display/Print PDF - Form Names Are Not Showing Properly: EAES-2741</h3>
+        <p>The Display/ Print PDF dialog was updated to display the form names correctly.</p>
+        <h3>External Print or Download Capability - When Invalid Credentials are Input For "Print or Download Your Application" External Link There Is No Alert: DIST-2671</h3>
+        <p>Corrected an issue where a user would open the Print or Download your Application external link and then user enters invalid credentials and no alert was presented.   The Invalid Credentials are now being handled as expected.</p>
+        <h3>Print Forms – Updated the Handling of Print Only Forms As Part of the Application to Improve Handling: EAES-3268</h3>
+        <p>Updates to the handling of Print Only forms after an application has been locked to ensure that Print Only forms are handled correctly.</p>
+        <h3>Print Forms - Form Description No Longer Displayed in the On Demand Print Forms Window : PC-2122</h3>
+        <p>Form descriptions are now displayed as expected.</p>
+        <h3>Proposal - The "Save" Option on the Top Menu Should Be Eliminated Since We Already Have a "Save" Option on the Proposal Builder Page: EAES-2898</h3>
+        <p>The redundant save buttons have been resolved.</p>
+        <h2>Unresolved Issues</h2>
+        <h3>Critical</h3>
+        <h4>Magnum Yes No Answers Did Not Populate in eApply and Firelight Addendum of Magnum Answers/Details Not Generated: CR-2181</h4>
+        <p>For the Life Compact App (525-C and 525-C-EZ), the addendum PDF is not generating as designed.</p>
+        <h4>Require Signature Capture Group Option Was Not Enforced for External Signer: EAES-3715</h4>
+        <p>The Require Signature Capture group option is not working as designed.</p>
+        <h3>High</h3>
+        <h4>Display/Print PDF: “Signing Ceremony Only: Conditional and Signing Ceremony Only: All Conditional” Forms Are Showing Defaults Selected Even If Condition Has Not Been Triggered to Display these Condition Forms: DIST-3110</h4>
+        <p>“Signing Ceremony Only: Conditional and Signing Ceremony Only: All Conditional” forms are incorrectly appearing as selected even when they have not been selected.</p>
+        <h4>Activity Reports Being Received Twice: DIST-3114</h4>
+        <p>Activity reports are erroneously being sent twice following an update to the report.</p>
+        <h4>Conditional Forms are Showing as Default Selected When the Condition Has Not Been Triggered in Display/Print PDF DIST- 3101</h4>
+        <p>Currently forms are displaying default selected even if condition has not been triggered to display these forms.</p>
+        <h4>Inefficient Regular Expressions in Rules Execute Improperly: EAES-3387</h4>
+        <p>Occasionally execution of inefficient rules creates an exception rather than working as expected.</p>
+        <h4>External Linked Throwing Time Stamp Error when Application Sent for Signing Process: EAES-3422</h4>
+        <p>A time stamp error is erroneously being thrown when an email link is clicked.</p>
+        <h4>Contact Agent Window Doesn't Display Replaced Agent Name and Email Instead Show Details from Agent Preferences Or From Organization Page: EAES-3485</h4>
+        <p>The Contact Agent Window is failing to display the replaced agent’s name and email when external requests are sent.</p>
+        <h4>Pending Request Dialog Box Does Not Auto Reload after Cancelling One of the Requests: EAES-3693</h4>
+        <p>The Pending Request dialog is failing to auto-reload even after canceling the request.</p>
+        <h4>Not Getting Updated with New User's Firm ID when Application Is Created Using "Create on Behalf Of" Option: PC-2302</h4>
+        <p>The Create on Behalf Of option is not working as designed.</p>
+        <h4>FirmID Is Not Working as Expected on Copied Cases: PC-1590</h4>
+        <p>The FirmID is automatically derived from the original case.   The User FirmID should be used.</p>
+        <h4>eSignature - In the Post Issue Activity the Signature on an Uploaded Illustration Is Placed on the Wrong Page: EAES-3269</h4>
+        <p>Logic for signature location on uploaded documents in the post issue activity is not working as expected.</p>
+        <h3>Low and Medium</h3>
+        <h4>Display/Print PDF: The "Signing Ceremony Only: Conditional' and 'Signing Ceremony Only: All Conditional" Forms Aren't Showing in the Print PDF Window if the Signature's Done and Conditions Aren't Met to Display these Forms: DIST-3104</h4>
+        <p>After signature, the "Signing Ceremony Only: Conditional" and "Signing Ceremony Only: All Conditional" forms are not appearing in the Print PDF window if conditions required to display these forms have not been met.</p>
+        <h4>Column Headings Are Not Aligned Properly in Application Audit: CR-2100</h4>
+        <p>Column headings in the LexisNexis IID service Application Audit report are misaligned.</p>
+        <h4>Stability Issues with Milliman Call During Demo: CR-2114</h4>
+        <p>The Milliman Call is taking longer than expected.</p>
+        <h4>Form List Change Popup Displaying When There Is No Package Change (Not Taking into Account That Rules Can Exclude a Required Form): DIST-2902</h4>
+        <p>The form list change popup is repeatedly displaying even without a package change.</p>
+        <h4>Multiple Horizontal Scroll Bars Show When Copying Fields from Wizard: DIST-2979</h4>
+        <p>Copying fields in the Wizard Designer is resulting in the display of multiple horizontal scroll bars.</p>
+        <h4>When Application Sent for Client Fill and Sign the User Has the Ability to Click the "Sign Application" Button and Proceed with the Signature Even When the Admin User Invalid the Sales Agreement: DIST-2954</h4>
+        <p>When the application is sent for CFS, the user retains the ability to click the "Sign Application" button and complete the signature process, even if the admin user has invalided the sales agreement. When the application is sent for CF, the user retains the ability to click Complete and log off.</p>
+        <h4>Exception Occurring when Sending a Reminder Prevents all Reminders for that Organization from Being Sent: EAES-3672</h4>
+        <p>An exception when sending a reminder is erroneously preventing all other reminders from being sent.</p>
+        <h4>Generated Passcode Is Showing for React Signatures when Using SMS Passcode Validation: EAES-3580</h4>
+        <p>When creating a React or MVC application including SMS for the signer, the system-generated passcode is inadvertently being displayed.</p>
+        <h4>Page Filter Not Working When Copying Fields from Wizard: DIST-2980</h4>
+        <p>On the wizard designer page, while copying fields from a wizard, the page filter does not work to list fields present on the filtered page.</p>
+        <h4>Customized Pop-up Messages - Data Entry Complete Message - Close Link Are Not Displaying for Forms Only Application: DIST-3017</h4>
+        <p>The Close link in the “Data Entry Complete” message is failing to appear for Forms Only applications.</p>
+        <h4>Customized Popup Message Showing in Wrong Place: DIST-3015</h4>
+        <p>During pre-sign review, a customized popup message is displaying incorrectly.</p>
+        <h4>Visibility Time for Popup "Finished 2 of 3 Steps. Please Continue." Is Reduced Due to which Automation Script Is Failing: EAES-3676</h4>
+        <p>When creating a new Forms Only application, after all signers have signed, the pop-up message T "Finished 2 of 3 Steps. Please Continue." disappears within 2-3 seconds rather than persisting for at least 10 seconds as designed.</p>
+        <h4>Agent's Role Code Setting Not Working for External Signing (Default &amp; External Role Code Not Available): EAES-3677</h4>
+        <p>During application external signing, the agent’s role codes (Disable Signing Until All Pages Viewed, Require Signature Capture) are not working as designed.</p>
+        <h4>React Remote e-Signing Doesn't Populate Checkmarks Once They Review/Approve the Terms: PC-2230</h4>
+        <p>During eSigning, checkmarks are failing to populate as designed.</p>
+        <h4>Forms Only UI - Custom List Search - Search Text Entered with Leftmost Space Is Not Updating the Total Number of Results: PC-2303</h4>
+        <p>When using the Custom List-Button control, search results are failing to increment properly.</p>
+        <h4>Wizard UI - Calculation of Max-Height Can Lead to Much Wasted Space on Certain Screen Sizes: PC-2373</h4>
+        <p>In the Wizard interface, with certain screen sizes, max-height calculation sometimes results in wasted screen real estate.</p>
+        <h4>Group Setting "Require Signature Capture" Works Differently for Agent and Client External Signature Requests: DIST-3032</h4>
+        <p>The group setting “Require Signature Capture” is working inconsistently for Agent and Client signatures (off-site and on-site).</p>
+        <h4>Date Validation Not Working on Admin Reports: DIST-3104</h4>
+        <p>Start/End Date validation is not working as designed for Admin reports, with no message shown when the user fails to enter a date.</p>
+        <h4>Product Availability REST API Does Not Consider User for State Approval Restrictions at Group Level: EAES-3420</h4>
+        <p>A “No Product Found” error is being received within the IFG instance of FireLight within the state of Utah.</p>
+        <h4>Email Variable Replacements Should Replace Variable with Blank Value If Data Item Value Has Whitespace: EAES-3536</h4>
+        <p>When there is a variable in an email template, even if the data item or replacement value is whitespace only, the variable remains in the template.</p>
+        <h4>DEFAULT Role Code Setting Not Working for External Signing (When Agent Role Code Is Invalid &amp; External Role Code Not Available): EAES-3678</h4>
+        <p>When a user creates an application and sends a request for external signing, the Default role codes (Disable Signing Until All Pages Viewed, Require Signature Capture) are not working as designed.</p>
+        <h4>Windows Console: Group Setting: Agent Signing Order Last Is Not Working: EAES-3552</h4>
+        <p>Agents are being allowed to sign an order before a client even when the Group Setting Agent Signing Order is set to last.</p>
+        <h4>External Signature Window Title Showing Wrong Title for MVC Signature &amp; React Sign: EAES-3578</h4>
+        <p>Following the Signing Ceremony, the title for MVC and React signatures are titled incorrectly.</p>
+        <h4>After Signing External Request, Reviewer Is No Longer Able to Use the Link to Access the Documents: EAES-3581</h4>
+        <p>The reviewer passcode link for external requests is failing to allow the reviewer to again view documents.</p>
+        <h4>Exception Messages Thrown by Rules Aren't Being Cleared When Text Input Changes: EAES-3698</h4>
+        <p>In the Admin App, when creating a rule set that results in an exception message, the message is not being cleared even after a valid input is provided.</p>
+        <h4>Google Address AutoComplete Validation Messages Are Not Displayed as Expected: PC-2380</h4>
+        <p>When validation messages are displayed, the message on the Address AutoComplete field overlaps the field label.</p>
+        <p>***Please note that the JIRA ticket numbers are provided for reference. JIRA tickets are not accessible to users outside Hexure.***</p>
+        <p data-mc-conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

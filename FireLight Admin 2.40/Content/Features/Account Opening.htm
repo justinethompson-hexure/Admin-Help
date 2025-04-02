@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Description and instructions for setup and usage of the pre-sale Account Opening activity." />
+    </head>
+    <body>
+        <h1><a name="top"></a>Account Opening Activity</h1>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Account Opening Activity</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>The Account Opening activity allows users to create a pre-sale account. Account Opening is a submitted activity separate from other activity types (e.g., application, illustration, etc.) for reporting and downstream processing.  Account Opening has its own Post Over  to send users directly into the Account Opening activity or users can click Account Opening on the FireLight Home page.  The initial Account Opening screen includes the Jurisdiction list and Custodian list (if more than one Custodian exists).  Account Opening has its own output file for downstream processing.  The Account Opening activity can be used as a launch point into other supported FireLight activities, but the Account Opening, because it was submitted, cannot be edited once complete. Account Opening activities have their own transactions within the Reports.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">FireLight Setup</p>
+                        <p>Contact your Strategic Account Manager to create an addendum to the contract to support this new Account Opening activity type and accept the small transaction fees.</p>
+                        <p>If the organization would like to have the Account Opening activities included in application packages with the ability to print and view account opening PDF documents from the application package, have the FireLight team add a DocType of Account Opening with a Document Tag of AccountOpening to the organization's list profile. Then add an Account Opening template form to the applicable application packages.  If a template is not added, the document is visible only by viewing it in Other Actions/Documents and would then be included last in the final document package for submission to the provider.</p>
+                        <p><b class="Bold">NOTE:</b> Needs determination documents are attached as NeedsDetermination document tags, illustration as LinkedIllustration, and Account Opening documents as AccountOpening. All other attached documents coming from one activity to the next activity will come over as a document tag of Other.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <ol>
+                            <li>Design/Form Library or Wizard Library page: upload the account opening form or create a wizard, enter details, and select the approved states. Add an account opening template form with a signature control with the Document Tag set to Account Opening.</li>
+                            <li>Product Configuration/Rule Sets page: add or update a rule set with rules for the account opening form or wizard.</li>
+                            <li>Product Configuration/Activities page:&#160;select<b class="Bold"> Account Opening</b> in the grid or add an Account Opening activity. Ensure <b class="Bold">ACORD Type</b> is set to <b class="Bold">Account Opening (106)</b>. Verify the other settings on the page. See <MadCap:xref href="../Product Configuration/Activities.htm">Activities</MadCap:xref> for detailed information.</li>
+                            <li>Product Configuration/Products page: add a new account opening product and select the <strong>Product Type</strong>. Because FireLight requires a product in the setup and it does not apply to Account Opening, we recommend that you set <b>Product Type</b> to <b>Non-Insurance Product</b> and, if available, set <strong>Product Category</strong> to <b>Non-Insurance Product</b>.</li>
+                            <li>Product Configuration/Packages page: add a new account opening package for the account opening form/wizard and set <strong>ACORD Type</strong> to <strong>Account Opening</strong>. On the Forms/Wizards in Package tab, add the account opening form/wizard to the account opening package and set the inclusion option to <strong>Required</strong>. On the Rule Sets in Package tab, add the rule set for the account opening form/wizard.</li>
+                            <li>Product Configuration/Sales Agreements page: add a sales agreement for account opening. Enter details, select the approved states, add the account opening package to Assigned Packages, and set <strong>Package Duty</strong> to <strong>Required</strong>.</li>
+                            <li>Organization Configuration/Groups page: select the <b>Account Opening</b> checkbox on the <strong>Activity Access</strong> tab and select the <strong>Account Opening</strong> checkbox on the <strong>Product Access</strong> tab for the applicable role codes.</li>
+                            <li>Deploy forms/wizards, product configurations, and organization configurations using the Utilities/Deployments page. See <MadCap:xref href="../Utilities/Deployments/Deploy Data.htm" alt="Deploy Data">Deploy Data</MadCap:xref> for instructions.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <ol>
+                            <li>
+                                <p>Start a new Account Opening activity in FireLight via post-over or from the Home page.</p>
+                                <ul>
+                                    <li>FireLight accepts a new ACORD TransType of 106 for an account opening. You can also pass a New Business Policy Number Submission OLI_TRANS_NBPOLNUM. Upon receiving this value in the SSO, FireLight puts the user in the account opening activity.</li>
+                                    <li>On the FireLight Home page under <strong>Start New</strong> or on the navigation bar under <strong>New Activity</strong>, click <strong>Account Opening</strong>.</li>
+                                </ul>
+                            </li>
+                            <li>On the Create New Account Opening page, select a <strong>Jurisdiction</strong> and <strong>Custodian</strong> in the lists, then click or tap an account opening. (The Custodian list will not appear if only one Custodian exists.)</li>
+                            <li>On the Required Forms page, click <strong>Create</strong>. In the Create dialog, edit the <strong>Name</strong> for the Account Opening, select an option from the <strong>On Behalf of</strong> list if applicable, and click <strong>Create</strong>.</li>
+                            <li>Fill in the information on the new account form or wizard. When Data Entry reaches 100%, click <strong>CONTINUE</strong>.</li>
+                            <li>
+                                <p>If signatures are required: on the Electronic Signatures page, click a signing option: <strong>Use E-Signature</strong> to sign the forms electronically or <strong>Decline E-Signature</strong> to wet sign paper forms.</p>
+                                <p>If using e-signature: in the List of Required Signers, select a signer type and click <strong>Sign Now</strong> to sign the account opening on this device or click <strong>Send Email Request</strong> to have the user sign later using another device. Repeat until all signer types have signed the forms.</p>
+                            </li>
+                            <li>Submit the account opening.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help  – Design Document: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 170065 </MadCap:conditionalText><a href="../Resources/DesignDocs/170065 Account Opening.pdf" target="_blank" title="CMR 170065" alt="CMR 170065" MadCap:conditions="General.Online">CMR 170065</a></p>
+                        <p>User Guide  –  <em>FireLight Platform User Guide</em>, New Activity section, <MadCap:conditionalText MadCap:conditions="General.PDF">"Account Opening" </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../UserGuide/New Activity/Account Opening.htm" alt="Account Opening">Account Opening [User Instructions]</MadCap:xref> </MadCap:conditionalText>topic </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

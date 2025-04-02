@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <strong>Enable Custom Submit Page</strong> checkbox to enable a custom submit page by role code. When enabled, the client is directed to a custom page after submission that can be branded by organization. Enable Custom Submit Page option and Enable HTTP Redirect on Submit option cannot both be selected at the same time.</body>
+</html>

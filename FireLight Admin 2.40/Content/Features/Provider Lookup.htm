@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Setup and usage instructions for integration with the National Provider Identifier Standard (NPIS) database for searching for a specific health care provider or office inside FireLight via a button or custom action using the existing CRM functionality to pre-fill the provider data into the associated fields." />
+    </head>
+    <body>
+        <h1><a name="top"></a>Provider Lookup - NPIS Integration</h1>
+        <p class="note"><b class="Bold">Spotlight Video:</b> See <a href="https://vimeo.com/330088465/a7229929aa" target="_blank" title="FireLight Address Autocomplete, Address Validation, and Dr. Lookup" alt="FireLight Address Autocomplete, Address Validation, and Dr. Lookup">Address Autocomplete, Address Validation, and Dr. Lookup</a> for a Spotlight feature video about Dr. Lookup.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Provider Lookup - NPIS Integration</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;">
+            </col>
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>This feature integrates FireLight<sup>®</sup> with the National Provider Identifier Standard (NPIS) database for searching for a specific health care provider or office inside FireLight via a button or custom action using the existing CRM functionality to pre-fill the provider data into the associated fields. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p>(See <MadCap:xref href="../Design/Forms/Add Multiple Copies of a Form.htm" alt="Add Multiple Copies of a Form">Add Multiple Copies of a Form</MadCap:xref> for use on multiple-instance forms.)</p>
+                        <ol>
+                            <li>
+                                <p>Designer/Form Designer or Designer/Wizard Designer: </p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>Add a Button (forms) or a Custom Action (wizards) to a form or wizard.</li>
+                                    <li>
+                                        <p>Set the following Button or Custom Action Properties: </p>
+                                        <ul>
+                                            <li><b class="Bold">Data Group</b> - select <b class="Bold">Provider</b> or <b class="Bold">Provider 2</b> as applicable.</li>
+                                            <li><b class="Bold">Custom Action</b> - select <b class="Bold">CRM</b>.</li>
+                                            <li><b class="Bold">CRM Type</b> - select <b class="Bold">NPIS</b>.</li>
+                                        </ul>
+                                    </li>
+                                    <li>Click <b class="Bold">OK</b> to save the Button or Custom Action.</li>
+                                    <li>
+                                        <p>In the field Properties for all of the associated fields, set <b class="Bold">Data Group</b> to <b class="Bold">Provider</b> or <b class="Bold">Provider 2</b> as applicable and set the <b class="Bold">Data Group Property</b> to the applicable field (e.g., BusinessName, FirstName, LastName, BusinessName, Occupation, etc.).</p>
+                                        <p>Common tags for mapping on the forms and wizards are:</p>
+                                        <p>Provider_FirstName</p>
+                                        <p>Provider_MiddleName</p>
+                                        <p>Provider_LastName</p>
+                                        <p>Provider_BusinessName</p>
+                                        <p>Provider_Gender</p>
+                                        <p>Provider_MailingAddress1</p>
+                                        <p>Provider_MailingAddress2</p>
+                                        <p>Provider_MailingAddress_City</p>
+                                        <p>Provider_MailingAddress_State</p>
+                                        <p>Provider_MailingAddress_Zipcode</p>
+                                        <p>Provider_Business_PhoneNumber</p>
+                                        <p>Provider_Occupation</p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>Deploy: Deploy the forms/wizards changes to the applicable environments.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">User Experience</p>
+                        <ol>
+                            <li>Create a new activity that includes the provider lookup button or custom action for the NPIS CRM.</li>
+                            <li>Click the provider lookup button, enter a full or partial provider last name or business name in <b class="Bold">My Contacts</b>, select a <b class="Bold">State</b> in the list, and click the search button.</li>
+                            <li>In the results list on the left, click a provider name to view the provider information on the right.</li>
+                            <li>Click the <b class="Bold">Select</b> button to pre-fill the data into the associated provider information fields on the form or wizard.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help – Design Document:<MadCap:conditionalText MadCap:conditions="General.PDF"> CMR 190009</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online">CMR 190009</MadCap:conditionalText></p>
+                        <p>Spotlight Feature Video – <a href="https://vimeo.com/330088465/a7229929aa" target="_blank" title="FireLight Address Autocomplete, Address Validation, and Dr. Lookup" alt="FireLight Address Autocomplete, Address Validation, and Dr. Lookup">Address Autocomplete, Address Validation, and Dr. Lookup</a></p>
+                        <p class="hangingindent">User Guide – <em>FireLight Platform User Guide</em>, New Activity section, Data Entry Step, <MadCap:conditionalText MadCap:conditions="General.PDF">"Action Buttons" </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../UserGuide/New Activity/Data Entry/Action Buttons.htm" alt="Action Buttons">Action Buttons [User Instructions]</MadCap:xref> </MadCap:conditionalText>topic, see "Example: Provider Lookup (Form View)"</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

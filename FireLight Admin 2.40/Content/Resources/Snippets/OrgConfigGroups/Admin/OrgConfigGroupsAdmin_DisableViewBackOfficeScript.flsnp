@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable View Back Office Script</b> checkbox to disable the Back Office Script tab. The Back Office Script tab in the <MadCap:xref href="../../../../Product Configuration/SalesAgreements.htm" target="_blank" alt="Sales Agreements">Sales Agreements</MadCap:xref> page will not be visible.  The user will not be able to add or modify the script rule used to submit an application to the back office provider.</body>
+</html>

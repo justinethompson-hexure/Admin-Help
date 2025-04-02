@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This new feature is a system wide implementation to show signatures on the Addendum document. All the signature fields placed on a form will also be shown at the bottom left of the last page of the Addendum document.</p>
+        <p>Impacts:</p>
+        <ol>
+            <li>
+                <p>FL App -&gt; Activity -&gt; Other Actions -&gt; Display/Print PDF: Signature(s) and signed date is stamped on Addendum document same as the original form.</p>
+            </li>
+            <li>
+                <p>FL App -&gt; Activity -&gt; Signatures: Addendum document will also be presented for signature along with its form.</p>
+            </li>
+            <li>
+                <p>FL App -&gt; Review Queue: Links "Application History" and "Audit Report" will show audit history of signatures on addendum document similar to other forms at the time of signing ceremony.</p>
+            </li>
+            <li>
+                <p>Addendum pages: Potential for additional addendum pages if the signatures do not fit on the original addendum document.</p>
+            </li>
+        </ol>
+    </body>
+</html>

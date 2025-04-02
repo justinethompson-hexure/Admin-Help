@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultVariableSet>
+  <Variable
+    Comment=""
+    Name="CompanyName"
+    EvaluatedDefinition="Hexure">Hexure</Variable>
+  <Variable
+    Comment=""
+    Name="PhoneNumber">719.442.6400</Variable>
+  <Variable
+    Name="StreetAddress"
+    Comment=""
+    Definition="Some text"
+    OriginalName="StreetAddress">Two South Cascade Ave.</Variable>
+  <Variable
+    Name="ProductName"
+    Comment=""
+    OriginalName="ProductName">FireLight</Variable>
+  <Variable
+    Name="Fax"
+    Comment=""
+    OriginalName="Fax">719.442.0600</Variable>
+  <Variable
+    Name="CityStateZip"
+    Comment=""
+    Definition="Some text">Colorado Springs, CO 80903</Variable>
+  <Variable
+    Name="UserGuideTitle"
+    Comment=""
+    EvaluatedDefinition="FireLight Getting Started Guide">FireLight Getting Started Guide</Variable>
+  <Variable
+    Name="Year"
+    OriginalName="Year"
+    EvaluatedDefinition="2025">2025</Variable>
+  <Variable
+    Name="DocumentName"
+    Comment=""
+    EvaluatedDefinition="FireLight Getting Started Guide">FireLight Getting Started Guide</Variable>
+  <Variable
+    Name="PlatformUserGuideTitle"
+    Comment=""
+    EvaluatedDefinition="FireLight Getting Started Guide">FireLight Getting Started Guide</Variable>
+</CatapultVariableSet>

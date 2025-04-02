@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Within an activity on the <b class="Bold">Other Actions</b> menu, click <b class="Bold">Copy Activity</b> to make a copy of the open activity. Enter a new name for the copy of the activity and click <b class="Bold">OK</b> on the Copy Activity dialog for the applicable activity. The copy is saved to the <MadCap:xref href="../../UserGuide/FireLight Basics/Recent Activity.htm" target="_blank" alt="Recent Activity" title="Recent Activity">Recent Activity [User Instructions]</MadCap:xref> list on the Home page and to the <MadCap:xref href="../../UserGuide/All Activities/All Activities.htm" target="_blank" alt="All Activities" title="All Activities">All Activities [User Instructions]</MadCap:xref> page.</p>
+        <p>
+            <img src="../ImagesUserGuide/New Activity/Capture239.png" alt="Save as Application dialog" title="Save as Application dialog" />
+        </p>
+        <p><b>Note</b>: For any activity with an expired sales agreement, the Copy option will either be disabled or hidden, and you will be unable to copy the activity.</p>
+    </body>
+</html>

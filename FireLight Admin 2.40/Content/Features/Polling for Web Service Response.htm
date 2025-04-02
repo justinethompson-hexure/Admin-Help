@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Setup and usage instrucitons for adding the ability for FireLight® to poll a web service until a response can be retrieved.  FireLight can call out to a web service at any defined interval to attempt to receive a response, which allows the user to continue on within FireLight while the call out is running in the background." />
+    </head>
+    <body>
+        <h1><a name="top"></a>Polling for Web Service Response</h1>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Polling for Web Service Response</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>Some web service calls can take several days to process an order. This feature provides the ability for FireLight<sup>®</sup> to poll the web service until a response can be retrieved.  FireLight can call out to a web service at any defined interval to attempt to receive a response, which allows the user to continue on within FireLight while the call out is running in the background. </p>
+                        <p>An example user experience is when an application has a requirement for life insurance, but the application requires underwriting from an external service that can take days to complete. You could set up a polling process so that once the result comes back from underwriting, the custom PDF from the web service call can be saved to an activity's Additional Documents listing,  and then proceed to the signature process.</p>
+                        <p>When a call has been placed that requires polling, there is a toast in data entry that is customizable in the provider communicating that they may continue with their application and the display status is changed to "Pending Response" (a sub-status of Data Entry). FireLight allows a single async action call running per application.</p>
+                        <p>Once a response is sent back to FireLight, there is another toast in data entry that is customizable in the provider communicating next steps. A message is sent in the message center, which allows an email to be sent  if the agent has the "Send Message Center Emails" checkbox selected in Preferences, and the display status changes to "Response Received" (a sub-status of Data Entry).</p>
+                        <p>Only one async action can be run at a time in FireLight.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">FireLight Setup</p>
+                        <p>Contact your Strategic Account Manager to arrange for the integration/provider work needed to implement this feature.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p>In Designer/Form Designer or Wizard Designer:</p>
+                        <ol>
+                            <li>
+                                <p>Add a radio button or checkbox field to the form or wizard and set the Export Value to "true." Save the form or wizard.</p>
+                                <p>Example Radio Button Setup:</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/Capture38.png" alt="Radio Button for asynchCheck" title="Radio Button for asynchCheck" MadCap:conditions="General.Online" /> </p>
+                            </li>
+                            <li>
+                                <p>Open  the Rules Window and ensure a rule is set up  to call the async process for the form or wizard. Save the Rule Set.</p>
+                                <p>Sample Rule to Call the Async Process:</p>
+                                <p>&lt;block&gt;</p>
+                                <p class="Indent">&lt;callasyncaction name="TestAsyncCall" frequency="4" expires="15" sendnotification=”true” message=”Default Message” save="true" /&gt;</p>
+                                <p>&lt;/block&gt;</p>
+                                <p><b class="Bold">NOTE:</b> See  <a href="../Product Configuration/Rule Sets/AdvancedRulesCategoryElementDefinitionsReference.htm#%7Ccallasyncaction" target="_blank" alt="|callasyncaction">|callasyncaction</a> in the "Advanced Rules Category and Element Definitions Reference" topic.</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <ol>
+                            <li>
+                                <p>Open an activity and fill in the required field information for the forms/wizards. </p>
+                                <p>The provider initiates the call for polling the web service. The data entry display status shows "Pending Response." While the activity is in Pending Response status, the Continue button is disabled for this activity. However, you can continue working in FireLight. The polling continues regardless of whether you are still in the activity in which the polling was initiated.</p>
+                            </li>
+                            <li>When  FireLight receives the web service response, the data entry display status changes to "Response Received." This message can be customized in the provider. </li>
+                            <li>If you have the Send Message Center Emails option enabled in Preferences, you receive a message in the message center when the web polling process has completed unless it is overridden by the provider, in which case it displays the provider message.</li>
+                            <li>Open the activity. The form will automatically populate any relevant fields, then display a pop-up message. </li>
+                            <li>Save the changes. If the app changes are discarded, the entire polling process must be started over.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows" MadCap:conditions="">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help – Design Document: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 200676</MadCap:conditionalText><a href="../Resources/DesignDocs/200676 Ability to Poll Web Services .pdf" target="_blank" title="CMR200676" alt="CMR200676" MadCap:conditions="General.Online">CMR200676</a> </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

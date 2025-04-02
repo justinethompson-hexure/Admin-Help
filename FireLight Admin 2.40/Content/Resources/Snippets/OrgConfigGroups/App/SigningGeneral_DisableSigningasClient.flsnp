@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable Signing as Client</b> checkbox to disable access to signing as a Client. Client signers is disabled in the list of required signers. Use this option to control when a client is able to electronically sign based on different group role codes. For example, you may have a workflow where a wet signature is required for a specific set of users. Set up a group and select the <b class="Bold">Disable Signing as Client</b> option. Set up another group for users allowed to electronically sign the activities and do not select the <b class="Bold">Disable Signing as Client</b> option.</body>
+</html>

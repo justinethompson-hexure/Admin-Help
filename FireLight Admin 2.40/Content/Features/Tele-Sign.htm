@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Setup and usage instructions for integration with Interactive Voice Response (IVR) providers  to add Tele-Sign as an option within FireLight to satisfy client signature requirements without requiring email services. " />
+    </head>
+    <body>
+        <h1><a name="top"></a>Tele-Sign</h1>
+        <p class="note"><b class="Bold">Spotlight Video:</b> See <a href="https://vimeo.com/406913699/f9b3ec9a55" target="_blank" title="FireLight Telesign Enhancements" alt="FireLight Telesign Enhancements">TeleSign Enhancements</a> for a Spotlight feature video about Tele-Sign.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Tele-Sign</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 765px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>FireLight<sup>®</sup> provides support for integration with Interactive Voice Response (IVR) providers  to add Tele-Sign as an option within FireLight to satisfy client signature requirements without requiring email services. This is especially useful when applications are taken over the phone and clients do not have access to email.</p>
+                        <p>For clients that enable Tele-Sign, there are minor impacts to the FireLight UI, Admin tool, and the Audit Report. Implementing this feature will require an integration with an IVR platform.</p>
+                        <p>Two new web service calls are created. The first verifies the identity of the Applicant/Payor entered in FireLight and is executed by a REST based call/response to validate inputs provided by the client when they initiate the IVR phone call. This web service is initiated by the IVR service. The second web service call is also initiated by the IVR service and provides the status of the signature request to FireLight. Upon receiving the completion web service call, FireLight applies a new “TeleSigned by: xx” signature stamp in the application.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Tele-Sign Setup</p>
+                        <p>Client organizations contract directly with the Interactive Voice Response (IVR) provider for Tele-Sign capability.</p>
+                        <p> Contact your Strategic Account Manager for the FireLight API setup work.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p><b class="DRNumberBold">Organization Configuration/Tele-Sign Scripts page:</b>
+                        </p>
+                        <p>Add the Tele-Sign scripts:</p>
+                        <MadCap:snippetBlock src="../Resources/Snippets/Signatures/TeleSignScriptAdd.flsnp" />
+                        <p>Sample Tele-Sign Script in HTML:</p>
+                        <MadCap:codeSnippet>
+                            <MadCap:codeSnippetCopyButton />
+                            <MadCap:codeSnippetCaption>
+                                <p>Sample Tele-Sign Script in HTML</p>
+                            </MadCap:codeSnippetCaption>
+                            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: HTML;">&lt;div style="margin: 10px; padding: 10px; border: 1px grey solid"&gt;
+    &lt;h2&gt;Tele-Sign Instructions - Term Product #1&lt;/h2&gt;
+    &lt;br /&gt;
+    &lt;br /&gt;&lt;div style="margin: 10px; padding: 10px; border: 1px grey solid"&gt;
+    &lt;h2&gt;Tele-Sign Instructions - Term Product #1&lt;/h2&gt;
+    &lt;br /&gt;
+    &lt;br /&gt;
+    &lt;p&gt;Please follow these instructions in order to complete the Tele-Sign process.
+    &lt;p style="margin-left: 20px;"&gt;
+        1. Please call &lt;b&gt;888-888-8888&lt;/b&gt;.
+        &lt;br /&gt;
+        2. When asked for the application ID, enter the code &lt;b&gt;|FLI_TELESIGN_APP_ID|&lt;/b&gt;.
+        &lt;br /&gt;
+        3. When asked for your date of birth, please enter &lt;b&gt;|FLI_TELESIGN_DOB|&lt;/b&gt;.
+        &lt;br /&gt;
+        4. Enter the PIN &lt;b&gt;|FLI_TELESIGN_PIN|&lt;/b&gt;.
+        &lt;br /&gt;
+        5. Complete the signing process.
+    &lt;/p&gt;
+&lt;/div&gt;</MadCap:codeSnippetBody>
+                        </MadCap:codeSnippet>
+                        <p><b class="DRNumberBold">Organization Configuration/Groups, <MadCap:xref href="../Organization Configuration/Groups/App.htm" alt="App">App</MadCap:xref> tab:</b>
+                        </p>
+                        <ol>
+                            <li>
+                                <p>In the <b class="Bold">Signing: Tele-Sign</b> section, grant access to each user group that will have access to Tele-Sign.</p>
+                                <ul>
+                                    <li>
+                                        <p>Select the <b class="Bold">Enable Tele-Sign</b> checkbox to enable the Tele-Sign feature.</p>
+                                    </li>
+                                    <li>Select the <b class="Bold">Enable Tele-Sign Email Link</b> checkbox to enable the ability for users to select to send the <MadCap:conditionalText MadCap:conditions="General.PDF">"Tele-Sign Document Delivery" </MadCap:conditionalText><MadCap:xref href="../Organization Configuration/Email/Activities/Tele-Sign Document Delivery.htm" MadCap:conditions="General.Online" alt="Tele-Sign Document Delivery">Tele-Sign Document Delivery</MadCap:xref> email to the client to view and download the Tele-Sign PDF forms. The signer will need to verify the last 4 digits of their ID and their Birth Date to view and download the PDF documents.</li>
+                                    <li>
+                                        <p>Select the <b class="Bold">Enable Tele-Sign Download Forms</b> checkbox to enable and show the Download Forms button to users for downloading Tele-Sign PDF forms for mailing to the signer. </p>
+                                    </li>
+                                    <li>
+                                        <p>Select the <b class="Bold">Enable Tele-Sign Generate Link</b> checkbox to enable and show the Generate Link button to users. The Generate link process creates a URL link that a signer can open to access the PDF forms. The signer will need to verify the last 4 digits of their ID and their Birth Date to view and download the PDF forms.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Allow a single signer to sign for multiple signer types. When a form has signature fields for multiple signer types (e.g., Insured and Owner are the same person), under <b class="Bold">Signing: General</b>, select the <b class="Bold">Enable Single User to Sign Multi Signer Types</b> checkbox. Tele-Sign requires only one signature capture for the non-agent signer types.</li>
+                        </ol>
+                        <p><b class="DRNumberBold">Designer/Form Designer or Wizard Designer page:</b>
+                        </p>
+                        <p>
+                            <p>Add the following four data items to the form or wizard (either as fields or set them via a rule):</p>
+                            <ul>
+                                <li>
+                                    <p>FLI_ENABLE_TELESIGN – set this to True if you want the Tele-Sign option to be available.</p>
+                                </li>
+                                <li>
+                                    <p>FLI_TELESIGN_APP_ID – set this to any number (recommended at least 4 digits – must be unique per application).</p>
+                                </li>
+                                <li>
+                                    <p>FLI_TELESIGN_PIN – set this to any 4-digit number (does not need to be unique).</p>
+                                </li>
+                                <li>
+                                    <p>FLI_TELESIGN_DOB – set this to the signer's birth date.</p>
+                                </li>
+                            </ul>
+                            <p><b class="DRNumberBold">Product Configuration/Sales Agreements page:</b>
+                            </p>
+                            <p>Select the Tele-Sign scripts for the applicable products in the sales agreements.</p>
+                            <ol>
+                                <li>In the grid at the top of the page, select a product that will use Tele-Sign.</li>
+                                <li>On the lower left, click the <b class="Bold">Options</b> tab.</li>
+                                <li>In the <b class="Bold">Tele-Sign Script</b> list, select the Tele-Sign script for the selected product.</li>
+                                <li>Click <b class="Bold">Save Sales Agreement</b>.</li>
+                            </ol>
+                            <p><b class="DRNumberBold">Utilities/Deployments page:</b>
+                            </p>
+                            <ol>
+                                <li>In <b class="Bold">Synchronization Scope</b>, select the <b class="Bold">Tele-Sign Script Configuration</b> scope.</li>
+                                <li>Type a <b class="Bold">Reason</b> for the deployment.</li>
+                                <li>In the grid, select the checkboxes for the Tele-Sign products to deploy.</li>
+                                <li>On the right, click <b class="Bold">Deploy Now</b> or schedule a deployment to deploy the Tele-Sign scripts into the next environment. (There are no Distributor Only or Carrier Only versions of the Tele-Sign Script Configuration.)</li>
+                                <li>In <b class="Bold">Synchronization Scope</b>, select the applicable <b class="Bold">All Configuration</b> scope to deploy the updated Sales Agreements.</li>
+                                <li>Type a <b class="Bold">Reason</b> for the deployment.</li>
+                                <li>In the grid, select the checkboxes for the Tele-Sign products Sales Agreements to deploy.</li>
+                                <li>On the right, click <b class="Bold">Deploy Now</b> or schedule a deployment.</li>
+                            </ol>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <ol>
+                            <li>Create a new application (using a form containing the Text Box fields listed above).</li>
+                            <li>Enter appropriate Tele-Sign data into the four fields listed above.</li>
+                            <li>Complete data entry on the application.</li>
+                            <li>Click <b class="Bold">Continue</b>.</li>
+                            <li>Click <b class="Bold">Use E-Signature</b>.</li>
+                            <li>In the List of Required Signers, select the non-agent signer. Only one non-agent signer can sign using Tele-Sign. If the organization has Enable Single User to Sign Multi Signer Types option enabled, and the application has more than one signer type  (e.g., Insured and Owner), and both signer types are the same person, select both signer types for Tele-Sign to work.  </li>
+                            <li>On the Client Signature Choice page, click the <b class="Bold">Tele-Sign</b> button on the right (this button will not be available unless Enable Tele-Sign is selected in Group options and FLI_ENABLE_TELESIGN data item is set to True on the form).</li>
+                            <li>On the Tele-Sign: Signer Information page, fill in the Signer Information at the top of the page (<b class="Bold">Signer Full Name</b>, <b class="Bold">City</b>, and <b class="Bold">State</b>). At the bottom of the page, fill in the <b class="Bold">Signer Email</b>, <b class="Bold">Signer Birth Date</b> and <b class="Bold">Signer Last 4 Digits of SSN/Government ID</b> to have an email with a link to the signed documents be sent to the signer after the signature is completed. Click <b>Continue</b>.</li>
+                            <li>
+                                <p>On the Tele-Sign: Form Access page, select a <b class="Bold">Delivery Type</b> in the list (Download, Generate Link, or Send via Email). </p>
+                                <p><b class="Bold">NOTE:</b> If any of the following delivery options are disabled for the user's role, the disabled options do not appear in the list. You do not need to select one of these options to complete Tele-Sign.</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>	Download a copy of the application forms: In the <b class="Bold">Delivery Type</b> list, click <b class="Bold">Download</b>. Print the forms and provide the printed forms to the client via mail or other form of delivery.</li>
+                                    <li>
+                                        <p>Generate  a URL link to give to a signer so they can view the application PDF online:</p>
+                                        <ol style="list-style-type: lower-roman;">
+                                            <li> In the <b class="Bold">Delivery Type</b> list, click <b class="Bold">Generate Link</b>. </li>
+                                            <li>Enter the <b class="Bold">Last 4 Digits of SSN/Government ID</b>, enter  the <b class="Bold">Signer Birth Date</b> in mm/dd/yyyy format (with slashes), and click <b class="Bold">Generate Link</b>.</li>
+                                            <li>Provide the link to the signer so they can access the application PDF.  </li>
+                                            <li> The signer goes to the URL in a web browser,  enters their <b class="Bold">Last 4 Digits of SSN/Government ID</b> and their <b class="Bold">Birth Date</b> to view the application in PDF format. </li>
+                                            <li>The signer uses the PDF viewer controls to download and print the PDF file. </li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <p>Send an email to the client signer to access the PDF forms:</p>
+                                        <ol style="list-style-type: lower-roman;">
+                                            <li> In the <b class="Bold">Delivery Type</b> list, click <b class="Bold">Send via Email</b>.</li>
+                                            <li>Enter the <b class="Bold">Signer Name</b>, <b class="Bold">Signer Email</b>, <b class="Bold">Signer Last 4 Digits of SSN Government ID</b>, and <b class="Bold">Signer Birth Date</b>.</li>
+                                            <li>Click <b class="Bold">Send Email</b>.</li>
+                                            <li>The client receives an email and clicks the URL link in the email to go to the URL in a web browser. Client enters <b class="Bold">Last 4 Digits of SSN/Government ID</b> and their <b class="Bold">Birth Date</b> to view and download the PDF application documents. </li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>Click <b class="Bold">Continue</b>.</li>
+                            <li>Read the Tele-Sign script and follow the instructions to verify the signer’s identity and gain their Tele-Sign voice signature.</li>
+                            <li>
+                                <p>OPTIONAL: Click the <b class="Bold">Cancel Tele-Sign</b> button to clear the signature and start over.</p>
+                            </li>
+                            <li>
+                                <p>Click the <b class="Bold">Done </b>button to continue. </p>
+                                <ul>
+                                    <li> If the Tele-Sign signature was completed but declined,  FireLight returns to the application in Data Entry mode.</li>
+                                    <li>
+                                        <p>If the signature has not yet been completed, FireLight returns to the List of Required Signers page. A "(Tele-Sign in Progress)" indicator appears next to the client signature name for any signer types using Tele-Sign. </p>
+                                        <ul style="list-style-type: circle;">
+                                            <li>To return to the Agent Instructions page, click the client Tele-Sign signature button. Click <b class="Bold">Done</b> on the Agent Instructions page to return to the List of Required Signers page.</li>
+                                            <li>To cancel a Tele-Sign signature capture, click the <b class="Bold">Cancel Tele-Sign</b> link under the client signer name and click <b class="Bold">OK</b> on the confirmation dialog.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p> If the Tele-Sign signature was completed and approved, FireLight returns to the application view to complete the review process if Review is enabled. If Review is not enabled,  the application returns to the List of Required Signers if additional signatures need to be collected, or the application can be submitted either manually or automatically if the Enable Auto-Submit option is enabled on the Organization Configuration/Groups page, App tab.</p>
+                                        <p><b class="Bold">NOTE:</b> The Agent can sign in a default order, first or last, depending on what is set in the Agent Signing Order list in Organization Configuration/Organization Settings page on the <MadCap:xref href="../Organization Configuration/Organizations/Signature.htm" alt="Signature">Signature</MadCap:xref> tab.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>FireLight sends a message center notification that specifies either an approved or declined signature.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows" MadCap:conditions="">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information</p>
+                        <p class="hangingindent">Admin Help: <MadCap:conditionalText MadCap:conditions="General.PDF">CMRs 212392 (current), 210208 (previous), 199377 (original)</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/DesignDocs/Tele-Sign Enhancements 2.17 April.pdf" target="_blank" title="CMR 212392" alt="CMR 212392">CMR 212392</a> (current), CMR 201208 (previous), <a href="../Resources/DesignDocs/199377 Tele-Sign.pdf" target="_blank" title="CMR 199377 (original)" alt="CMR 199377 (original)" MadCap:conditions="General.Online">CMR 199377 (original)</a></MadCap:conditionalText></p>
+                        <p>Spotlight Feature Video  – <a href="https://vimeo.com/406913699/f9b3ec9a55" target="_blank" title="FireLight Telesign Enhancements" alt="FireLight Telesign Enhancements">TeleSign Enhancements</a></p>
+                        <p class="hangingindent">User Guide  – <em>FireLight Platform User Guide</em>, New Activity section, Signatures Step,  "Tele-Sign" optional feature in <MadCap:conditionalText MadCap:conditions="General.PDF">"Client Signature" </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"> in <MadCap:xref href="../UserGuide/New Activity/Signatures/Client Signature.htm" alt="Client Signature">Client Signature [User Instructions]</MadCap:xref> </MadCap:conditionalText> topic</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:pageBreak />
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

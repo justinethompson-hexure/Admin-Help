@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <ol>
+            <li>On the left under <b>Add Control to Form</b>, click <b>Label</b>.</li>
+            <li>Drag the control from the upper left of the form to an applicable location on the form.</li>
+            <li>
+                <p>On the left under <b>Input Control</b>, click <b>Field Properties</b>.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../ImagesAdmin/LabelControl.jpg" alt="Label Control and Field Properties" title="Label Control and Field Properties" MadCap:conditions="General.Online" class="Thumbnail" />
+                </p>
+            </li>
+            <li>
+                <p>Enter or change settings in Field Properties.</p>
+                <p>
+                    <b>Name </b> – type a tag name for the field. Tag naming is crucial for correctly identifying the fields within the form.</p>
+                <p>
+                    <b>Top, Left </b> – type the top and left alignment in pixels.</p>
+                <p>
+                    <b>Width, Height </b> – type the width and height of the field in pixels.</p>
+                <p>
+                    <b>Font Size </b> – type the font size for the field if different from the default.</p>
+                <p>
+                    <b>Font Family </b> – select the font family for the field if different from the default.</p>
+                <p>
+                    <b>Font Color </b> – select the font color for the field if different from the default.</p>
+                <p>
+                    <b>Text Alignment </b> – set the text alignment to Left, Center, or Right.</p>
+                <p>
+                    <b>Background </b> – select a transparent or white background for the text box. <b>Transparent</b> sets the background to transparent. <b>White</b> sets the background to white.</p>
+                <p>
+                    <b>Text </b> – type the label text between the asterisks (*Label*). To use the label control as a hyperlink, type the text for the hyperlink in this <b>Text</b> field and type the URL for the hyperlink in the <b>Url</b> field. The URL is encoded behind the scenes and will display as an active hyperlink on the form in <MadCap:variable name="General.ProductName" />.  </p>
+                <p>
+                    <b>Url </b> – type the URL for the hyperlink, if applicable. Type the display text for the hyperlink in the <b>Text</b> field.</p>
+                <p MadCap:conditions="General.Online" class="Indent">
+                    <img src="../../ImagesAdmin/AddControl-Label2.jpg" alt="Label Control with Hyperlink" title="Label Control with Hyperlink" MadCap:conditions="General.Online" />
+                </p>
+                <p>
+                    <b>Protection </b>
+                </p>
+                <MadCap:snippetBlock src="ProtectionFieldPpty.flsnp" />
+                <p>
+                    <b>Data Group </b> – in the list, select a Data Group if this control is associated with a Data Group. <b>NOTE:</b> Data Group is used with a Button control. See “Button” for instructions.</p>
+                <p>
+                    <b>Custom List </b> – in the list, select a Custom List if this control is associated with a Custom List Data Group. <b>NOTE:</b> Custom List is used with a Button control. See “Button” for instructions.</p>
+                <p>
+                    <b>Data Group Property </b> – in the list, select a Data Group Property  if this control is associated with a Data Group. <b>NOTE:</b> Data Group Property is used with a Button control. See “Button” for instructions.</p>
+                <p>
+                    <b>Global Scope </b> – select the checkbox to set the input control for global use of a control that is added to a form more than once.</p>
+                <p>
+                    <MadCap:expanding>
+                        <MadCap:expandingHead>
+                            <b>Exclude from PDF </b>
+                        </MadCap:expandingHead>
+                        <MadCap:expandingBody> – this property is selected by default.  When this checkbox is selected, the control does not appear on the printed or submitted form.</MadCap:expandingBody>
+                    </MadCap:expanding>
+                </p>
+                <p>
+                    <b>Office Use Only </b>  – select the checkbox if this field is required and  the field must be filled by the agent before a Client Fill and Sign request can be sent. In FireLight, the Form Entry will list the pages that contain Office Use Only fields with blue. When these fields are completed, the option for Client Fill and Sign will become available on the Other Actions menu.&#160; </p>
+                <p>
+                    <b>Z Order </b>   – click a button to set the display order when two input controls are used together; for example, when a Label control is layered with a Text Box control. </p>
+                <p class="Indent">
+                    <b>Bring to Front </b> displays this control in front of the other control. <br /><b>Send to Back </b> displays this control behind the other control. </p>
+                <p>
+                    <b>NOTE:</b>   For more information about visibility of controls, see <MadCap:xref href="../../../Design/Forms/Input Control Visibility Field Properties.htm">Input Control Visibility Field Properties</MadCap:xref>. </p>
+            </li>
+            <li>Click the <b>Update</b> button to update the field properties.</li>
+            <li>Click the <b>Close</b> button to close the Field Properties dialog.</li>
+            <li>Click the <b>Save</b> button on the upper left of the Designer page to save the controls and field properties.</li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,2014 @@
+<?xml version="1.0"?>
+<ArrayOfRuleDef xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <setcontrolstate dataitemid="Owner_Signature3">
+    <or>
+      <compare op="==">
+        <const value="2" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN3" />
+      </compare>
+      <compare op="==">
+        <const value="3" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN3" />
+      </compare>
+    </or>
+  </setcontrolstate>
+  <setcontrolstate dataitemid="Owner_Signature2">
+    <or>
+      <compare op="==">
+        <const value="2" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN2" />
+      </compare>
+      <compare op="==">
+        <const value="3" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN2" />
+      </compare>
+    </or>
+  </setcontrolstate>
+  <setcontrolstate dataitemid="Owner_Signature1">
+    <or>
+      <compare op="==">
+        <const value="2" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN1" />
+      </compare>
+      <compare op="==">
+        <const value="3" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN1" />
+      </compare>
+    </or>
+  </setcontrolstate>
+</block></ScriptCode>
+    <RuleName>* Owner_Signature</RuleName>
+    <Class>All</Class>
+    <LastUpdate>12/01/2016 03:56 PM</LastUpdate>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <setvisibility dataitemid="Owner_Signature3">
+    <or>
+      <compare op="==">
+        <const value="2" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN3" />
+      </compare>
+      <compare op="==">
+        <const value="3" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN3" />
+      </compare>
+    </or>
+  </setvisibility>
+  <setvisibility dataitemid="Owner_Signature2">
+    <or>
+      <compare op="==">
+        <const value="2" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN2" />
+      </compare>
+      <compare op="==">
+        <const value="3" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN2" />
+      </compare>
+    </or>
+  </setvisibility>
+  <setvisibility dataitemid="Owner_Signature1">
+    <or>
+      <compare op="==">
+        <const value="2" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN1" />
+      </compare>
+      <compare op="==">
+        <const value="3" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN1" />
+      </compare>
+    </or>
+  </setvisibility>
+</block></ScriptCode>
+    <RuleName>* Owner_Signature</RuleName>
+    <Class>All</Class>
+    <LastUpdate>07/14/2016 05:46 PM</LastUpdate>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.19.124</Version>
+    <ScriptCode><block>
+  <setcontrolstate dataitemid="Annuitant_Signature3">
+    <or>
+      <compare op="==">
+        <const value="2" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN3" />
+      </compare>
+      <compare op="==">
+        <const value="3" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN3" />
+      </compare>
+    </or>
+  </setcontrolstate>
+  <setcontrolstate dataitemid="Annuitant_Signature2">
+    <or>
+      <compare op="==">
+        <const value="2" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN2" />
+      </compare>
+      <compare op="==">
+        <const value="3" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN2" />
+      </compare>
+    </or>
+  </setcontrolstate>
+  <setcontrolstate dataitemid="Annuitant_Signature1">
+    <or>
+      <compare op="==">
+        <const value="2" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN1" />
+      </compare>
+      <compare op="==">
+        <const value="3" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN1" />
+      </compare>
+    </or>
+  </setcontrolstate>
+</block></ScriptCode>
+    <RuleName>*Annuitant_Signature</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.19.124</Version>
+    <ScriptCode><block>
+  <setcontrolstate dataitemid="JointOwner_Signature3">
+    <or>
+      <compare op="==">
+        <const value="2" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN3" />
+      </compare>
+      <compare op="==">
+        <const value="3" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN3" />
+      </compare>
+    </or>
+  </setcontrolstate>
+  <setcontrolstate dataitemid="JointOwner_Signature2">
+    <or>
+      <compare op="==">
+        <const value="2" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN2" />
+      </compare>
+      <compare op="==">
+        <const value="3" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN2" />
+      </compare>
+    </or>
+  </setcontrolstate>
+  <setcontrolstate dataitemid="JointOwner_Signature1">
+    <or>
+      <compare op="==">
+        <const value="2" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN1" />
+      </compare>
+      <compare op="==">
+        <const value="3" type="String" />
+        <diget dataitemid="FLI_ALLOWESIGN1" />
+      </compare>
+    </or>
+  </setcontrolstate>
+</block></ScriptCode>
+    <RuleName>*JointOwner Signature</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <diset dataitemid="Insurer_FullName">
+    <const value="Midland National Life Insurance Company" />
+  </diset>
+  <diset dataitemid="Insurer_PhysicalAddress">
+    <const value="5801 SW 6th Ave" />
+  </diset>
+  <diset dataitemid="Insurer_MailingAddress">
+    <const value="5801 SW 6th Ave" />
+  </diset>
+  <diset dataitemid="Insurer_OvernightAddress">
+    <const value="5801 SW 6th Ave" />
+  </diset>
+  <diset dataitemid="Insurer_PhysicalAddress_City">
+    <const value="Topeka" />
+  </diset>
+  <diset dataitemid="Insurer_MailingAddress_City">
+    <const value="Topeka" />
+  </diset>
+  <diset dataitemid="Insurer_OvernightAddress_City">
+    <const value="Topeka" />
+  </diset>
+  <diset dataitemid="Insurer_PhysicalAddress_State">
+    <const value="KS" />
+  </diset>
+  <diset dataitemid="Insurer_MailingAddress_State">
+    <const value="KS" />
+  </diset>
+  <diset dataitemid="Insurer_OvernightAddress_State">
+    <const value="KS" />
+  </diset>
+  <diset dataitemid="Insurer_PhysicalAddress_Zipcode">
+    <const value="66636-1001" />
+  </diset>
+  <diset dataitemid="Insurer_MailingAddress_Zipcode">
+    <const value="66636-1001" />
+  </diset>
+  <diset dataitemid="Insurer_OvernightAddress_Zipcode">
+    <const value="66636-1001" />
+  </diset>
+</block></ScriptCode>
+    <RuleName>Diset: Address Info</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="NONE" />
+  </set>
+  <set name="postmessage">
+    <const value="false" />
+  </set>
+  <if>
+    <condition>
+      <compare op="!=">
+        <diget dataitemid="FLI_ISSUED_STATE_ABBREV" />
+        <const value="NY" type="String" />
+      </compare>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="4758" type="String" />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <get name="postmessage" />
+    </condition>
+    <diset dataitemid="STATCO">
+      <get name="message" />
+    </diset>
+  </if>
+</block></ScriptCode>
+    <RuleName>Diset: STATCO</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="This field is required." type="String" />
+  </set>
+  <if>
+    <condition>
+      <isnullorwhitespace>
+        <diget dataitemid="Insured_DOB" />
+      </isnullorwhitespace>
+    </condition>
+    <postmessage dataitemid="Insured_DOB">
+      <get name="message" />
+    </postmessage>
+    <else />
+    <removemessage dataitemid="Insured_DOB" />
+  </if>
+</block></ScriptCode>
+    <RuleName>DOB Required: </RuleName>
+    <Class>All</Class>
+    <LastUpdate>11/14/2017 06:58 PM</LastUpdate>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><setformstate name="Replacement Instruction Page">
+  <or>
+    <compare op="==">
+      <diget dataitemid="FLI_ALLOWESIGN1" />
+      <const value="1" type="String" />
+    </compare>
+    <compare op="==">
+      <diget dataitemid="FLI_ALLOWESIGN2" />
+      <const value="1" type="String" />
+    </compare>
+    <compare op="==">
+      <diget dataitemid="FLI_ALLOWESIGN3" />
+      <const value="1" type="String" />
+    </compare>
+    <compare op="==">
+      <diget dataitemid="FLI_ALLOWESIGN1" />
+      <const value="0" type="String" />
+    </compare>
+    <compare op="==">
+      <diget dataitemid="FLI_ALLOWESIGN2" />
+      <const value="0" type="String" />
+    </compare>
+    <compare op="==">
+      <diget dataitemid="FLI_ALLOWESIGN3" />
+      <const value="0" type="String" />
+    </compare>
+  </or>
+</setformstate></ScriptCode>
+    <RuleName>Enable Form by Form Number on Equals</RuleName>
+    <Class>All</Class>
+    <LastUpdate>12/20/2016 03:01 PM</LastUpdate>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="NONE" />
+  </set>
+  <set name="postmessage">
+    <const value="false" />
+  </set>
+  <diset dataitemid="Replacement_Company_1035_Partial_Amount[FORM_INDEX]" parseformatting="true">
+    <conditional>
+      <isnull>
+        <diget dataitemid="Replacement_Company_1035_Partial_Amount[FORM_INDEX]" type="Double" />
+      </isnull>
+      <diget dataitemid="Replacement_Company_1035_Partial_Amount[FORM_INDEX]" />
+      <format format="{0:N2}">
+        <diget dataitemid="Replacement_Company_1035_Partial_Amount[FORM_INDEX]" type="Double" />
+      </format>
+    </conditional>
+  </diset>
+  <if>
+    <condition>
+      <isnullorwhitespace>
+        <diget dataitemid="Replacement_Company_1035_Partial_Amount[FORM_INDEX]" />
+      </isnullorwhitespace>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value=" 1035 Partial Dollar Amount is required field." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="Replacement_Company_1035_Partial_Amount[FORM_INDEX]" />
+        </isnullorwhitespace>
+      </not>
+      <not>
+        <ismatch regex="^\$?(\d{1,3},?(\d{3},?)*\d{3}(\.\d{1,3})?|\d{1,3}(\.\d{2})?)$">
+          <diget dataitemid="Replacement_Company_1035_Partial_Amount[FORM_INDEX]" />
+        </ismatch>
+      </not>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="Please enter a numeric value." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <get name="postmessage" />
+    </condition>
+    <postmessage dataitemid="Replacement_Company_1035_Partial_Amount[FORM_INDEX]">
+      <get name="message" />
+    </postmessage>
+    <else />
+    <removemessage dataitemid="Replacement_Company_1035_Partial_Amount[FORM_INDEX]" />
+  </if>
+</block></ScriptCode>
+    <RuleName>Error Message: 1035_Dollar</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <setcontrolstate dataitemid="Replacement_Company_1035_Partial_Amount[FORM_INDEX]" clearondisable="true">
+    <and>
+      <compare op="==">
+        <const value="Yes" type="String" />
+        <diget dataitemid="Replacement_Company_Surrender_Type[FORM_INDEX]" />
+      </compare>
+      <isnullorwhitespace>
+        <diget dataitemid="Replacement_Company_1035_Partial_Percent[FORM_INDEX]" />
+      </isnullorwhitespace>
+    </and>
+  </setcontrolstate>
+  <setcontrolstate dataitemid="Replacement_Company_1035_Partial_Percent[FORM_INDEX]" clearondisable="true">
+    <and>
+      <compare op="==">
+        <const value="Yes" type="String" />
+        <diget dataitemid="Replacement_Company_Surrender_Type[FORM_INDEX]" />
+      </compare>
+      <isnullorwhitespace>
+        <diget dataitemid="Replacement_Company_1035_Partial_Amount[FORM_INDEX]" />
+      </isnullorwhitespace>
+    </and>
+  </setcontrolstate>
+</block></ScriptCode>
+    <RuleName>Error Message: 1035_Dollar</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="NONE" />
+  </set>
+  <set name="postmessage">
+    <const value="false" />
+  </set>
+  <if>
+    <condition>
+      <isnullorwhitespace>
+        <diget dataitemid="Replacement_Company_Surrender_Type[FORM_INDEX]" />
+      </isnullorwhitespace>
+      <isnullorwhitespace>
+        <diget dataitemid="Replacement_Company_Surrender_Type[FORM_INDEX]" />
+      </isnullorwhitespace>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="Surrendering Instructions is a required field." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <get name="postmessage" />
+    </condition>
+    <postmessage dataitemid="Replacement_Company_Surrender_Type[FORM_INDEX]">
+      <get name="message" />
+    </postmessage>
+    <postmessage dataitemid="Replacement_Company_Surrender_Type[FORM_INDEX]">
+      <get name="message" />
+    </postmessage>
+    <else />
+    <removemessage dataitemid="Replacement_Company_Surrender_Type[FORM_INDEX]" />
+    <removemessage dataitemid="Replacement_Company_Surrender_Type[FORM_INDEX]" />
+  </if>
+</block></ScriptCode>
+    <RuleName>Error Message: 1035_FullExch</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="NONE" />
+  </set>
+  <set name="postmessage">
+    <const value="false" />
+  </set>
+  <diset dataitemid="Replacement_Company_1035_Partial_Percent[FORM_INDEX]" parseformatting="true">
+    <conditional>
+      <isnull>
+        <diget dataitemid="Replacement_Company_1035_Partial_Percent[FORM_INDEX]" type="Double" />
+      </isnull>
+      <diget dataitemid="Replacement_Company_1035_Partial_Percent[FORM_INDEX]" />
+      <format format="{0:N2}">
+        <diget dataitemid="Replacement_Company_1035_Partial_Percent[FORM_INDEX]" type="Double" />
+      </format>
+    </conditional>
+  </diset>
+  <if>
+    <condition>
+      <isnullorwhitespace>
+        <diget dataitemid="Replacement_Company_1035_Partial_Percent[FORM_INDEX]" />
+      </isnullorwhitespace>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="1035 Percent is a required field." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="Replacement_Company_1035_Partial_Percent[FORM_INDEX]" />
+        </isnullorwhitespace>
+      </not>
+      <not>
+        <ismatch regex="^\$?(\d{1,3},?(\d{3},?)*\d{3}(\.\d{1,3})?|\d{1,3}(\.\d{2})?)$">
+          <diget dataitemid="Replacement_Company_1035_Partial_Percent[FORM_INDEX]" />
+        </ismatch>
+      </not>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="Please enter a numeric value." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <get name="postmessage" />
+    </condition>
+    <postmessage dataitemid="Replacement_Company_1035_Partial_Percent[FORM_INDEX]">
+      <get name="message" />
+    </postmessage>
+    <else />
+    <removemessage dataitemid="Replacement_Company_1035_Partial_Percent[FORM_INDEX]" />
+  </if>
+</block></ScriptCode>
+    <RuleName>Error Message: 1035_Percent</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="NONE" />
+  </set>
+  <set name="postmessage">
+    <const value="false" />
+  </set>
+  <if>
+    <condition>
+      <isnullorwhitespace>
+        <diget dataitemid="ACORD 951_TypeofTR[FORM_INDEX]" />
+      </isnullorwhitespace>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="Type of Transfer is a required field" />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <and>
+        <or>
+          <compare op="==">
+            <diget dataitemid="PlanType_NonQualified" />
+            <const value="Yes" type="String" />
+          </compare>
+          <compare op="==">
+            <diget dataitemid="PlanType_NQStretch" />
+            <const value="Yes" type="String" />
+          </compare>
+        </or>
+        <or>
+          <compare op="==">
+            <const value="Direct Transfer" type="String" />
+            <diget dataitemid="ACORD 951_TypeofTR[FORM_INDEX]" />
+          </compare>
+          <compare op="==">
+            <const value="Rollover" type="String" />
+            <diget dataitemid="ACORD 951_TypeofTR[FORM_INDEX]" />
+          </compare>
+        </or>
+      </and>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="Type of Transfer/Replacement not allowed for the type of annuity requested." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <and>
+        <or>
+          <compare op="==">
+            <diget dataitemid="PlanType_IRA" />
+            <const value="Yes" type="String" />
+          </compare>
+          <compare op="==">
+            <diget dataitemid="PlanType_RothIRA" />
+            <const value="Yes" type="String" />
+          </compare>
+          <compare op="==">
+            <diget dataitemid="PlanType_SEPIRA" />
+            <const value="Yes" type="String" />
+          </compare>
+          <compare op="==">
+            <diget dataitemid="PlanType_INHIRA" />
+            <const value="Yes" type="String" />
+          </compare>
+        </or>
+        <compare op="==">
+          <const value="Non-Qualified 1035 Exchange" type="String" />
+          <diget dataitemid="ACORD 951_TypeofTR[FORM_INDEX]" />
+        </compare>
+      </and>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="Type of Transfer/Replacement not allowed for the type of annuity requested." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <get name="postmessage" />
+    </condition>
+    <postmessage dataitemid="ACORD 951_TypeofTR[FORM_INDEX]">
+      <get name="message" />
+    </postmessage>
+    <else />
+    <removemessage dataitemid="ACORD 951_TypeofTR[FORM_INDEX]" />
+  </if>
+</block></ScriptCode>
+    <RuleName>Error Message: ACORD 951_TypeofTR</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="NONE" />
+  </set>
+  <set name="postmessage">
+    <const value="false" />
+  </set>
+  <if>
+    <condition>
+      <isnullorwhitespace>
+        <diget dataitemid="Replacement_Company_Employer_FullName[FORM_INDEX]" />
+      </isnullorwhitespace>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="Replacement_Company_Employer_Title[FORM_INDEX]" />
+        </isnullorwhitespace>
+      </not>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="Employer Full Name is a required field." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <get name="postmessage" />
+    </condition>
+    <postmessage dataitemid="Replacement_Company_Employer_FullName[FORM_INDEX]">
+      <get name="message" />
+    </postmessage>
+    <else />
+    <removemessage dataitemid="Replacement_Company_Employer_FullName[FORM_INDEX]" />
+  </if>
+</block></ScriptCode>
+    <RuleName>Error Message: Employer_FullName</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="NONE" />
+  </set>
+  <set name="postmessage">
+    <const value="false" />
+  </set>
+  <if>
+    <condition>
+      <isnullorwhitespace>
+        <diget dataitemid="Replacement_Company_Employer_Title[FORM_INDEX]" />
+      </isnullorwhitespace>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="Replacement_Company_Employer_FullName[FORM_INDEX]" />
+        </isnullorwhitespace>
+      </not>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="Employer Title is a required field." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <get name="postmessage" />
+    </condition>
+    <postmessage dataitemid="Replacement_Company_Employer_Title[FORM_INDEX]">
+      <get name="message" />
+    </postmessage>
+    <else />
+    <removemessage dataitemid="Replacement_Company_Employer_Title[FORM_INDEX]" />
+  </if>
+</block></ScriptCode>
+    <RuleName>Error Message: Employer_Title</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="NONE" />
+  </set>
+  <set name="postmessage">
+    <const value="false" />
+  </set>
+  <if>
+    <set name="yearsLength">
+      <const value="0" />
+    </set>
+    <condition>
+      <and>
+        <not>
+          <isnullorwhitespace>
+            <diget dataitemid="Replacement_Company_Special_Instructions_Specific_Date" />
+          </isnullorwhitespace>
+        </not>
+        <or>
+          <ismatch regex="^[0-9]{6}$">
+            <diget dataitemid="Replacement_Company_Special_Instructions_Specific_Date" />
+          </ismatch>
+          <ismatch regex="^[0-9]{8}$">
+            <diget dataitemid="Replacement_Company_Special_Instructions_Specific_Date" />
+          </ismatch>
+        </or>
+      </and>
+    </condition>
+    <if>
+      <condition>
+        <compare op="==">
+          <length>
+            <diget dataitemid="Replacement_Company_Special_Instructions_Specific_Date" />
+          </length>
+          <const value="6" />
+        </compare>
+      </condition>
+      <set name="yearsLength">
+        <const value="2" />
+      </set>
+      <else />
+      <set name="yearsLength">
+        <const value="4" />
+      </set>
+    </if>
+    <diset dataitemid="Replacement_Company_Special_Instructions_Specific_Date">
+      <format format="{0}/{1}/{2}">
+        <substring>
+          <diget dataitemid="Replacement_Company_Special_Instructions_Specific_Date" type="String" />
+          <const value="0" />
+          <const value="2" />
+        </substring>
+        <substring>
+          <diget dataitemid="Replacement_Company_Special_Instructions_Specific_Date" type="String" />
+          <const value="2" />
+          <const value="2" />
+        </substring>
+        <substring>
+          <diget dataitemid="Replacement_Company_Special_Instructions_Specific_Date" type="String" />
+          <const value="4" />
+          <get name="yearsLength" />
+        </substring>
+      </format>
+    </diset>
+  </if>
+  <if>
+    <condition>
+      <isnullorwhitespace>
+        <diget dataitemid="Replacement_Company_Special_Instructions_Specific_Date" />
+      </isnullorwhitespace>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="Replacement Company Special Instructions Date is a required field." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <get name="postmessage" />
+    </condition>
+    <postmessage dataitemid="Replacement_Company_Special_Instructions_Specific_Date">
+      <get name="message" />
+    </postmessage>
+    <else />
+    <removemessage dataitemid="Replacement_Company_Special_Instructions_Specific_Date" />
+  </if>
+</block></ScriptCode>
+    <RuleName>Error Message: Ins_Liq_Specific</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="NONE" />
+  </set>
+  <set name="postmessage">
+    <const value="false" />
+  </set>
+  <if>
+    <condition>
+      <isnullorwhitespace>
+        <diget dataitemid="Replacement_Company_Special_Instructions_Waive[FORM_INDEX]" />
+      </isnullorwhitespace>
+      <isnullorwhitespace>
+        <diget dataitemid="Replacement_Company_Special_Instructions_Specific[FORM_INDEX]" />
+      </isnullorwhitespace>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="Special Instructions is a required field." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <get name="postmessage" />
+    </condition>
+    <postmessage dataitemid="Replacement_Company_Special_Instructions_Waive[FORM_INDEX]">
+      <get name="message" />
+    </postmessage>
+    <postmessage dataitemid="Replacement_Company_Special_Instructions_Specific[FORM_INDEX]">
+      <get name="message" />
+    </postmessage>
+    <else />
+    <removemessage dataitemid="Replacement_Company_Special_Instructions_Waive[FORM_INDEX]" />
+    <removemessage dataitemid="Replacement_Company_Special_Instructions_Specific[FORM_INDEX]" />
+  </if>
+</block></ScriptCode>
+    <RuleName>Error Message: Ins_Liq_Waive</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="NONE" />
+  </set>
+  <set name="postmessage">
+    <const value="false" />
+  </set>
+  <if>
+    <condition>
+      <or>
+        <not>
+          <isnullorwhitespace>
+            <diget dataitemid="JointAnnuitant_LastName" />
+          </isnullorwhitespace>
+        </not>
+        <not>
+          <isnullorwhitespace>
+            <diget dataitemid="JointAnnuitant_MiddleName" />
+          </isnullorwhitespace>
+        </not>
+        <not>
+          <isnullorwhitespace>
+            <diget dataitemid="JointAnnuitant_SSN" />
+          </isnullorwhitespace>
+        </not>
+        <not>
+          <isnullorwhitespace>
+            <diget dataitemid="JointAnnuitant_FirstName" />
+          </isnullorwhitespace>
+        </not>
+      </or>
+      <isnullorwhitespace>
+        <diget dataitemid="JointAnnuitant_FirstName" />
+      </isnullorwhitespace>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="Joint Annuitant First Name is a required field." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <get name="postmessage" />
+    </condition>
+    <postmessage dataitemid="JointAnnuitant_FirstName">
+      <get name="message" />
+    </postmessage>
+    <else />
+    <removemessage dataitemid="JointAnnuitant_FirstName" />
+  </if>
+</block></ScriptCode>
+    <RuleName>Error Message: JointAnnuitant_FirstName</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="NONE" />
+  </set>
+  <set name="postmessage">
+    <const value="false" />
+  </set>
+  <if>
+    <condition>
+      <or>
+        <not>
+          <isnullorwhitespace>
+            <diget dataitemid="JointAnnuitant_LastName" />
+          </isnullorwhitespace>
+        </not>
+        <not>
+          <isnullorwhitespace>
+            <diget dataitemid="JointAnnuitant_MiddleName" />
+          </isnullorwhitespace>
+        </not>
+        <not>
+          <isnullorwhitespace>
+            <diget dataitemid="JointAnnuitant_SSN" />
+          </isnullorwhitespace>
+        </not>
+        <not>
+          <isnullorwhitespace>
+            <diget dataitemid="JointAnnuitant_FirstName" />
+          </isnullorwhitespace>
+        </not>
+      </or>
+      <isnullorwhitespace>
+        <diget dataitemid="JointAnnuitant_LastName" />
+      </isnullorwhitespace>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="Joint Annuitant Last Name is a required field." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <get name="postmessage" />
+    </condition>
+    <postmessage dataitemid="JointAnnuitant_LastName">
+      <get name="message" />
+    </postmessage>
+    <else />
+    <removemessage dataitemid="JointAnnuitant_LastName" />
+  </if>
+</block></ScriptCode>
+    <RuleName>Error Message: JointAnnuitant_LastName</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="NONE" />
+  </set>
+  <set name="postmessage">
+    <const value="false" />
+  </set>
+  <if comment="Add formatting if there is none">
+    <condition>
+      <and>
+        <not>
+          <isnullorwhitespace>
+            <diget dataitemid="JointAnnuitant_SSN" />
+          </isnullorwhitespace>
+        </not>
+        <ismatch regex="^[0-9]{9}$">
+          <diget dataitemid="JointAnnuitant_SSN" type="String" />
+        </ismatch>
+      </and>
+    </condition>
+    <diset dataitemid="JointAnnuitant_SSN">
+      <format format="{0}-{1}-{2}">
+        <substring>
+          <diget dataitemid="JointAnnuitant_SSN" />
+          <const value="0" />
+          <const value="3" />
+        </substring>
+        <substring>
+          <diget dataitemid="JointAnnuitant_SSN" />
+          <const value="3" />
+          <const value="2" />
+        </substring>
+        <substring>
+          <diget dataitemid="JointAnnuitant_SSN" />
+          <const value="5" />
+          <const value="4" />
+        </substring>
+      </format>
+    </diset>
+  </if>
+  <if>
+    <condition>
+      <or>
+        <not>
+          <isnullorwhitespace>
+            <diget dataitemid="JointAnnuitant_LastName" />
+          </isnullorwhitespace>
+        </not>
+        <not>
+          <isnullorwhitespace>
+            <diget dataitemid="JointAnnuitant_MiddleName" />
+          </isnullorwhitespace>
+        </not>
+        <not>
+          <isnullorwhitespace>
+            <diget dataitemid="JointAnnuitant_SSN" />
+          </isnullorwhitespace>
+        </not>
+        <not>
+          <isnullorwhitespace>
+            <diget dataitemid="JointAnnuitant_FirstName" />
+          </isnullorwhitespace>
+        </not>
+      </or>
+      <isnullorwhitespace>
+        <diget dataitemid="JointAnnuitant_SSN" />
+      </isnullorwhitespace>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="Joint Annuitant SSN is a required field." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="JointAnnuitant_SSN" />
+        </isnullorwhitespace>
+      </not>
+      <not>
+        <ismatch regex="^(?!\b(\d)\1+-(\d)\1+-(\d)\1+\b)(?!123-45-6789|219-09-9999|078-05-1120)(?!666|000|9\d{2})\d{3}-(?!00)\d{2}-(?!0{4})\d{4}$">
+          <diget dataitemid="JointAnnuitant_SSN" type="String" />
+        </ismatch>
+      </not>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="Please enter a valid SSN." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <get name="postmessage" />
+    </condition>
+    <postmessage dataitemid="JointAnnuitant_SSN">
+      <get name="message" />
+    </postmessage>
+    <else />
+    <removemessage dataitemid="JointAnnuitant_SSN" />
+  </if>
+</block></ScriptCode>
+    <RuleName>Error Message: JointAnnuitant_SSN</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="NONE" />
+  </set>
+  <set name="postmessage">
+    <const value="false" />
+  </set>
+  <if>
+    <condition>
+      <isnullorwhitespace>
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+      </isnullorwhitespace>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="Replacement Company: Plan Type is a required field." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        </isnullorwhitespace>
+      </not>
+      <compare op="==">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="Non-Qualified" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_NonQualified" />
+        <const value="Yes" type="String" />
+      </compare>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="The Surrendering Plan Type is not allowed for the Annuity Type Selected." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        </isnullorwhitespace>
+      </not>
+      <compare op="==">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="NQ Stretch" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_NQStretch" />
+        <const value="Yes" type="String" />
+      </compare>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="The Surrendering Plan Type is not allowed for the Annuity Type Selected." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        </isnullorwhitespace>
+      </not>
+      <compare op="==">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="Other Non-Qualified" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_NonQualified" />
+        <const value="Yes" type="String" />
+      </compare>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="The Surrendering Plan Type is not allowed for the Annuity Type Selected." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        </isnullorwhitespace>
+      </not>
+      <compare op="==">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="Traditional IRA" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_IRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_RothIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_SEPIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_INHIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="The Surrendering Plan Type is not allowed for the Annuity Type Selected." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        </isnullorwhitespace>
+      </not>
+      <compare op="==">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="SEP IRA" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_IRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_RothIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_SEPIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_INHIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="The Surrendering Plan Type is not allowed for the Annuity Type Selected." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        </isnullorwhitespace>
+      </not>
+      <compare op="==">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="Simple IRA" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_IRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_RothIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_SEPIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_INHIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="The Surrendering Plan Type is not allowed for the Annuity Type Selected." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        </isnullorwhitespace>
+      </not>
+      <compare op="==">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="Roth IRA" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_RothIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="The Surrendering Plan Type is not allowed for the Annuity Type Selected." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        </isnullorwhitespace>
+      </not>
+      <compare op="==">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="Bene IRA" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_IRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_RothIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_SEPIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_INHIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="The Surrendering Plan Type is not allowed for the Annuity Type Selected." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        </isnullorwhitespace>
+      </not>
+      <compare op="==">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="Pension Plan" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_IRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_RothIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_SEPIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_INHIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="The Surrendering Plan Type is not allowed for the Annuity Type Selected." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        </isnullorwhitespace>
+      </not>
+      <compare op="==">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="401(a)" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_IRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_RothIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_SEPIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_INHIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="The Surrendering Plan Type is not allowed for the Annuity Type Selected." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        </isnullorwhitespace>
+      </not>
+      <compare op="==">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="401(k)" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_IRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_RothIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_SEPIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_INHIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="The Surrendering Plan Type is not allowed for the Annuity Type Selected." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        </isnullorwhitespace>
+      </not>
+      <compare op="==">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="401(k) Designated Roth Account" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_RothIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="The Surrendering Plan Type is not allowed for the Annuity Type Selected." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        </isnullorwhitespace>
+      </not>
+      <compare op="==">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="457(b)" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_IRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_RothIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_SEPIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_INHIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="The Surrendering Plan Type is not allowed for the Annuity Type Selected." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        </isnullorwhitespace>
+      </not>
+      <compare op="==">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="TSA/403(b)" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_IRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_RothIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_SEPIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="PlanType_INHIRA" />
+        <const value="Yes" type="String" />
+      </compare>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="The Surrendering Plan Type is not allowed for the Annuity Type Selected." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        </isnullorwhitespace>
+      </not>
+      <compare op="==">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="Other Qualified" type="String" />
+      </compare>
+      <or>
+        <compare op="==">
+          <diget dataitemid="PlanType_NonQualified" />
+          <const value="Yes" type="String" />
+        </compare>
+        <compare op="==">
+          <diget dataitemid="PlanType_NQStretch" />
+          <const value="Yes" type="String" />
+        </compare>
+      </or>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="The Surrendering Plan Type is not allowed for the Annuity Type Selected." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        </isnullorwhitespace>
+      </not>
+      <or>
+        <compare op="==">
+          <diget dataitemid="ACORD 951_TypeofTR[FORM_INDEX]" />
+          <const value="Direct Transfer" type="String" />
+        </compare>
+        <compare op="==">
+          <diget dataitemid="ACORD 951_TypeofTR[FORM_INDEX]" />
+          <const value="Rollover" type="String" />
+        </compare>
+      </or>
+      <compare op="!=">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="Traditional IRA" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="SEP IRA" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="Simple IRA" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="Roth IRA" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="Bene IRA" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="Pension Plan" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="401(a)" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="401(k)" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="401(k) Designated Roth Account" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="457(b)" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="TSA/403(b)" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+        <const value="Other" type="String" />
+      </compare>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="The Transfer/Replacement Type equals Direct Transfer or Roll Over. The Plan Type selected must be either Traditional IRA, SEP IRA, SIMPLE IRA, Roth IRA, Beneficial IRA, Pension Plan, 401(a), 401(k), 401(k) Designated, 457(b), or Other." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <get name="postmessage" />
+    </condition>
+    <postmessage dataitemid="Replacement_Company_PlanType[FORM_INDEX]">
+      <get name="message" />
+    </postmessage>
+    <else />
+    <removemessage dataitemid="Replacement_Company_PlanType[FORM_INDEX]" />
+  </if>
+</block></ScriptCode>
+    <RuleName>Error Message: Replacement_Company_PlanType</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="NONE" />
+  </set>
+  <set name="postmessage">
+    <const value="false" />
+  </set>
+  <if>
+    <condition>
+      <isnullorwhitespace>
+        <diget dataitemid="Replacement_Company_ProductType[FORM_INDEX]" />
+      </isnullorwhitespace>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="Replacement Company Product Type is a required field." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="Replacement_Company_ProductType[FORM_INDEX]" />
+        </isnullorwhitespace>
+      </not>
+      <compare op="==">
+        <diget dataitemid="ACORD 951_TypeofTR[FORM_INDEX]" />
+        <const value="CD/Mutual Fund Redemption" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="Replacement_Company_ProductType[FORM_INDEX]" />
+        <const value="CD" type="String" />
+      </compare>
+      <compare op="!=">
+        <diget dataitemid="Replacement_Company_ProductType[FORM_INDEX]" />
+        <const value="Mutual Fund" type="String" />
+      </compare>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="For the type of transfer select CD or Mutual Fund is required to be selected." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <get name="postmessage" />
+    </condition>
+    <postmessage dataitemid="Replacement_Company_ProductType[FORM_INDEX]">
+      <get name="message" />
+    </postmessage>
+    <else />
+    <removemessage dataitemid="Replacement_Company_ProductType[FORM_INDEX]" />
+  </if>
+</block></ScriptCode>
+    <RuleName>Error Message: Replacement_Company_ProducType</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="NONE" />
+  </set>
+  <set name="postmessage">
+    <const value="false" />
+  </set>
+  <if>
+    <condition>
+      <isnullorwhitespace>
+        <diget dataitemid="Replacement_Company_Address1[FORM_INDEX]" />
+      </isnullorwhitespace>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="Replacement Company Address is a required field." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <get name="postmessage" />
+    </condition>
+    <postmessage dataitemid="Replacement_Company_Address1[FORM_INDEX]">
+      <get name="message" />
+    </postmessage>
+    <else />
+    <removemessage dataitemid="Replacement_Company_Address1[FORM_INDEX]" />
+  </if>
+</block></ScriptCode>
+    <RuleName>Error Message: Replacement_CompanyAddress</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="NONE" />
+  </set>
+  <set name="postmessage">
+    <const value="false" />
+  </set>
+  <if>
+    <condition>
+      <isnullorwhitespace>
+        <diget dataitemid="Replacement_Company_City[FORM_INDEX]" />
+      </isnullorwhitespace>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="Replacement Company: City is a required field." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <get name="postmessage" />
+    </condition>
+    <postmessage dataitemid="Replacement_Company_City[FORM_INDEX]">
+      <get name="message" />
+    </postmessage>
+    <else />
+    <removemessage dataitemid="Replacement_Company_City[FORM_INDEX]" />
+  </if>
+</block></ScriptCode>
+    <RuleName>Error Message: Replacement_CompanyCity</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="NONE" />
+  </set>
+  <set name="postmessage">
+    <const value="false" />
+  </set>
+  <if>
+    <condition>
+      <isnullorwhitespace>
+        <diget dataitemid="Replacement_Company_State[FORM_INDEX]" />
+      </isnullorwhitespace>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="Replacement Company: State is a required field." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <get name="postmessage" />
+    </condition>
+    <postmessage dataitemid="Replacement_Company_State[FORM_INDEX]">
+      <get name="message" />
+    </postmessage>
+    <else />
+    <removemessage dataitemid="Replacement_Company_State[FORM_INDEX]" />
+  </if>
+</block></ScriptCode>
+    <RuleName>Error Message: Replacement_CompanyState</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="NONE" />
+  </set>
+  <set name="postmessage">
+    <const value="false" />
+  </set>
+  <if>
+    <condition>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="Replacement_Company_Zipcode[FORM_INDEX]" />
+        </isnullorwhitespace>
+      </not>
+      <not>
+        <ismatch regex="^\d{5}$|^\d{5}-\d{4}$">
+          <diget dataitemid="Replacement_Company_Zipcode[FORM_INDEX]" />
+        </ismatch>
+      </not>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="Field does not match US Zip format of ##### or #####-####" />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <isnullorwhitespace>
+        <diget dataitemid="Replacement_Company_Zipcode[FORM_INDEX]" />
+      </isnullorwhitespace>
+    </condition>
+    <set name="postmessage">
+      <const value="true" />
+    </set>
+    <set name="message">
+      <const value="Replacement Company: Zipcode is a required field." />
+    </set>
+  </if>
+  <if>
+    <condition>
+      <get name="postmessage" />
+    </condition>
+    <postmessage dataitemid="Replacement_Company_Zipcode[FORM_INDEX]">
+      <get name="message" />
+    </postmessage>
+    <else />
+    <removemessage dataitemid="Replacement_Company_Zipcode[FORM_INDEX]" />
+  </if>
+</block></ScriptCode>
+    <RuleName>Error Message: Replacement_CompanyZipcode</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="This field must be exactly 6 characters long." />
+  </set>
+  <if>
+    <condition>
+      <not>
+        <isnullorwhitespace>
+          <diget dataitemid="TextBox_34" />
+        </isnullorwhitespace>
+      </not>
+      <not>
+        <compare op="==">
+          <length>
+            <diget dataitemid="TextBox_34" />
+          </length>
+          <const value="6" />
+        </compare>
+      </not>
+    </condition>
+    <postmessage dataitemid="TextBox_34">
+      <get name="message" />
+    </postmessage>
+    <else />
+    <removemessage dataitemid="TextBox_34" />
+  </if>
+</block></ScriptCode>
+    <RuleName>Length: </RuleName>
+    <Class>All</Class>
+    <LastUpdate>11/28/2017 04:04 AM</LastUpdate>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><if>
+  <condition>
+    <not>
+      <isnullorwhitespace>
+        <diget dataitemid="AutoPayOne_NamesOnAccount" />
+      </isnullorwhitespace>
+    </not>
+  </condition>
+  <popup dataitemid="AutoPayOne_NamesOnAccount" title="EFT Validation" buttons="Continue|Cancel">
+    <const value="This will begin validating the entered bank information. Would you like to continue?" />
+  </popup>
+</if></ScriptCode>
+    <RuleName>Popup EFT Validation</RuleName>
+    <Class>All</Class>
+    <LastUpdate>04/10/2019 04:13 PM</LastUpdate>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.17.203</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="Favorite color is required." type="String" />
+  </set>
+  <if>
+    <condition>
+      <isnullorwhitespace>
+        <diget dataitemid="Favorite_Color" />
+      </isnullorwhitespace>
+    </condition>
+    <postmessage dataitemid="Favorite_Color">
+      <get name="message" />
+    </postmessage>
+    <else />
+    <removemessage dataitemid="Favorite_Color" />
+  </if>
+</block></ScriptCode>
+    <RuleName>Required: </RuleName>
+    <Class>All</Class>
+    <LastUpdate>06/29/2020 10:17 PM</LastUpdate>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.17.203</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="Swallow air speed is required." type="String" />
+  </set>
+  <if>
+    <condition>
+      <isnullorwhitespace>
+        <diget dataitemid="ComboBox_AirSpeed" />
+      </isnullorwhitespace>
+    </condition>
+    <postmessage dataitemid="ComboBox_AirSpeed">
+      <get name="message" />
+    </postmessage>
+    <else />
+    <removemessage dataitemid="ComboBox_AirSpeed" />
+  </if>
+</block></ScriptCode>
+    <RuleName>Required: </RuleName>
+    <Class>All</Class>
+    <LastUpdate>06/29/2020 10:18 PM</LastUpdate>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><block>
+  <set name="message">
+    <const value="This field is required." type="String" />
+  </set>
+  <if>
+    <condition>
+      <isnullorwhitespace>
+        <diget dataitemid="Insured_FirstName" />
+      </isnullorwhitespace>
+    </condition>
+    <postmessage dataitemid="Insured_FirstName">
+      <get name="message" />
+    </postmessage>
+    <else />
+    <removemessage dataitemid="Insured_FirstName" />
+  </if>
+</block></ScriptCode>
+    <RuleName>Required: First Name</RuleName>
+    <Class>All</Class>
+    <LastUpdate>11/14/2017 06:59 PM</LastUpdate>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><setcontrolstate dataitemid="Employer_Signature" clearondisable="true">
+  <or>
+    <not>
+      <isnullorwhitespace>
+        <diget dataitemid="Replacement_Company_Employer_FullName[FORM_INDEX]" />
+      </isnullorwhitespace>
+    </not>
+    <not>
+      <isnullorwhitespace>
+        <diget dataitemid="Replacement_Company_Employer_Title[FORM_INDEX]" />
+      </isnullorwhitespace>
+    </not>
+  </or>
+</setcontrolstate></ScriptCode>
+    <RuleName>Set Control State: Employer_Signature</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+  <RuleDef>
+    <Version>2.13.0.450</Version>
+    <ScriptCode><setcontrolstate dataitemid="Replacement_Company_Special_Instructions_Specific_Date" clearondisable="true">
+  <compare op="==">
+    <const value="Yes" type="String" />
+    <diget dataitemid="Replacement_Company_Special_Instructions_Specific[FORM_INDEX]" />
+  </compare>
+</setcontrolstate></ScriptCode>
+    <RuleName>Set Control State: Ins_Liq_SpecificDate</RuleName>
+    <Class>All</Class>
+  </RuleDef>
+</ArrayOfRuleDef>

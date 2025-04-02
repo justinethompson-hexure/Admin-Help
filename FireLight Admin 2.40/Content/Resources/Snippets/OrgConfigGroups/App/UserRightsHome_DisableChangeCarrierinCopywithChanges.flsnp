@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p class="Indent">This option is available for distributors only. If the <strong>Disable Change Carrier in Copy with Changes</strong> checkbox is selected and the user clicks <strong>Copy with Changes</strong> in <strong>All Activities</strong>,  the Carrier selection is hidden on the Create New activity page. <MadCap:conditionalText MadCap:conditions="General.Online">See also All Activities, <MadCap:xref href="../../../../UserGuide/All Activities/Copy.htm" target="_blank" alt="Copy">Copy</MadCap:xref>.</MadCap:conditionalText></p>
+    </body>
+</html>

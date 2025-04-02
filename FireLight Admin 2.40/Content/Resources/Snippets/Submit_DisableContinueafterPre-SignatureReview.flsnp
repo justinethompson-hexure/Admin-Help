@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b>Disable Continue after Pre-Signature Review</b> checkbox to prohibit sending an activity for the signing ceremony when the Pre-Submit (Pre-Signature) process is enabled. <b>NOTE</b>: If this checkbox is selected, the <b>Disable Continue at 100%</b> checkbox cannot be selected, and vice-versa.</body>
+</html>

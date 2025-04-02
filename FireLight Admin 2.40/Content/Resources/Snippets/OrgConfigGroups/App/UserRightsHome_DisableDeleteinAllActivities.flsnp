@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <strong>Disable Delete in All Activities</strong> checkbox to disable the ability to delete activities. The Delete button on the All Activities page will not be visible.  To delete an activity, the user must also be the owner of the activity or have the option Disable Editing Other Users' Activities cleared (not checked) for their user group and have Full Control share access to the activity. <MadCap:conditionalText MadCap:conditions="General.Online">See also All Activities, <MadCap:xref href="../../../../UserGuide/All Activities/Delete.htm" target="_blank" alt="Delete">Delete</MadCap:xref>.</MadCap:conditionalText></body>
+</html>

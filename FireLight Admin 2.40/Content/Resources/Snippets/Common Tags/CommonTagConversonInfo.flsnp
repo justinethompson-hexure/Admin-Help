@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <ul>
+            <li> <MadCap:conditionalText MadCap:conditions="General.Online">See the <a href="../../PDFGuides/Distributor to Carrier Mappings Guide.pdf" target="_blank" title="Distributor to Carrier Mapping Guide" alt="Distributor to Carrier Mapping Guide" MadCap:conditions="General.Online">Distributor to Carrier Mapping Guide</a> for distributor to carrier mapping instructions. </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PDF">See the <em>Distributor to Carrier Mapping Guide</em> in Admin Help for distributor to carrier mapping instructions. </MadCap:conditionalText></li>
+            <li>
+                <p>Watch the <a href="https://vimeo.com/353873388/cce4001558" target="_blank" title="FireLight Common Tag Conversion Process" alt="FireLight Common Tag Conversion Process">Common Tag Conversion Process</a> Spotlight Feature Video that steps through the common tag conversion process.</p>
+            </li>
+        </ul>
+    </body>
+</html>

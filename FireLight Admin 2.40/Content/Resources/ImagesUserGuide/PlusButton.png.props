@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileProperties>
+    <ImageOverlay Profile="D:\Documents\My Profiles\FireLightUserGuide.capro" ProfileHash="17ab8a245f347468213ad253f12e292d50527913" ScreenRectangle="630,444,30,29">
+        <OriginalImage Type="Image" ShapeTimeSpan="10000" AutoAdjust="true" DPI="96" medium_print_EnableFormat="true" medium_print_DPI="300" Folder="D:\Documents\My Projects\FireLight Admin 2.18\Content\Resources\ImagesUserGuide" ExportFormat="png" medium_print_ExportFormat="png" BorderColor="#4682b4" Border="solid" FileName="Capture{n}" EnableGrayScaleFormat="false" medium_screen_and__max_width__64_063em__ExportFormat="png" medium_screen_and__max_width__64_063em__DPI="96" medium_screen_and__max_width__40em__ExportFormat="png" Title="Plus Button" Alt="Plus Button" ComputedWidth="30" ComputedHeight="29" medium_print_OutputScaleFactor="3.12" medium_print_ColorDepth="32">SUkqALQBAACAAMpKR/gCDQeEQmFQuGQ2HQ+IRGJQt+K0tgABlFRQWJx2PR+QSGFPxXF2MFBQRyRSuWS2QvxXl+ME9OyqXTecTmDvxYGKME5NzadUOiR9+LEyRgmpmhUWnU+GPxZGaMExL02oVmoPxZmiMEtK1itWOhvxaGqMEpJ2KyW2XPxamyMElI2y3XeXrY3RgkI67WNrpwwgBsON2gAooFZXiHPxbnGMEdGX+tNdOz7Cu7EIBYYyGvxcHOMEZFZSstdPUlsOLDlFAK/PVFcnWMEVEaaWG0oDMAI81ESRAQjInPPxdHcAAIhobcU9sKEz4Rw4coH5WbGFv1eHnkkJCc2nNhRGnpOwAFA+qvsQp+r098kgoLwUXxGvCOLzFA+Kn1wl+l8PrkiAQD5v62J+l+P7kh+PsCwMxh+mAQTkh8PcHQeu5+mCQjkh6PMLwwtp+mEQzkh4O8QRCsZ+mGRDkh2OsUxUrJ+mIRTkh0OcZRmp5+mKRjkhyOMdx4op+mMRzkhwN0iSKoZ+mOSLkhuNkmycnJ+mQSbkhsNUrSum5+mSSrkhqNEvzAlp+mUS4AICABAA/gAEAAEAAAAAAAAAAAEEAAEAAAAeAAAAAQEEAAEAAAAdAAAAAgEDAAQAAAB6AgAAAwEDAAEAAAAFAAAABgEDAAEAAAACAAAAEQEEAAEAAAAIAAAAFQEDAAEAAAAEAAAAFgEEAAEAAAAdAAAAFwEEAAEAAACrAQAAGgEFAAEAAACCAgAAGwEFAAEAAACKAgAAHAEDAAEAAAABAAAAKAEDAAEAAAACAAAAPQEDAAEAAAACAAAAUgEDAAEAAAACAAAAAAAAAAgACAAIAAgAAHcBAOgDAAAAdwEA6AMAAA==</OriginalImage>
+        <Shapes />
+        <Variables />
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

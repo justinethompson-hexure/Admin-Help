@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="General.Online">
+    <head>
+        <link href="../../../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Review Queue More Info Reply email template guidelines and usage." />
+    </head>
+    <body>
+        <h1><a name="top"></a>Review Queue More Info Reply</h1>
+        <p>
+            <MadCap:snippetText src="../../../Resources/Snippets/Email/EmailColumnDesc.flsnp" />
+        </p>
+        <table style="border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;mc-table-style: url('../../../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Review Queue More Info Reply </caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Action, To Name/Email, From Name/Email, CC Address, Available Tags, and Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Action</p>
+                        <p>An email notification is sent to the reviewer when the agent replies to a More Info request within an Activity sent from the pre-submission or post-submission review queue reviewer.</p>
+                        <ul>
+                            <li>Email is sent whenever a user clicks <b class="Bold">Reply</b> in the More Info dialog that appears when a user opens an activity with a pending More Info Review Queue request.</li>
+                            <li>Email is sent each time <b class="Bold">Reply</b> is clicked. Note that multiple replies can be sent in the same activity request.</li>
+                        </ul>
+                        <p>Template Name: Review Queue More Info Reply</p>
+                        <ul>
+                            <li>This  template is available for sending for the pre-submission  review queue when you select the <b class="Bold">Allow Pre-Signature Review</b> or the <b class="Bold">Allow Post-Signature Review</b> checkbox in Product Configuration/<MadCap:xref href="../../../Product Configuration/Activities.htm" target="_blank" alt="Activities">Activities</MadCap:xref> page on the Activity Detail tab. </li>
+                            <li>This template is available for sending for the post-submission review queue when  a Review Queue is set up in Organization Configuration on the  <MadCap:xref href="../../ReviewQueue.htm" target="_blank" alt="Review Queue">Review Queue</MadCap:xref> page. Be sure to set the applicable reviewer access options on the Review Queue and Review Queue Access tabs in Organization Configuration on the <MadCap:xref href="../../Groups.htm" target="_blank" alt="Groups">Groups</MadCap:xref> page.</li>
+                        </ul>
+                        <p>Email Subject Line: Reviewer – More Info Received: &lt;APPLICATION_NAME&gt;</p>
+                        <p>Message:</p>
+                        <p class="Indent2">Dear &lt;REVIEWER_NAME&gt;,</p>
+                        <p class="Indent2">&lt;AGENT_NAME&gt; has replied to your request for More Info for the following case, &lt;APPLICATION_NAME&gt;. Please log into Firelight at your earliest convenience to review.</p>
+                        <p class="Indent2">&lt;MESSAGE&gt;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">To Name / Email</p>
+                        <ul>
+                            <li>Post-submission review queue: Uses the current preference email address of the reviewer that locked the order in the review queue. If the reviewer changes their User Email Address in Preferences after the order is locked for review, FireLight uses the most current address—not what was set at the time of the lock. If an email address is entered in Organization Configuration/<MadCap:xref href="../../ReviewQueue.htm" target="_blank" alt="Review Queue">Review Queue</MadCap:xref> page in the Email Group field, the email is sent to both the reviewer address and to the Email Group address.</li>
+                            <li>Pre-submission review queue: Uses the email address of the reviewer that locked the order in the review queue. </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">From Name / Email</p>
+                        <p>Owning Agent’s Full Name and User Email Address in Preferences<sup>2</sup><![CDATA[
+						]]></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">CC Address</p>
+                        <p>If <a href="../../Groups/App.htm#EnableCcSenderInAllRequests" target="_blank" alt="Enable Cc Sender In All Requests">Enable Cc Sender In All Requests</a> is set in Organization Configuration/Groups page on the App tab, cc email is sent to the ‘From Email’ address</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Available Tags<sup>1</sup></p>
+                        <p>&lt;AGENT_NAME&gt;<br />&lt;APPLICATION_NAME&gt;<br />&lt;APPLICATION_ID&gt;
+							<br />&lt;DATE_TIME&gt; (current datetime in UTC)
+						<br />&lt;MESSAGE&gt;<sup>2</sup><br />&lt;REVIEWER_NAME&gt; (name of first reviewer)<br />&lt;STATUS&gt;<br />ApplicationSearchItems<sup>4</sup> (e.g., add &lt;CLIENT_NAME&gt;)</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                        <p class="thead1">Notes:</p>
+                        <p>
+                            <MadCap:snippetText src="../../../Resources/Snippets/Email/EmailNote1.flsnp" />
+                        </p>
+                        <p colspan="5"><sup>2</sup> The &lt;MESSAGE&gt; tag populates the email with the agent's additional information for the reviewer. To receive the email, agents need to have the <b class="Bold">Send Message Center Emails</b> checkbox selected on the My Preferences page in FireLight.</p>
+                        <MadCap:snippetBlock src="../../../Resources/Snippets/Email/EmailNote4.flsnp" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:snippetBlock src="../../../Resources/Snippets/Email/EmailSeeAlso.flsnp" />
+        <p><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

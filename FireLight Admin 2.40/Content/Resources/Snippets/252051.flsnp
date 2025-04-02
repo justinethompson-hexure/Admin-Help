@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This feature will allow for more resiliency when there are connectivity issues with the FireLight email provider (SendGrid). Additionally, this enhancement will also enable FireLight to include the formatting (i.e., HTML) of emails for bounceback notifications. </p>
+        <p>Impacts: </p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Emails sent from FireLight is more resilient to connectivity issues and maintain formatting when bounceback notifications are sent</p>
+            </li>
+        </ul>
+    </body>
+</html>

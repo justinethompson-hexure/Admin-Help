@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HtmlImport
+  KeepSourceLinks="false"
+  ImportResourcesLocation="NoImport"
+  SourceFolders=""
+  ImportTopics="specific"
+  LastImport="2022-06-01T12:56:48.0530838-06:00"
+  ImportTopicsLocation="Content/Design/Common Tagging/">
+  <Files>
+    <Url
+      Source="../../../FireLight Admin 2.23/Content/Design/Common Tagging/Common Tags.htm"
+      AbsoluteSource="file:///d:/Documents/My Projects/FireLight Admin 2.23/Content/Design/Common Tagging/Common Tags.htm" />
+  </Files>
+  <ExcludedFiles />
+  <CollectedSourceFiles />
+  <SkippedSourceFiles />
+  <GeneratedFiles>
+    <Url
+      Source="../../Content/Design/Common Tagging/Common Tags1.htm"
+      TimeStamp="6/1/2022 12:56:44 PM" />
+    <Url
+      Source="../TOCs/Common Tags.fltoc"
+      TimeStamp="6/1/2022 12:56:47 PM" />
+  </GeneratedFiles>
+</HtmlImport>

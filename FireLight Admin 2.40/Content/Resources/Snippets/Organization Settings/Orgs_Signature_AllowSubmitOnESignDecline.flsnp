@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p> Select the <b class="Bold">Allow Submit on E-Sign Decline</b> checkbox to allow activities to be submitted when electronic signature is declined. This setting uses the carrier setting to override the distributor setting.  FireLight looks at the setting of the two organizations.  If the distributor has it cleared (unchecked) so that they do not receive submissions when e-signature is declined, but the carrier has the option selected (checked), the carrier still receives the transmission, but the distributor does not. </p>
+        <p>For distributors that want to review activities that were declined from e-signature (FLI_DECLINED_ESIGN), you can enable Allow Submit on E-Sign Decline in Organization Settings on the Signature tab.  Or, if you do not want activities that were declined e-signature to be transmitted to carriers that do have Allow Submit on E-Sign Decline enabled, the distributor will need to work with each carrier to have the carrier provider modified to not transmit the application.
+</p>
+        <p>
+            <b class="Bold">NOTE:</b> FLI_DECLINED_ESIGN is what is set when the agent clicks decline e-signature.  It is also a common tag value that can be set via rules if the client wants to decline e-signature based on something in the activity. And, if the firm does not support e-signature at all, they set that with the organization setting for the logged in organization.  Since you can use rules to set that value, the carrier could set it via rules, but if the carrier sets that value globally, all orders will skip the e-signature selection screen and decline e-signature.  “Allow Submit on E-Sign Decline” is a different setting.  That means, send me the data even if they do not e-sign and the FLI_DECLINED_ESIGN is true.
+See the spreadsheet in the <MadCap:xref href="../../../Design/Common Tagging/Common Tags1.htm" target="_blank" alt="Common Tags" title="Common Tags">Common Tags</MadCap:xref> topic for information about using the FLI_DECLINED_ESIGN common tag in rules.</p>
+    </body>
+</html>

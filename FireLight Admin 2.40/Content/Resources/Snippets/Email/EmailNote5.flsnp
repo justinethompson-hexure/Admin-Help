@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <sup>5</sup> Contact your Strategic Account Manager for a copy of the <i>FireLight Web Services</i> document for information about the batch processing web service. Refer to the <i>FireLight Platform User Guide</i> for information about the multi-life feature. To enable multi-life, in Organization Configuration/Groups select the <b>Enable Multi-Life</b> checkbox on the <MadCap:xref href="../../../Organization Configuration/Groups/App.htm">App</MadCap:xref> tab.</body>
+</html>

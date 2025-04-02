@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultReportFile
+  Tables="variable-suggestions,accessibility-suggestions,broken-bookmarks,cross-reference-suggestions,markup-suggestions,topics-with-concept-links-without-concept,topics-with-keyword-links-without-keyword,writing-suggestions,new-style-suggestions,replace-local-style-suggestions,snippet-suggestions,unused-bookmarks,used-bookmarks,index-keyword-suggestions"
+  Comment="This template includes all reports that offer suggestions for enhancing your project. Once the new report file is created, you can enable or disable any report from any group."></CatapultReportFile>

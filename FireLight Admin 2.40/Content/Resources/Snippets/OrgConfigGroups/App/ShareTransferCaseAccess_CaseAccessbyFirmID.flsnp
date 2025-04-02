@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p class="Indent">Select the <b class="Bold">Case Access by Firm ID</b> checkbox to limit user access to activities by firm ID. The firm ID can be set in the incoming request.  This firm ID is then used to filter the activities that are shown in the All Activities page, as well as the activities listed in the Review Queue page. For information about group options that affect case access, see <MadCap:xref href="../../../../Organization Configuration/Groups/Case Access and User Share Comparison.htm" target="_blank" alt="Case Access and User Share Comparison">Case Access and User Share Comparison</MadCap:xref>.</p>
+        <p class="Indent">The carrier or distributor sets up Firm IDs for their FireLight Access users or through the 1228 when users SSO in to FireLight. Firm ID is required for FireLight Access users, but is not required for SSO users. Firm ID can be as simple as the organization ID or a number such as "1," or it can be a hierarchical Firm ID. FireLight filters Firm ID by comparing the Firm ID of the application using a "starts with" comparison. The Firm ID is pipe (|) delimited between hierarchical levels. Each level can be defined with any alphanumeric designations (for example, by Firm|Region|Branch|BranchAgent as in ABC|Western|ABC001|Agent0001, ABC|1|001|0001, etc.).</p>
+        <p class="Indent">Following are example Firm IDs for various manager level users and agent level users for the imaginary ABC firm:</p>
+        <ul>
+            <li>User 1 logs in as ABC|1|001|0001 – This would be an agent at the lowest level in the hierarchy.</li>
+            <li>User 2 logs in as ABC|1|001 – This would be a branch manager for branch 001. They would be able to see every application that “starts with” ABC|1|001, e.g., ABC|1|001|0001, ABC|1|001|0002, etc.</li>
+            <li>User 3 logs in as ABC|1. This would be a regional manager for region 1. They would be able to see every application that “starts with” ABC|1, e.g., ABC|1|001|0001, ABC|1|002|0001, etc., but they would <strong>not</strong> be able to see applications in other regions, such as region 2, i.e., ABC|2|001|0001.</li>
+            <li>User 4 logs in as ABC. This would be a top manager of the entire hierarchy. They would be able to see every application in the system. </li>
+        </ul>
+        <p class="Indent">
+            <b class="Bold">NOTE:</b> When Case Access by Firm ID and Enable All Activities User Share options are both selected, the "On Behalf of" list becomes available on the Create [Activity] dialog in FireLight. This is useful for firms that have assistants creating activities on behalf of agents. If the Case Access by Firm ID and Enable All Activities User Share options are both selected and the user has access to multiple offices or firms, an "Office" list becomes available on the Create [Activity] dialog in FireLight in addition to the  "On Behalf of" list. The user selects a user and an office for the new activity.</p>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileProperties>
+    <ImageOverlay Profile="D:\Documents\My Profiles\iConnectTopProfile.capro" ProfileHash="51bb48c438175eb98099ee3e3c7b6b12aed78555" ScreenRectangle="3218,259,25,24">
+        <OriginalImage Type="Image" ShapeTimeSpan="10000" Folder="D:\Documents\My Projects\iConnect_TopNavigation\Content\Resources\Images" Border="solid" BorderWidth="1" BorderColor="#000000" DPI="96" ExportFormat="jpg" ImageScaleToWidth="0" medium_print_EnableFormat="true" medium_print_DPI="300" medium_print_ExportFormat="jpg" AutoAdjust="true" CropRectangle="0,1,24,23" EnableCropRectangle="true" EnableGrayScaleFormat="false" Alt="Expand All/Collapse All Button" Title="Expand All/Collapse All Button" ComputedWidth="26" ComputedHeight="25" medium_screen_and__max_width__64_063em__ExportFormat="jpg" medium_screen_and__max_width__64_063em__DPI="96" medium_screen_and__max_width__40em__ExportFormat="jpg" medium_print_OutputScaleFactor="3" medium_print_JPEGQuality="100" medium_screen_and__max_width__64_063em__OutputScaleFactor="1" Format="tiff">SUkqAMQBAACAP+BP8AQWDQeEQmFQuGQ2HQ+IQgAxMAwN/vKMAB5xsAP2PRGQSGRQoByUAAuUAAISuJRR4y9/vaZAAIzUAAecSOdTuHvmfAB4UEAAiiAAH0cARQAuSmP8KU8AAWpTyqVWHPusAB2VsABuvUmKOGxP8OWWrWe0Q2mOQAB63WCJ2Jwv+vBu03e8ABy3u22+lXJ/hrBXnCVZzYe+h64AHABnHYXITtz5PE4vG4+HnvNAAQ50AGTQAA5aPIwpHaeIZNz5W/2ML6+IH3ZAAQbUAGPcABO7vSwncGOIOnhayw67Yb3kQ7hOniXGxhbocnpQt1dXm4yxhXtRA/90AB/wAAxeMAHbzdMAIr1RB1+3r4CnhTud7aiAAGH8ABP/v0fgwogrZ2PesYJwK9EDoKdsFQGuYJQdBEDndCUGH/BwJIgQMMu+8IwQ6AA8xA9BDxGiEJHdCiVggiBBxZDYPgAL0YgAUUaPRGIvIgoJ4RQlkIOnHUKKOB8fOml54woB0kyI6SMHlCgGyhJbko2ebrrWf6UAWACBykvCKAAeswq6r6lHfMx/nxNIAANNktoFLqdy+rB9punMUsXOE8oMgIAQAP4ABAABAAAAAAAAAAABBAABAAAAGgAAAAEBBAABAAAAGQAAAAIBAwAEAAAAigIAAAMBAwABAAAABQAAAAYBAwABAAAAAgAAABEBBAABAAAACAAAABUBAwABAAAABAAAABYBBAABAAAAGQAAABcBBAABAAAAvAEAABoBBQABAAAAkgIAABsBBQABAAAAmgIAABwBAwABAAAAAQAAACgBAwABAAAAAgAAAD0BAwABAAAAAgAAAFIBAwABAAAAAgAAAAAAAAAIAAgACAAIAAB3AQDoAwAAAHcBAOgDAAA=</OriginalImage>
+        <Shapes />
+        <Variables />
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

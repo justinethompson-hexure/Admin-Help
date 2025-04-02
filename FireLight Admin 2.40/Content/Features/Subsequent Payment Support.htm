@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Setup and usage instructions for Subsequent Payment (Sub Pay), which adds the framework to support the collection of very basic Subsequent Premium data and the submission of the DTCC Sub file (30-35) as an outbound feed. FireLight will have generic data items that can be used when carriers create their own SubPay forms. A template form can be provided  if requested by the client. SubPay e-submissions can be processed with DTCC Money Settlement if both firms are settling members." />
+    </head>
+    <body>
+        <h1><a name="Top"></a>Subsequent Payment Support</h1>
+        <p>
+            <MadCap:conditionalText MadCap:conditions="General.Online">See <a href="../Resources/PDFGuides/SubPay Carrier Mapping and Configuration_V3.pdf" target="_blank" title="SubPay Carrier Mapping and Configuration" alt="SubPay Carrier Mapping and Configuration" MadCap:conditions="General.Online">SubPay Carrier Mapping and Configuration</a> for additional information.</MadCap:conditionalText>
+        </p>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Subsequent Payment Support Feature</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>The Subsequent Payment (Sub Pay) feature adds the framework to support the collection of very basic Subsequent Premium data and the submission of the DTCC Sub file (30-35) as an outbound feed. FireLight<sup MadCap:conditions="General.Online">®</sup> will have generic data items that can be used when carriers create their own SubPay forms. A template form can be provided  if requested by the client.  SubPay e-submissions can be processed with DTCC Money Settlement if both firms are settling members.</p>
+                        <p><b>NOTE:</b> See implementation details for DTCC Money Settlement.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Client/FireLight Setup</p>
+                        <p>Clients need to work with their Strategic Account Manager to update their back end feeds.</p>
+                        <ul>
+                            <li>
+                                <p>There is not an additional license fee; however, there is a new (lower) transaction fee to support subsequent premiums. If a client already has Annuity Line of Business active and would like to add Sub Pay transactions, contact your Strategic Account Manager to get the pricing details and complete an addendum to your contract to support this new feature.</p>
+                            </li>
+                            <li>The inbound SSO will need to be updated to allow for additional contract level details to be pre-filled into the application. </li>
+                            <li>The SSO&#160;will have the 508 ACORD TransType to launch directly into a Sub Pay order.</li>
+                            <li>Carriers will need to set up Sub Pay forms and establish some rules at the product and state level for when the Sub Pay changes are allowed.</li>
+                            <li>Clients need to work with the integration team to change their DTCC file to support the DTCC file changes.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Admin Setup</p>
+                        <ol>
+                            <li>Designer/<MadCap:xref href="../Design/Form Library/Form Library.htm" alt="Form Library">Form Library</MadCap:xref> page: upload a Sub Pay form on the Form Library page. <MadCap:variable name="General.ProductName" /> has a generic form that can be used or carriers can create their own form to define the requirements. </li>
+                            <li>
+                                <p>Designer/<MadCap:xref href="../Design/Forms/Form Designer.htm" alt="Form Designer">Form Designer</MadCap:xref> page: open the Sub Pay form on the form Designer page and ensure the following data elements are included on the form:</p>
+                                <ul style="list-style-type: circle;">
+                                    <li> Policy Number</li>
+                                    <li>Owner Name</li>
+                                    <li>Product Type and Jurisdiction (optional)</li>
+                                    <li>Qualified Account indicator, Tax Year (if qualified money)</li>
+                                    <li>Additional Amount (carriers can code minimum and maximum rule on this field)</li>
+                                    <li>Funding sources (ACH, Wire, Brokerage Account)</li>
+                                </ul>
+                                <p>
+                                    <img src="../Resources/ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" /> If money settlement is being used, you need the DTCC Member ID for the settling firm in Organization Configuration/Organization Settings on the Organization tab and money settlement setup (see the DTCC Money Settlement implementation details).</p>
+                            </li>
+                            <li>Organization Configuration/Groups page/<MadCap:xref href="../Organization Configuration/Groups/Activity Access.htm" alt="Activity Access">Activity Access</MadCap:xref> tab:  select the <b>Sub Pay</b> checkbox for the transaction type for products that will support Sub Pay.  (If the group is also allowed to create new business applications, ensure the <b>Application</b> checkbox is selected for the group.) If you created a generic Subsequent Payment product, select the Subsequent Payment checkbox on the <strong>Product Access</strong> tab.</li>
+                            <li>
+                                <p>Product Configuration/<MadCap:xref href="../Product Configuration/Activities.htm" alt="Activities">Activities</MadCap:xref> page:</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>
+                                        <p>In the grid at the top of the page, select the <b class="Bold">Sub Pay</b> activity. </p>
+                                    </li>
+                                    <li>
+                                        <p>Ensure <b class="Bold">ACORD Type</b> is set to <b class="Bold">Sub Pay (508)</b>.</p>
+                                    </li>
+                                    <li>
+                                        <p>Update the settings for your organization.</p>
+                                    </li>
+                                    <li>
+                                        <p>Enter the <b class="Bold">Continue/Apply Label</b>, for example, enter <b class="Bold">Apply</b>.</p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>Product Configuration/<MadCap:xref href="../Product Configuration/Products.htm" alt="Products">Products</MadCap:xref> page: </p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>Select a Sub Pay product in the upper grid.</li>
+                                    <li>In the <b>States Approved</b> grid, select the checkboxes in the <b>Approved</b> column for each state where Sub Pay is allowed for the selected product.</li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>Product Configuration/<MadCap:xref href="../Product Configuration/Packages.htm" alt="Packages">Packages</MadCap:xref> page: add the subsequent payment forms to a package and set the <b>ACORD Type</b> to <b>SubPay (508)</b>. </p>
+                            </li>
+                            <li>
+                                <p>Product Configuration/<MadCap:xref href="../Product Configuration/SalesAgreements.htm" alt="Sales Agreements">Sales Agreements</MadCap:xref> page: add subsequent payment maintenance forms to a product by adding the subsequent payment package as part of a specific maintenance type package for the product. </p>
+                                <p class="Indent">
+                                    <img src="../Resources/ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" /> You can also create a Sub Pay only product with Subsequent Payment as the only approved Transaction Type on the Products page. Then add a package and sales agreement for the product with only the subsequent payment forms included in the assigned package.</p>
+                            </li>
+                            <li style="font-weight: normal;">
+                                <p> Utilities/Reports page/<MadCap:xref href="../Utilities/Reports/Admin Reports.htm" alt="Admin Reports">Admin Reports</MadCap:xref>: the Agent Report and Agent Activity Report list the transaction type to allow for tracking of application, subsequent payment, and post issue transactions. </p>
+                                <p>Activity report updates include: </p>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>Product Line Submission Summary report now contains counts only for new business applications</p>
+                                    </li>
+                                    <li>
+                                        <p>Detailed Submission Report by Channel now contains transaction specific counts</p>
+                                    </li>
+                                    <li>
+                                        <p>An additional transaction column has been added to the detail reports - Detail Submission, DTI Detail Submission, Detail Decline Sign, Detail Submission by Channel, Detail Submission by Carrier, Pending Orders, Pending Deletion, Pending Purge, and Purged Applications.</p>
+                                    </li>
+                                </ul>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>Additional submission summary report listing submission counts by transaction type added</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">User Experience</p>
+                        <ol>
+                            <li>
+                                <p>On the FireLight <b>Home</b>, click <b>Subsequent Payment</b> on the right. </p>
+                                <p>
+                                    <img src="../Resources/ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" /> If the order initiates on the client side and the SSO into FireLight has the 508 ACORD TransType to launch directly into a Sub Pay order, skip steps 1, 2 and 3.</p>
+                            </li>
+                            <li>
+                                <p>On the <b>Create New  Subsequent Payment</b> page, select a <b>Jurisdiction</b> and <b>Product Type</b> in the lists and then click a product name.</p>
+                            </li>
+                            <li>On the product <b>Required Forms/Optional Forms</b> page, select the optional forms to include and click the <b>Create</b> button. On the <b>Create</b> dialog, type a name for the application and click the <b>Create</b> button.</li>
+                            <li>Fill in updated information on the application/subsequent payment forms and continue the normal application process through signature capture and submission.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-LightRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help  – Design Documents: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 136175, (Subsequent Premium Addition Form, and AppSub-layouts.xls) </MadCap:conditionalText><a href="../Resources/DesignDocs/136175-DesignApproachSubpay_v3.pdf" target="_blank" title="CMR 136175" alt="CMR 136175" MadCap:conditions="General.Online">CMR 136175</a><MadCap:conditionalText MadCap:conditions="General.Online"> (<a href="../Resources/DesignDocs/136175-SubsequentPremiumAdditionForm.pdf" target="_blank" title="Subsequent Premium Addition Form" alt="Subsequent Premium Addition Form">Subsequent Premium Addition Form</a> and <a href="../Resources/DesignDocs/136175-AppSub-Layouts.xls" target="_blank" title="Application Sub-Pay Layouts Spreadsheet" alt="Application Sub-Pay Layouts Spreadsheet">AppSub-layouts.xls</a>)</MadCap:conditionalText></p>
+                        <p>User Guide  –  <em>FireLight Platform User Guide</em>, New Activity section, <MadCap:conditionalText MadCap:conditions="General.PDF">"Subsequent Payment" </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../UserGuide/New Activity/Subsequent Payment.htm" alt="Subsequent Payment">Subsequent Payment [User Instructions]</MadCap:xref> </MadCap:conditionalText>topic </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a name="top"></a><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

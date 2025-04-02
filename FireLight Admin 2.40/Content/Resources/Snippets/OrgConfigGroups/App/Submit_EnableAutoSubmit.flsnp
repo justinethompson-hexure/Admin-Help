@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Select the <strong>Enable Auto Submit</strong> checkbox to enable the automatic submission of applications when signatures are complete. This option can be overridden by writing a rule using the FLI_AUTO_SUBMIT data item.  <b class="Bold">NOTE:</b> The State Match Warning option in <MadCap:xref href="../../../../Design/Forms/Signature Box.htm" target="_blank" alt="Signature Box">Signature Box</MadCap:xref> controls on forms does not work when Enable Auto Submit is selected. Allow Not In Good Order Submittals option and Enable Auto Submit option can be selected with the Enable HTTP Redirect on Submit option.</p>
+        <p>&#160;</p>
+        <p>Automatically submit an application when “Enable Auto Submit” group option is enabled and all signatures are complete for the application, and Pre-Submit (Manual) Review is not available for the application. If e-sign is declined from the consent to e-signature and Pre-Submit (Manual) Review is not available. <b>NOTE</b>: Auto submit does not occur when the e-signature process has been accepted and decline to sign occurs in the signing ceremony on the signature pad view.</p>
+    </body>
+</html>

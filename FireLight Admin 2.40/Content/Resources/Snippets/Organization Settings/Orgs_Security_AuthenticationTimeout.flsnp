@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>In the <b class="Bold">Authentication Timeout</b> text box, enter the number of minutes for the authentication timeout. This is the idle time in minutes before a <MadCap:variable name="General.ProductName" /><sup MadCap:conditions="General.Online">®</sup> session will expire and require the user to re-authenticate.  A setting of "0" will use the <MadCap:variable name="General.ProductName" /> default host setting of 60 minutes. NOTE: With auto save transfer/share with another user in FireLight, the message about another user editing is only displayed to the other user until the authentication timeout is reached. Once this time is reached, the user no longer sees a message about the other user potentially making edits/changes.</body>
+</html>

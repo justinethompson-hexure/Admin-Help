@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>In the <b class="Bold">Expiration Reminder Frequency</b> list, select the frequency (Never, Daily, Weekly) of agent and client expiration reminder emails. This allows the organization to send multiple warnings to the agent and client using any of the expiration warning email templates in <MadCap:xref href="../../../Organization Configuration/Email.htm" alt="Email">Email</MadCap:xref>. Add the &lt;EXPIRY_DAYS&gt; variable in the expiration warning email templates to convey the number of days until expiration.   "Daily" frequency emails go out at 6:00 AM UTC. "Weekly" frequency emails go out on Sunday at 7 AM UTC.</body>
+</html>

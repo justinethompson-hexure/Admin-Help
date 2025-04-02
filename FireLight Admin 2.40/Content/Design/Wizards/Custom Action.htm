@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+	<head>
+		<link href="../../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+		<link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h1><a name="top"></a>Custom Action</h1>
+		<p class="note" MadCap:conditions="General.Postpone"><b class="Bold">IMPORTANT!</b> In parent/child activities, you may need to write a rule to disable the use of custom action buttons that could change data in the child activity when coming from a pre-sale activity.</p>
+		<p>
+			<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WzdLockUnlock.flsnp" />
+		</p>
+		<h2>Purpose</h2>
+		<p class="Indent">Provides a button field to initiate a custom action on a wizard. The button and associated fields often belong to a unique Data Group. Clicking or tapping the button field initiates the custom action, for example, opening a custom list, uploading a custom file, calling a CRM to get data, initiating a carrier-specific custom action, etc. Associated fields display the results of the custom action, for example, custom list data. </p>
+		<p class="Indent">FireLight supports triggering a custom action call from any page within the same package, regardless if the button or fields to trigger that call are on that same page. The call can only occur when a custom action button is enabled. If the button is disabled, the call cannot occur. Additionally, a call can only occur on a single activity, meaning that the call can't occur from a presale when the custom action button is in an application.   The <a href="../../Product Configuration/Rule Sets/AdvancedRulesCategoryElementDefinitionsReference.htm#clickcustomaction" target="_blank" title="clickcustomaction" alt="clickcustomaction">clickcustomaction</a> rule can reside on any form or wizard in the package and trigger a custom action button.</p>
+		<p class="Indent"><b class="Bold">NOTE:</b> The value of the Custom Action click count is incremented with each click. See "Add a Rule to Disable a Custom Action Button After Three Attempts" below for a sample rule to control the number of times the Custom Action button can be clicked.<br /></p>
+		<ol>
+			<li>Drag a <b class="Bold">Custom Action</b> control from the right pane to the wizard page.</li>
+			<li>On the page, double-click the <b class="Bold">Custom Action</b> to open the Custom Action Properties dialog.</li>
+			<li>
+				<p>
+				<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/DataItemID.flsnp" /> </p>
+			</li>
+			<li>Enter the remaining field properties and click <b class="Bold">OK</b> to save your changes.</li>
+			<li>On the upper left, click <b class="Bold">SAVE WIZARD</b> to save the wizard, which unlocks the wizard for editing by other users.  </li>
+			<li>
+				<MadCap:snippetText src="../../Resources/Snippets/Rules/UpdateRulesWizard.flsnp" />
+			</li>
+		</ol>
+		<h2>Properties</h2>
+		<table style="width: 100%;mc-table-style: url('../../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+			<caption class="Table">Custom Action Properties </caption>
+			<col style="width: 260px;" class="TableStyle-2017_IT-Simple2-Column-Regular" />
+			<col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+			<thead>
+				<tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+					<th class="TableStyle-2017_IT-Simple2-HeadE-Regular-Header1">Property</th>
+					<th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Place Field on a New Row</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-PlaceFieldOnNewRow.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Field Name</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows"> <MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/FieldPropsFieldName.flsnp" /> This does not need to be unique among all fields in the wizard. </td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Text</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">The display name of the custom action field.</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Width</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-Width.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Mobile Width</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-MobileWidth.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Class Name</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-ClassName.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="Bold">Help Text</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<MadCap:snippetText src="../../Resources/Snippets/DesignerFormsWizards/WZD-HelpText.flsnp" />
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows"><b class="Bold">Data Group</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<p> Select a Data Group for the custom action button and associated fields that require a Data Group. Set Data Group and Data Group Property values in each field that is associated with a CRM or Custom List action button. When Custom Action is set to Custom List, set Data Group to the Custom List number (Custom List 1, Custom List 2, etc.), and set Custom List to the name of a Custom List that is available in the Custom Lists page in Organization Configuration. <strong>NOTE:</strong> Custom File Upload does not require a Data Group selection.</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows"><b class="TableBlue">Custom Action</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows"><b class="TableBlue">Select the type of Custom Action.</b>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">
+						<p class="Indent"><b class="Bold">CRM</b>
+							<p>&#160;</p>
+						</p>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<p>    Set the custom action button to open a Customer Relationship Management (CRM) program, such as Redtail, Salesforce, Whitepages, 1035YellowPages, etc., or a custom CRM from your organization. You must select a Data Group and a CRM Type. </p>
+						<ul>
+							<li>
+								<p>Select a <b class="Bold">Data Group</b> for the type of party (e.g., Owner, Annuitant, Beneficiary, etc.) and set the CRM Type to define the  CRM (Redtail, Salesforce, etc.) from which to pull the data. </p>
+								<p>For Cooperative Technologies 1035 YellowPages, set Data Group to the <b class="Bold">1035 Exchange Ceding Company {#}</b> number (1035 Exchange Ceding Company 1, 1035 Exchange Ceding Company 2, etc.).</p>
+							</li>
+							<li>
+								<p>Select a <b class="Bold">CRM Type</b>  option in the list: </p>
+								<p><b class="Bold"> Preferences</b> (pulls data from the CRM set up on the user's Preferences page in FireLight), <b class="Bold">Redtail</b>,<b class="Bold"> Salesforce</b>, <b class="Bold">Whitepages</b>, <b class="Bold">1035YellowPages</b> (Cooperative Technologies 1035 YellowPages), <b class="Bold">Custom</b>, or <b class="Bold">NPIS</b> (National Provider Identifier Standard database for looking up a health care provider or office).  </p>
+							</li>
+						</ul>
+						<p>Set Data Group and Data Group Property values in each field that is associated with a CRM.</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">
+						<p class="Indent"><b>Custom Action</b>
+						</p>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p>Set the button to initiate a custom action for your organization. Some Custom Actions are coded by the provider specifically for your organization. You must select a Custom Action Type and Custom Action Parameter.</p>
+						<p><b class="Bold">Custom Action Type</b> select a custom action type in the list:</p>
+						<ul>
+							<li><b>Regular Provider Action </b> initiates a custom provider action that allows the Provider to  send the binary PDF data as well as the document tag associated with the PDF to add a document or replace an existing uploaded PDF during the data entry process. You must enter a  value in Custom Action Parameter for the action  and a document tag value (e.g., Upload Sample Doc) that is i the provider for your organization. Audit history shows the initial addition and when changes occurred to the document. <b>NOTE:</b> To add this ability to your organization's Provider, contact your Strategic Account Manager. </li>
+							<li><b>Print</b> initiates a print action. Enter <b class="Bold">Print</b> in <b class="Bold">Action Parameter</b> to print all forms with the same attachment TC type as the current form. Multiple TC values (separated by commas) can be passed, and in this case, all forms with matching Attachment Type TC values will be included (and no special logic for 73 will happen if included in the list). For example: Print|71,72,73,99,101.</li>
+							<li>See Custom Action Parameter for more information.</li>
+							<li><b class="Bold">Quick View</b> launches Quick View for illustration calculations. </li>
+							<li><b class="Bold">GIACT</b> initiates a web service call to GIACT Systems for banking account verification and authentication. See <MadCap:xref href="../../Features/GIACT Services Integration.htm" alt="GIACT Services Integration">GIACT Services Integration</MadCap:xref> in Features for setup instructions. </li>
+							<li><b class="Bold">LexisNexis</b> initiates a web service call to LexisNexis for client identity validation or risk classifier information. For client identity validation, enter <b class="Bold">LexisNexis</b> in <b class="Bold">Custom Action Parameter</b>. For risk information, enter <b class="Bold">LexisNexisRisk</b> in <b class="Bold">Custom Action Parameter</b>. See <MadCap:xref href="../../Features/LexisNexis Client Identification Verification Integration Data Entry.htm" alt="LexisNexis Client Identification Verification During Data Entry">LexisNexis Client Identification Verification During Data Entry</MadCap:xref> and <MadCap:xref href="../../Features/LexisNexis Risk Classifier Integration.htm" alt="LexisNexis Risk Classifier Integration">LexisNexis Risk Classifier Integration</MadCap:xref> in Features for setup instructions and feature information.</li>
+							<li>
+								<p><b class="Bold">Multiple Action</b> initiates a sequence of actions. You must enter parameters in Custom Action Parameter. See <MadCap:xref href="../../Features/Create User, Transfer, Email Custom Action (Concierge Paper Workflow).htm" alt="Create User, Transfer, Email Custom Action (Concierge Paper Workflow)">Create User, Transfer, Email Custom Action (Concierge Paper Workflow)</MadCap:xref> topic in Features for detailed information. </p>
+							</li>
+							<li>
+								<p><b class="Bold">APPS</b> initiates a web service call to the APPS Scheduled4Real paramed online ordering system. Enter the applicable Custom Action Parameter for the action taken by the APPS custom action button: <b class="Bold">APPSCheckAvailability</b>, <b class="Bold">APPSMakeReservation</b>, or <b class="Bold">SubmitParamedOrder</b>. Ensure Data Group is set to Insured or Other Insured as applicable.</p>
+							</li>
+							<li>
+								<p><b>Data Entry Review</b> initiates a web service call to the Data Entry Review process that includes transmission of PDF documents and corresponding metadata.</p>
+							</li>
+							<li>
+								<p><b class="Bold">ExamOne</b> initiates a web service call to the ExamOne ScheduleNow paramed online ordering system. Enter the applicable Custom Action Parameter for the action taken by the ExamOne custom action button: <b class="Bold">ExamOneGetMobileTimes</b>, <b class="Bold">ExamOneConfirmMobileTimes</b>, <b class="Bold">ExamOneGetInCenterLocations</b>, <b class="Bold">ExamOneGetInCenterTimes</b>, <b class="Bold">ExamOneConfirmInCenterTime</b>, <b class="Bold">SubmitParamedOrder</b> or <b class="Bold">SubmitHealthPiQtureOrder</b>. </p>
+								<p>Ensure Data Group is set to Insured or Other Insured as applicable.</p>
+							</li>
+							<li MadCap:conditions="General.Postpone">
+								<MadCap:conditionalText MadCap:conditions="General.Postpone"><strong>Launch Morningstar</strong> initiates a call to Morningstar Intelligence Tool.</MadCap:conditionalText>
+							</li>
+						</ul>
+						<p><b class="Bold">Custom Action Parameter</b>  Add an action parameter for the selected Custom Action Type.</p>
+						<ul>
+							<li><b class="Bold">Regular Provider Action</b> – When Custom Action Type is set to Regular Provider Action, enter an action and a document tag value (e.g., enter <b class="Bold">Upload Sample Doc</b>) that is in the provider for your organization. This allows the Provider to  send the binary PDF data as well as the document tag associated with the PDF to add a document or replace an existing uploaded PDF during the data entry process.</li>
+							<li><b class="Bold">Print</b> – When Custom Action Type is set to Print, leave Custom Action Parameter blank to print all forms. Type <b>Print</b> in Custom Action Parameter to print all forms with the same Attachment TC type as the current form (this is the Attachment TC setting on the form in the Form Library). To print all forms with a specific Attachment TC type, type <b class="Bold">Print|[Attachment TC type]</b>. For example, to print forms in the Form Library with an Attachment TC type of 73 (in ACORD 1035 Exchange Forms, Attachment TC type = 73), type <b>Print|73</b> in Custom Action Parameter.  For an example, see the <MadCap:xref href="../../Features/Cooperative Technologies 1035 Yellow Pages.htm" alt="Cooperative Technologies 1035Yellow Pages">Cooperative Technologies 1035Yellow Pages </MadCap:xref> topic in Features.</li>
+							<li><b class="Bold">GIACT</b> – When Custom Action Type is set to GIACT, ensure <b class="Bold">GIACT</b> is in Custom Action Parameter.</li>
+							<li><b class="Bold">LexisNexis</b> – When Custom Action Type is set to LexisNexis for client identity validation, ensure <b class="Bold">LexisNexis</b> is in Custom Action Parameter. </li>
+							<li><b class="Bold">LexisNexisRisk</b> – When Custom Action Type is set to LexisNexis for risk classifier information, ensure <b class="Bold">LexisNexisRisk</b> is in Custom Action Parameter. </li>
+							<li><b class="Bold">Multiple Action</b> - When Custom Action Type is set to Multiple Action, select or enter the applicable action parameters. The format for entering parameters is "parameter 1," "parameter 2," etc. As the sample naming implies, the parameters identify the action and the entry order identifies the action sequence. It is not necessary to number parameters, e.g., CreateUser, TransferActivity, EmailUser. See the <MadCap:xref href="../../Features/Create User, Transfer, Email Custom Action (Concierge Paper Workflow).htm" alt="Create User, Transfer, Email Custom Action (Concierge Paper Workflow)">Create User, Transfer, Email Custom Action (Concierge Paper Workflow)</MadCap:xref> topic in Features for detailed information.</li>
+							<li><b class="Bold">APPSCheckAvailability</b>  - When Custom Action Type is set to APPS, enter APPSCheckAvailability in Custom Action Parameter for the button that checks for paramed exam availability.</li>
+							<li><b class="Bold">APPSMakeReservation</b>  - When Custom Action Type is set to APPS, enter APPSMakeReservation in Custom Action Parameter for the custom action button that makes the paramed exam reservation.</li>
+							<li><b>DataEntryReview  </b>-<b> </b>When Custom Action Type is set to DataEntry, enter DataEntryReview in Custom Action Parameter for the custom action button that makes Data Entry Review available.</li>
+							<li><b class="Bold">ExamOneGetMobileTimes</b> - When Custom Action Type is set to ExamOne, ensure ExamOneGetMobileTimes is in the Custom Action Parameter for the custom action button that gets the times available for mobile paramed exams.</li>
+							<li><b class="Bold">ExamOneConfirmMobileTimes</b> -  When Custom Action Type is set to ExamOne, enter ExamOneConfirmMobileTimes in the Custom Action Parameter for the custom action button that confirms the time available for the ExamOne mobile paramed exam.</li>
+							<li>
+								<p><b class="Bold">ExamOneGetInCenterLocations</b> - When the Custom Action Type is set to Exam One, enter ExamOneGetInCenterLocations in the Custom Action Parameter for the available ExamOne In Center locations.</p>
+							</li>
+							<li>
+								<p><b class="Bold">ExamOneGetInCenterTimes</b> - When the Custom Action Type is set to Exam One, enter ExamOneGetInCenterTimes in the Custom Action Parameter for the available ExamOne In Center times.</p>
+							</li>
+							<li>
+								<p><b class="Bold">ExamOneConfirmInCenterTime</b> - When the Custom Action Type is set to Exam One, enter ExamOneConfirmInCenterTimes in the Custom Action Parameter for confirmation of the ExamOne In Center paramed exam time.</p>
+							</li>
+							<li>
+								<p><b class="Bold">SubmitParamedOrder</b> - When the Custom Action Type is set to APPS or ExamOne, enter SubmitParamedOrder in the Custom Action Parameter for the custom action button that submits the paramed exam order.</p>
+							</li>
+							<li>
+								<p><b class="Bold">SubmitHealthPiQtureOrder</b> - When the Custom Action Type is set to ExamOne, enter SubmithealthPiQtureOrder in the Custom Action Parameter for the custom action button that submits the HealthPiQture order.</p>
+							</li>
+							<li MadCap:conditions="General.Postpone">
+								<MadCap:conditionalText MadCap:conditions="General.Postpone">For Morningstar custom action button, set Custom Action Parameter to <b>Morningstar</b>. See <MadCap:xref href="../../Features/Morningstar Integration.htm" alt="Morningstar Integration">Morningstar Integration</MadCap:xref> in Features for setup instructions.</MadCap:conditionalText>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">
+						<p class="Indent"><b>Custom File Upload </b>
+						</p>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<p>Set the button to launch a Documents dialog in <MadCap:variable name="General.ProductName" />. In Documents, if the document type is not found in the Document Type list, it is automatically enabled regardless of the Admin setting. Also use the Custom File Upload setting to upload image files to the Documents dialog if image files are allowed. <MadCap:conditionalText MadCap:conditions="General.Online">See the <MadCap:xref href="../../UserGuide/FireLight Basics/Other Actions/Documents.htm" title="Documents" alt="Documents">Documents [User Instructions]</MadCap:xref> dialog in Other Actions for user instructions.</MadCap:conditionalText></p>
+						<p>Enter the <b class="Bold">Type of Doc to Upload</b> and determine whether to select the following options:</p>
+						<ul>
+							<li>
+								<p><b class="Bold">Allow Non PDF File</b>   – If non-pdf image files and .xps documents are allowed, select this checkbox. The following image file types are allowed: .jpg, .tiff, .png, .gif, and .bmp. After upload, the image files are converted into .pdf files and stored the same as other files.</p>
+							</li>
+							<li>
+								<p><b class="Bold">Disable Change Document Type</b>   – Select the checkbox to not allow the agent to change the Document Type. Clear the checkbox to allow the agent to change the Document Type.</p>
+							</li>
+						</ul>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">
+						<p class="Indent"><b>Custom List </b>
+						</p>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p>Set the custom action button to access a Custom List that was uploaded for your organization. You must select a custom list in Custom List and select a Custom List number in Data Group. </p>
+						<ul>
+							<li>
+								<p>In <b class="Bold">Data Group</b>, select the <b class="Bold">Custom List {#}</b> number (Custom List 1, Custom List 2, etc.).</p>
+							</li>
+							<li>
+								<p>In <b class="Bold">Custom List</b>, select the Custom List Name for the button to access. See "Example: Custom Action with Custom List for Occupations" below. The list options are the names of the custom lists that exist on the Custom Lists page in Organization Configuration. See <MadCap:xref href="../../Organization Configuration/Custom Lists.htm" alt="Custom Lists">Custom Lists</MadCap:xref> for guidelines and instructions for adding custom lists to FireLight Admin.</p>
+							</li>
+						</ul>
+						<p>You can add up to nine fields (e.g., Text Box controls) for displaying custom list column data. In each field that receives the custom list data, be sure to set the Data Group to the same custom list number as the Custom List field and select the Data Group Property.  See <MadCap:xref href="../../Organization Configuration/Custom Lists.htm" alt="Custom Lists">Custom Lists</MadCap:xref> in Organization Configuration for instructions to add, update and delete custom lists in <MadCap:variable name="General.ProductName" /> Admin.</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-DarkerRows">
+						<p class="Indent"><b class="Bold">External Source</b>
+						</p>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">Set the custom action button to designate an external source that is used. The External Source option is available only in wizards. Select an External Source Type.<p><strong>External Source Type</strong>  ties the selected API to the custom action button that is used to launch the underwriting interview. </p><ul><li><p>Select <b class="Bold">Aura Next</b> in External Source Type. See <MadCap:xref href="../../Features/RGA Aura Next Integration.htm" alt="RGA Aura Next Integration">RGA Aura Next Integration</MadCap:xref> in Features for setup information.</p><ul style="list-style-type: circle;"><li><p>Enter the <b class="Bold">External Source Project ID</b> and <b class="Bold">External Source Interview ID</b> for Aura Next. The Project ID and Interview ID are used to create the Aura Next case. These can be retrieved from your Aura Next configuration portal.</p></li><li><p>Enter an <b class="Bold">External Source Locale</b> if other than U.S. English, e.g., fr_CA, es_MX, etc. If the locale is not set on the custom action button, then the default locale English (en_US) is used. This can be retrieved from your Aura Next configuration portal.</p></li></ul></li><li><p>Select <b class="Bold">Magnum</b> in External Source Type, optionally select an Outbound Mapping List and Inbound Mapping List, and enter an External Source Parameter for Magnum, which is the Magnum rulebase name.  See <MadCap:xref href="../../Features/Swiss Re Magnum Integration.htm" alt="Swiss Re Magnum Integration">Swiss Re Magnum Integration</MadCap:xref> in Features for detailed information. </p><ul style="list-style-type: circle;"><li><p>Select the <b class="Bold">Outbound Mapping List</b> to pass to Magnum. Outbound Mapping List data is passed to Magnum from FireLight when Magnum is opened.  Updated Outbound Mapping List data is passed to Magnum from FireLight whenever Magnum is opened on an existing activity. The Outbound Mapping List is stored in Organization Configuration on the <MadCap:xref href="../../Organization Configuration/Custom Lists.htm" alt="Custom Lists">Custom Lists</MadCap:xref> page. </p></li><li><p>Select the <b class="Bold">Inbound Mapping List</b> for Magnum. Inbound Mapping List data is passed to FireLight from Magnum when the Magnum interview dialog is closed. Inbound Mapping List data is mapped to applicable FireLight field data items. The Inbound Mapping List is stored in Organization Configuration on the Custom Lists page.</p></li><li><p>Enter an <b class="Bold">External Source Parameter</b> (required) for Magnum. This is the   rulebase name for Magnum.  </p></li><li><p>Enter an <b class="Bold">External Source Locale</b> if other than U.S. English, e.g., en_GB, fr_CA, es, etc. If the locale is not set on the custom action button, then the default locale English (en_US) is used.</p></li></ul></li></ul></td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyE-Regular-LightRows">
+						<p class="Indent"><b class="Bold">Multiple Activities Auto-Fill</b>
+						</p>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p> Set the button to designate a Party role for a pre-sale Multi-App activity that collects Party information of individuals and entities (trusts) that may be associated with specific roles in the multiple product applications that may be generated from a pre-sale Multi-App activity.  Create a separate Custom Action button for each Party role (Owner, Joint Owner, Insured, Joint Insured, Trust, etc.). This custom action button can be associated with role specific fields through selection or entry of a role prefix. </p>
+						<p>FireLight requires a Party role entry in the <b class="Bold">Auto-Fill Prefix</b> field property, which auto-completes the entry as you type if the entry is a common tag.</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyB-Regular-DarkerRows"><b>Example: Data Entry Review</b>
+					</td>
+					<td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+						<p>Data Entry Review allows for an incomplete PDF package to be sent, along with metadata, prior to Client Fill and Sign, meaning the activity and documents will not be at 100% before going through the established Pre-Signature/Pre-Submit Review Queue. Any clients who choose to implement data entry review may require provider setup and should consult their project manager.</p>
+						<h5>Submit Application to Data Entry Review on Custom Action Call</h5>
+						<ul>
+							<li>
+								<p>When the custom action Data Entry Review is clicked, the data entry review process begins.</p>
+							</li>
+							<li>
+								<p>The application PDF, documents and corresponding metadata are available for the provider to send.</p>
+							</li>
+							<li>
+								<p>Application is shown in READ ONLY mode.</p>
+							</li>
+							<li>
+								<p>The application enters the Pre-Submit Review Queue.</p>
+							</li>
+							<li>
+								<p>During Data Entry Review, the following are not available from the Other Actions menu: Request Client to Fill App, Request Client to Fill &amp; Sign, Unlock, Share, Transfer</p>
+							</li>
+						</ul>
+						<p>The Delete Button on the All Activities page is hidden while the application is in Data Entry Review.</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<MadCap:dropDown>
+			<MadCap:dropDownHead>
+				<MadCap:dropDownHotspot MadCap:conditions="General.Online">Add a Rule to Require a Button to Be Clicked</MadCap:dropDownHotspot>
+			</MadCap:dropDownHead>
+			<MadCap:dropDownBody>
+				<h2 MadCap:conditions="General.PDF">Add a Rule to Require a Button to Be Clicked</h2>
+				<p>The following sample rule is for a text box field (with the same data item ID in the Name field property as the Custom Action button) that displays the number of times that the button has been clicked. The rule requires the button to be clicked at least once.</p>
+				<MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+					<MadCap:codeSnippetCopyButton />
+					<MadCap:codeSnippetCaption>
+						<p>Add a Rule to Require a Button to Be Clicked</p>
+					</MadCap:codeSnippetCaption>
+					<MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">**Used "Required Field" default template.**
+						&lt;if&gt;
+						&lt;condition&gt;
+						&lt;not&gt;
+						&lt;isnullorwhitespace&gt;
+						&lt;diget dataitemid="ButtonName" /&gt;
+						&lt;/isnullorwhitespace&gt;
+						&lt;/not&gt;
+						&lt;/condition&gt;
+						&lt;removemessage dataitemid="ButtonName" /&gt;
+						&lt;else /&gt;
+						&lt;postmessage dataitemid="ButtonName"&gt;
+						&lt;const value="You must click the ButtonName at least once." /&gt;
+						&lt;/postmessage&gt;
+					&lt;/if&gt;</MadCap:codeSnippetBody>
+				</MadCap:codeSnippet>
+				<p>&#160;</p>
+			</MadCap:dropDownBody>
+		</MadCap:dropDown>
+		<MadCap:dropDown>
+			<MadCap:dropDownHead>
+				<MadCap:dropDownHotspot MadCap:conditions="General.Online">Add a Rule to Disable a Custom Action Button After Three Attempts</MadCap:dropDownHotspot>
+			</MadCap:dropDownHead>
+			<MadCap:dropDownBody>
+				<h2 MadCap:conditions="General.PDF">Add a Rule to Disable a Custom Action Button After Three Attempts</h2>
+				<MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+					<MadCap:codeSnippetCopyButton />
+					<MadCap:codeSnippetCaption>
+						<p>Rule to Disable a Custom Action After Three Attempts</p>
+					</MadCap:codeSnippetCaption>
+					<MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;block&gt;
+						&lt;setcontrolstate dataitemid="{ButtonID}"&gt;
+						&lt;compare op="!="&gt;
+						&lt;const value="3" type="String" /&gt;
+						&lt;diget dataitemid="{ButtonID}" /&gt;
+						&lt;/compare&gt;
+						&lt;/and&gt;
+						&lt;/setcontrolstate&gt;
+						&lt;if&gt;
+						&lt;condition&gt;
+						&lt;and&gt;
+						&lt;compare op="=="&gt;
+						&lt;const value="EFT" type="String" /&gt;
+						&lt;diget dataitemid="FundingSource" /&gt;
+						&lt;/compare&gt;
+						&lt;compare op="=="&gt;
+						&lt;const value="3" type="String" /&gt;
+						&lt;diget dataitemid="{ButtonID}" /&gt;
+						&lt;/compare&gt;
+						&lt;/condition&gt;
+						&lt;postmessage dataitemid="{Dataitem}"&gt;
+						&lt;const value="Maximum LexisNexis calls for this party have been reached." /&gt;
+						&lt;/postmessage&gt;
+						&lt;else /&gt;
+						&lt;removemessage dataitemid="FundingSource" /&gt;
+						&lt;/if&gt;
+					&lt;/block&gt;</MadCap:codeSnippetBody>
+				</MadCap:codeSnippet>
+				<p>&#160;</p>
+			</MadCap:dropDownBody>
+		</MadCap:dropDown>
+		<MadCap:dropDown>
+			<MadCap:dropDownHead>
+				<MadCap:dropDownHotspot MadCap:conditions="General.Online">Call a Rule by  a Custom Action</MadCap:dropDownHotspot>
+			</MadCap:dropDownHead>
+			<MadCap:dropDownBody>
+				<h2 MadCap:conditions="General.PDF">Call a Rule by a Custom Action</h2>
+				<p>For the most part, rules run based on data item changes. Coordinating the changes can trigger a rule to run after a Custom Action. It doesn’t re-run all rules, but it does update any data items returned by the provider, which triggers rules to run for any related rules. Rules are triggered only when an activity is opened and/or when the data item value changes.</p>
+				<MadCap:codeSnippet>
+					<MadCap:codeSnippetCopyButton />
+					<MadCap:codeSnippetCaption>
+						<p>Clear a Grid by Custom Action Rule</p>
+					</MadCap:codeSnippetCaption>
+					<MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;Block&gt;
+						&lt;if&gt;
+						&lt;condition&gt;  
+						&lt;compare op="=="&gt;
+						&lt;diget dataitemid="Button_ClearAll" type="Double" /&gt;
+						&lt;const value="1" type="Double" /&gt;
+						&lt;/compare&gt;
+						&lt;/condition&gt;
+						&lt;table type="Grid" list="VA SubAccounts" name="subAccountGrid" dataitemid="SubAccount_Grid"&gt;
+						foreach name="row"&gt;
+						&lt;get name="subAccountGrid" /&gt;
+						&lt;cellset prop="Value" name="Allocation" type="double" failvalue="0" parseformatting="true"&gt;
+						&lt;get name="row" /&gt;
+						&lt;const value="0" /&gt;
+						&lt;/cellset&gt;
+						&lt;/foreach&gt;
+						&lt;/table&gt;
+						&lt;/if&gt;
+						&lt;diset dataitemid="Button_ClearAll"&gt;
+						&lt;const value="0" type="Double" /&gt;
+						&lt;/diset&gt;
+					&lt;/Block&gt;</MadCap:codeSnippetBody>
+				</MadCap:codeSnippet>
+				<p>&#160;</p>
+			</MadCap:dropDownBody>
+		</MadCap:dropDown>
+		<MadCap:dropDown MadCap:conditions="General.Online">
+			<MadCap:dropDownHead>
+				<MadCap:dropDownHotspot>EXAMPLE: Custom Action with CRM for National Provider Identifier Standard (NPIS)</MadCap:dropDownHotspot>
+			</MadCap:dropDownHead>
+			<MadCap:dropDownBody>
+				<p class="ExampleHead">EXAMPLE</p>
+				<p class="ExampleMiddleSection">Use this custom action button to search the National Provider Identifier Standard (NPIS) database, select a provider and pre-fill the associated text fields with the selected provider information. </p>
+				<p class="ExampleMiddleSection">Example layout in FireLight for the custom action button and associated fields (with <MadCap:xref href="../../Features/Address Validation.htm" style="color: #024283;">Address Validation</MadCap:xref>):</p>
+				<p class="ExampleMiddleSection">
+				<img src="../../Resources/ImagesAdmin/CustomAction2.png" alt="Physician Lookup Button and Fields in FireLight" title="Physician Lookup Button and Fields in FireLight" MadCap:conditions="General.Online" /> </p>
+				<p class="ExampleMiddleSection">In the following example, <b class="Bold">Data Group</b> is set to <b class="Bold">Provider</b> for the custom action and for the associated text fields, <b class="Bold">Custom Action</b> is set to <b class="Bold">CRM</b>, and <b class="Bold">CRM Type</b> is set to <b class="Bold">NPIS</b>:</p>
+				<p class="ExampleBottom"><a href="../../Resources/ImagesAdmin/CustomAction2.png"><img src="../../Resources/ImagesAdmin/CustomAction1.png" alt="Custom Action for Provider Lookup" title="Custom Action for Provider Lookup" MadCap:conditions="General.Online" /> </a>
+				</p>
+			</MadCap:dropDownBody>
+		</MadCap:dropDown>
+		<MadCap:dropDown MadCap:conditions="General.Online">
+			<MadCap:dropDownHead>
+				<MadCap:dropDownHotspot>EXAMPLE: Custom Action with Custom List for Occupations</MadCap:dropDownHotspot>
+			</MadCap:dropDownHead>
+			<MadCap:dropDownBody>
+				<p class="ExampleHead">EXAMPLE</p>
+				<p class="ExampleMiddleSection"><b class="Bold">NOTE:</b> You must first add a custom list to the Custom Lists page in Organization Configuration before you add the custom action control. See <MadCap:xref href="../../Organization Configuration/Custom Lists.htm" alt="Custom Lists">Custom Lists</MadCap:xref> for guidelines and instructions for adding a custom list to Admin. For this example, a "Peak Life - Occupations" custom list with two columns named "Letter" and "Occupation" was added to the Custom Lists page.</p>
+				<p class="ExampleMiddleSection">1. Add a Custom Action control for the custom list named “Peak Life - Occupations”. <br />In the Custom Action Properties dialog for the custom action control, the following properties are set:<br /><b class="Bold">Field Name</b> = <b class="Bold">Button_Occupation</b> (button data item name)<br /><b class="Bold">Text</b> = <b class="Bold">Select Primary Occupation</b> (display name of the button)<br /><b class="Bold">Custom Action</b> = <b class="Bold">Custom List</b> (type of custom action for button)<br /><b class="Bold">Data Group</b> = <b class="Bold">Custom List 1</b> (indicates that this is the first custom list button control set up on the wizard—each custom list button control needs to have a unique Custom List number)<br /><b class="Bold">Custom List</b> is set to <b class="Bold">Peak Life - Occupations</b> (name of the custom list)</p>
+				<p class="ExampleMiddleSection"> <img src="../../Resources/ImagesAdmin/Capture53.png" alt="Custom Action Properties for a Custom List Button" title="Custom Action Properties for a Custom List Button" MadCap:conditions="General.Online" /></p>
+				<p class="ExampleMiddleSection"> 2. Add an associated Text Box control to receive the data from the custom list. The custom action button and the associated text box must be on the same page of the wizard.</p>
+				<p class="ExampleMiddleSection">In the Text Box Properties dialog for this example, the following properties are set:<br /><b class="Bold">Field Name</b> = <b class="Bold">Owner_EmpDetails_Occupation</b> (tag for the Owner Occupation)<br /><b class="Bold">Text</b> = <b class="Bold">Occupation</b> (display name of the text box control)<br /><b class="Bold">Data Group</b> = <b class="Bold">Custom List 1</b> (must match the Data Group setting in the custom action button control)<br /><b class="Bold">Data Group Property</b> = <b class="Bold">Occupation</b> (Data Group Property list contains the column heading names of the selected Custom List—in this example, it is set to the "Occupation" column name from the custom list)<br /></p>
+				<p class="ExampleMiddleSection"> <img src="../../Resources/ImagesAdmin/Capture54.png" alt="Text Box Properties - Custom List Action Button" title="Text Box Properties - Custom List Action Button" MadCap:conditions="General.Online" /></p>
+				<p class="ExampleMiddleSection">The FireLight user clicks the <img src="../../Resources/ImagesAdmin/Capture55.png" alt="Custom Action and Text Box Controls for Custom List" title="Custom Action and Text Box Controls for Custom List" /> button and selects an occupation from the <b class="Bold">Custom List</b> dialog. </p>
+				<p class="ExampleMiddleSection">
+					<img src="../../Resources/ImagesAdmin/Capture56.png" alt="Custom List dialog" title="Custom List dialog" MadCap:conditions="General.Online" />
+				</p>
+				<p class="ExampleMiddleSection">The selected occupation populates the <b class="Bold">Occupation</b> text box on the wizard in the FireLight UI. </p>
+				<p class="ExampleBottom">
+					<img src="../../Resources/ImagesAdmin/Capture57.png" alt="Occupation Text Box - Custom Action for Custom List" title="Occupation Text Box - Custom Action for Custom List" />
+				</p>
+			</MadCap:dropDownBody>
+		</MadCap:dropDown>
+		<p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+		</p>
+	</body>
+</html>

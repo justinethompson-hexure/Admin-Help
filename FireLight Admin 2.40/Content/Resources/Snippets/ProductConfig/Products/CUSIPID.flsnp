@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body> In the <b class="Bold">CUSIP ID</b> text box, enter the CUSIP ID that integrates with an external illustration system, like ForeSight®. 
+When integrating with an external illustration system, <MadCap:variable name="General.ProductName" /> uses an ACORD 103 transaction to prepopulate the <MadCap:variable name="General.ProductName" /> application with data collected within the external system. The CUSIP ID in <MadCap:variable name="General.ProductName" /> is used to map the product illustrated within the external system to the product in <MadCap:variable name="General.ProductName" />. The CUSIP ID is also used in the Review Queue Script to add products to the review queue process. This is a required field.</body>
+</html>

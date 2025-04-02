@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <ol>
+            <li>
+                <p>On the navigation bar, click <b>Designer/Form Library</b> to open the Form Library page.</p>
+            </li>
+            <li>On the Form Library page, begin typing a form name in the box on the upper left and click the search   button <img src="../../ImagesAdmin/SearchButton.jpg" alt="Search Button" title="Search Button" /> to filter the list of forms by the form name.</li>
+            <li>
+                <p>Select a form from the grid on the upper right.</p>
+                <p>
+                    <img src="../../ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" />  Select the<b> Exclude Expired</b> checkbox to exclude expired forms from the form list grid.</p>
+            </li>
+            <li>To begin another search, click <b>Clear</b> to the right of the search box to clear the search text and then type another form name to locate in the grid.</li>
+        </ol>
+    </body>
+</html>

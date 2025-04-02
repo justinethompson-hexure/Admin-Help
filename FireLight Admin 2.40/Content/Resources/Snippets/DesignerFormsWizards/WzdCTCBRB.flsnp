@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <b class="Bold">NOTE:</b> When the Common Tag Name field is changed, one field to another, or blank to a value, or a value to blank, a warning message appears that the existing list is changed. Click <b class="Bold">OK</b> to proceed or click <b class="Bold">Cancel</b> to discard the change to the Common Tag Name field. FireLight merges an existing list when a Common Tag is changed or added to a field with a list. This adds the common tag list rows to an existing list and merges the applicable rows. All excess common tag rows that do not apply appear at the bottom of the list unchecked, which can be selected for the control. When a Common Tag Name field is set to blank for a Check Box or Radio Button, the existing list is deleted.</body>
+</html>

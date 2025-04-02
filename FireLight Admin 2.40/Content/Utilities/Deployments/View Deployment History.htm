@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>View Deployment History<a name="top"></a></h1>
+        <p>On the navigation bar, click <b>Utilities/Deployments</b> to go to the Deployments page. Click the <b>History</b> tab.</p>
+        <p>Use the History tab on the Deployments page to view deployment history.</p>
+        <p class="note"><b>NOTE:</b> When logged in to the UAT or Staging environment in <MadCap:variable name="General.ProductName" /><sup MadCap:conditions="General.Online">®</sup> Admin, the environment name appears at the top of each page to the left of the navigation bar.</p>
+        <ol>
+            <li>
+                <p>On the navigation bar, click <b>Utilities/Deployments</b> to go to the Deployments page.</p>
+            </li>
+            <li>
+                <p>Click the <b>History</b> tab on the left.</p>
+            </li>
+            <li>
+                <p>In the <b>Synchronization Scope</b> list, select a configuration. </p>
+                <p class="hangingindent"><b class="Bold">All Configuration</b> includes additions and changes to the top level of data (Activities, Custom Lists, Products, Quote data, Forms/Wizards, Packages, Sales Agreements, and Rule Sets). Carriers use the All Configuration to promote changes, including Sales Agreements, to their next environments. Distributors use the All Configuration to deploy distributor information to their next distributor environments and to deploy carrier information to their next distributor environments, including Sales Agreements, when not using Auto Deploy.</p>
+                <p class="hangingindent"><b class="Bold">Commission Netting Configuration</b> (for carriers only) includes each DPfA that can be deployed. Multiple DPfAs can be selected for deployment, but each one selected appears as a single, individual change. See  in Product Configuration.</p>
+                <p class="hangingindent"><b>Custom List Configuration</b> includes additions and changes to custom lists modified through the <MadCap:xref href="../../Organization Configuration/Custom Lists.htm" target="_blank" alt="Custom Lists">Custom Lists</MadCap:xref> page in Organization Configuration.  </p>
+                <p class="hangingindent"><b>Data Item Sync Configuration</b> includes synched Data Items. See <MadCap:xref href="../../Organization Configuration/Mapping.htm" target="_blank" alt="Mapping">Mapping</MadCap:xref> in Organization Configuration.</p>
+                <p class="hangingindent"><b>Fees and Expenses Configuration </b>is used by carriers to deploy manually uploaded fee files from Staging into Production.</p>
+                <p class="hangingindent"><b class="Bold">Firm Configuration</b> includes the Firm additions, changes, and deletions on the <MadCap:xref href="../../Organization Configuration/Firm Management.htm" title="Firm Management" alt="Firm Management">Firm Management</MadCap:xref> page in Organization Configuration.</p>
+                <p class="hangingindent"><b>Form Configuration</b> includes the form and wizard level of data and nothing else. See <MadCap:xref href="../../Design/Designer.htm" target="_blank" alt="Designer">Designer</MadCap:xref>.</p>
+                <p class="hangingindent"><b>Group Configuration</b> includes all changes to the role codes modified through  <MadCap:xref href="../../Organization Configuration/Groups.htm" target="_blank" alt="Groups">Groups</MadCap:xref> in Organization Configuration.</p>
+                <p class="hangingindent"><b>Localization/Branding Configuration</b> includes changes to localization or branding modified through the optional <MadCap:xref href="../../Features/Localization.htm" target="_blank" alt="Localization">Localization</MadCap:xref> or <MadCap:xref href="../Branding.htm" target="_blank" alt="Branding">Branding</MadCap:xref> features.</p>
+                <p class="hangingindent"><b class="Bold">Mapping Configuration</b> includes changes to mappings modified on the <MadCap:xref href="../../Organization Configuration/Mapping.htm" target="_blank" alt="Mapping">Mapping</MadCap:xref> page, Mapping tab in Organization Configuration.</p>
+                <p class="hangingindent"><b>Organization Configuration</b> includes all data that is specific to the organization such as email addresses, email messages, corporate information, etc. By design, the IDP Identifier, IDP Certificates, and Purge settings are not included in the Organization scope. See <MadCap:xref href="../../Organization Configuration/Organization Settings.htm" target="_blank" alt="Organization Settings">Organization Settings</MadCap:xref> in Organization Configuration. </p>
+                <p class="hangingindent"><b>Package Configuration</b> includes the product, package, rule set, and form/wizard data. See <MadCap:xref href="../../Product Configuration/Packages.htm" target="_blank" alt="Packages">Packages</MadCap:xref> in Product Configuration.</p>
+                <p class="hangingindent"><b>Product Configuration</b> includes additions and changes to <MadCap:xref href="../../Product Configuration/Products.htm" target="_blank" alt="Products">Products</MadCap:xref> and nothing else. </p>
+                <p class="hangingindent"><b class="Bold">Repository Product Configuration</b> includes additions and changes to products in the .</p>
+                <p class="hangingindent"><b>Review Queue Configuration </b>includes changes to the review queue script and to review queues modified through Organization Configuration in <MadCap:xref href="../../Organization Configuration/ReviewQueue.htm" target="_blank" alt="Review Queue">Review Queue</MadCap:xref>.  </p>
+                <p class="hangingindent"><b>Rule Set Configuration</b>  &#160;includes changes to rule sets modified through the Form Designer <MadCap:xref href="../../Design/Forms/RulesWindow.htm" target="_blank" alt="Rules Window">Rules Window</MadCap:xref>, Wizard Designer <MadCap:xref href="../../Design/Wizards/Rules Window - Wizards.htm" target="_blank" alt="Rules Window">Rules Window</MadCap:xref>, and through <MadCap:xref href="../../Product Configuration/Rule Sets.htm" target="_blank" alt="Rule Sets">Rule Sets</MadCap:xref> in Product Configuration.</p>
+                <p class="hangingindent"><b class="Bold">Tele-Sign Script Configuration</b> includes additions and changes to the <MadCap:xref href="../../Organization Configuration/TeleSign Scripts.htm" target="_blank" alt="Tele-Sign Scripts">Tele-Sign Scripts</MadCap:xref> in Organization Configuration. </p>
+                <p class="hangingindent"><b class="Bold">Carrier Only All Configuration</b> includes  the top level of data (Activities, Custom Lists, Products, Quote data, Packages, Rule Sets, and Forms/Wizards). Distributors use this scope to deploy carrier top-level configurations, excluding Sales Agreements,  to distributor environments when not using Auto Deploy.</p>
+                <p class="hangingindent"><b>Carrier Only Product Configuration</b> includes additions and changes to <MadCap:xref href="../../Product Configuration/Products.htm" target="_blank" alt="Products">Products</MadCap:xref> and nothing else. Distributors use this scope to deploy carrier product configurations to distributor environments if not using Auto Deploy.</p>
+                <p class="hangingindent"><b>Carrier  Only Form Configuration</b> includes only the form and wizard level of data. Distributors use this scope to deploy carrier forms and wizards to distributor environments if not using Auto Deploy.</p>
+                <p class="hangingindent"><b>Carrier Only Package Configuration</b> includes the product, package, rule set, and form/wizard data. Distributors use this scope to deploy carrier packages to distributor environments if not using Auto Deploy.  </p>
+                <p class="hangingindent"><b>Carrier Only Rule Set Configuration</b>  &#160;includes changes to rule sets modified through Form Designer <MadCap:xref href="../../Design/Forms/RulesWindow.htm" target="_blank" alt="Rules Window">Rules Window</MadCap:xref>, Wizard Designer <MadCap:xref href="../../Design/Wizards/Rules Window - Wizards.htm" target="_blank" alt="Rules Window">Rules Window</MadCap:xref>, and through <MadCap:xref href="../../Product Configuration/Rule Sets.htm" target="_blank" alt="Rule Sets">Rule Sets</MadCap:xref> in Product Configuration.<![CDATA[  ]]></p>
+                <p class="hangingindent"><b>Carrier Only Custom List Configuration</b> includes only the custom list level of data. Distributors use this scope to deploy carrier custom lists to distributor environments if not using Auto Deploy.  </p>
+                <p class="hangingindent"><b class="Bold">Distributor All Configuration</b> includes  the top level of data (Activities, Custom Lists, Products, Quote data, Packages, Sales Agreements, Rule Sets, and Forms/Wizards) that are specific to the selected distributors. Carriers use this scope to deploy carrier top-level configurations to distributor environments.</p>
+                <p class="hangingindent"><b>Distributor Product Configuration</b> additions and changes to <MadCap:xref href="../../Product Configuration/Products.htm" target="_blank" alt="Products">Products</MadCap:xref> and that are specific to the selected distributors. Carriers use this scope to deploy carrier product configurations to distributor environments.</p>
+                <p class="hangingindent"><b>Distributor Form Configuration</b> includes only the form and wizard level of data. Carriers use this scope to deploy carrier forms and wizards to distributor environments. Select one or more forms and wizards for deployment.</p>
+                <p class="hangingindent"><b>Distributor Package Configuration</b> includes the product, package, rule set, and form/wizard data. Carriers use this scope to deploy carrier packages to distributor environments.  </p>
+                <p class="hangingindent"><b>Distributor Rule Set Configuration</b>  &#160;includes changes to rule sets modified through Form Designer <MadCap:xref href="../../Design/Forms/RulesWindow.htm" target="_blank" alt="Rules Window">Rules Window</MadCap:xref>, Wizard Designer <MadCap:xref href="../../Design/Wizards/Rules Window - Wizards.htm" target="_blank" alt="Rules Window">Rules Window</MadCap:xref>, and through <MadCap:xref href="../../Product Configuration/Rule Sets.htm" target="_blank" alt="Rule Sets">Rule Sets</MadCap:xref> in Product Configuration.<![CDATA[  ]]></p>
+                <p class="hangingindent"><b>Distributor Custom List Configuration</b> includes changes to custom lists modified through the Designer page. Carriers use this scope to deploy carrier custom lists to distributor environments. </p>
+            </li>
+            <li>
+                <p>Optionally select a server environment (UAT, Staging, Production) in <b class="Bold">To Server</b>, select an organization in <b class="Bold">To Organization</b>, or enter a date range in calendars in <b class="Bold">Start</b> and <b class="Bold">End</b> to filter the history. </p>
+            </li>
+            <li>
+                <p>Click <b class="Bold">Load History</b> to load deployment history.<MadCap:conditionalText MadCap:conditions="General.Postpone"> Click the <b class="Bold">Cancel</b> button on the right to cancel loading the history.</MadCap:conditionalText></p>
+            </li>
+            <li>
+                <p>On the left, click a row in the grid to select a deployment history.</p>
+            </li>
+            <li>
+                <p>On the right, view deployment statistics and deployment status history for the selected deployment process data changes. Click a link to view detailed Prosduct, Package, Form, Sales Agreement, Rule Set, Custom List, and Activity changes in a dialog. The Package Changes, Form Changes, and Rule Set Changes dialogs display the changes in a panel format with search filtering available at the top of the dialog, individual forms, packages, or rule sets listed in the left pane, and Date/Time, Action, Old Value, and New Value columns in a grid format on the right. </p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/Capture244.png" alt="Form Changes dialog" title="Form Changes dialog" />
+                </p>
+            </li>
+            <li>
+                <p>In <b>Deployment Statistics</b>, click the <b>Open</b> link to view a list of items updated in the Deployment Detail dialog. </p>
+            </li>
+        </ol>
+        <p><b class="Bold">NOTE:</b> The system purges history for all deployment scopes and audits that are more than one year old. </p>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

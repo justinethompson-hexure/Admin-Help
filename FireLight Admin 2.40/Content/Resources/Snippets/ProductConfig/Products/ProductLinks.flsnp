@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Select an option (Prospectus or Buyer's Guide) in the <b class="Bold">Product Links</b> list and enter the URL link in the text box to the right of the list. For example, select <b class="Bold">Prospectus</b> in the list and enter a product Prospectus URL link  in the text box on the right of the list.  Once this link is added, a new email replacement variable can be used in Email templates to display the Product Prospectus or Buyer's Guide URL. The actions of adding, editing, or deleting a product link are recorded in Product History.</p>
+        <p>Two data items are available for rule use.</p>
+        <ul>
+            <li>
+                <p>FLI_PRODUCT_LINK_NAME – use to identify the document name in the email template (Prospectus or Buyer’s Guide). This allows email templates (such as the Leave Behind Email) to feature the document name by product type or product name.</p>
+            </li>
+            <li>
+                <p>FLI_PRODUCT_LINK  – use on forms, wizards, or in email templates so the prospectus or buyer's guide URL entered is used for the product.</p>
+            </li>
+        </ul>
+        <p>
+            <b class="Bold">NOTE:</b>&#160;For other use cases, firms can request additional options to be added to the dropdown list by contacting their Strategic Account Manager (i.e.: adding dropdown selections such as Video URLs, Leave Behind forms, etc.).</p>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Add a Custom Rule for a Selected Field</h1>
+        <p>
+            <MadCap:snippetText src="../../Resources/Snippets/Rules/RuleSetLockOtherUserv223.flsnp" />
+        </p>
+        <p><b class="DRNumberBold">Basics for Authoring a Rule in the Rules Window</b>
+        </p>
+        <ul>
+            <li>Starting from a template is the easiest.</li>
+            <li>Review the lower pane of the Rules window for validation errors.  Be sure to enclose multiple actions within a &lt;block&gt; node, unless the actions are within a &lt;switch&gt; or &lt;if&gt; node, which treat actions within the body or after the &lt;else/&gt; node as if a &lt;block&gt; node is present. “There can only be one root node” error usually indicates that the action is not within a block.</li>
+            <li>On the upper right of the Rules Window, click the <b>Node Help</b> link for help with creating rules.</li>
+        </ul>
+        <p><b class="DRNumberBold">Modify an Existing Rule Template to Create a Custom Rule</b>
+        </p>
+        <p>Following is an example of modifying an existing Required Field rule to add a date field format for the Owner_DOB calendar control. This ensures the owner’s date of birth is formatted in MM/DD/YYYY format on the application.</p>
+        <ol>
+            <li>On the navigation bar, click <b class="Bold">Designer/Wizard Designer</b>.</li>
+            <li>On the upper left of the Wizard Designer page, select a wizard in the list.</li>
+            <li>
+                <p>Click in a field on the wizard.</p>
+                <p>For example, click in the <b>Owner_DOB</b> field on the wizard.</p>
+            </li>
+            <li>On the left, click <b>EDIT RULES</b>.</li>
+            <li>In the <b>Filter Rule Sets</b> box, type the name of the rule set if known or scroll down the list to find the rule set  and click the rule set name in the list.</li>
+            <li>
+                <p>On the left, ensure the checkbox is selected for <b class="Bold">List only rules for [Owner_DOB]</b> (the name of the selected field on the wizard page). On the upper right of the Rules window, click the <b>NEW RULE</b> button. </p>
+            </li>
+            <li>In the <b class="Bold">Template</b> list, select the <b class="Bold">Required</b> rule template and click <b class="Bold">CREATE RULE</b> on the upper right.</li>
+            <li>At the top of the Rules window in <b class="Bold">Rule Name</b>, enter <b>Required Field Date Formatted: Owner_DOB</b>.</li>
+            <li>
+                <p>On the right of the Rules window, add XML for the date format as follows and enter <b>Required Field Date Formatted: Owner_DOB</b> in Rule Name.</p>
+                <p>&lt;diset dataitemid="Owner_DOB"&gt;</p>
+                <p class="Indent"> &lt;format format="MM/dd/yyyy"&gt;</p>
+                <p class="Indent2"> &lt;diget dataitemid="Owner_DOB" /&gt;</p>
+                <p class="Indent">&lt;/format&gt;</p>
+                <p>&lt;/diset&gt;</p>
+            </li>
+            <li>
+                <p>In <b>Rule Scope</b>, select an option to indicate when the rule is executed.</p>
+                <MadCap:snippetBlock src="../../Resources/Snippets/Rules/RuleScopes.flsnp" />
+            </li>
+            <li>
+                <p>On the lower right, click <b>SAVE RULE SET</b>, which unlocks the rule set for editing by other users.</p>
+                <p>If the <a href="../../Organization Configuration/Organizations/Admin.htm#ValidateRuleNameUniqueness" target="_blank" alt="Validate Rule Name Uniqueness">Validate Rule Name Uniqueness</a> checkbox is selected in Organization Configuration/Organization Settings on the Admin tab, the new rule cannot be saved unless it has a unique name.</p>
+            </li>
+            <li>Click <b class="Bold">CLOSE</b> on the lower right to close the Rules window.</li>
+            <li>
+                <p>When you re-open the Rules window and select the rule set, the new rule appears in the list of rules for the Owner_DOB control.</p>
+            </li>
+            <li>After adding the new rule and saving the rule set, add the rule set to the applicable <MadCap:xref href="../../Product Configuration/Packages.htm" alt="Packages">Packages</MadCap:xref>.</li>
+        </ol>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

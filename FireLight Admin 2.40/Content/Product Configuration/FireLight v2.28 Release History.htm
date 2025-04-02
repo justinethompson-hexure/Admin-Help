@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>FireLight v2.28 Release History</h1>
+        <p><b class="Bold">NOTE: Documentation for this release is currently incomplete and in a "DRAFT" status.</b>
+        </p>
+        <h2>January xx, 2023 QA Next Release</h2>
+        <h2>Enhancements</h2>
+        <h3>Foundation</h3>
+        <p><b class="DRNumberBold">DTCC Attachments Standardization</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">CMR&#160;xxxxxx </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Mitch </MadCap:conditionalText><em>In Design</em>   (Carriers and Distributors) </p>
+                <p>This enhancement will improve the way we're currently doing business with the DTCC. The DTCC subsystem will need to be revamped to support getting data to the DTCC Subsystem, moving that data to the DTCC, and then enhancing the notifications that are given from the DTCC to us and to our carriers, which includes receiving the final notification back to Hexure on success or failure of a DTCC attachment request. This will also allow for visibility into attachment issues in the Application Data Tool in the future. </p>
+                <p>Impacts: </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>TBD</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Email - Ability to Manage Dynamic Email Tempates</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">CMR 261169 </b>
+                    <MadCap:conditionalText MadCap:conditions="General.Postpone">Abi</MadCap:conditionalText><em>In Design</em>   (Carriers and Distributors) </p>
+                <MadCap:snippetBlock src="../Resources/Snippets/Features/261169.flsnp" />
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Illustration - Visualization Tools (Multiple Release)</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">CMR 264833 </b>
+                    <MadCap:conditionalText MadCap:conditions="General.Postpone">Erin</MadCap:conditionalText><em>In Development</em>   (Carriers and Distributors) </p>
+                <p>Extend Firelight functionality by creating a new “Visualization” interface that optimizes use of viewable area for graphical presentation of policy values in individual product and product comparison scenarios to enhance communication in the sales process and facilitate client decision making.</p>
+                <p>Provide the ability to compare a set of user selected products graphically based on various presentations of Premium, Cash Value, Death Benefit, IRR, etc.</p>
+                <p>Continue to allow clients to leverage existing product presentations. When an individual product is selected, any proprietary presentation materials/graphics is accessible in the new visualization interface.</p>
+                <p>Provide for an easy transition to comparisons with competing/ complementary products. "</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Work Group Processing</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">CMR xxxxxx </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Abi </MadCap:conditionalText><em>In Development</em> (Carriers and Distributors) </p>
+                <p>Currently, activities initiated in an organization's FireLight instance are only visible to individuals provisioned into that instance of FireLight. Implementation and creation of inter organization work groups will allow users to have shared visibility into an activity, receive notifications for the activity life cycle and allow members to have the same visibility. The current activity/application ownership model in FireLight is very rigid and accessibility options are cumbersome to manage. The ideal solution will allow multiple individuals to access an activity without being required to take specific action such as Transfer, Share, etc. Status and notification functionality is enhanced to add a list of individuals to receive notifications/have visibility of a single activity from start to finish.</p>
+                <p>Impacts:</p>
+                <ul>
+                    <li>
+                        <p>New Organization setting to allow work group setup</p>
+                    </li>
+                    <li>
+                        <p>Work Groups section in User Preferences</p>
+                    </li>
+                    <li>
+                        <p>New Work Group management capabilities</p>
+                    </li>
+                    <li>
+                        <p>Ability for defined work groups to access activities with edit/read-only rights</p>
+                    </li>
+                    <li>
+                        <p>Ability for users within a work group to receive notifications for the life cycle of an activity</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3>Work Orders</h3>
+        <p MadCap:conditions="General.Postpone"><b class="DRNumberBold">Implement Client Protection on Forms</b>
+        </p>
+        <ul MadCap:conditions="General.Postpone">
+            <li>
+                <p><b class="DRnumber">CMR 258253 </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Keerti, Abi </MadCap:conditionalText><em>In Design</em> (Carriers and Distributors) </p>
+                <p>This enhancement will make forms available to only clients when they login into FireLight using 3rd party links. Currently, client signers can log into FireLight using 3rd party links generated from Client Fill and Client Fill &amp; Sign requests. Using this enhancement, FireLight admin is able to display or hide forms when the client signers have logged into FireLight . To implement this protection, "Client Protection" option under the "Form Properties" link on form designer screen in the admin tool is used.</p>
+                <p>Impact:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>  FL App: 3rd Party login URL for Client Fill and Client Fill &amp; Sign</p>
+                    </li>
+                    <li>
+                        <p>  FL Admin: Designer &gt; Form Designer &gt; Form Properties &gt; Protection &gt; Client (selection in dropdown)</p>
+                    </li>
+                    <li>
+                        <p>  FL Admin: New data item "FLI_IS_CLIENT_FILL_LOGIN" that can be used to write rules to identify if client has logged into FireLight using 3rd Party login URL.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Implement Timeout for Passcodes</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">CMR 269829 </b> <MadCap:conditionalText MadCap:conditions="General.Postpone">Keerti, Abi </MadCap:conditionalText><em>In Design</em> (Carriers and Distributors) </p>
+                <p>This enhancement will allow applying a timeout to the validity of passcode required for 3rd party login to FL by clients, agents and reviewers. Currently, there is no time limitation for the passcode to be valid. To implement a standard practice for passcode (OTP) expiry, this enhancement will allow clients to enforce a timeout using an org setting.</p>
+                <p>Impact:</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>  A new text box "Passcode Timeout" is added to page FL Admin &gt; Organization Configuration &gt; Organization Settings &gt; Signature (tab).</p>
+                    </li>
+                    <li>
+                        <p>  A new "Resend Passcode" button is added to 3rd party login page to resend passcode in case of expiration.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Fixed Defects</h2>
+        <p>&#160;</p>
+        <p><b class="DRNumberBold">Admin</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 271019 </b> Error when generating tag list in Download Tag List utility. Problem: When the button to download the Tags was clicked, a null error could happen, but would definitely not do anything else. The download was never properly fired off. The window.open that was supposed to start the download process, would be blocked by popup blocking in the web browser. Resolution: Fixed null value issue, window.open issue (was being blocked), added a spinner to denote that the user must wait for the process to finish. <br />Areas Impacted: Utilities &gt; Download Tag List screen in Admin</p>
+            </li>
+        </ul>
+        <p><b class="DRNumberBold">Integration</b>
+        </p>
+        <ul>
+            <li>
+                <p><b class="DRnumber">DR 262677 </b> Sporadic Scheduler BackOfficeService Failures due to Collection Modification on Async Waiting. Problem: This issue has resulted in some back office processing to complete but remain as processing in the workflow. Resolution: In Azure the Scheduler process continues to run, which does not require a wait after kicking off the BackOfficeManager.ProcessWorkflows(). Because of this I removed the logic to track the ActiveTasks. This logic looked flawed because there were no locks on this list when it could be modified by different threads. <br />Areas Impacted: Scheduler</p>
+            </li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

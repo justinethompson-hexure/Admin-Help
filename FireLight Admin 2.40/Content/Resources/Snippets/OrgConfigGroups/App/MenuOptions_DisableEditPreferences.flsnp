@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable Edit Preferences</b> checkbox to disable access to the My Preferences page in FireLight. The My Preferences button on the Home page and on the top toolbar will not be visible.  If disabled, FireLight will use the default preference options or the information sent in through the incoming single sign-on (SSO) request. <MadCap:conditionalText MadCap:conditions="General.Online">See also <MadCap:xref href="../../../../UserGuide/Preferences/Preferences.htm" target="_blank" alt="Preferences [User Instructions]">Preferences [User Instructions]</MadCap:xref>.</MadCap:conditionalText><![CDATA[ ]]><b class="Bold">NOTE:</b> If the Disable Edit Preferences option is selected, the Enable CRM Preferences is not available.</body>
+</html>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileProperties>
+    <ImageOverlay Profile="D:\Documents\My Profiles\FireLightHighQualityPRINTProfile.capro" ProfileHash="728a3481d430c1d0b0fe0218cb231d9b3daa9b1f" ScreenRectangle="2389,740,31,19">
+        <OriginalImage ImageBlurFactor="2" ImageShadeFactor="5" DPI="96" ExportFormat="jpg" JPEGQuality="100" Folder="D:\Documents\My Projects\FireLightAdmin-TopNavigation\Content\Resources\Images" FileName="" BorderWidth="1" BorderColor="#000000" PaddingLeft="0" PaddingRight="0" PaddingTop="0" PaddingBottom="0" Border="solid" medium_print_EnableFormat="true" Type="Image" ShapeTimeSpan="10000" AutoAdjust="true" EnableGrayScaleFormat="false" medium_print_ExportFormat="jpg" medium_print_DPI="300" Title="Right Arrow Button" Alt="Right Arrow Button" OutputScaleFactor="1" ComputedWidth="33" ComputedHeight="21" medium_print_OutputScaleFactor="2" medium_screen_and__max_width__64_063em__ExportFormat="jpg" medium_screen_and__max_width__40em__ExportFormat="jpg" medium_print_ColorDepth="32" medium_screen_and__max_width__64_063em__OutputScaleFactor="1" medium_screen_and__max_width__64_063em__DPI="96" medium_print_JPEGQuality="100">SUkqABABAACALqBP8AQWDQeEQmFQuGQ2HQ+IRGJO2KQSJReMRmNRuIxR2xaOSGRSOSQZ2SeQSWVSuWQqTuyUy2ZTOROubTGaTmdRCbOucTugUGDOqiT+WN9ZoUAIxcQUkHQ9gAmiGhTKiOqjSukUqmOaFBoAU+o1OqyF02esypvrRDABGrivRGwEg5noAEyqWWH2d02mS2u22+4xy53W73m9QW+X6SYC3XCQhoZgAZhkKgAgGEmADEVV0Z/GSO1ocAI5c4OHBojgA5HnN53EwvPujQyLR6XTwnVazXZzYxpz8HayFvrVEABHtMWgA4ngl77fyTgufh9HrQ9zdnq9fuQrsubt93xQVy+Xw+PuwEAQAP4ABAABAAAAAAAAAAABBAABAAAAHwAAAAEBBAABAAAAEwAAAAIBAwAEAAAA1gEAAAMBAwABAAAABQAAAAYBAwABAAAAAgAAABEBBAABAAAACAAAABUBAwABAAAABAAAABYBBAABAAAAEwAAABcBBAABAAAACAEAABoBBQABAAAA3gEAABsBBQABAAAA5gEAABwBAwABAAAAAQAAACgBAwABAAAAAgAAAD0BAwABAAAAAgAAAFIBAwABAAAAAgAAAAAAAAAIAAgACAAIAAB3AQDoAwAAAHcBAOgDAAA=</OriginalImage>
+        <Shapes>
+        </Shapes>
+        <Variables />
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

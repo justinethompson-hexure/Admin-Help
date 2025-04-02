@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Quote Details</h1>
+        <p>On the navigation bar, click <b>Product Config</b> and click <strong>Products</strong> to open the Products page. On the lower left, click the <b class="Bold">Quote Details</b> link to open the Quote Details dialog.</p>
+        <p class="note"><b>NOTE:</b> The Quote Details dialog is not available in Admin when the <b>Disable View Quoting</b> group option is selected on the <MadCap:xref href="../../Organization Configuration/Groups/Admin.htm">Admin</MadCap:xref> tab in Organization Configuration/Groups for your role code so you can access the Quote Details dialog from the Product Configuration/<MadCap:xref href="../Products.htm">Products</MadCap:xref> page. When Quote is set up in Admin, be sure to select the <b>Quote</b> feature on the <MadCap:xref href="../../Organization Configuration/Groups/Activity Access.htm">Activity Access</MadCap:xref> tab on the Groups page in Organization Configuration so <MadCap:variable name="General.ProductName" /> users can access the Quote feature.</p>
+        <p>Use the Quote Details dialog to upload rates and product rules and set up product configuration for the Quoting feature in <MadCap:variable name="General.ProductName" />, which provides comparison quotes for Term Life products.</p>
+        <p MadCap:conditions="General.Online">
+            <img src="../../Resources/ImagesAdmin/Quoting1.jpg" alt="Quoting Page" title="Quoting Page" MadCap:conditions="General.Online" class="Thumbnail" />
+        </p>
+        <p>Prepare the rate files and then upload rates and add product and rate information for Term Life products in <MadCap:variable name="General.ProductName" /> Admin.</p>
+        <h2>Step 1 - Prepare the Rate File</h2>
+        <ol>
+            <li>
+                <p>Gather the rates and put them in the following format for each Term Life product for quoting.</p>
+                <p>
+                    <img src="../../Resources/ImagesAdmin/Quoting-FormatRates.jpg" alt="Format Rates" title="Format Rates" />
+                </p>
+                <p>You can have multiple rates in a row, but <MadCap:variable name="General.ProductName" /> will use only the first rate.</p>
+            </li>
+            <li>Save the file as a .csv or .xlsx file type.</li>
+        </ol>
+        <MadCap:pageBreak />
+        <h2>Step 2 - Upload a New or Replacement Rate File</h2>
+        <ol>
+            <li>On the navigation bar, click <b>Product Config</b> and then click <b>Quoting</b> to open the Quoting page on the Rate Info tab.</li>
+            <li>
+                <p>Click the <b>Upload Rate</b> button to open the Upload File dialog.</p>
+                <p MadCap:conditions="General.Online"> <img src="../../Resources/ImagesAdmin/Quoting-UploadRate.jpg" alt="Quoting Page - Upload Rate" title="Quoting Page - Upload Rate" MadCap:conditions="General.Online" class="Thumbnail" /></p>
+            </li>
+            <li>
+                <p>Enter the following information in the <b>Upload File</b> dialog.</p>
+                <p><b>Rate Name</b> Type a unique Rate Name for the rates.</p>
+                <p><b>Replace Current Rate</b> Select the checkbox if this is a replacement for an existing rate file.</p>
+                <p><b>Mapping</b> Type the mapping numbers in the rate spreadsheet that match the listed <MadCap:variable name="General.ProductName" /> risk class designations. Type <b>-1</b> if you have no mapping, but the spreadsheet risk classes can map to multiple <MadCap:variable name="General.ProductName" /> risk classes.</p>
+            </li>
+            <li>Click the <b>Browse</b> button and select a rate file to upload.</li>
+            <li>
+                <p>Click the <b>Upload</b> button to upload the rate file.</p>
+            </li>
+            <li>
+                <p>Click the <b>Save</b> button.</p>
+            </li>
+        </ol>
+        <h2>Step 3 - Add Product and Rate Information</h2>
+        <ol>
+            <li>
+                <p>On the upper right of the Quoting page, click the <b>Product Info Class</b> tab.</p>
+            </li>
+            <li>
+                <p>Click a <b>Term Product</b> name in the grid. </p>
+            </li>
+            <li>
+                <p>Click the <b>Rate</b> tab and enter the following information.</p>
+                <p><b>Rate Set</b> - Select a Rate Set for the selected product.</p>
+                <p><b>Rate Start</b> - Enter the date when the rates start.</p>
+                <p><b>Rate End</b> - Enter the date when the rates end.</p>
+                <p class="Indent"><b>NOTE:</b> To clear rate start and end dates, click the <b>Add New Rate for Product</b> button.</p>
+                <p><b>State Approved</b> grid - Select the checkboxes for the states where the rates are approved. Or select the <b>Check/Uncheck All</b> checkbox to select all states or clear all states.</p>
+                <p><b>Save Product Rate Info</b> - Click the <b>Save Product Rate Info</b> button to save your entries.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/Quoting-ProductInfoClassTab.jpg" alt="Quoting - Producut Info Class Tab" title="Quoting - Producut Info Class Tab" MadCap:conditions="General.Online" class="Thumbnail" />
+                </p>
+            </li>
+            <li>
+                <p>Click the <b>Product Rules</b> tab, click the <strong>Add New Rule</strong> button, and enter the following information.</p>
+                <p><b>Risk Class</b> - Select a <b>Risk Class</b> in the list.</p>
+                <p><b>Min Age</b> - Type the minimum age for the selected Risk Class.</p>
+                <p><b>Max Age</b> - Type the maximum age for the selected Risk Class.</p>
+                <p><b>Min Face Amount</b> - Type the minimum face amount for the selected Risk Class.</p>
+                <p><b>Max Face Amount</b> - Type the maximum face amount for the selected Risk Class.</p>
+                <p><b>List Periods</b> - Press and hold the Ctrl key and click each applicable time period in the list.</p>
+                <p><b>State Approved</b> grid - Select the checkboxes for the states where the product rates are approved. Or select the <b>Check/Uncheck All</b> checkbox to select all states or clear all states.</p>
+                <p><b>Save Filter Info</b> - Click the <b>Save Filter Info</b> button to save your entries.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/Quoting-ProductRulesTab.jpg" alt="Quoting - Product Rules Tab" title="Quoting - Product Rules Tab" MadCap:conditions="General.Online" class="Thumbnail" />
+                </p>
+            </li>
+            <li>
+                <p>Click the <b>Product Config</b> tab and do the following.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>Click a <b>Config Type</b> in the grid.</li>
+                    <li>Enter updates in <b>Config Value</b> below the grid.</li>
+                    <li> Click the <b>Save Config Info</b> button to save the updates.</li>
+                </ol>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/Quoting-ProductConfigTab.jpg" alt="Quoting - Product Config Tab" title="Quoting - Product Config Tab" MadCap:conditions="General.Online" class="Thumbnail" />
+                </p>
+            </li>
+        </ol>
+        <MadCap:pageBreak />
+        <p MadCap:conditions="General.Online"><a href="#top">Return to Top</a>
+        </p>
+    </body>
+</html>

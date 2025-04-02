@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable Transfer Data Items to Next Activity</b> checkbox to disable transfer of data items from the Pre-Sale activity to the next activity. (By default, data items are pre-filled and unlocked.) This option is disabled for the <MadCap:xref href="../../../../Features/Multiple Activity.htm" target="_blank" alt="Multiple Activities">Multiple Activities</MadCap:xref> feature.</body>
+</html>

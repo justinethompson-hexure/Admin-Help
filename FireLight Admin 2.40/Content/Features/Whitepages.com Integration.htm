@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Setup and usage instructions for integration with Whitepages.com, which provides the Reverse Phone API Key access credential." />
+    </head>
+    <body>
+        <h1><a name="Top"></a>Whitepages.com (Ekata) Integration</h1>
+        <p class="note"><a name="top"></a><b class="Bold">Spotlight Video:</b> See <a href="https://vimeo.com/407645603/ac00f609d3" target="_blank" title="Redtail and Whitepages" alt="Redtail and Whitepages">Redtail and Whitepages</a> for a Spotlight feature video about Whitepages.com.</p>
+        <p class="note"><b class="Bold">IMPORTANT:</b> Whitepages PRO is now Ekata. Ekata has spun off from the direct-to-consumer operations of Whitepages.com. The endpoint for Whitepages has changed from https://proapi.whitepages.com to https://api.ekata.com.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Whitepages.com Integration</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p style="page-break-after: avoid;">FireLight<sup>®</sup> can integrate with Whitepages.com. FireLight clients contract directly with Whitepages.com. Whitepages.com provides the Reverse Phone API Key access credential. </p>
+                        <p style="widows: 5;orphans: 0;page-break-after: avoid;">
+                            <img src="../Resources/ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" /> Whitepages.com integration does not require any changes to the Provider for your organization.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Admin Setup</p>
+                        <ol>
+                            <li>
+                                <p>Organization Configuration/Organization Settings page, <MadCap:xref href="../Organization Configuration/Organizations/Admin.htm" alt="Admin">Admin</MadCap:xref> tab:  set up the Third-Party Service Config.</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>Click the <b>Click to Edit</b> link to the right of <b>Third-Party Service Config</b>.</li>
+                                    <li>
+                                        <p>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, enter <b>ReversePhoneAPIKey</b>, in <b>Config Value</b> enter the API Key provided by Whitepages, select <b>WhitePages</b> in <b>Service Type</b> and click the <b>Add Config</b> button. </p>
+                                        <p><b class="Bold">NOTE:</b> Config Group is an optional configuration used by the <MadCap:xref href="DocuSign.htm" alt="DocuSign Integration">DocuSign Integration</MadCap:xref> integration.</p>
+                                        <p MadCap:conditions="General.Online">
+                                            <img src="../Resources/ImagesAdmin/Capture119.png" alt="" title="" MadCap:conditions="General.Online" />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>Click the <b>Save Organization</b> button on the Organization Settings page.</p>
+                                        <p>
+                                            <img src="../Resources/ImagesAdmin/Whitepages4.jpg" alt="Whitepages Third Party Config" title="Whitepages Third Party Config" MadCap:conditions="General.Online" />
+                                        </p>
+                                    </li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>Design/<MadCap:xref href="../Design/Forms/Form Designer.htm" alt="Form Designer">Form Designer</MadCap:xref> or <MadCap:xref href="../Design/Wizards/Wizard Designer.htm" alt="Wizard Designer">Wizard Designer</MadCap:xref> page: do the following to set up the Button control and data items on the form or wizard.</p>
+                                <p><b>IMPORTANT!</b>  FireLight now supports triggering a custom action call from any page within the same package, regardless of whether the button or fields to trigger that call are on that same page.  (See <MadCap:xref href="../Design/Forms/Add Multiple Copies of a Form.htm" alt="Add Multiple Copies of a Form">Add Multiple Copies of a Form</MadCap:xref> for use on multiple-instance forms.)</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>
+                                        <p>Add a <b class="Bold">Button</b> control to the form or add a <b class="Bold">Custom Action</b> field to the wizard. In the Field Properties, select <b>CRM</b> in <b>Action Type</b>. Select a <b>CRM Type</b> option in the list: select the <b class="Bold">Whitepages</b> option to pull data from the Whitepages CRM or select the <b class="Bold">Preferences</b> option to pull data from the CRM set up on the user's Preferences page in FireLight. In the list, select a <b class="Bold">Data Group</b> for the button. For example, select the <b class="Bold">Owner</b> option to populate owner information in the associated fields on the form or wizard. </p>
+                                    </li>
+                                    <li>
+                                        <p>In the fields that will receive the data, open the Field Properties and select the <b>Data Group</b> that matches the Data Group for the Whitepages button. For example, set the Data Group to <b class="Bold">Owner</b>. Then select the <b>Data Group Property</b> that matches the field entry. For example, select <b>FirstName</b> in <b>Data Group Property</b>. Ensure that Data Group and Data Group Property are selected on all fields that need to be filled in.</p>
+                                        <p>The following fields can be mapped for the Whitepages:</p>
+                                        <ul style="list-style-type: square;">
+                                            <li>FirstName</li>
+                                            <li>MiddleName</li>
+                                            <li>LastName (FullName for Businesses)</li>
+                                            <li>Gender</li>
+                                            <li>DiaNumber</li>
+                                            <li>AreaCode (LineType is mapped in this field)</li>
+                                            <li>Line1</li>
+                                            <li>Line2</li>
+                                            <li>City</li>
+                                            <li>AddressStateTC</li>
+                                            <li>Zip</li>
+                                        </ul>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">User Experience</p>
+                        <ol>
+                            <li>Begin an application or other activity.</li>
+                            <li>
+                                <p>Click the <b>Whitepages</b> button.</p>
+                            </li>
+                            <li>
+                                <p>On the upper right of the dialog, type the contact's telephone number and press Enter or click the search <img src="../Resources/ImagesAdmin/SearchButton.jpg" alt="Search Button" title="Search Button" /> button.</p>
+                            </li>
+                            <li>
+                                <p>On the right, click the <b>Select</b> button to populate the contact's information on the form.</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/Whitepages2.jpg" alt="Whitepages CRM dialog" title="Whitepages CRM dialog" MadCap:conditions="General.Online" />
+                                </p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help – Design Document: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 153534</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/DesignDocs/153534-DesignApproachForWhitePages_v2.pdf" target="_blank" title="CMR 153534" alt="CMR 153534">CMR 153534</a></MadCap:conditionalText></p>
+                        <p>Spotlight Feature Videos: <a href="https://vimeo.com/407645603/ac00f609d3" target="_blank" title="Redtail and Whitepages" alt="Redtail and Whitepages">Redtail and Whitepages</a>, <a href="https://vimeo.com/310656143/bc2e6e377a" target="_blank" title="CRM Integration Video" alt="CRM Integration Video">FireLight CRM Integration</a></p>
+                        <p class="hangingindent">User Guide – <em>FireLight Platform User Guide</em>, <MadCap:conditionalText MadCap:conditions="General.PDF">"Preferences" </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../UserGuide/Preferences/Preferences.htm" alt="Preferences">Preferences [User Instructions]</MadCap:xref> </MadCap:conditionalText>section, "CRM Preferences" topic</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

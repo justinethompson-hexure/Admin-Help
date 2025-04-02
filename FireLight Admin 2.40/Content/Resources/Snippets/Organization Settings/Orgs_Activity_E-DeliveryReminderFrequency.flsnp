@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>In the <b class="Bold">E-Delivery Reminder Frequency</b> list, select the frequency (Never, Daily, Weekly)  that FireLight will send reminder e-mails to the agent to complete outstanding e-Delivery cases. This is set by the requested date of the first requirement info node in the 121. E-Delivery reminder emails run on the scheduler with the reminder set at intervals from the time of the application reaching the E-Delivery status. "Daily" frequency emails go out at 6:00 AM UTC. "Weekly" frequency emails go out on Sunday at 7 AM UTC. See the  auto-generated email template in <MadCap:xref href="../../../Organization Configuration/Email.htm" target="_blank" alt="Email">Email</MadCap:xref>.</body>
+</html>

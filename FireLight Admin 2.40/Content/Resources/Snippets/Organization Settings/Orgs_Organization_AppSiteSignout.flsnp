@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>The <b class="Bold">App Site Signout URL</b> text box displays the signout URL for the <MadCap:variable name="General.ProductName" /> user application. Or type the custom signout URL for the FireLight application.</body>
+</html>

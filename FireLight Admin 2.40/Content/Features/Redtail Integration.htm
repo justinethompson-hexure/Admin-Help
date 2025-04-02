@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Setup and usage instructions for integrating with Redtail to pull in client data from the Redtail CRM." />
+    </head>
+    <body>
+        <h1><a name="Top"></a>Redtail Integration</h1>
+        <p class="note"><a name="top"></a><b class="Bold">Spotlight Videos:</b> See <a href="https://vimeo.com/407645603/ac00f609d3" target="_blank" title="Redtail and Whitepages" alt="Redtail and Whitepages">Redtail and Whitepages</a> and <a href="https://vimeo.com/310656143/bc2e6e377a" target="_blank" title="FireLight CRM Integration Video" alt="FireLight CRM Integration Video">CRM Integration</a> for Spotlight feature videos about Redtail and CRM integrations.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');width: 756px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Redtail Integration Feature</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>FireLight<sup>®</sup> can integrate with Redtail to pull in client data from the Redtail CRM. </p>
+                        <p> Currently, you can map the following Redtail properties to the corresponding Data Group Property settings within FireLight fields:</p>
+                        <ul>
+                            <li>FirstName</li>
+                            <li>MiddleName</li>
+                            <li>LastName</li>
+                            <li>Occupation</li>
+                            <li>MarStat</li>
+                            <li>Gender</li>
+                            <li>BirthDate</li>
+                            <li>Age</li>
+                            <li>Citizenship</li>
+                            <li>City</li>
+                            <li>AddressState</li>
+                            <li>Zip</li>
+                            <li>AddressCountry</li>
+                            <li>YearsAtAddress</li>
+                            <li>CountyName</li>
+                            <li>AreaCode</li>
+                            <li>DialNumber</li>
+                            <li>SSN</li>
+                            <li>Email</li>
+                            <li>Business Name</li>
+                        </ul>
+                        <p>There are two ways to pull in the user ID and passwords for this integration.  The best solution depends on how your firm has contracted with Redtail.</p>
+                        <ol>
+                            <li>
+                                <p>FireLight can collect the user ID and password during application data entry and use those credentials to connect to Redtail or users can enter their user ID and password in the CRM Preferences section of the Preferences page and FireLight will automatically supply their credentials to Redtail. This is best for user/seat licenses within Redtail.</p>
+                            </li>
+                            <li>
+                                <p>FireLight can pull credentials from the organization configuration setting for firm wide contracts.</p>
+                            </li>
+                        </ol>
+                        <p>All contracting is done directly with Redtail. Redtail will supply the user name and password credentials.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p><b>IMPORTANT!</b>  FireLight now supports triggering a custom action call from any page within the same package, regardless if the button or fields to trigger that call are on that same page.  See <MadCap:xref href="../Design/Forms/Add Multiple Copies of a Form.htm" alt="Add Multiple Copies of a Form">Add Multiple Copies of a Form</MadCap:xref> for use on multiple-instance forms.</p>
+                        <ol>
+                            <li>
+                                <p>In the Form Designer or Wizard Designer, the following changes are needed to add a button control (form) or custom action button (wizard) and CRM data into the form (e.g., a coversheet form). </p>
+                                <ul>
+                                    <li>
+                                        <p>Add a Button to the form or wizard. In the Field Properties, select <b>CRM</b> in <b>Action Type</b>. Select a <b>CRM Type</b> option in the list: select the <b class="Bold">Redtail</b> option to pull data from the Redtail CRM. Select the <b class="Bold">Preferences</b> option to pull data from the CRM set up on the user's Preferences page in FireLight. In the list, select a <b class="Bold">Data Group</b> for the button. For example, select the <b class="Bold">Owner</b> option to populate owner information in the associated fields.</p>
+                                        <p MadCap:conditions="General.Online">
+                                            <img src="../Resources/ImagesAdmin/Redtail1.jpg" alt="Redtail CRM Button Control and Field Properties" title="Redtail CRM Button Control and Field Properties" MadCap:conditions="General.Online" />
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <p>In the associated fields, select the <b>Data Group</b> that matches the Data Group for the CRM button and select the <b>Data Group Property</b> that matches the field entry. For example, in the Owner_FirstName field, select <b>Owner</b> in <b>Data Group</b> and select <b>FirstName</b> in <b>Data Group Property</b>. Ensure the Data Group and Data Group Property are selected in all fields that need to be filled in.</p>
+                                        <p MadCap:conditions="General.Online">
+                                            <img src="../Resources/ImagesAdmin/Redtail2.jpg" alt="Data Group and Data Group Property" title="Data Group and Data Group Property" MadCap:conditions="General.Online" />
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Set up the Redtail credentials at either the organization level or at the advisor level. </p>
+                                <p><b>Organization level:</b>
+                                </p>
+                                <p class="Indent">In Organization Configuration on the Organization Settings page, <MadCap:xref href="../Organization Configuration/Organizations/Admin.htm" alt="Admin">Admin</MadCap:xref> tab, set up the Redtail credentials for the organization. (<b>Note</b>: It will use the form's Organization if set up, not necessarily the distributor's or carrier's Organization.)</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>
+                                        <p>Click the <b>Click to Edit</b> link next to <b>Third-Party Service Config</b>.</p>
+                                        <p>
+                                            <img src="../Resources/ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" /> The following inputs are case sensitive.</p>
+                                        <ul style="list-style-type: square;">
+                                            <li>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>Username</b>. In <b>Config Value</b>, type the Username Redtail provided for your organization. In <b>Service Type</b>, select <b>Redtail CRM</b> and click the <b>Add Config</b> button.</li>
+                                            <li>Click the<b> Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>Password</b>. In <b>Config Value</b>, type the Password Redtail provided for your organization. In <b>Service Type</b>, select <b>Redtail CRM</b> and click the <b>Add Config</b> button.</li>
+                                            <li>
+                                                <p>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>Workflow</b>. In <b>Config Value</b>, type the Workflow credential that Redtail provided for your organization. In <b>Service Type</b>, select <b>Redtail CRM</b> and click the <b>Add Config</b> button. </p>
+                                                <p MadCap:conditions="General.Postpone"><b class="Bold">NOTE:</b> Config Group is an optional configuration used by the <MadCap:xref href="DocuSign.htm" alt="DocuSign Integration">DocuSign Integration</MadCap:xref> integration.</p>
+                                            </li>
+                                        </ul>
+                                        <p MadCap:conditions="General.Online">
+                                            <img src="../Resources/ImagesAdmin/Capture145.png" alt="Add New Redtail CRM Config Name and Value" title="Add New Redtail CRM Config Name and Value" MadCap:conditions="General.Online" />
+                                        </p>
+                                        <p MadCap:conditions="General.Online">
+                                            <img src="../Resources/ImagesAdmin/Redtail4.jpg" alt="Third Party Service Config - Redtail" title="Third Party Service Config - Redtail" MadCap:conditions="General.Online" />
+                                        </p>
+                                    </li>
+                                    <li>Click the <b>Save Organization</b> button on the Organization Settings page.</li>
+                                </ol>
+                                <p><b>Advisor level:</b>
+                                </p>
+                                <p>
+                                    <p class="note"><b class="Bold">NOTE:</b> To enable Advisors to enter their Redtail CRM credentials in FireLight, select the <a href="../Organization Configuration/Groups/App.htm#EnableCRMPreferences" alt="Enable CRM Preferences">Enable CRM Preferences</a> checkbox in Organization Configuration/Groups on the App tab. </p>
+                                    <p class="Indent">Advisors add their login credentials and FireLight will pull those credentials each time they connect to Redtail.</p>
+                                    <ol style="list-style-type: lower-alpha;">
+                                        <li>Open the <b class="Bold">Preferences</b> page.</li>
+                                        <li>In the CRM Preferences section in <b class="Bold">CRM</b>, select <b class="Bold">Red Tail</b>. </li>
+                                        <li>Enter your <b class="Bold">User Name</b> and <b class="Bold">Password</b> that Redtail provided and click <b class="Bold">Save</b>.</li>
+                                    </ol>
+                                </p>
+                            </li>
+                            <li>In Product Configuration on the <MadCap:xref href="../Product Configuration/Packages.htm" alt="Packages">Packages</MadCap:xref> page, add the form with the new button and data mapping to the applicable product packages.</li>
+                            <li>In Utilities on the <MadCap:xref href="../Utilities/Deployments/Deployments.htm" alt="Deployments">Deployments</MadCap:xref> page, deploy the <b class="Bold">Organization Configuration</b> and deploy the <b class="Bold">Product Configurations</b> or <b class="Bold">Package Configurations</b> that include the forms or wizards with a Redtail CRM button.</li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">User Experience</p>
+                        <ol>
+                            <li>Begin an application or other activity.</li>
+                            <li>
+                                <p>Click the <b>Redtail CRM</b> button.</p>
+                            </li>
+                            <li>
+                                <p>On the upper right of the <b>My Contacts</b> dialog, click the first letter of the contact's last name or commercial name to filter the list.</p>
+                            </li>
+                            <li>In the list of names on the left, click a name to view the contact's information on the right.</li>
+                            <li>
+                                <p>Click the <b>Select</b> button to populate the contact's information on the form.</p>
+                                <p MadCap:conditions="General.Online">
+                                    <img src="../Resources/ImagesAdmin/Redtail3.jpg" alt="Redtail - My Contacts dialog" title="Redtail - My Contacts dialog" MadCap:conditions="General.Online" />
+                                </p>
+                            </li>
+                        </ol>
+                        <p MadCap:conditions="General.PDF">&#160;</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help – Design Document: <MadCap:conditionalText MadCap:conditions="General.PDF">CMR 155962</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/DesignDocs/155962-RedtailIntegration-DesignApproach.pdf" target="_blank" title="CMR 155962" alt="CMR 155962">CMR 155962</a></MadCap:conditionalText> </p>
+                        <p>Spotlight Feature Videos: <a href="https://vimeo.com/407645603/ac00f609d3" target="_blank" title="Redtail and Whitepages" alt="Redtail and Whitepages">Redtail and Whitepages</a>, <a href="https://vimeo.com/310656143/bc2e6e377a" target="_blank" title="FireLight CRM Integration Video" alt="FireLight CRM Integration Video">CRM Integration</a></p>
+                        <p>User Guide – <em>FireLight Platform User Guide</em>, <MadCap:conditionalText MadCap:conditions="General.PDF">"Action Buttons" </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../UserGuide/New Activity/Data Entry/Action Buttons.htm" alt="Action Buttons">Action Buttons [User Instructions]</MadCap:xref> </MadCap:conditionalText>topic, "Example: Redtail CRM Lookup" </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

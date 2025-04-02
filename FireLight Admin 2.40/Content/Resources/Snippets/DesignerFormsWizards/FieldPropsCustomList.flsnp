@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>In the list, select a Custom List if this control is associated with a Custom List Data Group. <b>NOTE:</b> Custom List is used with a Button control. See <MadCap:xref href="../../../Design/Forms/Button.htm" target="_blank" alt="Button">Button</MadCap:xref> for instructions.</body>
+</html>

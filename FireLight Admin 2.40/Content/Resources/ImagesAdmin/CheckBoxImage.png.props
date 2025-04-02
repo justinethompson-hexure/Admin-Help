@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileProperties>
+    <ImageOverlay Profile="D:\Documents\My Profiles\FireLight2.12HighQualityPRINTProfile2.capro" ProfileHash="f9df4e98545886a7a928a233aa4792dcd80548dc" ScreenRectangle="433,483,15,13">
+        <OriginalImage Type="Image" ShapeTimeSpan="10000" Folder="D:\Documents\My Projects\FireLightAdmin11\Content\Resources\Images" Border="none" ExportFormat="png" medium_print_EnableFormat="true" AutoAdjust="true" ComputedWidth="15" ComputedHeight="13" EnableGrayScaleFormat="false" DPI="96" medium_print_ExportFormat="jpg" medium_screen_and__max_width__64_063em__ExportFormat="jpg" medium_screen_and__max_width__40em__ExportFormat="jpg" Title="" Alt="" medium_print_DPI="300" medium_print_OutputScaleFactor="3.6" medium_print_ColorDepth="32" medium_print_JPEGQuality="100" EnableCropRectangle="false" CropRectangle="0,0,0,0" medium_screen_and__max_width__64_063em__OutputScaleFactor="1" medium_screen_and__max_width__64_063em__DPI="96" OutputScaleFactor="1.1" BorderWidth="2" BorderColor="#4682b4" ImageBlurFactor="2" ImageShadeFactor="5" JPEGQuality="100" FileName="" PaddingLeft="0" PaddingRight="0" PaddingTop="0" PaddingBottom="0">SUkqACYBAACAP+BP8AQUAO13PAANltNkAPyIQaJROKRWJBoMhoACQRiGJwOCQZVqtVAArlYrgCQxaWS2CmMxmIAJxOJ2PwOJKidABGz0ADqgAAE0OXS1h0cACilABO02bwKJKOpABiVUAJisAAA1uiyxE18ANSxACpKOnysAKS1ABeW0AIy4AAKXOuxY/3cAN+9ABRX2zxK1KS2W64Iy5XS6xS7n+83u+qK/wbA4NeW+43MKYnFXi9N++X6JSDAWu25XC4fM5qJYvG57H5GC2UAUdhgBM7etVzVQavomw2PZaGcQZT8Wr1kmckAAzmbuDLToAAL9MAJ7rbAAcVTgAtd3nXUu+HP5DhVCDORyOMAMlkMkAPr4d+WCX6AAaDUa9j5fuWQEEAD+AAQAAQAAAAAAAAAAAQQAAQAAAA8AAAABAQQAAQAAAA0AAAACAQMABAAAAOwBAAADAQMAAQAAAAUAAAAGAQMAAQAAAAIAAAARAQQAAQAAAAgAAAAVAQMAAQAAAAQAAAAWAQQAAQAAAA0AAAAXAQQAAQAAAB4BAAAaAQUAAQAAAPQBAAAbAQUAAQAAAPwBAAAcAQMAAQAAAAEAAAAoAQMAAQAAAAIAAAA9AQMAAQAAAAIAAABSAQMAAQAAAAIAAAAAAAAACAAIAAgACAAAdwEA6AMAAAB3AQDoAwAA</OriginalImage>
+        <Shapes />
+        <Variables />
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

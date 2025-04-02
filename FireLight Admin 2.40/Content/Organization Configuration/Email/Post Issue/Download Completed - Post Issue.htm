@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+	<head>
+		<link href="../../../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+	</head>
+	<body>
+		<h1><a name="top"></a>Download Completed - Post Issue</h1>
+		<p>
+			<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailColumnDesc.flsnp" />
+		</p>
+		<table style="border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;mc-table-style: url('../../../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+			<caption class="Table">Download Completed - Post Issue </caption>
+			<col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+			<thead>
+				<tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+					<th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Action, To Name/Email, From Name/Email, CC Address, Available Tags, and Notes</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">Action</p>
+						<p>Final email to the client when post issue activity is complete, and the client is informed to print or download the documents.<br /></p>
+						<p>Template Name: Download Completed - Post Issue</p>
+						<p>Email Subject Line: Print or download your &lt;ACTIVITY_NAME&gt;</p>
+						<p>Message:</p>
+						<p class="Indent2">Dear &lt;CLIENT_NAME&gt;,</p>
+						<p class="Indent2">Thank you for providing your client information.</p>
+						<p class="Indent2">To download or print this information, please click on the link at the bottom of the email. You is asked for your birth date and the last 4 digits of your social security number.</p>
+						<p class="Indent2">If you have questions please feel free to contact me.</p>
+						<p class="Indent2">Post Issue</p>
+						<p class="Indent2">Sincerely,</p>
+						<p class="Indent2">&lt;AGENT_NAME&gt;</p>
+						<p class="Indent2">To download or print your client information click on &lt;URL_LINK&gt;, Enter the last 4 digits of your SSN, and birth date. If a new window does not automatically appear, you may have to copy the link and paste it into the address bar of new browser window.</p>
+						<p> This template is not available for sending when the <a href="../../Groups/App.htm#DisableEmailAfterSubmit" alt="Disable Email After Submit">Disable Email After Submit</a> checkbox is selected in Organization Configuration/Groups page on the App tab. </p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<p class="thead1">To Name / Email</p>
+						<p>All signers not agent*: Name/Email entered in client verification screen</p>
+						<p>*The agent will receive the email if the Enable Submit Email for Agent checkbox is selected in Groups.</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">From Name / Email</p>
+						<p>From Name/Email used in client fill/signature requests if available, else organization name/address</p>
+						<p>Use Agent: Owning Agent’s Preference Name/Email</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<p class="thead1">CC Address</p>
+						<p>If <a href="../../Groups/App.htm#EnableCcSenderInAllRequests" alt="Enable Cc Sender In All Requests">Enable Cc Sender In All Requests</a> is set in Organization Configuration/Groups page on the App tab, cc email sent to ‘From Email’ address</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">Available Tags<sup>3</sup></p>
+						<p>&lt;AGENT_NAME&gt;<br />&lt;ACTIVITY_NAME&gt;<br />&lt;COMPANY_NAME&gt;<br />&lt;DATE_TIME&gt; (current datetime in UTC)<br />&lt;HYPER_LINK&gt;<br />&lt;URL_LINK&gt;<br />ApplicationSearchItems<sup>4</sup> (e.g., add &lt;CLIENT_NAME&gt;)</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+						<p class="thead1">Notes:</p>
+						<p>
+							<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailNote3.flsnp" />
+						</p>
+						<MadCap:snippetBlock src="../../../Resources/Snippets/Email/ReplaceVar4.flsnp" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<MadCap:snippetBlock src="../../../Resources/Snippets/Email/EmailSeeAlso.flsnp" />
+		<p><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+		</p>
+	</body>
+</html>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>By default, this drop-down is available when the Validate Input check box is selected. The default value is None. Select from options to validate that the entered value is Between a specific range or Greater Than, Greater Than Equal To, Less Than, or Less Than Equal To a specific number and then enter a range value for Value.</body>
+</html>

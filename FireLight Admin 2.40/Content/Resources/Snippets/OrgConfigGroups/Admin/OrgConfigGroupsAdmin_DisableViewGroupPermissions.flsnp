@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable View Group Admin Permissions</b> checkbox to disable viewing group admin permissions.  The Admin tab on the Groups page in Organization Config will not be visible when this option is selected. The user will not be able to add new group role codes or make changes to the existing group rights.</body>
+</html>

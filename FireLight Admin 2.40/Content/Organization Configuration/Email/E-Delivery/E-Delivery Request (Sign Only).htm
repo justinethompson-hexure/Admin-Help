@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="General.Online">
+	<head>
+		<link href="../../../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+		<link href="../../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h1><a name="top"></a>E-Delivery Request (Sign Only)</h1>
+		<p>
+			<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailColumnDesc.flsnp" />
+		</p>
+		<table style="border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;mc-table-style: url('../../../Resources/TableStyles/2017_IT-Simple2.css');margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+			<caption class="Table">E-Delivery Request (Sign Only) </caption>
+			<col class="TableStyle-2017_IT-Simple2-Column-Regular" />
+			<thead>
+				<tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+					<th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Action, To Name/Email, From Name/Email, CC Address, Available Tags, and Notes</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">Action</p>
+						<p>Notifies the client that the E-Delivery is ready to sign<sup>1</sup><br />Template Name: E-Delivery Request (Sign Only)
+						</p>
+						<p>Email Subject Line: &lt;APPLICATION_NAME&gt; - Please complete your &lt;TRANSACTION_TYPE&gt;</p>
+						<p>Message:</p>
+						<p class="Indent2">Dear &lt;CLIENT_NAME&gt;,</p>
+						<p class="Indent2">Your policy is ready to be signed.</p>
+						<p class="Indent2">Please use the link provided below to access your policy and sign.</p>
+						<p class="Indent2">&lt;URL_LINK&gt;</p>
+						<p class="Indent2">If a new window does not automatically appear, you may have to copy the link and paste it into the address bar of a new browser window.</p>
+						<p>This template is available for sending when the <a href="../../Groups/Activity Access.htm#E-Delivery" target="_blank" alt="E-Delivery">E-Delivery</a> option is selected in Organization Configuration/Groups page, Activity Access tab.</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<p class="thead1">To Name / Email</p>
+						<p>Client Name/Email typed in email fields or pre-filled from mapped dataitems</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">From Name / Email</p>
+						<p>Default: Session User’s Preference Name/ Email<sup>2</sup><![CDATA[
+							]]><br></br>Use Agent: Owning Agent’s Preference Name/Email
+						</p>
+						<p>Use DMARC<sup>1</sup>: Organization's Support Email</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+						<p class="thead1">CC Address</p>
+						<p> If <a href="../../Groups/App.htm#EnableCcSenderInAllRequests" target="_blank" alt="Enable Cc Sender In All Requests">Enable Cc Sender In All Requests</a> is set in Organization Configuration/Groups page on the App tab, cc email sent to ‘From Email’ address</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+						<p class="thead1">Available Tags<sup>3</sup></p>
+						<p>&lt;AGENT_NAME&gt;<br />&lt;APPLICATION_NAME&gt;<br />&lt;APPLICATION_ID&gt;<br />&lt;CLIENT_NAME&gt;<sup>4</sup><br />&lt;COMPANY_NAME&gt;<br />&lt;DATE_TIME&gt; (current datetime in UTC)<br />&lt;HYPER_LINK&gt;<br />&lt;PRODUCT_NAME&gt;<br />&lt;PRODUCT_TYPE&gt;<br />&lt;STATUS&gt;<br />&lt;TRANSACTION_TYPE&gt;<br />&lt;URL_LINK&gt;<br />ApplicationSearchItems<sup>4</sup>  (e.g., add &lt;CLIENT_NAME&gt;)</p>
+					</td>
+				</tr>
+				<tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+					<td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+						<p class="thead1">Notes:</p>
+						<p>
+							<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailNote1.flsnp" />
+						</p>
+						<p>
+							<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailNote2.flsnp" />
+						</p>
+						<p>
+							<MadCap:snippetText src="../../../Resources/Snippets/Email/EmailNote3.flsnp" />
+						</p>
+						<MadCap:snippetBlock src="../../../Resources/Snippets/Email/EmailNote4.flsnp" />
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<MadCap:snippetBlock src="../../../Resources/Snippets/Email/EmailSeeAlso.flsnp" />
+		<p><a href="#top" alt="Return to Top">Return to Top</a>
+		</p>
+	</body>
+</html>

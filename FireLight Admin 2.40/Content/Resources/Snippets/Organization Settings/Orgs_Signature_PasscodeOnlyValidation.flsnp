@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Select the <b class="Bold">Passcode Only Validation</b> checkbox to have the system remove the top option asking for the SSN/DOB validation and only show the option to enter the provided Passcode during initial validation for signing processes. This applies to the signing functionality for: Request Client to Fill App, Request Client to Fill - Generate Link Without Email, Request Client to Fill &amp; Sign, E-Sign - Sign Now, E-Sign - Remote Sign, E-Sign - Generate Link Without Email. </p>
+        <p>SMS Text and LexisNexis validations will continue to function with this setting enabled. Tele-Sign and E-Delivery are excluded from being affected by this setting. </p>
+        <p>On the Groups page, <MadCap:xref href="../../../Organization Configuration/Groups/App.htm" target="_blank" alt="App">App</MadCap:xref> tab, in the "Email" section, we recommend selecting the <b class="Bold">Allow Passcode Email</b> checkbox. When Passcode Only Validation is enabled, the<MadCap:conditionalText MadCap:conditions="General.PDF"> Passcode Notification email </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../../../Organization Configuration/Email/Activities/Passcode Notification.htm" target="_blank" alt="Passcode Notification">Passcode Notification</MadCap:xref> email</MadCap:conditionalText> is generated in conjunction with the<MadCap:conditionalText MadCap:conditions="General.PDF"> Leave-Behind Email</MadCap:conditionalText><MadCap:xref href="../../../Organization Configuration/Email/Activities/Leave-Behind Email.htm" MadCap:conditions="General.Online" target="_blank" alt="Leave-Behind Email">Leave-Behind Email</MadCap:xref>. You may need to update the email templates to remove the SSN and Date of Birth text.</p>
+        <p><b class="Bold">NOTES:</b>
+        </p>
+        <ul>
+            <li>
+                <p>The Passcode Only and Validate Identity Verification settings are mutually exclusive. Only one of the settings can be enabled or a validation error occurs. </p>
+            </li>
+            <li>
+                <p>In the Form Designer, <MadCap:xref href="../../../Design/Forms/Signature Box.htm" title="Signature Box" alt="Signature Box">Signature Box</MadCap:xref> control: If the Passcode Only Validation checkbox is selected (checked) when the Validate Identity Verification is checked in Organization Settings, it will then use the passcode validation functionality for this specific signature.  All other signatures that do not have this checkbox checked will use the Validate Identify Verification.  If this checkbox is checked when Validate Identity Verification is not checked in the organization settings, the passcode validation functionality will still occur for that signature. If Passcode Validation is turned on at the organization level, then this checkbox is disabled.</p>
+            </li>
+        </ul>
+        <p><b class="Bold">IMPORTANT!</b> Using the Passcode Only Validation Organization setting without adding <MadCap:xref href="../../../Features/SMS Text Authentication.htm" target="_blank" alt="SMS Text Authentication">SMS Text Authentication</MadCap:xref> or <MadCap:xref href="../../../Features/LexisNexis Client Identification Verification Integration.htm" target="_blank" alt="LexisNexis Client Identification Verification During E-Signature">LexisNexis Client Identification Verification During E-Signature</MadCap:xref> for multi-factor authentication can weaken the link from a security perspective. The URL link to access completed documents is sent to the email address entered by the agent/advisor, followed by an additional email containing the passcode. If the email address is incorrectly entered (but is a valid email) there is a potential security risk involved with this process. All users should ensure emails are properly entered and/or add a multi-factor authentication. If your firm organization feels there is an enhanced security risk, please do not use this setting. Additional enhancements are included in future releases to tighten security with this organization setting active.</p>
+        <p>See design document <MadCap:conditionalText MadCap:conditions="General.Online"><a href="../../DesignDocs/236718 Remove SSN DOB Validation from Signer Verification and Only Show Passcode.pdf" target="_blank" title="236718" alt="236718">236718</a></MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.PDF">  236718 in Admin Help</MadCap:conditionalText> for more details.</p>
+        <p> </p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

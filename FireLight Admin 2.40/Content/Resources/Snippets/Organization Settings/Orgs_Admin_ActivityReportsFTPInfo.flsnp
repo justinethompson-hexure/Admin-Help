@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>This is where you edit the FTP&#160;info for activity reports. Two options, Using UN/PWD Authentication and Using SSH&#160;Key Pair Authentication, are available to allow you to enter FTP credentials based on either the username and password or by key pair. If you select Using SSH&#160;Key Pair Authentication, you can also enter the private key info. With this option, the Password field allows entering of a passkey value, and you are required to enter the following information:&#160;FTP SSH&#160;User, Passkey, and Private Key.</p>
+        <p>&#160;</p>
+    </body>
+</html>

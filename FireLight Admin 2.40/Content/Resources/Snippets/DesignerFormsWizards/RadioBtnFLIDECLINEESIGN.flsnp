@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>To enable the ability to use your own defined eConsent form or wizard in a package  and then leverage this eConsent as a "special" replacement and no longer present the base FireLight<sup MadCap:conditions="General.Online">®</sup> "Use/Decline E-Signature" options page, use the FLI_DECLINED_ESIGN common tag in a radio button group on the form or wizard, set the Group property to FLI_DECLINED_ESIGN, and set the Export property to True when e-signature is not required and set the Export property to False when e-signature is required. If the user selects the Yes (true) button on the form or wizard and clicks CONTINUE when Data Entry is 100%, FireLight skips the Signatures tab and goes to the next step in the process. If the user selects the No (false) button on the form or wizard and clicks CONTINUE when Data Entry is 100%, FireLight skips the "Use/Decline E-Signature" options and goes directly to the Signatures step to begin the signing process. See the spreadsheet in the <MadCap:xref href="../../../Design/Common Tagging/Common Tags1.htm" target="_blank" alt="Common Tags" title="Common Tags">Common Tags</MadCap:xref> topic for information about using the FLI_DECLINED_ESIGN common tag in rules.</body>
+</html>

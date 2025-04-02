@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Setup and usage instructions for integrating with Redtail to pull in client data from the Redtail CRM." />
+    </head>
+    <body>
+        <h1><a name="Top"></a>FLI_APP_ORIGIN Data Item</h1>
+        <p>The new data item FLI_APP_ORIGIN captures details of how an application was created or copied.</p>
+        <h2>Creating a New Application in Firelight</h2>
+        <p>When you create a new application in FireLight, the FLI_APP_ORIGIN value will have the value of “FireLight UI.”</p>
+        <p>Simply log in to FireLight and create a new activity.</p>
+        <h2>Rest API</h2>
+        <p>When you create an application using Rest API, the FLI_APP_ORIGIN value will have the value of “API.”</p>
+        <p>You can use the WebApiTestPage in SampleApplication to create an application using the Rest API.</p>
+        <p>Set the FireLight API Endpoint to <span style="font-family: 'Courier New';">{ServerWebsite}/EGApp/api/Activity/v2/CreateActivity</span>.</p>
+        <p>Set FireLight Token Endpoint to  <span style="font-family: 'Courier New';">{ServerWebsite}/EGApp/api/Security/GetToken</span>.</p>
+        <p>Verify the Organization/Secret Key is correct.</p>
+        <p>Verify Certificate/Password is correct.</p>
+        <p>Set the 1228 XML to use your user.</p>
+        <p>Enter the Request Body to create or copy application as in the following example.</p>
+        <p>
+            <img src="../Resources/ImagesAdmin/RequestBodyTextSample.png" />
+        </p>
+        <h2>SSO/103</h2>
+        <p>When you create a new application with the 103/1228, the FLI_APP_ORIGIN value will have the value of “Uknown.”</p>
+        <p>You can test this process using the QETestPage.aspx in SampleApplication. You can change the Org to FSEB to use the default FSEB user, but if you have a different user, you can just enter the User name and Password in the respective fields. Update the Company Producer ID to match your user (in both 1228 and 103). Update the Product Code to the Product CUSIP and select Jursidiction, as in this example.</p>
+        <p>
+            <img src="../Resources/ImagesAdmin/SSOExample.png" />
+        </p>
+        <h2>Other App Origins</h2>
+        <p>All other App creation methods should display Unknown. In the future we will add new App Origins to try to accommodate all methods.</p>
+        <MadCap:pageBreak />
+    </body>
+</html>

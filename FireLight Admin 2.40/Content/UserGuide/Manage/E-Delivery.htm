@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Manage an Agent Directed E-Delivery Case, Request Reissue, E-Delivery Pending Requests, E-Delivery Statuses, E-Delivery Alerts, Cancel E-Delivery" />
+    </head>
+    <body>
+        <h1><a name="top"></a>E-Delivery  (Fill and Sign)<MadCap:conditionalText MadCap:conditions="General.Online"> [User Instructions]</MadCap:conditionalText></h1>
+        <p>E-Delivery  (fill and sign) workflow is available if your organization has implemented the E-Delivery fill and sign feature.</p>
+        <p>E-Delivery fill and sign is the workflow that includes taking the agent and client through reviewing, approving, signing, and submitting a policy electronically.</p>
+        <p>FireLight<sup MadCap:conditions="General.Online">®</sup> supports two E-Delivery fill and sign processes that drive what FireLight does with the case when it is received. Cases can either be agent directed or client directed.</p>
+        <ul>
+            <li>Agent directed cases go into a dashboard view for the agent to manage. The agent must approve the case before it is sent to the clients.</li>
+            <li>Client directed cases go directly to the clients and do not require an agent to approve the case.</li>
+        </ul>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Agent Directed E-Delivery (Fill and Sign) Case</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">Agent Directed E-Delivery (Fill and Sign)&#160;Case</h2>
+                <ol>
+                    <li>
+                        <p>	The agent receives an email notification to log in and review the E-Delivery case. The case is in a Pending Agent Review status.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture53.png" alt="Agent Email - E-Delivery Fill and Sign Case" title="Agent Email - E-Delivery Fill and Sign Case" />
+                        </p>
+                    </li>
+                    <li>On the FireLight Home page, the agent selects the e-Delivery case in the <b class="Bold">Recent Activity</b> grid on the left or on the lower right under <b class="Bold">Manage</b>, clicks the <b class="Bold">E-Delivery</b> product name button to open <b class="Bold">All Activities</b> filtered by e-Delivery cases. The counter on the right of the E-Delivery button on the Home page increases any time an agent directed case is sent in and is in a “Pending Agent Review” status. The counter only shows cases that have not been opened yet. Count is based on pending agent review, so any action that causes it to set to pending agent review (i.e., new agent directed case, client change request) will add it to the count and it will not decrease until the case moves to another display status.<p><img src="../../Resources/ImagesUserGuide/Manage/Capture108.png" alt="E-Delivery Case Count" title="E-Delivery Case Count" /></p></li>
+                    <li>
+                        <p>The agent reviews the E-Delivery case and fills in required agent information, for example, Agent ID. The agent uses the E-Delivery case navigation bar to Approve and Sign an E-Delivery case, Request Reissue, view Pending Requests and Alerts, and to Cancel E-Delivery. The available actions on the navigation bar depend on the current e-Delivery workflow status.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture109.png" alt="E-Delivery Navigation Bar" title="E-Delivery Navigation Bar" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>On the navigation bar, the agent clicks <b class="Bold">Approve</b>.</p>
+                        <p>The Request Clients to Complete their E-Delivery Requirements and Sign dialog opens. The agent clicks <b class="Bold">Send Email</b> to send the request email to the clients.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture110.png" alt="Request Clients to Complete their E-Delivery Requirements and Sign" title="Request Clients to Complete their E-Delivery Requirements and Sign" />
+                        </p>
+                        <p>The Pending Requests dialog opens. The agent clicks <b class="Bold">Close</b>.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture54.png" alt="" title="" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>The clients receive an email notification to access the policy, review the content, complete any remaining requirements, and sign. The client also receives a Passcode email if the Passcode feature is enabled.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture55.png" alt="Client Email Notification - E-Delivery Fill and Sign" title="Client Email Notification - E-Delivery Fill and Sign" />
+                        </p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture56.png" alt="Client Password Email" title="Client Password Email" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>The client enters the <b class="Bold">Last 4 Digits of SSN/Government ID</b> and their <b class="Bold">Birth Date</b> or a <b class="Bold">Passcode</b> sent to them via a separate email, and clicks <b class="Bold">Enter</b> to log in to FireLight.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture8.png" alt="Welcome Login Page" title="Welcome Login Page" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>The client reviews each page of the e-Delivery package and enters client information where applicable.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture57.png" alt="Client E-Delivery Fill and Sign" title="Client E-Delivery Fill and Sign" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>The client clicks the <b class="Bold">Approve &amp; Sign</b> button and clicks <b class="Bold">Lock Activity</b> to lock the E-Delivery case for signing.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture116.png" alt="Locked Activity dialog" title="Locked Activity dialog" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Client clicks <b class="Bold">Sign Activity</b> and completes the standard FireLight e-signing process in step 10. Or the client can click the <b class="Bold">Contact Agent</b> button to send an email to the agent or click the <b class="Bold">Review Documents</b> button to open and review the documents in the package.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture117.png" alt="Electronic Signatures dialog" title="Electronic Signatures dialog" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>On the Signature page, client clicks each document to review and then selects the checkbox for <b class="Bold">I have reviewed and agree with the terms expressed within this document</b>.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture22.png" alt="E-Delivery Sign Only - Signature Page" title="E-Delivery Sign Only - Signature Page" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>On the Capture Electronic Signature page, client enters their <b class="Bold">Signer Full Name</b> and <b class="Bold">City</b> and signs by clicking the <b class="Bold">I Consent</b> button, signing on the signature pad with a mouse or stylus, or signing with the Topaz signature tablet.</p>
+                        <p> <img src="../../Resources/ImagesUserGuide/Manage/Capture24.png" alt="Capture Electronic Signature" title="Capture Electronic Signature" /></p>
+                    </li>
+                    <li>
+                        <p>On the Congratulations page, client clicks <b class="Bold">OK</b> or clicks the <b class="Bold">Log Off</b> button on the upper right to log off and exit FireLight. </p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture58.png" alt="FireLight Congratulations Page" title="FireLight Congratulations Page" />
+                        </p>
+                        <p>Before logging off,  the client can click the <b class="Bold">Contact Agent</b> button to open a message, enter message text for the agent and click <b class="Bold">Send</b> to send the message to the agent.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture59.png" alt="Client Message to Agent" title="Client Message to Agent" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>When each client approves and signs an e-Delivery request, the agent receives an email notification that the client has signed and approved the E-Delivery case.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture120.png" alt="Sample Email to Agent" title="Sample Email to Agent" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>If the agent’s signature is required for the e-Delivery case: when clients have reviewed, approved and signed the e-Delivery client requests, the agent receives an email similar to the following.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture121.png" alt="Sample Email for Agent Signature" title="Sample Email for Agent Signature" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Agent logs on to FireLight and opens the e-Delivery case.</p>
+                    </li>
+                    <li>
+                        <p>On the right of the e-Delivery navigation bar, the agent clicks the <b class="Bold">Sign Now</b> button.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture122.png" alt="Agent Sign Now" title="Agent Sign Now" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>In the <b class="Bold">List of Required Agent Signatures</b>, the agent clicks a button to begin the agent signature process.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture123.png" alt="List of Required Agent Signatures" title="List of Required Agent Signatures" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>The agent completes the standard FireLight signature capture process for the agent.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture124.png" alt="Completed Agent Signatures" title="Completed Agent Signatures" />
+                        </p>
+                        <p>When all signatures are complete, the agent receives an email similar to the following.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture125.png" alt="Sample E-Delivery Process Completed Email to Agent" title="Sample E-Delivery Process Completed Email to Agent" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>The clients receive an email notification to download or print the completed E-Delivery.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture61.png" alt="Client Email to Download and Print Documents" title="Client Email to Download and Print Documents" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Client clicks the URL and enters the <b class="Bold">Last 4 Digits of SSN/Government ID</b> and <b class="Bold">Birth Date</b> on the Welcome page and clicks <b class="Bold">Enter</b>.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture48.png" alt="Welcome Login Page" title="Welcome Login Page" />
+                        </p>
+                        <p>Client clicks the <b class="Bold">Download All</b> link to download all of the case documents in a single PDF file.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture62.png" alt="Download PDF Documents - E-Delivery Fill and Sign" title="Download PDF Documents - E-Delivery Fill and Sign" />
+                        </p>
+                        <p>On the notification bar, client clicks an option to <b class="Bold">Open</b>, <b class="Bold">Save</b> menu, or <b class="Bold">Cancel</b> the downloaded PDF documents. This view is browser dependent.</p>
+                        <p>Click clicks the <b class="Bold">Log Off</b> button to log off and exit FireLight.</p>
+                    </li>
+                    <li>
+                        <p>(Optional for Agent) In <b class="Bold">All Activities</b>, agent clicks the link icon <img src="../../Resources/ImagesUserGuide/LinkIcon.png" alt="Linked Activity - Link Icon" title="Linked Activity - Link Icon" /> to view the status of the parent and child cases.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture63.png" alt="All Activities - E-Delivery Linked Activities" title="All Activities - E-Delivery Linked Activities" />
+                        </p>
+                        <p>Agent clicks the <b class="Bold">View History</b> link to view the audit History for the E-Delivery Fill and Sign case.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture64.png" alt="All Activities - View History" title="All Activities - View History" />
+                        </p>
+                        <p>After the clients complete the case, the agent's view of the E-Delivery Sign Only case in FireLight displays the following message for the case.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture65.png" alt="E-Delivery Case Is Finished Message" title="E-Delivery Case Is Finished Message" />
+                        </p>
+                        <p>The agent can print and save the E-Delivery case documents by clicking <b class="Bold">Display/Print PDF</b> on the <b class="Bold">Other Actions</b> menu, selecting documents and clicking the <b class="Bold">Print Selected Documents</b> button.</p>
+                    </li>
+                </ol>
+                <p MadCap:conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Client Directed E-Delivery (Fill and Sign)&#160;Case</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">Client Directed E-Delivery (Fill and Sign)&#160;Case</h2>
+                <ol>
+                    <li>
+                        <p>The clients receive an email notification to access the policy, review the content, complete any remaining requirements, and sign. The client also receives a Passcode email if the Passcode feature is enabled.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture55.png" alt="Client Email Notification - E-Delivery Fill and Sign" title="Client Email Notification - E-Delivery Fill and Sign">
+                            </img>
+                        </p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture56.png" alt="Client Password Email" title="Client Password Email">
+                            </img>
+                        </p>
+                    </li>
+                    <li>
+                        <p>The client enters the <b class="Bold">Last 4 Digits of SSN/Government ID</b> and their <b class="Bold">Birth Date</b> or a <b class="Bold">Passcode</b> sent to them via a separate email, and clicks <b class="Bold">Enter</b> to log in to FireLight.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture8.png" alt="Welcome Login Page" title="Welcome Login Page">
+                            </img>
+                        </p>
+                    </li>
+                    <li>
+                        <p>The client reviews each page of the e-Delivery package and enters client information where applicable.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture57.png" alt="Client E-Delivery Fill and Sign" title="Client E-Delivery Fill and Sign">
+                            </img>
+                        </p>
+                    </li>
+                    <li>
+                        <p>The client clicks the <b class="Bold">Approve &amp; Sign</b> button and clicks <b class="Bold">Lock Activity</b> to lock the E-Delivery case for signing.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture116.png" alt="Locked Activity dialog" title="Locked Activity dialog">
+                            </img>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Client clicks <b class="Bold">Sign Activity</b> and completes the standard FireLight e-signing process in step 6. Or the client can click the <b class="Bold">Contact Agent</b> button (see "Contact Agent") to send an email to the agent or click the <b class="Bold">Review Documents</b> button to open and review again the documents in the package.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture117.png" alt="Electronic Signatures dialog" title="Electronic Signatures dialog">
+                            </img>
+                        </p>
+                    </li>
+                    <li>
+                        <p>On the Signature page, client clicks each document to review and then selects the checkbox for <b class="Bold">I have reviewed and agree with the terms expressed within this document</b>.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture22.png" alt="E-Delivery Sign Only - Signature Page" title="E-Delivery Sign Only - Signature Page">
+                            </img>
+                        </p>
+                    </li>
+                    <li>
+                        <p>On the Capture Electronic Signature page, client enters their <b class="Bold">Signer Full Name</b> and <b class="Bold">City</b> and signs by clicking the <b class="Bold">I Consent</b> button, signing on the signature pad with a mouse or stylus, or signing with the Topaz signature tablet.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture24.png" alt="Capture Electronic Signature" title="Capture Electronic Signature">
+                            </img>
+                        </p>
+                    </li>
+                    <li>
+                        <p>On the Congratulations page, client clicks <b class="Bold">OK</b> or clicks the <b class="Bold">Log Off</b> button on the upper right to log off and exit FireLight. </p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture58.png" alt="FireLight Congratulations Page" title="FireLight Congratulations Page" />
+                        </p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture68.png" alt="Thank You Page" title="Thank You Page" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>When each client approves and signs an e-Delivery request, the agent receives an email notification that the client has signed and approved the E-Delivery case.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture120.png" alt="Sample Email to Agent" title="Sample Email to Agent" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>The client receives an email notification to download or print the completed E-Delivery. </p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture69.png" alt="Client Email to Download and Print E-Delivery Documents" title="Client Email to Download and Print E-Delivery Documents" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Client clicks the URL and enters the <b class="Bold">Last 4 Digits of SSN/Government ID</b> and <b class="Bold">Birth Date</b> on the Welcome page and clicks <b class="Bold">Enter</b>.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture48.png" alt="Welcome Login Page" title="Welcome Login Page" />
+                        </p>
+                        <p>Client clicks the <b class="Bold">Download All</b> link to download all of the case documents in a single PDF file.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture62.png" alt="Download PDF Documents - E-Delivery Fill and Sign" title="Download PDF Documents - E-Delivery Fill and Sign" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Client clicks <b class="Bold">Log Off</b> on the upper right to log off FireLight.</p>
+                    </li>
+                </ol>
+                <p MadCap:conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Alerts</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">Alerts</h2>
+                <p>An E-Delivery case cannot be approved or completed if Alerts are present. Alerts indicate errors or missing information.</p>
+                <p>The following example shows an Alert for missing data.</p>
+                <ol>
+                    <li>
+                        <p>On the toolbar, click the alert icon <img src="../../Resources/ImagesUserGuide/AlertIcon.png" alt="Alert Icon" title="Alert Icon" />  next to Alerts to display the validation message. Click <b class="Bold">X</b> on the lower left to close the message.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture70.png" alt="Required Fields Alert" title="Required Fields Alert" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>When the Client fills in the information and tabs out of the last required field, the Alerts icon changes to a green check mark and the Approve&amp; Sign button becomes available.</p>
+                    </li>
+                    <li>
+                        <p>On the navigation bar, a green check mark next to Alerts indicates no alerts. </p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture57.png" alt="Client E-Delivery Fill and Sign" title="Client E-Delivery Fill and Sign">
+                            </img>
+                        </p>
+                    </li>
+                </ol>
+                <p MadCap:conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Attach Documents</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">Attach Documents</h2>
+                <p>The client can upload and attach documents to the E-Delivery case.</p>
+                <ol>
+                    <li>
+                        <p>After logging in to the E-Delivery case in FireLight, the client clicks <b class="Bold">Attach Documents</b> on the upper right.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture73.png" alt="Contact Agent Button" title="Contact Agent Button" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>In the Documents dialog, the client selects a <b class="Bold">Document Type</b> in the list and clicks the <b class="Bold">Choose File</b> button.</p>
+                    </li>
+                    <li>
+                        <p>The client selects a document in the Open dialog and clicks <b class="Bold">Open</b>.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture76.png" alt="Uploaded Documents List" title="Uploaded Documents List" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Client clicks the <b class="Bold">Upload</b> button.</p>
+                        <p>The document appears in the Uploaded Documents list. Client can click the <b class="Bold">View</b> link to open and view the document.</p>
+                        <p>Client can choose another file and upload or click <b class="Bold">Close</b> to exit the dialog.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture75.png" alt="Documents dialog" title="Documents dialog" />
+                        </p>
+                    </li>
+                </ol>
+                <p MadCap:conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Cancel E-Delivery</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">Cancel E-Delivery</h2>
+                <p>Use this option when the client wants to cancel the electronic delivery. This is a terminal status and prevents further action by the agent or the clients on the case.</p>
+                <ol>
+                    <li>
+                        <p>The agent logs in to FireLight and opens the E-Delivery case the client wants to cancel.</p>
+                    </li>
+                    <li>On the E-Delivery toolbar, the agent clicks <b class="Bold">Cancel E-Delivery</b> to cancel the E-Delivery case.<p><img src="../../Resources/ImagesUserGuide/Manage/Capture128.png" alt="Navigation Bar - Cancel E-Delivery" title="Navigation Bar - Cancel E-Delivery" /></p></li>
+                    <li>
+                        <p>To proceed with the cancellation, the agent clicks <b class="Bold">Cancel E-Delivery</b> on the Cancel E-Delivery Case dialog.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture77.png" alt="Cancel E-Delivery Case dialog" title="Cancel E-Delivery Case dialog" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>The following message appears on the open E-Delivery case.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture78.png" alt="E-Delivery Case Has Been Canceled Message" title="E-Delivery Case Has Been Canceled Message" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>FireLight sends a status back to the carrier letting them know that the client has elected to cancel the E-Delivery case.</p>
+                    </li>
+                </ol>
+                <p MadCap:conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Contact Agent</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">Contact Agent</h2>
+                <ol>
+                    <li>
+                        <p>Before logging off,  the client can click the <b class="Bold">Contact Agent</b> button on the upper right to send a message to the agent.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture73.png" alt="Contact Agent Button" title="Contact Agent Button" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>In the dialog, the client enters message text and clicks <b class="Bold">Send</b> to send the message to the agent.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture59.png" alt="Client Message to Agent" title="Client Message to Agent">
+                            </img>
+                        </p>
+                    </li>
+                </ol>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Request Change</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">Request Change</h2>
+                <p>The client can request a change to the E-Delivery.</p>
+                <ol>
+                    <li>
+                        <p>Click <b class="Bold">Request Change</b> on the E-Delivery toolbar.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture71.png" alt="Request Change" title="Request Change" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>In the Request Change dialog, enter the reasons for the changes, and select the checkbox for <b class="Bold">I have completed my review. No further edits is allowed.</b></p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture72.png" alt="Request Change dialog" title="Request Change dialog" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Click a button. Click <b class="Bold">Save &amp; Close</b> to close the dialog without submitting the requested change. Click <b class="Bold">Submit</b> to submit the change and log out of FireLight.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture68.png" alt="Thank You Page" title="Thank You Page" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>When the agent views the audit History for the case in All Activities, the status is Change Requested by Client and  "A Next Step Activity was deleted."</p>
+                    </li>
+                </ol>
+                <p MadCap:conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Request Reissue</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">Request Reissue</h2>
+                <p>If applicable, the agent can request a reissue when changes need to be made to the policy/contract.</p>
+                <ol>
+                    <li>
+                        <p>Agent opens the E-Delivery case.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture128.png" alt="Navigation Bar - Cancel E-Delivery" title="Navigation Bar - Cancel E-Delivery" />
+                        </p>
+                    </li>
+                    <li>On the E-Delivery toolbar, the agent clicks <b class="Bold">Request Reissue</b>.</li>
+                    <li>In the <b class="Bold">Request Reissue</b> dialog, select an option in the <b class="Bold">Reason</b> list: <b class="Bold">Issued Incorrectly</b>, <b class="Bold">Client Requested Change</b>, or <b class="Bold">Other</b>.</li>
+                    <li>
+                        <p>Enter one or more detailed reasons in the <b class="Bold">Reason Description</b> text box. Ensure you have thoroughly reviewed and listed all reasons for the request for reissue.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture126.png" alt="Request Reissue dialog" title="Request Reissue dialog" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Near the bottom of the dialog, read the information next to the checkbox and select the checkbox.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture127.png" alt="Request Reissue - Check Box" title="Request Reissue - Check Box" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Click the <b class="Bold">Save &amp; Close</b> button to save and close the E-Delivery case or click the <b class="Bold">Submit</b> button to submit the request for reissue.</p>
+                    </li>
+                    <li>
+                        <p>A Log Off message appears. Agent closes the message or clicks the <b class="Bold">Log Off</b> link to log off FireLight. The case status changes to Change Requested by Agent.</p>
+                        <p>
+                            <img src="../../Resources/ImagesUserGuide/Manage/Capture79.png" alt="Log Off Message" title="Log Off Message" />
+                        </p>
+                    </li>
+                </ol>
+                <p MadCap:conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Save and Log Off</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">Save and Log Off</h2>
+                <p class="Indent">(Optional) If the client cannot fill in some of the information at this time, the client can click the <b class="Bold">Save and Log off</b> button on the upper right and click <strong>OK</strong> on the Incomplete Activity dialog to log off FireLight and return later.</p>
+                <p class="Indent">
+                    <img src="../../Resources/ImagesUserGuide/Manage/Capture74.png" alt="Save and Log Off - Incomeplete Activity" title="Save and Log Off - Incomeplete Activity" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">E-Delivery Statuses</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">E-Delivery Statuses</h2>
+                <p>The following E-Delivery statuses are available in FireLight.</p>
+                <p><b class="hangingindent">Canceled</b> – For other than Agent directed E-Delivery Fill and Sign cases, when an E-Delivery email is undeliverable, the status is "Canceled" (so a reversal can be issued) with a sub status of "Other" for the parent and child cases. The status for the child case with the undeliverable email is "Canceled" with a sub status of "Undeliverable Email." </p>
+                <p class="hangingindent"><b class="Bold">Change Requested by Agent</b> – If the agent clicks “Request Reissue” for any reason, the case is set to the terminal status of “Change Requested by Agent”. A newly generated, corrected case will need to be sent in by the carrier to proceed.</p>
+                <p class="hangingindent"><b class="Bold">Change Requested by Client</b> – In an agent directed workflow, the child case(s) are set to this status if a client clicks “Request Change.”</p>
+                <p class="Indent2">In a client directed workflow, the parent and child cases are set to this status if the client clicks “Request Change”. This is considered a terminal status in a client directed workflow. A newly generated, corrected case will need to be sent in by the carrier to proceed.</p>
+                <p class="hangingindent"><b class="Bold">Complete</b> – When all child cases are complete, the parent case is updated to this status. The case is delivered to the carrier for processing.</p>
+                <p class="hangingindent"><b class="Bold">Expired</b> – The requested date for the parent case in requirement info (&lt;RequestedDate&gt;2018-10-05&lt;/RequestedDate&gt;) sent in the 121 will determine the expiration date. Once this date has passed, if the case is not complete it is set to a terminal status of expired. A newly generated case would need to be sent in by the carrier to proceed.</p>
+                <p class="hangingindent"><b class="Bold">In Agent Signatures</b> – When the agent begins the signing process, the case display status transitions to “In Agent Signatures,”</p>
+                <p class="hangingindent"><b class="Bold">In Signatures</b> - This status triggers on the child cases when any party has started the signature process.</p>
+                <p class="hangingindent"><b class="Bold">Pending Agent Review</b> – In an agent directed workflow, the parent case is set to this status when it is sent into FireLight. It is also set on the parent case if a client clicks “Request Reissue.” This status will not appear in a client directed workflow and will repeat anytime a policy is sent back to the agent for review.</p>
+                <p class="hangingindent"><b class="Bold">Pending Agent Signatures</b> – If agent signatures are required on either the agent portion or the client portion of the e-Delivery case, after the client signatures are captured, the display status changes to “Pending Agent Signatures.”</p>
+                <p class="hangingindent"><b class="Bold">Pending Client Review</b> – Once child cases are sent, the parent and child cases are set to Pending Client Review. This status will remain for the parent case until all child cases are complete or a reissue is requested.</p>
+                <p class="hangingindent"><b class="Bold">Policy Canceled</b> – If the agent clicks “Cancel E-Delivery” for any reason, the case is set to the terminal status of “Policy Canceled”. A newly generated, corrected case will need to be sent in by the carrier to proceed if applicable.</p>
+                <p class="hangingindent"><b class="Bold">Signatures Complete</b> – Indicates that the child case has been signed and no further actions are required for that child case</p>
+                <p class="hangingindent"><b class="Bold">Submit Requested</b> – Once the parent case is in a complete status, the child cases will show this status.</p>
+                <p class="hangingindent"><b class="Bold">Undeliverable Email</b> – The sub status of the child case with the undeliverable email. In the "Request Reissue" dialog (shown when an agent clicks the "Request Reissue" button in an Agent Directed E-Delivery Fill and Sign case, an "Update Client Email Address" option is added to the Reason list.</p>
+                <p MadCap:conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Undeliverable E-Delivery Emails</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2 MadCap:conditions="General.PDF">Undeliverable E-Delivery Emails</h2>
+                <MadCap:snippetBlock src="../../Resources/Snippets/Email/EDeliveryUndeliverableEmailAdmin.flsnp" />
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p MadCap:conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

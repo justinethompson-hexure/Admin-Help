@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>In the <b class="Bold">Illustration Email Expiration</b> text box, enter an expiration in days for the Agent Illustration PDF Output email template that is in the Illustration email category on the Email page. In the list, select the number of days before the email expires. Select the <b class="Bold">Enable Illustration Send Email</b> checkbox to enable the email.</body>
+</html>

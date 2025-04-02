@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <a name="top">
+            </a>Rule Sets</h1>
+        <p>On the navigation bar, click <b>Product Config</b> and click <b>Rule Sets</b> to go to the Rule Sets page.</p>
+        <p>Use the Rule Sets page to define and manage a collection of rule sets, which are added along with forms to packages.  Rule sets can contain groups of rules by category (distributor only rule set, owner rule set, product specific rule set, etc.), which allow you to use the same rules across multiple forms, thus avoiding duplication of rules across multiple forms packages. For example, you could use the same Owner rule set across different forms in multiple packages that have owner-related data items.</p>
+        <p>Following are informative topics about rule sets and a description of the Rule Sets page.</p>
+        <h2 MadCap:conditions="General.PDF">Key Advantages of Rule Sets</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Key Advantages of Rule Sets</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ul>
+                    <li>You can group rules into rule sets by category, e.g., distributor rule set, owner rule set, product rule set, etc., then add the applicable rule sets to packages, which allows maximum reuse of the same rules across multiple packages. Because rules are tied to the data items within a package, only the applicable rules will fire. </li>
+                    <li>If you would like to begin working on rules for a future release, you can set beginning and ending dates on the current rule set, make a copy of the current rule set for a future release, make updates to the future rule set, set beginning and ending dates for the future rule set, and then add the rule set to the applicable packages.</li>
+                    <li>For testing new rules in a test environment, you can add a new rule set, copy rules from an existing rule set to the new rule set, update the new rule set, and then replace the old rule set with the new rule set in one or more packages for testing.  </li>
+                    <li>Rule sets are saved independently, which allows multiple users to work on rules at the same time. </li>
+                    <li>Lock rule sets for editing to eliminate overwriting by other users.</li>
+                    <li>Deploy rule sets across forms and wizards.</li>
+                    <li>Deploy rule sets configurations independently on the Deployments page. See <MadCap:xref href="../Utilities/Deployments/Deploy Data.htm" target="_blank" alt="Deploy Data">Deploy Data</MadCap:xref>.</li>
+                </ul>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 MadCap:conditions="General.PDF">Rules Processing Overview</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Rules Processing Overview</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Conversion Process:</p>
+                <ul>
+                    <li>With the initial implementation of rule sets in FireLight<sup MadCap:conditions="General.Online">®</sup> v2.11, FireLight converted all of your previous form level rules to rule sets with the rule set names matching the form names. If the forms have an Edition set in the Form Detail, the rule set names include the Edition at the end of the rule set name. For example, FireLight converts rules in a form named "Medical_History" with Edition 3/17 to a rule set named "Medical_History_3/17."</li>
+                    <li>During the rule set conversion process, FireLight automatically assigned a Primary Rule Set to any form  with rules containing [FORM_INDEX], [FORM_INDEX_PLUS_1] and/or [FORM_COUNT]. See <MadCap:xref href="../Design/Forms/Assign a Primary Rule Set.htm" target="_blank" alt="Assign a Primary Rule Set">Assign a Primary Rule Set</MadCap:xref> for more information.</li>
+                    <li>When you upload a new form, FireLight does not convert the new form to a rule set. You need to add or update existing rule sets for the data items on the form and then add the applicable rule sets to the package along with the form.</li>
+                </ul>
+                <p>High Level Architecture for Rules Processing:</p>
+                <ul>
+                    <li>Controls are tied to data containers.</li>
+                    <li>Rules work against the data containers.  They have no knowledge of the associated form controls.</li>
+                    <li>Rules engine is event based.  Rules are fired when a value within a container changes.</li>
+                    <li>The Rules Engine uses a stack-based or postfix type language.  Think of it like working from the inside out.  Arguments are passed in first, followed by the action.</li>
+                </ul>
+                <p>Organization of Rules:</p>
+                <ul>
+                    <li>You do not have to duplicate common rules on other forms. You can use rule sets to maintain rules by category (distributor-specific, owner-specific, product-specific, etc.) and then add the applicable rule sets to the packages.</li>
+                    <li>You can create new rule sets or edit existing rule sets to avoid duplicate rules.</li>
+                    <li>When the application forms run, FireLight sorts the rules by rule content (not by name) and removes identical rules. </li>
+                    <li>When working on a rule set, you can lock the rule set to prevent other Admin users from overwriting your work.</li>
+                    <li>If you create a new rule on a form in the form Designer, you can tie a rule set to a particular data item. </li>
+                </ul>
+                <p>FireLight Locking of Activities Rules</p>
+                <ul>
+                    <li> <MadCap:snippetText src="../Resources/Snippets/LockActivities.flsnp" /></li>
+                </ul>
+                <p MadCap:conditions="General.Online">
+                    <a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:pageBreak />
+        <h2 MadCap:conditions="General.PDF">Rule Sets Page Grid and Associated Fields</h2>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot MadCap:conditions="General.Online">Rule Sets Page Grid and Associated Fields</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The top section of the Rule Sets page displays a grid with a list of rule sets that have been successfully added. The following topics describe the rule sets grid and associated fields on the upper right of the Rule Sets page and instructions for using the top area of the page.</p>
+                <p>The rule set grid contains a  row of information for each rule set.</p>
+                <p>Sort the rule sets alphabetically by clicking  <b>Rule Set Name</b> in the header row of the grid.</p>
+                <p>
+                    <b class="DRNumberBold">Grid Columns</b>
+                </p>
+                <p class="Indent">
+                    <b>Rule Set Name</b> displays the rule set name.</p>
+                <p class="Indent">
+                    <b>Description</b> displays a description of the rule set.</p>
+                <p class="Indent">
+                    <b>Lock/Unlock column</b> contains a lock <img src="../Resources/ImagesAdmin/LockButton-Locked.jpg" alt="Lock Button - Locked" title="Lock Button - Locked" /> button that is used to allow or prevent other admin users from editing the rule set.   </p>
+                <p class="Indent">
+                    <b>Delete column</b> contains a red X that is used to delete the rule set from the system.  </p>
+                <p>
+                    <b class="DRNumberBold">Fields Below the Grid</b>
+                </p>
+                <p class="Indent">
+                    <b>Exclude Expired</b> Select this checkbox to exclude expired rule sets from the rule set list grid. This filters the list to show only active rule sets in the grid.</p>
+                <p class="Indent">
+                    <b>Total</b> displays the total number of rule sets that are currently in the grid.&#160;</p>
+                <p MadCap:conditions="General.Online">
+                    <a href="#top" alt="Return to Top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p MadCap:conditions="General.PDF">Following are tasks you can accomplish on the Rule Sets page.</p>
+        <p MadCap:conditions="General.Online">
+            <strong>See Also:</strong>
+        </p>
+        <p class="Indent" MadCap:conditions="General.Online">
+            <MadCap:xref href="Rule Sets/Add a Rule Set and Detail.htm" title="Add a Rule Set and Detail" alt="Add a Rule Set and Detail">Add a Rule Set and Detail</MadCap:xref>
+        </p>
+        <p class="Indent" MadCap:conditions="General.Online">
+            <MadCap:xref href="Rule Sets/Copy Rules.htm" alt="Copy Rules">Copy Rules</MadCap:xref>
+        </p>
+        <p class="Indent" MadCap:conditions="General.Online">
+            <MadCap:xref href="Rule Sets/Delete a Rule Set.htm" title="Delete a Rule Set" alt="Delete a Rule Set">Delete a Rule Set</MadCap:xref>
+        </p>
+        <p class="Indent" MadCap:conditions="General.Online">
+            <MadCap:xref href="Rule Sets/Duplicate Rule Set.htm" alt="Duplicate Rule Set">Duplicate a Rule Set</MadCap:xref>
+        </p>
+        <p class="Indent" MadCap:conditions="General.Online">
+            <MadCap:xref href="Rule Sets/Export Rule Set XML.htm" alt="Export Rule Set XML">Export Rule Set XML</MadCap:xref>
+        </p>
+        <p class="Indent" MadCap:conditions="General.Online">
+            <MadCap:xref href="Rule Sets/Import-View All Rule Definitions.htm" alt="Import/View All Rule Definitions" title="Import/View All Rule Definitions">Import/View All Rule Definitions</MadCap:xref>
+        </p>
+        <p class="Indent" MadCap:conditions="General.Online">
+            <MadCap:xref href="Rule Sets/Lock and Unlock a Rule Set for Editing.htm" title="Lock and Unlock a Rule Set for Editing" alt="Lock and Unlock a Rule Set for Editing">Lock and Unlock a Rule Set for Editing</MadCap:xref>
+        </p>
+        <p class="Indent" MadCap:conditions="General.Online">
+            <MadCap:xref href="Rule Sets/Rules Window.htm" alt="Rules Window">Rules Window</MadCap:xref>
+        </p>
+        <p class="Indent" MadCap:conditions="General.Online">
+            <MadCap:xref href="Rule Sets/Search for a Rule Set.htm" title="Search for a Rule Set" alt="Search for a Rule Set">Search for a Rule Set</MadCap:xref>
+        </p>
+        <p class="Indent" MadCap:conditions="General.Online">
+            <MadCap:xref href="Rule Sets/TemplatesWindow.htm" alt="Templates Window">Templates Window</MadCap:xref>
+        </p>
+        <p class="Indent" MadCap:conditions="General.Online">
+            <MadCap:xref href="Rule Sets/View Rule Set History.htm">View Rule Set Audit History</MadCap:xref>
+        </p>
+        <p MadCap:conditions="General.Online">
+            <a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable Approve Button</b> checkbox to disable and hide the Approve button for eDelivery. For example, if the carrier allows visibility to multiple agents, they can use this option to disable the Approve button. They will still have the ability to reject the case.</body>
+</html>

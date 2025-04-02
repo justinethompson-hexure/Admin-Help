@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the   <b>Enable Submit Email for Agent</b> checkbox to enable an auto-generated email that is sent to the agent upon submission of the completed application after reviewer approval (pre-submission review queue). This enables the auto-generated Agent Completed Application email template in Email.</body>
+</html>

@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="[%=System.LinkedTitle%]"
+    Link="/Content/Print Only Topics/ProductConfigurationGuideTitle.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+    conditions="General.PDF" />
+  <TocEntry
+    Title="WordCopyright"
+    Link="/Content/Print Only Topics/WordCopyright.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.PDF"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Word8_5X11/2017WordCopyright8_5X11.flpgl"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same"
+    ChapterNumberReset="continue"
+    ComputeToc="false"
+    ReplaceMergeNode="false" />
+  <TocEntry
+    Title="WordTOC"
+    Link="/Content/Print Only Topics/WordTOC.htm"
+    conditions="General.PDF"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Word8_5X11/2017WordTOC8_5X11.flpgl"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same"
+    ChapterNumberReset="continue"
+    ComputeToc="false"
+    ReplaceMergeNode="false" />
+  <TocEntry
+    Title="Product Config"
+    Link="/Content/Product Configuration/Product Config.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <TocEntry
+      Title="Activities"
+      Link="/Content/Product Configuration/Activities.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Commissions" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Fee Inquiry"
+      Link="/Content/Product Configuration/Fee Inquiry.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Product Repository" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Packages"
+      Link="/Content/Product Configuration/Packages.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Products"
+      Link="/Content/Product Configuration/Products.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
+    <TocEntry
+      Title="Rule Sets"
+      Link="/Content/Product Configuration/Rule Sets.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+      <TocEntry
+        Title="Advanced Rules Category and Element Definitions Reference"
+        Link="/Content/Product Configuration/Rule Sets/AdvancedRulesCategoryElementDefinitionsReference.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Advanced Rules Samples"
+        Link="/Content/Product Configuration/Rule Sets/AdvancedRulesSamples.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Add a Rule Set and Detail"
+        Link="/Content/Product Configuration/Rule Sets/Add a Rule Set and Detail.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Copy Rules"
+        Link="/Content/Product Configuration/Rule Sets/Copy Rules.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Delete a Rule Set"
+        Link="/Content/Product Configuration/Rule Sets/Delete a Rule Set.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Duplicate a Rule Set"
+        Link="/Content/Product Configuration/Rule Sets/Duplicate Rule Set.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Export Rule Set XML"
+        Link="/Content/Product Configuration/Rule Sets/Export Rule Set XML.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Import/View All Rule Definitions"
+        Link="/Content/Product Configuration/Rule Sets/Import-View All Rule Definitions.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Lock and Unlock a Rule Set for Editing"
+        Link="/Content/Product Configuration/Rule Sets/Lock and Unlock a Rule Set for Editing.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Pre-Built Rule Templates"
+        Link="/Content/Product Configuration/Rule Sets/Pre-BuiltRuleTemplates.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Rules Window"
+        Link="/Content/Product Configuration/Rule Sets/Rules Window.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Search for a Rule Set"
+        Link="/Content/Product Configuration/Rule Sets/Search for a Rule Set.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Search Rules in Package Tab"
+        Link="/Content/Product Configuration/Rule Sets/Search Rules in Package Tab.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Templates Window"
+        Link="/Content/Product Configuration/Rule Sets/TemplatesWindow.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="View Rule Set Audit History"
+        Link="/Content/Product Configuration/Rule Sets/View Rule Set History.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Sales Agreements"
+      Link="/Content/Product Configuration/SalesAgreements.htm"
+      BreakType="pageLayout"
+      AutoEndOnLeftPage="disabled"
+      StartSection="false"></TocEntry>
+  </TocEntry>
+</CatapultToc>

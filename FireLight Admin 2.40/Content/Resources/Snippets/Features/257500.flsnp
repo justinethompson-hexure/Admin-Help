@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Currently, when an application has been locked by a reviewer, it can still be unlocked by the agent, resulting in loss of reviewer comments. Enhancements is made to disable the unlock action based on the review status, as well as display a toast message to the agent/user when the activity is in review.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>FL App &gt; Activity &gt; Other Actions (menu) &gt; Unlock</p>
+            </li>
+            <li>
+                <p>FL App &gt; Activity &gt; Other Actions (menu) &gt; Rename/Summary, Unlock</p>
+            </li>
+            <li>
+                <p>New FireLight toast message</p>
+            </li>
+        </ul>
+    </body>
+</html>

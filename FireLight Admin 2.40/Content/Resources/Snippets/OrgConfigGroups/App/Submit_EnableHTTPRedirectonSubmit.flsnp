@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p class="Indent">Select the <strong>Enable HTTP Redirect on Submit</strong> checkbox to enable a HTTP redirect on submission of applications, which redirects the user to an external page. When this option is enabled, a URL for redirect to the external page must be entered in the <b class="Bold">URL</b> text box. When the user submits the activity, FireLight redirects the user  to the URL defined in the group setting if there is no defined Next Activity. If there is a defined Next Activity, FireLight does not redirect the user to the external page. This option is available for both legacy forms and the wizard+forms UI. </p>
+        <p class="Indent"><b class="Bold">NOTES:</b>
+        </p>
+        <p class="Indent">For a selected role code:</p>
+        <ul>
+            <li>Enable Custom Submit Page option and Enable HTTP Redirect on Submit option cannot both be selected at the same time.</li>
+            <li>Disable Submit option and Enable HTTP Redirect on Submit option cannot both be selected at the same time.</li>
+            <li>
+                <p>Allow Not In Good Order Submittals option and Enable Auto Submit option can be selected with the Enable HTTP Redirect on Submit option.</p>
+            </li>
+            <li>
+                <p>On application submittal, if the data item FLI_SUBMIT_REDIRECT_URL exists and has a value, the user will be redirected to that URL&#160;regardless of the URL configured here.</p>
+            </li>
+        </ul>
+    </body>
+</html>

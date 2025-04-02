@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="Features Guide PDF Print Target"
+  Type="PDF"
+  Destinations=""
+  MasterToc="/Project/TOCs/ProdConfigGuide.fltoc"
+  MasterPageLayout="/Content/Resources/PageLayouts/Word8_5X11/2017WordNormal8_5X11.flpgl"
+  ConditionTagExpression="include[&quot;General.FL 2.23&quot; or General.PDF]exclude[General.Internal or &quot;General.Next Release&quot; or General.Online or &quot;General.PDF - UGuide&quot; or General.Postpone]"
+  PatchHeadingLevels="true"
+  InjectBookHeadings="false"
+  MasterStylesheet="/Content/Resources/Stylesheets/2017MainStyles.css"
+  DisableAutoSync="true">
+  <PrintedOutput
+    CollapseMargins="false"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false"
+    ExpandingTextConversion="expand"
+    PopupConversion="remove-body" />
+  <DocumentProperties
+    Title="FireLight Admin User Guide"
+    Author="" />
+  <PDF
+    ShowUsedBookmarks="false"
+    Tagged="true"
+    PageLayout="OneColumn"
+    TitleBar="FileName"
+    DownsampleImages="true"
+    ImagePPIThreshold="250" />
+  <Destinations></Destinations>
+  <Variables>
+    <Variable
+      Name="General/UserGuideTitle">FireLight Admin Guide</Variable>
+    <Variable
+      Name="General/Year">2025</Variable>
+    <Variable
+      Name="General/DocumentName">FireLight Product Configuration Guide</Variable>
+    <Variable
+      Name="General/PlatformUserGuideTitle">FireLight Product Configuration Guide</Variable>
+  </Variables>
+</CatapultTarget>

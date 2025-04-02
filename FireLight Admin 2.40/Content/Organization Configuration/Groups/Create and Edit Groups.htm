@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+	<head>
+		<link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<h1><a name="top"></a>Create and Edit Groups</h1>
+		<p>Use the Groups page to define FireLight<sup MadCap:conditions="General.Online">®</sup> user access groups and role codes, and applicable firms, for your organization.</p>
+		<p>General Guidelines:</p>
+		<ul>
+			<li>The role code is sent with the SSO information if your organization uses Single Sign On.</li>
+			<li>The group Name and TC Role Code are based on the type of user and role. </li>
+			<li>
+				<p>Tabs at the bottom of the Groups page define the access permissions for the selected group in the grid at the top of the Groups page. For example, users in an Admin group require different access permissions than users in an Agent group or Test group. </p>
+				<p MadCap:conditions="General.Online">Following is a simple sample of user Groups and TC Role Codes for the sample Peak Life organization.</p>
+				<p MadCap:conditions="General.Online">
+					<img src="../../Resources/ImagesAdmin/GroupsPage2.png" alt="Sample Groups in Profiles &gt; Groups" title="Sample Groups in Profiles &gt; Groups" MadCap:conditions="General.Online" />
+				</p>
+			</li>
+		</ul>
+		<p>Firm Management Guidelines:</p>
+		<ul>
+			<li>The grid at the top of the page has a Firm Org column. When the Admin user does not have firms set up in the <MadCap:xref href="../Firm Management.htm" title="Firm Management" alt="Firm Management">Firm Management</MadCap:xref> page under Organization Configuration, the Firm Org column in the grid and the Firm Org dropdown list below the grid are blank.</li>
+			<li>If an Admin user does NOT have a Firm associated with their user group, the Admin user sees the Main Org view.</li>
+			<li>
+				<p>If an Admin user has a Firm associated with their user group, the Firm Org dropdown list below the grid includes all firms that are set up on the Firm Management page under Organization Configuration for their organization and a blank entry that displays all firms in the grid.  The list is arranged with the blank entry being first (this is the default selection) followed by the entries for the firms, sorted alphanumerically by the firm's name in the grid. </p>
+				<p>The Groups view displays the Firm Org in the grid. The Firm Org dropdown list below the grid does not allow for the user to make changes. No other firms are available for selection to the firm Admin user. The dropdown selection can be edited only by the IT Vendor role or Main Organization/Firm level Admin. </p>
+				<p MadCap:conditions="General.Online">
+					<img src="../../Resources/ImagesAdmin/Capture249.png" alt="" title="" MadCap:conditions="General.Online" />
+				</p>
+			</li>
+		</ul>
+		<p>Add groups and associated role codes for each type of user. </p>
+		<ol>
+			<li>On the navigation bar, click <b class="Bold">Organization Configuration/Groups</b>.</li>
+			<li>On the upper left of the Groups page, click <b>Create New</b>.</li>
+			<li>Below the grid in <b>Name</b>, type a unique name for the user group. For example, type <b class="Bold">Agent</b> for a group Name.</li>
+			<li>
+				<p>In <b>TC Role Codes</b>, type the role code(s) for the FireLight user group within your organization. <b class="Bold">NOTE:</b> If a user is a member of a Sub Firm, the TC will begin with a group identifier, and be separated from the TC by an underscore (e.g., Dell_TEST8).</p>
+			</li>
+			<li>
+				<p><a name="IllustrationServicesRoleCode"></a>In <strong>Illustration Services Role Code</strong> (if the Illustration activity is included for your organization), type the Illustration Services Role Code for the user group.</p>
+				<p>The Illustration Services Rode Code is used when calling the Illustration Services for calculation results for Quick View and Illustration PDF files.  Illustration Services uses the role code to determine which results to return or which reports to return. This is something that you need to know as an Admin or request it from the Strategic Account Manager.</p>
+				<p>Specify this role code in two places:</p>
+				<ul>
+					<li>
+						<p> Groups – in the Illustration Services Role Code. This is used only when the selling organization is the same as the products organization (i.e., the Carrier). In this case it essentially works as an override to the Sales Agreement role code. This allows the carrier to have Admins or Quality Assurance users that can get more calculations or more PDF files for development and testing purposes.</p>
+					</li>
+					<li>Sales Agreement – in the <a href="../../Product Configuration/SalesAgreements.htm#IllustServicesRole" target="_blank" alt="Illust Services Role">Illust Services Role</a>. This defines the role code to use when a carrier has a distributor selling their product.</li>
+				</ul>
+			</li>
+			<li>
+				<p>FireLight adds the Groups to the <MadCap:xref href="Case Access.htm" target="_blank" alt="Case Access">Case Access</MadCap:xref> tab. When you select a group in the grid at the top of the Groups page, go to the Case Access tab to select the checkbox for each group that can have access to the selected group's cases. For example, select an Agent group in the grid at the top of the page, click the Case Access tab, and select the user groups that can have access to the Agent group's cases. You may want to grant case access to Agent group cases to the Sales Desk group. However, you would not grant access to the Agent group to prevent agents from seeing cases from other agents. See <MadCap:xref href="Case Access and User Share Comparison.htm" target="_blank" alt="Case Access and User Share Comparison">Case Access and User Share Comparison</MadCap:xref> for descriptions and a comparison chart based on case access by group Role Code, Firm ID, and User Share.</p>
+			</li>
+			<li>Select checkboxes on the remaining tabs at the bottom of the Groups page, as applicable, to grant access to FireLight features and functions for each user group. Refer to the individual Help topics for each tab.</li>
+			<li>When finished with selections, click the <b>Save</b> button at the bottom of the Groups page.</li>
+		</ol>
+		<h2>Create Default Role Code</h2>
+		<p>Create and define a DEFAULT&#160;role code to be used during an Agent login if a role code is </p>
+		<ul>
+			<li>
+				<p>not passed</p>
+			</li>
+			<li>
+				<p>is passed but invalid </p>
+			</li>
+		</ul>
+		<p><b>Note</b>: If you do not define a DEFAULT role code, a template group will be used. This template group has no group options selected and provides activity access to all products, including the Application Acord type.</p>
+		<ol>
+			<li>
+				<p>Under Organization Configuration, click <b>Groups</b>.</p>
+			</li>
+			<li>
+				<p>Click <b>Create New</b>.</p>
+			</li>
+			<li>
+				<p>Add the role code to a pre-existing group or configure the role code if it is not already defined.</p>
+			</li>
+			<li>
+				<p>Or add the role code to a pre-existing group.</p>
+			</li>
+		</ol>
+		<h2>Create External Role Code</h2>
+		<p>For external requests, an EXTERNAL role code defines the permissions of users entering FireLight through external requests and leaves the existing DEFAULT role code behavior for the agent SSO scenario.</p>
+		<ol>
+			<li>
+				<p> Log in to the Admin app.</p>
+			</li>
+			<li>
+				<p>Under the Groups settings, click the App tab, then select the required role code.</p>
+			</li>
+			<li>
+				<p>Under Signing general settings, deselect <b>Agent Not Required to View All Pages</b> and then select <b>Disable Signing Until All Pages Viewed</b>.</p>
+			</li>
+			<li>
+				<p>Save the Groups setting.</p>
+			</li>
+			<li>
+				<p>Log in to User app.</p>
+			</li>
+			<li>
+				<p>Create a new application (Multiple Agent Signing Product).</p>
+			</li>
+			<li>
+				<p>Click <b>Continue</b>.</p>
+			</li>
+			<li>
+				<p>Click <b>Use E-Signature for React E-Sign</b>.</p>
+			</li>
+			<li>
+				<p>Select <b>Client (Owner/Agent)</b> as the signer and then select <b>Proceed for Send Email Request</b>.</p>
+			</li>
+			<li>
+				<p>Enter data on request window the Send Email Request to the external Signer.</p>
+			</li>
+			<li>
+				<p>Log in with the Pickup link received in mail or displaying on the generated link.</p>
+			</li>
+			<li>
+				<p>Click <b>Sign Activity on External Signer</b>.</p>
+			</li>
+		</ol>
+		<p MadCap:conditions="General.Online"><a href="#top" target="_blank" alt="Return to Top">Return to Top</a>
+		</p>
+	</body>
+</html>

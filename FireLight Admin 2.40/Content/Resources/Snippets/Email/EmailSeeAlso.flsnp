@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p><strong>See Also: </strong> <MadCap:xref href="../../../Organization Configuration/Email.htm" target="_blank" alt="Email">Email</MadCap:xref> page for email general information, guidelines, supported replacement variables, and instructions to edit email subject lines, locale, and template text to ensure review queue emails are sent to the agent and to add logo and color branding to an email template.</p>
+    </body>
+</html>

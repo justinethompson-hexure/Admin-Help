@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body><sup>3</sup>Available replacement variables are the names of the dataitems that are saved in the activity. For example, AGENT_NAME is the name the user entered for the Agent_FullName dataitem on the activity form. If replacement tags are being used directly in the app portal template view, pipe enclosure must be used in the tag as browsers will not allow direct replacement of brackets. For example, use |AGENT_NAME| rather than &lt;AGENT_NAME&gt;. Additionally, use of unavailable tags may result in email and other browser view errors.</body>
+</html>

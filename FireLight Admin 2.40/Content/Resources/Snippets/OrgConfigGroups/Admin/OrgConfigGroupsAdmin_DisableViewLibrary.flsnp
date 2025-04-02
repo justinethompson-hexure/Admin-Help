@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable View Library</b> checkbox to disable viewing the <MadCap:xref href="../../../../Design/Form Library/Form Library.htm" target="_blank" alt="Form Library">Form Library</MadCap:xref> and the <MadCap:xref href="../../../../Design/Wizard Library/Wizard Library.htm" target="_blank" alt="Wizard Library">Wizard Library</MadCap:xref>, where forms and wizards are stored. The Designer &gt; Form Library and  Wizard Library on the Admin home page and on the navigation bar will not be visible when this option is selected.  The user will not be able to upload new forms, add new wizards, or make changes to existing form and wizard definitions.</body>
+</html>

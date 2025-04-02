@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <strong>Disable Copy with Changes</strong> checkbox to disable the ability to copy an activity with changes. In All Activities, when a user clicks the Copy button,  FireLight opens the Copy Activity dialog instead of the Copy dialog. <MadCap:conditionalText MadCap:conditions="General.Online">See also All Activities, <MadCap:xref href="../../../../UserGuide/All Activities/Copy.htm" target="_blank" alt="Copy">Copy</MadCap:xref>.</MadCap:conditionalText></body>
+</html>

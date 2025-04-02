@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Enable Read Only User Admin Access</b> checkbox to enable the ability to view, but not add, copy, update or save, Admin settings. This Read Only group option is enabled and disabled by an Admin user with higher security access.  "Read Only Access" displays below the version number in Admin for users with Read Only access. Read Only access users cannot add, copy, save, or update anywhere in the Admin system. However, Read Only access users can access with no restrictions the Reports section in Utilities and they can access Rule Tracing and API Insights with no restrictions in the Support section of Admin.</body>
+</html>

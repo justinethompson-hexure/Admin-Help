@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>When Allow Product Notification is enabled, select the <b class="Bold">Start</b> and <b class="Bold">End</b> dates for the product notification email and message center communications. When the end date has passed for the product notification, the indicator, message and date range will remain in the Products page, but no emails is sent.  It is basically inactive.</body>
+</html>

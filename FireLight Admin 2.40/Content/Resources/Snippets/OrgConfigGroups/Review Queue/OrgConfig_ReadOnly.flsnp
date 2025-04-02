@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <strong>Read Only</strong> checkbox to limit the user role to “read only” access to any activities in the review queues.  With read only access, the buttons to review, unlock, approve, reject, request more info, and view the reviewer dashboard is visible but disabled.  If Read Only is selected, the Can Unlock All option will disable.</body>
+</html>

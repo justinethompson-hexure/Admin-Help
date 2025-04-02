@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Enable Firm Management</b> checkbox to enable the ability to manage firms at the group level. The IT Vendor role or Main Organization Admin "Super User" role can see all groups for their firm organization and update <MadCap:xref href="../../../../Organization Configuration/Groups/Product Access.htm" title="Product Access" alt="Product Access">Product Access</MadCap:xref> accordingly on the Groups page by role code.</body>
+</html>

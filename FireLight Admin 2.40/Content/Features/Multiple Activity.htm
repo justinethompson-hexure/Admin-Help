@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Multiple Activities</h1>
+        <p class="note"><b class="Bold">Spotlight Video:</b> See <a href="https://vimeo.com/675275662/bbc9fc8376" target="_blank" title="Multi Activity and Enrollment Activity" alt="Multi Activity and Enrollment Activity">Multi Activity and Enrollment Activity</a> and <a href="https://vimeo.com/406910588/9e7d0d3978" target="_blank" title="FireLight Multiple Activity Generation and Population" alt="FireLight Multiple Activity Generation and Population">Multiple Activity Generation and Population</a> Spotlight feature videos about Multiple Activities.</p>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Multiple Activities</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>Multiple Activities is an activity that simplifies the creation of multiple activities in a single sale scenario. Multiple Activities serves as a  "Parent" activity that is linked to "Child" activities. Multiple Activities supports a generic collection of party data in the Parent once, then allows that data to be leveraged in all of the Child activities without reentering that information multiple times. Because of the unique characteristics of this workflow, it is a unique activity/transaction type of 1204.</p>
+                        <p><b>NOTE</b>: Multiple Activities must be generated from a wizard or wizard and form Parent activity.  Multiple Activities can pre-fill to a forms only Child application that is forms because the Custom Action Fill button is available on the forms and wizard, but pre-filling from a forms only Parent activity is <b>not</b> supported.</p>
+                        <p>When multiple applications/activities are going to be taken during a single sales appointment process, the Multiple Activities pre-sale allows users to:</p>
+                        <ul>
+                            <li>
+                                <p>Enter demographic and potentially medical information on participant(s) one time and be able to apply that information to multiple activities/applications without reentering that information.</p>
+                            </li>
+                            <li>
+                                <p>Identify multiple new activities/applications that they want to create.</p>
+                            </li>
+                            <li>
+                                <p>When all  party information has been entered and product applications are identified, users can select Create/Update to pass party and related data to the child activities/applications.</p>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p>
+                            <ol>
+                                <li>In <b class="Bold">Designer</b> on the Form Library and/or Wizard Library page create a Multiple Activity form and/or wizard. </li>
+                                <li>
+                                    <p>In <b class="Bold">Designer</b>, on the Form Designer and/or Wizard Designer page:</p>
+                                    <ol style="list-style-type: lower-alpha;">
+                                        <li>Add controls to the Multiple Activities form or wizard for entering demographic and potentially medical information on participants. Common tagging for field names should begin with "Party#_[FieldName]," e.g., "Party1_FirstName."</li>
+                                        <li>
+                                            <p>For the forms or wizards that will receive the party information from the Multiple Activities, add a <MadCap:xref href="../Design/Forms/Button.htm" alt="Button">Button</MadCap:xref> (form) or a <MadCap:xref href="../Design/Wizards/Custom Action.htm" alt="Custom Action">Custom Action</MadCap:xref> button (wizard) control in each area of the forms and wizards where party information is entered from the Multiple Activity. </p>
+                                            <p>In the field properties for the button/custom action:</p>
+                                            <ol style="list-style-type: lower-roman;">
+                                                <li>In <b class="Bold">Custom Action</b>, select <b class="Bold">Multiple Activities Auto-Fill</b> in the list.</li>
+                                                <li>In <b class="Bold">Auto-Fill Prefix</b>, enter the party type that will receive the information from the Multiple Activities (Owner, Insured, Annuitant, Joint Owner, etc.).</li>
+                                                <li>Save the forms and/or wizards.</li>
+                                            </ol>
+                                        </li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>In <b class="Bold">Product Configuration</b> on the <b class="Bold">Activities</b> page:</p>
+                                    <ol style="list-style-type: lower-alpha;">
+                                        <li>On the upper left, click <b class="Bold">Add New Activity</b> and name it <b class="Bold">Multiple Activities</b>, for example.</li>
+                                        <li>In <b class="Bold">ACORD Type</b>, select <b class="Bold">Multiple Activities (1204)</b>.</li>
+                                        <li>Click the link and click a <b class="Bold">Font Awesome Icon</b> to use for Multiple Activities. Enter the name of the Font Awesome Icon class in the field (for example, enter <b class="Bold">fas fa-ellipsis-h</b> for a horizontal ellipsis).</li>
+                                        <li>In <b class="Bold">Continue/Apply Label</b>, enter the label name for the Continue button (e.g., enter <b class="Bold">New Activity</b>, <b class="Bold">Application</b>, etc.).</li>
+                                        <li>Fill in any other applicable settings and click the <b class="Bold">Save Activity</b> button.</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>In <b class="Bold">Product Configuration</b> on the <b class="Bold">Products</b> page:</p>
+                                    <ol style="list-style-type: lower-alpha;">
+                                        <li>Add a <b class="Bold">Multiple Activity</b> product.</li>
+                                        <li>Select a <b class="Bold">Product Type</b> and <b class="Bold">Product Category</b> and select the states where it is approved.</li>
+                                        <li>Fill in any other applicable settings and click the <b class="Bold">Save Product Config</b> button.</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>In <b class="Bold">Product Configuration</b> on the <b class="Bold">Packages</b> page:</p>
+                                    <ol style="list-style-type: lower-alpha;">
+                                        <li>Add a <b class="Bold">Multiple Activity</b> package.</li>
+                                        <li>In <b class="Bold">ACORD Type</b>, select <b class="Bold">Multiple Activities (1204)</b> in the list.</li>
+                                        <li>In <b class="Bold">Area Type</b>, select <b class="Bold">Activity</b>.</li>
+                                        <li>Add the <b class="Bold">Multiple Activity</b> form or wizard and any applicable rule sets to the package.</li>
+                                        <li>Fill in any other applicable settings and click the <b class="Bold">Save Package</b> button.</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>In <b class="Bold">Product Configuration</b> on the <b class="Bold">Sales Agreements</b> page:</p>
+                                    <ol style="list-style-type: lower-alpha;">
+                                        <li>In the grid at the top of the page, select the <b class="Bold">Multiple Activity</b> product.</li>
+                                        <li>On the left, fill in applicable settings and select states in <b class="Bold">State Approvals</b>.</li>
+                                        <li>Under <b class="Bold">Available Packages</b>, select the <b class="Bold">Multiple Activity</b> package and click the right arrow to move it to the Assigned Packages list.</li>
+                                        <li>Click the <b class="Bold">Save Sales Agreement</b> button.</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>In <b class="Bold">Organization Configuration</b> on the Groups page:</p>
+                                    <ol style="list-style-type: lower-alpha;">
+                                        <li>In the grid at the top of the page, select a group <b class="Bold">Name/TC Role Code</b>.</li>
+                                        <li>On the <b class="Bold">App</b> tab in the <b class="Bold">Other</b> section, select the <b class="Bold">Enable Multiple Open Activities</b> checkbox.</li>
+                                        <li>On the <b class="Bold">Activity Access</b> tab, select the <b class="Bold">Multiple Activities</b> checkbox.</li>
+                                        <li>On the <b class="Bold">Product Access</b> tab, select the <b class="Bold">Multiple Activity</b> checkbox.</li>
+                                        <li>Click the <b class="Bold">Save</b> button.</li>
+                                    </ol>
+                                </li>
+                            </ol>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">User Experience</p>
+                        <p><b class="Bold">NOTE:</b> In this example, the child activities are applications.</p>
+                        <ol>
+                            <li>On the Home page under <b class="Bold">Start New</b>, click <b class="Bold">Multiple Activities</b> or on the navigation bar, click <b class="Bold">New Activity &gt; Multiple Activities</b>.</li>
+                            <li>Select a <b class="Bold">Jurisdiction</b> and click a <b class="Bold">Multiple Activities</b> name in the list.</li>
+                            <li>Select the <b class="Bold">Multiple Activities</b> checkbox and click the <b class="Bold">Create</b> button.</li>
+                            <li>Enter a name for the Multiple Activities and click the <b>Create</b> button.</li>
+                            <li>Fill in the information for each Party. Parties are numbered as Party1, Party2, etc., so a single Party can be designated, for example, as an Owner/Annuitant in one child activity and as a Beneficiary in another child activity.</li>
+                            <li>When finished adding party information, click the <b>Next</b> button.</li>
+                            <li>Select an activity type in the list and click the <b class="Bold">Add Activity</b> button.</li>
+                            <li>In the lists, select a <b class="Bold">Jurisdiction</b>, <b class="Bold">Locale</b> (if applicable), <b class="Bold">Product Type</b>, and <b class="Bold">Carrier</b> (if applicable). Then select a product in the grid.</li>
+                            <li>Click the <b>Create</b> button.</li>
+                            <li>Enter a name for the activity and click the <b class="Bold">Create </b>button to create a child activity. The activity appears in the Multiple Activity grid.</li>
+                            <li>
+                                <p>Add another child activity. Select an activity in the list and click the <b class="Bold">Add Activity</b> button. Repeat the process for creating each child activity under the Multiple Activity parent activity.</p>
+                                <p>To remove an activity, click the trash can icon in the <b class="Bold">Remove</b> column of the Multiple Activities grid.</p>
+                            </li>
+                            <li>When all child activities are added, click the <b class="Bold">Create</b> button on the upper right to create the child activities.</li>
+                            <li>On the <b class="Bold">Open Activities</b> menu on the navigation bar, click the <b class="Bold">Open Activities</b> down arrow and click a child activity in the list.</li>
+                            <li>Click the custom action button and click a party name to pre-fill the information from the Multiple Activity into the open application.</li>
+                            <li>
+                                <p>To add or change information in the Multiple Activity and update the child activities:</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>On the navigation bar in the <b class="Bold">Open Activities</b> menu, click the name of the Multiple Activity. </li>
+                                    <li>Add or change field entries in the Multiple Activity.</li>
+                                    <li>Click the <b class="Bold">Update</b> button on the upper right to update the information in the Multiple Activity and associated activities.</li>
+                                </ol>
+                            </li>
+                            <li>
+                                <p>Continue filling in the application information and go through the normal steps to complete the application process for each child application.</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>Admin Help – <MadCap:conditionalText MadCap:conditions="General.PDF">Design Document: CMR&#160;208253</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online">Design Document: <a href="../Resources/DesignDocs/208253 Multi-Activity Functionality.pdf" target="_blank" title="CMR&#160;208253" alt="CMR&#160;208253">CMR&#160;208253</a></MadCap:conditionalText></p>
+                        <p>Spotlight Feature Videos: <a href="https://vimeo.com/406910588/9e7d0d3978" target="_blank" title="FireLight Multiple Activity Generation and Population" alt="FireLight Multiple Activity Generation and Population">Multiple Activity Generation and Population</a>, <a href="https://vimeo.com/406909744/38f8474d8f" target="_blank" title="FireLight Multiple Open Activities" alt="FireLight Multiple Open Activities">Multiple Open Activities</a></p>
+                        <p>User Guide – <em>FireLight Platform User Guide</em>, New Activity section, <MadCap:conditionalText MadCap:conditions="General.PDF">"Multiple Activities" </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../UserGuide/New Activity/Multiple Activities.htm" alt="Multiple Activities">Multiple Activities [User Instructions]</MadCap:xref> </MadCap:conditionalText>topic </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

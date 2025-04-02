@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>In the <b class="Bold">Rank Order</b> text box, enter a number (integer value) for the rank order of the new product. Rank order is used to order the product list in the drop-down for product selection in the FireLight application.  If the Rank Order is not entered, the product is listed in alphabetical order by product name. The rank order must be used on the other products as well.  Empty values are placed first because they don't have a value to sort by.  The rank ordering kicks in for any rank order values after that. For example, if the rank order does not matter for other products, you could set a pre-authorization product to 1 and set all of the other products to 2 to place the pre-authorization product first in your product selection list.</body>
+</html>

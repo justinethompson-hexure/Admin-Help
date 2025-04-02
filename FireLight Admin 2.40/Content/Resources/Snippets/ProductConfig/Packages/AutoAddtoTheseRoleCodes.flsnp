@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>In the <b class="Bold">Auto Add to These Role Codes</b> text box, enter the role codes that will have access to the packages. </p>
+        <p><b class="Bold">Tip:</b> Point to the Help icon <img src="../../../ImagesAdmin/Capture265.png" alt="Help Icon" title="Help Icon" /> above the text box for instructions.</p>
+        <p>The text box supports the use of the asterisk (*) wild card. The wild card allows users to indicate the following: </p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Everything: *</p>
+            </li>
+            <li>
+                <p>Begins With: ABC_* Would match all Role Codes that start with "ABC_"</p>
+            </li>
+            <li>
+                <p>Ends With: *Agt Would match all Role Codes that end with "Agt"</p>
+            </li>
+            <li>
+                <p>Contains: *Asst* Would match all Role Codes that contain "Asst"</p>
+            </li>
+        </ul>
+        <p><b class="Bold">NOTE:</b> When matching for Begins With, Ends With, and Contains, the text comparison will NOT be case sensitive. </p>
+        <p MadCap:conditions="General.Online">
+            <img src="../../../ImagesAdmin/Capture263.png" alt="Auto Add to These Role Codes Text Box" title="Auto Add to These Role Codes Text Box" MadCap:conditions="General.Online" />
+        </p>
+    </body>
+</html>

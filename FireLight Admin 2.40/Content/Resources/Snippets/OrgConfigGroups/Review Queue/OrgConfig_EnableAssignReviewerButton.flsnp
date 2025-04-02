@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <strong>Enable Assign Reviewer Button</strong> to allow the reviewer to assign another reviewer to the case. The Enable Assign Reviewer Button controls only the ability to manually assign the reviewer. <b class="Bold">NOTE:</b> If a reviewer is assigned using the Edit Review Queue Script, FireLight will assign the reviewer regardless of this button being active. These are separate actions. For information about assigning reviewers using the review queue script, see "Assign Reviewers to Specific Activities" in the <MadCap:xref href="../../../../Organization Configuration/ReviewQueue.htm" alt="Review Queue">Review Queue</MadCap:xref> topic in Organization Configuration.</body>
+</html>

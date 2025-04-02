@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Firms have requested the ability for organizations to manage their own product availability. Organizations is setup and managed by Hexure under the firm, upon request. The product and state availability can be further refined by the organization themselves after the initial setup, therefore making it unnecessary (though still possible, if desired) for the admin users of the main firm to make the refinements. This functionality will allow all organizations who SSO into a main firm organization to control their product availability as an admin user, by group role code. This is the first part of a multiple release project to handle Firm/Organization Management.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>"Firm Management" option under "Organization Configuration" for main firms only - will not be visible for all other users.</p>
+            </li>
+            <li>
+                <p>Groups - new "Firm Org" dropdown</p>
+            </li>
+            <li>
+                <p>Groups - "Product Access" tab features products as hyperlinks for state refinement</p>
+            </li>
+            <li>
+                <p>Deployments - New Deployment Scope and Options for Firm Organizations</p>
+            </li>
+        </ul>
+    </body>
+</html>

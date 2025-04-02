@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body> Select the <b class="Bold">Enable Print NIGO</b> checkbox to enable the group to print NIGO applications that are not 100% complete regardless of the print options set on the <MadCap:xref href="../../../../Organization Configuration/Organizations/Activity.htm" target="_blank" alt="Activity">Activity</MadCap:xref> tab in Organization Configuration/Organization Settings. <b>NOTE:</b> You cannot select the Enable Print NIGO and the Disable Print PDF checkboxes for the same role code. </body>
+</html>

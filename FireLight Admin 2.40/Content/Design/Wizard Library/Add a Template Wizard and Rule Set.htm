@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Download a Wizard Template and Rule Set" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Add a Template Wizard and Rule Set</h1>
+        <p>Hexure provides a Template Wizard (Annuity) and associated Rule Set that you can use as a starting point for creating a wizard of your own. Use the following instructions to download/copy and set up the template wizard and rule set. </p>
+        <p><b class="Bold">NOTE:</b> This example uses 7-Zip (free software)&#160;for creating and extracting .zip file types. You need to have a Zip application (7-Zip, WinZip, etc.) installed on the PC to extract the template wizard files. </p>
+        <ol>
+            <li>
+                <p>
+                    <MadCap:conditionalText MadCap:conditions="General.PDF">In the Admin Help in <b class="Bold">Designer/Wizard Library</b>, go to the <b class="Bold">Add a Template Wizard and Rule Set</b> topic. Click the <b class="Bold">TemplateWizardandRuleSet.zip</b> link</MadCap:conditionalText>
+                    <MadCap:conditionalText MadCap:conditions="General.Online">Click this <a href="https://uat.firelighteapp.com/EGAdmin/Help/2.40/Online Output/TemplateWizard/TemplateWizardandRuleSet.zip" target="_blank" alt="TemplateWizardandRuleSet.zip" title="TemplateWizardandRuleSet.zip">TemplateWizardandRuleSet.zip</a> link</MadCap:conditionalText> to download the file. Click the file on the lower left of the window to open the 7-Zip  application. </p>
+                <p><b class="Bold">NOTE:</b> For the Internet Explorer browser, right-click the link above, click <b class="Bold">Save target as</b>, browse to the location on the PC or network to save the file, and click <b class="Bold">Save</b>. On the information bar at the bottom of the window, click <b class="Bold">Open</b> to open the 7-Zip application.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>On the 7-Zip window, click <b class="Bold">Extract</b>.</p>
+                    </li>
+                    <li>
+                        <p>In the <b class="Bold">Copy</b> dialog, browse to the location on the PC or network to where the file is copied and click <b class="Bold">OK</b>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Create a wizard.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>Go to the <b class="Bold">Designer/Wizard Library</b> page.</li>
+                    <li>On the upper left, click <strong>Create Wizard</strong>. </li>
+                    <li>On the <strong>Wizard Detail</strong> tab,  enter a <strong>Wizard Number</strong>, <strong>Wizard Name</strong>, <strong>Wizard Description</strong>, and select the states that apply in the <strong>State Approved</strong> list. The wizard name and number in this example are "Template Wizard Annuity." </li>
+                    <li>At the bottom of the page, click <b class="Bold">Save</b>.</li>
+                </ol>
+            </li>
+            <li>
+                <p>Import the downloaded Template Wizard (Annuity).txt file.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>Ensure the wizard created in step 2 is selected in the grid at the top of the page.</li>
+                    <li>On the <b class="Bold">Wizard Detail</b> tab, click <strong>Import Wizard</strong>.</li>
+                    <li>Click <b class="Bold">OK</b> on the Import Wizard confirmation dialog.</li>
+                    <li>
+                        <p>Click <strong>Add Files</strong>, browse to the location of the downloaded template wizard, and select the <b class="Bold">Template Wizard (Annuity).txt</b> file. </p>
+                        <p>The Template Wizard (Annuity).txt file appears in the grid.</p>
+                    </li>
+                    <li>Click <strong>Start Upload</strong> to upload the imported wizard to the wizard you created in step 2 on the Wizard Library page.</li>
+                    <li>After the upload completes, click <strong>Back</strong> to return to the Wizard Library page and click <b class="Bold">Save</b> to save the imported wizard file.</li>
+                </ol>
+            </li>
+            <li>
+                <p>Create a rule set for the  Template Wizard Rule Set (Annuity).</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>Go to the <b class="Bold">Product Config/Rule Sets</b> page. </li>
+                    <li>On the upper left, click <b>Add New Rule Set</b>.</li>
+                    <li>On the Rule Set Detail tab, enter the <b class="Bold">Rule Set Name</b> and <b class="Bold">Description</b> for the Template Wizard Rule Set (Annuity). For this example, the name and description are "Template Wizard Annuity Rule Set."</li>
+                    <li>Select the applicable <b class="Bold">State Approved</b> checkboxes.</li>
+                    <li>At the bottom of the page, click <b class="Bold">Save Rule Set</b>.</li>
+                </ol>
+            </li>
+            <li>
+                <p>Copy the rules from the downloaded Template Wizard Rule Set (Annuity).xml file to the rule set created in step 4.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li> Locate and open the  <b class="Bold">Template Wizard Rule Set (Annuity).xml</b> file that was downloaded in step 1 using Notepad, Notepad ++, or any other text editor.</li>
+                    <li>On the Rule Sets page, ensure the rule set created in step 4 is selected, click the <b class="Bold">View All Rule Definitions</b> link to open the Rule Definitions Window, and delete all the text from the window.</li>
+                    <li>Copy the rules from the  Template Wizard Rule Set (Annuity).xml file, paste the rules into the <b class="Bold">Rule Definitions Window</b> for the new rule set file, and click <b class="Bold">Update</b>. Close the Rule Definitions Window.</li>
+                    <li>At the bottom of the Rule Sets page, click <b class="Bold">Save Rule Set</b>.</li>
+                </ol>
+            </li>
+            <li>
+                <p>Create a product for the template wizard.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>Go to <b class="Bold">Product Config/Products</b> page.</li>
+                    <li>On the upper left, click <b class="Bold">Add New Product</b>.</li>
+                    <li>Enter the <b class="Bold">Product Name</b>. In this example, the name is "Template Wizard Annuity."</li>
+                    <li>Select a <b class="Bold">Product Type</b> and <b class="Bold">Product Category</b> in the lists.</li>
+                    <li>Select the <b class="Bold">State Approved</b> checkboxes for the wizard.</li>
+                    <li>At the bottom of the page, click <b class="Bold">Save Product Config</b>.</li>
+                </ol>
+            </li>
+            <li>
+                <p>Create a package for the template wizard.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>Go to <b class="Bold">Product Config/Packages</b> page.</li>
+                    <li>On the upper left, click <b class="Bold">Add New Package</b>.</li>
+                    <li>On the Package Detail tab, enter a <b class="Bold">Package Name</b> and select an <b class="Bold">ACORD Type</b> in the list. In this example, the name is "Template Wizard Annuity" and the type is "Application (103)."</li>
+                    <li>On the Forms/Wizards in Package tab in the <b class="Bold">All Forms/Wizards</b> list, move the <b class="Bold">Template Wizard Annuity</b> to the <b class="Bold">Forms/Wizards in Package</b> list and select <b class="Bold">Required</b> in the list.</li>
+                    <li>On the Rule Sets in Package tab in the <b class="Bold">All Rule Sets</b> list, move the <b class="Bold">Template Wizard Annuity Rule Set</b> to the <b class="Bold">Rule Sets in Package</b> list. </li>
+                    <li>At the bottom of the page, click <b class="Bold">Save Package</b>.</li>
+                </ol>
+            </li>
+            <li>
+                <p>Create a sales agreement for the template wizard.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>Go to <b class="Bold">Product Config/Sales Agreements</b> page.</li>
+                    <li>Select the <b class="Bold">Template Wizard Annuity</b> product in the grid at the top of the page.</li>
+                    <li>Select a <b class="Bold">Selling Org</b> in the list.</li>
+                    <li>Select the applicable checkboxes on the <b class="Bold">State Approvals</b> tab.</li>
+                    <li>In the <b class="Bold">Available Packages</b> list, locate and move the <b class="Bold">Template Wizard Annuity</b> package to the <b class="Bold">Assigned Packages</b> list and set <b class="Bold">Package Duty</b> to <b class="Bold">Required</b>.</li>
+                    <li>At the bottom of the page, click <b class="Bold">Save Sales Agreement</b>.</li>
+                </ol>
+            </li>
+            <li>
+                <p>Grant access to the Template Wizard Annuity product.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>Go to <b class="Bold">Organization Config/Groups</b> page.</li>
+                    <li>Select a user role that has access to the Template Wizard Annuity product.</li>
+                    <li>On the <b class="Bold">Product Access</b> tab, select the <b class="Bold">Template Wizard Annuity</b> checkbox.</li>
+                    <li>At the bottom of the page, click <b class="Bold">Save</b>.</li>
+                </ol>
+            </li>
+        </ol>
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

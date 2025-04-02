@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>The post-submission review queue email templates are available when a Review Queue is set up in <MadCap:xref href="../../../Organization Configuration/ReviewQueue.htm">Review Queue</MadCap:xref> in Product Configuration. Be sure to set the applicable reviewer access options in Organization Configuration/<MadCap:xref href="../../../Organization Configuration/Groups.htm">Groups</MadCap:xref> on the Review Queue and Review Queue Access tabs.</body>
+</html>

@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight v2.37 Release Notes</h1>
+        <h1><b style="font-size: 16pt;">New Functionality</b>
+        </h1>
+        <p><b style="font-size: 14pt;">SuranceBay Integration Updates: CR-3520, CR-2674, CR-2603</b>
+        </p>
+        <p>Login widget replaced with Username/Password:</p>
+        <ul>
+            <li>
+                <p>AgencyID validated as part of Surancebay credentials also displayed in Preferences,</p>
+            </li>
+            <li>
+                <p>Compliance widget in Recent Application List,</p>
+            </li>
+            <li>
+                <p>Application started call to Surancebay for AcordType 103</p>
+            </li>
+        </ul>
+        <p><b style="font-size: 14pt;">Updates to the Distributor Profile Logic: CR-2669</b>
+        </p>
+        <p>The Distributor Profile (Previously Commissions) under the Production Configuration section of the FireLight administration tool has been enhanced.</p>
+        <ul>
+            <li>
+                <p>The Distributor Profile table includes Filename, Upload Date, Carrier, Distributor List, Start Date, and Status.</p>
+            </li>
+            <li>
+                <p>The user can now view the DPFA XML by clicking on the File Name.</p>
+            </li>
+            <li>
+                <p>The user can now view the DPFA Details Dialog when clicking on Status.</p>
+            </li>
+            <li>
+                <p>When the user selects Promote in the DPFA Details Dialog a confirmation message will be presented.</p>
+            </li>
+            <li>
+                <p>The full list of distributors and subfirms present in the file will be viewable when the user hovers over the field on the distributor profile.</p>
+            </li>
+            <li>
+                <p>One to many subfirms can now be added to the distributor profile.</p>
+            </li>
+        </ul>
+        <p><b style="font-size: 14pt;">Enhance Options to Add List Values to a Drop Down Field in Wizard Designer: DIST-2244</b>
+        </p>
+        <p>To support ease of use, more options will be provided to populate list values for a drop-down field. Currently, a common tag can be used to populate values to a drop-down field, or the values can be entered manually. With this enhancement, the option to populate values for a drop-down from a custom list or an external file will be introduced.</p>
+        <p><b>Impact</b>
+        </p>
+        <ul>
+            <li>
+                <p>FL Admin &gt; Wizard Designer: the following changes will be available on the properties dialog of a drop-down field.</p>
+            </li>
+            <ul>
+                <li>
+                    <p>Drop-down to select custom list – to link or attach values to the drop-down field,</p>
+                </li>
+                <li>
+                    <p>Import button to select values from an external file.</p>
+                </li>
+            </ul>
+        </ul>
+        <ul>
+            <li>
+                <p>FL Admin &gt; Form Designer: below changes will be available to the properties dialog of a combo box field.</p>
+            </li>
+            <ul>
+                <li>
+                    <p>Drop-down to select custom list – to link or attach values to the drop-down field,</p>
+                </li>
+                <li>
+                    <p>Import button to select values from an external file.</p>
+                </li>
+            </ul>
+            <li>
+                <p>FL Admin &gt; Wizard Library &gt; Wizard History (tab): record and display changes made to the drop-down field to fill values from custom list or import file method.</p>
+            </li>
+            <li>
+                <p>FL Admin &gt; Form Library &gt; Form History (tab): record and display changes made to the drop-down field to fill values from custom list or import file method.</p>
+            </li>
+        </ul>
+        <p><b style="font-size: 12pt;">New Field Type on Wizard Designer with Capability to Auto-Validate Inputs: Validation Rule Field Type Improvements: DIST-2244</b>
+        </p>
+        <p>To support ease of use and facilitate quicker turnaround to create wizards and rules, a new field type will be added to auto-generate validation rules at run time for input types such as Number, SSN, TIN, Amount, Zip, etc. Using this field type will not require to write validation rules to format generic values such as email addresses, percent value, numeric value, 10-digit phone number, etc.</p>
+        <ul>
+            <li>
+                <p>Allows inputs such as Number, AlphaNumeric, SSN, Zip, etc. and ability to set the input type and choose validation property entered value,</p>
+            </li>
+            <li>
+                <p>Ability to validate date values to apply system generated rules for past and future date validations.</p>
+            </li>
+        </ul>
+        <p><b style="font-size: 14pt;">Admin Report Enhancements: DIST-3330</b>
+        </p>
+        <p>To provide more usability to a few of the admin reports, below changes will be made.</p>
+        <ul>
+            <li>
+                <p>Remove Option to Generate Admin Reports in PDF Format</p>
+            </li>
+            <li>
+                <p>Add CUSIP and Product GUID to Sales Agreement Admin Report</p>
+            </li>
+            <li>
+                <p>Add Label, Attachment and Description to Package Forms Admin Report</p>
+            </li>
+            <li>
+                <p>New Admin Report to List Deployment Info</p>
+            </li>
+        </ul>
+        <p><b>Impact</b>
+        </p>
+        <p>•	FL Admin &gt; Utilities &gt; Reports: Drop-down to select report format on Admin reports will be removed.</p>
+        <p>•	FL Admin &gt; Utilities &gt; Reports &gt; Admin History Reports &gt; Sales Agreement Report: Two new columns “CUSIP” and "GUID" will be added to the sales agreement admin report.</p>
+        <p>•	FL Admin &gt; Utilities &gt; Reports &gt; Package Forms admin report: Add three columns to the report – Label, Attachment and Description.</p>
+        <p>•	FL Admin &gt; Utilities &gt; Reports &gt; Deployment History Report: Add new report as “Deployment History Report” on this page</p>
+        <p><span style="font-size: 14pt; font-weight: bold;">Add New Data Tag to Identify an External Data Entry Session: DIST-3827</span>
+        </p>
+        <p>With this enhancement, a new data tag will be added to distinguish between an agent’s data entry session and an external client session (client fill or fill &amp; sign) during rules processing. A new data item “FLI_DATA_ENTRY_CONTEXT” is added to return context values such as "Agent," "Client," or "Reviewer" based on the user logged in for data entry.</p>
+        <p><b style="font-size: 14pt;">Telesign Signing Option Enabled for Single Signer on Multiple Signer Contract: EAES-4567</b>
+        </p>
+        <p>The original implementation of Telesign was configured to work with only one signer with one signer type (who is not the agent). This update allows Telesign as a signing option for a single signer on an application that has other non-agent signers.</p>
+        <p><b style="font-size: 14pt;">Support for Multiple Type Code Values on a Custom Action: EAES-4046, EAES-4947</b>
+        </p>
+        <p>These two stories allow users to specify multiple Type Codes to be printed when creating a Print Custom Action Button. In addition, if multiple Type Codes are passed in and one of them is "73", we've changed it to disregard the special logic tied to that specific Type Code for ACORD 951 eForm. But you will be able to print forms with TC Type "73"</p>
+        <p><b style="font-size: 14pt;">Error Message Now Displays Multiple Errors: PC-2779</b>
+        </p>
+        <p>We updated error messages to display multiple errors. Allows the system to show multiple errors in an application when errors occur.</p>
+        <p><b>Impact</b>
+        </p>
+        <p>When a person is completing an application, if there are multiple errors on a page, a popup window will appear with all errors being stated.</p>
+        <p style="font-weight: bold;"><span style="font-size: 14pt;">Mask that Allows for Percentages %: PC-2818</span>
+        </p>
+        <p>Create a Percentage Mask that can be used or update the current mask, so that it can go as high as XXXXXXXX.XXXX% to the thousandths digit percentage (.00X%)</p>
+        <p><b>Impact</b>
+        </p>
+        <p>The user will be able to pick a new mask the numerial mask, to show large numbers without have a comma in the number. The person will have to go to the Admin program &gt; Organization Link &gt; Organization &gt; Activity &gt; Select "ADD" link next to "Edit Masks." &gt; for Mask Types select "Percentage: 9999999.999%."</p>
+        <p><b style="font-size: 14pt;">Numeric Mask that Can Be Used or Update the Current Mask to Not Force a 1000 Separator: PC-2509</b>
+        </p>
+        <p>We implemented a Numeric Mask that updates the current mask to not force a 1000 separator.</p>
+        <p><b>Impact</b>
+        </p>
+        <p>Uses can use the new mask to display large numbers without commas in the number (Admin program &gt; Organization Link &gt; Organization &gt; Activity &gt; Select "ADD" link next to "Edit Masks." &gt; for Mask Types select "Percentage: 9999999.999%").</p>
+        <p><span style="font-size: 16pt; font-weight: bold;">Resolved Issues</span>
+        </p>
+        <p><b style="font-size: 14pt;">Product Config List Is Showing "Commissions" Option When Opened from Page Other than Home Page: CR-3220</b>
+        </p>
+        <p>We resolved an issue where the Product Configuration list was displaying the Commissions option when opened from a page other than the Home page. The Product Configuration list now displays the Distributor Profile option as designed.</p>
+        <p><b style="font-size: 14pt;">Clicking on "Distributor Profile" Button on Admin Home Page Is Giving Null Exception Error: CR-3391</b>
+        </p>
+        <p>We resolved an issue in the Admin app where clicking the Distributor Profile button resulted in a null exception error. The button is now working as intended.</p>
+        <p><b style="font-size: 14pt;">Issues Uploading a DPFA File: CR-3497</b>
+        </p>
+        <p>We resolved an issue where DPFA files failed to be uploaded properly. DPFA files are now uploaded as expected.</p>
+        <p><b style="font-size: 14pt;">Third Party Service Configuration Should Prefer Carrier Organization Settings: CR-3578</b>
+        </p>
+        <p>We streamlined GetThirdPartyServiceConfig calls for greater efficiency.</p>
+        <p><b style="font-size: 14pt;">MIB Related Audit Message Is Not Appearing Partywise: CR-3623</b>
+        </p>
+        <p>We resolved an issue where party-specific information was not included in MIB-related audit messages. MIB-related audit messages are now complete.</p>
+        <p><b style="font-size: 14pt;">Additional Insured MIB Related Response File Not Showing on Support Tool: CR-3624</b>
+        </p>
+        <p>We resolved an issue where responses were not appearing correctly in the support tool. Responses are now appearing as designed.</p>
+        <p><b style="font-size: 14pt;">Additional Insured - "AURA_EF_MIB_STATUS_AdditionalInsured" Response Field Is Not Mapping with any Response: CR-3625</b>
+        </p>
+        <p>We resolved an issue where response fields were not mapping as intended. Response fields are now mapping as designed.</p>
+        <p><b style="font-size: 14pt;">Changing Organization Name Logs Other Changes that Did Not Occur: DIST-3904</b>
+        </p>
+        <p>We resolved an issue where following an organization name change the History tab also erroneously listed changes that had not been made. Now the History tab lists only actual changes.</p>
+        <p><b style="font-size: 14pt;">Office Use Only Field Triggered by a Rule Does Not Immediately Render as Office Use Only: DIST-4082</b>
+        </p>
+        <p>We resolved an issue where Office Use Only fields were not clearly rendered as such, in green, on initial view. Office Use Only fields now appear as green on initial screen view.</p>
+        <p><b style="font-size: 14pt;">Activity Audits Are Not Being Purged: DIST-4115</b>
+        </p>
+        <p>We resolved an issue where Activity page data was not being purged as designed. Activity page data is now also purged with admin information.</p>
+        <p><b style="font-size: 14pt;">Deploy Now for a Single Organization Was Specified but Instead All Updates Were Deployed: EAES-3805</b>
+        </p>
+        <p>We resolved an issue where clicking Deploy Now for a single organization resulted in all updates being deployed. The Deploy Now button is now working as designed.</p>
+        <p><b style="font-size: 14pt;">Email Address with Leading or Trailing Spaces Is Not Allowed, Preventing Continue: EAES-4101</b>
+        </p>
+        <p>We resolved an issue where the system failed to trim leading and trailing spaces from email addresses. The system is now trimming leading and trailing spaces, allowing applications to continue.</p>
+        <p><b style="font-size: 14pt;">E-Delivery Agent Directed Change Requests Impacted by Delete Refactor: EAES-4692</b>
+        </p>
+        <p>We resolved an issue where clients received daily reissue requests rather than just one. Clients are now receiving a single reissue request.</p>
+        <p><b style="font-size: 14pt;">Deleted Firms Are Not Being Purged for Firm Management: EAES-4731</b>
+        </p>
+        <p>We resolved an issue where deleted firms were not also being purged. Deleted firms are now also purged.</p>
+        <p><b style="font-size: 14pt;">Upload Illustration Button Not Working: EAES-4741</b>
+        </p>
+        <p>We resolved an issue where clicking the Upload Illustration button resulted in no action. Clicking the button now launches the Illustration document type as designed.</p>
+        <p><b style="font-size: 14pt;">Drop-Down Text Color Is Different in Wizard UI: EAES-4742</b>
+        </p>
+        <p>We resolved an issue where drop-down text in a screen displayed differently than designed. The drop-down text now appears as intended.</p>
+        <p><b style="font-size: 14pt;">Error When Signing Application If Activity Name Contains Brace { } Characters: EAES-4974</b>
+        </p>
+        <p>We resolved an issue where application names containing curly brace characters caused an error to occur when generating the email template, preventing applications from being signed. Applications can again be signed as designed.</p>
+        <p><b style="font-size: 14pt;">Always Use Agent Name in AGENT_NAME Email Template Variable: EAES-4986</b>
+        </p>
+        <p>We resolved an issue where the AGENT_NAME variable in the email template was not populating properly. The AGENT_NAME variable is now working as designed.</p>
+        <p><b style="font-size: 14pt;">Request Expiration Reminder Email Coming from Organization Instead of Agent: EAES-4991</b>
+        </p>
+        <p>We resolved an issue where the request expiration reminder email From information was the organization’s rather than the agent’s. Request expiration reminder email From information is now the agent’s.</p>
+        <p><b style="font-size: 14pt;">Session User Mismatch When Reopening FireLight App or Admin: EAES-4893</b>
+        </p>
+        <p>We resolved an issue where a mismatch in session user information caused an error when logging in to FireLight. Login now works as designed.</p>
+        <p><b style="font-size: 14pt;">If Users Have Curly Braces in App Name then Agent Not Able to Start Signing: EAES-5046</b>
+        </p>
+        <p>We resolved an issue where if curly braces were included in an application name agent signing could not be completed. Agent signing now works as designed.</p>
+        <p><b style="font-size: 14pt;">Unlock Activity - Option Always Available to Select Even in Data Entry Phase: PC-1450</b>
+        </p>
+        <p>We resolved an issue where Unlock Activity was available from the Actions menu during data entry. Now, Unlock Activity is greyed out and unavailable during data entry.</p>
+        <p><b style="font-size: 14pt;">Illustration Activity - "Recover Unsaved Data" Popup Not Showing on Direct Closing of Browser/Tab without Save: PC-1481</b>
+        </p>
+        <p>We resolved an issue where "Recover Unsaved Data" pop up is not appearing, due to which, if user unknowingly close the browser without save, then, there is no option left to recover the entered data.</p>
+        <p><b style="font-size: 14pt;">React Remote e-Signing Doesn't Populate Checkmarks Once They Review/Approve the Terms: PC-2230</b>
+        </p>
+        <p>We resolved an issue where checkmarks failed to be selected after review/approval of terms during e-Signing. The checkmarks are now selected upon review/approval of terms as designed.</p>
+        <p><b style="font-size: 14pt;">Timestamp Showing in DOB: PC-2663</b>
+        </p>
+        <p>We resolved an issue where the Request Clients to Complete Filing and Signing in the Application dialog erroneously displayed a timestamp in the Date of Birth field. The field now displays only the date of birth.</p>
+        <p><b style="font-size: 14pt;">While Testing French Cases, the Mettre a jour Is Cut Off: PC-2766</b>
+        </p>
+        <p>We resolved an issue where in the French version of the application the Add Activities screen was partially cut off. The screen now appears as designed.</p>
+        <p><b style="font-size: 14pt;">FLI_FIRM_NAME dataitem ID Is Not Getting Pre-Filled on Application Transferred to Other User from FL Access Account: PC-2944</b>
+        </p>
+        <p>We resolved an issue where after transferring a case to another user the FLI_FIRM_NAME dataitem appears as blank for the transferred case. Now after transferring a case the FLI_FIRM_NAME dataitem is populated.</p>
+        <p><b style="font-size: 14pt;">Need French Translation for Text on Documents Dialog: PC-2957</b>
+        </p>
+        <p>We resolved an issue where pop-up text was not translated into French and Spanish. The pop-up text is now translated and appears in French and Spanish when in those environments.</p>
+        <p>&#160;</p>
+        <p>***Please note that the JIRA ticket numbers are provided for reference. JIRA tickets are not accessible to users outside Hexure.***</p>
+        <p data-mc-conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

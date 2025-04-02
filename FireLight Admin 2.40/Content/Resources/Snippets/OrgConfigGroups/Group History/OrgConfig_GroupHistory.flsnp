@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>On the <b class="Bold">Organization Configuration/Groups</b> page <b>Group History</b> tab, view the group history for each action taken on the Groups page by group role.</p>
+        <ol>
+            <li>Click a group <b class="Bold">Name</b> in the grid at the top of the Groups page.</li>
+            <li>
+                <p>Click the <b class="Bold">Group History</b> tab.</p>
+                <p>The tab displays the Action (including the organization name), Old Value, New Value, Action Date, and Login of the user that performed the action for the selected group role.</p>
+            </li>
+            <li>Click the <b class="Bold">Next</b> and <b class="Bold">Prev</b> buttons to navigate among the Group History pages.</li>
+            <li>In Utilities, Reports page, <MadCap:xref href="../../../../Utilities/Reports/Admin Reports.htm" target="_blank" alt="Admin Reports">Admin Reports</MadCap:xref>: in <b class="Bold">Admin History Reports</b>, run the <b class="Bold">Group History Audit Report</b> to view an audit history report for the selected user group or all user groups during a selected time frame.</li>
+        </ol>
+    </body>
+</html>

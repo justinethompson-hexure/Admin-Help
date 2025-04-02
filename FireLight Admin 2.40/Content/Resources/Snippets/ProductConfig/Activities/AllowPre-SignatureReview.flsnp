@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <MadCap:snippetBlock src="../../E-SignReactPreSubmitQ.flsnp" />
+        <p>Select the <b class="Bold">Allow Pre-Signature Review</b> checkbox to allow electronic activity package reviews prior to the Signatures step. This adds the pre-submission Review workflow step after the Data Entry step and before the Signatures step  within <MadCap:variable name="General.ProductName"></MadCap:variable>. The pre-submission Review step involves adding the activity to a PreSubmit review queue within the activity submission review queue. </p>
+        <p class="note">
+            <b class="Bold">NOTES:</b> When the Allow Pre-Signature Review option is selected, users cannot check out an app on the Console  and users cannot select the Request Client Fill &amp; Sign option on the Other Actions menu.<br></br>If you always want to include the PreSubmit review in the workflow, select Allow Post-Signature Review instead of Allow Pre-Signature Review.</p>
+    </body>
+</html>

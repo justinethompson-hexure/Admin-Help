@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Once you enable this feature and open a rule set that contains rules with duplicate names, the rule set cannot be saved until you change all the duplicate rule names to unique names in the rule set. In the following example, the rule set has four rules with the duplicate name "Error Message: RMD_Annuity_Withdrawal_StartDuration" that existed before the Validate Rule Name Uniqueness setting was enabled.</p>
+        <p>
+            <img src="../../ImagesAdmin/Capture272.png" alt="Example of Duplicate Rule Names Error" title="Example of Duplicate Rule Names Error" MadCap:conditions="General.Online">
+            </img>
+        </p>
+        <p>On the left in the list of rule names, the duplicate rule names appear in red font. A duplicate rule names message appears in red font below the list.  The rule cannot be saved until all duplicate rule names are renamed to unique rule names. </p>
+        <ol>
+            <li>
+                <p>Open each rule and change the name to a unique rule name.</p>
+            </li>
+            <li>
+                <p>When finished changing rule names or adding new rules, click the <b class="Bold">Save Rule Set</b> button to save the rule set.</p>
+            </li>
+        </ol>
+    </body>
+</html>

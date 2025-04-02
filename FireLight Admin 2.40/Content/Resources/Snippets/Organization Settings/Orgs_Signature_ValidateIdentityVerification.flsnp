@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Select the <b class="Bold">Validate Identity Verification</b> checkbox to: (1) not auto-populate the Social Security Number (SSN) or Date of Birth (DOB) fields in the e-signature Client Identification Verification section, (2) require the user to enter the SSN and DOB fields to match the mapped activity values for the signer type (FLI_[SignerType]_SSN and FLI_[Signer_Type]_DOB or client mapped values on the <MadCap:xref href="../../../Organization Configuration/Mapping.htm" target="_blank" alt="Mapping">Mapping</MadCap:xref> page),  and (3) if the Use SMS Text option is selected in client signature box field properties, require the client Mobile Number value from the SSO or activity data entry to match the value entered on the Client Identification Verification page. If they do not match, FireLight displays a validation message indicating that the entered value does not match the application value and prevents signing. The SMS Text authentication is driven off the Signature tags per signer by selecting the Use SMS Text option in the <MadCap:xref href="../../../Design/Forms/Signature Box.htm" target="_blank" alt="Signature Box">Signature Box</MadCap:xref> field properties in the Form Designer. If Validate Identity Verification and SMS Text Authentication are both enabled, you must enable the <a href="../../../Organization Configuration/Groups/App.htm#AllowEditsToMobile" target="_blank" alt="Allow Edits to Mobile">Allow Edits to Mobile</a> option in Organization Configuration/Groups/App tab. See <MadCap:xref href="../../../Features/SMS Text Authentication.htm" target="_blank" alt="SMS Text Authentication">SMS Text Authentication</MadCap:xref> for more information.</p>
+        <p>
+            <b class="Bold">NOTES:</b>
+        </p>
+        <ul>
+            <li>
+                <p>If Validate Identity Verification is enabled, Passcode Validation Only cannot be enabled or an error occurs. </p>
+            </li>
+            <li>
+                <p>In the Form Designer, <MadCap:xref href="../../../Design/Forms/Signature Box.htm" title="Signature Box" alt="Signature Box">Signature Box</MadCap:xref> control: If the Passcode Only Validation checkbox is selected (checked) when the Validate Identity Verification is checked in Organization Settings, it will then use the passcode validation functionality for this specific signature.  All other signatures that do not have this checkbox checked will use the Validate Identify Verification.  If this checkbox is checked when Validate Identity Verification is not checked in the organization settings, the passcode validation functionality will still occur for that signature. If Passcode Validation is turned on at the organization level, then this checkbox is disabled.</p>
+            </li>
+        </ul>
+    </body>
+</html>

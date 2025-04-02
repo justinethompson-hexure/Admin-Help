@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>We are continuing to work through the Enrollment enhancement by addressing the application of the agent signature to the child applications.  There are two potential signature scenarios that can occur with the enrollment process:</p>
+        <ol>
+            <li>
+                <p>  The agent can sign last - The agent will provide a signature that is imported into multiple applications where participant signatures are complete.</p>
+            </li>
+            <li>
+                <p>  The agent can manually sign each of the child applications individually.</p>
+            </li>
+        </ol>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>  FL Admin: New data items is added to capture the agent sign order, master agreement activity that is created with parent enrollment along with the agent signatures.</p>
+            </li>
+            <li>
+                <p>  FL Admin: Master Agreement activity created for the parent enrollment activity.</p>
+            </li>
+            <li>
+                <p>  FL Admin: New status for the child enrollment activity when agent and client signatures are complete.</p>
+            </li>
+            <li>
+                <p>  FL App: Added Master Agreement page to Participants section of the parent enrollment activity.</p>
+            </li>
+            <li>
+                <p>  FL App: Workflow changes in the enrollment activity when agent signature is to be captured last.</p>
+            </li>
+            <li>
+                <p>  FL App: New button on "Participants" page to allow agents to sign the child apps.</p>
+            </li>
+        </ul>
+    </body>
+</html>

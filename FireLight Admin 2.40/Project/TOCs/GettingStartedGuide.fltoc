@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="WordTitle"
+    Link="/Content/Print Only Topics/WordTitle.htm"
+    conditions="General.PDF"
+    BreakType="none"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Word8_5X11/2017WordTitle8_5X11.flpgl" />
+  <TocEntry
+    Title="WordCopyright"
+    Link="/Content/Print Only Topics/WordCopyright.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    conditions="General.PDF"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Word8_5X11/2017WordCopyright8_5X11.flpgl"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same"
+    ChapterNumberReset="continue"
+    ComputeToc="false"
+    ReplaceMergeNode="false" />
+  <TocEntry
+    Title="WordTOC"
+    Link="/Content/Print Only Topics/WordTOC.htm"
+    conditions="General.PDF"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Word8_5X11/2017WordTOC8_5X11.flpgl"
+    SectionNumberReset="continue"
+    VolumeNumberReset="same"
+    ChapterNumberReset="continue"
+    ComputeToc="false"
+    ReplaceMergeNode="false" />
+  <TocEntry
+    Title="Getting Started"
+    Link="/Content/Getting Started/GettingStarted.htm"
+    BreakType="pageLayout"
+    AutoEndOnLeftPage="disabled"
+    StartSection="false"
+    PageLayout="/Content/Resources/PageLayouts/Word8_5X11/2017WordNormal8_5X11.flpgl">
+    <TocEntry
+      Title="What's New"
+      Link="/Content/Getting Started/WhatsNew.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+      StartSection="false"
+      BreakType="none"
+      AutoEndOnLeftPage="disabled" />
+    <TocEntry
+      Title="Typical FireLight Admin Workflow"
+      Link="/Content/Getting Started/TypicalFireLightWorkFlow.htm"
+      BreakType="none"
+      StartSection="false"
+      AutoEndOnLeftPage="disabled" />
+    <TocEntry
+      Title="FireLight Admin Information Checklist"
+      Link="/Content/Getting Started/FireLightAdminInformationChecklist.htm"
+      BreakType="none"
+      AutoEndOnLeftPage="disabled"
+      StartSection="false" />
+    <TocEntry
+      Title="Log In To FireLight Admin"
+      Link="/Content/Getting Started/LogInToFireLightAdmin.htm">
+      <TocEntry
+        Title="Change Your FireLight Admin Password"
+        Link="/Content/Getting Started/ChangeYourFireLightAdminPassword.htm"
+        BreakType="none"
+        StartSection="false"></TocEntry>
+      <TocEntry
+        Title="Reset or Forgot Your FireLight Admin Password"
+        Link="/Content/Getting Started/Reset or Forgot Your FireLight Admin Password.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Home Page and Navigation"
+      Link="/Content/Getting Started/HomePage.htm"
+      StartSection="false"
+      BreakType="none"
+      AutoEndOnLeftPage="disabled" />
+    <TocEntry
+      Title="Spotlight Feature Videos"
+      Link="/Content/Getting Started/Spotlight Feature Videos.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="FireLight Web Content Accessibility Guidelines"
+      Link="/Content/Getting Started/FireLight Web Content Accessibility.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  </TocEntry>
+</CatapultToc>

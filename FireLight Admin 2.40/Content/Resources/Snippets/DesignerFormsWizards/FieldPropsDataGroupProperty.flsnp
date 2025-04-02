@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body> Select an option in Data Group Property when a field is associated with a custom action Button. When Action Type is set to CRM, select the type of data to pull in the Data Group Property for the selected Data Group and dataitem (e.g., for the Owner_FirstName field, select Owner in Data Group and select FirstName in Data Group Property). When a custom action Button is set to Custom List, select a custom list column from which to pull the data for the  field (e.g., for a field associated with a Medications custom list, select Custom List 1, etc., number in Data Group, and select Drug Name in Data Group Property as the column from which to pull data for the field). <b>NOTE</b>: Custom List does not apply to Combo Box controls.</body>
+</html>

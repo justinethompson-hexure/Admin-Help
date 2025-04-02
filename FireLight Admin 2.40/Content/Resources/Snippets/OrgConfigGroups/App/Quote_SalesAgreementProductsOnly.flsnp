@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Sales Agreement Products Only</b> checkbox to filter quotes based on whether a sales agreement exists. When selected, only the quotes with a sales agreement and a package with an ACORD Type of Application 103 is shown on the Quote page. This applies to sponsored and non-sponsored products.</body>
+</html>

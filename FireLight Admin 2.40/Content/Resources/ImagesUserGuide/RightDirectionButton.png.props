@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<fileProperties>
+    <ImageOverlay Profile="D:\Documents\My Profiles\FireLightUserGuide.capro" ProfileHash="17ab8a245f347468213ad253f12e292d50527913" ScreenRectangle="1178,343,17,19">
+        <OriginalImage Type="Image" ShapeTimeSpan="10000" AutoAdjust="true" DPI="96" medium_print_EnableFormat="true" medium_print_DPI="300" Folder="D:\Documents\My Projects\FireLight Admin 2.18\Content\Resources\ImagesUserGuide" ExportFormat="png" medium_print_ExportFormat="png" BorderColor="#4682b4" Border="solid" FileName="Capture{n}" EnableGrayScaleFormat="false" medium_screen_and__max_width__64_063em__ExportFormat="png" medium_screen_and__max_width__64_063em__DPI="96" medium_screen_and__max_width__40em__ExportFormat="png" Title="Quote Right Directional Button" Alt="Quote Right Directional Button" ComputedWidth="17" ComputedHeight="19" medium_print_OutputScaleFactor="3.12" medium_print_ColorDepth="32">SUkqADgBAACAP+BP8AQWDQeEQmFQuGQ2GQOCQ6JROKROIRWGvV3ABnvEEAAYhoFRiLQOSQh1gBKpd1AA2PkAgBCEQQAA9iyRyeExedQV+gBvsNuAAhs1+UAATGZzWbzmdTyeweft9jt4AFtkvoAMekzKaTacSSoVGEz94M1vgAlMN81uu0uwU6G2NrrtsS5vP6yQZzvmCNe9QalV+mw+TQZnrJqgAZVa9xQlC4MgBakIJYaBQh9vgAPB7z+oueWltbvYALaDEoShUAK0lhYAR+54fHwZxuGrq96ABTYHVazXbDZSXM3t8N5wAAxrR67zfavW6/Y0/aTqWo1JSk6c/gdLhz2xz3juMAKVzyMtjsJ9PagCxi1R0NqO22+2GnQZ+tFj0MZiIvtACFPDAMCQHAkAQNA72oCAEAD+AAQAAQAAAAAAAAAAAQQAAQAAABEAAAABAQQAAQAAABMAAAACAQMABAAAAP4BAAADAQMAAQAAAAUAAAAGAQMAAQAAAAIAAAARAQQAAQAAAAgAAAAVAQMAAQAAAAQAAAAWAQQAAQAAABMAAAAXAQQAAQAAADABAAAaAQUAAQAAAAYCAAAbAQUAAQAAAA4CAAAcAQMAAQAAAAEAAAAoAQMAAQAAAAIAAAA9AQMAAQAAAAIAAABSAQMAAQAAAAIAAAAAAAAACAAIAAgACAAAdwEA6AMAAAB3AQDoAwAA</OriginalImage>
+        <Shapes />
+        <Variables />
+        <Shapes IsResourceLayer="true" Name="Resources" />
+        <ConditionTagSet />
+    </ImageOverlay>
+</fileProperties>

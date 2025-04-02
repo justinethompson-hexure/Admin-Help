@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable View Organization</b> checkbox to disable viewing <MadCap:xref href="../../../../Organization Configuration/Organization Settings.htm" target="_blank" alt="Organization Settings">Organization Settings</MadCap:xref> information. The Organization Settings option under Organization Configuration on the Admin home page and the Organization Settings option under Organization Configuration on the navigation bar will not be visible when this option is selected. The user will not be able to make changes to settings controlled at the organization level or add data masks, signature fonts, policy blocks, IDP certificates, etc.</body>
+</html>

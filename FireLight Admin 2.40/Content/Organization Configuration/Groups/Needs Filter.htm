@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>Needs Filter</h1>
+        <MadCap:snippetBlock src="../../Resources/Snippets/OrgConfigGroups/Needs Filter/OrgConfig_NeedsFilter.flsnp" />
+        <h2>Add a Filter Category</h2>
+        <p>Filter category names are the columns across the grid. Category names are unrestricted strings  and each category name must be unique.</p>
+        <ol>
+            <li>On the <b>Groups</b> page, select a <b>TC Role Code</b> in the upper list.</li>
+            <li>
+                <p>On the<b> App</b> tab, select <b>Enable Create Needs Determination</b>.</p>
+                <p>Additionally, to require the User Group to always do a Needs Determination before an application, also select the <b>Disable Create Application</b> checkbox.</p>
+            </li>
+            <li>Click the <b>Needs Filter</b> tab.</li>
+            <li>Select an <b>Organization</b> in the list. This is the organization whose products is filtered.</li>
+            <li>Click the <b>New Category</b> button.</li>
+            <li>On the right, type a name for the filter category.</li>
+            <li>
+                <p>In the list, select a filter type: </p>
+                <p class="hangingindent"><b>String</b> if the Needs Determination transaction contains the given data item for the filter rule, and the data item’s value matches what is defined for the filter rule, then the corresponding product is allowed to be shown (unless other filter rules prevent it from being shown). Inputs are unrestricted. Use semi-colons to delimit the string, allowing multiple options for the given product.</p>
+                <p class="hangingindent"><b>StringOverrideFilter</b> if the Needs Determination transaction contains the given data item for the filter rule, and the data item’s value matches what is defined for the filter rule, then the product must be shown, no matter how the other filter definitions match up. Inputs are unrestricted. Use semi-colons to delimit the string, allowing multiple options for the given product.</p>
+                <p class="hangingindent"><b>ValueGreaterThanX</b> if the Needs Determination transaction contains the given data item, and the data item’s value is greater than what is defined for the filter rule, then the corresponding product is allowed to be shown (unless other filter rules prevent it from being shown). Enter numbers only in a decimal format (for example: 10,000.34).</p>
+                <p class="hangingindent"><b>ValueLessThanX</b> if the Needs Determination transaction contains the given data item, and the data item’s value is less than what is defined for the filter rule, then the corresponding product is allowed to be shown (unless other filter rules prevent it from being shown). Enter numbers only in a decimal format (for example: 10,000.34).</p>
+                <p class="hangingindent"><b>NumericRange</b> if the Needs Determination transaction contains the given data item, and the data item’s value is between or equal to the numbers that are defined for the filter rule, then the corresponding product is allowed to be shown (unless other filter rules prevent it from being shown). Enter only two numbers separated by a dash (for example: 10,000.34–800,000.67).</p>
+                <p class="hangingindent"><b>ValueContainsString</b> if the Needs Determination transaction contains the given data item, and the data item’s value contains the value that is defined at any point within the data item’s value, the corresponding product is allowed to be shown (unless other filter rules prevent it from being shown). Input is unrestricted.</p>
+                <p class="hangingindent"><b>NotEqualString</b> if the Needs Determination transaction contains the given data item, and the data item’s value is not equal to what is defined, then the corresponding product is allowed to be shown (unless other filter rules prevent it from being shown). Inputs are unrestricted. Use semi-colons to delimit the string, allowing multiple options for the given product.</p>
+            </li>
+            <li>Type the <b>Data Item ID</b> from the Needs Questionnaire form.</li>
+            <li>On the left, select the <b>Products</b> in the list to filters will apply.</li>
+            <li>Enter the applicable filter value for each product. If the filter category does not apply to a product, leave it blank for that product.</li>
+            <li>Click the <b>Save</b> button.</li>
+            <li>Enter the filter categories on this tab  for each product to which the selected role code has access.</li>
+            <li>Repeat the process for each applicable User Group.</li>
+        </ol>
+        <h2>Upload a Group Filter Definition CSV</h2>
+        <p>Use the Upload feature to upload multiple filter category definitions in a CSV or XLSX file.</p>
+        <ol>
+            <li>On the <b>Groups</b> page, select a <b>TC Role Code</b> in the upper list.</li>
+            <li>
+                <p>On the <b>App</b> tab, select <b>Enable Create Needs Determination</b>.</p>
+                <p>Additionally, to require the User Group to always do a Needs Determination before an application, also select the <b>Disable Create Application</b> checkbox.</p>
+            </li>
+            <li>Click the <b>Needs Filter</b> tab.</li>
+            <li>Select an <b>Organization</b> in the list. This is the organization whose products is filtered.</li>
+            <li>
+                <p>On the upper left of the tab, click the <b>Upload</b> button, browse for the group filter definitions CSV or XLSX file, and click the <b>Upload</b> button.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/NeedsFilter4.jpg" alt="Upload File dialog" title="Upload File dialog" MadCap:conditions="General.Online" />
+                </p>
+                <p>
+                    <img src="../../Resources/ImagesAdmin/TipIcon.jpg" alt="Tip Icon" title="" /> If an uploaded data set is too large, the group filter definition table will not render on the Needs Filter tab and a "Data set too large - unable to render table" message appears under the Upload button. The data is saved, but you are unable to view it on the Needs Filter tab.</p>
+            </li>
+        </ol>
+        <p MadCap:conditions="General.Online"><a href="#top">Return to Top</a>
+        </p>
+    </body>
+</html>

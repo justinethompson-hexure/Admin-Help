@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Copy Rules from an Exported Rule Set to a New Rule Set, Update Rule Definitions" />
+    </head>
+    <body>
+        <h1>Import/View All Rule Definitions<a name="top"></a></h1>
+        <p>Use the Rule Definitions Window to display, import, and update the rule definitions for a rule set. </p>
+        <h2>Import or Update Rule Definitions</h2>
+        <ol>
+            <li>In the upper grid of the Rule Sets page, select a rule set in the list.</li>
+            <li>
+                <p>On the <b>Rule Set Detail</b> tab, click <b>Import/View All Rule Definitions</b> link to open the Rule Definitions Window.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/ShowAllRuleDefinitions1.jpg" alt="Rule Definitions Window" title="Rule Definitions Window" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+            <li>
+                <p>Import a new rule set: </p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Next to <b class="Bold">Import Rule Set XML</b>, click <b class="Bold">Choose File</b>. </p>
+                    </li>
+                    <li>
+                        <p>In the dialog, select a rule set file and click <b class="Bold">Open</b>. Click the <b class="Bold">Load XML File</b> button. </p>
+                        <p MadCap:conditions="General.Online">
+                            <img src="../../Resources/ImagesAdmin/Capture246.png" alt="Import Rule Set XML File" title="Import Rule Set XML File" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>If the imported rule set XML is for a new rule set, select the new rule set and click the <b class="Bold">Load XML File</b> button. No warning message appears.</p>
+                    </li>
+                    <li>
+                        <p>Imported rule set XML files will overwrite existing rule set definitions. If the imported XML file will overwrite an existing rule set, an Import Rule Set warning message displays: "The Rule Set XML you are about to import will overwrite an existing Rule Set. Do you want to continue?" </p>
+                        <p>Click <b class="Bold">OK</b> to import the rule set that will overwrite the existing rule set. Click <b class="Bold">Cancel</b> to stop the import.</p>
+                        <p MadCap:conditions="General.Online">
+                            <img src="../../Resources/ImagesAdmin/Capture247.png" alt="" title="" />
+                        </p>
+                    </li>
+                    <li>
+                        <p>Upon completion of the XML file load, make any updates to the imported rule set and click <b class="Bold">Update</b> on the lower right of the<b class="Bold"> Rule Definitions Window</b>.</p>
+                    </li>
+                    <li>
+                        <p>FireLight writes an audit record to the Rule Set History tab, e.g., "Rule set XML was uploaded in rule set [RuleSetName]." For more information about rule set audit history, see <MadCap:xref href="View Rule Set History.htm" title="View Rule Set Audit History" alt="View Rule Set Audit History">View Rule Set Audit History</MadCap:xref>.</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Update an existing rule set: on the<b class="Bold"> Rule Definitions Window</b>, make updates to the rule set and click <b>Update</b>. FireLight writes an audit record to the Rule Set History tab.</p>
+            </li>
+            <li>
+                <p>Click the <b>X</b> on the upper right of the Rule Definitions Window to close the window.</p>
+            </li>
+            <li>Click <b>Save Rule Set</b> on the Rule Sets page to save the imported rule set or updates to an existing rule set.</li>
+        </ol>
+        <h2>Copy Rules from an Exported Rule Set to a New Rule Set</h2>
+        <ol>
+            <li>Locate and open the exported rule set XML file using Notepad, Notepad ++ or any other text editor. </li>
+            <li>
+                <p>On the <b class="Bold">Product Configuration/Rule Sets</b> page, click the <b class="Bold">Import/View All Rule Definitions</b> link to open the <b class="Bold">Rule Definitions Window</b> for the new rule set and delete the text from the file.</p>
+            </li>
+            <li>
+                <p>Copy the rules from the exported rule set file, paste the rules into the <b class="Bold">Rule Definitions Window</b> for the new rule set file, and click <b class="Bold">Update</b>.</p>
+            </li>
+            <li>Click <b>Save Rule Set</b> on the Rule Sets page to save the rule set.</li>
+        </ol><a href="#top" alt="Return to Top">Return to Top</a>
+    </body>
+</html>

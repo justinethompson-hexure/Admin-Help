@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>(Distributor Only) If the distributor organization enables Auto Deploy in Organization settings &gt; Admin, auto deploy will be in effect for all carriers to that distributor from carrier UAT to distributor Staging. Otherwise, if the distributor enables Auto Deploy in Sales Agreement settings for a given Carrier Org, auto deploy will be in effect for that carrier to the distributor from carrier UAT to distributor Staging. In Staging, if the distributor organization enables Auto Deploy in Organization settings &gt; Admin, auto deploy will be in effect for all carriers to that distributor from carrier UAT to distributor Production (or from carrier Staging to distributor Production). Otherwise, if the distributor enables Auto Deploy in Sales Agreement settings for a given Carrier Org, auto deploy will be in effect for that carrier to the distributor from carrier UAT to distributor Production (or from carrier Staging to distributor Production). See <MadCap:xref href="../../../../Utilities/Deployments/Deployments.htm" target="_blank" alt="Deployments">Deployments</MadCap:xref> for detailed deployment information.</p>
+        <p>&#160;</p>
+    </body>
+</html>

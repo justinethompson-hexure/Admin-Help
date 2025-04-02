@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p> In the list, select an Edit Mask if applicable. <br></br>An Edit Mask is used in the Form Designer and Wizard Designer on controls to help guide the user on the expected format for the data. For example, you can define a mask of “###-##-####” for an SSN. The Mask is displayed within the text box, and when the user types in the digits for the SSN, the “#” will disappear and the “-” will automatically be added.   </p>
+        <p class="Indent"><strong>Add an Edit Mask</strong>
+        </p>
+        <p>
+            <ol style="list-style-type: lower-alpha;">
+                <li>
+                    <p>Click the <b>Add</b> link on the right of Edit Masks to open the Add Mask dialog. </p>
+                </li>
+                <li>
+                    <p>Enter the following information in the Add Mask dialog: </p>
+                    <p><b>Mask Types</b> Select an Edit Mask type in the list (Date, Date Long, SSN/TIN, Phone, Phone w Extension, ZIP, Numeric, Routing, etc.).  </p>
+                    <p><b>Modify Mask</b> Type any changes to the selected Mask Type.  </p>
+                    <p><b>Mask Name</b> Type a name for the new Edit Mask.  </p>
+                    <p><b>Example</b> Type an example of the new Edit Mask.  </p>
+                </li>
+                <li>
+                    <p>Click <b>Add</b> to save changes and click <b>Close</b> to close the dialog.</p>
+                </li>
+            </ol>
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Example: Add a Numeric Currency Mask for Dollar Amount</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <ol style="list-style-type: lower-alpha;">
+                        <li>Click the <strong>Add</strong> link on the right of Edit Masks.</li>
+                        <li>
+                            <p>Enter the following information in the Add Mask dialog:</p>
+                            <p><strong>Mask Types</strong> select <strong>Numeric: 9,999,999</strong>.</p>
+                            <p><strong>Currency Prefix</strong> type <strong>$</strong>.</p>
+                            <p><b class="Bold">Currency Suffix</b> type a suffix if applicable or leave blank.</p>
+                            <p><strong>Mask Name</strong> type <strong>Dollar</strong>.</p>
+                            <p><strong>Thousand Separator</strong> select <strong>Comma</strong>.</p>
+                            <p>Select the <strong>Apply Decimal</strong> checkbox.</p>
+                        </li>
+                        <li>Click <strong>Add</strong> to save changes and click <b>Close</b> to close the dialog.</li>
+                    </ol>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Example: Add a Routing Mask for Routing Number</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <ol style="list-style-type: lower-alpha;">
+                        <li>Click the <strong>Add</strong> link on the right of Edit Masks.</li>
+                        <li>
+                            <p>Enter the following information in the Add Mask dialog:</p>
+                            <p><strong>Mask Types</strong> select <strong>Routing: 999999999</strong>.</p>
+                            <p><b class="Bold">Modify Mask</b> type type 999999999.</p>
+                            <p><strong>Mask Name</strong> type <strong>Routing Number</strong>.</p>
+                            <p><b class="Bold">Example</b> type <b class="Bold">999999999</b>.</p>
+                        </li>
+                        <li>Click <strong>Add</strong> to save changes and click <b>Close</b> to close the dialog.</li>
+                    </ol>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </p>
+    </body>
+</html>

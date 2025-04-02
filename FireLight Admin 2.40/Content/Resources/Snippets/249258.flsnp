@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Base will support an activity level naming convention with a few key data items to allow clients to define how they want their default activities named when created via SSO. The default activity name can be customized in the client provider by modifying the method "TryGetDefaultActivityName." This customization allows the activity naming convention to be per the client specifications for parent activities and child activities created through SSO. Clients can provide requirements for their custom naming convention to vary per activity type and line of business. Example: &lt;Insured First Name&gt; &lt;Insured Last Name&gt; – &lt;Policy #&gt; – &lt;Activity Name&gt; – &lt;Product Name&gt;." This enhancement is available upon request, and clients can work with their Strategic Account Manager to implement. </p>
+        <p>Impacts: </p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Client provider: Custom naming convention of activities available created via SSO</p>
+            </li>
+        </ul>
+    </body>
+</html>

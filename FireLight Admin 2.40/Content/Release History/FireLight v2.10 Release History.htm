@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight v2.10 Release History</h1>
+        <p class="note"><b>NOTE:</b> If a design document is associated with an enhancement, click the link in the iConnect number to open the design document.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>2.10.0.xxx August 11, 2017 Minor Production Release</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2>Enhancements</h2>
+                <p><b class="DRNumberBold">Display/Print PDF Page</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 163326 </b> (Available for all clients) A SML work order added a 'Check/Uncheck All' checkbox above the left column of the grid on the Display/Print PDF page in FireLight. Use the new checkbox to select or clear all documents in the list. This feature is enabled when an application is unlocked or the Enable Print Individual Forms option is selected on the App tab of the Groups page in FireLight Admin. </li>
+                </ul>
+                <p><b class="DRNumberBold">Email Notifications</b>
+                </p>
+                <ul>
+                    <li>
+                        <p><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/147639-ManualReviewCompleteEmail.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 147639</a><![CDATA[  ]]></b>(Available for all clients) A SFG work order added the ability to send an auto-generated email from the organization email address to the agent and/or reviewer when an application has been submitted after being approved in the manual review queue. To use this feature, ensure Allow E-Approval is selected on the Organizations page to add the manual review queue step to the workflow. In FireLight Admin Profiles on the Groups page, App tab: select the Enable Submit Email for Agent checkbox to enable the Agent Completed Application email and select the Enable Submit Email for Reviewer checkbox to enable the Reviewer Completed Application email on the Email page. To make use of the new email template replacement tags, contact your Strategic Account Manager to add the &lt;CLIENT_NAME&gt; and &lt;FLI_CONFIRMATION_NUMBER&gt; values to the Application Search Items stored for each application. The &lt;CLIENT_NAME&gt; tag requires a dataitem of the same name to be added to the application form via a rule. If policy number is not being set in the Provider, you can also add a dataitem to the form to set the value for &lt;FLI_CONFIRMATION_NUMBER&gt;. See the Email page in Admin Help for a rule example and a list of available template tags for the new templates. Also added an Organization option to allow organizations to set the frequency of an auto-generated submit reminder email to agents. The Submit Reminder email is sent if one or more applications have completed the signing ceremony for all signers, but the applications have not been submitted. The frequency of the email is based on the option (Daily, Weekly, Never) selected in the Submit Reminder Frequency list on the Organizations page in FireLight Admin. For example, if Daily is selected, the agent will receive an email a day after one or more applications have completed the signature process. The email will list the application name, policy number, and client name (if client name is added to the application search items for the organization) of each of the signed applications that have not been submitted. (The list does not include purged applications.) To add client name to the application search items, contact your Strategic Account Manager. See the Submit Reminder email template on the Email page in Admin Help. </p>
+                    </li>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/155605-ClientLeave-BehindEmailDesignApproach.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 155605</a></b> (Available for all clients) A FST work order added the ability to send email notifications that provide access to the signed application documents after each client signs an application. (This is in addition to the existing final Download Completed Application email notification.) In FireLight Admin, added an editable Leave-Behind Email template to the Email page in Profiles. To enable the new email template, select the Enable Leave-Behind Email checkbox on the App tab in Groups for the role codes that will receive the email. Sending of the email message will also be recorded in the application audit history.</li>
+                </ul>
+                <p><b class="DRNumberBold">List of Required Signers Page</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 157030 </b> (Available for all clients) A KOC work order added the signer's name next to the signer role on the  List of Required Signers page in FireLight. This ensures the correct person is signing the document set during the signing ceremony. This is especially useful when the Enable Single User to Sign Multi Signer Types option is selected on the App tab of the Groups page in FireLight Admin.</li>
+                </ul>
+                <p><b class="DRNumberBold">Review Queue</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 160336</b> (Available for all clients) A USA work order added the ability to include the Reviewer's Internal ID on the Accept and Reject messages from the Review Queue. Clients can structure the 1228 to include the name and email in the correct location and additional information could be included in the 1228 for the Provider to use. Contact your Strategic Account Manager.</li>
+                </ul>
+                <p><b class="DRNumberBold">Rules</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">Additional Feature </b> (Available for all clients) Added two new Rules nodes, 'deformat' and 'elseif', to the Rules window of the form Designer in FireLight Admin. Use the 'deformat' node to strip characters from a string that do not match the format. Use the 'elseif' node to write if-elseif-else statements. See the Admin Help for examples of the new nodes. </li>
+                </ul>
+                <p><b class="DRNumberBold">Signature Types</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 163897 </b> (Available for all clients) An ALZ client work order added three new signer types. On the form Designer page in FireLight Admin, the following new options to the Signer Type field property were added to the Signature control: Investment Advisor Representative, Investment Advisor Representative 2, and Investment Advisor Representative 3. </li>
+                </ul>
+                <h2>Fixed Defects</h2>
+                <ul>
+                    <li>
+                        <p><b class="DRnumber">DR 149953</b> Download of Apps. Users could only download 4 applications at a time. This has been fixed by making the download go to a new tab, increasing the download maximum file size to 150MB, and increasing the maximum time for a request to 8 minutes. </p>
+                    </li>
+                    <li><b class="DRnumber">DR 156298 </b> Product not available in UI as of Sales Agreement date. This has been fixed. </li>
+                    <li><b class="DRnumber">DR 156404 </b> Bar Code enhancement (CMR144590) changes required in console. This has been fixed by implementing QR and DataMatrix Bar Code enhancements in the Console. </li>
+                    <li MadCap:conditions="General.Postpone"><b class="DRnumber">DR 157167 </b> M2037.R715.Supp Current State cutting off text or not displaying typed text in full. This has been fixed.</li>
+                    <li><b class="DRnumber">DR 160719 </b> Wording of the review status it's being shown differently in UAT. This has been fixed. "Review Status" is displaying properly in "My Recent Applications" section of main page.</li>
+                    <li><b class="DRnumber">DR 161966 </b> App data was lost when transferring from Console. This has been fixed. </li>
+                    <li><b class="DRnumber">DR 163181 </b> Carrier-only documents were visible to the client.  This has been fixed by modifying the client view of application documents to exclude carrier-only documents. </li>
+                    <li><b class="DRnumber">DR 161931 </b> Signatures coming through as a line or incomplete. This has been fixed by increasing the size of the captured image size from 150 to 2048 pixels.</li>
+                    <li><b class="DRnumber">DR 162448 </b> Agent’s name is missing in client fill and sign email. This has been fixed. </li>
+                    <li><b class="DRnumber">DR 163405 </b> Reviewers with an apostrophe in their username are unable to accept/reject apps. This has been fixed.</li>
+                    <li><b class="DRnumber">DR 163473 </b> Carrier Selection is showing in prod despite only one carrier having product to select. This has been fixed.</li>
+                    <li><b class="DRnumber">DR 163810 </b> Signature Email link generates "Server Error." This has been fixed. </li>
+                    <li MadCap:conditions="General.Postpone"><b class="DRnumber">DR 163816 </b> Form Entry stuck at 99%. This has been fixed.</li>
+                    <li><b class="DRnumber">DR 163828 </b> CusipID Needed on Product Code Report. Added a column to the product code report to display the Cusip ID that it is breaking on. This has been completed.</li>
+                    <li MadCap:conditions="General.Postpone"><b class="DRnumber">DR 164288 </b> Name not being pulled into template for acceptance of User Share access correctly. This as been fixed. </li>
+                    <li MadCap:conditions="General.Postpone"><b class="DRnumber">DR 164486 </b> FLI_PRODUCT_NAME data item does not reflect sales agreement override of product name. This has been fixed.</li>
+                    <li MadCap:conditions="General.Postpone"><b class="DRnumber">DR 164494 </b> The agent's name is not showing correctly in the sender's line when sending a Client Fill and Sign request email. This has been fixed.</li>
+                    <li MadCap:conditions="General.Postpone"><b class="DRnumber">DR 164680 </b> FilterChoices needs to pass Acord state codes for jurisdictions to the provider. This has been fixed.</li>
+                    <li MadCap:conditions="General.Postpone"><b class="DRnumber">DR 164786 </b> Carrier Only Product Configuration deploys distributor forms. This has been fixed.</li>
+                    <li MadCap:conditions="General.Postpone"><b class="DRnumber">DR 164849 </b> Custom lists not loading in distributor environment. This has been fixed.</li>
+                </ul>
+                <p MadCap:conditions="General.Online"><a href="#top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>2.10.0.169 June 8, 2017 Production Release</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2>Enhancements</h2>
+                <p><b class="DRNumberBold">Cooperative Technologies Yellow Pages Report</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 157721 </b>Add third-party usage report to track the usage of yellow pages (LFG) &#160;– Added a Third-Party Service Usage - Cooperative Technologies Report for LFG. See the <MadCap:conditionalText MadCap:conditions="General.PDF">Reports</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../Utilities/Reports/Reports.htm">Reports</MadCap:xref></MadCap:conditionalText> page in Admin Help to view a sample of this report.</li>
+                </ul>
+                <p><b class="DRNumberBold">Encryption and Signing of PDF Files</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 155174 </b>The package being SFTPd is encrypted but not digitally signed &#160;– When encrypting and transferring files using PGP file encryption, implemented the ability to sign the PDF files with the FireLight private key and encrypt the files with the client organization's public key.</li>
+                </ul>
+                <p><b class="DRNumberBold">Forms Designer</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/157731-DesignApproachOutputDateFormat.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 157731</a></b> Date format on the final package after signature is attached &#160;– In FireLight Admin, added the ability to alter the format of the date included in the signature control stamp as well as the output date format on forms in the PDF by adding a Date Format field property with multiple date format options in the Signature control and Calendar control field properties in the form Designer.</li>
+                </ul>
+                <p><b class="DRNumberBold">Integration</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/153555-AutomatedBusinessServiceDesignApproach_3-28-17.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 153555</a></b>Consume and process a 103 through a REST web service  – Added base enhancements that provide back office capability to OCR existing paper applications directly into FireLight, return any NIGO responses, and finish normal completion processing of the application. Client makes a SOAP request to FireLight with application data in ACORD 103 format (with KeyedValue items).
+FireLight maps (or attempts to map) the data of the 103 to a new application.</li>
+                </ul>
+                <p><b class="DRNumberBold">Jurisdiction Limits</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/157979-RemoveJurisidictionLimitDesignDoc.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 157979</a></b> Remove jurisdiction limits &#160;– Modified the FireLight jurisdiction approval design to allow more than 63 jurisdictions. Any number of additional jurisdictions can be added to the system for organizations that require them.</li>
+                </ul>
+                <p><b class="DRNumberBold">LexisNexis Integration</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/135461-DesignApproachLexisNexisIntegration.pdf" target="_blank" title="Design Doc" alt="Design Doc">CMR 135461</a><![CDATA[  ]]></b> Integrate with LexisNexis for full 3rd party Authentication   – Added integration with LexisNexis, a third-party client authentication vendor. The FireLight client needs to contract directly with LexisNexis for the services. FireLight incorporates the services Instant ID and Instant Authentication into the client verification process during the signing ceremony for both the Sign Now and the Sign Later (external signing) processes for more deeply authenticating the signer. For implementation details, see <MadCap:xref href="../Features/Features.htm">Features</MadCap:xref>.  (The enhancement will look at the forms in the signing package to determine if any of the forms contain a LexisNexis authentication, and if they do, LexisNexis is called using the contracted firm’s credentials.) </li>
+                </ul>
+                <p><b class="DRNumberBold">Other Actions Menu</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 160021 </b>Other Actions/Documents/Document Type list &#160;– In FireLight, added "Custodian Paperwork" document type to the Other Actions menu/Documents/Document Type list.</li>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/158126-Design-PrintIndividualFormsfromLockedApplication.pdf" target="_blank" title="Design document" alt="Design document">CMR 158126</a><![CDATA[  ]]></b> Print individual forms from a locked application &#160;– Added the ability to print individual forms from a locked application. In FireLight Admin on the Profiles/Groups page, added a new Enable Print Individual Forms checkbox on the App tab. Select the checkbox to enable the individual checkboxes on the Select Documents to Print dialog that appears when the user clicks the Display/Print PDF button after an application has been locked in FireLight. NOTE: In Groups, you cannot select the Disable Display/Print PDF and the Enable Print Individual Forms checkboxes for the same role code.  </li>
+                </ul>
+                <p><b class="DRNumberBold">Redtail Integration</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/155962-RedtailIntegration-DesignApproach.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 155962</a></b>Update Redtail to use credentials from the application data &#160;– Modified the Redtail provider to get user credentials from a data item within the application. This allows the organization to create a form that captures the credentials and enable a Redtail integration from individual user accounts. DataItems FLI_REDTAIL_USERNAME and FLI_REDTAIL_PASSWORD can be used to store credentials for the Redtail, instead of organization config settings.   You need both password and username in dataitems before it uses the dataitems, and these dataitems will override any config username/password.</li>
+                    <li><b class="DRnumber">CMR 159928 </b>Additional Fields Needed For Redtail &#160;– Made changes in FireLight to map the following fields provided by Redtail: Job Title, Date Of Birth, Marital Status, Party Type, and SSN.</li>
+                </ul>
+                <p><b class="DRNumberBold">Reports</b> </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 158783 </b>New Activity Reports Needed (AEA) &#160;– Added the DTI Detailed Submission Report, FireLight Detailed Submission Report by Channel and the FireLight Carrier Submission Summary Report for AEA. See the <MadCap:conditionalText MadCap:conditions="General.PDF">Reports</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../Utilities/Reports/Reports.htm">Reports</MadCap:xref></MadCap:conditionalText> page in Admin Help to view samples of these reports.</li>
+                    <li><b class="DRnumber">CMR 158790 </b>Daily Activity Report changes &#160;– Added an optional Role Code column to the DTI Detailed Submission Report in PDF and Excel formats.  </li>
+                </ul>
+                <p><b class="DRNumberBold">Signature Types</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 159805 </b>Added the following Signature Types for SML – In FireLight Admin, added the following to the Signer Type field property for Signature controls: Grantor, Grantor 2, Translator, Replaced Policy Owner, and Replaced Policy Owner 2.</li>
+                </ul>
+                <p><b class="DRNumberBold">Whitepages.com Integration</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/153534-DesignApproachForWhitePages_v2.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 153534</a></b>  Lincoln Reverse Client Lookup - White Pages  – Added integration with Whitepages.com via an API to pull client data into FireLight. The FireLight client needs to contract directly with Whitepages.com for the service. For FireLight implementation details, see <MadCap:conditionalText MadCap:conditions="General.PDF">Features</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../Features/Features.htm">Features</MadCap:xref></MadCap:conditionalText>.</li>
+                </ul>
+                <h2>Fixed Defects</h2>
+                <ul>
+                    <li><b class="DRnumber">DR 157948 </b> Update ACORD Model to support new 103 details and 116 for Needs Determination. Updated the FireLight ACORD schema with the additions that are available in the Acord 2.34. This has been completed. <MadCap:conditionalText MadCap:conditions="General.Online">See the <a href="../Resources/DesignDocs/Firelight_DataMapping_for_2017-03-03.xlsx" target="_blank" title="FireLight Mapping Spreadsheet" alt="FireLight Mapping Spreadsheet">Firelight_DataMapping_for_2017-03-03.xlsx</a> spreadsheet of complete data elements for 103 and 116 transaction types. Also see <a href="../Resources/DesignDocs/TXLife2.37.00.xsd" target="_blank" title="TXLife2.37.00.xsd" alt="TXLife2.37.00.xsd">TXLife2.37.00.xsd</a>.</MadCap:conditionalText></li>
+                    <li><b class="DRnumber">DR 153060 </b> Calendar picker is not working for date of birth field once you enter date of birth. This has been fixed.</li>
+                    <li><b class="DRnumber">DR 158521 </b> FilterChoices() does not Filter Carriers. The parsed down list of carriers the provider passes back gets ignored in favor of the entire Carrier List for a given distributor. This has been fixed. </li>
+                    <li><b class="DRnumber">DR 159036 </b> FireLight Access - Modify 1228 to populate agent correctly. This has been fixed. </li>
+                    <li><b class="DRnumber">DR 159165 </b> Automatic email with passcode not generating although turned on. This has been fixed. </li>
+                    <li><b class="DRnumber">DR 159296 </b> Issues with Annotations in the client fill and sign process. This has been fixed. Client fill and sign is not available on the Other Actions menu when annotations exist.</li>
+                    <li><b class="DRnumber">DR 159373 </b> Applications that were in progress prior to a forms change are not picking up the deployed changes properly. This has been fixed. </li>
+                    <li><b class="DRnumber">DR 159530 </b> Automated emails regarding expiring links are not pulling in client and agent name correctly. This has been fixed.</li>
+                    <li><b class="DRnumber">DR 159655 </b> CST file upload error. This has been fixed. </li>
+                    <li><b class="DRnumber">DR 159697 </b> Punctuation following URL_LINK in email templates cause the link to not work. This has been fixed.</li>
+                    <li><b class="DRnumber">DR 159804 </b> Review Queue deployment scope not showing all changes. This has been fixed.</li>
+                    <li><b class="DRnumber">DR 160183 </b> Fee repository - Incorrect data or no data returned. This has been fixed. </li>
+                    <li><b class="DRnumber">DR 160439 </b> When an application was locked, checkboxes in Display/Print PDF became uneditable. This has been fixed.</li>
+                    <li><b class="DRnumber">DR 160539 </b> FLT_PRODUCT_CARRIER_NAME ignores Product Organization Name. This has been fixed. </li>
+                    <li><b class="DRnumber">DR 160660 </b> Admin - Include forms in Distributor Package deployment scope. To prevent errors when deploying Distributor Package scope (will occur if the forms in the package do not exist in the destination), included form changes in the deployment scope in FireLight Admin. This has been completed. </li>
+                    <li><b class="DRnumber">DR 160964 </b> Whitepages.com Integration. The Whitepages.com integration was pulling back some, but not all phone numbers. This has been corrected. </li>
+                    <li MadCap:conditions="General.Postpone"><b class="DRnumber">DR 161110 </b> Not receiving correct emails after submitting an App to home office when signing for both Insured and Owner. This has been fixed.</li>
+                    <li><b class="DRnumber">DR 161184 </b> Under Sales Agreement setup, system is not saving assigned package order. This has been fixed. </li>
+                    <li><b class="DRnumber">DR 161326 </b> Email to Signees not being received following Application Submission. This has been fixed. </li>
+                    <li><b class="DRnumber">DR 162283 </b> Expired forms are displayed for non-active applications. This has been fixed.</li>
+                </ul>
+                <p MadCap:conditions="General.Online"><a href="#top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>2.10.0.35 April 7, 2017 Production Release</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <h2>Enhancements</h2>
+                <p><b class="DRNumberBold">Application Statuses</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/137812-DesignApproach-forExtendedApplicationStatus.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 137812</a></b> Extend the available list of statuses that are visible for an application  – Added "Review Status" to the Recent Applications and All Applications views to indicate review status for Approved, Declined, and More Info Requested. Added custom declined text for pop-up notification when entering an application that has been declined within the internal review queue. In the manual review process, the application is unlocked when the reviewer declines, so the review status is not updated to Declined.
+Added additional information to the custom signature step text  for pop-up notifications on whether the agent, client, or both signatures are missing from a locked application.  </li>
+                </ul>
+                <p><b class="DRNumberBold">Client Email Address Mapping</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 153188 </b> Map client email address to client fill, sign, fill and sign and sign in person screens filled out by producer &#160;– In FireLight, mapped the InsuredEmailAddress and PolicyOwnerEmail fields to the client verification screens for client fill, client sign, client fill and sign, sign in person, and email request to sign.</li>
+                </ul>
+                <p><b class="DRNumberBold">Cooperative Technologies 1035 YellowPages Integration</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 157526 </b> Use carrier settings for Cooperative Technologies 1035 integration &#160;– Changed FireLight base to use the carrier (form) organization credentials if not defined in the distributor for Cooperative Technologies 1035 integration. </li>
+                </ul>
+                <p><b class="DRNumberBold">Deployments</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 109486 </b> Admin Deploy: List and display which form fields are being deployed on the Deploy tab &#160;– In FireLight Admin on the right of the Deploy page, added form history links in the totals boxes. Clicking the links opens a Forms History dialog that lists the form changes.</li>
+                    <li><b class="DRnumber">CMR 146347 </b> Schedule Deployment: Ability to see all currently scheduled deployment is needed. &#160;– In FireLight Admin on the upper right of the Deploy page, you can now view a list of all scheduled deployments by clicking the View All Scheduled Deployments link.</li>
+                </ul>
+                <p><b class="DRNumberBold">Emails</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/144135-Design_Approach.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 144135</a></b> Enhance emails to support branding in emails &#160;– Added the ability to support branding with logo and colors in emails by using HTML. An Email Preview of the HTML template is included in the Email Profile page in FireLight Admin. Organizations need to contact their Strategic Account Manager(PM) and send the initial version of their HTML template to their FireLight PM to be loaded by Hexure—very similar to the initial branding setup.  This ensures that the HTML is valid and set up correctly. See the <MadCap:xref href="../Organization Configuration/Email.htm">Email</MadCap:xref> Profile page for a sample HTML template and email preview with logo and color branding added.  </li>
+                </ul>
+                <p><b class="DRNumberBold">Fees, Expenses and Commissions Repository</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 156543 </b> Fee  Repository Enhancements &#160;– In FireLight Admin on the Fees page, added a Delete Files button. In the Download column of the grid, select the checkbox for each file to delete and click the Delete Files button.</li>
+                    <li><b class="DRnumber">CMR 157878 </b> DOL - Limit fee fund range query to product codes within the PPfA &#160;– &#160;In the fees, expenses and commissions repository, enhanced the fund queryfee rule to consider only data items whose product code suffix is defined in the PPfA Lite.</li>
+                    <li><b class="DRnumber">CMR 158149 </b> DOL - Repository changes needed for CST commission schedule ID &amp; type &#160;– In the fees, expenses and commissions repository, modified the CST query to use common tag data items, FLR_Commission_Schedule_Id and FLR_Commission_Schedule_Type, to locate the correct commission data, which must be initialized by the carrier as needed.</li>
+                </ul>
+                <p><b class="DRNumberBold">Generate Link Without Email for Requests</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/146337-FL_Design_Approach_LinkShortener_v2.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 146337</a></b> Access Forms to Sign without Following Link in Email &#160;– &#160;Added support for a workflow that allows a client to access a fill request or the signing ceremony via a FireLight Client Portal.  Clients that do not have access to email for remote signing or client fill requests, can go to this website, enter their application unique ID, authenticate, and then sign or fill.  The advisor needs to provide the shortened website URL and Passcode to the client via phone or text. The workflow supports authentication prior to signing just like the normal FireLight workflow. This enhancement also includes shortened website URL links for external requests sent via email.  </li>
+                </ul>
+                <p><b class="DRNumberBold">Integration</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 157354 </b> Override dataitems provider call is needed for all transaction types &#160;– Removed the check for application transaction type to allow a call into the provider for override data items regardless of the transaction type.</li>
+                </ul>
+                <p><b class="DRNumberBold">Mapping</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber"><a href="file:///C:/Users/jmt0407/Desktop/Technical Writing/FireLight Admin 2.40/Content/Resources/DesignDocs/134976-FL_Design_Approach_Mapping_v5.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 134976</a></b> Admin: Mapping Section Enhancement  – Added the ability for distributors to link two data items together—when one data item changes, the linked data item also changes. This is at the organization level and goes across packages and duty types. Modified the rules engine to allow certain rules to run recursively, where if one rule affects another rule that affects a field, it is run again. The <MadCap:xref href="../Organization Configuration/Mapping.htm">Mapping</MadCap:xref> Profile contains a new DataItem Sync tab for defining linked data items. The <MadCap:xref href="../Utilities/Deployments/Deploy Data.htm">Deployment</MadCap:xref> tab on the Deploy Profile page contains a new Data Item Sync Configuration synchronization scope for deploying the linked data items.</li>
+                </ul>
+                <p><b class="DRNumberBold">Rules</b>
+                </p>
+                <ul>
+                    <li><b class="DRnumber">CMR 146992 </b> Identify data items that are in a rule but not in any forms in the package &#160;– In FireLight Admin, added a new optional "addifnotfound" parameter to the diget rule node, which adds the data item if it does not exist. This can be used when sharing a master rules form across different packages, and some of the defined rules may include control names that may not exist in each package where the master rules form is used. In <MadCap:xref href="../Product Configuration/Rule Sets/AdvancedRulesCategoryElementDefinitionsReference.htm">Advanced Rules Category and Element Definitions Reference</MadCap:xref>, see "Example 3"  under the "|diget" node in "|GetSet" for an example using the new parameter.</li>
+                    <li><b class="DRnumber">CMR 155319 </b> New Rule Node: To act as if button is clicked &#160;– In FireLight Admin, added a new Rule Node, clickcustomaction, that can be used to write a rule to fire a click event of a custom action button. The custom action is called per the properties set for the custom action in the Button control. In <MadCap:xref href="../Product Configuration/Rule Sets/AdvancedRulesCategoryElementDefinitionsReference.htm">Advanced Rules Category and Element Definitions Reference</MadCap:xref>, see "|clickcustomaction" under "|Control" for an example of the rule node.</li>
+                </ul>
+                <h2>Fixed Defects</h2>
+                <ul>
+                    <li><b class="DRnumber">DR 156596 </b> Reminder email contains html and will not send. This has been fixed. </li>
+                    <li><b class="DRnumber">DR 157224 </b> Create an Application Button Fails with Post Issue Forms. This has been fixed. It will now create either an application or whatever single transaction type is set.</li>
+                    <li><b class="DRnumber">DR 157289 </b> Extra spacing in HTML emails. When sending an HTML email, extra line spaces occurred in the HTML version of the email. This has been fixed.</li>
+                    <li><b class="DRnumber">DR 157362 </b> Form field is missing from application. This has been fixed.</li>
+                    <li><b class="DRnumber">DR 157730 </b> FTA - Call() Not getting hit for Post-Issue Service Forms. This has been fixed. Provider is now called in the submit logic to allow normal outbound transmission for all transaction types.</li>
+                    <li><b class="DRnumber">DR 157765 </b> Implement a new SFTP component to support new ciphers. This has been completed. We implemented a new component to handle more ciphers for our outbound SFTP communications from our providers.</li>
+                    <li><b class="DRnumber">DR 157901 </b> Handle CT Integration endpoint difference in Prod vs test. This has been fixed. </li>
+                    <li><b class="DRnumber">DR 158698 </b> Update existing app fails for NewBusinessService call. Updating an existing application was not working. This has been fixed.</li>
+                    <li><b class="DRnumber">DR 158948 </b> DOL - Fee repository not loading fees stored for all organizations. This has been fixed.</li>
+                </ul>
+                <p MadCap:conditions="General.Online"><a href="#top">Return to Top</a>
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

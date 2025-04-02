@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>The functionality for Generate Link Without Email has shown inconsistency across activities. We will adjust the system differences and close the gaps on Generate Link Without Email, so the functionality is consistently available and displaying expected outcomes.</p>
+        <p>This enhancement will provide an option to generate 3rd party link without sending an email when request client to fill and sign is sent. Currently, this option is available when request for client fill and remote sign is sent. By adding this option to Client Fill and Sign screen, producers is able to send custom emails to the clients.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>  FLApp: Other Actions &gt; Request Client to Fill &amp; Sign &gt; Generate Link Without Email (new button)</p>
+            </li>
+        </ul>
+    </body>
+</html>

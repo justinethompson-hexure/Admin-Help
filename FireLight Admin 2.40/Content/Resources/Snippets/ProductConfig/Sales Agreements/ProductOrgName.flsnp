@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>(Optional for Carriers and Distributors) In the <b class="Bold">Product Org Name</b> text box, enter the selling organization name specific to the Sales Agreement. The name entered here is listed in the Carrier dropdown on the Create New Activity page and it is listed as the selling
+organization beside the product name on the product selection list. This value is prioritized over the Product Organization Name value entered on the Products page. When a user clicks the Manage Sales Agreement button, and the selected sales agreement is copied to
+other selling organizations, the value from Product Organization Name will not be copied to the other
+selling organizations. The Admin user can set the Product Organization Name individually for each of the
+selling organizations for a product.</body>
+</html>

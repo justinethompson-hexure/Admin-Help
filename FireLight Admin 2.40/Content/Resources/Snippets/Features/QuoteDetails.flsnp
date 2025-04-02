@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p>Add the Rules, Configuration and Risk Class Mappings.</p>
+        <p>
+            <b class="Bold">NOTE:</b> The Life Quote Details link only appears when you have focus on a Term Life product in the product repository grid.</p>
+        <ol>
+            <li>Select a Term Life product in the grid at the top of the Product Repository page. On the upper right, click the <b class="Bold">Life Quote Details</b> link to open the Quote Details dialog.</li>
+            <li>On the <b class="Bold">Rates</b> tab, view the Name and Start Date of the product rate files.</li>
+        </ol>
+        <p>Add the Rules:</p>
+        <ol>
+            <li>On the upper right, click the <b class="Bold">Life Quote Details</b> link to open the Quote Details dialog.</li>
+            <li>Click the <b class="Bold">Rules</b> tab.</li>
+            <li>On the lower right click the <b class="Bold">Browse</b> or <b class="Bold">Choose File</b> button (depending on the web browser) to open a dialog, click <b class="Bold">Quote Product Rules Upload Template.xlsm</b> (or whatever you named your rules template file) and click <b class="Bold">Open</b>.</li>
+            <li>On the upper right of the <b class="Bold">Rules</b> tab, click the <b class="Bold">Upload</b> button.</li>
+            <li>Review the rules for accuracy. Pause the mouse over the <b class="Bold">Show</b> option in the <b class="Bold">Jurisdictions</b> and <b class="Bold">Table Ratings</b> columns to review the list of options.</li>
+            <li>Update rules: you must replace all of the rules with a new rules file. On the network or PC, locate and open the <b class="Bold">Quote Product Rules Upload Template.xlsm</b> (or whatever you named your rules template file), make the required changes and save the file. On the <b class="Bold">Rules</b> tab, click the <b class="Bold">Browse</b> or <b class="Bold">Choose File</b> button (depending on the web browser) to open a dialog, select the rules file and click <b class="Bold">Open</b>. Click <b class="Bold">Upload</b> to upload it again. Review the rules for accuracy.</li>
+        </ol>
+        <p>Add Configuration:</p>
+        <ol>
+            <li>In the Quote Details dialog, click the <b class="Bold">Configuration</b> tab and enter the following information for the product.</li>
+            <li>Enter the <b class="Bold">Monthly</b>, <b class="Bold">Quarterly</b>, <b class="Bold">Semi-Annual</b> and <b class="Bold">Annual Modal Factor</b>.</li>
+            <li>Enter the <b class="Bold">Annual Policy Fee</b>.</li>
+            <li>Select the <b class="Bold">Age Calculation</b> method for the product. Valid options are: Last, Nearest and Next. This is used to calculate issue age for the quotes.</li>
+            <li>Click <b class="Bold">Save</b>.</li>
+        </ol>
+        <p>Add Mapping:</p>
+        <ol>
+            <li>In the Quote Details dialog, click the <b class="Bold">Mapping</b> tab.</li>
+            <li>
+                <p> In the <b class="Bold">Risk Class Mapping</b> column, enter the names of the actual product risk class names that map to the default FireLight risk classes. These mapped product risk class names will display on the Quote page and Proposal PDF.</p>
+                <p>
+                    <b class="Bold">NOTE: </b> Risk class mappings are optional. They default to the standard FireLight risk classes if not added.</p>
+            </li>
+            <li>Click <b class="Bold">Save</b> and close the Quote Details dialog.</li>
+        </ol>
+    </body>
+</html>

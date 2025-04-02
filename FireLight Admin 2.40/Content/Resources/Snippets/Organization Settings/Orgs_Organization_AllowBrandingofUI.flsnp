@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Allow Branding of UI</b> checkbox to allow the organization to change their UI branding. The vendor must first enable UI branding for the organization. Select the <a href="../../../Organization Configuration/Groups/Admin.htm#EnableChangeUIBranding">Enable Change UI Branding</a> checkbox in Organization Configuration on the Groups page, Admin tab.</body>
+</html>

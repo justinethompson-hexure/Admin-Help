@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1><a name="top"></a>External Integrations</h1>
+        <p>On the navigation bar, click <b class="Bold">Organization Config &gt; Organization Settings</b> and click <b class="Bold">External Integrations</b> to go to the External Integrations page. </p>
+        <p>Use the External Integrations page to set up, edit, update, or delete illustration services external integrations. </p>
+        <p>This integration exposes the FireLight Illustration SDK to support connection to FireLight Illustrations so that anyone providing an illustration functionality can integrate with the Hexure platform. This is done by creating REST APIs to help carriers wrap their engines, provide self-service tools exposing a variety of ways to hook their engines into the platform, or include capabilities to leverage existing engines as-is.</p>
+        <h2>Guidelines</h2>
+        <p><b class="Bold">NOTE:</b> For more information, see the <a href="../../Resources/DesignDocs/263822_Illustration Integrations APIs (SDK).pdf" target="_blank" title="Design Document" alt="Design Document">Illustration Integrations APIs (SDK)</a> design document.</p>
+        <h3>API Authentication</h3>
+        <ul>
+            <li>
+                <p>The desired IllustServices API endpoint version has been determined based on the product's configuration data.</p>
+            </li>
+            <li>
+                <p>The version 0 and version 1 API model classes are defined separately. (Day 1 is set for version 1).</p>
+            </li>
+            <li>
+                <p>The correct model classes are used for the IllustServices API that is getting called.</p>
+            </li>
+            <li>
+                <p>Current illustrations run as expected.</p>
+            </li>
+            <li>
+                <p>Version 0 implementations do not have a standardized Health endpoint. All existing IllustServices API configurations is configured as version 0.</p>
+            </li>
+            <li>
+                <p>Version 1 implementations do have the Health endpoint defined. If the desired IllustServices API that is getting called implements version 1 of the API, then the Health endpoint is used to determine if the IllustServices API endpoint is operational and available for illustrations. The health of the IllustServices API endpoint can be determined by calling the Health endpoint and getting a "healthy" response. Applications that implement the Health endpoint but respond with a non-successful HTTP status code, or return an "unhealthy" response, are excluded from illustration. The {Base URL}/Health GET operation returns a 200 status code and relevant health data in a response. The {Base URL}/Health GET operation returns a 500 status code if an exception is generated, and a relevant error response is generated.</p>
+            </li>
+        </ul>
+        <h3>HMAC Authentication</h3>
+        <ul>
+            <li>
+                <p>HMAC Authentication Documentation Content can be found here: <a href="https://isapisdkncusa.z14.web.core.windows.net/docs/" target="_blank" title="IS-API SDK Documentation Site | IllustServices API SDK (windows.net)" alt="IS-API SDK Documentation Site | IllustServices API SDK (windows.net)">IS-API SDK Documentation Site | IllustServices API SDK (windows.net)</a></p>
+            </li>
+            <li>
+                <p>Code Generator Template for HMAC: Testing requires the OAG server stub to be generated and configured to use HMAC. </p>
+                <p>The FireLight user can use the OAG server stub application with HMAC as an authentication method.</p>
+                <p>(Create application that uses the HMAC authentication.)</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Service Name: OAG Stub IS-API – HMAC</p>
+                    </li>
+                    <li>
+                        <p>Base URL: https://isapi-hmac-test-api.azurewebsites.net</p>
+                    </li>
+                    <li>
+                        <p>Version: 1.0</p>
+                    </li>
+                    <li>
+                        <p>Authentication: HMAC</p>
+                    </li>
+                    <li>
+                        <p>Key Value = my-secret-value</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Add a New Illustration Service</h2>
+        <p><b class="Bold">NOTE:</b> Information in the Illustration Services table is not included in deployments for Organization Sync Scope.</p>
+        <p>Different environments can have different Illustration Service configuration data for the same Illustration Service.</p>
+        <p>Admin users need to configure the Illustration Service applications in each of the various environments separately. The Illustration Service configuration data is not transferred from one environment to another during a release.</p>
+        <p>The name of the Illustration Service must be the same in all environments, but the URL, Authentication type, and Key Value properties can be different environments.</p>
+        <ol>
+            <li>
+                <p> Below the Illustration Services table, click the <b class="Bold">Add New Illustration Service</b> link to open the Service Name Configuration dialog. </p>
+            </li>
+            <li>
+                <p> In the text boxes, enter the <b class="Bold">Service Name</b>, <b class="Bold">Base URL</b>, and <b class="Bold">Key Value</b>.</p>
+            </li>
+            <li>
+                <p>In the lists, select the <b class="Bold">Version</b> and type of <b class="Bold">Authentication</b> (None, API Key, HMAC).</p>
+            </li>
+            <li>
+                <p>Click the <b class="Bold">Save Endpoint</b> button.</p>
+            </li>
+            <li>
+                <p>Click the <b class="Bold">Test Endpoint</b> button to test the endpoint. This returns the JSON results to let the user know if the set-up is "Healthy" or “Unhealthy” which would receive a response such as : HTTP: 401 or HTTP: 500. </p>
+                <p MadCap:conditions="General.Online">Following is a sample Illustration Service using API authentication with a Healthy" endpoint test and valid HTTP 200.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/Capture267.png" alt="Service Name Configuration Dialog" title="Service Name Configuration Dialog" MadCap:conditions="General.Online" />
+                </p>
+                <p MadCap:conditions="General.Online">Following is a sample Illustration Service using authentication with an "Unhealthy" endpoint test and invalid HTTP 500.</p>
+                <p MadCap:conditions="General.Online">
+                    <img src="../../Resources/ImagesAdmin/Capture268.png" alt="Service Name Configuration Dialog - Unhealthy Endpoint Test" title="Service Name Configuration Dialog - Unhealthy Endpoint Test" MadCap:conditions="General.Online" />
+                </p>
+            </li>
+        </ol>
+        <h2>Delete or Update an Existing Service Name Configuration</h2>
+        <p>
+            <img src="../../Resources/ImagesAdmin/Capture269.png" alt="" title="" />
+        </p>
+        <p>Delete:</p>
+        <p class="Indent">In the Illustration Services table, click the red “<b class="Bold" style="color: #ff0000;">X</b>” on the right of the row for the corresponding service <strong>Name</strong> to delete the service.</p>
+        <p>Update:</p>
+        <ol>
+            <li>
+                <p>In the <strong>Illustration Services</strong> table, click the service <strong>Name</strong> link.</p>
+            </li>
+            <li>
+                <p>In the <strong>Service Name Configuration</strong>  dialog, make changes to the service and click the <strong>Save Endpoint</strong> button to save the changes.</p>
+            </li>
+            <li>
+                <p>(Optional) Click the <strong>Test Endpoint</strong> button to test the endpoint and verify whether the endpoint is Healthy or Unhealthy.</p>
+            </li>
+            <li>
+                <p>Click the <strong>X</strong> on the upper right of the <strong>Service Name Configuration</strong>  dialog to close the dialog.</p>
+            </li>
+        </ol>
+        <p MadCap:conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

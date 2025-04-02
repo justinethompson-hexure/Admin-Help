@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight v2.35 Release History</h1>
+        <h2>May 2024 Release—5/30/2024 Production</h2>
+        <h2>New Functionality</h2>
+        <p><b style="font-size: 14pt;">Remove Ability to Manage Attachments When Application Is in Post-Submit Review: DIST-2663</b>
+        </p>
+        <p>With this enhancement, an agent will not be able to add or remove documents to an activity once it is sent to post-submit review. Because the activity is already signed when sent for post-submit review, agent should not be allowed to add/remove documents to/from it.</p>
+        <p>Organizations can enable this feature from the group settings in the Admin tool based on their workflow.</p>
+        <p><span style="font-size: 12pt; font-style: italic; font-weight: bold; color: #000000;">Impact</span>
+        </p>
+        <ul>
+            <li>
+                <p>Admin: Add new group setting to enable the feature to enforce product availability alert - FL Admin &gt; Organization Config &gt; Groups &gt; App (tab) &gt; Submit (section) &gt; “Disallow Document Upload After Submission” (check box)</p>
+            </li>
+            <li>
+                <p>App: Upload/Remove of documents will not be available to the agent if the application is sent to post-submit review.</p>
+            </li>
+        </ul>
+        <p><span style="font-size: 14pt; font-weight: bold;">Modify Sales Agreement Report to Display Enabled as of Today: DIST-3030</span>
+        </p>
+        <p>With this enhancement admin users can generate list of Sales Agreements enabled for any selling organization as of current date. The filter for existing Sales Agreement Admin report will be modified.</p>
+        <p><b style="font-style: italic; font-size: 12pt; color: #000000;">Impact</b>
+        </p>
+        <p>Admin Report “Sales Agreement Report” will be modified for both PDF and CSV formats - FL Admin &gt; Utilities &gt; Reports.</p>
+        <p><span style="font-size: 14pt; font-weight: bold;">Modify Admin Report - Package Forms Report: DIST-3026</span>
+        </p>
+        <p>With this enhancement, the existing admin report “Package Forms Report” will also display the below additional information.</p>
+        <ol>
+            <li>
+                <p>Duty type selected for the form/wizard in the package</p>
+            </li>
+            <li>
+                <p>Number of copies selected for the form in the package</p>
+            </li>
+            <li>
+                <p>Effective start and end dates for the form</p>
+            </li>
+        </ol>
+        <p>Along with above information, the order of the form listed in the report will be kept the same as the order set into the package.</p>
+        <p><b style="font-style: italic; font-size: 12pt;">Impact</b>
+        </p>
+        <p>Admin Report “Package Forms Report” will be modified for both PDF and CSV formats - FL Admin &gt; Utilities &gt; Reports.</p>
+        <p><span style="font-size: 14pt; font-weight: bold;">Ability to Copy Fields from Wizard: DIST-2597</span>
+        </p>
+        <p>With this enhancement, admin user will be able to copy fields from a source wizard to destination wizard. Currently, fields from an existing form can be copied to a wizard. This enhancement will extend that same functionality to copy fields from a wizard.</p>
+        <p><b style="font-style: italic; font-size: 12pt;">Impact</b>
+        </p>
+        <p>FL Admin &gt; Designer &gt; Wizard Designer &gt; Copy Wizard Fields (new link under Page Options)</p>
+        <p><b style="font-size: 14pt;">Modify Package Rules Reports to Include Effective Dates: DIST-3194</b>
+        </p>
+        <p>With this enhancement, the existing admin report “Package Rules Report” will also display effective start and end dates of the rules sets listed under the package(s).</p>
+        <p><b style="font-style: italic; font-size: 12pt;">Impact</b>
+        </p>
+        <p>Admin Report “Package Rules Report” will be modified for both PDF and CSV formats - FL Admin &gt; Utilities &gt; Reports.</p>
+        <p><b style="font-size: 14pt;">Audit and Display History for Organization Settings in Admin Tool: DIST-3328</b>
+        </p>
+        <p>With this enhancement, FireLight will now audit Organization Settings data in the admin tool. Edits made to any of the fields on existing tabs will be recorded and displayed on History tab.</p>
+        <p>A new admin report to list organization setting history will be available under Admin History Reports.</p>
+        <p>Organization and group settings data will be included as a part of the purge process.</p>
+        <p><b style="font-style: italic; font-size: 12pt;">Impact</b>
+        </p>
+        <ul>
+            <li>
+                <p>A new tab will be added to display the history of changes made.</p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>FL Admin &gt; Organization Settings &gt; History (new tab).</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>	A new admin report to org settings history will be added to:</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>FL Admin &gt; Utilities &gt; Reports &gt; Admin History Report &gt; Organization Settings History (new report)</p>
+            </li>
+        </ul>
+        <p>•	Organization and group settings history data will be purged based on admin data purge policy.</p>
+        <p><span style="font-size: 14pt; font-style: normal; font-weight: bold;">Allow to Bold Label for Text Box Control on Wizard: DIST-3109</span>
+        </p>
+        <p>With this enhancement, users can bold the labels for text box controls on a wizard.</p>
+        <p><b style="font-style: italic; font-size: 12pt;">Impact</b>
+        </p>
+        <p>Add a new field property “Make Label Bold” to the text box control on the wizard designer.</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>FL Admin &gt; Designer &gt; Wizard Designer</p>
+            </li>
+        </ul>
+        <p><b style="font-size: 14pt;">Validate Search Items in Emails If Blank or Null: DIST-3238</b>
+        </p>
+        <p>Currently, if search items used in an email template have a blank or null value, they are not replaced in the emails sent to the users. This exposes the search items in the emails sent to users. With this enhancement, the search items will be tackled to not be included in the emails if they have blank or null values while email is sent.</p>
+        <p><b style="font-style: italic; font-size: 12pt;">Impact</b>
+        </p>
+        <p>Below area will be impacted by this feature:</p>
+        <ul>
+            <li>
+                <p>FL Admin &gt; Organization Config &gt; Email</p>
+            </li>
+        </ul>
+        <p><b style="font-size: 14pt; font-style: normal;">Maintain Producer Profile Section When Changing any Product Filters: CR-2133 &amp; CR-2485</b>
+        </p>
+        <p>This enhancement keeps the Product Profile section static when user changes Jurisdiction or Product Type or Carrier or Locale or Override Date in Product Selection Page when SuranceBay Integration is enabled.</p>
+        <p><b style="font-style: italic; font-size: 12pt;">Impact</b>
+        </p>
+        <p>User will have a better user experience when changing any product filters, because the Producer Profile from SuranceBay will remain static regardless changes in the Jurisdiction, Product Type, Carrier, Locale, or Override Date.</p>
+        <p><b style="font-size: 14pt; font-style: normal;">Add Indexed Universal Life for a Product Type: PC-2468</b>
+        </p>
+        <p>This enhancement adds the Indexed Universal Life product type in the product details section of the administration tool so that carriers setting up new products have the ability to designate a product as Indexed Universal Life.</p>
+        <p><b style="font-style: italic; font-size: 12pt;">Impact</b>
+        </p>
+        <p>Products can be identified as Indexed Universal Life allowing IUL products to be distinguished from other Life Product types.</p>
+        <h2>Resolved Issues</h2>
+        <p><b style="font-size: 14pt;">Click Custom Action Call Enhancement Is Not Working as Expected for GIACT Services: CR-1075</b>
+        </p>
+        <p>We resolved an issue where when creating an application with any GIACT fields and entering data, that data did not appear in GIACT Results. GIACT Results now display as designed.</p>
+        <p><b style="font-size: 14pt;">Date of Birth Value Returned in the Red Tail Integration Is Incorrect in Certain Circumstances: CR-2746</b>
+        </p>
+        <p>We updated the conversion of the JSON formatted date of birth to correctly convert the date of birth regardless of the time zone.</p>
+        <p><b style="font-size: 14pt;">Disallow Add/Remove of Documents for Activities in Post Submit Review: DIST-2664</b>
+        </p>
+        <p>When the group setting Disallow Document Upload After Submission is checked, once the application is sent for Post-Submit Review, the user (agent) will not be able to add/remove documents to the app. When the setting is checked, the agent is not allowed to remove or upload a document to the activity once sent to post submit review. When the group setting is unchecked, agent is allowed to upload and remove document(s) to the activity once sent to post submit review.</p>
+        <p><b style="font-size: 14pt;">Error in PendingPurge Activity Report: DIST-2772</b>
+        </p>
+        <p>We resolved an issue where a daily exception occurred for the Pending Purge activity report. The Pending Purge activity report is now issued without an exception as designed.</p>
+        <p><b style="font-size: 14pt;">Assign IDs to Missing UI Elements on Both MVC and React Interfaces: DIST-2972 and DIST-3034</b>
+        </p>
+        <p>We resolved an issue where the MVC and React user interfaces were missing elements by assigning IDs to these elements. These user interfaces now contain all elements as designed.</p>
+        <p><b style="font-size: 14pt;">Multiple Horizontal Scroll Bars Show When Copying Fields from Wizard: DIST-2979</b>
+        </p>
+        <p>We resolved an issue where in the Wizard Designer selecting Copy Wizard Fields resulted in three horizontal scroll bars appearing at the bottom of the Copy Fields from Wizard dialog. Now only a single horizontal scroll bar appears on the dialog.</p>
+        <p><b style="font-size: 14pt;">Page Filter Not Working When Copying Fields from Wizard: DIST-2980</b>
+        </p>
+        <p>We resolved an issue where in the Wizard Designer when copying fields the page filter functionality failed to work. Now the page filter functionality works as designed.</p>
+        <p><b style="font-size: 14pt;">Error in DTIDataItemDetailReport Report: DIST-3122</b>
+        </p>
+        <p>We resolved an issue where a daily exception occurred for the DTI Item Detail report. The DTI Item Detail report is now issued without an exception as designed.</p>
+        <p><b style="font-size: 14pt;">Organization Settings Changes Should Be Audited – Now: DIST-3123</b>
+        </p>
+        <p>We resolved an issue where admin users were not able to audit Organization Settings updates by implementing a new History tab on the Organization Settings page that displays changes, including username changes, data changes, and old and new values.</p>
+        <p><b style="font-size: 14pt;">Convert Detail Activity Display Status to Detailed Report from Custom Report: DIST-3130</b>
+        </p>
+        <p>We resolved an issue where the Detail Activity Display Status report was categorized as a custom report, preventing admin users from scheduling it on their own without assistance from Hexure support. The report is now categorized as a detailed report, making it available to admin users for scheduling.</p>
+        <p><b style="font-size: 14pt;">When Copying Fields from One Wizard to Another in the Administration Tool the Operation Is Not Working as Expected, Leading to an Error When Loading the Wizard: DIST-3352</b>
+        </p>
+        <p>We updated the logic for copying fields from one Wizard to another to ensure the copy is completed without errors.</p>
+        <p><span style="font-size: 14pt; font-weight: bold;">E-Sign React - Change in Element for “Recipient(s) Email link”: DIST-3415</span>
+        </p>
+        <p>We resolved an issue where in React E-Sign the Recipient(s) Email link was and incorrect and appeared incorrectly. The link now works and appears as intended.</p>
+        <p><b style="font-size: 14pt;">Admin Reports: Illustration User Detail Report Does Not Generate as Expected in PDF and CSV Format. An Error is Presented: DIST-3436</b>
+        </p>
+        <p>We corrected a processing error that was causing the Illustration User Detail Report to not  generate.  The report will now generate as expected when requesting PDF or CSV format.</p>
+        <p><span style="font-size: 14pt; font-weight: bold;">Enrollment Activity – Unable to Delete Enrollment Activity as Expected Using the Delete Button: DIST-3522</span>
+        </p>
+        <p>We corrected the order of operations in the delete activity functionality to ensure that delete is working properly for Enrollment Activities.</p>
+        <p><b style="font-size: 14pt;">Client Signed Report: Duplicate Entry Is Showing for Owner Signer: DIST-3227</b>
+        </p>
+        <p>We resolved an issue where the Client Signed Report displayed duplicate entries when an application had two or more signers. The report is no longer displaying duplicate entries.</p>
+        <p><b style="font-size: 14pt;">Organization Settings Changes Should Be Audited – Next: DIST-3229</b>
+        </p>
+        <p>We added an enhancement to allow Organization Settings changes to be audited. The new History tab in Organization Settings displays changes to the Security, External Integration, and Admin tabs, including username, data changes, and old and new values.</p>
+        <p><b style="font-size: 14pt;">Validation of Sales Agreement for In-Flight Apps Is Not Considering Override Date: DIST-3231</b>
+        </p>
+        <p>We resolved an issue where applications created using the Override Data feature resulted in product availability alerts, making those applications read-only. Now, users can create applications with products that have a future date as the effective date and still do data entry and additional steps on the application.</p>
+        <p><b style="font-size: 14pt;">Organization Settings History Audit: Admin Report: DIST-3239</b>
+        </p>
+        <p>We added a new report, Org Settings History Audit Report, to display the history of changes to Org Settings page between a specified data range.</p>
+        <p><b style="font-size: 14pt;">Purge Organization Settings History Data: DIST-3240</b>
+        </p>
+        <p>We added the ability to purge historical Org Settings and Group Settings data per organization purge policy.</p>
+        <p><b style="font-size: 14pt;">Increase Column Size in ActivityReportHistory Table (OldValue/NewValue Column): DIST-3248</b>
+        </p>
+        <p>We resolved an issue where the column size in the ActivityReport was insufficient, resulting in truncated key parameter values. By increasing the column size, key parameters and the values entered for them are now saved correctly and appear on-screen as they were entered.</p>
+        <p><b style="font-size: 14pt;">Admin Reports: Sale Agreement Report Is not Produced as Expected When Using “As Of Today” Option: DIST-3421</b>
+        </p>
+        <p>The Sale Agreement Report was updated to support “As Of Today” option. The report is now being generated as expected when “As of Today” is checked.</p>
+        <p><b style="font-size: 14pt;">Organization Not Receiving Print or Download Emails When Using Use Agent Email Settings: DIST-3327</b>
+        </p>
+        <p>When group setting "Enable Agent Email" is used, Agent email (from Preferences) will be used as the "From" address for "Print or Download you application" and "Application Completed" emails. When this group setting is unchecked, Organization email (from Org Settings) will be used as the "From" address for "Print or Download you application" and "Application Completed" emails.</p>
+        <p><b style="font-size: 14pt;">Remove the “Remove” Option from “Client Fill &amp; Sign” Screen for Multiple Signers: EAES-1695</b>
+        </p>
+        <p>We resolved an issue where the Remove option was available on the Client Fill &amp; Sign screen, allowing signers to be removed during this step. The Remove option has now been removed.</p>
+        <p><span style="font-size: 14pt; font-weight: bold;">Change in Behavior of Review Queue Document List: EAES-3848</span>
+        </p>
+        <p>We resolved an issue where documents displayed incorrectly in the Review Queue Document list. Documents now appear as designed.</p>
+        <p><span style="font-weight: bold; font-size: 14pt;">When Declining eSignature If No Name Is Input on the Signature Capture Screen the Declined Email Is Sent with an Empty Client Name: EAES-4114</span>
+        </p>
+        <p>We updated the system to utilize the Interested Party name when no name is present on the Signature Capture Screen.</p>
+        <p><b style="font-size: 14pt;">In Some Circumstances, with Multiple Reviewers an Error Is Generated When the Reviewer Tries to Approve the Application</b>
+        </p>
+        <p>We resolved an issue related to review queue and multiple reviewers where an error was generated when the reviewer approved the application. This now works as designed.</p>
+        <p><b style="font-size: 14pt;">Refactor Code for Delete Functionality: EAES-2670</b>
+        </p>
+        <p>We enhanced the Visualization feature so that its processes run more efficiently by refactoring the code, providing a more seamless user experience.</p>
+        <p><b style="font-size: 14pt;">Client Exception Setting Form Background Image During Embedded Data Entry: EAES-3097</b>
+        </p>
+        <p>We resolved an issue where exceptions occurred during embedded data entry. Embedded data can now be entered as designed.</p>
+        <p><b style="font-size: 14pt;">Make Undefined User Group Logic More Forgiving: EAES-3199</b>
+        </p>
+        <p>We improved the logic for determining user permissions to make it more consistent. For external authentication (design, client fill, fill and sign request, concierge user workflows, etc.), always utilize the permissions of the EXTERNAL role code/group if defined, or fall back to the owning agent's role code/group permissions. For SSO and direct logins with no role code or an invalid role code (or external logins with no EXTERNAL group defined), use the DEFAULT role code/group if defined. This may result in changes to current system behavior.</p>
+        <p><b style="font-size: 14pt;">Refactor Product Availability Webservice to Be Unit Testable: EAES-3219</b>
+        </p>
+        <p>We refactored code to extract logic, allowing for more expansive unit testing. No changes were made to the functionality of the product availability web service.</p>
+        <p><span style="font-size: 14pt; font-weight: bold;">After 'Pre Sign Review' Auto Submitted by 'FLI_REVIEW_AUTO_SUBMIT' then Passcode Email Not Receiving for Reviewer: EAES-3973</span>
+        </p>
+        <p>We received an issue where when auto-submitting the pre-signature review queue, reviewers were not receiving the reviewer link email and passcode email. Now these emails are being sent as intended.</p>
+        <p><span style="font-size: 14pt; font-weight: bold;">Reviewer Approving Application Causes Crash Because No Signature Image Is Being Sent: EAES-4128</span>
+        </p>
+        <p>We resolved an issue where application approval was unsuccessful due to lack of signature image. Application approval now succeeds as designed.</p>
+        <p><b style="font-size: 14pt;">When Only EXTERNAL Role Code Is There, Then 'Activity Access' Enabled Activities Not Showing in App Side: EAES-4226</b>
+        </p>
+        <p>We resolved an issue where enabled activity types, including Application and Account Opening, failed to appear on the app side when an agent role code was invalid or blank or the default role code was unavailable. Enabled activity types now appear as expected.</p>
+        <p><b style="font-size: 14pt;">Expired Product Popup Message Is Not Always Displaying the Text Customized for the Organization: DIST-3232</b>
+        </p>
+        <p>We resolved an issue where the product availability alert message was not being customized for organizations. The message is now being customized as designed.</p>
+        <p><b style="font-size: 14pt;">Getting Client Initials Text in '&lt;CLIENT_NAME&gt;' in Status Update Email: DIST-3332</b>
+        </p>
+        <p>We resolved an issue where client names were replaced by initials in status update emails. Full client names now appear in these emails as expected.</p>
+        <p><b style="font-size: 14pt;">Other Actions Menu behind Other UI Components: EAES-2923</b>
+        </p>
+        <p>We resolved an issue where when creating a new application the Other Actions menu was obscured by other screen elements. The menu now displays as designed.</p>
+        <p><b style="font-size: 14pt;">Timestamp Error When Landing on Signature Screen after Signer Data Entry and Initials: EAES-3344</b>
+        </p>
+        <p>We resolved an issue in FireLight where after selecting E-Signature then Sign Now then entering signer data then clicking Document Acknowledgement a timestamp error is received. The functionality is now working as designed.</p>
+        <p><b style="font-size: 14pt;">LexisNexis Questionnaire Window Header Not Showing for REACT E-Signature: EAES-3350</b>
+        </p>
+        <p>We resolved an issue in FireLight where the Lexis Nexis Questionnaire header did not appear. The header is now displaying as intended.</p>
+        <p><b style="font-size: 14pt;">For Newly Created Package (First Time) Package 'Begins Date' and 'Ends Date' and Time Zone Gets Blank Again after Package Saved: EAES-3384</b>
+        </p>
+        <p>We resolved an issue in FireLight Admin where after saving a new package the Begins Date, Ends Data, and Time Zone fields were blank. Now after saving a package these fields display data as designed.</p>
+        <p><b style="font-size: 14pt;">Data Entry Met Popup on Forms Only App Does Not Trigger when Required Field Is Filled after Updating 'FLI_DECLINED_ESIGN' Flag to True: EAES-3534</b>
+        </p>
+        <p>We resolved an issue where when creating a new application and entering all required data the data entry met popup message failed to appear. Now when all required data for a new application is entered the popup message appears as designed.</p>
+        <p><b style="font-size: 14pt;">Refactor for Print Only Parameters: EAES-3565</b>
+        </p>
+        <p>We removed unnecessary code for print-only parameters as they are now being correctly stored with application documents and not pulled from the form library after lock-down.</p>
+        <p><span style="font-size: 14pt; font-weight: bold;">Generated Passcode Is Showing for React Signatures When Using SMS Passcode Validation: EAES-3580</span>
+        </p>
+        <p>We resolved an issue where when creating a React or MVC application including SMS validation for the signer, the generated passcode was displaying. Now the passcode is obscured as designed.</p>
+        <p><b style="font-size: 14pt;">Applications Having Case Access Property with a String Value 'Null': EAES-3603</b>
+        </p>
+        <p>We resolved an issue where in some applications the FLI_CASE_ACCESS data item has a string value of null instead of empty. The string value is now empty instead of null.</p>
+        <p><b style="font-size: 14pt;">Exception Occurring When Sending a Reminder Prevents All Reminders for that Organization from Being Sent: EAES-3672</b>
+        </p>
+        <p>We resolved an issue where sending a reminder to an organization resulted in an exception that prevented all reminders to that organization from being sent. Now reminders are sent as designed.</p>
+        <p><b style="font-size: 14pt;">MVC UI: Visibility Time for Popup "Finished 2 of 3 Steps. Please Continue" Is Reduced Due to which Automation Script Is Failing: EAES-3676</b>
+        </p>
+        <p>We resolved an issue where when creating a new application the “Finished 2 of 3 Steps. Please Continue.” appeared for an insufficient period of time. The popup now displays for the requisite 10 seconds.</p>
+        <p><b style="font-size: 14pt;">Agent's Role Code Setting Not Working for External Signing (Default &amp; External Role Code Not Available): EAES-3677</b>
+        </p>
+        <p>We resolved an issue where when a user created an application and sent a request for external signing, the Disable Signing Until All Pages Viewed and Require Signature Capture settings were not working. These settings are now working as designed.</p>
+        <p><b style="font-size: 14pt;">DEFAULT Role Code Setting Not Working for External Signing (When Agent Role Code Is Invalid &amp; External Role Code Not Available): EAES-3678</b>
+        </p>
+        <p>We resolved an issue where when a user created an application and sent a request for external signing, the Disable Signing Until All Pages Viewed and Require Signature Capture settings were not working. These settings are now working as designed.</p>
+        <p><span style="font-weight: bold; font-size: 14pt;">Pending Request Dialog Box Does Not Auto Reload after Canceling One of the Requests: EAES-3693</span>
+        </p>
+        <p>We resolved an issue where if there was more than one pending request, canceling any pending request resulted in the Pending Request dialog failing to auto-reload. Now the Pending Request dialog auto-reloads after canceling any pending request.</p>
+        <p><span style="font-weight: bold; font-size: 14pt;">Require Signature Capture Group Option Was Not Enforced for External Signer: EAES-3715</span>
+        </p>
+        <p>As a follow up to 31348, what options are available to REQUIRE the customer actually sign their name versus using the overwrite options of seeing only the block text? From the beginning of our use of the system, we have always REQUIRED the actual signatures and for some reason we are now receiving some applications with the block typed name as the signature.</p>
+        <p><span style="font-size: 12pt;"><span style="font-size: 14pt;font-weight: bold;"><span style="font-size: 14pt;">E</span></span></span><b style="font-size: 12pt;"><span style="font-size: 14pt;font-weight: bold;"><span style="font-size: 14pt;">-</span></span><span style="font-size: 14pt;">delivery Outstanding Requests Resend Pulls the Password Email and Not the Request Email: EAES-3740</span></b>
+        </p>
+        <p>We resolved an issue where clicking “Send Reminder” was launching the Passcode dialog message instead of the Send Reminder email message. Now clicking Send Reminder launches the Send Reminder email message, as designed.</p>
+        <p><b style="font-size: 14pt;">Wizards Also Showing in Display/Print PDF Dialog with Forms: EAES-3743</b>
+        </p>
+        <p>We resolved an issue where wizards inadvertently appeared in the Display Print PDF list.</p>
+        <p><b style="font-size: 14pt;">When Linked Activity Product Not Found, Then on Create Activity Popup, Wrong Override Date Stamp Showing on It: EAES-3803</b>
+        </p>
+        <p>We resolved an issue where the incorrect override date appeared in the Create Activity popup when a linked activity product was not found. The correct override date is now appearing correctly.</p>
+        <p><b style="font-size: 14pt;">External Role Code's Group Setting Not Working for External Signing (Agents Role Code Setting Working There): EAES-3818</b>
+        </p>
+        <p>We resolved an issue where external role code settings cause the External Signing page to operate less than optimally. The page is now operating as designed.</p>
+        <p><b style="font-size: 14pt;">SMS Functionality Impacted by Passcode Expiration: EAES-3850</b>
+        </p>
+        <p>We resolved an issue where SMS passcodes were unexpectedly expiring, preventing SMS functionality from operating. SMS functionality is now operating as designed.</p>
+        <p><b style="font-size: 14pt;">Allow &lt;EXPIRY_DAYS&gt; Tag to Function within Email Subject Line: EAES-3858</b>
+        </p>
+        <p>We have added the &lt;EXPIRY_DAYS&gt; tag to the subject line of outgoing FireLight Activity correspondence to better communicate with regarding their e-delivery status and potentially other Activities.</p>
+        <p><b style="font-size: 14pt;">Workgroup: If User Creates a New Workgroup and without Saving It, That User Selects Any of its Old Saved Workgroup, Then 'Activities' and 'Product Types' Tab Shows' Empty for That Selected Workgroup: EAES-3860</b>
+        </p>
+        <p>We resolved an issue where clicking Create New to create a new workgroup, not saving it, and then selecting a previously saved workgroup resulted in the Activities and Product Types tabs displaying no data and appearing empty. In this scenario the tabs now display saved data as designed.</p>
+        <p><b style="font-size: 14pt;">DocuSign Calls No Longer Working: EAES-3906</b>
+        </p>
+        <p>We resolved an issue where a SQL error prevented DocuSign from working. DocuSign now works as designed.</p>
+        <p><b style="font-size: 14pt;">Status Update Email Not Sent to Agent When External Signer Decline Signature: EAES-3930</b>
+        </p>
+        <p>We resolved an issue where a status update email was not sent to the agent when an external signer declined to sign. The status update email is now sent as intended.</p>
+        <p><b style="font-size: 14pt;">Null Reference Error When Obscuring Null Data Item Values: EAES-3944</b>
+        </p>
+        <p>We resolved an issue where a null reference error was thrown when null data item values were obscured. The system is now working as designed.</p>
+        <p><b style="font-size: 14pt;">Child Cases Cannot Be Created E-Delivery: EAES-3965</b>
+        </p>
+        <p>We resolved an issue where an error occurred when the client directed cases were being created from either the parent agent case in agent directed workflows or the client directed workflows.</p>
+        <p><b style="font-size: 14pt;">All Activity Share Request Link Throwing Error: EAES-4268</b>
+        </p>
+        <p>We resolved an issue where clicking the All Activity Share Request link resulted in a timestamp error. The link now works as intended.</p>
+        <p><b style="font-size: 14pt;">Wizard - Difference from Legacy Forms UI Sizing/Layout of Labels and Buttons on Forms: PC-1360</b>
+        </p>
+        <p>We resolved an issue where text on the 1035 Exchange form overlapped, making it difficult to read. The text on this form now appears correctly and legibly.</p>
+        <p><b style="font-size: 14pt;">Address Autocomplete Fields Should Only Be in Effect During Data Entry: PC-1615</b>
+        </p>
+        <p>We resolved an issue where the Owner’s and Annuitant’s street address appeared blank in the completed application. The street addresses now appear correctly in the application.</p>
+        <p><b style="font-size: 14pt;">Forms Only UI - Custom List Search - Search Text Entered with Leftmost Space Is Not Updating the Total Number of Results: PC-2303</b>
+        </p>
+        <p>We resolved an issue where the total number of search results was not incrementing correctly when text entered in the search text box included a leftmost space. The total number of search results now increments as designed.</p>
+        <p><b style="font-size: 14pt;">Company Logo Shown Twice If MixPanel Is Enabled: PC-2439</b>
+        </p>
+        <p>We resolved an issue where the company logo was shown twice if MixPanel was enabled. The company logo now appears just once.</p>
+        <p><b style="font-size: 14pt;">Database Timeout in Submit after OSJ: PC-835</b>
+        </p>
+        <p>We resolved an issue where database timeout exceptions occurred after OSJ. The database now works as designed.</p>
+        <h2>Unresolved Issues</h2>
+        <p><b style="font-size: 14pt;">High</b>
+        </p>
+        <p><b>DTCC App Sub Premium Type Percentage Validation Issue: CR-2910</b>
+        </p>
+        <p>PercApp sub validation for premium is not allowing a percentage value, which is blocking implementation for some clients.</p>
+        <p><b>Review Magnum Response Classes to Ensure They Match the Magnum Schema: CR-3045</b>
+        </p>
+        <p>A production issue is resulting from a mismatch between classes defined for Magnum integration and the scheme returned by the endpoint.</p>
+        <p><b>Client Getting Stuck on Initials in External Signing Ceremony: EAES-4107</b>
+        </p>
+        <p>There is currently no pop-up reminding clients that all forms must be acknowledged during an External Signing Ceremony.</p>
+        <p><b>Data Item Values and Form Include State Are Not Consistent with Rules that Set Form State (Sporadic): EAES-4126</b>
+        </p>
+        <p>Item values in Rules and Data sets are currently sporadically inconsistent.</p>
+        <p><b>Template Uploaded Forms Are Showing In Review Queue: EAES-4252</b>
+        </p>
+        <p>Template uploaded forms are erroneously appearing in the Review Queue.</p>
+        <p><b>Continue Investigating Error Authenticating External Request: EAES-4345</b>
+        </p>
+        <p>An error continues to occur while authenticating an external request.</p>
+        <p><b>Activities Created via the REST API Have an Incorrect Override Date: EAES-4362</b>
+        </p>
+        <p>Activities created from the CreateActivity API have a value of the creation time if override data is expected and not found. This could result in unexpected results for the effective forms, packages, etc. of the activity, because it should be based on the current time when there is no override date, not the creation time of the activity.</p>
+        <p><b>While Submitting Protective E-ticket from FL App It Is Throwing Error: EAES-4366</b>
+        </p>
+        <p>Submitting an E-ticket application in FireLight for some clients may result in an error rather than the application being submitted successfully.</p>
+        <p><b>Sign Now Button Is Not Appearing for The Standard: EAES-4373</b>
+        </p>
+        <p>When using Client Fill &amp; Sign, the Sign Now button is failing to appear.</p>
+        <p><b>Firm Management Firm Organization Code Is Global Variable Allowing All People to See Each Other Instances: PC-2662</b>
+        </p>
+        <p>The Firm Management feature in FireLight currently allows users to see all instances of firms rather than the firms associated with specific users.</p>
+        <p><b>Request Client to Fill &amp; Sign Page UI Showing Changed and Functionality Also Not Working Properly: PC-2663</b>
+        </p>
+        <p>Numerous display and functionality issues are currently experienced when using the Request Client to Fill &amp; Sign page.</p>
+        <p><b>Redirect on Submit is Not Working (Part 2 Of 2): PC-2698</b>
+        </p>
+        <p>Submitting an application with the Redirect on Submit checkbox selected and a Redirect URL specified currently leads to a timestamp error.</p>
+        <p><b>Confirmation Needed - Percentage Mask - Need to Confirm the Number of Digits Before Decimal for New Percent Mask: PC-2744</b>
+        </p>
+        <p>Users are being required to enter two digits before a decimal when specifying a Percentage Mask.</p>
+        <p><b>Validate Identity Verification Is Not Compatible with Signer Types That Do Not Have A DOB/SSN: PC-2765</b>
+        </p>
+        <p>The VIV feature requires DOB &amp; SSN values to be mapped, and the values to be entered when sending a request to match those in the app. However, some signer types do not have one or either of these values associated with them.</p>
+        <p><b style="font-size: 14pt;">Low and Medium</b>
+        </p>
+        <p><b>Integration Encryption Certificate Has Expired: CR-2750</b>
+        </p>
+        <p>The private key used for encrypting and decrypting integration configuration files expired in June 2023, which is problematic because expired certificates are forbidden from being added in Azure.</p>
+        <p><b>Forms Only UI - Calling Third-Party Service with Rule Via Field on Different Page Is Needing a Page Refresh to Call the Service and to Map Responses: CR-2892</b>
+        </p>
+        <p>Calling third-party services such as GIACT and Lexis-Nexis is currently requiring a page refresh to call the service and map responses.</p>
+        <p><b>Inbound 103 Is Always Treated as Delayed 103: CR-2932</b>
+        </p>
+        <p>The inbound 103 is being treated as a delayed 103 when it should not be, resulting in unexpected behavior.</p>
+        <p><b>SureLC Widget Is Not Displaying Error Messages/Warnings Sometimes When the Same Product Is Used with Same Jurisdiction Again and Again: CR-2977</b>
+        </p>
+        <p>The SureLC widget is sporadically failing to display an error or warning message when the same product is repeatedly used with the same jurisdiction.</p>
+        <p><b>DTCC App Sub Grouping Should Include Submitting Firm Name And Associated Firm Name: CR-3033</b>
+        </p>
+        <p>FireLight currently allows clients to submit applications with the same Firm ID but different submitting firm names. We are working on resolving this.</p>
+        <p><b>SuranceBay - Manual Login Widget of SureLC is appearing twice on Product Selection Screen: CR-3047</b>
+        </p>
+        <p>The Product Selection screen is incorrectly displaying the SureLC Manual Login widget twice.</p>
+        <p><b>New Copy Wizard Field Functionality in Wizard Designer Stuck on Loading: DIST-3556</b>
+        </p>
+        <p>Copy Wizard Field functionality is taking longer than designed.</p>
+        <p><b>Edit List Name Values Are Not by Default Selected When Select List from Custom List Dropdown: DIST-3558</b>
+        </p>
+        <p>In Form Designer, when selecting a list from the custom list dropdown, the values in the combination box for Edit List Name are not automatically selected by default as they should be.</p>
+        <p><b>Edit List Name When There Is Only One Column in the Selected Custom List, Same Value from the Column Is Not Displaying Populated to Both List Value and Caption Value Columns in the Drop Down: DIST-3581</b>
+        </p>
+        <p>In Form Designer, when only one column is available in the selected custom list, the value from the column is not displaying in both the List Value and Caption Value columns in the drop-down list.</p>
+        <p><b>Dialog Title Displaying Wrong When Overwriting Populated Values in The Drop-Down List from the Custom List, an Alert Is Thrown to Confirm the Action: DIST-3608</b>
+        </p>
+        <p>In Form Designer, after editing the list name value, the confirmation message is labeled “Confirm Delete” instead of just “Confirm.”</p>
+        <p><b>Illustration Signature Came in on Wrong Page: EAES-3269</b>
+        </p>
+        <p>The signature is currently appearing in the wrong location on illustrations.</p>
+        <p><b>Email Address with Leading or Trailing Spaces Is Not Allowed, Preventing Continue: EAES-4101</b>
+        </p>
+        <p>Leading and trailing spaces in email addresses are not being trimmed, resulting in non-valid email addresses being used and the system stalling.</p>
+        <p><b>When External or Internal Signer Declined the Signing, then Agent Not Receiving That Declined Reason Message Email: EAES-4204</b>
+        </p>
+        <p>When a user declines the signing for external or internal signing or internal signing process, the reason the user enters for declining is not being received by the Agent nor appearing in App History.</p>
+        <p><b>Selected Form Not Remaining Visible When Moving Up Or Down In Package: EAES-4206</b>
+        </p>
+        <p>Packages screens in FireLight Admin are displaying incorrectly, including obscuring forms.</p>
+        <p><b>Error Attempting to Save Form Data for Locked Activity Prior to Submit (Sporadic): EAES-4210</b>
+        </p>
+        <p>An error is being thrown when completing the Signing Ceremony step.</p>
+        <p><b>Page Name Missing from Uploaded Signature Template with Embedded Definition: EAES-4243</b>
+        </p>
+        <p>The Uploaded Signature template is currently missing its page name.</p>
+        <p><b>'Decline E-Signature' Reason Message Box Not Appearing for Internal and External Agents During Signing Decline (MVC Signing Only): EAES-4267</b>
+        </p>
+        <p>When an agent declines signing during an internal or external signing process, the Decline E-Signature reason text box is not appearing.</p>
+        <p><b>Deleting a Form Does Not Update Timestamp of Packages Containing the Form, Preventing Deployments from Picking It Up: EAES-4310</b>
+        </p>
+        <p>When a form is deleted, it is removed from any packages containing the form, but the package timestamp is not updated, preventing the change from being detected and the</p>
+        <p>package changes getting deployed to higher environments.</p>
+        <p><b>Display/Print PDF- Print Selected Documents Button Is Not Aligned With Close Button: EAES-4354</b>
+        </p>
+        <p>On the Select Documents to Print dialog the Close and Print Selected Documents buttons are misaligned.</p>
+        <p><b>Activity Found To Have No Forms or Wizards, Preventing It From Opening (Sporadic): EAES-4363</b>
+        </p>
+        <p>Activities are being generated with no forms or wizards and therefore failing to open.</p>
+        <p><b>Addendum Not Generated in Print PDF for External User (When App Is Not Locked): EAES-4365</b>
+        </p>
+        <p>When creating an application in FireLight with addendum content then printing a PDF, that addendum content is not appearing in the printed PDF.</p>
+        <p><b>Showing 'Close' Text on Manage User's Add User Window Close Button: PC-2630</b>
+        </p>
+        <p>In FireLight Access, the close text tool tip persistently and erroneously appears in the Add New User dialog.</p>
+        <p><b>Open Source License Info Page Is 404: PC-2704</b>
+        </p>
+        <p>Attempting to access the FireLight platform’s open source license is currently resulting in a 404 error.</p>
+        <p><b>Back Navigation Arrow Is Showing Foggy Screen and Wait Icon After Viewing Any Activity from "All Activities" Page: PC-2708</b>
+        </p>
+        <p>Clicking back navigation from any activity to the All Activities page results in a blurred screen and a constantly spinning icon.</p>
+        <p><b>Confirmation Needed on Signer Type Grouping When There Are Multiple Signers of Same Type: PC-2745</b>
+        </p>
+        <p>Signer types are not currently being grouped together. We are working to address this.</p>
+        <p><b>FL Access Download Applications Link Is Throwing Timestamp Error: PC-2764</b>
+        </p>
+        <p>Clicking the Download Application link currently results in a timestamp error.</p>
+        <p><b>While Testing French Cases, the Mettre A Jour Is Cut Off: PC-2766</b>
+        </p>
+        <p>Text is truncated in the French version of the Multi Add Activities panel.</p>
+        <p>&#160;</p>
+        <p>***Please note that the JIRA ticket numbers are provided for reference. JIRA tickets are not accessible to users outside Hexure.***</p>
+        <p data-mc-conditions="General.Online"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultDestination
+  Version="1"
+  Comment="FireLight Admin online Help publish destination"
+  Host=""
+  User="MyAccountId"
+  Password=""
+  Directory="P:\Engineering\Clients\FireLight\FLT-Base\AdminHelp"
+  Port=""
+  ViewUrl=""
+  Type="file"
+  conditions=""></CatapultDestination>

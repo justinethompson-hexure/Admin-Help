@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Select the <b class="Bold">Disable View Activities Summary</b> checkbox to disable viewing of the Activity Summary dialog. The Rename/Summary option on the Other Actions menu will not be visible. <MadCap:conditionalText MadCap:conditions="General.Online">See also <MadCap:xref href="../../../../UserGuide/FireLight Basics/Other Actions/Rename Summary.htm" target="_blank" alt="Rename/Summary" title="Rename/Summary">Rename/Summary [User Instructions]</MadCap:xref>.</MadCap:conditionalText></body>
+</html>

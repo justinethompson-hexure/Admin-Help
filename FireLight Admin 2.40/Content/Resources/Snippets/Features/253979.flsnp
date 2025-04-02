@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>In this Enhancement, we move the already existing Agent Signing Order to the Groups Tab instead of having it on the Organizational Settings in the Admin Tool. This enhancement will allow businesses to utilize the signing order in a more in-depth way, as it will allow different signing orders for different role codes.</p>
+        <p>Impacts:</p>
+        <ul style="list-style-type: circle;">
+            <li>
+                <p>Groups Tab - Agent Signing Order is added to the App tab under Signing: General. This checkbox and signing order setting is enabled for all role codes, so no changes should occur for any clients that have this setting already enabled within the organization setting.</p>
+            </li>
+        </ul>
+    </body>
+</html>

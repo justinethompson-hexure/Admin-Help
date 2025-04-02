@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Instructions for preparation, setup and usage of the Quote activity for annuity and term life product quotes within FireLight. Also includes sample annuity and life rate file templates." />
+    </head>
+    <body>
+        <h1><a name="top"></a>Quote</h1>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Quote</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Preparation, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p class="note"><b class="Bold">Short Life Quote Demo Video: </b><a href="https://vimeo.com/561839429/be6236f1d5" target="_blank" title="Quote to e-Application" alt="Quote to e-Application">Quote to e-Application</a>
+                        </p>
+                        <p><b class="Bold">NOTE:</b> Quote for annuity products is not yet fully functional.</p>
+                        <p>IXN provides a Life Quoting tool that is embedded in FireLight, which includes the ability to print, email and text the proposal to the advisor, and to launch into an E-Ticket or a FireLight<sup MadCap:conditions="General.Online">®</sup> e-Application or Illustration.</p>
+                        <ul>
+                            <li>
+                                <p>IXN is not expected to be WCAG level A compliant for this release. We will work with IXN to meet compliance in a future release. </p>
+                            </li>
+                            <li>
+                                <p>IXN does not currently support Localization. </p>
+                            </li>
+                            <li>
+                                <p>IXN Life Quotes can be saved, shared and transferred. </p>
+                            </li>
+                            <li>
+                                <p>A Quote Activity Report is available. See <MadCap:xref href="../Utilities/Reports/Detail Reports.htm" alt="Detailed Activity Reports">Detailed Activity Reports</MadCap:xref> in Admin Help for a description and sample report.</p>
+                            </li>
+                            <li>
+                                <p>FireLight is embedded in IXN, which allows IXN users access to FireLight.</p>
+                            </li>
+                        </ul>
+                        <p>The ability to view quotes depends on the type of organization:</p>
+                        <ul>
+                            <li>A carrier organization can see only their own <MadCap:conditionalText MadCap:conditions="General.Postpone">annuity and </MadCap:conditionalText>life quotes, which means they cannot see other carriers’ quotes. </li>
+                            <li>A distributor organization can see all carrier <MadCap:conditionalText MadCap:conditions="General.Postpone">annuity and </MadCap:conditionalText>life quotes.</li>
+                        </ul>
+                        <p>There is a licensing component for the Quote activity. Contact your Strategic Account Manager for details.</p>
+                        <p><b class="Bold">NOTE:</b> Life products are Guaranteed Universal Life, Term Life, Whole Life, and Final Expense Insurance. </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p>When you license the Quote activity, Hexure adds the Quote Activity to the grid at the top of the Activities page in Product Configuration. Also have an additional DocType of IXNQuote with a Document Tag of IXNQuote added to your organization's List Profile.</p>
+                        <p>Do the following to set up FireLight and Life Quotes and E-Ticket.</p>
+                        <p><b class="DRNumberBold">Organization Configuration/Organization Settings/Security tab (FireLight Embedded in IXN):</b>
+                        </p>
+                        <p>With the enhancement to IXN for embedding the FireLight e-Application, IXN certificate/service record enhancements are required within FireLight to easily support the connection between the two systems.</p>
+                        <p>Enhanced certificate support allows ease of certificate security management for IXN access and updates to the IXN certificate expiration that eliminates the need for user interaction. This further expands the client access to FireLight and IXN clients alike for both systems. See <MadCap:xref href="../Organization Configuration/Organizations/Security.htm" alt="Security">Security</MadCap:xref> for more information.</p>
+                        <p>Add a new integration service record for enhanced certificate support to set up a relationship for IXN.</p>
+                        <ol style="list-style-type: lower-alpha;">
+                            <li>
+                                <p>Below the supported services table, click the <b class="Bold">Add New Integration Service Record</b> link to open the Integrated Services Configuration dialog. </p>
+                            </li>
+                            <li>
+                                <p>In the <b class="Bold">Name</b> list, select <b class="Bold">IXN Integrated Service</b>. Select the applicable <b>Supported Services</b> checkboxes (Embedded, Illustration API, API Access, Token SSO).</p>
+                            </li>
+                            <li>
+                                <p>In <b class="Bold">Client Secret</b>, click the <b class="Bold">New </b>button. On the <b class="Bold">Confirm</b> dialog, click <b class="Bold">Update</b>. Next, click <b class="Bold">Save</b>.</p>
+                            </li>
+                            <li>
+                                <p>FireLight adds the IXN Integrated Service to the table.</p>
+                            </li>
+                        </ol>
+                        <p>
+                            <p>
+                                <p><b class="DRNumberBold">Organization Configuration/Organization Settings/Admin tab (IXN Embedded in FireLight):</b>
+                                </p>
+                                <p>Set up the IXN service credentials. IXN supplies the configuration ALQ_ID and value. </p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>Click the <b>Click to Edit</b> link next to <b>Third-Party Service Config</b>. </li>
+                                    <li>
+                                        <p>Click the <b>Add New</b> link at the top of the dialog. In <b>Config Name</b>, type <b>ALQ_ID</b>. In <b>Config Value</b>, type the ALQ_ID  value provided by IXN. In <b>Service Type</b>, select <b>IXN</b> and click the <b>Add Config</b> button. </p>
+                                    </li>
+                                </ol>
+                                <p class="Indent"><b class="Bold">NOTE:</b> Config Group is an optional configuration used by the <MadCap:xref href="DocuSign.htm" alt="DocuSign Integration">DocuSign Integration</MadCap:xref> integration.</p>
+                                <p MadCap:conditions="General.Online">Examples:</p>
+                                <p MadCap:conditions="General.Online" class="Indent">
+                                    <img src="../Resources/ImagesAdmin/Capture123.png" alt="Third Party Service Configuration - Add New" title="Third Party Service Configuration - Add New" MadCap:conditions="General.Online" />
+                                </p>
+                                <p MadCap:conditions="General.Online" class="Indent">
+                                    <img src="../Resources/ImagesAdmin/Capture124.png" alt="IXN Configuration ALQ_ID and Value" title="IXN Configuration ALQ_ID and Value" MadCap:conditions="General.Online" />
+                                </p>
+                                <p><b class="DRNumberBold">Organization Configuration/Groups page:</b>
+                                </p>
+                                <ol>
+                                    <li>Select a user group in the grid at the top of the Groups page.</li>
+                                    <li>
+                                        <p>On the <MadCap:xref href="../Organization Configuration/Groups/Activity Access.htm" alt="Activity Access">Activity Access</MadCap:xref> tab, select the <b class="Bold">Quote</b> checkbox to enable the Quote activity. </p>
+                                        <p>Change the <b class="Bold">Quote Email Expiration</b> number of days setting as applicable for your organization. The default is 3 days, which means the email will expire at the same time on the third day (72 hours) from the time it is sent to the client. </p>
+                                    </li>
+                                    <li>
+                                        <p>On the <MadCap:xref href="../Organization Configuration/Groups/App.htm" alt="App">App</MadCap:xref> tab:</p>
+                                        <ul>
+                                            <li>
+                                                <p>Select the checkbox for the type of Quote to disable if both quote types are not sold by the user group:</p>
+                                                <ul style="list-style-type: circle;">
+                                                    <li><b class="Bold">Disable Annuity Quotes</b> disables the Quote activity for annuity quotes. Annuity product quotes are not yet functional.</li>
+                                                    <li><b class="Bold">Disable Life Quotes</b> disables the Quote activity for Life quotes</li>
+                                                </ul>
+                                            </li>
+                                            <li>Select the <b class="Bold">Sales Agreement Products Only</b> checkbox to filter quotes based on whether a sales agreement exists for a product with a package that has an ACORD Type of Application 103. When selected, only the quotes with a sales agreement and a package with an ACORD Type of Application 103 are shown on the Quote page if the logged-in user has access to the products. This applies to carrier sponsored and InsTech Managed products.</li>
+                                        </ul>
+                                    </li>
+                                    <li>Click <b class="Bold">Save</b>.</li>
+                                </ol>
+                                <h3>
+                                    <p>Enable Quote Activity in FireLight</p>
+                                </h3>
+                                <h4>Prerequisite Checklist</h4>
+                                <p>Did the request come from a JIRA ticket?</p>
+                                <ul>
+                                    <li>
+                                        <p>If YES, confirm with the appropriate SAM that the client has a subscription for these services before proceeding, and check to see if a WO is needed. An Active subscription for ALQ/AAQ is required before enabling in FireLight.</p>
+                                    </li>
+                                    <li>
+                                        <p>If NO, this should be implemented via a signed WO provided to Client Delivery – in this case, you can assume there is an active subscription.</p>
+                                    </li>
+                                </ul>
+                                <p>Has the Distributor/Agency been set up already as a firm/agency in the IXN platform? This must be completed prior to enabling the Quote functionality in FireLight.</p>
+                                <p>Get the information for the Config Value needed for both ALQ and AAQ prior to starting your setup. It will be a unique ID that is a combination of numbers and letters separated by dashes from the IXN Admin Dashboard.</p>
+                                <ol>
+                                    <li>
+                                        <p>Verify the Quote Activity is configured.</p>
+                                    </li>
+                                    <li>
+                                        <p>In the Admin Tool, under Product Configuration, click the <b>Activities</b> button.</p>
+                                    </li>
+                                    <li>
+                                        <p>Locate the Quote activity; this should be configured with the default settings, and there is no need to change anything. This step just confirms that the Quote activity is configured with the defaults.</p>
+                                    </li>
+                                    <li>
+                                        <p>Enable Quote Activity for the appropriate Groups (Role Codes).</p>
+                                    </li>
+                                    <li>
+                                        <p>From the main dashboard, under Organization Configuration, click the <b>Groups</b> button.</p>
+                                    </li>
+                                    <li>
+                                        <p>On the Groups screen, select a role code for which to enable the Quote Activity.</p>
+                                    </li>
+                                    <li>
+                                        <p>Once the Group is selected, click the <b>Activity Access</b> tab and select the <b>Quote Activity Option</b> check box.</p>
+                                    </li>
+                                    <li>
+                                        <p>On the App tab in the Groups window, ensure that the option to Disable certain quote types is not selected–there is an option to Disable Annuity Quotes and an option to Disable Life Quotes. Review these settings based on the services the client has contracted for and update accordingly.</p>
+                                    </li>
+                                    <li>
+                                        <p>Click the <b>Save</b> button at the bottom of the screen to save the updated settings.</p>
+                                    </li>
+                                    <li>
+                                        <p>Repeat steps 6-8 for each Group (role code) that needs access to the Quote activity.</p>
+                                    </li>
+                                    <li>
+                                        <p>Add a New Integrated Service Record to connect to IXN</p>
+                                    </li>
+                                    <li>
+                                        <p>Click the <b>Organization Settings</b> button under Organization Configuration.</p>
+                                    </li>
+                                    <li>
+                                        <p>Click the <b>Security</b> tab on this screen. </p>
+                                    </li>
+                                    <li>
+                                        <p>Click the <b>Add New Integrated Services Record</b> at the bottom of the screen. </p>
+                                    </li>
+                                    <p>The Integration Service Records are available for known integrated services. Only one record can exist per integrated service type.</p>
+                                    <p><b>Note</b>: Upon expiration, FireLight will automatically update the IXN certificate, so clients do not have to update the certificate in the Organization settings.</p>
+                                    <li>
+                                        <p>In the Name list, select <b>IXN Integrated Service</b>. </p>
+                                    </li>
+                                    <li>
+                                        <p>Select the applicable Supported Services checkboxes.</p>
+                                    </li>
+                                    <li>
+                                        <p>In Client Secret, click the <b>New</b> button.</p>
+                                    </li>
+                                    <li>
+                                        <p>On the Confirm dialog, click <b>Update</b>, then click <b>Save</b>.</p>
+                                    </li>
+                                    <p>FireLight adds the IXN Integrated Service to the table.</p>
+                                </ol>
+                                <h3>
+                                    <p>Request an Update/Verify the Cross-Origin Resource Sharing (CORS Origins) Settings.</p>
+                                </h3>
+                                <ul>
+                                    <p>Updates will need to be made by Hexure Production Support. You will need to submit a JIRA ticket to verify these settings exist and/or any updates that may be needed. The updates will be made in UAT and will need to be tested prior to being promoted to higher environments. Below are the IXN URLs that need to available in the Distributor’s Org settings in the Security tab.</p>
+                                    <li>
+                                        <p>https://aq.ixn.io</p>
+                                    </li>
+                                    <li>
+                                        <p>https://aq.ixn.tech</p>
+                                    </li>
+                                    <li>
+                                        <p>https://alq.ixn.io</p>
+                                    </li>
+                                    <li>
+                                        <p>https://alq.ixn.tech</p>
+                                    </li>
+                                    <li>
+                                        <p>https://embed.thelifedx.com</p>
+                                    </li>
+                                </ul>
+                                <h3>
+                                    <p>Set Up IXN in the Third-Party Service Config</p>
+                                </h3>
+                                <ol>
+                                    <li>
+                                        <p>On the Admin app dashboard, click <b>Organization Settings</b>.</p>
+                                    </li>
+                                    <li>
+                                        <p>On the Organization&#160;Settings window, click the <b>Admin</b> tab.</p>
+                                    </li>
+                                    <li>
+                                        <p>On this screen, next to the Third Party Service Config, click  <b>Click to Edit</b>.</p>
+                                    </li>
+                                    <li>
+                                        <p>This opens a new window. If the client has other third-party configs already set for other FireLight integrations, they appear here (i.e., Salesforce, Redtail, etc).</p>
+                                    </li>
+                                    <li>
+                                        <p>At the top of the screen, click <b>Add New</b> at the top.</p>
+                                    </li>
+                                    <p>New fields will be displayed.</p>
+                                    <li>
+                                        <p>You will need to add a new record for both ALQ and AAQ if both services are in scope:</p>
+                                    </li>
+                                    <li>
+                                        <p>For ALQ: Config Name: ‘ALQ_ID’ Config Value: This can be obtained from the Admin Dashboard for the client in the IXN platform; Service Type: IXN.</p>
+                                    </li>
+                                    <ol style="list-style-type: lower-alpha;">
+                                        <li>
+                                            <p>Click <b>Save Organization</b> when done.</p>
+                                        </li>
+                                    </ol>
+                                    <li>
+                                        <p>For AAQ: Config Name: ‘AAQ_ID’ Config Value: This can be obtained from the Admin Dashboard for the client in the IXN platform; Service Type: IXN.</p>
+                                    </li>
+                                    <ol style="list-style-type: lower-alpha;">
+                                        <li>
+                                            <p>Click <b>Save Organization</b> when done.</p>
+                                        </li>
+                                    </ol>
+                                </ol>
+                                <p><b class="DRNumberBold">(Optional)&#160;Add an IXN Quote Document Template Form to the Life Quote App:</b>
+                                </p>
+                                <p>Add an IXN quote document template form with a Signature Box control. This adds a document tag for signatures to the IXN Life Quote attached to the FireLight e-Application, so it can be electronically signed as a way of receipt confirmation. <b class="Bold">NOTE:</b> Contact your Strategic Account Manager to have the integration team add an additional DocType of IXNQuote with a Document Tag of IXN Quote.</p>
+                                <ol>
+                                    <li>
+                                        <p>On the <b class="Bold">Designer/Form Library</b> page, upload the IXN Quote Document template form. In the list, select the template form (e.g., select <b class="Bold">IXN Quote Document)</b>. In <b class="Bold">Document Tag</b>, select <b class="Bold">IXNQuote</b> and click the <b class="Bold">Save</b> button. Click the <b class="Bold">Form Designer</b> button.</p>
+                                    </li>
+                                    <li>
+                                        <p>On the <b class="Bold">Designer/Form Designer</b> page, add a <b class="Bold">Signature Box</b> control. Select the <b class="Bold">Signer Type</b>, <b class="Bold">Control Type</b>, and <b class="Bold">Data Group</b>. Click the <b class="Bold">Update</b> button.</p>
+                                    </li>
+                                    <li>
+                                        <p>On the <b class="Bold">Product Configuration/Packages</b> page, select the <b class="Bold">Life Quote App</b> in the list at the top of the page. </p>
+                                        <p>On the <b class="Bold">Forms/Wizards in Package</b> tab: move the IXN Quote Document from the <b class="Bold">All Forms/Wizards</b> list to the <b class="Bold">Forms/Wizards in Package</b> list and click the <b class="Bold">Save Package</b> button.</p>
+                                    </li>
+                                </ol>
+                                <p><b class="DRNumberBold">(Optional) Add IXN E-Ticket to FireLight</b>
+                                </p>
+                                <ol>
+                                    <li>
+                                        <p>On the <b class="Bold">Product Configuration/Activities</b> page, click <b class="Bold">Add New Activity</b>. </p>
+                                        <ol style="list-style-type: lower-alpha;">
+                                            <li>
+                                                <p>In <b class="Bold">Activity Name</b>, enter <b class="Bold">Ticket App</b>. </p>
+                                            </li>
+                                            <li>
+                                                <p>In <b class="Bold">ACORD Type</b>, select <b class="Bold">Ticket App (103-10301)</b>. </p>
+                                            </li>
+                                            <li>
+                                                <p>In <b class="Bold">Branding Icon</b>, enter a Font Awesome branding icon name. </p>
+                                            </li>
+                                            <li>
+                                                <p>If applicable, contact your Strategic Account Manager to change the number of days before completed and uncompleted print forms are purged in the <b class="Bold">Complete Purge Policy</b> and for <b class="Bold">Incomplete Purge Policy</b>. </p>
+                                            </li>
+                                            <li>
+                                                <p>In <b class="Bold">Continue/Apply Label</b>, enter <b class="Bold">Apply</b>.</p>
+                                            </li>
+                                            <li>
+                                                <p>Click <b class="Bold">Save Activity</b>.</p>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                    <li>
+                                        <p>On the <b class="Bold">Organization Configuration/Groups/</b><MadCap:xref href="../Organization Configuration/Groups/Activity Access.htm" alt="Activity Access">Activity Access</MadCap:xref> tab, select the <b class="Bold">Ticket App</b> checkbox to enable E-Ticket.</p>
+                                    </li>
+                                    <li>
+                                        <p>On the <b class="Bold">Organization/Email</b> page in the <b class="Bold">E-Ticket</b> Email Category, make any adjustments to the<MadCap:conditionalText MadCap:conditions="General.PDF"> E-Ticket Next Steps Notification</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"> <MadCap:xref href="../Organization Configuration/Email/E-Ticket/E-Ticket Next Steps Notification.htm" title="E-Ticket Next Steps Notification" alt="E-Ticket Next Steps Notification">E-Ticket Next Steps Notification</MadCap:xref></MadCap:conditionalText> email template.</p>
+                                    </li>
+                                </ol>
+                            </p>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">User Experience - Life Products</p>
+                        <ol>
+                            <li>On the <b class="Bold">Home</b> page under <b class="Bold">Start New</b> or on the <b class="Bold">New Activity</b> menu, click <b class="Bold">Quote</b> to open the Quote wizard.</li>
+                            <li>On the Quote toolbar, click <b class="Bold">Life</b>.</li>
+                            <li>
+                                <p>In the left column <b class="Bold">Proposed Insured</b> section, enter the information for the proposed insured.</p>
+                                <ul>
+                                    <li>
+                                        <p>First Name</p>
+                                    </li>
+                                    <li>
+                                        <p>Last Name</p>
+                                    </li>
+                                    <li>
+                                        <p>Date of Birth or Age</p>
+                                    </li>
+                                    <li>
+                                        <p>Gender</p>
+                                    </li>
+                                    <li>
+                                        <p>Tobacco Use</p>
+                                    </li>
+                                    <li>
+                                        <p>State</p>
+                                    </li>
+                                    <li>
+                                        <p>Health Options - The number of health options may need to be reduced if other options are selected. For example, you cannot select all health options with all carriers, but all health options can be selected with a single carrier.</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>In the center column <b class="Bold">Product</b> section, select the product types (Term Periods, To Age, Term ROP, Whole Life, and Final Expense) and carriers to filter the quotes by product and carrier. Up to five product types can be selected when the user selects all carriers. When the number of carriers is limited, more than five product types can be selected.</p>
+                            </li>
+                            <li>
+                                <p>In the right column Coverage and Agent sections, enter or select the coverage and agent information. Up to three Face Amounts can be entered. Optionally, click the <b class="Bold">Calculate Needs</b> link to calculate the face amount based on the Debts and Expenses, Income, and Assets.</p>
+                            </li>
+                            <li>
+                                <p>On the lower right of the wizard, click <b class="Bold">Run Quote</b>.</p>
+                                <p>The Quote Results contain the client information, Coverage, and Agent information followed by the number of results and a search field. Term Quote results display on separate tabs for each Term duration. Click <b class="Bold">Show Details</b> at the bottom of a product quote to show product details. Click a tab to show product Features, Forms, Carrier Overview, Premiums, and Important Information on separate tabs. Click <b class="Bold">Hide Details</b> to hide product details.</p>
+                            </li>
+                            <li>
+                                <p>(Optional)&#160;Click the button to the right of the search field to expand the dialog. Enter a Carrier name if applicable. Select search options to Sort By, Group By, Filter By, and select Product Features to filter the quote results.</p>
+                            </li>
+                            <li>
+                                <p>On one or more tabs for the desired term period, select the checkbox for one or more product quotes. The <b class="Bold">Share</b>  and <b class="Bold">Compare</b>  buttons become visible. </p>
+                            </li>
+                            <li>
+                                <p>Click the <b class="Bold">Compare</b> button to open the Comparing Quotes dialog. Use the scroll bar to scroll left and right through the columns of the comparison. On the lower right of the comparison, click the <b class="Bold">Share</b> button to select a delivery method and share the Quote.</p>
+                            </li>
+                            <li>
+                                <p>Click the <b class="Bold">Share</b> button above the product selection or click the <b class="Bold">Share</b> button on the Comparing Quotes dialog to open the Select a Delivery dialog. </p>
+                                <p>On the Select a Delivery Method dialog, click a <b class="Bold">Download</b>, <b class="Bold">Email</b>, or <b class="Bold">Text</b> button for the delivery method and click the <b class="Bold">Next</b> button. Download is the default method. </p>
+                                <p>On the Select a PDF Layout dialog, click a PDF layout for the quotes: <b class="Bold">Detailed Comparison</b>, <b class="Bold">Condensed Premium Comparison</b>, <b class="Bold">Premium Comparison</b>, or <b class="Bold">Feature Comparison</b> and click the <b class="Bold">Next</b> button. </p>
+                                <p>On the Enter Information dialog, enter <b class="Bold">Agent Information</b> and ensure <b class="Bold">Recipient Information</b> is correct. Click the applicable<b class="Bold"> Download</b>, <b class="Bold">Email</b>, or <b class="Bold">Text</b> button for the delivery method. </p>
+                                <p>On the Success dialog: </p>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p>Download delivery method: Click <b class="Bold">View PDF</b> to open and view the quote PDF document.</p>
+                                    </li>
+                                    <li>
+                                        <p>Email delivery method: Click <b class="Bold">Send</b> to deliver the email to the client.</p>
+                                    </li>
+                                    <li>
+                                        <p>Text delivery method: Click <b class="Bold">Send</b> to deliver the text to the client. </p>
+                                    </li>
+                                </ul>
+                                <p>Click the <b class="Bold">X</b> on the upper right to close the dialog.</p>
+                            </li>
+                            <li>
+                                <p>Save the quote: on the navigation bar, click <b class="Bold">Save</b>. In the Save Quote dialog, enter a <b class="Bold">Name</b> for the quote and click <b class="Bold">Save</b>. Save the quote under a new name: in the <b class="Bold">Other Actions</b> menu on the navigation bar, click  <b class="Bold">Copy Activity</b>. In the Copy Activity dialog, enter a new name for the quote and click <b class="Bold">OK</b>.</p>
+                            </li>
+                            <li>
+                                <p>On the Quote page, to the right of the Quote, pause the mouse (hover) over the premium amounts of a quote and click the <b class="Bold">Get Started</b> button.</p>
+                            </li>
+                            <li>
+                                <p>On the Pick An Action dialog, click one of the following buttons: </p>
+                                <ul style="list-style-type: circle;">
+                                    <li>
+                                        <p><b class="Bold">Apply</b> – begins an application in FireLight (if E-Application is enabled)</p>
+                                    </li>
+                                    <li>
+                                        <p><b class="Bold">E-Ticket</b>  – begins an E-Ticket in FireLight (if E-Ticket is enabled)</p>
+                                    </li>
+                                    <li>
+                                        <p><b class="Bold">Illustrate</b>  – begins an illustration in FireLight (if Illustration is enabled)</p>
+                                    </li>
+                                    <li>
+                                        <p><b class="Bold">Download PDF</b>  – download PDF delivery method</p>
+                                    </li>
+                                    <li>
+                                        <p><b class="Bold">Text PDF</b>  – text PDF delivery method</p>
+                                    </li>
+                                    <li>
+                                        <p><b class="Bold">Email PDF</b>  – email PDF delivery method</p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>Complete the application, e-ticket, or illustration in FireLight. </p>
+                                <p class="hangingindent">Illustration: complete the illustration and click the <b class="Bold">Apply</b> button to create an application.</p>
+                                <p class="hangingindent">Application: create an application. When data entry is completed, click <b class="Bold">Continue</b> to move to the next step in the process until signatures and any applicable review are complete.</p>
+                                <p class="hangingindent">E-Ticket: complete the Quote Ticket App. When data entry is completed, click <b class="Bold">Continue</b> to submit.</p>
+                                <p> <b class="Bold">NOTE:</b> In the application or e-ticket on the <b class="Bold">Other Actions</b> menu, click <b class="Bold">Display/Print PDF</b>, select the documents to print including the Quote, and click <b class="Bold">Print Selected Documents</b> to create a PDF file with the selected Application or E-Ticket and quote documents.</p>
+                            </li>
+                            <li>
+                                <p> On the upper right of the Life Quote page, click the <b class="Bold">New Quote</b> button to start a new quote.</p>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                        <h2>Additional Information</h2>
+                        <p>Admin Help – Design Documents: </p>
+                        <ul>
+                            <li>Life and Annuity Quotes: <MadCap:conditionalText MadCap:conditions="General.PDF">  251421, 227668, 209806, original: 201858</MadCap:conditionalText> <MadCap:conditionalText MadCap:conditions="General.Online"> <a href="../Resources/DesignDocs/251421 IXN Integration E-Ticket 2.22 December.pdf" target="_blank" title="Design Document" alt="Design Document">CMR 251421</a>, <a href="../Resources/DesignDocs/227668 Quote 2.18 August.pdf" target="_blank" title="227668" alt="227668">227668</a>, <a href="../Resources/DesignDocs/209806 New Life Quote Features.pdf" target="_blank" title="209806" alt="209806">209806</a>, original: <a href="../Resources/DesignDocs/201858 Add Quote Activity.pdf" target="_blank" alt="201858">201858</a></MadCap:conditionalText></li>
+                        </ul>
+                        <p>User Guide – <em>FireLight Platform User Guide</em>, New Activity section, <MadCap:conditionalText MadCap:conditions="General.PDF">"Quote"</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../UserGuide/New Activity/Quote.htm" alt="Quote">Quote [User Instructions]</MadCap:xref></MadCap:conditionalText> topic</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:pageBreak />
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

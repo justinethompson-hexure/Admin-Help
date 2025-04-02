@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../Resources/TableStyles/2017_IT-Simple2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+        <meta name="description" content="Instructions for setup and usage of the e-Application activity in FireLight." />
+    </head>
+    <body>
+        <h1><a name="top"></a>Application Activity</h1>
+        <table style="mc-table-style: url('../Resources/TableStyles/2017_IT-Simple2.css');border-top-left-radius: 10px;border-top-right-radius: 10px;border-bottom-right-radius: 10px;border-bottom-left-radius: 10px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;caption-side: top;mc-caption-repeat: true;" class="TableStyle-2017_IT-Simple2" cellspacing="0">
+            <caption class="Table">Application Activity</caption>
+            <col class="TableStyle-2017_IT-Simple2-Column-Regular" style="width: 770px;" />
+            <thead>
+                <tr class="TableStyle-2017_IT-Simple2-Head-Header1">
+                    <th class="TableStyle-2017_IT-Simple2-HeadD-Regular-Header1">Description, Setup, User Experience, and Additional Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">Description</p>
+                        <p>The application activity allows users to create an e-Application for submission to back office processing. </p>
+                        <p>Application activity requires a licensing component. Contact your Strategic Account Manager for details.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-DarkerRows">
+                        <p class="thead1">Admin Setup</p>
+                        <p>When you license the Application activity, Hexure adds the Application activity to the grid at the top of the Activities page in Product Configuration. Do the following to set up FireLight Admin for the Application activity.</p>
+                        <p>
+                            <ol>
+                                <li>
+                                    <p>Upload Forms and Create Wizards:</p>
+                                    <p>Add or create forms and wizards for the applicable activities in FireLight.</p>
+                                    <ul>
+                                        <li>
+                                            <p>Upload existing forms (in PDF or XPS format), add form detail, and view form history using the Designer/Form Library page. See <MadCap:xref href="../Design/Form Library/Upload Forms.htm" alt="Upload Forms">Upload Forms</MadCap:xref> and <MadCap:xref href="../Design/Form Library/Add and Update Form Detail.htm" alt="Add and Update Form Detail">Add and Update Form Detail</MadCap:xref> for instructions. <b class="Bold">NOTE:</b>  Forms with existing named tag fields as added through Adobe Acrobat is present on the uploaded forms. Be sure to highlight the existing fields on the forms in Adobe Acrobat before importing the forms to FireLight.</p>
+                                        </li>
+                                        <li>Create Wizards on the Designer/<MadCap:xref href="../Design/Wizard Library/Wizard Library.htm" alt="Wizard Library">Wizard Library</MadCap:xref> page. For a shortcut, download and copy the Annuity Template Wizard and rule set provided by Hexure and then modify the wizard and rule set for your organization. See <MadCap:xref href="../Design/Wizard Library/Add a Template Wizard and Rule Set.htm" alt="Add a Template Wizard and Rule Set">Add a Template Wizard and Rule Set</MadCap:xref> for instructions.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>Design Forms and Wizards:</p>
+                                    <ul>
+                                        <li>Design forms using the Designer/<MadCap:xref href="../Design/Forms/Form Designer.htm" alt="Form Designer">Form Designer</MadCap:xref> page by selecting master settings and adding input controls, field properties, and rule sets or rules. </li>
+                                        <li>
+                                            <p>Design wizards using the Designer/<MadCap:xref href="../Design/Wizards/Wizard Designer.htm" alt="Wizard Designer">Wizard Designer</MadCap:xref> page by adding pages, containers, fields, and rule sets or rules to each wizard.</p>
+                                            <p><b class="Bold">NOTE</b>: You need to create rule sets on the Product Configuration/Rule Sets page first. See "Add a Rule Set and Detail" in <MadCap:xref href="../Product Configuration/Rule Sets.htm" alt="Rule Sets">Rule Sets</MadCap:xref> for instructions. Then you can add the rules either on the Rule Sets page or from the <MadCap:xref href="../Design/Forms/RulesWindow.htm" alt="Rules Window">Rules Window</MadCap:xref> link on the Form Designer page or from the <MadCap:xref href="../Design/Wizards/Rules Window - Wizards.htm" alt="Rules Window">Rules Window</MadCap:xref> link on the Wizard Designer page. You can use the same rule set for both wizards and forms.</p>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <p>Set Up Product Configurations:</p>
+                                    <ol style="list-style-type: lower-alpha;">
+                                        <li>Set Application activity options on the Product Configuration/<MadCap:xref href="../Product Configuration/Activities.htm" title="Activities" alt="Activities">Activities</MadCap:xref> page. In the grid at the top of the page, select the <b class="Bold">Application</b> activity. Update the settings for your organization. To add a pre-submission review step to the application process, select either the <b class="Bold">Allow Pre-Signature Review</b> or <b class="Bold">Allow Post-Signature Review</b> checkbox depending on whether the pre-submission review is before or after the signature step in the application process.</li>
+                                        <li>Add the products  on the Product Configuration/Products page. See "Add a Product" in <MadCap:xref href="../Product Configuration/Products.htm" alt="Products">Products</MadCap:xref>. </li>
+                                        <li>Add form, wizard, and rule set packages for the products on the Product Configuration/Packages page. See "Add and Edit a Package" in <MadCap:xref href="../Product Configuration/Packages.htm" alt="Packages">Packages</MadCap:xref>.</li>
+                                        <li>Add sales agreements for the products and packages on the Product Configuration/Sales Agreements page. See "Add and Edit Sales Agreements" in <MadCap:xref href="../Product Configuration/SalesAgreements.htm" alt="Sales Agreements">Sales Agreements</MadCap:xref>.</li>
+                                        <li>Optionally add and edit fees and expenses repository information and quote for Term Life products. See <MadCap:xref href="Fees, Expenses and Commissions Repository.htm" alt="Fees, Expenses and Commissions RepositoryFees, Expenses and Commissions Repository">Fees, Expenses, and Commissions Repository</MadCap:xref> and <MadCap:xref href="Quote.htm" alt="Quote">Quote</MadCap:xref> in Features for instructions.</li>
+                                    </ol>
+                                </li>
+                                <li>
+                                    <p>Set Up Organization Configurations:</p>
+                                    <ol style="list-style-type: lower-alpha;">
+                                        <li>Add and edit the organization settings on the Organization Configuration/<MadCap:xref href="../Organization Configuration/Organization Settings.htm" alt="Organization Settings">Organization Settings</MadCap:xref> page. See the Help topics for the Organization Settings tabs (<MadCap:xref href="../Organization Configuration/Organizations/Activity.htm" alt="Activity">Activity</MadCap:xref>, <MadCap:xref href="../Organization Configuration/Organizations/Admin.htm" alt="Admin">Admin</MadCap:xref>, <MadCap:xref href="../Organization Configuration/Organizations/Maintain Devices.htm" alt="Maintain Devices">Maintain Devices</MadCap:xref>, <MadCap:xref href="../Organization Configuration/Organizations/Mobile Configuration.htm" alt="Mobile Configuration">Mobile Configuration</MadCap:xref>, <MadCap:xref href="../Organization Configuration/Organizations/Organization.htm" alt="Organizaton">Organization</MadCap:xref>, <MadCap:xref href="../Organization Configuration/Organizations/Security.htm" alt="Security">Security</MadCap:xref>, <MadCap:xref href="../Organization Configuration/Organizations/Signature.htm" alt="Signature">Signature</MadCap:xref>)&#160;for descriptions of the available settings and instructions.</li>
+                                        <li>Define FireLight user access groups and role codes for your organization on the Organization Configuration/<MadCap:xref href="../Organization Configuration/Groups.htm" alt="Groups">Groups</MadCap:xref> page. See <MadCap:xref href="../Organization Configuration/Groups/Create and Edit Groups.htm" alt="Create and Edit Groups">Create and Edit Groups</MadCap:xref> for instructions. For each user group, select the group in the grid at the top of the Groups page and use the tabs below the grid to set the applicable access options for a selected user group role. See the Help topics for the Groups tabs (<MadCap:xref href="../Organization Configuration/Groups/Activity Access.htm" alt="Activity Access">Activity Access</MadCap:xref>, <MadCap:xref href="../Organization Configuration/Groups/Admin.htm" alt="Admin">Admin</MadCap:xref>, <MadCap:xref href="../Organization Configuration/Groups/App.htm" alt="App">App</MadCap:xref>, <MadCap:xref href="../Organization Configuration/Groups/Case Access.htm" alt="Case Access">Case Access</MadCap:xref>, <MadCap:xref href="../Organization Configuration/Groups/Debugging Tools.htm" alt="Debugging Tools">Debugging Tools</MadCap:xref>, <MadCap:xref href="../Organization Configuration/Groups/Needs Filter.htm" alt="Needs Filter">Needs Filter</MadCap:xref>, <MadCap:xref href="../Organization Configuration/Groups/Product Access.htm" alt="Product Access">Product Access</MadCap:xref>, <MadCap:xref href="../Organization Configuration/Groups/Review Queue.htm" alt="Review Queue">Review Queue</MadCap:xref>, <MadCap:xref href="../Organization Configuration/Groups/Training.htm" alt="Training">Training</MadCap:xref>) for descriptions of the available settings and instructions.</li>
+                                        <li>Add the custom lists for your organization on the Organization Configuration/Custom Lists page. These are the custom lists that are generally accessed from a button control on forms and wizards. See <MadCap:xref href="../Organization Configuration/Custom Lists.htm" alt="Custom Lists">Custom Lists</MadCap:xref> for instructions.</li>
+                                        <li>Edit the default email templates as applicable for your organization on the Organization Configuration/Email page. See <MadCap:xref href="../Organization Configuration/Email.htm" alt="Email">Email</MadCap:xref> for instructions.</li>
+                                        <li>Set up post-submission review queues and the review queue script on the Organization Configuration/Review Queue page. See <MadCap:xref href="../Organization Configuration/ReviewQueue.htm" alt="Review Queue">Review Queue</MadCap:xref> for instructions.</li>
+                                        <li>Map data item IDs on the Organization Configuration/Mapping page. For example, distributors can use the DataItem Synch tab on the Mapping page to link data items between the carrier and distributor. See <MadCap:xref href="../Organization Configuration/Mapping.htm" alt="Mapping">Mapping</MadCap:xref> for instructions.</li>
+                                        <li>(Optional) If using the optional Tele-Sign feature for capturing signatures, add the Tele-Sign scripts on the Organization Configuration/Tele-Sign page. See <MadCap:xref href="../Organization Configuration/TeleSign Scripts.htm" alt="Tele-Sign Scripts">Tele-Sign Scripts</MadCap:xref> and the <MadCap:xref href="Tele-Sign.htm" alt="Tele-Sign">Tele-Sign</MadCap:xref> feature for instructions.</li>
+                                    </ol>
+                                    <p><b class="Bold">NOTE</b>: Some Admin changes may take 20–30 minutes to take effect in the FireLight application.</p>
+                                </li>
+                                <li>Test the Forms, Wizards, and Rules: Log in to the FireLight application and test the forms, wizards, and rules. Ensure you can create the applications and complete the application process for each product. See "Application" in the New Activity section of the <i MadCap:conditions="General.PDF">FireLight Platform User Guide </i><MadCap:conditionalText MadCap:conditions="General.Online"><a href="../Resources/PDFGuides/FireLight_Platform_User_Guide.pdf" target="_blank" title="FireLight Platform User Guide" alt="FireLight Platform User Guide">FireLight Platform User Guide</a></MadCap:conditionalText> for instructions. </li>
+                                <li>
+                                    <p>Deploy the Forms, Wizards, Rule Sets, Product Configurations, and Organization Configuration Settings: </p>
+                                    <p>In FireLight Admin, deploy  the products, forms/wizards, packages, rule sets, organization, groups, etc., configurations to staging and production using the Utilities/Deployments page. Use the applicable All Configuration scopes to deploy the top level of data: Activities, Products, Forms/Wizards, Packages, Sales Agreements, and Rule Sets. Deploy the applicable Custom Lists, Groups, Mapping, Review Queue, and Organization configurations. See <MadCap:xref href="../Utilities/Deployments/Deploy Data.htm" alt="Deploy Data">Deploy Data</MadCap:xref> for instructions. </p>
+                                </li>
+                                <li>
+                                    <p>View and Add Reports:</p>
+                                    <p>Use the Utilities/Reports page to generate and view Admin reports for your organization. You can add activity reports that run on a scheduler. Activity reports can be scheduled using the Activity Report Scheduler or by JIRA&#160;ticket request. See <MadCap:xref href="../Utilities/Reports/Reports.htm" alt="Reports">Reports</MadCap:xref> for instructions and sample Admin and Activity reports.</p>
+                                </li>
+                                <li>
+                                    <p>Optional: Export Forms, Wizards, and Rule Sets:</p>
+                                    <p>Export selected forms or wizards with metadata (fields) using the applicable Form Library or Wizard Library page. Use the Export feature to back up forms and wizards (in case forms are deleted in the system), if planning to use the forms and wizards in multiple environments, or to use the same form or wizards multiple times; for example, when requiring a proof of citizenship form or wizard for joint or additional insured. Export rule sets using the Product Configuration/Rule Sets page.</p>
+                                </li>
+                            </ol>
+                        </p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-LightRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyD-Regular-LightRows">
+                        <p class="thead1">User Experience</p>
+                        <ol>
+                            <li>
+                                <p>On the Home page under Start New or on the New Activity menu, click <b class="Bold">Application</b>.</p>
+                                <p><b class="Bold">NOTE:</b> If you enter FireLight through your organization’s CRM system and FireLight launches directly into a new business application, skip steps 1 through 4. The client data associated with the individual selected in the CRM will post over to FireLight.</p>
+                            </li>
+                            <li>
+                                <p>For a single carrier implementation, select a <b class="Bold">Jurisdiction</b> and <b class="Bold">Product Type</b> from the drop-down lists.</p>
+                            </li>
+                            <li>
+                                <p>For a multi-carrier implementation, select a <b class="Bold">Jurisdiction</b>, <b class="Bold">Product Type</b>, and <b class="Bold">Carrier</b> from the drop-down lists.</p>
+                            </li>
+                            <li>Click a product name in the grid to begin an application for the product. Products sold by a subsidiary carrier may show the subsidiary carrier’s name depending on your organization’s settings. </li>
+                            <li>FireLight displays a list of Required Forms for the application. Any Optional Forms appear below the list of Required Forms. You can select one or more optional forms to include within the application.</li>
+                            <li>Click <b class="Bold">Create Application</b>.</li>
+                            <li>Make any changes to the default application name and click <b class="Bold">Create</b>.&#160;&#160;</li>
+                            <li>Fill in the information on the application form or wizard. Click <b class="Bold">CONTINUE</b> when Data Entry reaches 100%.</li>
+                            <li>Optional: If your organization implemented a pre-submission review queue, select <b class="Bold">Request Review</b> in the action menu, select the applicable reviewers on the Preferences page, and click the <b class="Bold">Send Request to Reviewer(s)</b> button. Otherwise, click <b>Submit</b> on the action menu to skip the pre-submission review. The review step can occur before or after the signing process depending on the Allow Pre-Signature Review or Allow Post-Signature Review settings on the Product Configuration/Activities page in Admin. Following reviewer approval in the post-signature review process, the application is auto-submitted. Note that this occurs without use of the EnableAutoSubmit Admin Groups option nor the FLI_AUTO_SUBMIT dataitem.</li>
+                            <li>
+                                <p>Complete the signing process.</p>
+                                <ol style="list-style-type: lower-alpha;">
+                                    <li>Click <b class="Bold">Use E-Signature</b> to electronically sign the documents.</li>
+                                    <li>In the List of Required Signers, click a signer type button (e.g., click <b class="Bold">Owner</b>).</li>
+                                    <li>Click <b class="Bold">Sign Now</b> to sign on this device.</li>
+                                    <li>Fill in the <b class="Bold">Identification Verification</b> fields and click <b class="Bold">Verified</b>.</li>
+                                    <li>The signer reviews the documents, selects the checkbox for <b class="Bold">I have reviewed and agree with the terms expressed within this document</b>, and clicks <b class="Bold">Sign</b>.</li>
+                                    <li>The signer enters their signing information (Signer Full Name and City) and clicks <b class="Bold">I Consent</b> to complete their signature capture.</li>
+                                    <li>In the <b class="Bold">List of Required Signers</b>, click <b class="Bold">Agent</b>. You review the documents and click <b class="Bold">Sign</b>.</li>
+                                    <li>Enter your Agent On-Site Signature information and click <b class="Bold">I Consent</b>.</li>
+                                    <li>Click <b class="Bold">CONTINUE</b> to submit the new application.</li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017_IT-Simple2-Body-DarkerRows">
+                    <td class="TableStyle-2017_IT-Simple2-BodyA-Regular-DarkerRows">
+                        <p class="thead1">Additional Information</p>
+                        <p>User Guide  –  <em>FireLight Platform User Guide</em>, New Activity section, <MadCap:conditionalText MadCap:conditions="General.PDF">"Application" </MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"><MadCap:xref href="../UserGuide/New Activity/Application.htm" alt="Application">Application [User Instructions]</MadCap:xref> </MadCap:conditionalText>topic</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:pageBreak />
+        <p MadCap:conditions="General.Online"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

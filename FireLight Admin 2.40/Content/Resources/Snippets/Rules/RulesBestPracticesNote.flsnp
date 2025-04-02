@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p class="note"><b class="Bold">BEST PRACTICES NOTE:</b> To avoid potential issues if a carrier changes their name, avoid using FLI_ORGANIZATION_NAME or FLI_PRODUCT_CARRIER_NAME in rules. Use FLI_ORGANIZATION_ID instead of FLI_ORGANIZATION_NAME and use FLI_PRODUCT_CARRIER_ID instead of FLI_PRODUCT_CARRIER_NAME, because the IDs would not change with a rebrand. </p>
+    </body>
+</html>

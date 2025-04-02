@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../Stylesheets/2017MainStyles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <p>With SendGrid enabled, FireLight handles undeliverable e-Delivery emails as follows.</p>
+        <p><b class="Bold">Agent Directed Fill and Sign E-Delivery Workflow</b>
+        </p>
+        <p>An Agent Directed Fill and Sign undeliverable e-Delivery email follows a process similar to a client rejecting/declining e-Delivery:</p>
+        <ol>
+            <li>
+                <p>An agent directed fill and sign e-Delivery contains an invalid email for one of the clients.</p>
+            </li>
+            <li>
+                <p>Agent Approves the case and the emails are sent to the clients.</p>
+            </li>
+            <li>
+                <p>Cases are now in a status for client review.</p>
+            </li>
+            <li>
+                <p>Invalid email gets returned from SendGrid. </p>
+                <ul>
+                    <li>
+                        <p>If the parent case has a valid email, the display status of the parent case is "Pending Agent Review" with a sub status of "Awaiting action by agent (58)." </p>
+                    </li>
+                    <li>
+                        <p>The display status of the child case with the undeliverable email is "Undeliverable Email." The sub status is a new override that states "Undeliverable Email." </p>
+                    </li>
+                    <li>
+                        <p>The display status of the child case without the undeliverable email is "Pending Agent Review" with a sub status of "Awaiting action by agent (58)."</p>
+                    </li>
+                </ul>
+                <p>There is an audit entry when the status changes. The child case with the undeliverable email has the audit entry: "The email for '{0}' is undeliverable.  Client requests have now been revoked."  The other child cases have the audit entry ”Transaction has been canceled due to an undeliverable email.  Client cases have now been revoked.”</p>
+            </li>
+            <li>
+                <p>The requests sent out are revoked and an email sent to the valid email addresses stating that the requests have been revoked due to the undeliverable email. </p>
+                <p>The cases appear in the Recent Activity section of the agent's dashboard with the status of "Pending Agent Review" and they also increment the count on the e-delivery button as they are in agent review.</p>
+            </li>
+            <li>
+                <p>When the agent views the case, the Cancel E-Delivery and Sign Now buttons are disabled on the agent's dashboard. When the agent opens the case, it will also have an annotation dialog: "An email was returned as undeliverable. Reason: Undeliverable email to {0}.”</p>
+            </li>
+            <li>
+                <p>The Case is now ready to be reviewed by the agent, where the agent can either: </p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Fix the email address (if allowed by carrier). The agent enters the correct email address in the field on the form that is mapped to the appropriate data item for the party's email address and then approves the case to send it back out to the client(s).  </p>
+                    </li>
+                    <li>
+                        <p>Request a reissue. Agent clicks the <b class="Bold">Request Reissue</b> button and selects <b class="Bold">Update Client Email Address</b> in the <b class="Bold">Reason</b> list, and enters the correct client email address. The case is put in a terminal status and sent to the carrier, just like it does for Agent Directed Fill and Sign when a client requests a change and the agent then requests a reissue. </p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <p><b class="Bold">All Other E-Delivery Workflows</b>
+        </p>
+        <p>For the Parent case:</p>
+        <ul>
+            <li>
+                <p>Will have a display status of Canceled (ACORD TC 8). When the Parent case is Canceled, FireLight deletes and revokes access to the child cases and adds an audit entry and sends an email to the clients stating, "Transaction has been canceled due to an undeliverable email. Client cases have now been revoked." In Admin Help, see the<MadCap:conditionalText MadCap:conditions="General.PDF"> "Revoke E-Delivery Request"</MadCap:conditionalText><MadCap:conditionalText MadCap:conditions="General.Online"> <MadCap:xref href="../../../Organization Configuration/Email/E-Delivery/Revoke E-Delivery Request - Undeliverable Email.htm" alt="Revoke E-Delivery Request (Undeliverable Email)" target="_blank" title="Revoke E-Delivery Request (Undeliverable Email)">Revoke E-Delivery Request (Undeliverable Email)</MadCap:xref></MadCap:conditionalText> topic.</p>
+            </li>
+            <li>
+                <p>The sub status is Other.</p>
+            </li>
+        </ul>
+        <p>For the Child cases:</p>
+        <ul>
+            <li>
+                <p>The child cases will have a display status of Canceled (ACORD TC 8). </p>
+            </li>
+            <li>
+                <p>The sub status for the child case that had an error with delivery is a new override that states "Undeliverable Email."</p>
+            </li>
+            <li>
+                <p>The sub status for the child cases that did not have an error with delivery is changed to "Other."</p>
+            </li>
+            <li>
+                <p>If both email addresses were incorrect, the first one would have already deleted the child cases and put the parent case into a terminal status. </p>
+            </li>
+        </ul>
+        <p>After the cases are updated, they appear in the Recent Activity section of the agent's dashboard with the status of "Policy Canceled" and an 1122 is generated after the status update and sent to the carrier to notify them of the change. When the agent views the case for Deliver Only, the Approve and Cancel E-Delivery buttons are disabled. </p>
+        <p><b>NOTE:</b> If the name and address are changed through data items, it is not reflected in the 1122 that goes back to the carrier.  It would have the original name and address sent over in the 121 and would show the change in the data items only when the case is complete or in a terminal status.</p>
+        <p><b class="Bold">After the Carrier Submits a Reversal</b>
+        </p>
+        <p>After the carrier submits a reversal for a case that is in a Canceled status due to an undeliverable email, it will procedd and return a success, provided a matching case with the same TransReGUID, PolicyNo, and Product ID are found. The case is put into a status of the "original" status for the workflow (without losing history) so it can be processed again, which includes deleting of documents, updating data items, and sending a new client pickup emails with the link to perform the appropriate action (pickup, sign, etc.) and new client passcode emails.</p>
+        <ul>
+            <li>
+                <p>Agent Directed Fill and Sign   – the case appears in the Recent Activity list of the agent's dashboard as well as the E-Delivery dashboard with the status updated to "Pending Agent Review." When the agent views the case,  the Cancel E-Delivery, Request Reissue, and Approve buttons are enabled.</p>
+            </li>
+            <li>
+                <p>Client Directed Fill and Sign  – the case appears in the Recent Activity list of the agent's dashboard  as well as the E-Delivery dashboard with the status updated to "Pending Client Review." When the agent views the case, the Requests and Cancel E-Delivery buttons are enabled. The Approve button is disabled.</p>
+            </li>
+            <li>
+                <p> Agent Directed Deliver Only – the case appears in the Recent Activity list of the agent's dashboard  as well as the E-Delivery dashboard with the status updated to Pending Agent Review and the Cancel E-Delivery, Request Print, and Approve buttons are enabled. </p>
+            </li>
+            <li>
+                <p>Client Directed Deliver Only   – the case appears in the Recent Activity list of the agent's dashboard  as well as the E-Delivery dashboard with the status updated to "Pending E-Delivery." When the agent views the case, the Requests, Cancel E-Delivery, and Request Print buttons are enabled. The Approve button is disabled.</p>
+            </li>
+            <li>
+                <p>Client Directed Sign Only    – the case appears in the Recent Activity list of the agent's dashboard  as well as the E-Delivery dashboard with the status updated to "Pending Signatures." When the agent views the case, the Requests, Cancel E-Delivery, and Request Print buttons are enabled. The Approve button is disabled.</p>
+            </li>
+        </ul>
+    </body>
+</html>
