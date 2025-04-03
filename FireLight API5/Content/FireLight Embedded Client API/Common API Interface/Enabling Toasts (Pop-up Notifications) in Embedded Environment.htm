@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+        <!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11228600.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+    </head>
+    <body>
+        <h1>Enabling Toasts (Pop-up Notifications) in Embedded Environment</h1>
+        <p>We have provided a checkbox to enable or disable the Toasts component on the embedded side.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>Toggle Feature</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">&lt;div class=”dropdown”&gt;
+	&lt;button id=”toggleDropdown” class=”dropdownButton”&gt;Toggle&lt;/button&gt;"
+	&lt;div id+”toggleDropdown_contnet” class=”dropdown-content”&gt;
+		&lt;a id=”showErrorMessages” href=”#messages” &gt;Show Error Messages&lt;/a&gt;
+		&lt;a id=”toggleObfuscation” href=”#obfuscation” &gt;Obfuscation&lt;/a&gt;
+		&lt;a id=”toggleSignEvents” href=”#signEvents” &gt;Embedded ESign Event Popups&lt;/a&gt;
+		&lt;input type=”checkbox” id=”toggleToast” checked=”checked” /&gt; Toggle Toast&lt;/input&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>On the embedded side, this code listens for changes to the toggle Toast checkbox and, when a change occurs, it calls the useDefaultToasts method of FireLight API, passing the new checked state of the checkbox. This likely toggles the use of default toast notifications based on whether the checkbox is checked or not.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: Java;">2 references
+toggleObfuscation.addEventListener(‘click’, function (e) { e.preventDefault(); FireLightAPI.toggleObfuscation(); });
+2 references
+toggleToast.addEventListener(‘change’, function (e) { e.preventDefault(); FireLightAPI.userDefaultToasts(e.target.checked); });
+2 references
+toggleSignEvents.addEventListener(‘click’, function (e) { e.preventDefault(); showSignEvents = !showSignEvents; });
+2 references
+actionDropdown.addEventListener(‘click’, function (e) { openDropdown(‘actionsDropdown_content’); });</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>On the FireLight side, the public useDefaultToasts(isVisible: boolean) method dispatches an action to the Redux store to update the visibility state of default toast notifications.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">/**Toggle Toast Visibility*/
+public useDefaultToasts(isVisible: Boolean) {
+	store.dispatch&lt;any&gt;(useDefaultToasts(isVisible));
+}
+/** Gets a list of currently available actions */
+Public getAvailableActions()
+{
+	return {
+		isUnlockAvailable: false
+}</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>
+            <br />Here is the API in Firelight, InitialLoad() which is called when the application gets loaded initially; inside that there is a function GetInitialLoadModel() called and inside that called CreateInitialLoadModel() called where the property “EnableToastsForEmbedded” has been added inside InitialLoadModel.cs file (bool), setting the value of FeatureFlag associated with this work to it.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">[WebRequest]
+public virtual JsonNetResult InitialLoad()
+{ 
+	If (Model != null) SetTraceData(Model.Application.ApplicationId.ToString(“d’));
+	//re-get the app for the model in case it’s changed
+	Model.Applicationd = AppManager.GetApplication(new Request_GetApplication(Model.Application)
+	//only display external dialog if provider implements
+	Model.ShowExternalStatusDialog = Factoy.GetApplicationManager(OrganizationId).Implemented
+	var model=GetInitialLoadMode();
+	ProcessMultiAppLoading(model.Wizard, Model.Application.ApplicationId);
+	Id (Model.Application.AccordType == AccordTypes.ENROLLMENT)
+	{
+		ProcessEnrollmentAppLoading(model.Wizard, Model.Application.ApplicationId);
+	}
+		//model.DialogMessage = GetSuranceBaySoftStopMessage();
+		model.DialogMessageUrl = GetDialogMessageUrl(model);
+	}
+	if (Model.CanAutoSave)
+		IntSave();
+	Return this.JsonNet(model);
+}</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>The state of the wizard has been set in different areas and utilized for embedded react.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: Java;">IsTransfer = Model.IsTransfer,
+HasReplacedProduct = Model.HasReplacedProduct,
+PackageUpdagedNeedsUnlock = Model.IsPackageUpdated &amp;&amp; Model.Application.IsLocked,
+PackageUpdated = Model.IsPackageUpdated &amp;&amp; !Model.ApplicationIsLocked,
+IsSubmitted = Model.Application.Status &gt;= (Int32)StatusType.Submitted,
+HasPostSubmitStep = ActivityManager.HasPostSubmitStep(Model.ActivityType).
+StatusNotification = GetStatusNotification(isNonSponsoder, out string key, SessionState.UserId_, //Dist-626 In case of ????
+StatusNofication = key,
+StatusNotificationTitle = Model.ActivityType.CustomTextActionLabel,
+StatusNotificationFunction = Model.ActivityType.GetCutstomTextFunction(ActivityManager.HasPostSubmitStep(Model.ActivityType
+CanSellMessage = Model.CanSellMessage,
+StateVerifiedMessage = Model.StateVerfiedMsg.Replace(“, “, “m \n”),
+EnableObfuscation = SessionState.GroupFlags.HasFlag(UserGroupFlags.EnableObfuscation),
+ObfuscationTimeout = SessionState.ObfuscationTimeout,
+ProductNotification = AppManager.GetMyMessage(new Request_GetMyMessages(SessionState.UserName, SessionState.UserId, (int0
+				?.OrderByDescending(x =&gt; x.CreateDate).FirstOrDefault()?.Message,
+ShowExternalStatusDialog = Model.ShowExternalStatusDialog,
+EnableToastsForEmbedded = Factory.GetFeatureFlagManager().IsFeatureEnabled(FeatureFlags.PC2776EnableToastForEmbedded)
+
+(!string.IsNullOrEmpty(SessionState.HTTPRedirectURL))
+	</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>These are root.tsx replies in 1 FireLight\AppPortal\Source\InsTech.EverGreen.Web\app\src\areas\eApp\root\root.tsx</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">private renderForEmbedded() {
+	const { onContinue, onUpdateField } = this.props;
+	const { currentModel } = this.props.wizardState;
+	const shouldShowToasts = this.props.wizardState.isShowToast &amp;&amp; this.props.wizardState.isToastEnabledForEmbedded;
+	return this.props.wizardState.currentModel &amp;&amp; (
+		&lt;div className=”ITWizardRoot”&gt;
+			(this.props.isLoading || this.props.isDelayed &amp;&amp;
+				&lt;Spinner overlay={true}&gt;&lt;/Spinner&gt;
+			}
+			{this.renderView()}
+			&lt;ThirdPartyCookieBlockedMessage /&gt;
+			&lt;CustomList wizardModel={this.props.wizardState.currentModel} /&gt;
+			&lt;CrmRoot /&gt;
+			&lt;CustomActionRoot /&gt;
+			&lt;ConfirmationDialog /&gt;
+			&lt;DocumentsDialog currentPage={this.props.wizardState.currentModel?.PageNumber} /&gt;
+			&lt;MagnumFormDialog /&gt;
+			&lt;AuraDialog /&gt;
+			&lt;SummaryDialog controllerName=”EditWizardApplication” applicationId={currentModel?.ActivityMap?.ActivityID} /&gt;
+			&lt;UnlockDialog controllerName=”EditWizardApplication” applicationID={currentModel?.ActivityMap?.ActivityID} /&gt;
+			&lt;TransferDialog currentPage={currentModel?.PageNumber} /&gt;
+			&lt;ShareDialog /&gt;
+			&lt;OptionalFormsDialog currentPage={currentModel?.PageNumber} /&gt;
+			{shouldShowToasts &amp;&amp; (
+				&lt;Toasts
+					onContinue={onContinue}
+					onRulePopupButtonClick={(dataItemID, buttonText) =&gt; onUpdateField(dataItemID, buttonText)}
+				/&gt;
+			)}
+			&lt;ErrorMessage renderAsDialog={true} currentError={this.props.currentError} onAcknowledgeResponseError={this.props.onAcknowledgeResponseError} /&gt;
+		&lt;/div&gt;
+	);
+}
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>2) FireLight\AppPortal\Source\InsTech.EverGreen.Web\app\src\areas\illustration\root\root.tsx</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve">private renderForEmbedded() {
+	const { currentModel } = this.props.wizardState;
+	const shouldShowToasts = this.props.wizardState.isShowToast &amp;&amp; this.props.wizardState.isToastEnabledForEmbedded
+	return currentModel &amp;&amp; (
+		&lt;div className=”ITWixardRoot”&gt;
+			{(this.props.isLoading || this.props.isDelated) &amp;&amp;
+				&lt;Spinner overlay={true}&gt;&lt;/Spinner&gt;
+			}
+			{this.renderView()}
+			&lt;ThirdPartyCookieBlockedMessage /&gt;
+			&lt;CustomList wizardModel-{currentModel} /&gt;
+			&lt;CrmRoot /&gt;
+			&lt;CustomActRoot /&gt;
+			&lt;ErrorMessage renderAsDialog={true} currentError={this.props.currentError} onAcknowledgeResponseError={this.props}
+			&lt;QuickView /&gt;
+			&lt;ReportMessages /&gt;
+			&lt;SummaryDialog controllerName=”EditWizardApplication” applicationId-{CurrentModel?.ActivityMap?.ActivityID} /&gt;
+			&lt;ShareDialgo /&gt;
+			&lt;DocuemntsDialog currentPage={currentModel?.PageNumber} /&gt;
+			{shouldShowToasts &amp;&amp; (,Toasts
+				onContinue={() =&gt; this.props.onContinue(currentModel.IllustraitonApplicationLink}}
+				onRulePopupButtonCLick={(dataItemId, buttonText) =&gt; this.props.onUpdateField(dateItemID, buttonText)}
+			/&gt;)}
+		&lt;/div&gt;
+	);
+}
+/**
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>&#160;</p>
+    </body>
+</html>

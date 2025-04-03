@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <meta name="description" content="FireLight ACORD Tx1228 Requirements and Usage Overview" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11270800.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>ACORD Tx1228 Requirements and Usage</h1>
+        <h2>Overview</h2>
+        <p>FireLight<sup MadCap:conditions="Default.Web">®</sup> provides support for an ACORD Tx1228 during the sign on process. This ACORD request can be used to provide login credentials and agent information as well as specify firm information and product availability. When specifying firm information, applications can be tied to a firm so managers who need to review their firm’s applications can easily do so.</p>
+        <p>During SSO login, any parties identified with a relation role code of 120 (OLI_REL_AGENTOF) in the 1228 that have an email address (identified by PrefEmailAddr, primary email, or the first email address if not specified) and a producer registration FirmRegistrationNum value will be maintained and identified within FireLight by the FirmRegistrationNum. When an application lands in the review queue, if a match for the application’s Firm identifier is found in the firm contact information maintained in FireLight, the notification will be sent to that firm’s email address. If not found, the queue email address will be used as before.</p>
+        <p>The topics in this section detail the usage and requirements FireLight has for the Tx1228 used in the sign on process.</p>
+        <p MadCap:conditions="Default.Web" class="Indent">
+            <MadCap:xref href="TX1228 Examples.htm" alt="TX1228 Examples">TX1228 Examples</MadCap:xref>
+        </p>
+        <p MadCap:conditions="Default.Web" class="Indent">
+            <MadCap:xref href="Elements within the Tx1228.htm" alt="Elements within the Tx1228">Elements within the Tx1228</MadCap:xref>
+        </p>
+        <p MadCap:conditions="Default.Web" class="Indent">
+            <MadCap:xref href="Usage.htm" alt="Usage">Usage</MadCap:xref>
+        </p>
+    </body>
+</html>

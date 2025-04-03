@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="FireLight Developer Guide"
+  Type="MsWord"
+  Destinations=""
+  ShowMadCapBacklink="true"
+  MasterToc="/Project/TOCs/FLDeveloperPDF.fltoc"
+  MasterPageLayout="/Content/Resources/PageLayouts/Word8_5X11/2017WordNormal8_5X11.flpgl"
+  DisableAutoSync="false"
+  ConditionTagExpression="include[Default.PrintOnly], exclude[Default.Mobile or Default.Postpone or Default.ScreenOnly or Default.Tablet or Default.Web]"
+  PatchHeadingLevels="true"
+  EmbedImages="true"
+  InjectBookHeadings="true"
+  MasterStylesheetOverride="true">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false"
+    OutputFormat="docx"
+    ExpandingTextConversion="expand"
+    PopupConversion="expand"
+    DisableMasterPageUsage="true" />
+  <Variables>
+    <Variable
+      Name="General/VersionNumber">3.0</Variable>
+    <Variable
+      Name="General/DocumentName">Developer Guide</Variable>
+    <Variable
+      Name="General/UserGuideTitle">FireLight Developer Guide</Variable>
+    <Variable
+      Name="General/Email">info@insurancetechnologies.com</Variable>
+    <Variable
+      Name="General/PhoneNumber">719.442.6400</Variable>
+  </Variables>
+</CatapultTarget>

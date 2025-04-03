@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11234000.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>ProcessEDeliveryCase</h1>
+        <p>Create or update an eDelivery application and related data and return the response. </p>
+        <p>Requires API Token, but does not need an API Token with an associated user.</p>
+        <p><b>URL</b> </p>
+        <p>{<a href="../Endpoint Root URLs.htm" class="Hyperlink" alt="rootURL">rootURL</a>}/EDelivery/ProcessEDeliveryCase</p>
+        <p><b>Request body </b><b class="red">*required</b>
+        </p>
+        <p>The TX121 request body for creating and updating an eDelivery activity</p>
+        <p><b>Response</b>
+        </p>
+        <p>The <span class="opblock-summary-path">ProcessEDeliveryCase</span> method returns a TXLifeResponse with a TransResult ResultCode tc value of “1” if the request was successful, otherwise the tc value is a different integer value and the reason for the failed is in the text of the ResultCode tag.</p>
+        <p><b>Example</b>
+        </p>
+        <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>ProcessEDeliveryCase</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: JavaScript;">public IActionResult ProcessEDelivery()
+        {
+            ProcessEDeliveryModel result = new ProcessEDeliveryModel();
+
+            string url = "https://firelight.insurancetechnologies.com/EGApp/api/EDelivery/ProcessEDeliveryCase";
+            string body = @"
+&lt;TXLife xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" Version=""2.37.00"" xmlns=""http://ACORD.org/Standards/Life/2""&gt;
+    &lt;TXLifeRequest id=""_b82a4cd5-4361-a6dc-f780-f3a2fcda7c4e"" PrimaryObjectID=""Holding_PP6544PJ6590""&gt;
+        &lt;TransRefGUID&gt;" + result.CurrentGuid.ToString() + @"&lt;/TransRefGUID&gt;
+        &lt;TransType tc=""121""&gt;General Requirement Order Request &lt;/TransType&gt;
+        &lt;TransSubType tc=""12100""&gt;General Requirement Order Request &lt;/TransSubType&gt;
+        &lt;TransExeDate&gt;2018-11-12&lt;/TransExeDate&gt;
+        &lt;TransExeTime&gt;10:34:30&lt;/TransExeTime&gt;
+        &lt;ProcessingInstruction&gt;
+            &lt;ProcessingInstructionType tc=""9""&gt;Workflow&lt;/ProcessingInstructionType&gt;
+            &lt;ProcessingInstructionDesc&gt;Agent Directed&lt;/ProcessingInstructionDesc&gt;
+        &lt;/ProcessingInstruction&gt;
+        &lt;TransExeDate/&gt;
+        &lt;TransExeTime/&gt;
+        &lt;TransMode tc=""2""/&gt;
+        &lt;PrimaryObjectType tc=""4""/&gt;
+        &lt;OLifE&gt;
+            &lt;Holding id=""Holding_PP6544PJ6590""&gt;
+                &lt;HoldingTypeCode tc=""2""&gt;Policy&lt;/HoldingTypeCode&gt;
+                &lt;Policy CarrierPartyID=""""&gt;
+                    &lt;PolNumber&gt;7550001&lt;/PolNumber&gt;
+                    &lt;LineOfBusiness tc=""1""&gt;Life&lt;/LineOfBusiness&gt;
+                    &lt;ProductType tc=""3""&gt;Term&lt;/ProductType&gt;
+                    &lt;ProductCode&gt;S10P&lt;/ProductCode&gt;
+                    &lt;CarrierCode&gt;IT&lt;/CarrierCode&gt;
+                    &lt;PlanName&gt;Flex Term Series X, Renewable Term Life Insurance Policy&lt;/PlanName&gt;
+                    &lt;PolicyStatus tc=""8""&gt;Pending&lt;/PolicyStatus&gt;
+                    &lt;Jurisdiction tc=""1""&gt;Alabama&lt;/Jurisdiction&gt;
+                    &lt;EffDate&gt;2019-03-28&lt;/EffDate&gt;
+                    &lt;Life&gt;
+                        &lt;InitialPremAmt&gt;50000&lt;/InitialPremAmt&gt;
+                        &lt;FaceAmt&gt;500000&lt;/FaceAmt&gt;
+                        &lt;Coverage&gt;
+                            &lt;IndicatorCode tc=""""/&gt;
+                        &lt;/Coverage&gt;
+                    &lt;/Life&gt;
+                    &lt;ApplicationInfo&gt;
+                        &lt;SignedDate&gt;2019-05-05&lt;/SignedDate&gt;
+                        &lt;CWAAmt&gt;50000&lt;/CWAAmt&gt;
+                        &lt;PremBalDue&gt;450000&lt;/PremBalDue&gt;
+                    &lt;/ApplicationInfo&gt;
+                    &lt;RequirementInfo AppliesToPartyID=""Party_77pa65ba9-27eb-4228-962f-9fda3c14d8ca""&gt;
+                        &lt;RequirementInfoUniqueID&gt;SIGN755000101&lt;/RequirementInfoUniqueID&gt;
+                        &lt;RequirementDetails/&gt;This may contain extra instructions for the Fulfiller party or AppliesTo party 
+                        &lt;ReqStatus tc=""1""&gt;Pending&lt;/ReqStatus&gt;
+                        &lt;RequestedDate&gt;2019-10-03&lt;/RequestedDate&gt;
+                        &lt;FulfilledDate&gt;2019-06-08&lt;/FulfilledDate&gt;
+                        &lt;FulfilledTime&gt;01:01:01&lt;/FulfilledTime&gt;
+                        &lt;StatusDate&gt;2019-06-08&lt;/StatusDate&gt;
+                        &lt;StatusTime&gt;01:01:01&lt;/StatusTime&gt;
+                        &lt;RequirementStatusReason/&gt;
+                        &lt;ReqSubStatus tc=""58""&gt;Awaiting Action by Agent&lt;/ReqSubStatus&gt;
+                    &lt;/RequirementInfo&gt;
+                    &lt;RequirementInfo AppliesToPartyID=""Party_b27ec71c-7772-4d7e-a89a-71cb2dcac9a8""&gt;
+                        &lt;RequirementInfoUniqueID&gt;SIGN755000102&lt;/RequirementInfoUniqueID&gt;
+                        &lt;RequirementDetails/&gt;This may contain extra instructions for the Fulfiller party or AppliesTo party 
+                        &lt;ReqStatus tc=""1""&gt;Pending&lt;/ReqStatus&gt;
+                        &lt;RequestedDate&gt;2019-10-03&lt;/RequestedDate&gt;
+                        &lt;FulfilledDate&gt;2019-06-08&lt;/FulfilledDate&gt;
+                        &lt;FulfilledTime&gt;01:01:01&lt;/FulfilledTime&gt;
+                        &lt;StatusDate&gt;2019-06-08&lt;/StatusDate&gt;
+                        &lt;StatusTime&gt;01:01:01&lt;/StatusTime&gt;
+                        &lt;RequirementStatusReason/&gt;
+                        &lt;ReqSubStatus tc=""58""&gt;Awaiting Action by Agent&lt;/ReqSubStatus&gt;
+                    &lt;/RequirementInfo&gt;
+                    &lt;RequirementInfo AppliesToPartyID=""Party_6246b9b2-df6c-43d4-8a41-f8e4bd72a32a""&gt;
+                        &lt;RequirementInfoUniqueID&gt;SIGN755000104&lt;/RequirementInfoUniqueID&gt;
+                        &lt;RequirementDetails/&gt;This may contain extra instructions for the Fulfiller party or AppliesTo party 
+                        &lt;ReqStatus tc=""1""&gt;Pending&lt;/ReqStatus&gt;
+                        &lt;RequestedDate&gt;2019-10-03&lt;/RequestedDate&gt;
+                        &lt;FulfilledDate&gt;2019-06-08&lt;/FulfilledDate&gt;
+                        &lt;FulfilledTime&gt;01:01:01&lt;/FulfilledTime&gt;
+                        &lt;StatusDate&gt;2019-06-08&lt;/StatusDate&gt;
+                        &lt;StatusTime&gt;01:01:01&lt;/StatusTime&gt;
+                        &lt;RequirementStatusReason/&gt;
+                        &lt;ReqSubStatus tc=""58""&gt;Awaiting Action by Agent&lt;/ReqSubStatus&gt;
+                    &lt;/RequirementInfo&gt;
+                &lt;/Policy&gt;
+            &lt;/Holding&gt;
+            &lt;Party id=""Party_00b65ba9-27eb-4228-962f-9fda3c14d8ca""&gt;
+                &lt;PartyTypeCode tc=""2""&gt;Organization&lt;/PartyTypeCode&gt;
+                &lt;FullName&gt;Insurance Technologies&lt;/FullName&gt;
+                &lt;Carrier&gt;
+                    &lt;CarrierCode&gt;IT&lt;/CarrierCode&gt;
+                    &lt;CarrierForm tc=""1""&gt;Direct Carrier&lt;/CarrierForm&gt;
+                    &lt;NAICCode&gt;90611&lt;/NAICCode&gt;
+                    &lt;NAICGroupCode&gt;761&lt;/NAICGroupCode&gt;
+                &lt;/Carrier&gt;
+                &lt;Organization&gt;
+                    &lt;AbbrName&gt;IT&lt;/AbbrName&gt;
+                    &lt;DBA&gt;IT&lt;/DBA&gt;
+                    &lt;OrgCode&gt;IT&lt;/OrgCode&gt;
+                    &lt;DTCCMemberCode&gt;ABCD&lt;/DTCCMemberCode&gt;
+                &lt;/Organization&gt;
+            &lt;/Party&gt;
+            &lt;Party id=""Party_77pa65ba9-27eb-4228-962f-9fda3c14d8ca""&gt;
+                &lt;PartyTypeCode tc=""1""&gt;Person&lt;/PartyTypeCode&gt;
+                &lt;FullName&gt;Mark Agent&lt;/FullName&gt;
+                &lt;Person&gt;
+                    &lt;FirstName&gt;Mark&lt;/FirstName&gt;
+                    &lt;LastName&gt;Agent&lt;/LastName&gt;
+                    &lt;BirthDate&gt;1985-01-01&lt;/BirthDate&gt;
+                &lt;/Person&gt;
+                &lt;Address&gt;
+                    &lt;AddressTypeCode tc=""17""/&gt;
+                    &lt;Line1&gt;601 LYONS WAY&lt;/Line1&gt;
+                    &lt;City&gt;PLACENTIA&lt;/City&gt;
+                    &lt;AddressStateTC tc=""6""&gt;California&lt;/AddressStateTC&gt;
+                    &lt;Zip&gt;92870&lt;/Zip&gt;
+                &lt;/Address&gt;
+                &lt;EMailAddress&gt;
+                    &lt;EMailType tc=""5""/&gt;
+                    &lt;AddrLine&gt;email@insurancetechnologies.com&lt;/AddrLine&gt;
+                &lt;/EMailAddress&gt;
+                &lt;Producer&gt;
+                    &lt;CarrierAppointment id=""CarrierAppointment_4407eb59-45c7-4b54-8ef0-19a8856968f6""&gt;
+                        &lt;CompanyProducerID&gt;00000000-0000-0000-0000-000000000001&lt;/CompanyProducerID&gt;
+                        &lt;CarrierCode&gt;IT&lt;/CarrierCode&gt;
+                        &lt;CarrierName&gt;Insurance Technologies&lt;/CarrierName&gt;
+                        &lt;CarrierApptTypeCode tc=""""/&gt;
+                    &lt;/CarrierAppointment&gt;
+                &lt;/Producer&gt;
+            &lt;/Party&gt;
+            &lt;Party id=""Party_b27ec71c-7772-4d7e-a89a-71cb2dcac9a8""&gt;
+                &lt;PartyTypeCode tc=""1""&gt;Person&lt;/PartyTypeCode&gt;
+                &lt;Person&gt;
+                    &lt;FirstName&gt;Simon&lt;/FirstName&gt;
+                    &lt;LastName&gt;Taylor&lt;/LastName&gt;
+                    &lt;BirthDate&gt;1955-02-02&lt;/BirthDate&gt;
+                &lt;/Person&gt;
+                &lt;EMailAddress&gt;
+                    &lt;EMailType tc=""5""&gt;whatever&lt;/EMailType&gt;
+                    &lt;AddrLine&gt;email@insurancetechnologies.com&lt;/AddrLine&gt;
+                &lt;/EMailAddress&gt;
+                &lt;GovtID&gt;222-22-2222&lt;/GovtID&gt;
+                &lt;GovtIDTC tc=""1"" /&gt;
+            &lt;/Party&gt;
+            &lt;Party id=""Party_6246b9b2-df6c-43d4-8a41-f8e4bd72a32a""&gt;
+                &lt;PartyTypeCode tc=""1""&gt;Person&lt;/PartyTypeCode&gt;
+                &lt;Person&gt;
+                    &lt;FirstName&gt;Sara&lt;/FirstName&gt;
+                    &lt;LastName&gt;Taylor&lt;/LastName&gt;
+                    &lt;BirthDate&gt;1955-03-03&lt;/BirthDate&gt;
+                &lt;/Person&gt;
+                &lt;EMailAddress&gt;
+                    &lt;EMailType tc=""5""&gt;whatever&lt;/EMailType&gt;
+                    &lt;AddrLine&gt;email@insurancetechnologies.com&lt;/AddrLine&gt;
+                &lt;/EMailAddress&gt;
+                &lt;GovtID&gt;222-55-1287&lt;/GovtID&gt;
+                &lt;GovtIDTC tc=""1"" /&gt;
+            &lt;/Party&gt;
+            &lt;Relation id=""Relation_94a85ae3-c7ee-42b6-b787-a259f6acd722"" OriginatingObjectID=""Holding_PP6544PJ6590"" RelatedObjectID=""Party_77pa65ba9-27eb-4228-962f-9fda3c14d8ca""&gt;
+                &lt;OriginatingObjectType tc=""4""&gt;OLI_HOLDING&lt;/OriginatingObjectType&gt;
+                &lt;RelatedObjectType tc=""6""&gt;OLI_PARTY&lt;/RelatedObjectType&gt;
+                &lt;RelationRoleCode tc=""11""&gt;OLI_REL_AGENT&lt;/RelationRoleCode&gt;
+            &lt;/Relation&gt;
+            &lt;Relation id=""Relation_94a85ae3-c7ee-42b6-b787-a259f6acd723"" OriginatingObjectID=""Holding_PP6544PJ6590"" RelatedObjectID=""Party_b27ec71c-7772-4d7e-a89a-71cb2dcac9a8""&gt;
+                &lt;OriginatingObjectType tc=""4""&gt;OLI_HOLDING&lt;/OriginatingObjectType&gt;
+                &lt;RelatedObjectType tc=""6""&gt;OLI_PARTY&lt;/RelatedObjectType&gt;
+                &lt;RelationRoleCode tc=""8""&gt;OLI_REL_OWNER&lt;/RelationRoleCode&gt;
+            &lt;/Relation&gt;
+            &lt;Relation id=""Relation_94a85ae3-c7ee-42b6-b787-a259f6acd724"" OriginatingObjectID=""Holding_PP6544PJ6590""  RelatedObjectID=""Party_6246b9b2-df6c-43d4-8a41-f8e4bd72a32a""&gt;
+                &lt;OriginatingObjectType tc=""4""&gt;OLI_HOLDING&lt;/OriginatingObjectType&gt;
+                &lt;RelatedObjectType tc=""6""&gt;OLI_PARTY&lt;/RelatedObjectType&gt;
+                &lt;RelationRoleCode tc=""32""&gt;OLI_REL_INSURED&lt;/RelationRoleCode&gt;
+            &lt;/Relation&gt;
+            &lt;Relation id=""Relation_94a85ae3-c7ee-42b6-b787-a259f6acd725"" OriginatingObjectID=""Holding_PP6544PJ6590""  RelatedObjectID=""Party_b27ec71c-7772-4d7e-a89a-71cb2dcac9a8""&gt;
+                &lt;OriginatingObjectType tc=""4""&gt;OLI_HOLDING&lt;/OriginatingObjectType&gt;
+                &lt;RelatedObjectType tc=""6""&gt;OLI_PARTY&lt;/RelatedObjectType&gt;
+                &lt;RelationRoleCode tc=""31""&gt;OLI_REL_PAYER&lt;/RelationRoleCode&gt;
+            &lt;/Relation&gt;
+            &lt;FormInstance id=""FormInstance_60bd354c-b211-423a-8038-9500fb4ff844""&gt;
+                &lt;FormName&gt;Policy&lt;/FormName&gt;
+                &lt;ProviderFormNumber&gt;eDelivery Template Form&lt;/ProviderFormNumber&gt;
+                &lt;OriginatingTransType tc=""510""&gt;FormInstance Update&lt;/OriginatingTransType&gt;
+            &lt;/FormInstance&gt;
+            &lt;FormInstance id=""FormInstance_60bd354c-b111-423a-8038-9500fb4ff844""&gt;
+                &lt;FormName&gt;ABC&lt;/FormName&gt;
+                &lt;ProviderFormNumber&gt;PolicyLife&lt;/ProviderFormNumber&gt;
+                &lt;OriginatingTransType tc=""510""&gt;FormInstance Update&lt;/OriginatingTransType&gt;
+            &lt;/FormInstance&gt;
+        &lt;/OLifE&gt;
+    &lt;/TXLifeRequest&gt;
+&lt;/TXLife&gt;";
+            String token = GetToken("IT", "00000000-0000-0000-0000-000000000001");
+            try
+            {
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+                request.ContentType = "text/xml";
+                request.Headers.Add("authorization", "Bearer " + token);
+                request.Method = "POST";
+
+                Byte[] contentBytes = Encoding.UTF8.GetBytes(body);
+                request.ContentLength = contentBytes.LongLength;
+
+                // Send request
+                using (Stream post = request.GetRequestStream())
+                {
+                    post.Write(contentBytes, 0, contentBytes.Length);
+                }
+
+                using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+                {
+                    StreamReader reader = new StreamReader(response.GetResponseStream());
+                    string res = reader.ReadToEnd();
+
+                    XmlDocument doc = new XmlDocument() { InnerXml = res };
+
+                    if (doc.GetElementsByTagName("ResultCode").Item(0).Attributes.GetNamedItem("tc").Value == "1")
+                    {
+                        result.ResponseText = doc.GetElementsByTagName("ResultCode").Item(0).InnerText;
+                    }
+                }
+            }
+            catch (WebException ex)
+            {
+                if (ex.Response != null &amp;&amp; ex.Response.ContentLength &gt; 0)
+                {
+                    using (StreamReader s = new StreamReader(ex.Response.GetResponseStream()))
+                    {
+                        string message = s.ReadToEnd();
+                        Console.WriteLine(message);
+                    }
+                }
+                throw;
+            }
+            return View(result);
+        }
+
+    public class ProcessEDeliveryModel
+    {
+        public ProcessEDeliveryModel()
+        {
+            CurrentGuid = Guid.NewGuid();
+        }
+        public String ResponseText { get; set; }
+        public Guid CurrentGuid { get; set; }
+    }
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p class="Style1_1" MadCap:conditions="Default.Web"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/TableStyles/2017-ITPatternedRows2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11272000.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>ACORD TX103 Transaction Request</h1>
+        <p>The following exemplifies the minimalistic version of a TX103 that can be accepted by FireLight<sup MadCap:conditions="Default.Web">®</sup>. See <MadCap:xref href="../ACORD Tx103 Requirements and Usage/ACORD Tx103 Requirements and Usage.htm" alt="FireLight ACORD Tx103 Requirements and Usage">FireLight ACORD Tx103 Requirements and Usage</MadCap:xref> for additional information on 103 requirements.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>ACORD TX103 Transaction Request</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;TXLife xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsl:"http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://ACORD.org/Standards/Life/2"&gt;
+  &lt;TXLifeRequest&gt;
+    &lt;TransRefGUID&gt;e74f5211bb4244e88042e6fc222f3937&lt;/TransRefGUID&gt;
+    &lt;TransType tc="103"&gt;OLI_TRANS_NBSUB&lt;/TransType&gt;
+    &lt;TransExeDate&gt;2011-10-15&lt;/TransExeDate&gt;
+    &lt;TransExeTime&gt;08:41:17.3373644-06:00&lt;/TransExeTime&gt;
+    &lt;OLifE&gt;
+      &lt;Holding id="9393d31c-7e09-4f4b-a27d-83dafdd542c3"&gt;
+        &lt;HoldingTypeCode tc="2"&gt;OLI_HOLDTYPE_POLICY&lt;/HoldingTypeCode&gt;
+        &lt;HoldingName&gt;Policy Changes&lt;/HoldingName&gt;
+        &lt;Policy&gt;
+         &lt;ProductCode&gt;XXX DEFINED PRODUCT CODE&lt;/ProductCode&gt;
+          &lt;CarrierCode&gt;XXX DEFINED CARRIER Code&lt;/CarrierCode&gt;
+         &lt;Jurisdiction tc="7"&gt;OLI_USA_CO&lt;/Jurisdiction&gt;
+        &lt;/Policy&gt;
+      &lt;/Holding&gt;
+      &lt;Party id="Party_1"&gt;
+        &lt;PartyTypeCode tc="1"&gt;OLI_PT_PERSON&lt;/PartyTypeCode&gt;
+        &lt;Person&gt;
+          &lt;FirstName&gt;Jane&lt;/FirstName&gt;
+          &lt;LastName&gt;Smith&lt;/LastName&gt;
+        &lt;/Person&gt;
+        &lt;Producer&gt;
+          &lt;CarrierAppointment PartyID="Party_1"&gt;
+            &lt;CompanyProducerID&gt;XXX00001&lt;/CompanyProducerID&gt;
+            &lt;CarrierCode&gt;XXX&lt;/CarrierCode&gt;
+          &lt;/CarrierAppointment&gt;
+        &lt;/Producer&gt;
+      &lt;/Party&gt;
+      &lt;Relation OriginatingObjectID="Holding_1" RelatedObjectID="Party_1"&gt;
+        &lt;OriginatingObjectType tc="4"&gt;OLI_HOLDING&lt;/OriginatingObjectType&gt;
+        &lt;RelatedObjectType tc="6"&gt;OLI_PARTY&lt;/RelatedObjectType&gt;
+        &lt;RelationRoleCode tc="37"&gt;OLI_REL_PRIMAGENT&lt;/RelationRoleCode&gt;
+      &lt;/Relation&gt;
+    &lt;/OLifE&gt;
+  &lt;/TXLifeRequest&gt;
+&lt;/TXLife&gt;
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <h2>Submitting Compliant Illustration</h2>
+        <p>You can add to the transaction a compliant illustration as a base64 encoded string under the &lt;Attachment&gt; element within the &lt;Holding&gt; aggregate. The original format of the document must be PDF. The document will be included within the final package submitted to the carrier for processing.</p>
+        <p>The table below lists the required elements that must be part of the &lt;Attachment&gt; aggregate.</p>
+        <table style="margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../Resources/TableStyles/2017-ITPatternedRows2.css');" class="TableStyle-2017-ITPatternedRows2" cellspacing="0">
+            <caption class="Table">Required Elements for the  &lt;Attachment&gt; Aggregate</caption>
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" />
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" style="width: 24px;" />
+            <thead>
+                <tr class="TableStyle-2017-ITPatternedRows2-Head-Header1">
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Element</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;Description&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">A short 255 characters or less description of the document.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;AttachmentData64Binary&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">The base64 encoded string value of the PDF document.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;AttachmentType&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">“tc” value of “7” for OLI_ATTACH_ASORIGSOLDILLUS.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;ImageType&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">“tc” value of “4” for OLI_IMAGE_PDF.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-LightRows"><strong>&lt;AttachmentLocation&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyA-Regular-LightRows">“tc” value of “1” for OLI_INLINE</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+        </p>
+        <p>The following is a sample &lt;Attachment&gt; aggregate:</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>&lt;Attachment&gt; Aggregate</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;Attachment&gt;
+  &lt;Description&gt;Compliant Illustration&lt;/Description&gt;
+  &lt;AttchmentData64Binary&gt;JVBERi0xLjQKJeLjz9MKMiAwIG9iaiA8PC9...&lt;/AttchmentData64Binary&gt;
+  &lt;AttchmentType tc="7"&gt;OLI_ATTACH_ASORIGSOLDILLUS&lt;/AttachmentType&gt;
+  &lt;ImageType tc="4"&gt;OLI_IMAGE_PDF&lt;/ImageType&gt;
+  &lt;AttachmentLocation tc="1"&gt;OLI_INLINE&lt;/AttachmentLocation&gt;
+ &lt;/Attachment&gt; </MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <h2>Creating a Fee Inquiry Transaction</h2>
+        <p><strong>NOTE:</strong> The fee inquiry transaction is used with the FireLight fees, expenses and commissions repository, which requires a licensing fee.</p>
+        <p>A fee inquiry transaction can be created by sending over a 103 with the transaction type of 1241.  This will land the user in the product selection screen for the fee inquiry transaction type.  The following sample contains the minimum requirements for the fee inquiry 103 post-over:</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>Fee Inquiry Transaction</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;?xml version="1.0"?&gt;
+&lt;TXLife xmlns="http://ACORD.org/Standards/Life/2"&gt;
+  &lt;TXLifeRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+    &lt;TransRefGUID&gt;2F5B9603-1364-4653-8547-B3C0E2AA6AB0&lt;/TransRefGUID&gt;
+     &lt;TransType tc="1241"&gt;OLI_TRANS_TRNFEEEXPENSE&lt;/TransType&gt;
+    &lt;OLifE&gt;
+      &lt;Holding id="Holding_3b5b9652-97cd-4a5b-8e4e-79141039fd14"&gt;
+        &lt;HoldingTypeCode tc="2"&gt;OLI_HOLDTYPE_POLICY&lt;/HoldingTypeCode&gt;
+        &lt;Policy&gt;
+          &lt;CarrierCode&gt;IT&lt;/CarrierCode&gt;
+        &lt;/Policy&gt;
+      &lt;/Holding&gt;
+        &lt;Party id="Party_c5b61954-69eb-4ba5-8d1d-e3bc241a2c5d"&gt;
+        &lt;Producer&gt;
+          &lt;CarrierAppointment id="CarrierAppointment_4407eb59-45c7-4b54-8ef0-19a8856968f6"&gt;
+            &lt;CompanyProducerID&gt;IT02000&lt;/CompanyProducerID&gt;
+          &lt;/CarrierAppointment&gt;
+        &lt;/Producer&gt;
+      &lt;/Party&gt;
+      &lt;Relation id="Relation_94a85ae3-c7ee-42b6-b787-a259f6acd722" OriginatingObjectID="Holding_3b5b9652-97cd-4a5b-8e4e-79141039fd14" RelatedObjectID="Party_c5b61954-69eb-4ba5-8d1d-e3bc241a2c5d"&gt;
+       &lt;OriginatingObjectType tc="4"&gt;OLI_HOLDING&lt;/OriginatingObjectType&gt;
+        &lt;RelatedObjectType tc="6"&gt;OLI_PARTY&lt;/RelatedObjectType&gt;
+        &lt;RelationRoleCode tc="37"&gt;OLI_REL_PRIMAGENT&lt;/RelationRoleCode&gt;
+      &lt;/Relation&gt;
+    &lt;/OLifE&gt;
+  &lt;/TXLifeRequest&gt;
+&lt;/TXLife&gt;
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <h2>Submitting a Third Party Needs Determination</h2>
+        <p>You can attach a needs determination transaction completed outside FireLight using attachments. A needs determination attachment differs from other attachments in that it cannot be deleted or modified in the newly created application. It can be used to replace a needs determination template in the package, allowing it to be included in the edit application view and in the signing ceremony. An Upload Document type of Needs Determination must be added to the organization’s list profile to support this workflow.</p>
+        <p>The following is a sample needs determination &lt;Attachment&gt; aggregate:</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>Needs Determination &lt;Attachment&gt; Aggregate</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;Attachment&gt;
+  &lt;Description&gt;NeedsDetermination&lt;/Description&gt;
+  &lt;AttachmentData64Binary&gt;JVBERi0xLjQKJeLjz9KMiAwIG9Ia8PC9…&lt;/AttachmentData64Binary&gt;
+   &lt;ImageType tc="4" /&gt;
+    &lt;OLifEExtension VendorCode="25"&gt;
+    &lt;DocumentTag&gt;NeedsDetermination&lt;/DocumentTag&gt;
+    &lt;/OLifEExtension&gt;
+&lt;/Attachment&gt;
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p MadCap:conditions="Default.Web"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

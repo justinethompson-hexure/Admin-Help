@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/TableStyles/2017-ITPatternedRows2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+        <!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11234600.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+    </head>
+    <body>
+        <h1><a name="Top"></a>UploadDocument</h1>
+        <p>HTTP POST to upload document(s) for the activity with the specified request body.</p>
+        <p>Requires an API Token with an associated user.</p>
+        <p><b>URL</b>
+        </p>
+        <p>{<a href="../Endpoint Root URLs.htm" class="Hyperlink" alt="rootURL">rootURL</a>}/Activity/UploadDocument</p>
+        <p><b>Request body </b><b class="red">*required</b>
+        </p>
+        <p>
+            <MadCap:xref href="../../JSON Models/Rest API Models/UploadDocumentRequest.htm" alt="UploadDocumentRequest">UploadDocumentRequest</MadCap:xref> Model. The request body needed to upload document for the activity.</p>
+        <p><b>Response</b>
+        </p>
+        <p>The <MadCap:xref href="../../JSON Models/Rest API Models/GeneralAPIResponse.htm" alt="GeneralAPIResponse">GeneralAPIResponse</MadCap:xref> model will be returned. The ResultCode in model will indicate if the request was successful or not.</p>
+        <p><b>Example</b>
+        </p>
+        <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>UploadDocument</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: JavaScript;">string url = "https://firelight.insurancetechnologies.com/EGApp/api/Activity/UploadDocument";
+string body = "{'Id': 'be3bb20a-236f-482f-9336-3e0afb8ded55', 
+'Attachments': [{'AttachmentName':'TestDoc','AttachmentType': 0, 'DocumentType': 0,
+              'DocumentFormat': 3, 'DocumentTag': '', 
+'AttachmentData64Binary': '&lt;BINARY ATTACHMENT DATA&gt;'}]}";
+
+string token = GetToken();
+
+try
+{ 
+    HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+
+    request.ContentType = "application/json";
+    request.Headers.Add("authorization", "Bearer " + token);
+    request.Method = "POST";
+
+    Byte[] contentBytes = Encoding.UTF8.GetBytes(body);
+    request.ContentLength = contentBytes.LongLength;
+
+    // Send request
+    using (Stream post = request.GetRequestStream())
+    {
+        post.Write(contentBytes, 0, contentBytes.Length);
+    }
+
+    using (HttpWebResponse response = (HttpWebResponse) request.GetResponse())
+    {
+        StreamReader reader = new StreamReader(response.GetResponseStream());
+        string result = reader.ReadToEnd();
+        Console.WriteLine(result);
+    }
+}
+catch (WebException ex)
+{
+    if (ex.Response != null &amp;&amp; ex.Response.ContentLength &gt; 0)
+    {
+        using (StreamReader s = new StreamReader(ex.Response.GetResponseStream()))
+        {
+            string message = s.ReadToEnd();
+            Console.WriteLine(message);
+        }
+    }
+}
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p MadCap:conditions="Default.Web">&#160;</p>
+        <h2 MadCap:conditions="Default.Web">Errors and Exceptions</h2>
+        <h3 MadCap:conditions="Default.Web">Version 1</h3>
+        <table style="width: 100%;border-spacing: 5px 5px;border-left-style: solid;border-left-width: 1px;border-right-style: solid;border-right-width: 1px;border-top-style: solid;border-top-width: 1px;border-bottom-style: solid;border-bottom-width: 1px;mc-table-style: url('../../Resources/TableStyles/2017-ITPatternedRows2.css');" class="TableStyle-2017-ITPatternedRows2" cellspacing="0">
+            <col style="width: 352px;" class="TableStyle-2017-ITPatternedRows2-Column-Regular" />
+            <col style="width: 306px;" class="TableStyle-2017-ITPatternedRows2-Column-Regular" />
+            <col style="width: 117px;" class="TableStyle-2017-ITPatternedRows2-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-2017-ITPatternedRows2-Head-Header1">
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Criteria</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Error</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadD-Regular-Header1">Status Code</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Organization of the Auth Token is Not Set.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Org value not valid.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">500</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Ssytem is null or Empty Guid</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">No associated user.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">500</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Activity Id is missing or empty in URL</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Required ActivityID is missing or empty.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">500</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Activity was not found</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Activity {activitID} not found.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">500</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">User does not have rights to access activity</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">User {UserID} does not have rights to activity {ActivityID}.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">500</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">When application has validation errors</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Validation errors; unable to lock application.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">500</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">The total documents size in the application exceeds the configured CumulativeMaxUploadFileSize</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">The total size of the attachments in this application exceeds the maximum of {cumulativeMaxUploadSize} MB</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">500</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">One of the attachments in the request body exceeds the org configured Maximum File Upload Size</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">The attachment {attachmentName} is larger than the maximum of {maxUploadSize} MB.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">500</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">The request document type or document tag are not valid</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Document type {DocumentType} with tag "{DocumentTag}' not found.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">500</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-DarkerRows">The document type has already been uploaded (applies to template document, needs determination, and illustration documents)</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-DarkerRows">Document type '{DocumentTag}' ({AttachmentName}) already uploaded.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyA-Regular-DarkerRows">500</td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="Default.Web">&#160;</p>
+        <h3 MadCap:conditions="Default.Web">Version 2</h3>
+        <table style="width: 100%;border-spacing: 5px 5px;border-left-style: solid;border-left-width: 1px;border-right-style: solid;border-right-width: 1px;border-top-style: solid;border-top-width: 1px;border-bottom-style: solid;border-bottom-width: 1px;mc-table-style: url('../../Resources/TableStyles/2017-ITPatternedRows2.css');" class="TableStyle-2017-ITPatternedRows2" cellspacing="0">
+            <col style="width: 299px;" class="TableStyle-2017-ITPatternedRows2-Column-Regular" />
+            <col style="width: 379px;" class="TableStyle-2017-ITPatternedRows2-Column-Regular" />
+            <col style="width: 126px;" class="TableStyle-2017-ITPatternedRows2-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-2017-ITPatternedRows2-Head-Header1">
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Criteria</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Error</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadD-Regular-Header1">Status Code</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Invalid Organization</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Invalid organization map code (Organization)</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">400</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Organization is blank</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Unable to get Org from request</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">400</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">System user is null or Empty Guid</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">No associated user</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">400</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Request Body is empty</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Request malformed</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">400</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">AttachmenetData64Binary null or blank or if not Base64 string</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Invalid AttachmentData64Binary value</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">400</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">DocumentType is not defined</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Invalid DocumentType value:&#160;(DocumentType)</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">400</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">DocumentFormat is not defined </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Invalid DocumentFormat value: {DocumentFormat}</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">400</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Activity Id is missing or empty in URL</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Required ActivityId is missing or empty</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">400</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Activity was not found</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Activity {activityId} not found</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">400</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">User does not have rights to access activity</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">User {UserID} does not have rights to activity {ActivityID}</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">401</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Application StatusType is complete or checkedout</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Documents may not longer be added to this case.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">400</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Document size greater than MaxDocumentSize</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Uploaded document length {0} exceeds maximum allowed size</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">400</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">The total documents size in the application exceeds the configured CumulativeMaxUploadFileSize</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">The total size of the attachments in this application exceeds the maximum {cumulativeMaxUploadSize}&#160;MB.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">400</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">One of the attachments in the request body exceeds the org configured Maximum File Upload Size</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">The attachment {attachmentName} is larger than the maximum of {maxUploadSize} MB.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">400</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">The request document type or document tag are not valid.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Document type {DocumentType] with tag '{DocumentTag}' no found.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">400</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-DarkerRows">The document type has already been uploaded (applies to template documents, needs determination, and illustration documents)</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-DarkerRows">Document type '{DocumentTag}' ({AttachmentName}) already uploaded.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyA-Regular-DarkerRows">400</td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="Default.Web">&#160;</p>
+        <h2>How to Enable and Use This Feature</h2>
+        <p>This can be tested using the Sample App Web API.</p>
+        <ol>
+            <li>
+                <p>Create an activity in the App Portal.</p>
+            </li>
+            <li>
+                <p>In the Sample App/Web API tool at flt-dev12-pres1.insurancetechnologies.com/SampleApplication/WebApiTestPage.aspx set the organization, the initial endpoint to https://fldev.insurancetechnologies.com/EGAppembeddedparity/api/Activity/v2/UploadDocument  (update the branch to the desired branch for endpoints).</p>
+            </li>
+            <li>
+                <p>Add the desired request body (see example above) if user want to upload document.</p>
+            </li>
+            <li>
+                <p>Verify that the 1228 has the company producer id and the rolecode for the user that created the application you are wanting to Upload Document.  Ensure the tc value of the role code is set correctly.</p>
+            </li>
+            <li>
+                <p>Click the <b>Click Me!</b> button and the returned response ResultCode 1 and no error message which shows document(s) has been uploaded for the passed activity ID.</p>
+            </li>
+        </ol>
+        <h2>App Changes</h2>
+        <p>​For a POST request will upload document(s) for the given activity data; the endpoint to request is  https://fldev.insurancetechnologies.com/EGAppembeddedparity/api/Activity/v2/UploadDocument with the passed requested body. If the request is successful, a result code of 1 and a status code of 200 will be returned.</p>
+        <p>​For an unsuccessful request, will return a response based on the exception type and the route path.  An extension method has been added to determine if the path contains v2.  If the path does not contain v2, the original server error response type 500 will be returned.  If version 2 is being used, the status code of 400 for bad request or 401 for unauthorized access will be returned.</p>
+        <p>​For missing required parameters in the request, will throw an exception of bad request.  The validation for the user’s access to an activity will return an exception of unauthorized access.</p>
+        <p>​A successful response for the UploadDocument request will contain Result Code 1 and no validation messages means document(s) uploaded successfully.</p>
+        <p>​Initial validation of the UploadDocument request is handled by the APIControllerBase and will set the trace id to the activity id for Upload Document.  It will validate there is an activity id, the activity id exists, the org is valid, the user in the 1228 is value, the external mapcode is valid, and the user has rights to the activity.</p>
+        <p>​If the organization passed is invalid, the exception “Invalid Organization map code {organization}” will be returned. If the path does not contain v2, the original server error response type 500 will be returned.  If version 2 is being used, the status code of 400 for bad request will be returned.</p>
+        <p>​<img src="../../Resources/Images/InvalidOrganization.png" /></p>
+        <p>​If the organization passed is blank, the exception “Unable to get Org from request” will be returned. If the path does not contain v2, the original server error response type 500 will be returned.  If version 2 is being used, the status code of 400 for bad request will be returned.</p>
+        <p>​<img src="../../Resources/Images/UnabletoGetOrg.png" /></p>
+        <p>​If System user is null or Empty Guid, the exception “No associated user” will be returned. If the path does not contain v2, the original server error response type 500 will be returned.  If version 2 is being used, the status code of 400 for bad request will be returned.</p>
+        <p>
+            <img src="../../Resources/Images/NoAssociatedUser.png" />
+        </p>
+        <p>If request body is empty, the validation message “Request malformed” will be returned. If the path does not contain v2, the original server error response type 500 will be returned.  If version 2 is being used, the status code of 400 for bad request will be returned.</p>
+        <p>​<img src="../../Resources/Images/RequestMalformed.png" style="width: 6in;" /></p>
+        <p>​If AttachmentData64Binary null or blank or if not Base64 string in request body, the validation message  “Invalid AttachmentData64Binary value” will be returned. If the path does not contain v2, the original server error response type 500 will be returned.  If version 2 is being used, the status code of 400 for bad request will be returned.</p>
+        <p>
+            <img src="../../Resources/Images/InvalidAttachmentData64BinaryValue.png" style="width: 6in;" />
+        </p>
+        <p>​If DocumentType is not defined in request body, the validation message “Invalid DocumentType value: {DocumentType}” will be returned. If the path does not contain v2, the original server error response type 500 will be returned.  If version 2 is being used, the status code of 400 for bad request will be returned.</p>
+        <p>
+            <img src="../../Resources/Images/InvalidDocumentType.png" style="width: 6in;" />​</p>
+        <p>​If DocumentFormat is not defined in request body, the validation message “Invalid DocumentFormat value: {DocumentFormat}” will be returned. If the path does not contain v2, the original server error response type 500 will be returned.  If version 2 is being used, the status code of 400 for bad request will be returned.</p>
+        <p>​<img src="../../Resources/Images/InvalidDocumentFormatValue.png" style="width: 6in;" /></p>
+        <p>​If ActivityId is missing or empty in request body, the validation message “Required ActivityId is missing or empty" will be returned. If the path does not contain v2, the original server error response type 500 will be returned.  If version 2 is being used, the status code of 400 for bad request will be returned.</p>
+        <p>
+            <img src="../../Resources/Images/RequiredActivityIdIsMissing.png" style="width: 6in;" />​</p>
+        <p>​If ActivityId passed in request body not found, the validation message “ActivityId {ActivityId} not found” will be returned. If the path does not contain v2, the original server error response type 500 will be returned.  If version 2 is being used, the status code of 400 for bad request will be returned.</p>
+        <p>
+            <img src="../../Resources/Images/ActivityIDNotFound.png" style="width: 6in;" />​</p>
+        <p>​For uploading document(s), the user must own the activity.  If the user does not, an exception will be returned:  "User {UserID} does not have rights to activity {ActivityId}." If the path does not contain v2, the original server error response type 500 will be returned.  If version 2 is being used, the status code of 401 for unauthorized will be returned.</p>
+        <p>​<img src="../../Resources/Images/UserDoesNotHaveRights.png" style="width: 6in;" /></p>
+        <p>​If Application StatusType is complete or checkedout for passed ActivityId in request body, the validation message  “Documents may no longer be added to this case” will be returned. If the path does not contain v2, the original server error response type 500 will be returned.  If version 2 is being used, the status code of 400 for bad request will be returned.</p>
+        <p>​<img src="../../Resources/Images/DocumentsMayNoLongerBeAdded.png" style="width: 6in;" /></p>
+        <p>​If the attached document passed in the requested body size is greater than MaxDocumentSize, the validation message “The attachment {AttachmentName} is larger than the maximum of {maxUploadSize} MB” will be returned. If the path does not contain v2, the original server error response type 500 will be returned.  If version 2 is being used, the status code of 400 for bad request will be returned.</p>
+        <p>​<img src="../../Resources/Images/BadRequest.png" style="width: 6in;" /></p>
+        <p>​If total size of attached documents passed in the requested body size is greater than cumulativeMaxUploadSize, the validation message will be returned: “The total size of the attachments in this application exceeds the maximum of {cumulativeMaxUploadSize} MB.” If the path does not contain v2, the original server error response type 500 will be returned.  If version 2 is being used, the status code of 400 for bad request will be returned.</p>
+        <p>​<img src="../../Resources/Images/MaxUploadExceeded400.png" style="width: 6in;" /></p>
+        <p>​If the DocumentType and the DocumentTag do not match what is available on the organization’s list profile settings for UploadDocumentTypes, the validation messagem​”Document type {DocumentType} with tag '{DocumentTag}' not found"   will be returned.</p>
+        <p>​</p>
+        <p>​<img src="../../Resources/Images/DocumentTagNotFound.png" /></p>
+        <p>If the document type only allows a single document upload (template documents, Illustration, Needs Determination), the validation message ​"Document type '{DocumentTag}' ({AttachmentName}) already uploaded" will be returned.</p>
+        <p>
+            <img src="../../Resources/Images/DocumentTypeAlreadyUploaded.png" />
+        </p>
+        <p>​</p>
+        <p MadCap:conditions="Default.Web">&#160;</p>
+        <p MadCap:conditions="Default.Web"><a href="#Top" alt="Return to Top" title="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

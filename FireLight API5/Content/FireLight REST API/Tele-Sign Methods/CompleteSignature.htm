@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11236600.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>CompleteSignature</h1>
+        <p><b class="Bold">/TeleSign/CompleteSignature</b>
+        </p>
+        <p>HTTP post that validates input data during a Tele-Sign request.</p>
+        <p>Requires an API Token with an associated user.</p>
+        <p><b>Request body </b> <MadCap:xref href="../../JSON Models/Rest API Models/CompleteSignatureRequest.htm" alt="CompleteSignatureRequest">CompleteSignatureRequest</MadCap:xref> <b class="red">*required</b></p>
+        <p>A list of data items used to validate a signer during the Tele-Sign process.</p>
+        <p><b>Response </b> <MadCap:xref href="../../JSON Models/Rest API Models/CompleteSignatureResponse.htm" alt="CompleteSignatureResponse">CompleteSignatureResponse</MadCap:xref></p>
+        <p>Success response code or unsuccessful response code and an error message.</p>
+        <p><b>Example</b>
+        </p>
+        <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>CompleteSignature</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: JavaScript;">*IVRId can be either an IVR call record ID or a contact ID.
+
+Server Side Code:
+public IActionResult CompleteSignature()
+{
+    string url = "https://firelight.insurancetechnologies.com/EGApp/api/TeleSign/CompleteSignature";
+    string body = "{ 
+    TeleSignAppId: \”12345\”, 
+    ANI: \”8888888888\”, 
+    DNIS: \”8888888888\”, 
+    IVRId: \”1111111\”, 
+    FireLightAppId: \”00000000-0000-0000-0000-000000000000\”, 
+    CarrierCode: \”IT\”, 
+    CompletionDate: \“2011-10-05T14:48:00.000Z\”, Declined: false }”;
+    String token = GetToken();
+
+    CompleteSignatureResponse model;
+    try
+    {
+        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+
+        request.ContentType = "application/json";
+        request.Headers.Add("authorization", "Bearer " + token);
+        request.Method = "POST";
+
+        Byte[] contentBytes = Encoding.UTF8.GetBytes(body);
+        request.ContentLength = contentBytes.LongLength;
+
+        // Send request
+        using (Stream post = request.GetRequestStream())
+        {
+            post.Write(contentBytes, 0, contentBytes.Length);
+        }
+
+        using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+        {
+            StreamReader reader = new StreamReader(response.GetResponseStream());
+            string result = reader.ReadToEnd();
+
+            model = JsonConvert.DeserializeObject(result, typeof(CompleteSignatureResponse)) as CompleteSignatureResponse;
+
+            if ((int)model.ResultCode == 1 || (int)model.ResultCode == 2)
+            {
+                // Request was completed successfully
+            }
+            else
+            {
+                // One or more errors occurred
+                var errors = model.Messages;
+                var fireLightAppId = model.FireLightAppId;
+            }        
+        }
+    }
+    catch (WebException ex)
+    {
+	  // Request was not successful
+        if (ex.Response != null &amp;&amp; ex.Response.ContentLength &gt; 0)
+        {
+            using (StreamReader s = new StreamReader(ex.Response.GetResponseStream()))
+            {
+                string message = s.ReadToEnd();
+                Console.WriteLine(message);
+            }
+        }
+        throw;
+    }
+}
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p MadCap:conditions="Default.Web"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <p MadCap:conditions="Default.PrintOnly">&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">5231600.00000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1>E-Sign Workflows</h1>
+        <h2>Steps for Using FireLight E-Sign within an Embedded Application</h2>
+        <ol>
+            <li>
+                <p>Enable the proxy server from within your embedded application. </p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>FireLightAPI.init(token, activityId, isNew, enableErrorHandling, useAuthProxy)</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>(User fills out the embedded application.)</p>
+            </li>
+            <li>
+                <p>Implement an application completion process. For example, check that the application is complete by using FireLight.statusEvent.subscribe(), and checking status.percentComplete in the callback.</p>
+            </li>
+            <li>
+                <p>Call API.proceedToSignatures(). This verifies the application is ready for signatures and raises a signatureStatusEvent. Check status.succeeded to continue.</p>
+            </li>
+            <li>
+                <p>Navigate to FireLight E-Sign using SSO. See the SSO information on how this may be done. Using the <MadCap:xref href="../Sign On Methods/Token SSO/Token SSO.htm" alt="Token SSO">Token SSO</MadCap:xref> approach is recommended because a token has already been retrieved. This approach would require setting the following query string parameters: appId &amp; relayState=eSign.</p>
+            </li>
+        </ol>
+        <h2>Steps for Using Embedded E-Sign within an Embedded Application</h2>
+        <ol>
+            <li>
+                <p>Load the Embedded E-App application:</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Call FireLightAPI.loadModule('EApp') </p>
+                    </li>
+                    <li>
+                        <p>Call FireLightAPI.init(token, activityId, isNew, enableErrorHandling, useAuthProxy)</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>(User fills out the embedded application.)</p>
+            </li>
+            <li>
+                <p>Implement an application completion process. For example, check that the application is complete by calling the FireLight API's IsComplete method.</p>
+            </li>
+            <li>
+                <p>Call API.proceedToSignatures(). This verifies the application is ready for signatures and raises a signatureStatusEvent. Check status.succeeded to continue.</p>
+            </li>
+            <li>
+                <p>Load the Embedded E-Sign application: </p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Call FireLightAPI.loadModule('eSign')</p>
+                    </li>
+                    <li>
+                        <p>Call FireLightAPI.loadEmbeddedESign(activityId)</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>When signatures are complete the user should be navigated away from eSign. For example navigate back to the eApp module. </p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Call FireLightAPI.loadModule(‘EApp’)</p>
+                    </li>
+                    <li>
+                        <p>Call FireLightAPI.loadEmbeddedEApp(activityId)</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <p><strong>Features currently missing from Embedded E-Sign:</strong>
+        </p>
+        <ul>
+            <li>
+                <p>Canceling of an Active Signer </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Re-Signing is still available. The signer must complete the signature process and then use Re-Sign.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <MadCap:pageBreak />
+    </body>
+</html>

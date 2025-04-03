@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11236000.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1>GetReviewQueueStates</h1>
+        <p><b>HTTP POST to get application state in review queue.</b>
+        </p>
+        <p>Requires an API Token with an associated user.</p>
+        <p><b>URL</b>
+        </p>
+        <p>{<a href="../Endpoint Root URLs.htm" class="Hyperlink" alt="rootURL">rootURL</a>}/ReviewQueue/GetReviewQueueStates</p>
+        <p><b>Request body *required</b>
+        </p>
+        <p>
+            <MadCap:xref href="../../JSON Models/Rest API Models/GetReviewQueueStatesRequest.htm" title="GetReviewQueueStatesRequest" alt="GetReviewQueueStatesRequest">GetReviewQueueStatesRequest</MadCap:xref> Model.</p>
+        <p>The request body needed to get an application state in review queue.</p>
+        <p><b>Response</b>
+        </p>
+        <p>The GetReviewQueueStates method returns a <MadCap:xref href="../../JSON Models/Rest API Models/ReviewQueueGetStatusResponseModel.htm" title="ReviewQueueGetStatusResponseModel" alt="ReviewQueueGetStatusResponseModel">ReviewQueueGetStatusResponseModel</MadCap:xref> model</p>
+        <p><b>Example</b>
+        </p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>GetReviewQueueStates – POST</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: JavaScript;"> ReviewQueueGetStatusResponseModel result = null;
+ string url = "https://firelight.insurancetechnologies.com/EGApp/api/ReviewQueue/GetReviewQueueStates "
+ string body = { 'AppCode': 'a8667fdc-d1a2-4669-8235-b6fe8eafe701', 
+                    'CarrierCode': 'IT'} ";
+
+            String token = GetToken();
+            try
+            {
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+
+request.ContentType = "application/json";
+                request.Headers.Add("authorization", "Bearer " + token);
+                request.Method = "POST";
+
+             Byte[] contentBytes = Encoding.UTF8.GetBytes(body);
+                request.ContentLength = contentBytes.LongLength;
+// Send request
+    using (Stream post = request.GetRequestStream())
+    {
+        post.Write(contentBytes, 0, contentBytes.Length);
+    }
+
+
+                using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+                {
+                    StreamReader reader = new StreamReader(response.GetResponseStream());
+                    string data = reader.ReadToEnd();
+                    Console.WriteLine(data);
+
+                    result = JsonConvert.DeserializeObject(data, typeof(ReviewQueueGetStatusResponseModel)) as ReviewQueueGetStatusResponseModel;
+                }
+            }
+            catch (WebException ex)
+            {
+                if (ex.Response != null &amp;&amp; ex.Response.ContentLength &gt; 0)
+                {
+                    using (StreamReader s = new StreamReader(ex.Response.GetResponseStream()))
+                    {
+                        string message = s.ReadToEnd();
+                        Console.WriteLine(message);
+                    }
+                }
+                throw;
+            }
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>&#160;</p>
+    </body>
+</html>

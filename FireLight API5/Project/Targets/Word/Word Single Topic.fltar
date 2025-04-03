@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="New Target"
+  Type="MsWord"
+  Destinations=""
+  ShowMadCapBacklink="true"
+  MasterToc="/Project/TOCs/FLDeveloperWordSingleTOC.fltoc"
+  MasterPageLayout="/Content/Resources/PageLayouts/Word8_5X11/2017WordNormal8_5X11.flpgl"
+  MasterStylesheet="/Content/Resources/Stylesheets/2017MainStyles.css"
+  PatchHeadingLevels="true"
+  EmbedImages="true">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="false"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false"
+    OutputFormat="docx"
+    ExpandingTextConversion="expand"
+    EnableTrackedChanges="false" />
+</CatapultTarget>

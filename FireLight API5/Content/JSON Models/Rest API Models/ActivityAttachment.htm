@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>ActivityAttachment</h1>
+        <p><b>Type:</b> object</p>
+        <p><b>Properties:</b>
+        </p>
+        <ul>
+            <li>
+                <p><b>AttachmentName</b> string</p>
+                <p>The name of the attachment</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p><b>AttachmentType </b>int (OLI_LU_ATTACHMENTTYPE): optional</p>
+                <p>The type of the attachment</p>
+            </li>
+        </ul>
+        <ul>
+            <li><b><span style="color: #000000;">DocumentType</span> </b><span style="color: #000000;">int</span> (<MadCap:xref href="ActivityAttachmentDocumentType.htm" alt="ActivityAttachmentDocumentType">ActivityAttachmentDocumentType</MadCap:xref>)</li>
+            <p>For template forms, the DocumentType will always be 6, which corresponds to Additional Doc With Signatures.</p>
+        </ul>
+        <ul>
+            <li>
+                <p><b>DocumentFormat </b>int (<MadCap:xref href="ActivityAttachmentDocumentFormat.htm" alt="ActivityAttachmentDocumentFormat">ActivityAttachmentDocumentFormat</MadCap:xref>): default 3</p>
+                <p>The file format of the attachment</p>
+            </li>
+        </ul>
+        <ul>
+            <li><b><span style="color: #000000;">DocumentTag</span> </b><span style="color: #000000;">string</span>
+                <p>Document tag values are set per the organization's UploadDocumentTypes list profile and correspond to the entry's &lt;Description/&gt; value.</p>
+                <p>&#160;</p>
+                <p>For non-template forms, the DocumentType and the &lt;Description/&gt; tag must match for the request to be accepted. For example, if you are uploading a non-template form with a DocumentType of 4, the DocumentTag must match the &lt;Description/&gt; value that is set for that &lt;UploadDocumentType/&gt; entry within the list profile.</p>
+                <p>&#160;</p>
+                <p>For template forms (these must have a DocumentType value of 6), the DocumentTag must match the &lt;Description/&gt; value of any configured &lt;UploadDocumentType/&gt; entry that has an &lt;AdditionalDocWithSignatures/&gt; DocType value. The Document Tag field in the Form Library corresponds to the value passed for template documents.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p><b>AttachmentData64Binary </b>string</p>
+                <p>Attachment data in Base64 binary format</p>
+            </li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

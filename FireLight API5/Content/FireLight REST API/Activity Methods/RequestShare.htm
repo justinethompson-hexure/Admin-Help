@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+        <!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11234000.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+    </head>
+    <body>
+        <h1><a name="top"></a>RequestShare</h1>
+        <p><b>HTTP POST to create an activity share or all activity with another user from the same organization with the user associated to the auth token (IS4) that was passed in the header.</b>
+        </p>
+        <p>A user session is required for this request.</p>
+        <p><b>URL</b>
+        </p>
+        <p>{rootURL}/CaseShare/v2/RequestShare</p>
+        <p><b>Request body</b> <span style="color: #ff0000;font-weight: bold;">*required</span></p>
+        <p>The ShareRequestModel needed to request a share with the associated user. The ID is required for a single activity share request and omitted for an all-activity share request.</p>
+        <p><b>Response</b>
+        </p>
+        <p>The RequestShare method returns a ShareResponseModel.</p>
+        <p><b>Example</b>
+        </p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>GetShareUsers</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: Java;">RequestShare result = null;
+                string url = "https://firelight.insurancetechnologies.com/EGApp/api/CaseShare/v2/RequestShare";
+                string token = String.IsNullOrWhiteSpace(Token) ? GetToken() : Token;
+                string body = "{'Id':'2001ec54-8ac9-4c86-a23b-553aa6e5e3de', ‘ShareRight’: 6, ‘ShareUserId’: ‘ '867e03e7-474e-472b-a8b8-5200f602523c'’}";
+                try
+                {
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+                Request.ContentType = "application/json";
+                request.Headers.Add("authorization", "Bearer " + token);
+                request.Method = "POST";
+                Byte[] contentBytes = Encoding.UTF8.GetBytes(body);
+                request.ContentLength = contentBytes.LongLength;     
+                //Send request
+                using (Stream post = request.GetRequestStream())
+                {
+                post.Write(contentBytes, 0, contentBytes.Length);
+                }         
+                using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+                {
+                StreamReader reader = new StreamReader(response.GetResponseStream());
+                string data = reader.ReadToEnd();
+                Console.WriteLine(data);
+                result = JsonConvert.DeserializeObject(data, typeof(RequestShare)) 
+                as RequestShare;
+                }
+                }
+                catch (WebException ex)
+                {
+                {
+                using (StreamReader s = new StreamReader(ex.Response.GetResponseStream()))
+                {
+                string message = s.ReadToEnd();
+                Console.WriteLine(message);
+                }
+                }
+                throw;
+                }</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p class="Style1_1" MadCap:conditions="Default.Web"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

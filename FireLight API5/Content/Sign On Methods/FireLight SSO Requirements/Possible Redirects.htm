@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <meta name="description" content="FireLight SSO Requirements Possible Redirects" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11274400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1>Possible Redirects</h1>
+        <p>After authentication the user will be redirected to one of the following pages within the FireLight<sup MadCap:conditions="Default.Web">®</sup> system:</p>
+        <ol>
+            <li>
+                <p>If the SSO contained a TX103 transaction, the user will be redirected to the Edit Application View.</p>
+            </li>
+            <li>
+                <p>If the URL contains the query string “appId” and the referenced application does not exist within FireLight, the user will be redirected to a page indicating the application is not on file.</p>
+            </li>
+            <li>
+                <p>If the URL contains the query string “appId” and references a valid FireLight application identifier owned by the authenticated user, the user will be redirected to the Edit Application View, unless the RelayState is set to eSign.</p>
+            </li>
+            <li>
+                <p>If the RelayState is Set to eSign and the URL contains the query string “appId” and the appId references a valid FireLight application identifier owned by the authenticated user and the application is Locked or PendingSignature Status, then the User will be redirected to the eSign View.</p>
+            </li>
+            <li>
+                <p>If the RelayState is Set to eSign and the URL contains the query string “appId” and the appId references a valid FireLight application identifier owned by the authenticated user but the Application is not in a valid status for Signatures, the user will be redirected to an Invalid Request Page.</p>
+            </li>
+            <li>
+                <p>If no TX103 exists and the user is authenticated, the user will be redirected to the FireLight Home page.</p>
+            </li>
+            <li>
+                <p>If the request fails authentication or validation for any reason, the user will be redirected to a FireLight error page.</p>
+            </li>
+            <li>
+                <p>If the form post RelayState field contains one of the following values, the user will redirected to the corresponding page in FireLight:</p>
+                <p>Home =&gt; Home page</p>
+                <p>NewApplication =&gt; New Application page</p>
+                <p>Applications =&gt; All Applications page</p>
+                <p>OSJ =&gt; Review Queue page</p>
+            </li>
+        </ol>
+    </body>
+</html>

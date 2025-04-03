@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../Resources/TableStyles/2017-ITPatternedRows2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">5229800.00000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>Getting the Token</h1>
+        <p>The first step of the process is to receive the token. Multiple requirements regarding headers and the body content follow, as well as the process to do so.</p>
+        <h2>Required Headers</h2>
+        <p>The following HTTP headers are required to be on the request to the token endpoint.</p>
+        <table class="TableStyle-2017-ITPatternedRows2" style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/2017-ITPatternedRows2.css');width: 649px;caption-side: top;" cellspacing="0">
+            <caption class="Table">Required Headers</caption>
+            <col style="width: 185px;" class="TableStyle-2017-ITPatternedRows2-Column-Regular">
+            </col>
+            <col style="width: 140px;" class="TableStyle-2017-ITPatternedRows2-Column-Regular">
+            </col>
+            <col style="width: 315px;" class="TableStyle-2017-ITPatternedRows2-Column-Regular">
+            </col>
+            <thead>
+                <tr class="TableStyle-2017-ITPatternedRows2-Head-Header1">
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">
+                        <p class="ColumnHeading_2">Header Name</p>
+                    </th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">
+                        <p class="ColumnHeading_2">Expected Value</p>
+                    </th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadD-Regular-Header1">
+                        <p class="ColumnHeading_2">Description</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text"><b>Method</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text">POST</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p class="table-text">Method of the request.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p class="table-text"><b>ContentType</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p class="table-text">text/plain</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                        <p class="table-text">Media Type of the request.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text"><b>ContentLength</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text">Integer Variable</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p class="table-text">Length of the content contained within the body of the request.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-DarkerRows">
+                        <p class="table-text"><b>Date</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-DarkerRows">
+                        <p class="table-text">Date-Formatted Variable</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyA-Regular-DarkerRows">
+                        <p class="table-text">Date/time of the request. Must be formatted according to common specification, including UTC/GMT requirement. Note this item additionally gets used to verify the signature, as defined in the ‘Generating the Signature’ section below.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h2>Body Content</h2>
+        <p>The body content is formatted in a plain-text string with a specific format. If you are planning to call out to an API service endpoint that needs a user, you must include an ACORD-formatted 1228 xml in the request for a token. </p>
+        <p>If a user is not required for the API’s you will be using, you can exclude that part from the body string, as shown below:</p>
+        <ul>
+            <li>
+                <p>With user 1228:</p>
+                <ul style="list-style-type: circle;">
+                    <li>“grant_type=” + <b>grant_type</b> + “id=” + <b>org</b> + “&amp;secret=” + <b>hash</b> + “&amp;sig=” + <b>signed64</b> + “&amp;xml=” + <b>user1228</b></li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>Without user 1228:</p>
+                <ul style="list-style-type: circle;">
+                    <li>“grant_type=” + <b>grant_type</b> + “id=” + <b>org</b> + “&amp;secret=” + <b>hash</b> + “&amp;sig=” + <b>signed64</b></li>
+                </ul>
+            </li>
+        </ul>
+        <p>The variable details are detailed in the following table:</p>
+        <table class="TableStyle-2017-ITPatternedRows2" style="mc-table-style: url('../Resources/TableStyles/2017-ITPatternedRows2.css');margin-left: 0;margin-right: auto;width: 649px;caption-side: top;" cellspacing="0">
+            <caption class="Table">Variable Details</caption>
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" style="width: 139px;" />
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" style="width: 157px;" />
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" style="width: 345px;" />
+            <thead>
+                <tr class="TableStyle-2017-ITPatternedRows2-Head-Header1">
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">
+                        <p class="ColumnHeading_2">Variable Name</p>
+                    </th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">
+                        <p class="ColumnHeading_2">Expected Value</p>
+                    </th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text"><b>grant_type</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text">hashsig</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p class="table-text">This unchanging value must be placed on every request. It indicates the type of security mechanism to be used.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p class="table-text"><b>org</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p class="table-text">String Variable</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                        <p class="table-text">This is the unique and unchanging organization acronym attributed to each FireLight<sup MadCap:conditions="Default.Web">®</sup> client organization. Contact Insurance Technologies for this variable.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text"><b>hash</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text">Hex String Variable</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p class="table-text">This hexed string value is generated from the request originator’s configured secret, unique to each environment. See the ‘Generating the Hash’ section below for more details.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p class="table-text"><b>signed64</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p class="table-text">Url-Encoded Base64 String Variable</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                        <p class="table-text">This base64 string value is generated from the request originator’s cert that is configured in the FireLight Admin tool. It must be url-encoded (after being base64-encoded) before placed into the post body. See the ‘Generating the Signature’ section below for more details.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-LightRows">
+                        <p class="table-text"><b>user1228</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-LightRows">
+                        <p class="table-text">&#160;</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyA-Regular-LightRows">
+                        <p class="table-text">This is a conditional ACORD 1228 xml containing the details of the user to be applied to the token, as defined in the “Associate User with Token” section of <MadCap:xref href="Pre-Configuring Your Credentials.htm">Pre-Configuring Your Credentials</MadCap:xref>. It must be base64-encoded, and then url-encoded, before being sent in the token request’s body.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3>Generating the Hash</h3>
+        <p>A hash is required with the request’s body in order to be verified by the service. This hash is generated off a string ‘Secret’ configured in the FireLight Admin tool. </p>
+        <p>The following steps explain the process of generating the hash value:</p>
+        <ol>
+            <li>Obtain the configured ‘Secret’ string value for whichever FireLight environment the request will be sent.</li>
+            <li>Create a SHA256 hash of the ‘Secret’ string value.</li>
+            <li>Convert the hashed byte array to upper-cased hex values.</li>
+            <li>This generated hash is the ‘hash’ variable of the request body content.</li>
+        </ol>
+        <p>Only SHA256 hash values are supported for the ‘hash’ variable.</p>
+        <h3>Generating the Signature</h3>
+        <p>A base64-encoded digital signature string must be included on the request body. One of the certificates configured in the “Web Service Token Certificate” dialog box in the FireLight Admin tool must be used to create the signature. FireLight uses the configured public key to verify the signature.</p>
+        <p>The digital signature is generated using the private key of the configured certificate, using either a SHA1 or SHA256 algorithm. Other algorithms are not supported.</p>
+        <p>The signature is based off the content of a specific string. If a user 1228 is included, that portion is part of the string used to generate the signature. The following text string formats are expected to be the content that is signed:</p>
+        <ul>
+            <li>
+                <p>If user 1228 is included:</p>
+                <ul style="list-style-type: circle;">
+                    <li><b>NonHashedSecret</b> + <b>RequestDate</b> + <b>Org</b> + <b>Base64User1228</b></li>
+                </ul>
+            </li>
+            <li>
+                <p>If user 1228 is not included:</p>
+                <ul style="list-style-type: circle;">
+                    <li><b>NonHashedSecret</b> + <b>RequestDate</b> + <b>Org</b></li>
+                </ul>
+            </li>
+        </ul>
+        <p>The following table describes the variables.</p>
+        <table style="margin-left: 0;margin-right: auto;mc-table-style: url('../Resources/TableStyles/2017-ITPatternedRows2.css');width: 648px;caption-side: top;" class="TableStyle-2017-ITPatternedRows2" cellspacing="0">
+            <caption class="Table">Variables</caption>
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" style="width: 191px;" />
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" style="width: 161px;" />
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" style="width: 286px;" />
+            <thead>
+                <tr class="TableStyle-2017-ITPatternedRows2-Head-Header1">
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Signature Variable</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Expected Value</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text"><b>NonHashedSecret</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text">String Variable</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p class="table-text">This is the plain text (not the hashed hex representation) of the configured ‘Secret’ from the FireLight Admin tool.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p class="table-text"><b>RequestDate</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p class="table-text">String Variable of Request Date</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                        <p class="table-text">This is the exact same value of the request’s Date header. When formatted into a string, use this formatting: MMddyyyyHHmmss. If the formatting is different at the time of generating the signature, or the time is different from the request’s Date header, the signature is considered invalid.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text"><b>Org</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text">String Variable</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p class="table-text">This is the same value of the ‘org’ variable placed in the body. Contact Insurance Technologies for this variable.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-DarkerRows">
+                        <p class="table-text"><b>Base64User1228</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-DarkerRows">
+                        <p class="table-text">Base64 String Variable</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyA-Regular-DarkerRows">
+                        <p class="table-text">This is the base64-encoded string of the user’s 1228 xml, if applicable. <span class="Bold">It is not url-encoded yet.</span> If your signature is based off the url-encoded version, it will not be verified by the FireLight system.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h2>Response Format</h2>
+        <p>A successful request will receive an object of type <MadCap:xref href="../JSON Models/Rest API Models/TokenResponse.htm" alt="TokenResponse">TokenResponse</MadCap:xref> model, which will be passed back as a JSON object within the body content. It will contain the text value of the token, the type of token, and the expiration (in seconds).</p>
+        <h2>Sample Request and Response</h2>
+        <p>The following shows a successful request and its subsequent response, via Fiddler (highlighted for clarity) (the hex value and signature were slightly changed for security reasons).</p>
+        <h3>Request</h3>
+        <p>
+            <img src="../Resources/Images/Capture1.png" alt="Getting the Token - Sample Request" title="Getting the Token - Sample Request" />
+        </p>
+        <h3>Response</h3>
+        <p>
+            <img src="../Resources/Images/Capture2.png" alt="" title="" />
+        </p>
+        <p MadCap:conditions="Default.Web"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <p MadCap:conditions="Default.PrintOnly">&#160;</p>
+    </body>
+</html>

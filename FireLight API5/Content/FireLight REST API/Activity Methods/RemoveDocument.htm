@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+        <!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11234200.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+    </head>
+    <body>
+        <h1><a name="top"></a>RemoveDocument</h1>
+        <p>&#160;</p>
+        <h2><b>Endpoint:</b>
+        </h2>
+        <p>api/Activity/RemoveDocument</p>
+        <h2><b>Parameters:</b>
+        </h2>
+        <p><b>Id</b>: Required. The activity ID.</p>
+        <p><b>Documents</b>: Required. A comma-separated list of DocumentQuery items to specify which documents should be removed.</p>
+        <h2>DocumentQuery Structure</h2>
+        <p><b>DocumentId</b>: Optional. The internal ID of the document (as retrieved from GetDocuments)</p>
+        <p><b>DocumentName</b>: Optional. The Document Type Name. E.G. Illustration, Other</p>
+        <p><b>DocumentType</b>: Optional. The Document Type as ID.</p>
+        <p><b>DocumentTag</b>: Optional. The Document Tag.</p>
+        <p>All DocumentQuery parameters are optional, and only documents that match all specified attributes will be removed. For example, DocumentType: “Optional”, DocumentTag: “Additional” will remove only documents of type Other with the tag “Additional”.</p>
+        <h2>Example JSON:</h2>
+        <p>{'Id': '3d2f0a0a-3b0a-4889-82d1-7f0e429984bb', Documents: [{DocumentName: 'Illustration'}, {DocumentTag: 'MyTag'}]}</p>
+        <p>This will remove all documents of type Illustration and all documents with the tag ‘MyTag’ from the application.</p>
+        <p MadCap:conditions="Default.Web"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <p MadCap:conditions="Default.PrintOnly">&#160;</p>
+    </body>
+</html>

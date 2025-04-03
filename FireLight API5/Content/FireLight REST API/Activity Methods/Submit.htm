@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11234400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1>Submit</h1>
+        <p><b>HTTP POST to submit an application for the user associated to the auth token (IS4) that was passed in the header.</b>
+        </p>
+        <p>Requires an API Token with an associated user.</p>
+        <p><b>URL</b>
+        </p>
+        <p>{rootURL}/Activity/Submit</p>
+        <p><b>Parameters</b>
+        </p>
+        <ul>
+            <li>
+                <p><b>activityId</b>: string <b class="red">*required</b> </p>
+                <p>The unique ID of the activity to submit</p>
+            </li>
+        </ul>
+        <p><b>Response</b>
+        </p>
+        <p>The Submit method returns a Boolean. This only returns true if the application is not submitted and transitions to submitted.</p>
+        <p><b>Example</b>
+        </p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>Submit</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: JavaScript;">string url = "https://firelight.insurancetechnologies.com/EGApp/api/Activity/ Submit?activityID=" + activityId;
+String token = GetToken();
+try
+{
+    HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+
+    request.ContentType = "application/json"; request.Headers.Add("authorization", "Bearer " + token); request.Method = "Post";
+
+    using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+    {
+        StreamReader reader = new StreamReader(response.GetResponseStream()); string data = reader.ReadToEnd();
+        Console.WriteLine(data);
+
+        GeneralAPIResponse result = JsonConvert.DeserializeObject(data, typeof
+        (GeneralAPIResponse)) as GeneralAPIResponse;
+    }
+}
+catch (WebException ex)
+{
+    if (ex.Response != null &amp;&amp; ex.Response.ContentLength &gt; 0)
+    {
+        using (StreamReader s = new StreamReader(ex.Response.GetResponseStream
+        ()))
+        {
+            string message = s.ReadToEnd(); Console.WriteLine(message);
+        }  
+    }
+    throw;
+}
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>&#160;</p>
+    </body>
+</html>

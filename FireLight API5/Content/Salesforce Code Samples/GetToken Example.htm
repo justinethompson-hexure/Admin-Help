@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">5240200.00000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1>GetToken Example</h1>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>GetToken</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: Java;">global static String GetToken(String data) 
+    {            
+        string org = ORG_CODE;  // Three letter FireLight Character Code
+        string tokenUrl = 'https://firelight.insurancetechnologies.com/EGApp/api/Security/GetToken';
+        DateTime currDate = DateTime.now();
+        String secret = TOKEN_SECRET;  //Web Token Secret from FireLight admin tool                       
+        String dateStr = currDate.formatGMT('MMddyyyyHHmmss');
+        string xml1228 = EncodingUtil.base64Encode(Blob.valueof(BuildTX1228('')));      
+        String textToSign = secret + dateStr + org + xml1228;        
+        String code = EncodingUtil.convertToHex(Crypto.generateDigest('SHA-256', Blob.valueOf(secret))).toUpperCase();  
+		
+       // Certificate should be stored under the key 'mycert'
+      // The public key of this cert needs to be added to the FireLight admin tool
+        String signedData = EncodingUtil.urlEncode(EncodingUtil.base64Encode(System.Crypto.signWithCertificate('RSA-SHA256', Blob.valueOf(textToSign), 'mycert')), 'UTF-8'); 
+        xml1228 = EncodingUtil.urlEncode(xml1228, 'UTF-8');          
+        string body = 'grant_type=hashsig&amp;id='+org+'&amp;secret='+code+'&amp;sig='+signedData+'&amp;xml='+xml1228;
+         HttpRequest req = new HttpRequest();
+         req.setEndpoint(tokenUrl);
+         req.setMethod('POST');
+         req.setHeader('Date', DateTime.now().formatGMT('EEE, dd MMM yyyy HH:mm:ss z'));
+         req.setHeader('Content-Type', 'text/plain');
+         req.setBody(body);        
+         Http http = new Http();
+         HTTPResponse res = http.send(req);         
+         
+         string result = res.getBody();
+         if (result.contains('access_token'))
+         {
+              String token = result.substring(17).substring(0, result.substring(17).indexOf('"'));
+              result = token;
+         }                
+        return result;
+    } 
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">5233200.00000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1>Getting Started</h1>
+        <p><b>IMPORTANT!</b> It is highly recommended to link to the FireLight<sup MadCap:conditions="Default.Web">®</sup> embedded bundle that is hosted on our web site as described below. If your organization is hosting the FireLight bundle content, and you do not update the version hosted on your website with every FireLight release and patch, it will be stale, missing new functionality and bug fixes, and it also will be incompatible with the backend FireLight code hosted on our servers.</p>
+        <p>To get started with the embedded API, there are a few things that need to occur. The steps listed below allow you to establish a session with FireLight and embed a FireLight wizard within your application.</p>
+        <ol start="1">
+            <li>
+                <p>Obtain a token by connecting to our token service described <a href="../API Token Service/API Token Service.htm" class="Hyperlink" alt="here">here</a>.</p>
+            </li>
+            <li>
+                <p>Create an activity using the  <MadCap:xref href="../FireLight REST API/Activity Methods/CreateActivity.htm" alt="CreateActivity">CreateActivity</MadCap:xref> method.</p>
+            </li>
+            <li>
+                <p>Link to the FlexBoxGrid CDN for layout styling. </p>
+                <ul>
+                    <li>
+                        <p><a href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" target="_blank" title="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" alt="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css</a> </p>
+                    </li>
+                    <li>
+                        <p>Example: &lt;link rel="stylesheet" href="<a href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" target="_blank" title="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" alt="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css</a>" type="text/css"&gt;</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Link to the following JavaScript resources (Adjust BASE URL to match target <a href="../FireLight REST API/Endpoint Root URLs.htm" class="Hyperlink" alt="environment">environment</a>):</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Embedded Illustration</p>
+                        <ol start="1" class="ol_3" style="list-style-type: lower-roman;">
+                            <li class="ListParagraph_4">
+                                <p>Format: {BASE URL}/Resource/Scripts/illustration</p>
+                            </li>
+                            <li>
+                                <p>Example: <a href="https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/illustration" class="Hyperlink" alt="https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/illustration">https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/illustration</a></p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Embedded Application</p>
+                        <ol style="list-style-type: lower-roman;">
+                            <li>
+                                <p>Format: {BASE URL}/Resource/Scripts/eApp</p>
+                            </li>
+                            <li>
+                                <p>Example: <a href="https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eApp" class="Hyperlink" alt="https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eApp" title="https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eApp">https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eApp</a></p>
+                                <p><span class="Hyperlink_2">Optionally, to specify the name of the div where embedded FireLight will be rendered, use the “destination” query parameter. Example: </span><a href="https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eApp?destination=myCustomDiv" class="Hyperlink" alt="https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eApp?destination=myCustomDiv">https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eApp?destination=myCustomDiv</a>
+                                </p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>E-Signature</p>
+                        <ol style="list-style-type: lower-roman;">
+                            <li>
+                                <p>Format: {BASE URL}/Resource/Scripts/eSign</p>
+                            </li>
+                            <li>
+                                <p>Example: <a href="https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eSign" target="_blank" title="https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eSign" alt="https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eSign">https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eSign</a></p>
+                                <p>Optionally, to specify the name of the div where embedded FireLight will be rendered, use the “destination” query parameter. </p>
+                                <p class="Indent">Example: <a href="https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eSign?destination=myCustomDiv" target="_blank" title="https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eSign?destination=myCustomDiv" alt="https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eSign?destination=myCustomDiv">https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eSign?destination=myCustomDiv</a></p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Multiple Resources (i.e. Application and E-Signature)</p>
+                        <ol style="list-style-type: lower-roman;">
+                            <li>
+                                <p>Format: {BASE URL}/Resource/Scripts/eApp~eSign</p>
+                            </li>
+                            <li>
+                                <p>Example: <a href="https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eApp~eSign" target="_blank" title="https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eApp~eSign" alt="https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eApp~eSign">https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eApp~eSign</a></p>
+                                <p><b>NOTE:</b> When multiple module resources are loaded <MadCap:xref href="Common API Interface/loadModule.htm" alt="loadModule">loadModule</MadCap:xref> must be used to determine which module to load and display. </p>
+                                <p>Optionally, to specify the name of the div where embedded FireLight will be rendered, use the “destination” query parameter. </p>
+                                <p class="Indent">Example: <a href="https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eApp~eSign?destination=myCustomDiv" target="_blank" title="https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eApp~eSign?destination=myCustomDiv" alt="https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eApp~eSign?destination=myCustomDiv">https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eApp~eSign?destination=myCustomDiv</a></p>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Link to the following CSS resources (Adjust BASE URL to match target <a href="../FireLight REST API/Endpoint Root URLs.htm" class="Hyperlink" alt="environment">environment</a>): </p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p>Embedded Illustration</p>
+                        <ol style="list-style-type: lower-roman;">
+                            <li>
+                                <p>Format: {BASE URL}/Resource/CSS/illustration</p>
+                            </li>
+                            <li>
+                                <p><span class="Hyperlink_2">Example: </span><a href="https://firelight.insurancetechnologies.com/EGApp/Resource/CSS/illustration" class="Hyperlink" alt="https://firelight.insurancetechnologies.com/EGApp/Resource/CSS/illustration">https://firelight.insurancetechnologies.com/EGApp/Resource/CSS/illustration</a>
+                                </p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Embedded Application</p>
+                        <ol style="list-style-type: lower-roman;">
+                            <li>
+                                <p>Format: {BASE URL}/Resource/CSS/eApp</p>
+                            </li>
+                            <li>
+                                <p>Example: <a href="https://firelight.insurancetechnologies.com/EGApp/Resource/CSS/eApp" class="Hyperlink" alt="https://firelight.insurancetechnologies.com/EGApp/Resource/CSS/eApp">https://firelight.insurancetechnologies.com/EGApp/Resource/CSS/eApp</a></p>
+                                <p>By default, all available styles, including fonts and colors, will be included in the CSS returned by the calls above. To return only the root styles that provide the framework for rendering the embedded UI, add “rootOnly=true” to the query string of the request. This will reduce the payload of the CSS response by ~30KB and will make setting your own fonts and colors easier.</p>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>Embedded E-Signature </p>
+                        <ol style="list-style-type: lower-roman;">
+                            <li>
+                                <p>Format: {BASE URL}/Resource/CSS/eSign</p>
+                            </li>
+                            <li>
+                                <p>Example: <a href="https://firelight.insurancetechnologies.com/EGApp/Resource/CSS/eSign" target="_blank" title="https://firelight.insurancetechnologies.com/EGApp/Resource/CSS/eSign" alt="https://firelight.insurancetechnologies.com/EGApp/Resource/CSS/eSign">https://firelight.insurancetechnologies.com/EGApp/Resource/CSS/eSign</a></p>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>Create a div element in your web page called <span class="Bold">fireLightMainDiv</span>.</p>
+            </li>
+            <li>
+                <p>Once the <a href="Common API Interface/Events.htm" class="Hyperlink" alt="fireLightLoaded">fireLightLoaded</a> event has fired, an instance of a FireLight wizard can be loaded using the init method of the Client API along with the activityId that was returned from the  <MadCap:xref href="../FireLight REST API/Activity Methods/CreateActivity.htm" alt="CreateActivity">CreateActivity</MadCap:xref> method called above.</p>
+            </li>
+        </ol>
+        <p>&#160;</p>
+    </body>
+</html>

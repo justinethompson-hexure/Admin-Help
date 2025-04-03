@@ -1,0 +1,1739 @@
+/*<meta />*/
+
+:root
+{
+	--Brand1: #076685;
+	--Brand2: #CDE0E7;
+	--Black: #000000;
+	--Dark: #45494c;
+	--Medium: #b9bec1;
+	--Light: #d0d3d5;
+	--White: #ffffff;
+}
+
+body
+{
+	color: var(--Dark);
+	font-family: 'Open Sans';
+}
+
+.body-container
+{
+	padding-left: 2%;
+	padding-top: 2%;
+}
+
+/* Backmatter */
+
+div.GlossaryPageDefinition
+{
+	font-size: 10pt;
+}
+
+div.GlossaryPageHeading
+{
+	font-size: 21pt;
+	font-weight: normal;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	border-bottom-color: var(--Medium);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	text-align: left;
+	color: inherit;
+	padding-left: 10px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	padding-right: 10px;
+	background-image: url('../Images/Backmatter-Heading-Background.png');
+	background-repeat: no-repeat;
+}
+
+div.GlossaryPageTerm
+{
+	font-size: 12pt;
+	font-weight: bold;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+MadCap|glossaryProxy
+{
+	border-top: none;
+}
+
+MadCap|indexProxy
+{
+	border-top: none;
+}
+
+p.Index1
+{
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+p.Index2
+{
+	font-size: 10pt;
+	font-weight: normal;
+}
+
+p.IndexHeading
+{
+	font-size: 21pt;
+	font-weight: normal;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	border-bottom-color: var(--Medium);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	text-align: left;
+	color: inherit;
+	padding-left: 10px;
+	padding-bottom: 20px;
+	padding-top: 12px;
+	padding-right: 10px;
+	background-image: url('../Images/Backmatter-Heading-Background.png');
+	background-repeat: no-repeat;
+}
+
+/* Content */
+
+img
+{
+	border: none;
+	max-width: 100%;
+}
+
+p
+{
+	letter-spacing: 0.25;
+	widows: 3;
+	orphans: 3;
+	margin-bottom: 8px;
+	margin-top: 8px;
+	line-height: 108%;
+	font-size: 1em;
+	font-family: 'Open Sans';
+	font-weight: normal;
+	color: #000000;
+}
+
+p.table-text
+{
+	font-size: 12pt;
+	margin-bottom: 8px;
+	margin-top: 8px;
+	font-family: 'Open Sans';
+	font: Open Sans;
+	color: #000000;
+}
+
+/* Frontmatter */
+
+hr.title-page
+{
+	border: solid 0px transparent;
+	background-color: var(--Light);
+	height: 1px;
+	width: 100%;
+	margin-bottom: 30px;
+	margin-top: 370px;
+}
+
+MadCap|tocProxy
+{
+	border-top: none;
+	margin-right: 0.25in;
+}
+
+p.created-using-flare
+{
+	color: var(--Dark);
+	font-weight: bold;
+	margin-top: 18px;
+	font-size: 9pt;
+	line-height: 15pt;
+	text-transform: uppercase;
+}
+
+p.title
+{
+	font-size: 55pt;
+	line-height: 65pt;
+	margin-top: 30px;
+	mc-hyphenate: never;
+}
+
+p.title-page-footer
+{
+	color: var(--Dark);
+	font-size: 9pt;
+	frame-break-before: always;
+	line-height: 15pt;
+	margin-top: 30px;
+	letter-spacing: normal;
+}
+
+p.title-page-url
+{
+	color: var(--Dark);
+	font-size: 9pt;
+	line-height: 15pt;
+}
+
+p.TOC1
+{
+	color: var(--Dark);
+	font-size: 19pt;
+	font-weight: normal;
+	line-height: 21pt;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	page-break-after: avoid;
+}
+
+p.TOC2
+{
+	color: var(--Dark);
+	font-size: 15pt;
+	font-weight: normal;
+	line-height: 21pt;
+	margin-bottom: 13px;
+	margin-left: .5in;
+	margin-top: 13px;
+}
+
+p.TOC3
+{
+	color: var(--Dark);
+	font-size: 13pt;
+	line-height: 21pt;
+	font-weight: normal;
+	margin-bottom: 10px;
+	margin-left: 1in;
+	margin-top: 10px;
+}
+
+/* Headings */
+
+h1
+{
+	font-weight: bold;
+	color: #000000;
+	font-size: 1.5em;
+	font-family: 'Roboto Slab';
+}
+
+h2
+{
+	font-weight: bold;
+	font-size: 1.3em;
+	page-break-before: avoid;
+	font-family: 'Roboto Slab';
+}
+
+h3
+{
+	font-size: 1.2em;
+	font-family: 'Roboto Slab';
+	font: Roboto Slab;
+	color: #000000;
+	font-weight: 600;
+}
+
+h4
+{
+	font-weight: bold;
+	color: #7f7f7f;
+	font-size: 1.1em;
+	font-family: 'Roboto Slab';
+	font: Roboto Slab;
+}
+
+h5
+{
+	font-weight: bold;
+	font-size: 1.0em;
+	font-style: italic;
+	color: #000000;
+	font-family: 'Open Sans';
+	font: Open Sans;
+}
+
+h6
+{
+	font-weight: bolder;
+	font-size: .9em;
+}
+
+/* Home page topic */
+
+div.home-layout
+{
+	padding: 2% 5%;
+}
+
+div.home-section
+{
+	border-bottom: solid 1px var(--Light);
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding: 2% 0;
+}
+
+div.home-tiles	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.home-tiles::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.home-tiles::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.home-tiles > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: var(--Brand2);
+	padding: 2%;
+}
+
+div.home-tiles > div:nth-child(1)
+{
+	width: 48%;
+	margin-left: 0%;
+}
+
+div.home-tiles > div:nth-child(2)
+{
+	width: 48%;
+	margin-left: 4%;
+}
+
+div.home-tiles-layout	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.home-tiles-layout::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.home-tiles-layout::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.home-tiles-layout > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.home-tiles-layout > div:nth-child(1)
+{
+	width: 33.33333%;
+	margin-left: 0%;
+}
+
+div.home-tiles-layout > div:nth-child(2)
+{
+	width: 66.66667%;
+	margin-left: 0%;
+}
+
+div.home-tiles-layout p
+{
+	line-height: 1.2;
+}
+
+div.quick-links	/*This is a custom responsive layout row style (div class) in your stylesheet. To provide your own description for this style: (1) Open the stylesheet; (2) Find and select the div class with this name; and (3) In the Comment field, replace this text with your own. For more information on adding comments to styles, see the online Help.*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.quick-links::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.quick-links::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.quick-links > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.quick-links > div:nth-child(1)
+{
+	width: 16.66666%;
+	margin-left: 2%;
+}
+
+div.quick-links > div:nth-child(2)
+{
+	width: 16.66666%;
+	margin-left: 3%;
+}
+
+div.quick-links > div:nth-child(3)
+{
+	width: 16.66666%;
+	margin-left: 3%;
+}
+
+div.quick-links > div:nth-child(4)
+{
+	width: 16.66666%;
+	margin-left: 3%;
+}
+
+div.quick-links > div:nth-child(5)
+{
+	width: 16.66666%;
+	margin-left: 3%;
+}
+
+div.quick-links *	/*Text-align center set to all elements within div.quick-links*/
+{
+	text-align: center;
+}
+
+div.topic-hero
+{
+	padding: 5%;
+	background-image: url('../Images/Hero-Image.png');
+	background-size: cover;
+	background-attachment: scroll;
+}
+
+div.topic-hero h1
+{
+	color: var(--White);
+	font-size: 48pt;
+	text-align: center;
+	background-color: #7f7f7f;
+}
+
+html.home-topic	/*Used on home topic to override padding set in the skin*/
+{
+	
+}
+
+html.home-topic .body-container	/*Overrides padding set in the skin*/
+{
+	padding: 0;
+}
+
+html.home-topic .main-section > .outer-row	/*Overrides padding set in the skin when in tablet/mobile*/
+{
+	max-width: 100%;
+	padding: 0;
+}
+
+MadCap|breadcrumbsProxy
+{
+	border-bottom-width: 0;
+	color: var(--Dark);
+}
+
+/* Links */
+
+a
+{
+	color: var(--Brand1);
+}
+
+a:link
+{
+	color: #2d82dc;
+}
+
+a:visited
+{
+	color: #076685;
+}
+
+a:hover
+{
+	color: #2d82dc;
+}
+
+a:active
+{
+	color: #2d82dc;
+}
+
+MadCap|dropDown
+{
+	border-bottom: 1px solid var(--Light);
+	mc-image-position: left;
+	mc-image-spacing: 10px;
+	mc-open-image: url('../Images/Minus.png');
+	mc-closed-image: url('../Images/Plus.png');
+	padding: 10px 0;
+}
+
+MadCap|dropDownBody
+{
+	padding: 10px 30px 0;
+}
+
+MadCap|dropDownHotspot
+{
+	cursor: hand;
+	text-decoration: none;
+	color: var(--Dark);
+	font-size: 20pt;
+	font-weight: bold;
+	border-bottom: none;
+}
+
+MadCap|expandingBody
+{
+	color: var(--Dark);
+	font-style: italic;
+}
+
+MadCap|expandingHead
+{
+	font-style: italic;
+	font-weight: normal;
+	cursor: hand;
+	text-decoration: none;
+	color: var(--Brand1);
+}
+
+MadCap|xref
+{
+	font-weight: bold;
+	mc-format: '{para}';
+	text-decoration: underline;
+	color: #0687f3;
+	font-family: 'Open Sans';
+}
+
+/* Lists */
+
+li
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+	font-family: 'Open Sans';
+}
+
+li p
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+ol,
+ul
+{
+	letter-spacing: .25;
+	line-height: 20pt;
+}
+
+/* Page layout */
+
+p.frame-footer-page-number
+{
+	color: var(--Medium);
+	font-size: 11pt;
+	font-weight: bold;
+	text-align: right;
+}
+
+p.frame-footer-text
+{
+	color: var(--Medium);
+	font-size: 11pt;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+/* Master page */
+
+div.home-footer
+{
+	padding: 2% 5%;
+	color: #f5f5f5;
+	background-color: #000000;
+}
+
+p.footer
+{
+	line-height: 13pt;
+	color: var(--White);
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	background-color: #000000;
+}
+
+p.footer-sub
+{
+	color: var(--White);
+	font-size: 14pt;
+	margin-top: 14px;
+}
+
+p.Code
+{
+	orphans: 0;
+	widows: 0;
+	margin-top: 0px;
+	font-family: Consolas;
+	line-height: 14pt;
+	margin-bottom: 4px;
+	letter-spacing: normal;
+}
+
+p.CodeIndent6
+{
+	padding-left: 108px;
+	font-family: Consolas;
+	font-size: 12pt;
+	line-height: 14pt;
+	margin-top: 0px;
+	margin-bottom: 8px;
+	letter-spacing: normal;
+}
+
+span.span_10
+{
+	background-color: #00FFFF;
+	font-family: Consolas;
+	font-size: 12pt;
+}
+
+span.span_13
+{
+	color: #63A0D7;
+	font-family: Consolas;
+	font-size: 12pt;
+}
+
+span.span_15
+{
+	color: #A31515;
+	font-family: Consolas;
+	font-size: 12pt;
+}
+
+span.span_16
+{
+	color: #0000FF;
+	font-family: Consolas;
+	font-size: 12pt;
+}
+
+span.span_18
+{
+	color: #FF0000;
+	font-weight: bold;
+	font-size: 12pt;
+	font-family: Consolas;
+}
+
+span.span_20
+{
+	color: #2E74B5;
+	font-style: italic;
+	font-family: Consolas;
+	font-size: 12;
+}
+
+span.span_21
+{
+	color: #FF0000;
+	font-family: Consolas;
+	font-size: 12pt;
+}
+
+span.span_26
+{
+	color: #FF0000;
+	font-family: Consolas;
+	font-size: 12pt;
+}
+
+span.span_33
+{
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+span.span_5
+{
+	color: #A31515;
+	font-family: Consolas;
+	font-size: 12pt;
+}
+
+p.CodeIndent9
+{
+	font-family: Consolas;
+	font: Consolas;
+	line-height: 14pt;
+	letter-spacing: normal;
+	margin-bottom: 8px;
+	margin-top: 0;
+	padding-left: 162px;
+	font-size: 12pt;
+}
+
+p.PrintDocumentVersion
+{
+	line-height: ;
+}
+
+p.Indent
+{
+	margin-bottom: 8px;
+	margin-top: 8px;
+	padding-left: 18px;
+}
+
+th
+{
+	margin: 8px;
+	color: #ffffff;
+	font-family: 'Open Sans';
+	background-color: #595959;
+	font-size: 14pt;
+}
+
+td
+{
+	margin: 8px;
+	vertical-align: middle;
+}
+
+caption
+{
+	font-family: 'Roboto Slab';
+	color: #000000;
+}
+
+thead
+{
+	background-color: #595959;
+	color: #ffffff;
+	font-family: 'Open Sans';
+	font-size: 14pt;
+}
+
+ul
+{
+	font-family: 'Open Sans';
+}
+
+ol
+{
+	font-family: 'Open Sans';
+}
+
+b
+{
+	
+}
+
+tr
+{
+	font-family: 'Open Sans';
+	font: Open Sans;
+}
+
+strong
+{
+	
+}
+
+em
+{
+	font-family: 'Open Sans';
+}
+
+@media tablet
+{
+	/* Home page topic */
+
+	div.home-tiles > div:nth-child(1)
+	{
+		width: 49%;
+		margin-left: 0%;
+	}
+
+	div.home-tiles > div:nth-child(2)
+	{
+		width: 49%;
+		margin-left: 2%;
+	}
+
+	div.home-tiles-layout > div:nth-child(1)
+	{
+		width: 40%;
+		margin-left: 30%;
+	}
+
+	div.home-tiles-layout > div:nth-child(2)
+	{
+		width: 90%;
+		margin-left: 5%;
+	}
+
+	div.quick-links > div:nth-child(1)
+	{
+		width: 24%;
+		margin-left: 0%;
+	}
+
+	div.quick-links > div:nth-child(2)
+	{
+		width: 24%;
+		margin-left: 14%;
+	}
+
+	div.quick-links > div:nth-child(3)
+	{
+		width: 24%;
+		margin-left: 14%;
+	}
+
+	div.quick-links > div:nth-child(4)
+	{
+		width: 24%;
+		margin-left: 19%;
+	}
+
+	div.quick-links > div:nth-child(5)
+	{
+		width: 24%;
+		margin-left: 14%;
+	}
+
+	html.home-topic .body-container
+	{
+		margin-left: 0;
+	}
+}
+
+@media mobile
+{
+	/* Home page topic */
+
+	div.home-tiles > div:nth-child(1)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.home-tiles > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+		margin-top: 5%;
+	}
+
+	div.home-tiles-layout p
+	{
+		line-height: 1.2;
+	}
+
+	div.quick-links > div:nth-child(1)
+	{
+		width: 49%;
+		margin-left: 0;
+	}
+
+	div.quick-links > div:nth-child(2)
+	{
+		width: 49%;
+		margin-left: 2%;
+	}
+
+	div.quick-links > div:nth-child(3)
+	{
+		width: 49%;
+		margin-left: 0;
+	}
+
+	div.quick-links > div:nth-child(4)
+	{
+		width: 49%;
+		margin-left: 2%;
+	}
+
+	div.quick-links > div:nth-child(5)
+	{
+		width: 49%;
+		margin-left: 25.5%;
+	}
+}
+
+@media print
+{
+	body
+	{
+		margin: 8px;
+		font-size: 12pt;
+		line-height: 14pt;
+		font-family: 'Open Sans';
+	}
+
+	/* Content */
+
+	p
+	{
+		color: #000000;
+		line-height: 108%;
+		margin-bottom: 8px;
+		margin-top: 8px;
+		font-family: 'Open Sans';
+		font: Open Sans;
+		font-size: 12pt;
+		font-weight: normal;
+	}
+
+	p.table-text
+	{
+		font-size: 11pt;
+		font-family: 'Open Sans';
+		font: Open Sans;
+	}
+
+	/* Headings */
+
+	h1
+	{
+		line-height: 27pt;
+		color: #000000;
+		font-size: 18pt;
+		background-color: transparent;
+		border-bottom: none;
+		border-bottom-style: none;
+		margin-bottom: 3pt;
+		margin-top: 13pt;
+		padding-bottom: 10px;
+		padding-left: 0px;
+		padding-top: 0px;
+		font-family: 'Roboto Slab';
+	}
+
+	h2
+	{
+		line-height: 23pt;
+		color: #000000;
+		font-size: 14pt;
+		font-weight: bold;
+		margin-bottom: 3pt;
+		margin-top: 12pt;
+		page-break-before: avoid;
+		font-family: 'Roboto Slab';
+	}
+
+	h3
+	{
+		line-height: 108%;
+		margin-bottom: 3pt;
+		margin-top: 14pt;
+		font-family: 'Roboto Slab';
+		font: Roboto Slab;
+		color: #000000;
+		font-size: 14pt;
+		font-weight: 600;
+	}
+
+	/* Links */
+
+	MadCap|xref
+	{
+		font-weight: normal;
+		mc-format: '{quote}{para}{quote} {pageref}';
+		text-decoration: none;
+		font-size: 12pt;
+		font-family: 'Open Sans';
+	}
+
+	h4
+	{
+		color: #7f7f7f;
+		font-size: 13pt;
+		line-height: 108%;
+		margin-bottom: 3pt;
+		margin-top: 12pt;
+		font-family: 'Roboto Slab';
+		font: Roboto Slab;
+	}
+
+	h5
+	{
+		font-size: 13pt;
+		font-style: italic;
+		line-height: 108%;
+		margin: 2pt 0px 0px;
+		margin-bottom: 3pt;
+		margin-top: 12pt;
+		color: #000000;
+		font-family: 'Open Sans';
+		font: Open Sans;
+	}
+
+	h6
+	{
+		font-size: 1em;
+		font-weight: bolder;
+	}
+
+	p.Code
+	{
+		line-height: 100%;
+		margin-top: 0px;
+		orphans: 0;
+		widows: 0;
+		font-family: Consolas;
+		font: Consolas;
+		margin-bottom: 4px;
+		font-size: 10pt;
+		letter-spacing: normal;
+	}
+
+	p.CodeIndent1
+	{
+		line-height: 100%;
+		padding-left: 18px;
+		orphans: 0;
+		widows: 0;
+		font: Consolas;
+		font-family: Consolas;
+		letter-spacing: normal;
+		font-size: 10pt;
+	}
+
+	p.CodeIndent2
+	{
+		margin-top: 0px;
+		padding-left: 36px;
+		line-height: 100%;
+		font: Consolas;
+		font-family: Consolas;
+		letter-spacing: normal;
+		font-size: 10pt;
+	}
+
+	p.CodeIndent4
+	{
+		padding-left: 72px;
+		line-height: 100%;
+		font: Consolas;
+		font-family: Consolas;
+		letter-spacing: normal;
+		font-size: 10pt;
+	}
+
+	p.CodeIndent5
+	{
+		line-height: 100%;
+		font: Consolas;
+		font-family: Consolas;
+		letter-spacing: normal;
+		font-size: 10pt;
+	}
+
+	p.CodeIndent3
+	{
+		line-height: 100%;
+		font: Consolas;
+		letter-spacing: normal;
+		font-size: 10pt;
+	}
+
+	p.CodeIndent6
+	{
+		line-height: 100%;
+		padding-left: 108px;
+		font: Consolas;
+		font-family: Consolas;
+		letter-spacing: normal;
+		margin-top: 0;
+		font-size: 10pt;
+	}
+
+	p.CodeIndent7
+	{
+		line-height: 100%;
+		padding-left: 126px;
+		font: Consolas;
+		letter-spacing: normal;
+		font-size: 10pt;
+		margin-top: 0px;
+	}
+
+	p.CodeIndent8
+	{
+		line-height: 100%;
+		padding-left: 144px;
+		font: Consolas;
+		letter-spacing: normal;
+		margin-top: 0;
+		font-size: 10pt;
+	}
+
+	b.red
+	{
+		color: #ff0000;
+	}
+
+	span.span_10
+	{
+		color: black;
+		background-color: #00FFFF;
+		font-family: Consolas;
+		font-size: 10pt;
+	}
+
+	span.span_11
+	{
+		background-color: #008000;
+		font-family: Consolas;
+		font-size: 10pt;
+	}
+
+	span.span_13
+	{
+		font-family: Consolas;
+		color: #63A0D7;
+		font-size: 10pt;
+	}
+
+	span.span_15
+	{
+		font-family: Consolas;
+		color: #A31515;
+		font-size: 10pt;
+		letter-spacing: normal;
+	}
+
+	span.span_16
+	{
+		font-family: Consolas;
+		color: #0000FF;
+		font-size: 10pt;
+		letter-spacing: normal;
+	}
+
+	span.span_17
+	{
+		color: #008000;
+		letter-spacing: normal;
+		font-size: 10pt;
+	}
+
+	span.span_18
+	{
+		font-weight: bold;
+		color: #FF0000;
+		font-family: Consolas;
+		font-size: 10pt;
+		letter-spacing: normal;
+	}
+
+	span.span_19
+	{
+		color: #FF0000;
+		letter-spacing: normal;
+		font-family: Consolas;
+		font-size: 10pt;
+	}
+
+	span.span_20
+	{
+		font-family: Consolas;
+		font-style: italic;
+		color: #2E74B5;
+		font-size: 10pt;
+		letter-spacing: normal;
+	}
+
+	span.span_21
+	{
+		font-family: Consolas;
+		color: #FF0000;
+		font-size: 10pt;
+	}
+
+	span.span_22
+	{
+		color: #800000;
+		font-size: 10pt;
+	}
+
+	span.span_23
+	{
+		color: #2B91AF;
+		font-size: 10pt;
+	}
+
+	span.span_25
+	{
+		font-family: Consolas;
+		font-size: 10pt;
+	}
+
+	span.span_26
+	{
+		color: #FF0000;
+		font-family: Consolas;
+		font-size: 10pt;
+	}
+
+	span.span_31
+	{
+		color: #555555;
+		font-family: Consolas;
+		font-size: 10pt;
+	}
+
+	span.span_32
+	{
+		background-color: #FFFF00;
+	}
+
+	span.span_33
+	{
+		font-weight: bold;
+		color: #FFFFFF;
+	}
+
+	span.span_4
+	{
+		color: #0000FF;
+		font-family: Consolas;
+		font-size: 10pt;
+	}
+
+	span.span_5
+	{
+		font-family: Consolas;
+		color: #A31515;
+		font-size: 10pt;
+	}
+
+	span.span_6
+	{
+		color: #FF0000;
+		font-family: Consolas;
+		font-size: 10pt;
+	}
+
+	span.span_9
+	{
+		font-size: 11pt;
+	}
+
+	p.CodeIndent9
+	{
+		line-height: 100%;
+		font: Consolas;
+		font-family: Consolas;
+		letter-spacing: normal;
+		margin-top: 0;
+		padding-left: 162px;
+		font-size: 10pt;
+	}
+
+	p.CodeIndent10
+	{
+		padding-left: 180;
+		font: Consolas;
+		font-family: Consolas;
+		letter-spacing: normal;
+		line-height: 100%;
+		font-size: 10pt;
+	}
+
+	p.PrintDocumentVersion
+	{
+		text-align: right;
+		letter-spacing: normal;
+		margin: 0;
+		margin-bottom: 0;
+		padding-right: 1px;
+	}
+
+	p.PrintPublishedDate
+	{
+		text-align: right;
+		font-size: 12pt;
+		font-family: Calibri;
+		font: Calibri;
+		color: #000000;
+		padding-bottom: 1pt;
+		font-weight: bold;
+		margin-top: 0;
+	}
+
+	p.PrintSubjectTitle
+	{
+		margin-top: 1.6pt;
+		margin-bottom: 0pt;
+		text-align: right;
+		color: #000000;
+		font-family: Calibri;
+		font: Calibri;
+		font-weight: bold;
+		font-size: 14pt;
+		letter-spacing: normal;
+	}
+
+	p.PrintSubtitle
+	{
+		font-style: normal;
+		font-weight: bold;
+		font: Calibri;
+		font-family: Calibri;
+		font-size: 36pt;
+		text-align: center;
+		margin-top: 0px;
+		padding-right: 0px;
+		line-height: 36pt;
+		border-bottom-color: #e7e9ea;
+		border-bottom-width: 1pt;
+		border-bottom-style: solid;
+		margin-bottom: 0pt;
+		padding-bottom: 25pt;
+		padding-top: 7pt;
+		color: #0687c5;
+		letter-spacing: normal;
+	}
+
+	p.PrintTitle
+	{
+		font: Calibri;
+		font-family: Calibri;
+		color: #000000;
+		text-align: center;
+		margin-bottom: 0pt;
+		margin: 0px 0px 0pt;
+		padding-right: 0px;
+		mc-printer-page-size: letter;
+		line-height: 23pt;
+		margin-top: 8px;
+		border-top-color: #e7e9ea;
+		border-top: solid 1px #e7e9ea;
+		padding-bottom: 7pt;
+		padding-top: 27pt;
+		font-weight: bold;
+		font-size: 23pt;
+		letter-spacing: normal;
+	}
+
+	p.CoverTitle
+	{
+		font-size: 23pt;
+		line-height: 0.5in;
+	}
+
+	p.Indent
+	{
+		padding-left: 18px;
+		margin-top: 8px;
+	}
+
+	p.thead1
+	{
+		color: #ffffff;
+		font-family: 'Open Sans';
+		font: Open Sans;
+		font-size: 12pt;
+	}
+
+	th
+	{
+		color: #ffffff;
+		font-family: 'Open Sans';
+		background-color: #595959;
+		font-size: 14pt;
+	}
+
+	td
+	{
+		margin: 8px;
+	}
+
+	a:link
+	{
+		color: #2d82dc;
+	}
+
+	ol > li::marker
+	{
+		color: #000000;
+		font-family: Calibri;
+		font-size: 12pt;
+	}
+
+	ol ol
+	{
+		color: #000000;
+		font-family: Calibri;
+		font-size: 12pt;
+	}
+
+	ol ul
+	{
+		color: #000000;
+		font-family: Calibri;
+		font-size: 12pt;
+	}
+
+	ul > li::marker
+	{
+		color: #000000;
+		font-family: Calibri;
+		font-size: 12pt;
+		line-height: 15pt;
+	}
+
+	ul ol
+	{
+		color: #000000;
+		font-family: Calibri;
+		font-size: 12pt;
+		line-height: 15pt;
+	}
+
+	ul ul
+	{
+		line-height: 16pt;
+		color: #000000;
+		font-family: Calibri;
+		font-size: 12pt;
+	}
+
+	ol
+	{
+		color: #000000;
+		font-size: 12pt;
+		line-height: 15pt;
+		font-family: 'Open Sans';
+		font: Open Sans;
+	}
+
+	ul
+	{
+		color: #000000;
+		font-size: 12pt;
+		line-height: 15pt;
+		font-family: 'Open Sans';
+	}
+
+	caption.Table
+	{
+		font-size: 14pt;
+		border-bottom-color: #000000;
+		background-color: #ffffff;
+		font: Roboto Slab;
+	}
+
+	caption
+	{
+		font-family: 'Roboto Slab';
+		color: #000000;
+	}
+
+	thead
+	{
+		background-color: #595959;
+		font-size: 14pt;
+	}
+
+	li
+	{
+		font-family: 'Open Sans';
+	}
+
+	b
+	{
+		
+	}
+
+	tr
+	{
+		font-family: 'Open Sans';
+		font: Open Sans;
+	}
+
+	strong
+	{
+		
+	}
+
+	em
+	{
+		font-family: 'Open Sans';
+	}
+}
+
+p.CodeIndent1
+{
+	margin-bottom: 8px;
+	padding-left: 18px;
+	margin-top: 0px;
+	orphans: 0;
+	widows: 0;
+	font-family: Consolas;
+	line-height: 14pt;
+	letter-spacing: normal;
+}
+
+p.CodeIndent2
+{
+	margin-bottom: 8px;
+	margin-top: 0px;
+	padding-left: 36px;
+	orphans: 0;
+	widows: 0;
+	font-family: Consolas;
+	line-height: 14pt;
+	letter-spacing: normal;
+}
+
+p.CodeIndent3
+{
+	margin-bottom: 8px;
+	margin-top: 0px;
+	padding-left: 54px;
+	widows: 0;
+	orphans: 0;
+	font-family: Consolas;
+	line-height: 14pt;
+	letter-spacing: normal;
+}
+
+p.CodeIndent4
+{
+	margin-bottom: 8px;
+	margin-top: 0px;
+	widows: 0;
+	orphans: 0;
+	padding-left: 72px;
+	font-family: Consolas;
+	line-height: 14pt;
+}
+
+p.CodeIndent5
+{
+	margin-bottom: 8px;
+	margin-top: 0px;
+	widows: 0;
+	orphans: 0;
+	padding-left: 90px;
+	font-family: Consolas;
+	line-height: 14pt;
+	letter-spacing: normal;
+}
+
+p.CodeIndent7
+{
+	padding-left: 126px;
+	font-family: Consolas;
+	line-height: 14pt;
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+p.CodeIndent8
+{
+	padding-left: 144px;
+	margin-bottom: 8px;
+	font-family: Consolas;
+	line-height: 14pt;
+	margin-top: 0px;
+}
+
+b.red
+{
+	color: #ff0000;
+}
+
+span.span_11
+{
+	color: black;
+	background-color: #008000;
+	font-family: Consolas;
+	font-size: 12pt;
+}
+
+span.span_17
+{
+	font-family: Consolas;
+	color: #008000;
+	font-size: 12pt;
+}
+
+span.span_19
+{
+	color: #FF0000;
+	font-family: Consolas;
+	font-size: 12pt;
+}
+
+span.span_22
+{
+	font-family: Consolas;
+	color: #800000;
+	font-size: 12pt;
+}
+
+span.span_23
+{
+	font-family: Consolas;
+	color: #2B91AF;
+	font-size: 12pt;
+}
+
+span.span_25
+{
+	font-family: Consolas;
+	background-color: #FFFF00;
+	font-size: 12pt;
+}
+
+span.span_31
+{
+	font-family: Consolas;
+	color: #555555;
+	font-size: 12pt;
+}
+
+span.span_32
+{
+	background-color: #FFFF00;
+}
+
+span.span_4
+{
+	font-family: Consolas;
+	color: #0000FF;
+	font-size: 12pt;
+}
+
+span.span_6
+{
+	font-family: Consolas;
+	color: #FF0000;
+	font-size: 12pt;
+}
+
+span.span_9
+{
+	color: black;
+	background-color: #FFFF00;
+	font-family: Consolas;
+	font-size: 12pt;
+}
+
+p.CodeIndent10
+{
+	padding-left: 180;
+	font-size: 12pt;
+	font-family: Consolas;
+	line-height: 14pt;
+}
+
+span.span_14
+{
+	
+}
+
+p.CoverTitle
+{
+	font-family: Calibri;
+	font-size: 23pt;
+	margin-bottom: 18pt;
+	margin-top: 18pt;
+	border-top-color: #7f7f7f;
+	border-top-align: left;
+	border-top-style: solid;
+	line-height: 0.5in;
+}
+
+p.thead1
+{
+	font-weight: bold;
+	margin-bottom: 8px;
+	margin-top: 8px;
+	background-color: #595959;
+	color: #ffffff;
+	font-family: 'Open Sans';
+	font: Open Sans;
+	font-size: 13pt;
+	line-height: 19pt;
+}
+
+p.Indent2
+{
+	padding-left: 36px;
+}
+
+p.footerTopic
+{
+	font-size: 9pt;
+	text-align: center;
+	border-top-color: #005581;
+	color: #000000;
+	border-top: solid 2px #0687f3;
+	margin-top: 21px;
+	border-color: #000000;
+}
+
+caption.Table
+{
+	font-weight: bolder;
+	color: #000000;
+	font-family: 'Roboto Slab';
+	font-size: 1.2em;
+	background-color: #ffffff;
+	border-bottom-color: #000000;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-top-color: transparent;
+	border-color: transparent;
+	font: Roboto Slab;
+}
+

@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/TableStyles/2017-ITPatternedRows2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11271000.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>Elements within the Tx1228</h1>
+        <p>The following table describes each element within the Tx1228.</p>
+        <table style="width: 100%;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/2017-ITPatternedRows2.css');caption-side: top;" class="TableStyle-2017-ITPatternedRows2" cellspacing="0">
+            <caption class="Table">Elements within the Tx1228</caption>
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" />
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-2017-ITPatternedRows2-Head-Header1">
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Element</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;UserAuthRequest&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows"><span style="background-color: #ffff00;">Required aggregate when the Tx1228 is a POST to the passive FireLight endpoint. When used in SSO this should not be included.</span> It contains the predefined login information used by FireLight to authenticate the external system with FireLight<sup MadCap:conditions="Default.Web">®</sup>.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;UserLoginName&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">The predefined login name set up for this subscription to FireLight. All requests will use the same login name and password.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;UserPwd&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Required aggregate containing the predefined password for authenticating the external system with FireLight.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;CryptType&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Required with a value of “AES”.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;CryptPswd&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Required. This element contains a SHA1 hash of the shared password appended to a SHA1 hash of the &lt;TXLifeRequest&gt; aggregate, which is then signed using AES and the entire value base64 encoded.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;UserDomain&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Required. Used by FireLight to identify the organization subscription to FireLight.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;VendorApp&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Required aggregate used to identify the name of the external system.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;AppName&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">External system name.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;TXLifeRequest&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Required aggregate containing information about the actual user of the system.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;TransRefGUID&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Required and must be unique for each transaction.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;TransType&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Required and “tc” value must be “1228” (OLI_TRANS_TRNPRODINQ).</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;TransSubType&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Optional, but must have a “tc” value of “22800” (OLI_TRANSSUB_PRODDETALL).</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;OLifE&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Required aggregate.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;SourceInfo&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Optional aggregate used by FireLight logging to indicate the actual referring system identifier. For instance, if you have multiple ways into FireLight, you can use the &lt;SourceInfoName&gt; to identify which launch mechanism (e.g. portal) was used.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;Party&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Required aggregate containing information used by FireLight to identify the actual user of the system. Optionally, used to identify Firms the user is associated with.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;FullName&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Optional if &lt;Person&gt;&lt;FirstName&gt; and &lt;LastName&gt; are supplied. Required if &lt;Person&gt; aggregate is not used.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;Person&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Required if &lt;FullName&gt; not included within the &lt;Party&gt; aggregate. <strong>Note:</strong> When the &lt;NickName&gt; attribute is used with the &lt;Person&gt; aggregate, it allows a user to log in to FireLight under another user’s account and still maintain accurate case ownership information. The FireLight audit records record the nickname for the logged in user. The owner of the case retains the agent information and it is displayed in various parts of the system.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;Producer&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Required aggregate used to uniquely identify the user within the FireLight system.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;CarrierAppointment&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Required aggregate containing an identifier used by FireLight to identity the user and/or firms distribution agreement.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;CompanyProducerID&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Unique identifier from the external system that will be used by FireLight to uniquely identify the user.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;CarrierCode&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Used by FireLight to identify the organization subscription to FireLight.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;Relation&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Required aggregate used to identify the role of the &lt;Party&gt; aggregate.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;DistributionAgreementInfo&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Optional aggregate to identify the distribution agreement aggregate for that organization.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;Registration&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Optional aggregate to identify the organization firm information.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;FirmName&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Optional aggregate to identify the organization firm name.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;FirmRegistrationNum&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Optional aggregate to identify the organization Firm ID.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;Relation&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Required aggregate used to identify the role of the &lt;Party&gt; aggregates and the relation between Person and Organization &lt;Party&gt;.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows" colspan="2"><strong style="color: #00bfff;"><span style="color: #1e90ff;">Aggregates when specifying distribution agreements and associated firms</span>.</strong>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;DistributionAgreement&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Optional aggregate to identify product availability. </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;PolicyProductInfo&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Optional aggregate to identify a product defined in FireLight.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;ProductCode&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">External code to help identify product within FireLight.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;OLifEExtension&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Aggregate to extend the ACORD (v2.27) model.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;CusipNum&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">External code to help identify a product defined in FireLight.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-DarkerRows"><strong>&lt;DistributionAgreement&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyA-Regular-DarkerRows">Optional aggregate to identify product availability. </td>
+                </tr>
+            </tbody>
+        </table>
+        <p MadCap:conditions="Default.Web"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

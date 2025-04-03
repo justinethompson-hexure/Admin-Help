@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11272800.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1>Launch into FireLight Dashboard – Delayed Use of 103</h1>
+        <p>Posting over into FireLight<sup MadCap:conditions="Default.Web">®</sup> with a 103 that does not contain the product ID and jurisdiction will launch into the FireLight dashboard. Client data from the 103 can be retained and utilized for the duration of the session. The New Business service does additionally require the refid to be included in the URL in order to make use of the delayed 103 functionality.  The 103 should also include one of the following parties: insured, annuitant, or owner.</p>
+        <p>The following is an explanation of each step:</p>
+        <ol>
+            <li>
+                <p>The user is authenticated and authorized by the external system.</p>
+            </li>
+            <li>
+                <p>The user clicks on a link to launch into the FireLight dashboard.</p>
+            </li>
+            <li>
+                <p>The external system sends back to the user a specially crafted response to force the browser to POST an ACORD Tx1228 transaction within a hidden form field to the FireLight passive endpoint.</p>
+            </li>
+            <li>
+                <p>FireLight authenticates with the STS using a predefined shared user login and password set up specifically for the implementation. If the credentials are valid, FireLight will impersonate the user identified within the 1228 for the remainder of the session. If the credentials are not valid, the user will be redirected to a generic error page within FireLight.</p>
+            </li>
+            <li>
+                <p>FireLight will send back a redirect to the FireLight dashboard.</p>
+            </li>
+            <li>
+                <p>The user will select the product and jurisdiction for the new application.</p>
+            </li>
+            <li>
+                <p>The system will allow the user to choose whether to use the data from the 103 for the application being created. The checkbox for ‘Create the Application for [Insured Name], [Annuitant Name]’, or [Owner Name] will default to checked.</p>
+            </li>
+            <li>
+                <p>If the user does not uncheck the box, the associated fields on the forms are pre-filled with the data from the current session’s 103. The 103 client information can continue to be used for duration of the session for any applications created.</p>
+            </li>
+        </ol>
+    </body>
+</html>

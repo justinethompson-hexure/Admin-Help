@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <meta name="description" content="Tx1228 Simple Example; TX1228 Extended Example; Tx1228 User Nickname Example" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11271200.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>TX1228 Examples</h1>
+        <h2>Simple Example</h2>
+        <p>The simple example is used to provide basic user information.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>Tx1228 Simple Example</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;TXLife xmlns="http://ACORD.org/Standards/Life/2"&gt;
+  &lt;UserAuthRequest&gt;
+    &lt;UserLoginName&gt;XXX SHARED LOGIN NAME&lt;/UserLoginName&gt;
+    &lt;UserPswd&gt;
+      &lt;CryptType&gt;AES&lt;/CryptType&gt;
+      &lt;CryptPswd&gt;Encrypted Password&lt;/CryptPswd&gt;
+    &lt;/UserPswd&gt;
+    &lt;UserDomain&gt;XXX ORGANIZATION CODE&lt;/UserDomain&gt;
+    &lt;VenderApp&gt;
+      &lt;AppName&gt;External System Name&lt;/AppName&gt;
+    &lt;/VenderApp&gt;
+  &lt;/UserAuthRequest&gt;
+  &lt;TXLifeRequest&gt;
+    &lt;TransRefGUID&gt;26C1A4FC-C22C-4027-9BF6-575AF38AAE2A&lt;/TransRefGUID&gt;
+    &lt;TransType tc="1228"&gt;OLI_TRANS_TRNPRODINQ&lt;/TransType&gt;
+    &lt;TransSubType tc="22800"&gt;OLI_TRANSSUB_PRODDETALL&lt;/TransSubType&gt;
+    &lt;OLifE&gt;
+      &lt;SourceInfo&gt;
+        &lt;CreationDate&gt;2010-11-02&lt;/CreationDate&gt;
+        &lt;CreationTime&gt;12:20:03.5876024-06:00&lt;/CreationTime&gt;
+        &lt;SourceInfoName&gt;Carrier Portal Name&lt;/SourceInfoName&gt;
+      &lt;/SourceInfo&gt;
+      &lt;Party id="Agent_Party"&gt;
+        &lt;PartyTypeCode tc="1"&gt;OLI_PT_Person&lt;/PartyTypeCode&gt;
+        &lt;FullName&gt;Agents Full Name&lt;/FullName&gt;
+        &lt;EMailAddress&gt;
+          &lt;AddrLine&gt;agents_email@insurancetechnologies.com&lt;/AddrLine&gt;
+        &lt;/EMailAddress&gt;
+        &lt;Person/&gt;
+        &lt;Producer&gt;
+          &lt;CarrierAppointment PartyID="Agent_Party"&gt;
+            &lt;CompanyProducerID&gt;XXX AGENT ID&lt;/CompanyProducerID&gt;
+            &lt;CarrierCode&gt;XXX DEFINED CARRIER CODE&lt;/CarrierCode&gt;
+          &lt;/CarrierAppointment&gt;
+        &lt;/Producer&gt;
+      &lt;/Party&gt;
+      &lt;Relation OriginatingObjectID="Agent_Party"&gt;
+        &lt;RelationRoleCode tc="11"&gt;OLI_REL_AGENT&lt;/RelationRoleCode&gt;
+      &lt;/Relation&gt;
+    &lt;/OLifE&gt;
+  &lt;/TXLifeRequest&gt;
+&lt;/TXLife&gt;
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <h2>Extended Example</h2>
+        <p>The extended example is used to optionally associate the agent with one or more firms, as well as optionally specify products available per firm.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>Tx1228 Extended Example</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;TXLife xmlns="http://ACORD.org/Standards/Life/2"&gt;
+  &lt;UserAuthRequest&gt;
+    &lt;UserLoginName&gt;XXX SHARED LOGIN NAME&lt;/UserLoginName&gt;
+    &lt;UserPswd&gt;
+      &lt;CryptType&gt;AES&lt;/CryptType&gt;
+      &lt;CryptPswd&gt;Encrypted Password&lt;/CryptPswd&gt;
+    &lt;/UserPswd&gt;
+    &lt;UserDomain&gt;XXX ORGANIZATION CODE&lt;/UserDomain&gt;
+    &lt;VenderApp&gt;
+      &lt;AppName&gt;External System Name&lt;/AppName&gt;
+    &lt;/VenderApp&gt;
+  &lt;/UserAuthRequest&gt;
+  &lt;TXLifeRequest&gt;
+    &lt;TransRefGUID&gt;26C1A4FC-C22C-4027-9BF6-575AF38AAE2A&lt;/TransRefGUID&gt;
+    &lt;TransType tc="1228"&gt;OLI_TRANS_TRNPRODINQ&lt;/TransType&gt;
+    &lt;TransSubType tc="22800"&gt;OLI_TRANSSUB_PRODDETALL&lt;/TransSubType&gt;
+    &lt;OLifE&gt;
+      &lt;SourceInfo&gt;
+        &lt;CreationDate&gt;2010-11-02&lt;/CreationDate&gt;
+        &lt;CreationTime&gt;12:20:03.5876024-06:00&lt;/CreationTime&gt;
+        &lt;SourceInfoName&gt;Carrier Portal Name&lt;/SourceInfoName&gt;
+      &lt;/SourceInfo&gt;
+      &lt;Party id="Agent_Party"&gt;
+        &lt;PartyTypeCode tc="1"&gt;OLI_PT_Person&lt;/PartyTypeCode&gt;
+        &lt;FullName&gt;Agents Full Name&lt;/FullName&gt;
+        &lt;EMailAddress&gt;
+          &lt;AddrLine&gt;agents_email@insurancetechnologies.com&lt;/AddrLine&gt;
+        &lt;/EMailAddress&gt;
+        &lt;Person/&gt;
+        &lt;Producer&gt;
+          &lt;CarrierAppointment PartyID="Agent_Party"&gt;
+            &lt;CompanyProducerID&gt;XXX AGENT ID&lt;/CompanyProducerID&gt;
+            &lt;CarrierCode&gt;XXX DEFINED CARRIER CODE&lt;/CarrierCode&gt;
+          &lt;/CarrierAppointment&gt;
+        &lt;/Producer&gt;
+      &lt;/Party&gt;
+      &lt;Party id="Firm_Party_1"&gt;
+        &lt;PartyTypeCode tc="2"&gt;Organization&lt;/PartyTypeCode&gt;
+        &lt;FullName&gt;Firm Name&lt;/FullName&gt;
+        &lt;Producer&gt;
+          &lt;CarrierAppointment&gt;
+            &lt;CarrierCode&gt;XXX DEFINED CARRIER CODE&lt;/CarrierCode&gt;
+            &lt;DistributionAgreementInfo id="DistributionAgreementID_1ID" 
+                                       DistributionAgreementID="DistributionAgreementID_1" /&gt;
+          &lt;/CarrierAppointment&gt;
+          &lt;Registration&gt;
+            &lt;FirmName&gt;Firm Name&lt;/FirmName&gt;
+            &lt;FirmRegistrationNum&gt;XXX FIRM ID&lt;/FirmRegistrationNum&gt;
+          &lt;/Registration&gt;
+        &lt;/Producer&gt;
+      &lt;/Party&gt;
+      &lt;Party id="Firm_Party_2"&gt;
+        &lt;PartyTypeCode tc="2"&gt;Organization&lt;/PartyTypeCode&gt;
+        &lt;FullName&gt;Firm Name 2&lt;/FullName&gt;
+        &lt;Producer&gt;
+          &lt;CarrierAppointment&gt;
+            &lt;CarrierCode&gt;XXX DEFINED CARRIER CODE&lt;/CarrierCode&gt;
+            &lt;DistributionAgreementInfo id="DistributionAgreementID_2ID" 
+                                       DistributionAgreementID="DistributionAgreementID_2" /&gt;
+          &lt;/CarrierAppointment&gt;
+          &lt;Registration&gt;
+            &lt;FirmName&gt;Firm Name 2&lt;/FirmName&gt;
+            &lt;FirmRegistrationNum&gt;ZZZ FIRM ID&lt;/FirmRegistrationNum&gt;
+          &lt;/Registration&gt;
+        &lt;/Producer&gt;
+      &lt;/Party&gt;
+      &lt;Relation OriginatingObjectID="Agent_Party"&gt;
+        &lt;RelationRoleCode tc="11"&gt;OLI_REL_AGENT&lt;/RelationRoleCode&gt;
+      &lt;/Relation&gt;
+      &lt;Relation OriginatingObjectID="Firm_Party_1" RelatedObjectID="Agent_Party"&gt;
+        &lt;RelationRoleCode tc="120"&gt;Agent of Agency&lt;/RelationRoleCode&gt;
+        &lt;Sequence&gt;0&lt;/Sequence&gt;
+      &lt;/Relation&gt;
+      &lt;Relation OriginatingObjectID="Firm_Party_2" RelatedObjectID="Agent_Party"&gt;
+        &lt;RelationRoleCode tc="120"&gt;Agent of Agency&lt;/RelationRoleCode&gt;
+        &lt;Sequence&gt;1&lt;/Sequence&gt;
+      &lt;/Relation&gt;
+      &lt;DistributionAgreement id="DistributionAgreementID_1"&gt;
+        &lt;PolicyProductInfo id="PolicyProductInfo_1"&gt;
+          &lt;ProductCode&gt;Product1Code&lt;/ProductCode&gt;
+          &lt;CarrierCode&gt;XXX DEFINED CARRIER CODE&lt;/CarrierCode&gt;
+          &lt;OLifEExtension&gt;
+            &lt;CusipNum&gt;PRODUCT1_CUSIP&lt;/CusipNum&gt;
+          &lt;/OLifEExtension&gt;
+        &lt;/PolicyProductInfo&gt;
+        &lt;PolicyProductInfo id="PolicyProductInfo_2"&gt;
+          &lt;ProductCode&gt;Product2Code&lt;/ProductCode&gt;
+          &lt;CarrierCode&gt;XXX DEFINED CARRIER CODE&lt;/CarrierCode&gt;
+          &lt;OLifEExtension&gt;
+            &lt;CusipNum&gt;PRODUCT2_CUSIP&lt;/CusipNum&gt;
+          &lt;/OLifEExtension&gt;
+        &lt;/PolicyProductInfo&gt;
+      &lt;/DistributionAgreement&gt;
+      &lt;DistributionAgreement id="DistributionAgreementID_2"&gt;
+        &lt;PolicyProductInfo id="PolicyProductInfo_3"&gt;
+          &lt;ProductCode&gt;Product3Code&lt;/ProductCode&gt;
+          &lt;CarrierCode&gt;XXX DEFINED CARRIER CODE&lt;/CarrierCode&gt;
+          &lt;OLifEExtension&gt;
+            &lt;CusipNum&gt;PRODUCT3_CUSIP&lt;/CusipNum&gt;
+          &lt;/OLifEExtension&gt;
+        &lt;/PolicyProductInfo&gt;
+        &lt;PolicyProductInfo id="PolicyProductInfo_4"&gt;
+          &lt;ProductCode&gt;Product4Code&lt;/ProductCode&gt;
+          &lt;CarrierCode&gt;XXX DEFINED CARRIER CODE&lt;/CarrierCode&gt;
+          &lt;OLifEExtension&gt;
+            &lt;CusipNum&gt;PRODUCT4_CUSIP&lt;/CusipNum&gt;
+          &lt;/OLifEExtension&gt;
+        &lt;/PolicyProductInfo&gt;
+      &lt;/DistributionAgreement&gt;
+    &lt;/OLifE&gt;
+  &lt;/TXLifeRequest&gt;
+&lt;/TXLife&gt;
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <h2>User Nickname Example</h2>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>User Nickname Example</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">TxLifeRequest Templete
+&lt;TXLife xmlns="http://ACORD.org/Standards/Life/2"&gt;
+  &lt;UserAuthRequest&gt;
+    &lt;UserLoginName&gt;UserName&lt;/UserLoginName&gt;
+    &lt;UserPswd&gt;
+      &lt;CryptType&gt;AES&lt;/CryptType&gt;
+      &lt;CryptPswd&gt;UserPassword&lt;/CryptPswd&gt;
+    &lt;/UserPswd&gt;
+    &lt;UserDomain&gt;IT&lt;/UserDomain&gt;
+    &lt;VendorApp&gt;
+      &lt;AppName&gt;ForeSight&lt;/AppName&gt;
+    &lt;/VendorApp&gt;
+  &lt;/UserAuthRequest&gt;
+  &lt;TXLifeRequest&gt;
+    &lt;TransRefGUID&gt;&lt;/TransRefGUID&gt;
+    &lt;TransType tc="1228"&gt;&lt;/TransType&gt;
+    &lt;TransSubType tc="22800"&gt;&lt;/TransSubType&gt;
+    &lt;OLifE&gt;
+      &lt;SourceInfo&gt;
+        &lt;CreationDate&gt;2013-09-20&lt;/CreationDate&gt;
+        &lt;CreationTime&gt;11:21:15.1855895-06:00&lt;/CreationTime&gt;
+        &lt;SourceInfoName&gt;IT&lt;/SourceInfoName&gt;
+      &lt;/SourceInfo&gt;
+      &lt;Party id="Agent_Party"&gt;
+        &lt;PartyTypeCode tc="1"&gt;Person&lt;/PartyTypeCode&gt;
+        &lt;FullName&gt;IT TESTER FULLNAME&lt;/FullName&gt;
+        &lt;EMailAddress&gt;
+          &lt;AddrLine&gt;tester@insurancetechnologies.com&lt;/AddrLine&gt;
+        &lt;/EMailAddress&gt;
+        &lt;Person &gt;
+          &lt;NickName&gt;Person Logging in&lt;/NickName&gt;
+        &lt;/Person&gt;
+        &lt;Producer&gt;
+          &lt;CarrierAppointment&gt;
+            &lt;CompanyProducerID&gt;UserId&lt;/CompanyProducerID&gt;
+            &lt;CarrierCode&gt;IT&lt;/CarrierCode&gt;
+          &lt;/CarrierAppointment&gt;
+        &lt;/Producer&gt;
+      &lt;/Party&gt;
+      &lt;OLifEExtension VendorCode="25"&gt;
+        &lt;UserRoleCode tc="10"&gt;OverRide&lt;/UserRoleCode&gt;
+      &lt;/OLifEExtension&gt;
+    &lt;/OLifE&gt;
+  &lt;/TXLifeRequest&gt;
+&lt;/TXLife&gt;
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>&#160;</p>
+        <MadCap:pageBreak />
+        <p MadCap:conditions="Default.Web"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

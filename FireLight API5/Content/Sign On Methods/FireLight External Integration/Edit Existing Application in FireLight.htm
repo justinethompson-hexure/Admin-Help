@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11272400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>Edit Existing Application in FireLight</h1>
+        <p>At times, you may want to provide the user the ability to launch directly into the Edit Application view within FireLight<sup MadCap:conditions="Default.Web">®</sup> without sending over a 103 with update information. The following diagram illustrates the launch sequence for this scenario.</p>
+        <p>
+            <img src="../../Resources/Images/Capture.png" alt="Diagram: Launch Sequence for Edit Existing Application in FireLight" title="Diagram: Launch Sequence for Edit Existing Application in FireLight" />
+        </p>
+        <p>The following is an explanation of each step:</p>
+        <ol>
+            <li>
+                <p>The user is authenticated and authorized by the external system.</p>
+            </li>
+            <li>
+                <p>The user clicks on a link to launch into the FireLight dashboard.</p>
+            </li>
+            <li>
+                <p>The external system sends back to the user a specially crafted response to force the browser to POST an ACORD Tx1228 transaction within a hidden form field to the FireLight passive endpoint.</p>
+            </li>
+            <li>
+                <p>FireLight authenticates with the STS using a predefined shared user login and password set up specifically for the implementation. If the credentials are valid, FireLight will impersonate the user identified within the 1228 for the remainder of the session. If the credentials are not valid, the user will be redirected to a generic error page within FireLight.</p>
+            </li>
+            <li>
+                <p>FireLight will send back a redirect to the FireLight dashboard.</p>
+            </li>
+        </ol>
+        <p>A query string named “appid” with a value retained from the original &lt;TXLifeResponse&gt;/&lt;HoldingKey&gt; is required to be sent within the action on the form post. See “Sample HTML Form” in <MadCap:xref href="Post ACORD TX 1228 Transaction.htm" alt="Post ACORD TX 1228 Transaction">Post ACORD TX 1228 Transaction</MadCap:xref>.</p>
+        <MadCap:pageBreak />
+        <p MadCap:conditions="Default.Web"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

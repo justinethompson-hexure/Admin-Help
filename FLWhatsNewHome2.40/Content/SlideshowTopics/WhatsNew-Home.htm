@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html class="topic" lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-medium="non-print" data-mc-toc-path="" data-mc-searchable="False" xml:lang="en-us">
+    <head>
+        <link href="../Resources/Stylesheets/Slideshow.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/TextEffects.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Resources/Stylesheets/Topic.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Resources/Skins/Default/Stylesheets/Styles.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Resources/Skins/Default/Stylesheets/Tablet.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Resources/Skins/Default/Stylesheets/Mobile.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <link href="../Resources/Skins/Default/Stylesheets/Print.css" rel="stylesheet" type="text/css" data-mc-generated="True" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" /><title>FireLight Release Notes</title>
+        <link href="../Resources/Stylesheets/styles.css" rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <h1><a name="top"></a>FireLight Release Notes</h1>
+        <div class="MCDropDown MCDropDown_Closed dropDown"><span class="MCDropDownHead dropDownHead"><a href="#" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_ MCHotSpotImage" aria-expanded="false"><img class="MCDropDown_Image_Icon" src="../Resources/Images/transparent.gif" height="11" width="16" alt="Closed" data-mc-alt2="Open" />2.40 March 2025</a></span>
+            <div class="MCDropDownBody dropDownBody">
+                <h1><a name="top"></a><b style="font-size: 16pt;">New Features</b>
+                </h1>
+                <p><b style="font-size: 14pt;">Updated User Interface is Now Available in UAT for All Clients</b>
+                </p>
+                <p>The New User Interface is now available in UAT.   New User Interface can be enabled/ disabled by users in the UAT environment by checking or unchecking the check box that is found in user preferences.   For Clients who wish to have the new User Interface available in Staging or Products please submit a JIRA ticket with that request.   More information on the new User interface can be found in the FAQ Document and the  PDF guide which can be found in Admin Help.</p>
+                <p><b style="font-size: 14pt;">DTCC Producer Authorization.  Error Message Enhancements: CR-4088</b>
+                </p>
+                <p>We updated all “hard stop” error messages to indicate the specific reason that the producer is not authorized to sell.</p>
+                <p><b style="font-size: 14pt;">DTCC Producer Authorization.  Messaging for Producer When Its Neither Soft Stop Nor Hard Stop: CR-4178</b>
+                </p>
+                <p>We added the following DTCC Producer Authorization message: “All requirements are satisfied. You can proceed with selling this product.””</p>
+                <p><b style="font-size: 14pt;">DTCC Producer Authorization.  Update Verbiage in the Soft Stop Message: CR-4181</b>
+                </p>
+                <p>We updated the FireLight soft stop message to read: “DTCC Producer Authorization: You are authorized to sell this product, though certain requirements are not yet fully met”</p>
+                <p><b style="font-size: 14pt;">DocuSign Integration. Gracefully Handle Unaccounted DocuSign Events: CR-4175</b>
+                </p>
+                <p>We modified payload handling to more gracefully handle unaccounted DocuSign events and reduce error logging.</p>
+                <p><b style="font-size: 14pt;">Prompt to update missing email address in Preferences when user logs in via SSO: DIST-5026</b>
+                </p>
+                <p>Added logic so that user will be prompted to add Agent email address when it is not present in the SSO.</p>
+                <p><b style="font-size: 14pt;">Update Next Activity Default Messages with User-Friendly Wording: EAES-3905</b>
+                </p>
+                <p>We updated error messages to be more clear and user-friendly, including the following:</p>
+                <ul>
+                    <li>
+                        <p>"This product has not been configured for your organization. Press OK to continue."</p>
+                    </li>
+                    <li>
+                        <p>"The product you are attempting to access is not available. Press OK to continue."</p>
+                    </li>
+                </ul>
+                <p><b style="font-size: 14pt;">Report Enhancements and Additions: DIST-4763, DIST-4764, DIST-4788</b>
+                </p>
+                <p>The BrandID Column was added to the agent Submission Activity Report.</p>
+                <p>The following updates have been made to various Admin reports:</p>
+                <ul>
+                    <li>
+                        <p>We added the name of FireLight instance—such as Prod, UAT—to the title of FireLight Audit Report</p>
+                    </li>
+                    <li>
+                        <p>We moved the Sales Agreement report to the report list from Admin History reports drop down</p>
+                    </li>
+                    <li>
+                        <p>We added the column "Product Type" Sales Agreement admin report.</p>
+                    </li>
+                </ul>
+                <p><b style="font-size: 14pt;">Updated Title of FireLight Audit Report: DIST-4860</b>
+                </p>
+                <p>We updated the title of the FireLight Audit Report to include the name of the environment (QA, UAT, Staging or Production).</p>
+                <p><b style="font-size: 14pt;">Update to Support “Distributor Only” Forms for Back Office Transmissions: EAES-5027, EAES-6452</b>
+                </p>
+                <p>In the Admin Tool, we added an option to the form Detail “Send to Distributor Only” to support the handling of forms that should only be sent to the distributor.  In Firelight we added the functionality required to support this new option.</p>
+                <p><b style="font-size: 14pt;">Update to the Audits in Firelight Admin Tool to Deletion of a Form or Wizard:EAES-5166</b>
+                </p>
+                <p>We added an audit  line for form  removal in the Package History and in the Deployment &gt; Package Changes to be displayed when a form or Wizard has been deleted.</p>
+                <p><b style="font-size: 14pt;">Reporting: Added a Transaction Detail Report: EAES-5321, EAES-6449</b>
+                </p>
+                <p>If enabled for an organization, the completion of a transaction will generate a Transaction Detail Report. The report captures a comprehensive record of information related to a transaction, including wizards, forms, and other key points of data. The feature can be enabled at the organization level and permissions can be adjusted at the group level for more fine-tuned access.   We also added a new option on dropdown/combo box controls which, when enabled, will limit displayed values in the Transaction Detail Report for that specific field.</p>
+                <p><b style="font-size: 14pt;">Updates to the DPFA Upload to Accommodate Additional Scenarios for Carrier Appointments and Commission Options: CR-4308</b>
+                </p>
+                <p>We addressed a DPFA issue where duplicate carrier appointments are generated due to improper handling of CarrierCode and DistributionChannelCode elements in the file. To resolve the issue and prevent future duplicates, the NAICGroupCode is introduced in the system.   This will uniquely identify and associate each carrier appointment entry to prevent duplication when dealing with carriers that share the same CarrierCode and DistributionChannelCode.   The "Commission Option" dropdown in FL UI is now a text field. This is done to account for the different versions observed in the DPFA.</p>
+                <p>&#160;</p>
+                <p><b style="font-size: 16pt; font-weight: bold;">Resolved Issues</b>
+                </p>
+                <p><b style="font-size: 14pt;">Search Fields in Wizard Packages-DIST-4369</b>
+                </p>
+                <p>We resolved an issue where clicking the Search button on the Search Fields in Wizard Packages tab in the Wizard Library resulted in an error. Clicking the Search button now works as designed.</p>
+                <p><b style="font-size: 14pt;">ReviewQueueReport Activity Report Error: DIST-4864</b>
+                </p>
+                <p>We resolved an issue where an error resulted when generating the ReviewQueueReport. The report can now be generated without issue.</p>
+                <p><b style="font-size: 14pt;">EDeliveryPendingExpirationReport Activity report Error: DIST-4865</b>
+                </p>
+                <p>We resolved an issue where an error resulted when generating the EDeliveryPendingExpirationReport. The report can now be generated without issue.</p>
+                <p><b style="font-size: 14pt;">Getting Server Error When User Approved or Reject the App from Review Queue: DIST-4932</b>
+                </p>
+                <p>We resolved an issue where a server error was intermittently received when users approved or rejected an app in the review queue. In this scenario now no error is received.</p>
+                <p><b style="font-size: 14pt;">Error Occurring in Activity Completion Report Due to Missing Login Date Value: DIST-5020</b>
+                </p>
+                <p> We resolved an issue where an error occurred when generating the Activity Completion Report. The report can now be generated without issue.</p>
+                <p><b style="font-size: 14pt;">Timeout Error When Generating Business Detail Report: DIST-5132</b>
+                </p>
+                <p> We resolved an issue where generating the Business Detail Report for a date range longer than two days resulted in an error. The report can now be generated without issue.</p>
+                <p><b style="font-size: 14pt;">Spurious Application Messages for Passcodes Being Created but Not Sent: EAES-3264</b>
+                </p>
+                <p>We resolved an issue where an application message for Passcode Application would be created and stored but not sent. Passcode Application messages are now always sent as designed.</p>
+                <p><b style="font-size: 14pt;">User with Apostrophe in the Name, Not Able to Be Assigned as (Producer/Admin/Member) in Any of New or Old Workgroups: EAES-3919</b>
+                </p>
+                <p>We resolved an issue where a user with an apostrophe in the name could not be assigned to a workgroup. Now such users can be assigned to workgroups.</p>
+                <p><b style="font-size: 14pt;">In the Resend Passcode Email Functionality, Entering an Email Address with Leading or Trailing Spaces Results in a Validation Error: EAES-4745</b>
+                </p>
+                <p>We resolved an issue where when attempting to resend a passcode email, entering an email address with leading or trailing spaces resulted in a validation error. Now such addresses can be entered without issue.</p>
+                <p><b style="font-size: 14pt;">In the Send Reminder Email Functionality, Entering an Email Address with Leading Spaces Results in a Validation Error: EAES-4746</b>
+                </p>
+                <p>We resolved an issue where when attempting to send a reminder email, entering an email address with leading or trailing spaces resulted in a validation error. Now such addresses can be entered without issue.</p>
+                <p><b style="font-size: 14pt;">In the Send Reminder Email Functionality, Entering an Email Address with Leading Spaces Results in a Validation Error: EAES-4746</b>
+                </p>
+                <p>We resolved an issue where when attempting to send a reminder email, entering an email address with leading or trailing spaces resulted in a validation error. Now such addresses can be entered without issue.</p>
+                <p><b style="font-size: 14pt;">In the Send New Email Functionality in Message Center, Entering an Email Address with Leading or trailing Spaces Results in a Validation Error: EAES-4747</b>
+                </p>
+                <p>We resolved an issue where when attempting to send a new email in the Message Center, entering an email address with leading or trailing spaces resulted in a validation error. Now such addresses can be entered without issue.</p>
+                <p><b style="font-size: 14pt;">Cancel Tele-Sign Link Color Is Different than Normal Signers Revoke Request Link: EAES-5158</b>
+                </p>
+                <p>We resolved an issue where in the signers list the Cancel Tele-Sign link color was incorrect and did not match the link color of other signers. Now the Cancel Tele-Sign link appears as designed.</p>
+                <p><b style="font-size: 14pt;">When "Allow E-Sign" Is Disabled, No Audit Report Is Generated When It Skips the Submission Process to Go to Complete: EAES-5413</b>
+                </p>
+                <p>We resolved an issue where when Allow E-Sign is disabled no audit report was generated. Now in this scenario an audit report is generated as designed.</p>
+                <p><b style="font-size: 14pt;">Timestamp in Deployment History is not Correct.   DIST-5081</b>
+                </p>
+                <p>We resolved an issue where the timestamp in the deployment history was not displaying the correct time of deployment.</p>
+                <p><b style="font-size: 14pt;">App Status Showing 'Client Signatures Complete' After Re-sign Process Initiated: EAES-5882</b>
+                </p>
+                <p>We resolved an issue where after the re-sign process was initiated the app status erroneously showed “Client Signatures Complete.” Now in this scenario the app status shows as In Signatures with the request canceled.</p>
+                <p><b style="font-size: 14pt;">Tele Sign MVC Signing: Signer Name and Signer Email Not Autofill in Forms Access Page for Send Via Email Page: EAES-5893</b>
+                </p>
+                <p>We resolved an issue where on the Tele Sign access page the Signer Name and Signer Email fields failed to autofill. Now these fields autofill as designed.</p>
+                <p><b style="font-size: 14pt;">Configuration issue with scheduled email send functionality: EAES-6108</b>
+                </p>
+                <p>We resolved an issue where scheduled assemblies ran every five minutes instead of the every one or two minutes they were configured to run. This resulted in delays in sending emails.  Scheduled assemblies are now running every one or two minutes, as configured.</p>
+                <p><b style="font-size: 14pt;">Overlapped Checkboxes Are Displaying for Optional Forms: EAES-6262</b>
+                </p>
+                <p>We resolved an issue where on optional forms checkboxes overlapped. Checkboxes on these forms now display correctly.</p>
+                <p><b style="font-size: 14pt;">“(OFFICE USE ONLY)” Is Appearing at the End of Certain Error Messages: EAES-6305</b>
+                </p>
+                <p>We resolved an issue where “(OFFICE USE ONLY)” erroneously appeared at the end of some error messages. Error messages now appear correctly, as designed.</p>
+                <p><b style="font-size: 14pt;">Error Messages Are Displaying "Office Use Only". Provider Colors Are Not Always Displayed: EAES-6306</b>
+                </p>
+                <p>We resolved an issue where error messages displayed “Office Use Only” and did not include provider colors. Error messages now appear as designed.</p>
+                <p><b style="font-size: 14pt;">Documents Uploaded via the REST API Have the Wrong Visibility: EAES-6394</b>
+                </p>
+                <p>We resolved an issue where documents uploaded the REST API had the incorrect visibility of CarrierOnly. Now such documents have the correct visibility.</p>
+                <p><b style="font-size: 14pt;">Unable to Continue after Signatures Due to Pending Review Request: EAES-6428</b>
+                </p>
+                <p>We resolved an issue where applications could not be completed in certain circumstances. Now applications can be completed without issue.</p>
+                <p><b style="font-size: 14pt;">Deployment of Firm with All-Numeric ID Not Working: EAES-6436</b>
+                </p>
+                <p>We resolved an issue where deploying firm data failed when firm records contained numeric-only values. Now in this scenario firm data deploys without issue.</p>
+                <p><b style="font-size: 14pt;">Update to Exception Logging: Log an Exception When There Are No Available Continue Actions: EAES-6443</b>
+                </p>
+                <p>We now log an exception when there are no available continue actions and the user cannot complete nor submit the activity.</p>
+                <p><b style="font-size: 14pt;">Exclude From Back Office Checkbox Missing: EAES-6525</b>
+                </p>
+                <p>We resolved an issue where the Exclude from Back Office checkbox was missing from the Form Library page. The checkbox is now available on the page, as designed.</p>
+                <p><b style="font-size: 14pt;">Value of Data Item FLI_APP_ORIGIN Displays Unknown Instead of “Firelight UI” When Application Is Created by Clicking the New Application Button: EAES-6566</b>
+                </p>
+                <p>We resolved an issue where the data item “FLI_APP_ORIGIN” displayed “Unknown” when creating an application using the native UI. Now in this scenario “Firelight UI” appears.</p>
+                <p><b style="font-size: 14pt;">Distributor Should Not Be Able to Modify State Approvals of a Carrier Sales Agreement: PC-1446</b>
+                </p>
+                <p>We resolved an issue where distributors were able to modify state approvals of a carrier sales agreement. Now, distributors can restrict (remove) jurisdiction approvals from a carrier sales agreement but cannot add approvals that the carrier did not specify.</p>
+                <p><b style="font-size: 14pt;">Firm Management Firm Organization Code Is Global Variable Allowing All to See Other Instances: PC-2662</b>
+                </p>
+                <p> We resolved an issue where on the Sales Agreement page any company using the Firm Management feature could view all other Firm Organizations. Now accounts using Firm Management see only their own Firm Organization view.</p>
+                <p><b style="font-size: 14pt;">Open Source License Info Page Is 404: PC-2704</b>
+                </p>
+                <p>We resolved an issue where the open source license info page failed to display. This page now appears as designed.</p>
+                <p><b style="font-size: 14pt;">Wizard Does Not Show Rule Processing Exceptions: PC-3271</b>
+                </p>
+                <p>We resolved an issue where the form/wizard failed to display rule processing exceptions. These exceptions now appear on the first visible form or wizard.</p>
+                <p><b style="font-size: 14pt;">Form/Wizard History Tab Are Not Showing the Edition’s Old and New Values: PC-3424</b>
+                </p>
+                <p>We resolved an issue where after adding or editing the edition on the Form/Wizard details page the old and new values did not display on the History tab. Now both the old and new values appear on the tab in this scenario.</p>
+                <p><b style="font-size: 14pt;">Organization Spelling Incorrect: PC-3637</b>
+                </p>
+                <p>We corrected a spelling error on the Manage Sales Agreement page.</p>
+                <p><b style="font-size: 14pt;">Exceptions Occurring Rendering Layout Due to Missing EnableMixPanel View Property: PC-3676</b>
+                </p>
+                <p>We resolved an issue where layout rendered incorrectly.</p>
+                <p><b style="font-size: 14pt;">NPIS Physician Name not Always Populating Correctly: CR-4305</b>
+                </p>
+                <p>We updated the NPIS integration to ensure that the expected data is populating correctly.</p>
+                <p><b style="font-size: 14pt;">Template Rules for SSN Are Disallowing Some Valid Numbers: PC-3473</b>
+                </p>
+                <p>We resolved an issue where template rules disallowed some valid SSNs. Now all valid SSNs are allowed.</p>
+                <p><b style="font-size: 14pt;">Deployments are Not Working as Expected for Firms with Numeric Firm: EAES-6436</b>
+                </p>
+                <p>We updated the deployment logic to support deploying successfully when Firm ID is numeric.</p>
+                <p><b style="font-size: 14pt;">Error Occurs When Clicking Continue in the PreSale (Suitability) Activity: EAES-6477</b>
+                </p>
+                <p>In certain circumstance an error was occurring when moving from the PreSale activity (Suitability) to subsequent activities.   Updates were made to the “Continue “ logic to ensure that users can move from the PreSale Activity as expected when clicking “Continue”.</p>
+                <p><b style="font-size: 14pt;">DTCC Producer Authorization Error Message is not Aligned as Expected.: CR-4258</b>
+                </p>
+                <p>Corrected the placement of certain error messages to ensure the alignment is consistent and as expected.</p>
+                <p><b style="font-size: 14pt;">FireLight Illustration Errors Occurring for Some Clients Due to Certificates not Being Handled as Expected: IS-4859 and IS-4991</b>
+                </p>
+                <p>Corrected the certificate usage in the calc router configuration to allow fall back to a secondary certificate when appropriate.</p>
+                <p><b style="font-size: 14pt;">FireLight Illustration Provider Transaction to Transmit the Illustration PDF and the Json Key Value Pairs to an Endpoint is Not Working as Expected.  PC-3286</b>
+                </p>
+                <p>Base CalcRouter has been updated to correctly handle this request without errors.</p>
+                <p><i>***Please note that the JIRA ticket numbers are provided for reference. JIRA tickets are not accessible to users outside Hexure.***</i>
+                </p>
+                <p style="font-style: italic;font-weight: bold;">Reminder: This update is scheduled to be moved to production in the April release.</p>
+                <p><b style="font-size: 14pt;">Error Message Now Displays Multiple Errors: PC-2779</b>
+                </p>
+                <p>The system now displays multiple errors in an application when errors occur.</p>
+                <p><b>Impact</b>
+                </p>
+                <p>When a person is completing an application, if there are multiple errors on a page, a popup window will appear with all errors being stated.</p>
+                <p style="font-weight: bold;font-style: italic;">NOTE: This update has been enabled in QA and UAT but will not be generally enabled in production at this time.</p>
+                <div class="MCDropDownBody dropDownBody">
+                    <h1><a name="top"></a>
+                    </h1>
+                </div>
+            </div>
+            <h1>Admin Help</h1>
+            <p class="Indent"><a href="../../../Online Output/Admin/Content/Home2018.htm" target="_blank" title="Open Admin Help" alt="Open Admin Help">Open Admin Help</a> </p>
+            <h1>FireLight Developer Help</h1>
+            <p class="Indent"><a href="../../../Online OutputAPI/FireLight Developer Help/Default.htm" target="_blank" alt="Open FireLight Developer Help" title="Open FireLight Developer Help">Open FireLight Developer Help</a>
+            </p>
+            <h1>FireLight Customer Support</h1>
+            <p>Open a support ticket:</p>
+            <p class="Indent"> <a href="https://insurancetechnologies.atlassian.net/servicedesk/customer/portal/10" target="_blank" title="FireLight Customer Support Portal" alt="FireLight Customer Support Portal">FireLight Customer Support Portal</a></p>
+            <p>Guide: <a href="../Resources/Docs/Jira_Client User Guide_v.5.pdf" target="_blank" title="JIRA Support Process Guide" alt="JIRA Support Process Guide">JIRA Support Process Guide</a></p>
+        </div>
+    </body>
+</html>

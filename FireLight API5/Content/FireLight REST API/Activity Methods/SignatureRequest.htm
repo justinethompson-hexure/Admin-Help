@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11234200.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>SignatureRequest</h1>
+        <p>Creates a signature request event for the given party information and activity.</p>
+        <p>Requires API Token, but does not need an API Token with an associated user.</p>
+        <p><b>URL</b>
+        </p>
+        <p>{<a href="../Endpoint Root URLs.htm" class="Hyperlink" alt="rootURL">rootURL</a>}/Activity/SignatureRequest</p>
+        <p><b>Request body </b><b class="red">*required</b>
+        </p>
+        <p>The TX103 request body for creating a signature request event.</p>
+        <p><b>Response</b>
+        </p>
+        <p>The <span class="opblock-summary-path">SignatureRequest</span> method returns a TXLifeResponse with a TransResult ResultCode tc value of “1” if the request was successful, otherwise the tc value is a different integer value and the reason for the failed is in the text of the ResultCode tag. If the request was successful, the response also contains list of “Party” specifying signer information. Each “Party” node contains information about individual signer like first name, last name, signer type and signature url link. </p>
+        <p><b>Example of response (if request was successful)</b>
+        </p>
+        <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>SignatureRequest - Successful</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: JavaScript;">&lt;?xml version="1.0"?&gt;
+&lt;TXLife xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ACORD.org/Standards/Life/2"&gt;
+  &lt;TXLifeResponse&gt;
+    &lt;TransRefGUID&gt;2e8de4df-4253-4696-b21b-0c3018a06b7f&lt;/TransRefGUID&gt;
+    &lt;TransType tc="103" /&gt;
+    &lt;TransExeDate&gt;2020-02-19&lt;/TransExeDate&gt;
+    &lt;TransExeTime&gt;12:52:26.6744559+05:30&lt;/TransExeTime&gt;
+    &lt;TransResult&gt;
+      &lt;ResultCode tc="1"&gt;RESULT_SUCCESS&lt;/ResultCode&gt;
+    &lt;/TransResult&gt;
+    &lt;OLifE&gt;
+      &lt;Holding id="Holding_4099560a-6af5-45a5-8c8b-8dab3778fba1"&gt;
+        &lt;HoldingKey&gt;af17234846744109ab6f26b2329f233b&lt;/HoldingKey&gt;
+      &lt;/Holding&gt;
+      &lt;Party id="Party_05f86226-9887-40c4-9bac-7f7e1075faa0"&gt;
+        &lt;PartyTypeCode tc="1"&gt;OLI_PT_PERSON&lt;/PartyTypeCode&gt;
+        &lt;Person&gt;
+          &lt;FirstName&gt;Mark&lt;/FirstName&gt;
+          &lt;LastName&gt;Smith&lt;/LastName&gt;
+        &lt;/Person&gt;
+        &lt;OLifEExtension VendorCode="25"&gt;
+          &lt;Signer SignerType="18"&gt;Joint Owner&lt;/Signer&gt;
+          &lt;Url&gt;https://localhost/R1Z&lt;/Url&gt;
+        &lt;/OLifEExtension&gt;
+      &lt;/Party&gt;
+      &lt;Party id="Party_608bbab0-7b13-42ad-a32a-363d323cd16f"&gt;
+        &lt;PartyTypeCode tc="1"&gt;OLI_PT_PERSON&lt;/PartyTypeCode&gt;
+        &lt;Person&gt;
+          &lt;FirstName&gt;Jane&lt;/FirstName&gt;
+          &lt;LastName&gt;Smith&lt;/LastName&gt;
+        &lt;/Person&gt;
+        &lt;OLifEExtension VendorCode="25"&gt;
+          &lt;Signer SignerType="16"&gt;Owner&lt;/Signer&gt;
+          &lt;Url&gt;https://localhost/m3j&lt;/Url&gt;
+        &lt;/OLifEExtension&gt;
+      &lt;/Party&gt;
+    &lt;/OLifE&gt;
+  &lt;/TXLifeResponse&gt;
+&lt;/TXLife&gt;
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>The above response example denotes that API has sent two signature request for “Owner” and “Joint Owner”. The example has two “Party” nodes, One for “Owner” and another for “Joint Owner”. “Party” node also contains another information of signer like first name, last name and signature url link.</p>
+        <p>&#160;</p>
+        <p><b>Example</b>
+        </p>
+        <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>SignatureRequest</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: JavaScript;">public IActionResult SignatureRequest()
+        {
+            SignatureRequestModel result = new SignatureRequestModel();
+            string url = "https://firelight.insurancetechnologies.com/EGApp/api/Activity/SignatureRequest";
+            string body = @"
+&lt;TXLife xmlns=""http://ACORD.org/Standards/Life/2""&gt;
+  &lt;TXLifeRequest&gt;
+    &lt;TransRefGUID&gt;" + result.CurrentGuid.ToString() + @"&lt;/TransRefGUID&gt;
+    &lt;TransType tc=""103""&gt;OLI_TRANS_NBSUB&lt;/TransType&gt;
+    &lt;TransExeDate&gt;2010-10-15&lt;/TransExeDate&gt;
+    &lt;TransExeTime&gt;08:41:17.3373644-06:00&lt;/TransExeTime&gt;
+    &lt;ProcessingInstruction&gt;
+        &lt;ProcessingInstructionType tc=""9""&gt;Workflow&lt;/ProcessingInstructionType&gt;
+        &lt;ProcessingInstructionDesc&gt;signatures&lt;/ProcessingInstructionDesc&gt;
+    &lt;/ProcessingInstruction&gt;
+    &lt;OLifE&gt;
+      &lt;SourceInfo&gt;
+        &lt;SourceInfoName&gt;ForeSight Enterprise&lt;/SourceInfoName&gt;
+        &lt;SourceInfoDescription&gt;Version: 5.2.0.344&lt;/SourceInfoDescription&gt;
+        &lt;FileControlID&gt;6aec9cec-4cd8-48fd-959d-17952d07fa3c&lt;/FileControlID&gt;
+      &lt;/SourceInfo&gt;
+      &lt;Holding id=""9393d31c-7e09-4f4b-a27d-83dafdd542c3""&gt;
+        &lt;HoldingTypeCode tc=""6""&gt;OLI_HOLDTYPE_POLICY&lt;/HoldingTypeCode&gt;
+        &lt;Policy&gt;
+          &lt;ProductCode&gt;456&lt;/ProductCode&gt;
+          &lt;CarrierCode&gt;IT&lt;/CarrierCode&gt;
+          &lt;Jurisdiction tc=""7""&gt;OLI_USA_CO&lt;/Jurisdiction&gt;
+          &lt;Life&gt;
+            &lt;FaceAmt&gt;500000&lt;/FaceAmt&gt;
+            &lt;Coverage&gt;
+              &lt;DeathBenefitAmt&gt;500000&lt;/DeathBenefitAmt&gt;
+              &lt;LifeParticipant id=""LP_1"" PartyID=""Party1_1""&gt;
+                &lt;FaceAmt&gt;500000&lt;/FaceAmt&gt;
+                &lt;LifeParticipantRoleCode tc=""1""&gt;Primary Insured&lt;/LifeParticipantRoleCode&gt;
+                &lt;TobaccoPremiumBasis tc=""2""&gt;non smoker&lt;/TobaccoPremiumBasis&gt;
+                &lt;PermTableRating tc=""6""&gt;175%&lt;/PermTableRating&gt;
+                &lt;UnderwritingClass tc=""1""&gt;Standard&lt;/UnderwritingClass&gt;
+                &lt;UnderwritingSubClass tc=""2""&gt;Better&lt;/UnderwritingSubClass&gt;
+                &lt;PermRatingType tc=""4""&gt;Occupation&lt;/PermRatingType&gt;
+                &lt;ClassName&gt;Standard Better&lt;/ClassName&gt;
+                &lt;PermTableRatingAlphaCode&gt;5&lt;/PermTableRatingAlphaCode&gt;
+              &lt;/LifeParticipant&gt;
+            &lt;/Coverage&gt;
+          &lt;/Life&gt;
+          &lt;ApplicationInfo&gt;
+            &lt;RequestedIssueDate&gt;2010-10-15&lt;/RequestedIssueDate&gt;
+          &lt;/ApplicationInfo&gt;
+        &lt;/Policy&gt;
+      &lt;/Holding&gt;
+      &lt;Party id=""d3f24794-c1e1-4d7d-947f-39a47a75d426""&gt;
+        &lt;PartyTypeCode tc=""1""&gt;OLI_PT_PERSON&lt;/PartyTypeCode&gt;
+        &lt;Person&gt;
+          &lt;FirstName&gt;Devel&lt;/FirstName&gt;
+          &lt;LastName&gt;User1&lt;/LastName&gt;
+          &lt;BirthDate&gt;1970-01-01&lt;/BirthDate&gt;
+        &lt;/Person&gt;
+        &lt;Address&gt;
+          &lt;AddressTypeCode tc=""1""&gt;OLI_ADTYPE_HOME&lt;/AddressTypeCode&gt;
+          &lt;Line1&gt;1234 Any Street&lt;/Line1&gt;
+          &lt;Line2&gt;Suite 1&lt;/Line2&gt;
+          &lt;City&gt;Colorado Springs&lt;/City&gt;
+          &lt;AddressStateTC tc=""7""&gt;OLI_USA_CO&lt;/AddressStateTC&gt;
+          &lt;Zip&gt;80903&lt;/Zip&gt;
+        &lt;/Address&gt;
+        &lt;Address&gt;
+          &lt;AddressTypeCode tc=""2""&gt;OLI_ADTYPE_BUS&lt;/AddressTypeCode&gt;
+          &lt;Line1&gt;5555 That Road&lt;/Line1&gt;
+          &lt;Line2&gt;Apt 222&lt;/Line2&gt;
+          &lt;City&gt;Denver&lt;/City&gt;
+          &lt;AddressStateTC tc=""7""&gt;OLI_USA_CO&lt;/AddressStateTC&gt;
+          &lt;Zip&gt;80210&lt;/Zip&gt;
+        &lt;/Address&gt;
+        &lt;Phone&gt;
+          &lt;PhoneTypeCode tc=""2""&gt;OLI_PHONETYPE_BUS&lt;/PhoneTypeCode&gt;
+          &lt;AreaCode&gt;719&lt;/AreaCode&gt;
+          &lt;DialNumber&gt;442-6400&lt;/DialNumber&gt;
+        &lt;/Phone&gt;
+        &lt;Phone&gt;
+          &lt;PhoneTypeCode tc=""4""&gt;OLI_PHONETYPE_BUSFAX&lt;/PhoneTypeCode&gt;
+          &lt;AreaCode&gt;719&lt;/AreaCode&gt;
+          &lt;DialNumber&gt;442-6401&lt;/DialNumber&gt;
+        &lt;/Phone&gt;
+        &lt;Producer&gt;
+          &lt;CarrierAppointment PartyID=""d3f24794-c1e1-4d7d-947f-39a47a75d426""&gt;
+            &lt;CompanyProducerID&gt;00000000-0000-0000-0000-000000000002&lt;/CompanyProducerID&gt;
+            &lt;CarrierCode&gt;IT&lt;/CarrierCode&gt;
+          &lt;/CarrierAppointment&gt;
+        &lt;/Producer&gt;
+      &lt;/Party&gt;
+      &lt;Party id=""9c593aab-2ce9-448a-a4c4-bb1eee197113""&gt;
+        &lt;PartyTypeCode tc=""1""&gt;OLI_PT_PERSON&lt;/PartyTypeCode&gt;
+        &lt;Person&gt;
+          &lt;FirstName&gt;Jane&lt;/FirstName&gt;
+          &lt;LastName&gt;Smith&lt;/LastName&gt;
+          &lt;Gender tc=""2""&gt;OLI_GENDER_FEMALE&lt;/Gender&gt;
+          &lt;BirthDate&gt;1965-10-15&lt;/BirthDate&gt;
+          &lt;DriversLicenseState tc=""25""&gt;Maryland&lt;/DriversLicenseState&gt;
+        &lt;/Person&gt;
+      &lt;/Party&gt;
+      &lt;Party id=""e0eb6365-fb16-480e-b21f-7ac4bcbff929""&gt;
+        &lt;PartyTypeCode tc=""1""&gt;OLI_PT_PERSON&lt;/PartyTypeCode&gt;
+        &lt;Person&gt;
+          &lt;FirstName&gt;Valued&lt;/FirstName&gt;
+          &lt;LastName&gt;Client&lt;/LastName&gt;
+          &lt;BirthDate&gt;1965-10-15&lt;/BirthDate&gt;
+          &lt;DOBEstimated tc=""1""&gt;OLI_BOOL_TRUE&lt;/DOBEstimated&gt;
+          &lt;Age&gt;45&lt;/Age&gt;
+        &lt;/Person&gt;
+      &lt;/Party&gt;
+      &lt;Relation OriginatingObjectID=""9393d31c-7e09-4f4b-a27d-83dafdd542c3"" RelatedObjectID=""d3f24794-c1e1-4d7d-947f-39a47a75d426""&gt;
+        &lt;OriginatingObjectType tc=""4""&gt;OLI_HOLDING&lt;/OriginatingObjectType&gt;
+        &lt;RelatedObjectType tc=""6""&gt;OLI_PARTY&lt;/RelatedObjectType&gt;
+        &lt;RelationRoleCode tc=""37""&gt;OLI_REL_PRIMAGENT&lt;/RelationRoleCode&gt;
+      &lt;/Relation&gt;
+      &lt;Relation OriginatingObjectID=""9393d31c-7e09-4f4b-a27d-83dafdd542c3"" RelatedObjectID=""9c593aab-2ce9-448a-a4c4-bb1eee197113""&gt;
+        &lt;OriginatingObjectType tc=""4""&gt;OLI_HOLDING&lt;/OriginatingObjectType&gt;
+        &lt;RelatedObjectType tc=""6""&gt;OLI_PARTY&lt;/RelatedObjectType&gt;
+        &lt;RelationRoleCode tc=""35""&gt;OLI_REL_ANNUITANT&lt;/RelationRoleCode&gt;
+      &lt;/Relation&gt;
+      &lt;Relation OriginatingObjectID=""9393d31c-7e09-4f4b-a27d-83dafdd542c3"" RelatedObjectID=""9c593aab-2ce9-448a-a4c4-bb1eee197113""&gt;
+        &lt;OriginatingObjectType tc=""4""&gt;OLI_HOLDING&lt;/OriginatingObjectType&gt;
+        &lt;RelatedObjectType tc=""6""&gt;OLI_PARTY&lt;/RelatedObjectType&gt;
+        &lt;RelationRoleCode tc=""8""&gt;OLI_REL_OWNER&lt;/RelationRoleCode&gt;
+      &lt;/Relation&gt;
+      &lt;Relation OriginatingObjectID=""9393d31c-7e09-4f4b-a27d-83dafdd542c3"" RelatedObjectID=""e0eb6365-fb16-480e-b21f-7ac4bcbff929""&gt;
+        &lt;OriginatingObjectType tc=""4""&gt;OLI_HOLDING&lt;/OriginatingObjectType&gt;
+        &lt;RelatedObjectType tc=""6""&gt;OLI_PARTY&lt;/RelatedObjectType&gt;
+        &lt;RelationRoleCode tc=""34""&gt;OLI_REL_BENEFICIARY&lt;/RelationRoleCode&gt;
+      &lt;/Relation&gt;
+    &lt;/OLifE&gt;
+  &lt;/TXLifeRequest&gt;
+&lt;/TXLife&gt;";
+
+            String token = GetToken("IT", "00000000-0000-0000-0000-000000000001");
+            SignatureRequestModel objResult = new SignatureRequestModel();
+            try
+            {
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+
+                request.ContentType = "text/xml";
+                request.Headers.Add("authorization", "Bearer " + token);
+                request.Method = "POST";
+
+                Byte[] contentBytes = Encoding.UTF8.GetBytes(body);
+                request.ContentLength = contentBytes.LongLength;
+
+                // Send request
+                using (Stream post = request.GetRequestStream())
+                {
+                    post.Write(contentBytes, 0, contentBytes.Length);
+                }
+
+                using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+                {
+                    StreamReader reader = new StreamReader(response.GetResponseStream());
+                    string res = reader.ReadToEnd();
+
+                    XmlDocument doc = new XmlDocument()
+                    {
+                        InnerXml = res
+                    };
+
+var nsmgr = new System.Xml.XmlNamespaceManager(doc.NameTable);
+            		nsmgr.AddNamespace("accord", "http://ACORD.org/Standards/Life/2");
+
+                    if (doc.GetElementsByTagName("ResultCode").Item(0).Attributes.GetNamedItem("tc").Value == "1")
+                    {
+   result.Signers = new List&lt;Signer&gt;();
+                        result.Value = doc.GetElementsByTagName("TransRefGUID").Item(0).InnerText;
+System.Xml.XmlNodeList elemList = doc.GetElementsByTagName("Party");
+
+foreach (System.Xml.XmlNode partyNode in elemList)
+                {
+                    string fName = partyNode.SelectSingleNode("accord:Person/accord:FirstName", nsmgr).InnerXml;
+                    string lName = partyNode.SelectSingleNode("accord:Person/accord:LastName", nsmgr).InnerXml;
+                    string signer = partyNode.SelectSingleNode("accord:OLifEExtension/accord:Signer", nsmgr).InnerXml;
+                    string url = partyNode.SelectSingleNode("accord:OLifEExtension/accord:Url", nsmgr).InnerXml;
+                    Signer signerInfo = new Signer(fName, lName, signer, url);
+                    result.Signers.Add(signerInfo);
+                }
+
+                    }
+                }
+            }
+            catch (WebException ex)
+            {
+                if (ex.Response != null &amp;&amp; ex.Response.ContentLength &gt; 0)
+                {
+                    using (StreamReader s = new StreamReader(ex.Response.GetResponseStream()))
+                    {
+                        string message = s.ReadToEnd();
+                        Console.WriteLine(message);
+                    }
+                }
+                throw;
+            }
+            return View(result);
+        }
+
+
+public class SignatureRequestModel
+    {
+        public SignatureRequestModel()
+        {
+            CurrentGuid = Guid.NewGuid();
+        }
+        public string Value { get; set; } = String.Empty;
+        public Guid CurrentGuid { get; set; }
+        public List&lt;Signer&gt; Signers { get; set; }
+    }
+
+public class Signer
+    {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string SignerType { get; set; }
+        public string Url { get; set; }
+
+        public Signer(string firstName, string lastName, string signerType, string url)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            SignerType = signerType;
+            Url = url;
+        }
+    }
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p MadCap:conditions="Default.Web"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <p MadCap:conditions="Default.PrintOnly">&#160;</p>
+    </body>
+</html>

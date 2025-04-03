@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11233800.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>GetProductAvailability</h1>
+        <p><b class="Bold">/ProductAvailability/GetProductAvailability</b>
+        </p>
+        <p>HTTP Post that returns a list of available products.</p>
+        <p>Requires API Token, but does not need an API Token with an associated user.</p>
+        <p><b>Request body </b> <MadCap:xref href="../../JSON Models/Rest API Models/ProductAvailabilityRequestModel.htm" alt="ProductAvailabilityRequestModel">ProductAvailabilityRequestModel</MadCap:xref></p>
+        <p>Contains optional filter Parameters. Allowed to be empty ("{}").</p>
+        <p><b>Response</b>
+        </p>
+        <p>If the request was successful, a <MadCap:xref href="../../JSON Models/Rest API Models/ProductAvailabilityResponse.htm" alt="ProductAvailabilityResponse">ProductAvailabilityResponse</MadCap:xref> Model will return a List of&#160;  <MadCap:xref href="../../JSON Models/Rest API Models/AvailabileProductResponse.htm" alt="AvailableProductResponse">AvailableProductResponse</MadCap:xref> which contains the CUSIP, ProductName, CarrierCode, list of Jurisdiction Ids, Locale, and ProductType.&#160; <MadCap:xref href="../../JSON Models/Rest API Models/ProductAvailabilityResponse.htm" alt="ProductAvailabilityResponse">ProductAvailabilityResponse</MadCap:xref> will return a ResultCode and ExceptionError if there is a failure.</p>
+        <p><b>Example</b>
+        </p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>GetProductAvailability</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: JavaScript;">try
+            {
+		  String requestJSON = "{AcordType : '103'}" ;
+		  String URL = ".../EGApp/api/ProductAvailability/GetProductAvailability";
+		  String token = GetToken("IT", "00000000-0000-0000-0000-000000000001");
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(URL);
+                request.Headers["Authorization"] = "Bearer " + token;
+                request.Date = DateTime.UtcNow;
+
+                // support Json or XML
+                request.ContentType = CustomMediaTypes.JSON;
+                request.Method = "POST";
+                Byte[] contentBytes = Encoding.UTF8.GetBytes(requestJSON);
+                request.ContentLength = contentBytes.LongLength;
+
+                // Send request
+                using (Stream post = request.GetRequestStream())
+                {
+                	post.Write(contentBytes, 0, contentBytes.Length);
+                }
+                // Get response
+                String result = "";
+                using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+                {
+                    StreamReader reader = new StreamReader(response.GetResponseStream());
+                    result = reader.ReadToEnd();
+                }
+
+                
+   ProductAvailabilityResponse ProductAvailability = JsonConvert.DeserializeObject&lt;ProductAvailabilityResponse&gt;(result);
+                if(ProductAvailability.ResultCode == ReturnStatus.RESULT_SUCCESS || ProductAvailability.ResultCode == ReturnStatus.RESULT_SUCCESSINFO)
+                {
+                    foreach(AvailableProductResponse product in ProductAvailability.Products)
+                    {
+                        Debug.Print("Product ID: " + product.CUSIP);
+                        Debug.Print("Carrier: " + product.CarrierCode);
+                        Debug.Print("Product Name: " + product.ProductName);
+                        Debug.Print("Locale: " + product.Locale);
+                        Debug.Print("Product Type: " + product.Type);
+                        foreach (long Jursidiction in product.Jurisdictions)
+                        {
+                            Debug.Print("Approved In: " + Jursidiction);
+                        }
+
+                    }
+                }
+                else
+                {
+                    Debug.Print("Failure " + ProductAvailability.ExceptionError?.Message);
+                }
+            }
+            catch (WebException ex)
+            {
+                txtResponse.Value = ex.Message;
+                if (ex.Response != null &amp;&amp; ex.Response.ContentLength &gt; 0)
+                {
+                    using (StreamReader s = new StreamReader(ex.Response.GetResponseStream()))
+                    {
+                        txtResponse.Value += Environment.NewLine + Environment.NewLine + s.ReadToEnd();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                txtResponse.Value = ex.Message;
+            }
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>&#160;</p>
+        <p><b class="Bold">NOTE:</b> Product Availability Calls In the Provider Restrict Choices. With a Value of 99999 for Current Carrier and Product Type, and 0 for Jurisdiction. This is to indicate that these values are not specified. It up to the provider to decide how to restrict Carriers, Jurisdictions, Product Types, and Products based on these values.</p>
+        <p MadCap:conditions="Default.Web"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <p MadCap:conditions="Default.PrintOnly">&#160;</p>
+    </body>
+</html>

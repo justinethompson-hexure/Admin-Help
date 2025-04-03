@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <meta name="description" content="Token SSO Overview" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11275400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1>Overview</h1>
+        <p>A user’s browser may be redirected to the FireLight<sup MadCap:conditions="Default.Web">®</sup> Token SSO URL, posted along with form data that contains a previously-obtained token from the API Token Service. As long as the token has access to the ‘Token SSO’ Supported Service (configured in the Admin Organization page, Security tab), the token may be used for redirecting users to the FireLight Token SSO URL. A session will be established for that user at that moment, and FireLight will, by default, redirect the user to the home page (other options exist).</p>
+        <p>From a high level perspective, a possible interaction would look like a two-step process – an external server system would request a token from the FireLight API Token Service, and then force a redirect with their user’s browser, posting form data containing the retrieved token to the FireLight Token SSO URL. Alternatively, in another example, there could be another step in between – the token could be used on the ‘CreateActivity’ api to first create an activity for the user, and then the user could be redirected with the same token into that exact activity.</p>
+        <p>Note that content-type for these redirects must be ‘application/x-www-form-urlencoded’. The form data must be named ‘Token’, and will have the url encoded string value of the token. An example of what the form data will look like:</p>
+        <p class="CodeIndent1">Token=eyJhbGciOiJSUzI1NiIsImtpZCI6IkVERkEzRkQxNUYwMTRCRDlDQT etc….</p>
+        <p>A screenshot of the form data (Chrome):</p>
+        <p>
+            <img src="../../Resources/Images/Capture7.png" alt="Form Data" title="Form Data" />
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

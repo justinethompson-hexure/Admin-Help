@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PageStyles xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <Page Name="LandscapeNormal" Width="800" Height="800" Padding="1in" PageSize="Letter" PaddingLeft="0.88in" PaddingRight="0.75in" PaddingTop="1.25in" PaddingBottom="0.88in" Orientation="landscape">
+        <Frame Flow="header" Height="0.7916667in" Right="1px" X="0px" Y="-0.6875in" ColumnCount="1" Width="9.364583in" Bottom="602px" TextAlign="left" Anchors="Left">
+        </Frame>
+        <Frame Flow="footer" Height="0.875in" Right="4px" Bottom="-82px" X="4px" Y="6.354167in" Width="9.291667in" PaddingBottom="0.13in" Anchors="" BorderTopStyle="solid" BorderTopWidth="2px" BorderTopColor="#808080">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:body>
+                        <xhtml:table xhtml:style="width: 100%;margin-left: 0;margin-right: auto;">
+                            <xhtml:col xhtml:style="width: 1137px;" />
+                            <xhtml:col xhtml:style="width: 271px;" />
+                            <xhtml:tbody>
+                                <xhtml:tr>
+                                    <xhtml:td>
+                                        <xhtml:p xhtml:class="Copyright">CONFIDENTIAL ©2019–2025 Hexure. All rights reserved.</xhtml:p>
+                                    </xhtml:td>
+                                    <xhtml:td xhtml:style="text-align: right;">
+                                        <xhtml:p xhtml:class="Copyright">Page <MadCap:variable xhtml:name="System.PageNumber" /> of <MadCap:variable xhtml:name="System.PageCount" /></xhtml:p>
+                                    </xhtml:td>
+                                </xhtml:tr>
+                            </xhtml:tbody>
+                        </xhtml:table>
+                        <xhtml:p xhtml:class="FrameFooterText2">&#160;</xhtml:p>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+        <Frame Flow="body" ColumnCount="1" ColumnGap="0.25in" ColumnDivider="Solid 1pt Black" Width="9.333333in" Height="6.322917in" X="3px" Y="0.01041667in" Right="1px" Bottom="4px" Anchors="Left,Right">
+        </Frame>
+        <Frame X="1px" Y="-70px" Width="1.78125in" Height="0.4583333in" Flow="decoration1" BackgroundImage="../../Images/HexureLogo_Wordfooter.png" BackgroundRepeat="stretch" Anchors="Left" Right="728px" Bottom="638px" FlowIndex="1" />
+    </Page>
+</PageStyles>

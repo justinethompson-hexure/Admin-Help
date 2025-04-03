@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="HTML5 Output"
+  Type="WebHelp2"
+  Destinations=""
+  DefaultUrl="/Content/SlideshowTopics/WhatsNew-Home.htm"
+  MasterToc="/Project/TOCs/OnlineOutput.fltoc"
+  ConditionTagExpression="include[General.QE or General.UAT] exclude[&quot;General.Audience A&quot; or &quot;General.Audience B&quot; or General.Postpone or General.PROD] "
+  InsertMOTW="false"
+  EnableSitemap="false"
+  IncludeStopWords="true"
+  GenerateWebSafeImages="true"
+  WebSafeFileExtension="png"
+  EnableResponsiveOutput="true"
+  Skin="(none)"
+  IncludeImportance="false"
+  IncludeGlossarySearchResults="false"
+  ChunkSearchDatabase="false"
+  ExcludeIndexEntriesFromSearch="false"
+  ChunkGlossary="false"
+  ChunkTOC="true"
+  ChunkIndex="false"
+  MasterStylesheet="/Content/Resources/Stylesheets/styles.css"
+  SearchEngine="MadCapSearch"
+  Medium="non-print">
+  <PrintedOutput
+    CollapseMargins="true" />
+  <Glossaries />
+  <MetaTags
+    Enabled="true" />
+</CatapultTarget>

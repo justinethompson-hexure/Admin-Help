@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11244400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1>ActivityValidationRequest</h1>
+        <p><b>Required:</b> </p>
+        <ul>
+            <li><b>CUSIP</b>
+            </li>
+            <li><b>Jurisdiction</b>
+            </li>
+            <li><b>AcordTypeCode</b>
+            </li>
+            <li><b>AcordSubTypeCode</b>
+            </li>
+            <li><b>CarrierCode</b>
+            </li>
+        </ul>
+        <p><b>Optional</b>
+        </p>
+        <ul>
+            <li><b>ReturnUpdatedDataItems</b>
+            </li>
+        </ul>
+        <p><b>Properties:</b>
+        </p>
+        <ul>
+            <li>
+                <p><b>CUSIP</b> string</p>
+                <p>Matches the CUSIP that is configured in the FireLight admin tool</p>
+            </li>
+            <li>
+                <p><b>Jurisdiction </b>integer – view <MadCap:xref href="../Lists/Jurisdictions.htm" title="Jurisdictions" alt="Jurisdictions">Jurisdictions</MadCap:xref> list</p>
+                <p>Identifies the jurisdiction type of the activity you are creating</p>
+            </li>
+            <li>
+                <p><b>AcordTypeCode</b> integer – view <MadCap:xref href="../Lists/AcordTypeCode-AcordSubTypeCode.htm" title="AcordTypeCode &amp; AcordSubTypeCode" alt="AcordTypeCode &amp; AcordSubTypeCode">AcordTypeCode &amp; AcordSubTypeCode</MadCap:xref> list</p>
+                <p>Identifies the type of activity to create. Note that some activities require AcordSubTypeCode as well as AcordTypeCode. </p>
+            </li>
+            <li>
+                <p><b>AcordSubTypeCode</b> integer – view <MadCap:xref href="../Lists/AcordTypeCode-AcordSubTypeCode.htm" title="AcordTypeCode &amp; AcordSubTypeCode" alt="AcordTypeCode &amp; AcordSubTypeCode">AcordTypeCode &amp; AcordSubTypeCode</MadCap:xref> list</p>
+                <p>Identifies the type of activity to create. Used in conjunction with AcordTypeCode to identify some activities.</p>
+            </li>
+            <li>
+                <p><b>CarrierCode </b> string</p>
+                <p>The three letter carrier code for the product specified by the CUSIP </p>
+            </li>
+            <li>
+                <p><b>ReturnUpdatedDataItems </b> boolean</p>
+                <p>Determines if the updated DataItems should be returned </p>
+            </li>
+            <li>
+                <p><b>DataItems</b> array of <MadCap:xref href="ActivityDataItem.htm" alt="ActivityDataItem">ActivityDataItem</MadCap:xref></p>
+                <p>A collection of data items that can be used to populate the wizard that is created during the request. The name of the data item should match the name of the element in the wizard.</p>
+            </li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

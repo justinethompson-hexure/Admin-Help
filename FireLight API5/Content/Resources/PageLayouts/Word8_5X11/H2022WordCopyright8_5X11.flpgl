@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PageStyles xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <Page Name="Copy of Copy of Normal" Width="800" Height="800" Padding="1in" PageSize="Letter" PaddingLeft="0.88in" PaddingRight="0.75in" PaddingTop="1.25in" PaddingBottom="0.88in">
+        <Frame Flow="header" Height="0.8541667in" Right="0px" X="0px" Y="-0.75in" ColumnCount="1" Width="6.875in" Bottom="842px" TextAlign="left" Anchors="Left">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:body>&#160;</xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+        <Frame Flow="body" ColumnCount="1" ColumnGap="0.25in" ColumnDivider="Solid 1pt Black" Width="6.875in" Height="8.875in" X="0px" Y="0in" Right="0px" Bottom="0px" Anchors="Left,Right">
+        </Frame>
+        <Frame Flow="footer" Height="0.875in" Right="0px" Bottom="-84px" X="0px" Y="8.875in" Width="6.875in" PaddingBottom="0.13in" Anchors="" BorderTopStyle="solid" BorderTopWidth="2px" BorderTopColor="#808080">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:body>
+                        <xhtml:table xhtml:style="width: 100%;margin-left: 0;margin-right: auto;">
+                            <xhtml:col xhtml:style="width: 1137px;" />
+                            <xhtml:col xhtml:style="width: 271px;" />
+                            <xhtml:tbody>
+                                <xhtml:tr>
+                                    <xhtml:td>
+                                        <xhtml:p xhtml:class="Copyright">CONFIDENTIAL ©2019–2025 Hexure. All rights reserved.</xhtml:p>
+                                    </xhtml:td>
+                                    <xhtml:td xhtml:style="text-align: right;">
+                                        <xhtml:p xhtml:class="Copyright">Page <MadCap:variable xhtml:name="System.PageNumber" /> of <MadCap:variable xhtml:name="System.PageCount" /></xhtml:p>
+                                    </xhtml:td>
+                                </xhtml:tr>
+                            </xhtml:tbody>
+                        </xhtml:table>
+                        <xhtml:p xhtml:class="FrameFooterText2">&#160;</xhtml:p>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+        <Frame Flow="body" ColumnCount="1" ColumnGap="0.25in" ColumnDivider="Solid 1pt Black" Width="6.875in" Height="8.875in" X="0px" Y="0in" Right="0px" Bottom="0px" Anchors="Left,Right" FlowIndex="2">
+        </Frame>
+        <Frame X="456px" Y="-70px" Width="200px" Height="51px" Flow="decoration0" Right="4px" Bottom="871px">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:body>
+                        <xhtml:p xhtml:style="text-align: right;margin-top: 2px;margin-bottom: 2px;">FireLight<xhtml:sup xhtml:style="vertical-align: super;">®</xhtml:sup></xhtml:p>
+                        <xhtml:p xhtml:style="text-align: right;margin-top: 2px;margin-bottom: 2px;">
+                            <MadCap:variable xhtml:name="General.DocumentName" />
+                        </xhtml:p>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+        <Frame X="1px" Y="-70px" Width="1.78125in" Height="0.4583333in" Flow="decoration1" BackgroundImage="../../Images/HexureLogo_Wordfooter.png" BackgroundRepeat="stretch" Anchors="Left" Right="488px" Bottom="878px" FlowIndex="1" />
+    </Page>
+</PageStyles>

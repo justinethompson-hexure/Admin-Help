@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11246800.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1>DutyType</h1>
+        <p><b>Type:</b> enum</p>
+        <p><b>Properties:</b>
+        </p>
+        <ul>
+            <li><b>0: </b>Optional</li>
+            <li><b>1: </b>Required</li>
+            <li><b>2: </b>Conditional</li>
+            <li><b>3: </b>Print-Only</li>
+            <li><b>4: </b>Submit Only</li>
+            <li><b>5: </b>Input-Only: Conditional</li>
+            <li><b>6: </b>Input-Only: Required</li>
+            <li><b>7: </b>Signing Ceremony Only</li>
+            <li><b>8: </b>Singing Ceremony: Conditional</li>
+        </ul>
+        <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>DutyType</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: JavaScript;">
+    /// &lt;summary&gt;
+    /// Form Duty/Obligation/Necessity in a package
+    /// &lt;/summary&gt;
+    public enum DutyType
+    {
+        /// &lt;summary&gt;
+        /// Required in the package
+        /// &lt;/summary&gt;
+        Required = 1,
+
+        /// &lt;summary&gt;
+        /// Optional in the package
+        /// &lt;/summary&gt;
+        Optional = 0,
+
+        /// &lt;summary&gt;
+        /// Conditional in the package
+        /// &lt;/summary&gt;
+        Conditional = 2,
+
+        /// &lt;summary&gt;
+        /// Included (required) only when printing, at beginning of document
+        /// &lt;/summary&gt;
+        [Description("Print Only")]
+        PrintOnly = 3,
+
+        /// &lt;summary&gt;
+        /// Included only when submitting, at end of document
+        /// &lt;/summary&gt;
+        [Description("Submit Only")]
+        SubmitOnly = 4,
+
+        /// &lt;summary&gt;
+        /// Included only when submitting, at end of document
+        /// &lt;/summary&gt;
+        [Description("Input Only: Conditional")]
+        InputOnlyConditional = 5,
+
+        /// &lt;summary&gt;
+        /// Included only when submitting, at end of document
+        /// &lt;/summary&gt;
+        [Description("Input Only: Required")]
+        InputOnlyRequired = 6,
+
+        /// &lt;summary&gt;
+        /// Included only for signing ceremony and print pdf 
+        /// &lt;/summary&gt;
+        [Description("Signing Ceremony Only")]
+        SigningCeremonyOnly = 7,
+
+        /// &lt;summary&gt;
+        /// Included only for signing ceremony and print pdf 
+        /// Conditional in the package
+        /// &lt;/summary&gt;
+        [Description("Signing Ceremony Only: Conditional")]
+        SigningCeremonyConditional = 8,
+    }
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PageStyles>
+    <Page Width="800" Height="800" Padding="1in" PageSize="Letter" PaddingLeft="0.23in" PaddingRight="0.25in" PaddingTop="0.25in" PaddingBottom="0.25in" PageType="title" Name="Title" BackgroundImage="none" BackgroundPositionX="center" BackgroundPositionY="center">
+        <Frame X="25px" Y="117px" Width="7.59375in" Height="9.25in" Flow="body" Right="16px" Bottom="3px" Anchors="" BorderTopStyle="solid" BorderTopWidth="0px" BorderBottomStyle="solid" BorderBottomWidth="0px" />
+        <Frame X="25px" Y="948px" Width="730px" Height="58px" Flow="footer" Right="15px" Bottom="2px" BackgroundType="Solid" BackgroundColor="#0687c5" BackgroundColorAlt="#0687c5" VerticalAlign="middle" TextAlign="center" Anchors="">
+            <Content>
+                <xhtml:html xmlns:xhtml="http://www.w3.org/1999/xhtml">
+                    <xhtml:body>
+                        <xhtml:p xhtml:style="text-align: center;"><xhtml:span xhtml:style="color: #ffffff; font-family: Calibri; font-size: 14pt;">HEXURE</xhtml:span>
+                        </xhtml:p>
+                    </xhtml:body>
+                </xhtml:html>
+            </Content>
+        </Frame>
+        <Frame X="26px" Y="7px" Width="184px" Height="45px" Flow="decoration0" Right="560px" Bottom="956px" BackgroundImage="../../Images/HexureLogo_Wordfooter.png" BackgroundRepeat="stretch" />
+    </Page>
+</PageStyles>

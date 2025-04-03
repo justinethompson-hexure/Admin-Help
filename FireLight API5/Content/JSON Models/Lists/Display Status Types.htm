@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/TableStyles/2017-ITPatternedRows2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11240600.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>Display Status Types</h1>
+        <table style="mc-table-style: url('../../Resources/TableStyles/2017-ITPatternedRows2.css');margin-left: 0;margin-right: auto;width: 649px;" class="TableStyle-2017-ITPatternedRows2" cellspacing="0">
+            <caption class="Table">Display Status Types</caption>
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" style="width: 297px;" />
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" style="width: 94px;" />
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" style="width: 258px;" />
+            <tbody>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <th class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Name</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">ID</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Description</th>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>Unknown</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">0</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Unknown</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>DataEntry</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">1000</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Data Entry</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>ClientRequestPending</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">1100</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Pending Client Request</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>ClientRequestComplete</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">1200</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Client Request Complete</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>CheckedOut</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">1300</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Checked Out</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>AppGenerated</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">1400</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Application Generated</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows" colspan="3">The following e-Delivery statuses occur before the app is locked.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>eDeliveryPending</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">1500</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Pending</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>eDeliveryAgentReviewPending</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">1510</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Pending Agent Review</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>eDeliveryPendingEDelivery</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">1520</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Pending E-Delivery</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>eDeliveryClientReviewPending</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">1540</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Pending Client Review</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>eDeliveryClientReview</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">1550</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">In Client Review</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>eDeliveryClientReviewApproved</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">1560</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Client Approved</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>eDeliveryAgentRequestChange</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">1570</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Change Requested by Agent</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>eDeliveryClientRequestChange</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">1580</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Change Requested by Client</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>eDeliveryClientRequestChange<br></br>ClientDirected</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">1581</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Change Requested by Client</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows" colspan="3">The following e-Delivery statuses are used for other apps when one of the children requested change or declined signature—need separate request status in 1122, but the display status text is the same as the agent's case.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>eDeliveryPendingClientRequest<br></br>Change</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">1590</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Pending Agent Review</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>eDeliveryPendingClientRequest<br></br>ChangeClientDirected</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">1591</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Pending Agent Review</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>eDeliveryPendingAgentReview<br></br>DeclineSign</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">1592</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Pending Agent Review</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows" colspan="3">The following needs a separate display status because display is change request but 1122 status is in error.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>eDeliveryDeclineSignClientDirected</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">1593</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Change Requested by Client</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows" colspan="3">Used for bounced email process agent directed—case with email issue.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>AgentReviewUndeliverable</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">1594</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Pending Agent Review</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows" colspan="3">Used for bounced email process agent directed—not case with email issue.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>AgentReviewUndeliverableOther</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">1595</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Pending Agent Review</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows" colspan="3">Used for long running async processes that must be complete before an app can move on to signatures.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>PendingResponse</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">1600</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Pending Response</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>ResponseReceived</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">1610</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Response Received</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">&#160;</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">&#160;</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">&#160;</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>Locked</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">2000</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Locked</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">Used for locking related illustration.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">&#160;</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">&#160;</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>AppLocked</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">2200</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Application Locked</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">&#160;</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">&#160;</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">&#160;</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>Signature</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">3000</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Signatures</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>SignaturePending</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">3100</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Pending Signatures</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>SignatureInProgress</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">3200</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">In Signatures</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>ClientSignaturesComplete</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">3300</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Client Signatures Complete</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows" colspan="3">
+                        <p colspan="3">The agent signing process is started. </p>
+                        <p colspan="3">Created for eDelivery client apps.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>SignatureAgentPending</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">3400</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Pending Agent Signatures</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows" colspan="3">
+                        <p colspan="3">The Agent signature is in process.</p>
+                        <p>Created for eDelivery client apps.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text"><b>SignatureAgentInProcess</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text">3500</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p>In Agent Signatures <br /></p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>SignatureRejected</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">3800</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">In Signatures (keep in signatures for audit history purpose)</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"> <b>eDeliveryClientDirectedSignatureRejected</b></td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">3801</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">In Signatures (keep in signatures for audit history purpose)</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>SignatureFinished</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">3900</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Signatures Complete</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>eDeliveryComplete</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">3910</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">E-Delivery Complete (deliver only complete—client status)</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>eDeliveryDownloadComplete</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">3915</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Download Complete</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>eDeliveryPrintRequested</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">3920</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Request Print</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>eDeliveryPrintRequestedByAgent</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">3921</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Request Print</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">&#160;</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">&#160;</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">&#160;</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>ManualReview</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">4000</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Pre-Submit Review</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>ManualReviewPending</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">4100</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Pending Pre-Submit Review</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>ManualReviewInProgress</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">4200</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">In Pre-Submit Review</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>ManualReviewRejected</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">4800</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Pre-Submit Review: Declined</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>ManualReviewFinished</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">4900</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Pre-Submit Review Complete</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>ManualReviewApproved</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">4910</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Pre-Submit Review: Approved</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>ManualReviewMoreInfo</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">4920</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Pre-Submit Review: Info Requested</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">&#160;</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">&#160;</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">&#160;</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>Terminated</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">5000</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Terminated</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>Canceled</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">5100</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Policy Canceled</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">Used for for bounced email process.</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">&#160;</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">&#160;</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>CanceledUndeliverable</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">5110</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Policy Canceled</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows" colspan="3">Used for bounced email process—not the case that bounced.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>CanceledByOtherUndeliverable</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">5120</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Policy Canceled</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>Expired</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">5200</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Policy Expired</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><b>CanceledByCarrier</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">5300</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Policy Canceled</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><b>AdminTransfer</b>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">5400</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Admin Transfer</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">&#160;</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">&#160;</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">&#160;</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">&#160;</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">&#160;</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">&#160;</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-LightRows">&#160;</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-LightRows">&#160;</td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyA-Regular-LightRows">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <table class="TableStyle-2017-ITPatternedRows2" style="margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/2017-ITPatternedRows2.css');width: 649px;caption-side: top;" cellspacing="0">
+            <caption class="Table">Display Status Types</caption>
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" style="width: 292px;" />
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" style="width: 95px;" />
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" style="width: 257px;" />
+            <thead>
+                <tr class="TableStyle-2017-ITPatternedRows2-Head-Header1">
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Name</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">ID</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text"><b>ReviewQueue</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text">6000</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p class="table-text">Activity is in review queue.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p class="table-text"><b>ReviewQueuePending</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p class="table-text">6100</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                        <p class="table-text">Activity is pending review.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text"><b>ReviewQueueInProgress</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text">6200</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p class="table-text">Activity is in review.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p class="table-text"><b>PendingAgentReview</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p class="table-text">6300</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                        <p class="table-text">Pending agent review.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text"><b>ReviewQueueRejected</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text">6800</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p class="table-text">Activity was declined on review.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p class="table-text"><b>ReviewQueueFinished</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p class="table-text">6900</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                        <p class="table-text">Review is complete.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text"><b>ReviewQueueApproved</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text">6910</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p class="table-text">Activity was approved on review.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p class="table-text"><b>ReviewQueueMoreInfo</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p class="table-text">6920</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                        <p class="table-text">More information was requested on review.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text"><b>Submitted</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text">7000</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p class="table-text">Submit was requested.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p class="table-text"><b>PendingTransmission</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p class="table-text">7100</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                        <p class="table-text">Pending transmission.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text"><b>Complete</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text">8000</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p class="table-text">Complete.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p class="table-text"><b>InCarrierReview</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows">
+                        <p class="table-text">8100</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">
+                        <p class="table-text">In carrier post-submission review.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text"><b>CarrierReviewComplete</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows">
+                        <p class="table-text">8200</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">
+                        <p class="table-text">Carrier post-submission review is complete.</p>
+                    </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-DarkerRows">
+                        <p class="table-text"><b>Purged</b>
+                        </p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-DarkerRows">
+                        <p class="table-text">9000</p>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyA-Regular-DarkerRows">
+                        <p class="table-text">Activity has been purged.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p MadCap:conditions="Default.Web"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

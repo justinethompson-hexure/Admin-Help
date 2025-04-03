@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">5230000.00000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1>Overview</h1>
+        <p>The FireLight<sup MadCap:conditions="Default.Web">®</sup> rest-based API services utilize JSON web tokens for security and access. Please see the documentation for each service in order to determine any differences in security. </p>
+        <p>Accessing a FireLight API service endpoint requires a JWT token first received from the FireLight token endpoint. Getting access to a service endpoint is a two-step process:</p>
+        <ol start="1">
+            <li>
+                <p>A call to the FireLight Token endpoint to get a token. Note this requires credentials pre-defined for your organization. The token will be returned in an encoded string format.</p>
+            </li>
+            <li>
+                <p>Embedding the received encoded token string into the subsequent service endpoint call’s “Authorization” header.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>FireLight API tokens may be used multiple times within their time limit window. A FireLight API token expires after 15 minutes, after which, you will need to get a new one.</li>
+                </ol>
+            </li>
+        </ol>
+        <p>For more information on JSON web tokens, see the open standard documentation at <a href="https://tools.ietf.org/html/rfc7519" class="Hyperlink" target="_blank" alt="https://tools.ietf.org/html/rfc7519">https://tools.ietf.org/html/rfc7519</a>.</p>
+    </body>
+</html>

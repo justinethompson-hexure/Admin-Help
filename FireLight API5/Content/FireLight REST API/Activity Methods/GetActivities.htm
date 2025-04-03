@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11232800.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>GetActivities</h1>
+        <p><b>HTTP GET to query for a list of activities for the user associated to the auth token (IS4) that was passed in the header.</b>
+        </p>
+        <p>Requires an API Token with an associated user.</p>
+        <p><b>URL</b> </p>
+        <p>{<a href="../Endpoint Root URLs.htm" class="Hyperlink" alt="rootURL">rootURL</a>}/Activity/GetActivities</p>
+        <p><b>Parameters</b>
+        </p>
+        <p>None</p>
+        <p><b>Response</b>
+        </p>
+        <p>The GetActivities method returns a <MadCap:xref href="../../JSON Models/Rest API Models/GetActivities.htm" alt="Get Activities model">GetActivities</MadCap:xref> model </p>
+        <p><b>Example</b>
+        </p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>GetActivities</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: JavaScript;">GetActivitiesResponse result = null;
+
+            string url = "https://firelight.insurancetechnologies.com/EGApp/api/Activity/GetActivities";
+            String token = String.IsNullOrWhiteSpace(Token) ? GetToken() : Token;
+            try
+            {
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+
+                request.ContentType = "application/json";
+                request.Headers.Add("authorization", "Bearer " + token);
+                request.Method = "GET";
+
+                using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+                {
+                    StreamReader reader = new StreamReader(response.GetResponseStream());
+                    string data = reader.ReadToEnd();
+                    Console.WriteLine(data);
+                    
+                    result = JsonConvert.DeserializeObject(data, typeof(GetActivitiesResponse)) as GetActivitiesResponse;
+                }
+            }
+            catch (WebException ex)
+            {
+                if (ex.Response != null &amp;&amp; ex.Response.ContentLength &gt; 0)
+                {
+                    using (StreamReader s = new StreamReader(ex.Response.GetResponseStream()))
+                    {
+                        string message = s.ReadToEnd();
+                        Console.WriteLine(message);
+                    }
+                }
+                throw;
+            }
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>&#160;</p>
+        <p><b>HTTP POST to get list of activities with specified DataItems for the user associated to the auth token (IS4) that was passed in the header.</b>
+        </p>
+        <p>Requires an API Token with an associated user.</p>
+        <p><b>URL</b>
+        </p>
+        <p>{<a href="../Endpoint Root URLs.htm" class="Hyperlink" alt="rootURL">rootURL</a>}/Activity/GetActivities</p>
+        <p><b>Request body </b><b class="red">*required</b>
+        </p>
+        <p>The <MadCap:xref href="../../JSON Models/Rest API Models/CreateActivityRequest.htm" alt="CreateActivityRequest">CreateActivityRequest</MadCap:xref> body needed to get a list of activities.</p>
+        <p><b>Response</b>
+        </p>
+        <p>The GetActivities method returns a <MadCap:xref href="../../JSON Models/Rest API Models/GetActivities.htm" alt="GetActivities">GetActivities</MadCap:xref> Model </p>
+        <p>If DataItems are passed as null or empty, then it will return null in DataItems.</p>
+        <p><b>Example</b>
+        </p>
+        <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>GetActivities</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: JavaScript;">GetActivitiesResponse result = null;
+
+            string url = "https://firelight.insurancetechnologies.com/EGApp/api/Activity/GetActivities";
+            String token = String.IsNullOrWhiteSpace(Token) ? GetToken() : Token;
+     string body = "{ 'DataItems': [ {'DataItemId':'Owner_FirstName'},{'DataItemId':'Owner_LastName'}] }";
+
+            try
+            {
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+
+                request.ContentType = "application/json";
+                request.Headers.Add("authorization", "Bearer " + token);
+                request.Method = "POST";
+	Byte[] contentBytes = Encoding.UTF8.GetBytes(body);
+                request.ContentLength = contentBytes.LongLength;
+
+// Send request
+    using (Stream post = request.GetRequestStream())
+    {
+        post.Write(contentBytes, 0, contentBytes.Length);
+    }
+
+                
+using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+                {
+                    StreamReader reader = new StreamReader(response.GetResponseStream());
+                    string data = reader.ReadToEnd();
+                    Console.WriteLine(data);
+                    
+                    result = JsonConvert.DeserializeObject(data, typeof(GetActivitiesResponse)) as GetActivitiesResponse;
+                }
+            }
+            catch (WebException ex)
+            {
+                if (ex.Response != null &amp;&amp; ex.Response.ContentLength &gt; 0)
+                {
+                    using (StreamReader s = new StreamReader(ex.Response.GetResponseStream()))
+                    {
+                        string message = s.ReadToEnd();
+                        Console.WriteLine(message);
+                    }
+                }
+                throw;
+            }
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>&#160;</p>
+        <p MadCap:conditions="Default.Web"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

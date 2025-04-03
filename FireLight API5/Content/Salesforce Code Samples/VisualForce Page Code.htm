@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">5240600.00000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>VisualForce Page Code</h1>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>VisualForce Page Code</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: HTML;">&lt;apex:page standardController="Contact" extensions="UserDescriberContact_FLEmbedded,FirelightCntrlEmbedded" standardStylesheets="false" cache="false" deferLastCommandUntilReady="false"&gt;
+    &lt;apex:stylesheet value="{!$Resource.bootstrapCSS}" /&gt;
+    &lt;apex:stylesheet value="https://firelight.insurancetechnologies.com/EGApp/Resource/CSS/illustration"/&gt;
+    &lt;apex:includeScript value="{!$Resource.jquery}" /&gt;
+    &lt;apex:includeScript value="{!$Resource.jqueryUI}" /&gt;
+    &lt;apex:includeScript value="{!$Resource.BootstrapJS}" /&gt;
+                               
+    &lt;style&gt;
+        ...custom page styling...
+    &lt;/style&gt;
+    
+    &lt;div id="divLoader" class="col-xs-12 loader" style="display:none;margin-left:45%"&gt;&lt;/div&gt;
+        
+    &lt;div class="col-xs-12" id="flOuterDiv" style="display:none;"&gt;
+        &lt;apex:outputPanel id="flIllust"&gt; 
+            &lt;apex:pageBlock id="flIllustPb"&gt;
+                &lt;div class="panel panel-primary"&gt;
+                    &lt;div class="panel-body"&gt;
+                        &lt;button id="btnRenderQV" class="btn btn-primary"&gt;Open Quick View&lt;/button&gt;
+                        &lt;button id="btnRenderPDF" class="btn btn-primary"&gt;Render PDF&lt;/button&gt;
+                        &lt;p id="errMessage"&gt;&lt;/p&gt;
+                        &lt;div class="contents" id="fireLightMainDiv"&gt;
+                            Loading...
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/apex:pageBlock&gt;
+        &lt;/apex:outputPanel&gt;
+    &lt;/div&gt;      
+    
+    &lt;script type="text/javascript"&gt;
+        jQuery.noConflict();        
+        var appToken = '';
+        var appId = '';
+        
+        window.FireLightAPI={};
+        window.FireLightAPI.renderDestination='fireLightMainDiv';
+                
+        jQuery(document).ready(function(){
+            submitData('{!SerializedMappedUsers}')
+        });
+                
+        const renderQuickView = document.getElementById('btnRenderQV');
+        const renderPdfDiv = document.getElementById('btnRenderPDF');
+        const mainDiv = document.getElementById('fireLightMainDiv');
+        
+        renderQuickView.addEventListener('click', () =&gt; {
+            console.log('renderQuickView.addEventListener');
+            FireLightAPI.openQuickView();
+        });    
+        
+        renderPdfDiv.addEventListener('click', (api) =&gt; {
+            console.log('renderPdfDiv.addEventListener');
+            FireLightAPI.renderPDF();
+        });    
+        
+        mainDiv.addEventListener('fireLightLoaded', (api) =&gt; {
+            console.log('fireLightLoaded');
+                        
+            jQuery('#divLoader').hide();
+            jQuery('#flOuterDiv').show(); 
+                    
+            var valid = (appId == '');
+            if ((appToken != '') &amp;&amp; (appId != '')) 
+            {       
+                //console.log('before init call');
+                FireLightAPI.init(appToken, appId, valid);
+                    
+                //console.log('after init call');                            
+                FireLightAPI.errorEvent.subscribe(handleErrorEvent);            
+                
+                //console.log('after subscribecall');
+                FireLightAPI.statusEvent.subscribe((status) =&gt; { 
+                    //console.log('statusEvent fired');
+                    if (status.percentComplete &lt; 100) {
+                        console.log('% complete = ' + status.percentComplete);
+                    }
+                    else {
+                        console.log('100 % complete');
+                    }
+                });            
+            }
+        
+        });
+        
+        function handleErrorEvent(err) {
+            //console.log('handleErrorEvent');
+            var msg = err.error.ApiSource + ' - ' + err.error.ErrorMessage;
+            //console.log('errorEvent = ' + msg);
+            //document.getElementById('errMessage').innerHTML = 'Error message = ' + msg;
+            //alert('Error message = ' + msg);
+        };
+                
+        String.prototype.lpad = function(padString, length) {
+            var str = this;
+            while (str.length &lt; length)
+                str = padString + str;
+            return str;
+        };         
+        
+        function submitData() {
+            //parse the item string passed in
+            var data = '{!SerializedMappedUsers}';
+            var users = JSON.parse(data.replace(/[\n\r]/g, ''));
+            
+            //alert('submitData - data = ' + data);
+            
+            //show the correct items on the screen
+            jQuery('#btnSubmitOuterDiv').hide();
+            jQuery('#divLoader').show();
+            
+            //build json string of contacts - double check line coming in, maybe able to simplify
+            var contactInfo = buildContactJSONString(users);
+            //console.log('contactInfo = ' + contactInfo);
+
+            //calls to API
+            GetToken(contactInfo)
+            
+            return true;
+        };//end of submitData
+        
+        function buildContactJSONString(userList) {
+            var result = [];
+                 
+            //build user object array
+            
+            return result;
+        };//end of buildContactJSONString
+           
+        function GetToken(data) {
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.FirelightCntrlEmbedded.GetToken}',                
+                data,
+                true,
+                function(result, event) {
+                    if (event.status) {    
+                        //console.log('res = ' + result);
+                        //console.log('received token');
+                        
+                        if (result.indexOf('remote') &gt; 0){
+                            //submitData();
+                            //error happened
+                            alert('error - ' + result);
+                            
+                            //show the correct items on the screen
+                            jQuery('#btnSubmitOuterDiv').show();
+                            jQuery('#divLoader').hide();
+                        }
+                        else{
+                            appId = result.substr(0, result.indexOf(';'));
+                            appToken = result.substr(result.indexOf(';')+1);
+                            
+                            console.log('appId = ' + appId);
+                            console.log('appToken = ' + appToken);
+                            
+                            var scriptUrl = "https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eApp";
+                                                    
+                            jQuery.ajax({ 
+                                url: scriptUrl, 
+                                dataType: "script", 
+                                cache: false,
+                                success: function(jsonResponse, textStatus, jqXHR) 
+                                {
+                                    alert('script loaded'); 
+                                
+                                    //show the correct items on the screen
+                                    jQuery('#btnSubmitOuterDiv').show();
+                                    jQuery('#divLoader').hide();
+                                },
+                                error: function(jqXHR, textStatus, errorThrown) 
+                                {
+                                    alert('script failed to load - ' + exception + ' - ' + settings + ' - ' + JSON.stringify(jqxhr)); 
+                                
+                                    //show the correct items on the screen
+                                    jQuery('#btnSubmitOuterDiv').show();
+                                    jQuery('#divLoader').hide();
+                                }
+                            });
+                        }
+                    } 
+                },
+                { 'escape':false }
+            );
+        };
+   
+    &lt;/script&gt;  
+&lt;/apex:page&gt;
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p class="Code">&#160;</p>
+        <p class="p_10" MadCap:conditions="Default.Web"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

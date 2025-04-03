@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <meta name="description" content="Managing Firms and Product Availability Details, Groups, Requirements, Sample 1228" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11274200.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>Managing Firms and Product Availability</h1>
+        <p>This is done via FireLight<sup MadCap:conditions="Default.Web">®</sup> Groups and the user sign on process. It provides an alternative to creating a Group for each Firm and the complexity that comes with managing many groups. A simple scenario should only consist of a Management group and an Agent group, where agents specify the firms they sell for in their sign on and managers specify the firm they manage in their sign on.</p>
+        <h2>Details</h2>
+        <ul>
+            <li>
+                <p>A User can be associated with a single firm. Limiting product availability in the sign on is optional when associated with a single firm.</p>
+            </li>
+            <li>
+                <p>A User can be associated with multiple firms. Limiting product availability in the sign on is required if multiple firms are present.</p>
+            </li>
+            <li>
+                <p>A product cannot be available under multiple firms for a user.</p>
+            </li>
+            <li>
+                <p>A single Firm is tied to an application during creation. </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>If product availability per firm is specified, the firm is determined from the selected product in the application. </p>
+                    </li>
+                    <li>
+                        <p>If product availability is not specified, the firm is determined from the single firm associated to the user.</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Groups must also be set up in the FireLight Admin tool.</p>
+            </li>
+        </ul>
+        <h2>Groups</h2>
+        <p>When Groups, Firms and product availability are specified in the SSO it is possible to simplify groups into two major groups: Managers and Agents. The Agents group would be configured to sell all products. By signing onto FireLight with a 1228 specifying product availability, the agent could create applications with only the specified products. The Managers group would be configured to have access to cases in the Agents group as well as limiting case access to the user’s Firm ID. By signing onto FireLight with a 1228 specifying a Firm, the manager would be able to access all applications in the Agents group that are associated with their firm.</p>
+        <h2>Requirements</h2>
+        <p>Following are the requirements needed to support this functionality. Items in <strong style="color: #ff8c00;">orange</strong> require custom integration provider work.</p>
+        <ul>
+            <li>
+                <p>Set up Group(s) for Managers </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Case Access to necessary groups </p>
+                    </li>
+                    <li>
+                        <p>Case Access by Firm ID</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Set up Group(s) for Agents </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Product access can be set up per group </p>
+                    </li>
+                    <li>
+                        <p>or set up as a Super-Set and filtered via 1228</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Users must sign on using a 1228, which assigns a Group and Firm to the user</p>
+            </li>
+            <li>
+                <p>Optionally, the 1228 can specify product availability per firm </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p><strong style="color: #ff8c00;">If product availability is limited via the 1228 then custom work in the integration provider is necessary.</strong>
+                        </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>1228 should be structured as specified in the FireLight SSO Requirements doc </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p><strong style="color: #ff8c00;">If the 1228 cannot be structured exactly per specifications then custom work in the integration provider is necessary to restructure per FireLight specifications.</strong> </p>
+                    </li>
+                </ul>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p><strong style="color: #ff8c00;">If the 1228 cannot be sent via SSO or Post Over then FireLight can call an external system to get a valid 1228. This also requires custom work in the integration provider.</strong>
+                        </p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/Capture5.png" alt="Firm and Agent Hierarchy with Product Availability" title="Firm and Agent Hierarchy with Product Availability" />
+        </p>
+        <p>&#160;</p>
+        <p style="text-align: center;">
+            <img src="../../Resources/Images/Capture6.png" alt="FireLight Groups" title="FireLight Groups" />
+        </p>
+        <h2>Sample 1228</h2>
+        <p>The sample below shows a 1228 for Agent B in the diagrams above. This agent is allowed to sell two products. Each product is sold under a separate firm. Applications created with A-Share are visible to Manager Joe and applications created with X-Share are visible to Manager Jane.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>Sample 1228</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;TXLife xmlns="http://ACORD.org/Standards/Life/2"&gt;
+  &lt;TXLifeRequest&gt;
+    &lt;TransRefGUID&gt;26C1A4FC-C22C-4027-9BF6-575AF38AAE2A&lt;/TransRefGUID&gt;
+    &lt;TransType tc="1228"&gt;OLI_TRANS_TRNPRODINQ&lt;/TransType&gt;
+    &lt;TransSubType tc="22800"&gt;OLI_TRANSSUB_PRODDETALL&lt;/TransSubType&gt;
+    &lt;OLifE&gt;
+      &lt;Party id="Agent_Party"&gt;
+        &lt;PartyTypeCode tc="1"&gt;OLI_PT_Person&lt;/PartyTypeCode&gt;
+        &lt;FullName&gt;Agents B&lt;/FullName&gt;
+        &lt;EMailAddress&gt;
+          &lt;AddrLine&gt;agentB_email@insurancetechnologies.com&lt;/AddrLine&gt;
+        &lt;/EMailAddress&gt;
+        &lt;Person/&gt;
+        &lt;Producer&gt;
+          &lt;CarrierAppointment PartyID="Agent_Party"&gt;
+            &lt;CompanyProducerID&gt;TEST_AGENT&lt;/CompanyProducerID&gt;
+            &lt;CarrierCode&gt;XYZ&lt;/CarrierCode&gt;
+          &lt;/CarrierAppointment&gt;
+        &lt;/Producer&gt;
+      &lt;/Party&gt;
+      &lt;Party id="Firm_Party_1"&gt;
+        &lt;PartyTypeCode tc="2"&gt;Organization&lt;/PartyTypeCode&gt;
+        &lt;FullName&gt;Firm ABC&lt;/FullName&gt;
+        &lt;Producer&gt;
+          &lt;CarrierAppointment&gt;
+            &lt;CarrierCode&gt;XYZ&lt;/CarrierCode&gt;
+            &lt;DistributionAgreementInfo id="DistributionAgreementID_1ID" DistributionAgreementID="DistributionAgreementID_1" /&gt;
+          &lt;/CarrierAppointment&gt;
+          &lt;Registration&gt;
+            &lt;FirmName&gt;Firm ABC&lt;/FirmName&gt;
+            &lt;FirmRegistrationNum&gt;FirmABC&lt;/FirmRegistrationNum&gt;
+          &lt;/Registration&gt;
+        &lt;/Producer&gt;
+      &lt;/Party&gt;
+      &lt;Party id="Firm_Party_2"&gt;
+        &lt;PartyTypeCode tc="2"&gt;Organization&lt;/PartyTypeCode&gt;
+        &lt;FullName&gt;Firm XYZ&lt;/FullName&gt;
+        &lt;Producer&gt;
+          &lt;CarrierAppointment&gt;
+            &lt;CarrierCode&gt;XYZ&lt;/CarrierCode&gt;
+            &lt;DistributionAgreementInfo id="DistributionAgreementID_2ID" DistributionAgreementID="DistributionAgreementID_2" /&gt;
+          &lt;/CarrierAppointment&gt;
+          &lt;Registration&gt;
+            &lt;FirmName&gt;Firm XYZ&lt;/FirmName&gt;
+            &lt;FirmRegistrationNum&gt;FirmXYZ&lt;/FirmRegistrationNum&gt;
+          &lt;/Registration&gt;
+        &lt;/Producer&gt;
+      &lt;/Party&gt;
+      &lt;Relation OriginatingObjectID="Agent_Party"&gt;
+        &lt;RelationRoleCode tc="11"&gt;OLI_REL_AGENT&lt;/RelationRoleCode&gt;
+      &lt;/Relation&gt;
+      &lt;Relation OriginatingObjectID="Firm_Party_1" RelatedObjectID="Agent_Party"&gt;
+        &lt;RelationRoleCode tc="120"&gt;Agent of Agency&lt;/RelationRoleCode&gt;
+        &lt;Sequence&gt;0&lt;/Sequence&gt;
+      &lt;/Relation&gt;
+      &lt;Relation OriginatingObjectID="Firm_Party_2" RelatedObjectID="Agent_Party"&gt;
+        &lt;RelationRoleCode tc="120"&gt;Agent of Agency&lt;/RelationRoleCode&gt;
+        &lt;Sequence&gt;1&lt;/Sequence&gt;
+      &lt;/Relation&gt;
+      &lt;DistributionAgreement id="DistributionAgreementID_1"&gt;
+        &lt;PolicyProductInfo id="PolicyProductInfo_1"&gt;
+          &lt;ProductCode&gt;ASHARE&lt;/ProductCode&gt;
+          &lt;CarrierCode&gt;XYZ&lt;/CarrierCode&gt;
+          &lt;OLifEExtension&gt;
+            &lt;CusipNum&gt;12345&lt;/CusipNum&gt;
+          &lt;/OLifEExtension&gt;
+        &lt;/PolicyProductInfo&gt;
+      &lt;/DistributionAgreement&gt;
+      &lt;DistributionAgreement id="DistributionAgreementID_2"&gt;
+        &lt;PolicyProductInfo id="PolicyProductInfo_3"&gt;
+          &lt;ProductCode&gt;XSHARE&lt;/ProductCode&gt;
+          &lt;CarrierCode&gt;XYZ&lt;/CarrierCode&gt;
+          &lt;OLifEExtension&gt;
+            &lt;CusipNum&gt;54321&lt;/CusipNum&gt;
+          &lt;/OLifEExtension&gt;
+        &lt;/PolicyProductInfo&gt;
+      &lt;/DistributionAgreement&gt;
+    &lt;/OLifE&gt;
+  &lt;/TXLifeRequest&gt;
+&lt;/TXLife&gt;
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>&#160;</p>
+        <MadCap:pageBreak />
+        <p MadCap:conditions="Default.Web"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

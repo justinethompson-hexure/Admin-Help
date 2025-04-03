@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/TableStyles/2017-ITPatternedRows2.css" rel="stylesheet" MadCap:stylesheetType="table" />
+        <meta name="description" content="ACORD Tx103 Requirements and Usage Overview, Required Elements and Descriptions, and Usage" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11270400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>ACORD Tx103 Requirements and Usage</h1>
+        <h2>Overview</h2>
+        <p>The ACORD Tx103 request allows application data to be sent over in the single sign-on request and pre-filled in the corresponding fields on the application. The data in the 103 is either mapped directly over by the provider into the edit application process or saved in the case of the delayed 103. Application data is only available for reuse in the delayed 103 process.</p>
+        <h2>Requirements</h2>
+        <p>The following table describes the elements that are required by FireLight<sup MadCap:conditions="Default.Web">®</sup> to process the 103 transaction properly. The product code should be omitted in the case of a delayed 103 transaction.</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;caption-side: top;mc-table-style: url('../../Resources/TableStyles/2017-ITPatternedRows2.css');" class="TableStyle-2017-ITPatternedRows2" cellspacing="0">
+            <caption class="Table">Required Elements and Descriptions</caption>
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" />
+            <col class="TableStyle-2017-ITPatternedRows2-Column-Regular" />
+            <thead>
+                <tr class="TableStyle-2017-ITPatternedRows2-Head-Header1">
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadE-Regular-Header1">Element</th>
+                    <th class="TableStyle-2017-ITPatternedRows2-HeadD-Regular-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;TransRefGUID&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Transaction Reference GUID. Unique identifier used to uniquely identify this transaction with FireLight.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;ProductCode&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Identifies the product being sold in FireLight. This string must match up to one, and only one, product within FireLight. The value of this field is matched against the CUSPID property within the Product tab of the Admin tool.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;CarrierCode&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Identifies the organization selling the product identified in &lt;ProductCode&gt;. This value must match to one, and only one, organization defined in FireLight. The value is matched against the External Map Code for the organization. Insurance Technologies will provide you with the code for your implementation.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;Jurisdiction&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Identifies the selling jurisdiction for the application. The “tc” value must match one of the ACORD OLI_LU_STATE lookup values.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;Party&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">At least one Party object with a relationship type of “37” (OLI_REL_PRIMAGENT) must be present within the transaction. The generated application will be tied to the agent identified within this instance.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;Person&gt;/&lt;LastName&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">The name of the created application will be the primary agent’s last name suffixed with “Application”. </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;CarrierAppointment&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">The contents of this construct are used by FireLight to associate the application to a user created in FireLight to represent the primary agent.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;CompanyProducerID&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">A unique identifier of the agent within the organization. The newly created application will be associated with this identifier (aka user). <strong>Note:</strong> the identifier must only be unique within the organization identified in the &lt;CarrierCode&gt; element within the &lt;CarrierAppointment&gt; construct.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;CarrierCode&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Identifies the organization associated with the agent identified in &lt;CompanyProducerID &gt;. Currently in FireLight this should be the same value as the &lt;CarrierCode&gt; within the &lt;Policy&gt; construct. </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;Relation&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">This construct is used to associate the primary agent’s Party instance to the primary Holding instance. </td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>OriginatingObjectID</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">Must match the primary Holding instance’s ID.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>ReleatedObjectID</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">Must match the primary agent’s, Party instance’s ID.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-LightRows"><strong>&lt;OriginatingObjectType&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-LightRows">The “tc” value must be 4.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-DarkerRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyE-Regular-DarkerRows"><strong>&lt;RelatedObjectType&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyD-Regular-DarkerRows">The “tc” value must be 6.</td>
+                </tr>
+                <tr class="TableStyle-2017-ITPatternedRows2-Body-LightRows">
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyB-Regular-LightRows"><strong>&lt;RelationRoleCode&gt;</strong>
+                    </td>
+                    <td class="TableStyle-2017-ITPatternedRows2-BodyA-Regular-LightRows">The “tc” value must be 37.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Usage</h2>
+        <p>In addition to application data, the Tx103 request is used to post over the transaction type. The following transaction types are used in the 103 request to initiate a new application: New Business, Subsequent Payment*, Post Issue*, Needs Determination, and Fee Inquiry. Post Issue requires an additional transaction subtype to be sent over in the request to indicate the type of post issue maintenance. Needs Determination requires a transaction type of 116 and a subtype of 11600. Fee Inquiry requires a transaction type of 1241.   The transaction type and transaction subtype will be stored in the global dataitems FLI_TRANSTYPE and FLI_TRANSSUBTYPE for use in the rules within the Admin form designer.</p>
+        <p>To create a new business application, the 103 request should include the following:</p>
+        <p class="CodeIndent1">&lt;TransType tc="103"&gt;OLI_TRANS_NBSUB&lt;/TransType&gt;</p>
+        <p>To create a subsequent payment application, the 103 request should include the following:</p>
+        <p class="CodeIndent1">&lt;TransType tc="508"&gt;OLI_TRANS_PAYMNT&lt;/TransType&gt;</p>
+        <p>To create a post issue application with the maintenance type of Admin changes (changes to name, address, email, phone, owner, or beneficiary), the 103 request should include the following:</p>
+        <p class="CodeIndent1">&lt;TransType tc="113"&gt;OLI_TRANS_POLICYADMIN&lt;/TransType&gt;</p>
+        <p class="CodeIndent1">&lt;TransSubType tc="113"&gt; OLI_TRANS_POLICYADMIN &lt;/TransSubType&gt;</p>
+        <p>To create a post issue application with the maintenance type of withdrawal request, the 103 request should include the following:</p>
+        <p>&lt;TransType tc="113"&gt;OLI_TRANS_POLICYADMIN&lt;/TransType&gt;</p>
+        <p>&lt;TransSubType tc="105"&gt; OLI_TRANS_WITHDR &lt;/TransSubType&gt;</p>
+        <p>To create a post issue application with the maintenance type of program additions/changes (automatic withdrawal services, rebalancing, DCA), the 103 request should include the following:</p>
+        <p class="CodeIndent1">&lt;TransType tc="113"&gt;OLI_TRANS_POLICYADMIN&lt;/TransType&gt;</p>
+        <p class="CodeIndent1">&lt;TransSubType tc="107"&gt;OLI_TRANS_UPDARR&lt;/TransSubType&gt;</p>
+        <p>To create a fee inquiry transaction, the 103 request should include the following:</p>
+        <p class="CodeIndent1">&lt;TransType tc="1241"&gt; OLI_TRANS_TRNFEEEXPENSE &lt;/TransType&gt;</p>
+        <p>To create a needs determination transaction, the 103 request should include the following:</p>
+        <p class="CodeIndent1">&lt;TransType tc="116"&gt;OLI_TRANS_NEEDSDET&lt;/TransType&gt;</p>
+        <p class="CodeIndent1">&lt;TransSubType tc="11600"&gt;OLI_TRANSSUB_NEEDSDET&lt;/TransSubType&gt;</p>
+        <p>* There is an additional license fee for subsequent payment, post issue and fee inquiry (fees, expenses and commissions repository) support. Existing clients will need an addendum to their contract to support this new feature.</p>
+        <p MadCap:conditions="Default.Web"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

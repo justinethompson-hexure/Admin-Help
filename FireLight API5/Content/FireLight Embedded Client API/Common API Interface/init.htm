@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11226800.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1>init</h1>
+        <p>Initializes embedded mode for a given activity for Data Entry. This method assumes the specified activity has already been created. A new session will be created as a part of the initialization process. This is supported by eApp and Illustration.</p>
+        <p><b>NOTE:</b> If resources for multiple modules are loaded <MadCap:xref href="loadModule.htm" alt="loadModule">loadModule</MadCap:xref> must be called prior to init in order to load the correct module.</p>
+        <p><b>Parameters</b>
+        </p>
+        <ul>
+            <li>
+                <p><b>token:</b> <em>string</em></p>
+                <p>The string returned from the <MadCap:xref href="../../API Token Service/API Token Service.htm" alt="API Token Service">API Token Service</MadCap:xref> that uniquely identifies the current call to the client API (for tracking purposes). The string that uniquely identifies the current call to the client API (for tracking purposes).</p>
+            </li>
+            <li>
+                <p><b>activityId:</b> <em>string</em></p>
+                <p>The GUID of the activity to be loaded.</p>
+            </li>
+            <li>
+                <p><b>isNewActivity:</b> <em>Boolean</em></p>
+                <p>A Boolean (true/false) value to indicate if the current init operation is for a new activity or an existing activity.</p>
+            </li>
+            <li>
+                <p><strong>enableErrorHandling:</strong> <em>Boolean</em> </p>
+                <p>A Boolean (true/false) value to indicate whether FireLight should show its own error dialogs when system errors occur. If you set this to false, you should handle errors in your embedding code.</p>
+            </li>
+            <li>
+                <p><strong>enableAuthProxy:</strong> <em>Boolean</em> – defaults to true </p>
+                <p>A Boolean (true/false) value which indicates whether or not the Auth Proxy should be used. The Auth Proxy is used to store cookies for a session so the browser does not have to, letting users load embedded while using browsers that don’t support third party cookies (including Safari and Firefox).</p>
+            </li>
+        </ul>
+        <p><b>Returns</b> <em>void </em></p>
+        <p>&#160;</p>
+    </body>
+</html>

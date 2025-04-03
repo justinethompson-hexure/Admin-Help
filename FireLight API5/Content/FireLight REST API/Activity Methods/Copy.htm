@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+        <!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11232400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+    </head>
+    <body>
+        <h1><a name="Copy"></a>Copy</h1>
+        <p><b>HTTP POST to copy a current activity.</b>
+        </p>
+        <p>If the Jursidiction and CUSIP of the Source Activity is the same as that specified in the request (or if it is unspecificed), it will use Copy AS IS logic and CUSIP, it will use Copy with Changes logic.</p>
+        <p>A user session is required for this request.</p>
+        <p><b>URL</b>
+        </p>
+        <p>{rootURL}/Activity/CopywithChanges</p>
+        <p><b>Request body <span style="color: #ff0000;">*required</span></b>
+        </p>
+        <p>CreateActivityRequest</p>
+        <p><b>Response</b>
+        </p>
+        <p>The CreateActivity method returns a <MadCap:xref href="../../JSON Models/Rest API Models/CreateActivityResponse.htm">CreateActivityResponse</MadCap:xref>.</p>
+        <p>Copy (CreateActivity) uses an HTTP status code of 500 for validation errors. It will also return a status code of 5 and information about the error if it</p>
+        <p>exception, an HTTP status code of 500 will be returned along with a trace ID.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>CreateActivity</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: Java;">
+string url = "https://firelight.insurancetechnologies.com/EGApp/api/Activity/CreateActivity";
+string body = "{ 'Id': '2001ec54-8ac9-4c86-a23b-553aa6e5e3de', 'CUSIP': 'FSEFA',
+SourceActivityId:'0f999861-d261-479a-8ca5-1f1fb3313cf5', 'Jurisdiction': 7, 'ActivityName': 'Smith Illustration', 'AcordTypeCode': 111, 'CarrierCode': 'FLI', 'Data
+string token = GetToken();
+try
+{
+	HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+
+	request.ContentType = "application/json";
+	request.Headers.Add("authorization", "Bearer " + token);
+	request.Method = "POST";
+
+	Byte[] contentBytes = Encoding.UTF8.GetBytes(body);
+	request.ContentLength = contentBytes.LongLength;
+
+	// Send request
+	using (Stream post = request.GetRequestStream())
+	{
+		post.Write(contentBytes, 0, contentBytes.Length);
+	}
+	using (HttpWebResponse response = (HttpWebResponse) request.GetResponse())
+	{
+		StreamReader reader = new StreamReader(response.GetResponseStream());
+		string result = reader.ReadToEnd();
+		Console.WriteLine(result);
+	}
+}
+catch (WebException ex)
+{
+	if (ex.Response != null &amp;&amp; ex.Response.ContentLength &gt; 0)
+	{
+		using (StreamReader s = new StreamReader(ex.Response.GetResponseStream()))
+		{
+			string message = s.ReadToEnd();
+			Console.WriteLine(message);
+		}
+	}
+}
+				</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <h2>FLI_APP_ORIGIN Data Item</h2>
+        <p>The new data item FLI_APP_ORIGIN captures details of how an application was created or copied.</p>
+        <h3>Creating a New Application in Firelight</h3>
+        <p>When you create a new application in FireLight, the FLI_APP_ORIGIN value will have the value of “FireLight UI.”</p>
+        <p>Simply log in to FireLight and create a new activity.</p>
+        <h3>Rest API</h3>
+        <p>When you create an application using Rest API, the FLI_APP_ORIGIN value will have the value of “API.”</p>
+        <p>You can use the WebApiTestPage in SampleApplication to create an application using the Rest API.</p>
+        <p>Set the FireLight API Endpoint to <span style="font-family: 'Courier New';">{ServerWebsite}/EGApp/api/Activity/v2/CreateActivity</span>.</p>
+        <p>Set FireLight Token Endpoint to  <span style="font-family: 'Courier New';">{ServerWebsite}/EGApp/api/Security/GetToken</span>.</p>
+        <p>Verify the Organization/Secret Key is correct.</p>
+        <p>Verify Certificate/Password is correct.</p>
+        <p>Set the 1228 XML to use your user.</p>
+        <p>Enter the Request Body to create or copy application as in the following example.</p>
+        <p>
+            <img src="../../Resources/Images/RequestBodyTextSample.png">
+            </img>
+        </p>
+        <h3>SSO/103</h3>
+        <p>When you create a new application with the 103/1228, the FLI_APP_ORIGIN value will have the value of “Uknown.”</p>
+        <p>You can test this process using the QETestPage.aspx in SampleApplication. You can change the Org to FSEB to use the default FSEB user, but if you have a different user, you can just enter the User name and Password in the respective fields. Update the Company Producer ID to match your user (in both 1228 and 103). Update the Product Code to the Product CUSIP and select Jursidiction, as in this example.</p>
+        <p>
+            <img src="../../Resources/Images/SSOExample.png">
+            </img>
+        </p>
+        <h3>Other App Origins</h3>
+        <p>All other App creation methods should display Unknown. In the future we will add new App Origins to try to accommodate all methods.</p>
+        <p MadCap:conditions="Default.Web">&#160;</p>
+        <p MadCap:conditions="Default.Web"><a href="#Copy" alt="Return to Top" title="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,965 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultSkin
+  Version="3"
+  SkinType="WebHelp2"
+  Comment="HTML5 skin"
+  Anchors="Width,Height"
+  Width="800"
+  Height="600"
+  Top="0"
+  Left="0"
+  Bottom="0"
+  Right="0"
+  UseBrowserDefaultSize="True"
+  UseDefaultBrowserSetup="false"
+  RemoveImagesOnSave="true"
+  EnableResponsiveOutput="true"
+  IndexPartialWordSearch="false"
+  GlossaryPartialWordSearch="false"
+  Title="FireLight v2.17 Release"
+  DisplayCommunitySearchResults="false"
+  CommentsInTopic="false"
+  DisplayNotificationOptions="false"
+  FeedbackUserProfileItems="Username|EmailAddress">
+  <Stylesheet>
+    <Styles>
+      <Style
+        Name="Main Page">
+        <Properties>
+          <Property
+            Name="BackgroundImage">none</Property>
+          <Property
+            Name="BackgroundRepeat">repeat</Property>
+          <Property
+            Name="BackgroundColor">#ffffff</Property>
+          <Property
+            Name="BackgroundGradient">vertical #ffffff #ffffff</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Topic Container">
+        <Properties>
+          <Property
+            Name="BackgroundImage">none</Property>
+          <Property
+            Name="BackgroundGradient">vertical transparent transparent</Property>
+          <Property
+            Name="BackgroundColor">#ffffff</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Navigation Link">
+        <Properties>
+          <Property
+            Name="Color">transparent</Property>
+        </Properties>
+        <Classes>
+          <StyleClass
+            Name="Top">
+            <Properties>
+              <Property
+                Name="FontSize">0px</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="Bottom">
+            <Properties>
+              <Property
+                Name="FontSize">0px</Property>
+            </Properties>
+          </StyleClass>
+        </Classes>
+      </Style>
+      <Style
+        Name="Logo">
+        <Properties>
+          <Property
+            Name="BackgroundImage">none</Property>
+          <Property
+            Name="Display">none</Property>
+          <Property
+            Name="BackgroundColor">#ffffff</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Header">
+        <Properties>
+          <Property
+            Name="Display">none</Property>
+          <Property
+            Name="Height">0px</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Search Bar">
+        <Properties>
+          <Property
+            Name="Display">none</Property>
+          <Property
+            Name="Height">0px</Property>
+          <Property
+            Name="BorderLeft">solid 0px #ffffff</Property>
+          <Property
+            Name="BorderBottom">solid 0px #ffffff</Property>
+          <Property
+            Name="BorderRight">solid 0px #ffffff</Property>
+          <Property
+            Name="BorderTop">solid 0px #ffffff</Property>
+          <Property
+            Name="BorderTopLeftRadius">0px</Property>
+          <Property
+            Name="BorderTopRightRadius">0px</Property>
+          <Property
+            Name="BorderBottomRightRadius">0px</Property>
+          <Property
+            Name="BorderBottomLeftRadius">0px</Property>
+          <Property
+            Name="BoxShadowVShadow">0px</Property>
+          <Property
+            Name="BoxShadowColor">#ffffff</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Search Input">
+        <Properties>
+          <Property
+            Name="Color">#ffffff</Property>
+          <Property
+            Name="BackgroundGradient">vertical #ffffff #ffffff</Property>
+          <Property
+            Name="BackgroundColor">#ffffff</Property>
+          <Property
+            Name="BackgroundImage">none</Property>
+          <Property
+            Name="FontSize">0px</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Search Filter">
+        <Properties>
+          <Property
+            Name="Color">#ffffff</Property>
+          <Property
+            Name="BorderLeft">solid 0px #000000</Property>
+          <Property
+            Name="BackgroundGradient">vertical #ffffff #ffffff</Property>
+          <Property
+            Name="BackgroundColor">#ffffff</Property>
+          <Property
+            Name="BackgroundImage">none</Property>
+          <Property
+            Name="FontSize">0px</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Search Filter Drop-down">
+        <Properties>
+          <Property
+            Name="BackgroundColor">#ffffff</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Search Filter Drop-down (hover)">
+        <Properties>
+          <Property
+            Name="BackgroundColor">#ffffff</Property>
+          <Property
+            Name="Color">#ffffff</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Search Submit Button">
+        <Properties>
+          <Property
+            Name="BorderLeft">solid 0px #ffffff</Property>
+          <Property
+            Name="BackgroundGradient">vertical #ffffff #ffffff</Property>
+          <Property
+            Name="BackgroundColor">#ffffff</Property>
+          <Property
+            Name="BackgroundImage">none</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Navigation Panel">
+        <Properties>
+          <Property
+            Name="PaddingTop">0px</Property>
+          <Property
+            Name="PaddingRight">0px</Property>
+          <Property
+            Name="PaddingLeft">0px</Property>
+          <Property
+            Name="BorderTop">solid 0px #ffffff</Property>
+          <Property
+            Name="BorderRight">solid 0px #ffffff</Property>
+          <Property
+            Name="BorderLeft">solid 0px #ffffff</Property>
+        </Properties>
+        <Classes>
+          <StyleClass
+            Name="Browse Sequences">
+            <Properties>
+              <Property
+                Name="BackgroundImage">none</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="Community">
+            <Properties>
+              <Property
+                Name="BackgroundImage">none</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="Index">
+            <Properties>
+              <Property
+                Name="ExpandedEntryIcon">none</Property>
+              <Property
+                Name="CollapsedEntryIcon">none</Property>
+              <Property
+                Name="IndexIcon">none</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="TOC">
+            <Properties>
+              <Property
+                Name="BackgroundImage">none</Property>
+              <Property
+                Name="ClosedBookIcon">none</Property>
+              <Property
+                Name="OpenBookIcon">none</Property>
+              <Property
+                Name="TopicIcon">none</Property>
+              <Property
+                Name="MarkAsNewIcon">none</Property>
+            </Properties>
+          </StyleClass>
+        </Classes>
+      </Style>
+      <Style
+        Name="Navigation Panel Hide Arrow">
+        <Properties>
+          <Property
+            Name="Color">#ffffff</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Navigation Panel Item">
+        <Properties>
+          <Property
+            Name="LineHeight">0em</Property>
+          <Property
+            Name="Color">#ffffff</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Navigation Panel Item (hover)">
+        <Properties>
+          <Property
+            Name="BackgroundColor">#ffffff</Property>
+          <Property
+            Name="BackgroundImage">none</Property>
+          <Property
+            Name="Color">#ffffff</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Navigation Panel Item (selected)">
+        <Properties>
+          <Property
+            Name="Color">#ffffff</Property>
+          <Property
+            Name="BackgroundColor">#ffffff</Property>
+          <Property
+            Name="BackgroundImage">none</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Navigation Tab">
+        <Properties>
+          <Property
+            Name="Height">0px</Property>
+          <Property
+            Name="Width">0px</Property>
+          <Property
+            Name="LineHeight">0px</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Navigation Tab (active)">
+        <Properties>
+          <Property
+            Name="Color">#ffffff</Property>
+          <Property
+            Name="FontSize">0px</Property>
+          <Property
+            Name="BorderRight">solid 0px #ffffff</Property>
+          <Property
+            Name="BorderTopLeftRadius">0px</Property>
+          <Property
+            Name="BorderTopRightRadius">0px</Property>
+          <Property
+            Name="BackgroundColor">#ffffff</Property>
+          <Property
+            Name="BackgroundGradient">vertical #ffffff #ffffff</Property>
+          <Property
+            Name="BackgroundImage">none</Property>
+          <Property
+            Name="NavigationTabIcon">none</Property>
+          <Property
+            Name="TextShadowVShadow">0px</Property>
+          <Property
+            Name="TextShadowVisibility">hidden</Property>
+        </Properties>
+        <Classes>
+          <StyleClass
+            Name="TOC">
+            <Properties>
+              <Property
+                Name="NavigationTabIcon">none</Property>
+            </Properties>
+          </StyleClass>
+        </Classes>
+      </Style>
+      <Style
+        Name="Navigation Tab (inactive)">
+        <Properties>
+          <Property
+            Name="Color">#ffffff</Property>
+          <Property
+            Name="FontSize">0px</Property>
+          <Property
+            Name="BorderRight">solid 0px #ffffff</Property>
+          <Property
+            Name="BorderTopLeftRadius">0px</Property>
+          <Property
+            Name="BorderTopRightRadius">0px</Property>
+          <Property
+            Name="BackgroundColor">#ffffff</Property>
+          <Property
+            Name="BackgroundGradient">vertical #ffffff #ffffff</Property>
+          <Property
+            Name="BackgroundImage">none</Property>
+          <Property
+            Name="NavigationTabIcon">none</Property>
+        </Properties>
+        <Classes>
+          <StyleClass
+            Name="Browse Sequences">
+            <Properties>
+              <Property
+                Name="NavigationTabIcon">none</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="Community">
+            <Properties>
+              <Property
+                Name="NavigationTabIcon">none</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="Glossary">
+            <Properties>
+              <Property
+                Name="BackgroundImage">none</Property>
+              <Property
+                Name="NavigationTabIcon">none</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="Index">
+            <Properties>
+              <Property
+                Name="NavigationTabIcon">none</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="TOC">
+            <Properties>
+              <Property
+                Name="NavigationTabIcon">none</Property>
+            </Properties>
+          </StyleClass>
+        </Classes>
+      </Style>
+      <Style
+        Name="Index Highlight">
+        <Properties>
+          <Property
+            Name="BackgroundImage">none</Property>
+          <Property
+            Name="Color">#ffffff</Property>
+          <Property
+            Name="FontSize">0px</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Glossary Highlight">
+        <Properties>
+          <Property
+            Name="BackgroundImage">none</Property>
+          <Property
+            Name="Color">#ffffff</Property>
+          <Property
+            Name="FontSize">0px</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Navigation Panel Item Definition">
+        <Properties>
+          <Property
+            Name="Color">#ffffff</Property>
+          <Property
+            Name="FontSize">0px</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="ToolbarItem">
+        <Properties>
+          <Property
+            Name="BorderTop">solid 0px #ffffff</Property>
+          <Property
+            Name="BorderRight">solid 0px #ffffff</Property>
+          <Property
+            Name="BorderBottom">solid 0px #ffffff</Property>
+          <Property
+            Name="BorderLeft">solid 0px #ffffff</Property>
+          <Property
+            Name="BorderTopLeftRadius">0px</Property>
+          <Property
+            Name="BorderTopRightRadius">0px</Property>
+          <Property
+            Name="BorderBottomRightRadius">0px</Property>
+          <Property
+            Name="BorderBottomLeftRadius">0px</Property>
+          <Property
+            Name="BackgroundImage">none</Property>
+          <Property
+            Name="BoxShadowVShadow">0px</Property>
+          <Property
+            Name="Display">none</Property>
+          <Property
+            Name="Width">0px</Property>
+          <Property
+            Name="Height">0px</Property>
+          <Property
+            Name="BackgroundColor">#ffffff</Property>
+        </Properties>
+        <Classes>
+          <StyleClass
+            Name="CollapseAll">
+            <Properties>
+              <Property
+                Name="BackgroundImage">none</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="CurrentTopicIndex">
+            <Properties>
+              <Property
+                Name="Color">#ffffff</Property>
+              <Property
+                Name="FontSize">0px</Property>
+              <Property
+                Name="PaddingLeft">0px</Property>
+              <Property
+                Name="PaddingRight">0px</Property>
+              <Property
+                Name="BackgroundGradient">vertical #ffffff #ffffff</Property>
+              <Property
+                Name="TextShadowVShadow">0px</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="EditUserProfile">
+            <Properties>
+              <Property
+                Name="BackgroundImage">none</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="ExpandAll">
+            <Properties>
+              <Property
+                Name="BackgroundImage">none</Property>
+              <Property
+                Name="BackgroundGradient">vertical #ffffff #ffffff</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="Login">
+            <Properties>
+              <Property
+                Name="BackgroundGradient">vertical #ffffff #ffffff</Property>
+              <Property
+                Name="BackgroundImage">none</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="NextTopic">
+            <Properties>
+              <Property
+                Name="BackgroundGradient">vertical #ffffff #ffffff</Property>
+              <Property
+                Name="BackgroundImage">none</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="PreviousTopic">
+            <Properties>
+              <Property
+                Name="BackgroundGradient">vertical #ffffff #ffffff</Property>
+              <Property
+                Name="BackgroundImage">none</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="Print">
+            <Properties>
+              <Property
+                Name="BackgroundGradient">vertical #ffffff #ffffff</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="RemoveHighlight">
+            <Properties>
+              <Property
+                Name="BackgroundGradient">vertical #ffffff #ffffff</Property>
+              <Property
+                Name="BackgroundImage">none</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="TopicRatings">
+            <Properties>
+              <Property
+                Name="BackgroundColor">#ffffff</Property>
+              <Property
+                Name="BackgroundImage">none</Property>
+              <Property
+                Name="Width">0px</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="TopicRatingsEmpty">
+            <Properties>
+              <Property
+                Name="BackgroundColor">#ffffff</Property>
+              <Property
+                Name="BackgroundImage">none</Property>
+              <Property
+                Name="Width">0px</Property>
+            </Properties>
+          </StyleClass>
+        </Classes>
+      </Style>
+      <Style
+        Name="Toolbar Button Separator">
+        <Properties>
+          <Property
+            Name="Height">0px</Property>
+          <Property
+            Name="Color">#ffffff</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Search Heading">
+        <Properties>
+          <Property
+            Name="Color">#ffffff</Property>
+          <Property
+            Name="FontSize">0px</Property>
+          <Property
+            Name="BorderBottom">solid 0px #ffffff</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Search Highlight">
+        <Properties>
+          <Property
+            Name="BackgroundColor">#ffffff</Property>
+          <Property
+            Name="BackgroundImage">none</Property>
+          <Property
+            Name="Color">#ffffff</Property>
+          <Property
+            Name="FontSize">0px</Property>
+        </Properties>
+        <Classes>
+          <StyleClass
+            Name="Search Highlight 01">
+            <Properties>
+              <Property
+                Name="BackgroundColor">#ffffff</Property>
+              <Property
+                Name="Color">#ffffff</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="Search Highlight 02">
+            <Properties>
+              <Property
+                Name="BackgroundColor">#ffffff</Property>
+              <Property
+                Name="Color">#ffffff</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="Search Highlight 03">
+            <Properties>
+              <Property
+                Name="BackgroundColor">#ffffff</Property>
+              <Property
+                Name="Color">#ffffff</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="Search Highlight 04">
+            <Properties>
+              <Property
+                Name="BackgroundColor">#ffffff</Property>
+              <Property
+                Name="Color">#ffffff</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="Search Highlight 05">
+            <Properties>
+              <Property
+                Name="BackgroundColor">#ffffff</Property>
+              <Property
+                Name="Color">#ffffff</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="Search Highlight 06">
+            <Properties>
+              <Property
+                Name="BackgroundColor">#ffffff</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="Search Highlight 07">
+            <Properties>
+              <Property
+                Name="BackgroundColor">#ffffff</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="Search Highlight 08">
+            <Properties>
+              <Property
+                Name="BackgroundColor">#ffffff</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="Search Highlight 09">
+            <Properties>
+              <Property
+                Name="BackgroundColor">#ffffff</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="Search Highlight 10">
+            <Properties>
+              <Property
+                Name="BackgroundColor">#ffffff</Property>
+            </Properties>
+          </StyleClass>
+        </Classes>
+      </Style>
+      <Medium
+        Name="Mobile">
+        <Style
+          Name="Logo">
+          <Properties>
+            <Property
+              Name="BackgroundColor">#ffffff</Property>
+          </Properties>
+        </Style>
+        <Style
+          Name="Header">
+          <Properties>
+            <Property
+              Name="Height">0px</Property>
+          </Properties>
+        </Style>
+        <Style
+          Name="Home Button">
+          <Properties>
+            <Property
+              Name="Height">0px</Property>
+            <Property
+              Name="BackgroundGradient">vertical #ffffff #ffffff</Property>
+            <Property
+              Name="BackgroundColor">#ffffff</Property>
+            <Property
+              Name="BackgroundImage">none</Property>
+            <Property
+              Name="Color">#ffffff</Property>
+            <Property
+              Name="FontSize">0px</Property>
+            <Property
+              Name="NavigationTabIcon">none</Property>
+            <Property
+              Name="TextShadowColor">#ffffff</Property>
+            <Property
+              Name="LineHeight">0px</Property>
+          </Properties>
+        </Style>
+        <Style
+          Name="ToolbarItem">
+          <Classes>
+            <StyleClass
+              Name="CollapseAll">
+              <Properties>
+                <Property
+                  Name="BackgroundGradient">vertical #ffffff #ffffff</Property>
+              </Properties>
+            </StyleClass>
+          </Classes>
+          <Properties>
+            <Property
+              Name="BackgroundGradient">vertical #ffffff #ffffff</Property>
+          </Properties>
+        </Style>
+        <Style
+          Name="Navigation Panel Item">
+          <Properties>
+            <Property
+              Name="FontSize">0px</Property>
+            <Property
+              Name="LineHeight">0em</Property>
+          </Properties>
+        </Style>
+      </Medium>
+      <Style
+        Name="Search Pagination">
+        <Properties>
+          <Property
+            Name="Color">#ffffff</Property>
+          <Property
+            Name="FontSize">0px</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Search Pagination Item">
+        <Properties>
+          <Property
+            Name="BorderTop">solid 0px #ffffff</Property>
+          <Property
+            Name="MarginLeft">0px</Property>
+          <Property
+            Name="MarginRight">0px</Property>
+          <Property
+            Name="MarginTop">0px</Property>
+          <Property
+            Name="MarginBottom">0px</Property>
+          <Property
+            Name="PaddingLeft">0px</Property>
+          <Property
+            Name="PaddingRight">0px</Property>
+          <Property
+            Name="PaddingTop">0px</Property>
+          <Property
+            Name="PaddingBottom">0px</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Search Pagination Item (selected)">
+        <Properties>
+          <Property
+            Name="BorderTop">solid 0px #ffffff</Property>
+          <Property
+            Name="Color">#ffffff</Property>
+          <Property
+            Name="FontSize">0px</Property>
+          <Property
+            Name="FontWeight">normal</Property>
+          <Property
+            Name="TextDecoration">none</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Search Pagination Item (hover)">
+        <Properties>
+          <Property
+            Name="BorderTop">solid 0px #ffffff</Property>
+          <Property
+            Name="Color">#ffffff</Property>
+          <Property
+            Name="FontSize">0px</Property>
+          <Property
+            Name="TextDecoration">none</Property>
+        </Properties>
+      </Style>
+      <Medium
+        Name="Tablet">
+        <Style
+          Name="Header">
+          <Properties>
+            <Property
+              Name="Height">0px</Property>
+          </Properties>
+        </Style>
+        <Style
+          Name="Navigation Panel Item">
+          <Properties>
+            <Property
+              Name="LineHeight">0em</Property>
+          </Properties>
+        </Style>
+        <Style
+          Name="Navigation Panel Item (selected)">
+          <Properties>
+            <Property
+              Name="Color">#ffffff</Property>
+            <Property
+              Name="FontSize">0px</Property>
+            <Property
+              Name="BackgroundColor">#ffffff</Property>
+          </Properties>
+        </Style>
+        <Style
+          Name="Navigation Tab">
+          <Properties>
+            <Property
+              Name="FontSize">0px</Property>
+            <Property
+              Name="Height">0px</Property>
+            <Property
+              Name="LineHeight">0px</Property>
+          </Properties>
+          <Classes>
+            <StyleClass
+              Name="Browse Sequences">
+              <Properties>
+                <Property
+                  Name="Color">#ffffff</Property>
+              </Properties>
+            </StyleClass>
+            <StyleClass
+              Name="Glossary">
+              <Properties>
+                <Property
+                  Name="Color">#ffffff</Property>
+              </Properties>
+            </StyleClass>
+            <StyleClass
+              Name="Index">
+              <Properties>
+                <Property
+                  Name="Color">#ffffff</Property>
+              </Properties>
+            </StyleClass>
+            <StyleClass
+              Name="Search Filters">
+              <Properties>
+                <Property
+                  Name="Color">#ffffff</Property>
+              </Properties>
+            </StyleClass>
+            <StyleClass
+              Name="TOC">
+              <Properties>
+                <Property
+                  Name="Color">#ffffff</Property>
+              </Properties>
+            </StyleClass>
+          </Classes>
+        </Style>
+      </Medium>
+      <Style
+        Name="Toolbar Button Drop-down">
+        <Properties>
+          <Property
+            Name="BackgroundColor">#ffffff</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Feedback User Profile Body">
+        <Properties>
+          <Property
+            Name="BackgroundColor">transparent</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Feedback User Profile Button">
+        <Properties>
+          <Property
+            Name="BackgroundColor">transparent</Property>
+          <Property
+            Name="BackgroundGradient">vertical transparent transparent</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Feedback User Profile Header">
+        <Properties>
+          <Property
+            Name="BackgroundGradient">vertical transparent transparent</Property>
+          <Property
+            Name="BackgroundColor">transparent</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Feedback User Profile Item Group">
+        <Properties>
+          <Property
+            Name="BackgroundColor">transparent</Property>
+        </Properties>
+      </Style>
+    </Styles>
+    <Resources></Resources>
+    <Stylesheet></Stylesheet>
+  </Stylesheet>
+  <Toolbar
+    EnableCustomLayout="true"
+    Buttons="" />
+  <Strings>
+    <Stylesheet
+      lang="en-us">
+      <Stylesheet>
+        <Styles>
+          <Style
+            Name="Main Page">
+            <Properties>
+              <Property
+                Name="BackgroundImage">none</Property>
+            </Properties>
+          </Style>
+          <Style
+            Name="Topic Container">
+            <Properties>
+              <Property
+                Name="BackgroundColor">#ffffff</Property>
+            </Properties>
+          </Style>
+          <Medium
+            Name="Tablet"></Medium>
+          <Style
+            Name="Navigation Link">
+            <Classes>
+              <StyleClass
+                Name="Bottom">
+                <Properties />
+              </StyleClass>
+              <StyleClass
+                Name="Top">
+                <Properties />
+              </StyleClass>
+            </Classes>
+          </Style>
+        </Styles>
+        <Resources></Resources>
+        <Stylesheet />
+      </Stylesheet>
+    </Stylesheet>
+  </Strings>
+  <WebHelpOptions
+    HideNavigationOnStartup="true"
+    NavigationPaneWidth="0" />
+</CatapultSkin>

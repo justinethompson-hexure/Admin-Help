@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11231200.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>Code Sample</h1>
+        <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>Code Sample Illustration Client API</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: JavaScript;">&lt;div style="display:flex;"&gt;
+    &lt;div id="btnCreateApp"&gt;
+        &lt;button&gt;Create App&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div id="btnUpdateApp"&gt;
+        &lt;button&gt;Update App&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div id="btnOpenQuickView"&gt;
+        &lt;button&gt;Open Quick View&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;br /&gt;&lt;hr /&gt;&lt;br /&gt;
+&lt;p id="errMessage"&gt;&lt;/p&gt;
+&lt;div id="fireLightMainDiv"&gt;
+    Loading...
+&lt;/div&gt;
+&lt;script type="text/javascript"&gt;
+    const token = '@(ViewBag.access_token)';
+    const isNew = '@(ViewBag.activity_isNew)' === 'true';
+    const activityId = '@(ViewBag.ActivityId)';
+    const btnCreateApp = document.getElementById('btnCreateApp');
+    const btnUpdateApp = document.getElementById('btnUpdateApp');
+    const btnOpenQuickView = document.getElementById('btnOpenQuickView');
+
+    $('#fireLightMainDiv').on('fireLightLoaded', function ()
+    {
+        FireLightAPI.init(token, activityId, isNew);
+        FireLightAPI.linkedApplicationEvent.subscribe(linkedApplicationChange); 
+        FireLightAPI.errorEvent.subscribe(handleErrorEvent);
+    });
+
+    /** Event Handler for LinkedApplication Change event */
+    function linkedApplicationChange(linkedApp) {
+        console.log('linkedApplicationChange - linkedApp = ' + JSON.stringify(linkedApp));
+        if (linkedApp.LastActionSuccess) {
+            console.log('Success! The last action: ' + linkedApp.LastAction + ' occurred on ' + linkedApp.LastActionDate);
+        }
+        else {
+            console.log('Failure! The last action: ' + linkedApp.LastAction + ' occurred on ' +   linkedApp.LastActionDate + '. The error message it generated was: ' + linkedApp.LastActionError);
+        }
+    }
+
+    function handleErrorEvent(err) {
+        var msg = err.error.ApiSource + ' - ' + err.error.ErrorMessage;
+        document.getElementById('errMessage').innerHTML = 'Error message = ' + msg;
+        console.log('errorEvent = ' + msg);
+    }
+
+    btnCreateApp.addEventListener('click', () =&gt; {
+        FireLightAPI.createApplication();
+    });
+
+    btnUpdateApp.addEventListener('click', () =&gt; {
+        FireLightAPI.updateApplication();
+    });
+
+    btnOpenQuickView.addEventListener('click', () =&gt; {
+        FireLightAPI.openQuickView();
+    });
+
+&lt;/script&gt;
+&lt;script src="@Url.Content("https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/illustration")"&gt;&lt;/script&gt;
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p MadCap:conditions="Default.Web"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <p MadCap:conditions="Default.PrintOnly">&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1"
+  conditions="">
+  <TocEntry
+    Title="Whats New"
+    Link="/Content/SlideshowTopics/WhatsNew-Home.htm"
+    Skin="/Project/Skins/HTML5.flskn"
+    StartSection="false"
+    ReplaceMergeNode="false" />
+</CatapultToc>

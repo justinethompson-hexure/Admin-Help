@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <MadCap:breadcrumbsProxy />
+        <MadCap:topicToolbarProxy style="mc-topic-toolbar-items: Print Forward Back Home;" data-mc-skin="/Project/Skins/HTML5 ToolbarSkin.flskn" />
+        <MadCap:bodyProxy />
+        <p class="footerTopic" style="text-align: center;">
+            <span style="color: #000000;">Copyright © 2025 Hexure</span>
+        </p>
+    </body>
+</html>

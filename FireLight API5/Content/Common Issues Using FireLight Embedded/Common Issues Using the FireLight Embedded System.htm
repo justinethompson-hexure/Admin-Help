@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">5231000.00000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1>Common Issues Using the FireLight Embedded System</h1>
+        <p><strong>Issue: The system does not load the embedded application. I get a 403 error when trying to access eApp.</strong>
+        </p>
+        <p><strong>Resolution:</strong> Cross-Site Scripting may be preventing you from accessing the FireLight<sup MadCap:conditions="Default.Web">®</sup> servers from within another website. For security reasons, most browsers require you to specify which external websites may be accessed from within your website. Ensure the following:</p>
+        <ul>
+            <li>
+                <p>Add your client server name (eg, embedded.mywebsite.com) to the list of CORS Origins within FireLight Admin (Organization Page -&gt; Security Tab)</p>
+            </li>
+            <li>
+                <p>Add a refence to whichever FireLight server you are attempting to access (such as uat.firelighteapp.com) to the CSP header request used to call the Embedded FireLight API from within your website. See <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP" target="_blank" title="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP" alt="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP</a> for more information.</p>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <p><strong>Issue: The system does not load the embedded application. I get a 500 error when trying to access CSS.</strong>
+        </p>
+        <p><strong>Resolution:</strong> Cross-Site Scripting may be preventing you from accessing the FireLight servers from within another website. Enable the FireLight API proxy:</p>
+        <ul>
+            <li>
+                <p>Use ‘true’ for the fifth parameter of Init </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p><code>FireLightAPI.init(token, activityId, isNew, enableErrorHandling, <b>useAuthProxy</b>)</code>
+                        </p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p>Use ‘true’ for the second parameter of startSession </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p><code>FireLightAPI.startSession(token, <b>useAuthProxy</b>, callback)</code>
+                        </p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <p><strong>Issue: I do not see a “Continue” button within my embedded app. How do I proceed to signatures?</strong>
+        </p>
+        <p><strong>Resolution:</strong> You need to add your own process for continuing to signatures. Usually this is done by adding a button to your web page that contains the embedded application, such as at the top of the page. Note that users are not allowed to navigate to signatures until all required fields have been completed on the application. You are in charge of handling this, such as by enabling your “Proceed to Signatures” button when the application is complete, by displaying a popup message if a user clicks the button while the application is incomplete, etc. Both functions will return a status object containing information about the current state of the application.  When status.percentComplete equals 100, the application is complete and you should allow proceeding to signatures – for example, by enabling your own button that calls API.proceedToSignatures() when clicked. See section [todo] for more information on using E-Sign within your embedded app.</p>
+        <MadCap:pageBreak />
+    </body>
+</html>

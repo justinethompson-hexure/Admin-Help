@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11245200.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1>CalculationResponse</h1>
+        <p><b>Type</b>: Object</p>
+        <p><b>Properties:</b>
+        </p>
+        <ul>
+            <li>
+                <p><b>Id</b> <em>string</em></p>
+                <p>The unique ID of the request that was used for this response.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p><b>ResultCode </b><em>integer</em>
+                </p>
+                <p>A value from the <MadCap:xref href="../Lists/Return Status.htm" alt="Return Status">Return Status</MadCap:xref> list to indicate if the call was a success or not.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p><b>ExceptionError</b> <em>string</em></p>
+                <p>The exception message from the server (null if no exception)</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p><b>Messages </b>
+                    <MadCap:xref href="ResponseMessage.htm" alt="ResponseMessage">ResponseMessage</MadCap:xref> model object array</p>
+                <p>A collection of ForeSight UI messages that is part of the response. </p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p><b>FireLightCalcOutputs </b><em>array of</em> <MadCap:xref href="OutputSet.htm" alt="OutputSet">OutputSet</MadCap:xref> models</p>
+                <p>The output set for FireLight specific outputs.</p>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <p><b>SystemVersion </b><em>string</em>
+                </p>
+                <p>Current version of the system</p>
+            </li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

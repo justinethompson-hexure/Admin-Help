@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11235400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>GetCalculationResults</h1>
+        <p><b class="Bold">/Illustration/GetCalculationResults</b>
+        </p>
+        <p>HTTP Post that runs illustration calculations for the specified JSON input.</p>
+        <p>Requires API Token, but does not need an API Token with an associated user.</p>
+        <p><b>Request body </b> <MadCap:xref href="../../JSON Models/Rest API Models/GetIllustrationRequest.htm" alt="GetIllustrationRequest">GetIllustrationRequest</MadCap:xref> Model</p>
+        <p>A list of data items used for the calculations along with a unique ID to identify the request</p>
+        <p><b>Response</b>
+        </p>
+        <p>If the request was successful, a <MadCap:xref href="../../JSON Models/Rest API Models/CalculationResponse.htm" alt="CalculationResponse">CalculationResponse</MadCap:xref> Model is returned. If the request could not generate calculation output due to errors from running FireLight rules, you will receive a  <MadCap:xref href="../../JSON Models/Rest API Models/CalculationErrorResult.htm" alt="CalculationErrorResult">CalculationErrorResult</MadCap:xref> Model back.</p>
+        <p><b>Examples</b>
+        </p>
+        <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>GetCalculationResults</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: JavaScript;">Server Side Code:
+public IActionResult GetCalculationResults()
+{
+    string url =     "https://firelight.insurancetechnologies.com/EGApp/api/Illustration/GetCalculationResults";
+    string body =     "{  
+    \"Id\": \"1cdb9663-54dd-48fa-ae0c-0dce5550d8a6\",  \"DataItems\": [    
+    {      
+      \"DataItemId\": \"FLI_PRODUCT_CARRIER_CODE\", 
+      \"Value\": \"FLI\",    
+    },    
+    {      
+      \"DataItemId\": \"FLI_PRODUCT_CUSPID\",
+      \"Value\": \"FSEFA\"  
+    },    
+    {    
+      \"DataItemId\": \"FLI_ROLE_CODE\",
+      \"Value\": \"\"    
+    },    
+    {    
+      \"DataItemId\": \"FLI_PRODUCT_TYPE\", 
+      \"Value\": \"9\"    
+    },    
+    {      
+      \"DataItemId\": \"FLI_PRODUCT_LOB\", 
+      \"Value\": \"2\"    
+    },    
+    {      
+      \"DataItemId\": \"FLI_ISSUED_STATE_CODE\", 
+      \"Value\": \"7\"  
+    },    
+    {    
+      \"DataItemId\": \"Agent_FirstName\", 
+      \"Value\": \"AgentFirst\"    
+    },    
+    {      
+      \"DataItemId\": \"Agent_LastName\", 
+      \"Value\": \"AgentLast\"    
+    },    
+    {      
+      \"DataItemId\": \"Agent_PhoneNumber\", 
+      \"Value\": \"719-442-6400\"    
+    },    
+    {      
+      \"DataItemId\": \"Agent_EMail\", 
+      \"Value\": \"aAgentLast@insurancetechnologies.com\"    
+    },    
+    {      
+      \"DataItemId\": \"Agent_FirmName\", 
+      \"Value\": \"AgentFirm\"    
+    },    
+    {      
+      \"DataItemId\": \"Agent_FirmAddress1\", 
+      \"Value\": \"2 S. Cascade\"    
+    },    
+    {      
+      \"DataItemId\": \"Agent_FirmAddress_City\", 
+      \"Value\": \"Colorado Springs\"    
+    },    
+    {      
+      \"DataItemId\": \"Agent_FirmAddress_State\", 
+      \"Value\": \"7\"    
+    },    
+    {      
+      \"DataItemId\": \"Agent_FirmAddress_Zipcode\", 
+      \"Value\": \"80903\"    
+    },    
+    {      
+      \"DataItemId\": \"Owner_Type\", 
+      \"Value\": \"-1\",    
+    },    
+    {      
+      \"DataItemId\": \"Owner_NonNaturalName\", 
+      \"Value\": \"d \"    
+    },    
+    {      
+      \"DataItemId\": \"Owner_FirstName\", 
+      \"Value\": \"PrimOwnFirst\" 
+    },    
+    {      
+      \"DataItemId\": \"Owner_LastName\", 
+      \"Value\": \"PrimOwnLast\"    
+    },    
+    {      
+      \"DataItemId\": \"Owner_DOB\", 
+      \"Value\": \"11/9/1965 12:00:00 AM\"    
+    },    
+    {      
+      \"DataItemId\": \"Owner_Gender\", 
+      \"Value\": \"1\"    
+    },    
+    {      
+      \"DataItemId\": \"Owner_TaxRate\", 
+      \"Value\": \"0\"    
+    },      
+    {      
+      \"DataItemId\": \"Annuitant_LastName\", 
+      \"Value\": \"Annuitant\"    
+    },     
+    {      
+      \"DataItemId\": \"Annuitant_Type\", 
+      \"Value\": \"-7\"   
+    },    
+    {      
+      \"DataItemId\": \"Annuity_TaxQualification\", 
+      \"Value\": \"1\"    
+    },    
+    {      
+      \"DataItemId\": \"Annuity_Premium_Initial_Amount\", 
+      \"Value\": \"12500\"    
+    }  
+  ]
+}";
+    String token = GetToken();
+
+    CalcResponse model;
+    try
+    {
+        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+
+        request.ContentType = "application/json";
+        request.Headers.Add("authorization", "Bearer " + token);
+        request.Method = "POST";
+
+        Byte[] contentBytes = Encoding.UTF8.GetBytes(body);
+        request.ContentLength = contentBytes.LongLength;
+
+        // Send request
+        using (Stream post = request.GetRequestStream())
+        {
+            post.Write(contentBytes, 0, contentBytes.Length);
+        }
+
+        using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+        {
+            StreamReader reader = new StreamReader(response.GetResponseStream());
+            string result = reader.ReadToEnd();
+            //Console.WriteLine(result);
+
+            model = JsonConvert.DeserializeObject(result, typeof(CalcResponse)) as CalcResponse;
+        }
+    }
+    catch (WebException ex)
+    {
+        if (ex.Response != null &amp;&amp; ex.Response.ContentLength &gt; 0)
+        {
+            using (StreamReader s = new StreamReader(ex.Response.GetResponseStream()))
+            {
+                string message = s.ReadToEnd();
+                Console.WriteLine(message);
+            }
+        }
+        throw;
+    }
+
+    return View(model);
+}
+Client Side Code:
+&lt;h2 class="display-2 text-center"&gt;Calculation Results&lt;/h2&gt;
+&lt;br /&gt;&lt;br /&gt;
+
+@foreach (CalcModel calcModel in Model.FireLightCalcOutputs.Models)
+{
+&lt;h4&gt;Caption = @calcModel.Caption&lt;/h4&gt;
+       &lt;table class="table table-striped"&gt;
+       	@foreach (CalcTable calcTable in calcModel.Tables)
+       {
+              	&lt;thead&gt;
+                     	&lt;tr&gt;
+                            @foreach (CalcField calcField in calcTable.Fields)
+                            {
+                                   &lt;td&gt;@calcField.Caption&lt;/td&gt;
+                            }
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+@for (int i = 0; i &lt; calcTable.RowCount; i++)
+{
+&lt;tr&gt;
+@foreach (CalcField calcField in calcTable.Fields)
+{
+&lt;td&gt;@calcField.Values[i]&lt;/td&gt;
+}
+&lt;/tr&gt;
+}
+&lt;/tbody&gt;
+&lt;caption&gt;@calcTable.Caption&lt;/caption&gt;
+}
+&lt;/table&gt;
+&lt;br /&gt;
+&lt;hr /&gt;
+&lt;br /&gt;
+}
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p MadCap:conditions="Default.Web"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <p MadCap:conditions="Default.PrintOnly">&#160;</p>
+    </body>
+</html>

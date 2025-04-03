@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11236800.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>ValidateSignature</h1>
+        <p><b class="Bold">/TeleSign/ValidateSignature</b>
+        </p>
+        <p>HTTP post that validates input data during a Tele-Sign request.</p>
+        <p>Requires API Token, but does not need an API Token with an associated user.</p>
+        <p><b>Request body </b> <MadCap:xref href="../../JSON Models/Rest API Models/ValidateSignatureRequest.htm" alt="ValidateSignatureRequest">ValidateSignatureRequest</MadCap:xref> <b class="red">*required</b></p>
+        <p>A set of data items used to validate a signer during the Tele-Sign process.</p>
+        <p><b>Response </b> <MadCap:xref href="../../JSON Models/Rest API Models/ValidateSignatureResponse.htm" alt="ValidateSignatureResponse">ValidateSignatureResponse</MadCap:xref></p>
+        <p>A JSON object containing the validity of the verification information, as well as the FireLight application ID.</p>
+        <p><b>Example</b>
+        </p>
+        <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>ValidateSignature</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: JavaScript;">Server Side Code:
+public IActionResult ValidateSignature()
+{
+    string url = "https://firelight.insurancetechnologies.com/EGApp/api/TeleSign/ValidateSignature";
+    string body = "{ TeleSignAppId: \"12345\", TeleSignPIN: \"1234\", DateOfBirth: \"01/01/1990\", CarrierCode: \"IT\" }";
+    String token = GetToken();
+
+    ValidateSignatureResponse model;
+    try
+    {
+        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+
+        request.ContentType = "application/json";
+        request.Headers.Add("authorization", "Bearer " + token);
+        request.Method = "POST";
+
+        Byte[] contentBytes = Encoding.UTF8.GetBytes(body);
+        request.ContentLength = contentBytes.LongLength;
+
+        // Send request
+        using (Stream post = request.GetRequestStream())
+        {
+            post.Write(contentBytes, 0, contentBytes.Length);
+        }
+
+        using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+        {
+            StreamReader reader = new StreamReader(response.GetResponseStream());
+            string result = reader.ReadToEnd();
+
+            model = JsonConvert.DeserializeObject(result, typeof(ValidateSignatureResponse)) as ValidateSignatureResponse;
+
+            if (model.Valid)
+            {
+                //Validation was successful, all data was verified
+                var fireLightAppId = model.FireLightAppId;
+            }
+            else
+            {
+                //Validation was not successful
+                var errors = model.Messages;
+            }
+        }
+    }
+    catch (WebException ex)
+    {
+        if (ex.Response != null &amp;&amp; ex.Response.ContentLength &gt; 0)
+        {
+            using (StreamReader s = new StreamReader(ex.Response.GetResponseStream()))
+            {
+                string message = s.ReadToEnd();
+                Console.WriteLine(message);
+            }
+        }
+        throw;
+    }
+}
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p MadCap:conditions="Default.Web"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <p MadCap:conditions="Default.PrintOnly">&#160;</p>
+    </body>
+</html>

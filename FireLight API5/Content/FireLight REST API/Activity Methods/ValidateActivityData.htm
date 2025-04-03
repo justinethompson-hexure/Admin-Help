@@ -1,0 +1,1369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11235000.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>ValidateActivityData</h1>
+        <p><b class="Bold">/Activity/ValidateActivityData</b>
+        </p>
+        <p>HTTP post that validates the given activity data, sending back a list of errors if necessary.</p>
+        <p>Requires API Token, but does not need an API Token with an associated user.</p>
+        <p><b>Request body </b> <MadCap:xref href="../../JSON Models/Rest API Models/ActivityValidationRequest.htm" alt="ActivityValidationRequest">ActivityValidationRequest</MadCap:xref> Model <b class="red">*required</b></p>
+        <p>A list of data items used for the activity along with a unique ID to identify the request:</p>
+        <ul>
+            <li>
+                <p>Id</p>
+            </li>
+            <li>
+                <p>CUSIP</p>
+            </li>
+            <li>
+                <p>Jurisdiction</p>
+            </li>
+            <li>
+                <p>CarrierCode</p>
+            </li>
+            <li>
+                <p>AcordType</p>
+            </li>
+            <li>
+                <p>DataItems</p>
+            </li>
+            <li>
+                <p>ReturnUpdatedDataItems</p>
+            </li>
+        </ul>
+        <p><b>Response</b>
+        </p>
+        <p>The response contains:</p>
+        <ul>
+            <li>
+                <p>Id</p>
+            </li>
+            <li>
+                <p>ResultCode</p>
+            </li>
+            <li>
+                <p>Messages</p>
+            </li>
+            <li>
+                <p>ExceptionError</p>
+            </li>
+            <li>
+                <p>ValidationMessages</p>
+            </li>
+            <li>
+                <p>DataItems (if ReturnUpdatedDateItems is true)</p>
+            </li>
+        </ul>
+        <p><b>Example</b>
+        </p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>ValidateActivityData</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: JavaScript;">Example
+    string url = "https://firelight.insurancetechnologies.com/EGApp/api/Activity/ValidateActivityData";
+    string body = “{
+  "Id": "a043fc18-7e99-4f72-9877-eb80dd2440cb",
+  "CUSIP": "FSEFA",
+  "Jurisdiction": "37",
+  "CarrierCode": "IT",
+  "AcordTypeCode": "111",
+  "AcordSubTypeCode": "11101",
+  "ReturnUpdatedDataItems": "false",
+  "DataItems": [
+    {
+      "DataItemId": "FLI_APPLICATION_NAME",
+      "Value": "TC_1_E2E_PPR 8-19"
+    },
+    {
+      "DataItemId": "Owner_Type",
+      "Value": "Individual"
+    },
+    {
+      "DataItemId": "FLI_ISSUED_STATE_CODE",
+      "Value": "37"
+    },
+    {
+      "DataItemId": "FLI_DTCC_ASC_FIRM_ID",
+      "Value": "3625"
+    },
+    {
+      "DataItemId": "FLI_ORGANIZATION_DTCC_MEMBER_ID",
+      "Value": "0725"
+    },
+    {
+      "DataItemId": "Annuity_TaxQualification",
+      "Value": "1"
+    },
+    {
+      "DataItemId": "FLI_PRODUCT_CUSPID",
+      "Value": "FSEFA"
+    },
+    {
+      "DataItemId": "FLI_PRODUCT_CARRIER_CODE",
+      "Value": "IT"
+    },
+    {
+      "DataItemId": "Initial_AlternativeAST_ASAA",
+      "Value": "100"
+    },
+    {
+      "DataItemId": "Annuity_Rider_GuaranteedLifetimeWithdrawalBenefit",
+      "Value": "1"
+    },
+    {
+      "DataItemId": "FLI_ROLE_CODE",
+      "Value": "AGENT"
+    },
+    {
+      "DataItemId": "Agent_FirstName",
+      "Value": "InsTech"
+    },
+    {
+      "DataItemId": "Agent_LastName",
+      "Value": "Advisor 1"
+    },
+    {
+      "DataItemId": "Agent_Primary_EmailAddress",
+      "Value": "Sample@insurancetechnologies.com"
+    },
+    {
+      "DataItemId": "Agent_SSN",
+      "Value": "321324321"
+    },
+    {
+      "DataItemId": "Agent_FirmName",
+      "Value": "DEMO - Insurance (Custom Setup - not for General Use)"
+    },
+    {
+      "DataItemId": "Agent_Primary_PhoneNumber",
+      "Value": "7194426401"
+    },
+    {
+      "DataItemId": "FLI_AGENT_ID_NUMBER",
+      "Value": "232838"
+    },
+    {
+      "DataItemId": "Owner_DOB",
+      "Value": "11/10/1968"
+    },
+    {
+      "DataItemId": "Owner_Relationship",
+      "Value": "Primary"
+    },
+    {
+      "DataItemId": "Owner_FirstName",
+      "Value": "Premiere"
+    },
+    {
+      "DataItemId": "Owner_LastName",
+      "Value": "HDINY"
+    },
+    {
+      "DataItemId": "Owner_Gender",
+      "Value": "1"
+    },
+    {
+      "DataItemId": "Owner_MaritalStatus",
+      "Value": "0"
+    },
+    {
+      "DataItemId": "Owner_EmpDetails_TimeEmployed",
+      "Value": "0"
+    },
+    {
+      "DataItemId": "Owner_ResidentialAddress1",
+      "Value": "201 North Broad Street"
+    },
+    {
+      "DataItemId": "Owner_ResidentialAddress_City",
+      "Value": "NYC"
+    },
+    {
+      "DataItemId": "Owner_ResidentialAddress_State",
+      "Value": "37"
+    },
+    {
+      "DataItemId": "Owner_ResidentialAddress_Zipcode",
+      "Value": "10001"
+    },
+    {
+      "DataItemId": "JointOwner_Add",
+      "Value": "N"
+    },
+    {
+      "DataItemId": "ContingentOwner_Add",
+      "Value": "N"
+    },
+    {
+      "DataItemId": "ContingentAnnuitant_Add",
+      "Value": "N"
+    },
+    {
+      "DataItemId": "Annuitant_DOB",
+      "Value": "11/10/1968"
+    },
+    {
+      "DataItemId": "Annuitant_Relationship",
+      "Value": "Primary"
+    },
+    {
+      "DataItemId": "Annuitant_FirstName",
+      "Value": "Premiere"
+    },
+    {
+      "DataItemId": "Annuitant_LastName",
+      "Value": "HDINY"
+    },
+    {
+      "DataItemId": "Annuitant_Gender",
+      "Value": "1"
+    },
+    {
+      "DataItemId": "Annuitant_MaritalStatus",
+      "Value": "0"
+    },
+    {
+      "DataItemId": "Annuitant_EmpDetails_TimeEmployed",
+      "Value": "0"
+    },
+    {
+      "DataItemId": "Annuitant_SameAsOwner",
+      "Value": "Yes"
+    },
+    {
+      "DataItemId": "Annuitant_ResidentialAddress1",
+      "Value": "201 North Broad Street"
+    },
+    {
+      "DataItemId": "Annuitant_ResidentialAddress_City",
+      "Value": "NYC"
+    },
+    {
+      "DataItemId": "Annuitant_ResidentialAddress_State",
+      "Value": "37"
+    },
+    {
+      "DataItemId": "Annuitant_ResidentialAddress_Zipcode",
+      "Value": "10001"
+    },
+    {
+      "DataItemId": "JointAnnuitant_Add",
+      "Value": "N"
+    }
+  ]
+}}”;
+    String token = GetToken();
+
+    ValidateActivityDataResult model;
+    try
+    {
+        HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+
+        request.ContentType = "application/json";
+        request.Headers.Add("authorization", "Bearer " + token);
+        request.Method = "POST";
+
+        Byte[] contentBytes = Encoding.UTF8.GetBytes(body);
+        request.ContentLength = contentBytes.LongLength;
+
+        // Send request
+        using (Stream post = request.GetRequestStream())
+        {
+            post.Write(contentBytes, 0, contentBytes.Length);
+        }
+
+        using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+        {
+            StreamReader reader = new StreamReader(response.GetResponseStream());
+            string result = reader.ReadToEnd();
+            //Console.WriteLine(result);
+
+            model = JsonConvert.DeserializeObject(result, typeof(ValidateActivityDataResult)) as ValidateActivityDataResult;
+        }
+    }
+    catch (WebException ex)
+    {
+        if (ex.Response != null &amp;&amp; ex.Response.ContentLength &gt; 0)
+        {
+            using (StreamReader s = new StreamReader(ex.Response.GetResponseStream()))
+            {
+                string message = s.ReadToEnd();
+                Console.WriteLine(message);
+            }
+        }
+        throw;
+    }
+
+    return View(model);
+}
+Client Side Code:
+&lt;h4 class="display-2 text-center"&gt;Validate Activity Data&lt;/h4&gt;
+&lt;br /&gt;&lt;br /&gt;
+@foreach (var item in Model.ValidationMessages)
+{
+&lt;dl&gt;
+       	&lt;dt&gt;@item.DataItemId&lt;/dt&gt;
+              &lt;dd&gt;@item.Message&lt;/dd&gt;
+&lt;/dl&gt;
+}
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>&#160;</p>
+        <p><b>Example Response</b>
+        </p>
+        <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>Example Response</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: JavaScript;">Bad Response with Updated DataItems:
+{
+  "ValidationMessages": [
+    {
+      "DataItemid": "FLI_PRODUCT_CUSPID",
+      "SenderId": 0,
+      "Operation": 0,
+      "Message": "Invalid CUSIP or Product Carrier Code.",
+      "Flags": 0,
+      "OfficeUseOnly": 0
+    }
+  ],
+  "DataItems": [
+    {
+      "DataItemId": "FLI_APPLICATION_NAME",
+      "Value": "TC_1_E2E_PPR 8-19",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_Type",
+      "Value": "Individual",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "FLI_ISSUED_STATE_CODE",
+      "Value": "37",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "FLI_DTCC_ASC_FIRM_ID",
+      "Value": "3625",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "FLI_ORGANIZATION_DTCC_MEMBER_ID",
+      "Value": "0725",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuity_TaxQualification",
+      "Value": "1",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "FLI_PRODUCT_CUSPID",
+      "Value": "",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "FLI_PRODUCT_CARRIER_CODE",
+      "Value": "IT",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Initial_AlternativeAST_ASAA",
+      "Value": "100",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuity_Rider_GuaranteedLifetimeWithdrawalBenefit",
+      "Value": "1",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "FLI_ROLE_CODE",
+      "Value": "AGENT",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Agent_FirstName",
+      "Value": "IT",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Agent_LastName",
+      "Value": "Advisor 1",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Agent_Primary_EmailAddress",
+      "Value": "Sample@InsuranceTechnologies.com",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Agent_SSN",
+      "Value": "321324321",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Agent_FirmName",
+      "Value": "DEMO - Insurance (Custom Setup - not for General Use)",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Agent_Primary_PhoneNumber",
+      "Value": "7194426401",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "FLI_AGENT_ID_NUMBER",
+      "Value": "232838",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_DOB",
+      "Value": "11/10/1968",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_Relationship",
+      "Value": "Primary",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_FirstName",
+      "Value": "Premiere",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_LastName",
+      "Value": "HDINY",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_Gender",
+      "Value": "1",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_MaritalStatus",
+      "Value": "0",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_EmpDetails_TimeEmployed",
+      "Value": "0",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_ResidentialAddress1",
+      "Value": "201 North Broad Street",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_ResidentialAddress_City",
+      "Value": "NYC",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_ResidentialAddress_State",
+      "Value": "37",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_ResidentialAddress_Zipcode",
+      "Value": "10001",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "JointOwner_Add",
+      "Value": "N",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "ContingentOwner_Add",
+      "Value": "N",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "ContingentAnnuitant_Add",
+      "Value": "N",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_DOB",
+      "Value": "11/10/1968",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_Relationship",
+      "Value": "Primary",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_FirstName",
+      "Value": "Premiere",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_LastName",
+      "Value": "HDINY",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_Gender",
+      "Value": "1",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_MaritalStatus",
+      "Value": "0",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_EmpDetails_TimeEmployed",
+      "Value": "0",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_SameAsOwner",
+      "Value": "Yes",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_ResidentialAddress1",
+      "Value": "201 North Broad Street",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_ResidentialAddress_City",
+      "Value": "NYC",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_ResidentialAddress_State",
+      "Value": "37",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_ResidentialAddress_Zipcode",
+      "Value": "10001",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "JointAnnuitant_Add",
+      "Value": "N",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    }
+  ],
+  "Id": "a043fc18-7e99-4f72-9877-eb80dd2440cb",
+  "ResultCode": 5,
+  "Messages": [],
+  "ExceptionError": null
+}
+
+Good Response:
+{
+  "ValidationMessages": null,
+  "Id": "a043fc18-7e99-4f72-9877-eb80dd2440cb",
+  "ResultCode": 1,
+  "Messages": [],
+  "ExceptionError": null
+}
+
+Good Response with DataItems:
+{
+  "ValidationMessages": null,
+  "DataItems": [
+    {
+      "DataItemId": "FLI_APPLICATION_NAME",
+      "Value": "TC_1_E2E_PPR 8-19",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_Type",
+      "Value": "Individual",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "FLI_ISSUED_STATE_CODE",
+      "Value": "37",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "FLI_DTCC_ASC_FIRM_ID",
+      "Value": "3625",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "FLI_ORGANIZATION_DTCC_MEMBER_ID",
+      "Value": "0725",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuity_TaxQualification",
+      "Value": "1",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "FLI_PRODUCT_CUSPID",
+      "Value": "FSEFA",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "FLI_PRODUCT_CARRIER_CODE",
+      "Value": "IT",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Initial_AlternativeAST_ASAA",
+      "Value": "100",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuity_Rider_GuaranteedLifetimeWithdrawalBenefit",
+      "Value": "1",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "FLI_ROLE_CODE",
+      "Value": "AGENT",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Agent_FirstName",
+      "Value": "IT",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Agent_LastName",
+      "Value": "Advisor 1",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Agent_Primary_EmailAddress",
+      "Value": "sample@InsuranceTechnologies.com",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Agent_SSN",
+      "Value": "321324321",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Agent_FirmName",
+      "Value": "DEMO - Insurance (Custom Setup - not for General Use)",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Agent_Primary_PhoneNumber",
+      "Value": "7194426401",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "FLI_AGENT_ID_NUMBER",
+      "Value": "232838",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_DOB",
+      "Value": "11/10/1968",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_Relationship",
+      "Value": "Primary",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_FirstName",
+      "Value": "Premiere",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_LastName",
+      "Value": "HDINY",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_Gender",
+      "Value": "1",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_MaritalStatus",
+      "Value": "0",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_EmpDetails_TimeEmployed",
+      "Value": "0",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_ResidentialAddress1",
+      "Value": "201 North Broad Street",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_ResidentialAddress_City",
+      "Value": "NYC",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_ResidentialAddress_State",
+      "Value": "37",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Owner_ResidentialAddress_Zipcode",
+      "Value": "10001",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "JointOwner_Add",
+      "Value": "N",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "ContingentOwner_Add",
+      "Value": "N",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "ContingentAnnuitant_Add",
+      "Value": "N",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_DOB",
+      "Value": "11/10/1968",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_Relationship",
+      "Value": "Primary",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_FirstName",
+      "Value": "Premiere",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_LastName",
+      "Value": "HDINY",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_Gender",
+      "Value": "1",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_MaritalStatus",
+      "Value": "0",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_EmpDetails_TimeEmployed",
+      "Value": "0",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_SameAsOwner",
+      "Value": "Yes",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_ResidentialAddress1",
+      "Value": "201 North Broad Street",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_ResidentialAddress_City",
+      "Value": "NYC",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_ResidentialAddress_State",
+      "Value": "37",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "Annuitant_ResidentialAddress_Zipcode",
+      "Value": "10001",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    },
+    {
+      "DataItemId": "JointAnnuitant_Add",
+      "Value": "N",
+      "IsEnabled": false,
+      "IsReadonly": false,
+      "IsVisible": false,
+      "CanBeDeleted": false,
+      "Source": 1,
+      "Unused": false,
+      "Version": null
+    }
+  ],
+  "Id": "a043fc18-7e99-4f72-9877-eb80dd2440cb",
+  "ResultCode": 1,
+  "Messages": [],
+  "ExceptionError": null
+}
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p MadCap:conditions="Default.Web"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <p MadCap:conditions="Default.PrintOnly">&#160;</p>
+        <MadCap:pageBreak />
+    </body>
+</html>

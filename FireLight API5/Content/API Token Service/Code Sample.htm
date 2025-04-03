@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">5229600.00000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>Code Sample</h1>
+        <p>Following is a C# code sample of generating the request to get a token.</p>
+        <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>Code Sample</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: CSharp;">HttpWebRequest req = (HttpWebRequest)WebRequest.Create(
+    "https://firelight.insurancetechnologies.com/EGApp/api/Security/GetToken");
+
+req.Method = "POST";
+req.ContentType = "text/plain";
+
+string secret = "46098ef35a824170a584bde268586c7b";//this comes from our admin tool
+byte[] secretBinary = Encoding.UTF8.GetBytes(secret);
+byte[] hashBinary = new SHA256Managed().ComputeHash(secretBinary);
+
+//convert to hex string
+StringBuilder builder = new StringBuilder();
+for (Int32 idx = 0; idx &lt; hashBinary.Length; idx++)
+{
+    builder.Append(hashBinary[idx].ToString("X2"));
+}
+string hashValue = builder.ToString();//this gets appended on the request body
+
+DateTime reqDate = DateTime.UtcNow;
+String org = "IT";//this will be different for your organization
+
+//this is the user's 1228 xml - you will need to generate yours as needed
+string xml1228 = txt1228.Value;
+if (!string.IsNullOrWhiteSpace(xml1228))
+    xml1228 = Convert.ToBase64String(Encoding.UTF8.GetBytes(txt1228.Value));
+
+//remember, the user 1228 is optional
+String textToSign = secret + reqDate.ToString("MMddyyyyHHmmss") + org + xml1228;
+byte[] nonSignedBinary = Encoding.UTF8.GetBytes(textToSign);
+
+//load up the test cert - in this example, it comes from a pfx file in a local directory - you
+// may need to get it from your machine's certificate store
+X509Certificate2 cert = new X509Certificate2(Path.Combine(
+    AppDomain.CurrentDomain.BaseDirectory, txtPfxFile.Text), txtPfxPassword.Text);
+
+RSA rsa = cert.GetRSAPrivateKey();
+byte[] signedBinary = rsa.SignData(nonSignedBinary, HashAlgorithmName.SHA256, 
+    RSASignaturePadding.Pkcs1);
+
+//base64-encoded, then url-encoded
+String signed64 = HttpUtility.UrlEncode(Convert.ToBase64String(signedBinary));
+
+//optionally place the user's 1228 on the request if it has value (url-encode it)
+String body = $"grant_type=hashsig&amp;id={org}&amp;secret={hashValue}&amp;sig={signed64}" 
+    + (string.IsNullOrWhiteSpace(xml1228) ? "" : $"&amp;xml={HttpUtility.UrlEncode(xml1228)}");
+
+byte[] bodyBinary = Encoding.UTF8.GetBytes(body);
+
+req.Date = reqDate;
+req.ContentLength = bodyBinary.LongLength;
+
+using (Stream post = req.GetRequestStream())
+{
+    post.Write(bodyBinary, 0, bodyBinary.Length);
+}
+
+// Get response
+String result = "";
+using (HttpWebResponse response = (HttpWebResponse)req.GetResponse())
+{
+    StreamReader reader = new StreamReader(response.GetResponseStream());
+    result = reader.ReadToEnd();
+}
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p MadCap:conditions="Default.Web"><a href="#top" alt="Return to Top">Return to Top</a>.</p>
+        <MadCap:pageBreak />
+    </body>
+</html>

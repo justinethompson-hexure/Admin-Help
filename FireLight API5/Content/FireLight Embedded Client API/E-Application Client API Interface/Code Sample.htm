@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11229000.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>Code Sample</h1>
+        <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>E-Application API Code Sample</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: JavaScript;">&lt;p&gt;
+    Percent Complete: &lt;div id="activityStatus" class="percentComplete"&gt;&lt;/div&gt;
+&lt;/p&gt;
+&lt;div style="display:flex;"&gt;
+    &lt;div&gt;
+        &lt;button id="btnProceedToSignatures"&gt;Proceed to Signatures&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+        &lt;button id="btnShowDocumentsDialog"&gt;Show Documents Dialog&lt;/button&gt;
+    &lt;/div&gt;
+   &lt;div&gt;
+        &lt;button id="btnUnlockApplication"&gt;Unlock Application&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;br /&gt;&lt;hr /&gt;&lt;br /&gt; 
+
+&lt;p id="errMessage"&gt;&lt;/p&gt;
+
+&lt;div id="fireLightMainDiv"&gt;
+    Loading...
+&lt;/div&gt;
+&lt;script type="text/javascript"&gt;
+    const token = '@(ViewBag.access_token)';
+    const isNew = '@(ViewBag.activity_isNew)' === 'true';
+    const activityId = '@(ViewBag.ActivityId)';
+
+    const btnProceedToSignatures = document.getElementById('btnProceedToSignatures');
+    const btnShowDocumentsDialog = document.getElementById('btnShowDocumentsDialog');
+    const btnUnlockApplication = document.getElementById('btnUnlockApplication');  
+
+    btnProceedToSignatures.disabled = true;
+
+    $('#fireLightMainDiv').on('fireLightLoaded', function ()
+    {
+        FireLightAPI.init(token, activityId, isNew); 
+
+        FireLightAPI.statusEvent.subscribe(statusChange);
+        FireLightAPI.signatureStatusEvent.subscribe(signatureStatusChange);
+        FireLightAPI.errorEvent.subscribe(handleErrorEvent);
+    }); 
+
+    var statusChange = function (status) {
+    	console.log('statusEvent - status = ' + JSON.stringify(status));
+       console.log('statusEvent = Field: percentComplete = ' + status.percentComplete);
+
+       if (status.percentComplete === 100) {
+           btnProceedToSignatures.disabled = false;
+           btnUnlockApplication.disabled = false;
+
+       }
+       else {
+           btnProceedToSignatures.disabled = true;
+           btnUnlockApplication.disabled = true;
+
+       } 
+       
+activityStatus.innerText = status.percentComplete + '% Complete';
+    }
+
+    function signatureStatusChange(sig) {
+        if (sig.succeeded) {
+            window.location.href = sig.redirectUrl;
+        }
+        else {
+            console.log('Signature status message = ' + sig.message);
+        }
+    } 
+
+    function handleErrorEvent(err) {
+        var msg = err.error.ApiSource + ' - ' + err.error.ErrorMessage;
+        document.getElementById('errMessage').innerHTML = 'Error message = ' + msg;
+        console.log('errorEvent = ' + msg);
+    }
+
+    btnProceedToSignatures.addEventListener('click', () =&gt; {
+        FireLightAPI.proceedToSignatures();
+    });
+
+    btnShowDocumentsDialog.addEventListener('click', () =&gt; {
+        FireLightAPI.showDocumentsDialog();
+    });
+    
+    btnUnlockApplication.addEventListener('click', () =&gt; {
+        FireLightAPI.showUnlockDialog();
+    });
+&lt;/script&gt;
+&lt;script src="@Url.Content("https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eApp")"&gt;&lt;/script&gt;
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p MadCap:conditions="Default.Web"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

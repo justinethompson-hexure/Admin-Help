@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <meta name="description" content="Token SSO Redirect Options within FireLight" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11275600.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1>Redirect Options within FireLight</h1>
+        <p>By default, a user redirected through this route into FireLight<sup MadCap:conditions="Default.Web">®</sup> will land on the home page. However, two query variable options are available for the purpose of indicating different redirects within FireLight (once authentication and session has been established). These are:</p>
+        <ul>
+            <li>
+                <p>appid </p>
+                <p>This will be accompanied with a specified app/activity’s “AppId”, a guid that identifies it within the FireLight system. This will redirect the user directly to that app/activity’s page, so long as the user has access to that app/activity.</p>
+            </li>
+            <li>
+                <p>relayState </p>
+                <p>This variable functions the same way as in the SAML redirect mechanism (also called relayState). The possible options are: </p>
+                <ul style="list-style-type: circle;">
+                    <li>
+                        <p>Home	</p>
+                        <p>Simply redirect the user to the home page of FireLight </p>
+                    </li>
+                    <li>
+                        <p>NewApplication </p>
+                        <p>Redirect the user to the New Application page </p>
+                    </li>
+                    <li>
+                        <p>Applications </p>
+                        <p>Redirect the user to the Applications page </p>
+                    </li>
+                    <li>
+                        <p>OSJ </p>
+                        <p>Redirect the user to the OSJ page</p>
+                    </li>
+                    <li>
+                        <p>eSign </p>
+                        <p>Redirect the user to the E-Signature page – when this option is sent, an ‘appid’ query variable must also included – the appid will correspond to an application/activity that the token user has access to, and is in a Locked or PendingSignature Status</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>embed </p>
+                <p>This will set a flag within the FireLight session indicating the UI is Embedded in a client's environment. The key functionality this provides is to hide unwanted UI elements when displayed in Embedded. Primarily the toolbar will no longer be visible. The embed flag is only available for relayState eSign or OSJ.</p>
+            </li>
+        </ul>
+        <p>Examples:</p>
+        <p class="CodeIndent1">?appid=84604672-acaa-4f5e-a906-70f6bbda2f9b</p>
+        <p class="CodeIndent1">?relayState=NewApplication</p>
+        <p class="CodeIndent1">?appid=84604672-acaa-4f5e-a906-70f6bbda2f9b&amp;relayState=eSign&amp;embed=true</p>
+        <p class="CodeIndent1">&#160;</p>
+    </body>
+</html>

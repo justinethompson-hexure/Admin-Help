@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <meta name="description" content="SAML 2.0 Required Assertions, User Rights, Organization ID, Name Identifier, Optional Assertions, SSO Session Info, SSO New Business Transaction, External Role Code, Branding, Sample SAML 2.0 Response" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11274600.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>SAML 2.0</h1>
+        <p>FireLight<sup MadCap:conditions="Default.Web">®</sup> supports idp-initiated SO using the HTTP Post binding. Listed below are the required and optional assertions supported by FireLight.</p>
+        <h2>Required Assertions</h2>
+        <p><strong>Identifier</strong>
+        </p>
+        <p class="Indent">The certificate identifier must be included within the &lt;Issuer&gt; element.</p>
+        <p><strong>Name ID</strong>
+        </p>
+        <p class="Indent">The user’s name must be included within a &lt;NameID&gt; within the &lt;Subject&gt; element.</p>
+        <h2>User Role</h2>
+        <p>The User Role defines the type of user logging into the FireLight system. FireLight uses the User Role to determine what major functional area(s) of the system the user will be allowed to access. Listed below are the current options:</p>
+        <ul>
+            <li>Agent – Normal agent access, no visibility into the Review Queue capabilities.</li>
+            <li>OSJ – Review Queue visibility only.</li>
+            <li>Client – Access to the Sign-Later functionality only.</li>
+        </ul>
+        <p><strong>SAMLAttribute Definition</strong>
+        </p>
+        <ul>
+            <li>
+                <p>Name – http://schemas.microsoft.com/ws/2008/06/identity/claims/role</p>
+            </li>
+            <li>
+                <p>Friendly Name – USER_ROLE</p>
+            </li>
+        </ul>
+        <h2>User Rights</h2>
+        <p>The User Rights defines the permission set the user will be granted during the FireLight session. FireLight uses the permission set to limit the actions a user may perform within each functional area. Listed below are the possible options:</p>
+        <ul>
+            <li>
+                <p>Full – Access to all features of the functional area.</p>
+            </li>
+            <li>
+                <p>Limited – Limited set of capabilities within the functional area.</p>
+            </li>
+        </ul>
+        <p><strong>SAMLAttribute Definition</strong>
+        </p>
+        <ul>
+            <li>
+                <p>Name – http://schemas.insurancetechnologies.com/2010/01/identity/claims/rights</p>
+            </li>
+            <li>
+                <p>Friendly Name – USER_RIGHTS</p>
+            </li>
+        </ul>
+        <h2>Organization ID</h2>
+        <p>The Organization ID is used by FireLight to determine the submitting organization.</p>
+        <p><strong>SAMLAttribute Definition</strong>
+        </p>
+        <ul>
+            <li>
+                <p>Name – http://schemas.insurancetechnologies.com/2010/01/identity/claims/organizationid</p>
+            </li>
+            <li>
+                <p>Friendly Name – ORGANIZATION_ID</p>
+            </li>
+        </ul>
+        <h2>Name Identifier</h2>
+        <p>The Name Identifier is a key managed by the caller to uniquely identify the user to FireLight. This assertion is optional if the optional SSO Session Info is included within the request.</p>
+        <p><strong>SAMLAttribute Definition</strong>
+        </p>
+        <ul>
+            <li>
+                <p>Name – http://schemas.xmlsoap.org/ws/2005/05/identity/claims/privatepersonalidentifier</p>
+            </li>
+            <li>
+                <p>Friendly Name – NAME_IDENTIFIER</p>
+            </li>
+        </ul>
+        <h2>Optional Assertions</h2>
+        <p>The following assertions or claims are optional within the SSO request.</p>
+        <h3>SSO Session Info</h3>
+        <p>This assertion can be included within the SSO request to pass additional information about the agent to FireLight. The content of the assertion is based on the ACORD 1228 transaction. The assertion value is the base64 encoded string representation of the ACORD 1228 transaction.</p>
+        <p>Refer to the FireLight External Integration document for the structure and requirements for the transaction.</p>
+        <p><strong>SAMLAttribute Definition</strong>
+        </p>
+        <ul>
+            <li>
+                <p>Name – http://schemas.insurancetechnologies.com/2010/01/identity/claims/ssosessioninfo</p>
+            </li>
+            <li>
+                <p>Friendly Name – SSO_SESSION_INFO</p>
+            </li>
+        </ul>
+        <h3>SSO New Business Transaction</h3>
+        <p>An optional ACORD TX103 can be included within the SSO request. If the assertion is present, FireLight will create a new application based on the data contained within the transaction and redirect the user to the Edit Application view. The assertion value is the base64 encoded string representation of the ACORD 103 transaction.</p>
+        <p>Any Attachment aggregates within the transaction will be stored as additional documents tied to the application. A typical use of the Attachment aggregate is to pass a compliant Illustration generated from an external system to FireLight.</p>
+        <p>Refer to the FireLight External Integration document for the structure and requirements for the transaction.</p>
+        <p><strong>SAMLAttribute Definition</strong>
+        </p>
+        <ul>
+            <li>
+                <p>Name – http://schemas.insurancetechnologies.com/2010/01/identity/claims/ssonb</p>
+            </li>
+            <li>
+                <p>Friendly Name – SSO_NB</p>
+            </li>
+        </ul>
+        <h3>External Role Code</h3>
+        <p>This assertion can be included within the SSO request to specify the external role code for the user.</p>
+        <p><strong>SAMLAttribute Definition</strong>
+        </p>
+        <ul>
+            <li>
+                <p>Name – http://schemas.insurancetechnologies.com/2010/01/identity/claims/externalrolecode</p>
+            </li>
+            <li>
+                <p>Friendly Name – EXTERNAL_ROLE_CODE</p>
+            </li>
+        </ul>
+        <h3>Branding</h3>
+        <p>This assertion can be included to override the default branding for the user’s FireLight session. The identifier must be agreed upon, and the associated branding content (colors, images, etc.) must also be provided and added to the FireLight application web content.</p>
+        <p><strong>SAMLAttribute Definition</strong>
+        </p>
+        <ul>
+            <li>
+                <p>Name – http://schemas.insurancetechnologies.com/2010/01/identity/claims/branding</p>
+            </li>
+            <li>
+                <p>Friendly Name – BRANDING</p>
+            </li>
+        </ul>
+        <h2>Sample SAML 2.0 Response</h2>
+        <p>Following is a sample SAMLResponse with the optional TX1228.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>Sample SAML 2.0 Response</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;samlp:Response ID="_1eae52b0-e66d-4703-8484-8cef9d440780" Version="2.0"
+          IssueInstant="2013-04-14T23:37:50.3Z"
+         Destination="https://localhost/egapp/idp-initiatedsso.aspx"          xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"&gt;
+  &lt;saml:Issuer xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"&gt;https://localhost/egsts/trust&lt;/saml:Issuer&gt;
+  &lt;samlp:Status&gt;
+    &lt;samlp:StatusCode Value="urn:oasis:names:tc:SAML:2.0:status:Success" /&gt;
+  &lt;/samlp:Status&gt;
+  &lt;saml:Assertion Version="2.0" ID="_4d645a2f-c5d9-40eb-98b9-998a941601b2"
+     IssueInstant="2013-04-14T23:37:50.303Z"          xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"&gt;
+    &lt;saml:Issuer&gt;https://localhost/egsts/trust&lt;/saml:Issuer&gt;
+    &lt;saml:Subject&gt;
+      &lt;saml:NameID&gt;Sample User&lt;/saml:NameID&gt;
+      &lt;saml:SubjectConfirmation  Method="urn:oasis:names:tc:SAML:2.0:cm:bearer"&gt;
+        &lt;saml:SubjectConfirmationData
+          Recipient="https://localhost/egapp/idp-initiatedsso.aspx" /&gt;
+      &lt;/saml:SubjectConfirmation&gt;
+    &lt;/saml:Subject&gt;
+    &lt;saml:AuthnStatement  AuthnInstant="2013-04-14T23:37:50.305Z"&gt;
+      &lt;saml:AuthnContext&gt;
+        &lt;saml:AuthnContextClassRef&gt;
+          urn:oasis:names:tc:SAML:2.0:ac:classes:Password
+        &lt;/saml:AuthnContextClassRef&gt;
+      &lt;/saml:AuthnContext&gt;
+    &lt;/saml:AuthnStatement&gt;
+    &lt;saml:AttributeStatement&gt;
+      &lt;saml:Attribute
+        Name="http://schemas.microsoft.com/ws/2008/06/identity/claims/role"          FriendlyName="USER_ROLE"&gt;
+        &lt;saml:AttributeValue&gt;Agent&lt;/saml:AttributeValue&gt;
+      &lt;/saml:Attribute&gt;
+      &lt;saml:Attribute
+        Name="http://schemas.insurancetechnologies.com/2010/01/identity/claims/rights"          FriendlyName="USER_RIGHTS"&gt;
+        &lt;saml:AttributeValue&gt;Full&lt;/saml:AttributeValue&gt;
+      &lt;/saml:Attribute&gt;
+      &lt;saml:Attribute          Name="http://schemas.insurancetechnologies.com/2010/01/identity/claims/organizationid"          FriendlyName="ORGANIZATION_ID"&gt;
+        &lt;saml:AttributeValue&gt;ITB&lt;/saml:AttributeValue&gt;
+      &lt;/saml:Attribute&gt;
+      &lt;saml:Attribute          Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/privatepersonalidentifier"          FriendlyName="NAME_IDENTIFIER"&gt;
+        &lt;saml:AttributeValue&gt;00000000-0000-0000-0000-000000000002&lt;/saml:AttributeValue&gt;
+      &lt;/saml:Attribute&gt;
+      &lt;saml:Attribute          Name="http://schemas.insurancetechnologies.com/2010/01/identity/claims/ssosessioninfo"          FriendlyName="SSO_SESSION_INFO"&gt;
+        &lt;saml:AttributeValue&gt;
+          “base64 encoded string”
+        &lt;/saml:AttributeValue&gt;
+      &lt;/saml:Attribute&gt;
+    &lt;/saml:AttributeStatement&gt;
+  &lt;/saml:Assertion&gt;
+&lt;/samlp:Response&gt;
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <MadCap:pageBreak />
+        <p MadCap:conditions="Default.Web"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

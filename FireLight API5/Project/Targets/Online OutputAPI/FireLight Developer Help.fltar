@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="MadCap HTML5 Target"
+  Type="WebHelp2"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterPage="/Content/Resources/MasterPages/Other-Topics.flmsp"
+  DefaultUrl="/Content/Home.htm"
+  ConditionTagExpression="include[Default.ScreenOnly], exclude[Default.Postpone or Default.PrintOnly]"
+  ShowMadCapBacklink="false"
+  ExcludeUnreferencedContent="true">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="true" />
+  <Variables>
+    <Variable
+      Name="General/DocumentName">Developer Guide</Variable>
+    <Variable
+      Name="General/Email">info@insurancetechnologies.com</Variable>
+    <Variable
+      Name="General/UserGuideTitle">Developer Guide</Variable>
+    <Variable
+      Name="General/VersionNumber">3.0</Variable>
+  </Variables>
+</CatapultTarget>

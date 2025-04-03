@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="FireLight Developer Guide"
+  Type="PDF"
+  Destinations=""
+  ConditionTagExpression="include[Default.PrintOnly], exclude[Default.Mobile or Default.Postpone or Default.ScreenOnly or Default.Tablet or Default.Web]"
+  PatchHeadingLevels="true"
+  InjectEmptyPages="false"
+  MasterToc="/Project/TOCs/H-FLDeveloperPDF.fltoc"
+  MasterStylesheet="/Content/Resources/Stylesheets/2022HexureStyles.css"
+  MasterPageLayout="/Content/Resources/PageLayouts/Word8_5X11/H2022WordNormal8_5X11.flpgl"
+  DisableAutoSync="true">
+  <PrintedOutput
+    CollapseMargins="false"
+    ExpandingTextConversion="expand"
+    PopupConversion="remove-body"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="false"
+    GenerateGlossaryProxy="false"
+    OutputFormat="doc" />
+  <DocumentProperties
+    Title="FireLight Developer Guide"
+    Author="Insurance Technologies, LLC" />
+  <PDF
+    ShowUsedBookmarks="false"
+    InitialMagnification="100"
+    PageLayout="SinglePage"
+    TitleBar="DocumentTitle"
+    CollapsedBookmarks="false"
+    CropAndRegistrationMarks="false"
+    ConvertToCMYK="true"
+    Tagged="true"
+    DownsampleImages="true"
+    ImagePPIThreshold="300" />
+  <Variables>
+    <Variable
+      Name="General/UserGuideTitle">Developer Guide</Variable>
+    <Variable
+      Name="General/VersionNumber">3.0</Variable>
+    <Variable
+      Name="General/DocumentName">Developer Guide</Variable>
+  </Variables>
+</CatapultTarget>

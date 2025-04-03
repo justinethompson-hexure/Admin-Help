@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/TableStyles/2017-IT-Simple3.css" rel="stylesheet" MadCap:stylesheetType="table" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11273400.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>Submitting TX103 Transaction</h1>
+        <p>Typically, you will want to create a proxy from the FireLight<sup MadCap:conditions="Default.Web">®</sup> web service wsdl. The proxy is then used to communicate with the web service. At a minimum, the sequence is to call the web service, and then check the response to determine if the request succeeded. The following example shows what a typical transaction will look like on the wire.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>TX103 Transaction</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing" smlns:s="http://www.w3.org/2003/05/soap-envelope"&gt;
+  &lt;s:Header&gt;
+    &lt;a:Action s:mustUnderstand="1"&gt;http://InsuranceTechnologies.com/Acord/ServiceContracts/V2_23_0/NewBusiness/SubmitNewBusinessApplication&lt;/a:Action&gt;
+    &lt;a:MessageID&gt;urn:uuid:8e84c184-a95f-4007-aea7-5a1177883a50&lt;/a:MessageID&gt;
+    &lt;ActivityId CorrelationId="80f526c4-d313-49bf-8e9f-19a495c045f0" xmlns="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics"&gt;8e3ea05f-2e0e-4ece-8c17-e99c53d7c8e5&lt;/ActivityId&gt;
+    &lt;a:ReplyTo&gt;
+      &lt;a:Address&gt;http://www.w3.org/2005/08/addressing/anonymous&lt;/a:Address&gt;
+    &lt;/a:ReplyTo&gt;
+  &lt;/s:Header&gt;
+  &lt;s:Body&gt; xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+    &lt;SubmitNewBusinessApplication xmlns="http://InsuranceTechnologies.com/Acord/ServiceContracts/V2_23_0/"&gt;
+      &lt;request&gt;
+        &lt;TXLife smlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/SMLSchema-Instance" smlns="http://ACORD.org/Standards/Life/2:&gt;
+          &lt;TXLifeRequest&gt;
+            &lt;TransRefGUID&gt;7fe5d746-bed5-47c8-8e40-cab1d04f9a58&lt;/TransRefGUID&gt;
+            &lt;TransType tc="103"&gt;OLI_TRANS_NBSUB&lt;/TransType&gt;
+            &lt;TransExeDate&gt;2011-08-24&lt;/TransExeDate&gt;
+            &lt;TransExeTime&gt;17:53:03.4134493-06:00&lt;/TransExeTime&gt;
+            &lt;OLifE&gt;
+              &lt;Holding id="Holding_1"&gt;
+                &lt;HoldingTypeCode tc="2"&gt;OLI_HOLDTYPE_POLICY&lt;/HoldingTypeCode&gt;
+                &lt;Policy&gt;
+                  &lt;ProductCode&gt;XXX DEFINED PRODUCT CODE&lt;/ProductCode&gt;
+                  &lt;CarrierCode&gt;XXX DEFINED CARRIER CODE&lt;/CarrierCode&gt;
+                  &lt;Jurisdiction tc="28"&gt;OLI_USA_MN&lt;/Jurisdiction&gt;
+                &lt;/Policy&gt;
+              &lt;/Holding&gt;
+              &lt;Party id="Party_1"&gt;
+                &lt;PartyTypeCode tc="1"&gt;OLI_PT_PERSON&lt;/PartyTypeCode&gt;
+                &lt;Person&gt;
+                  &lt;FirstName&gt;Jane&lt;/FirstName&gt;
+                  &lt;LastName&gt;Smith&lt;/LastName&gt;
+                &lt;/Person&gt;
+                &lt;Producer&gt;
+                  &lt;CarrierAppointment PartyID="Party_1"&gt;
+                    &lt;CompanyProducerID&gt;XXX AGENT ID&lt;/CompanyProducerID&gt;
+                    &lt;CarrierCode&gt;XXX DEFINED CARRIER CODE&lt;/CarrierCode&gt;
+                  &lt;/CarrierAppointment&gt;
+                &lt;/Producer&gt;
+              &lt;/Party&gt;
+              &lt;Relation OriginatingObjectID="Holding_1" RelatedObjectID="Party_1"&gt;
+                &lt;OriginatingObjectType tc="4"&gt;OLI_HOLDING&lt;/OriginatingObjectType&gt;
+                &lt;RelatedObjectType tc="6"&gt;OLI_PARTY&lt;/RelatedObjectType&gt;
+                &lt;RelationRoleCode tc="37"&gt;OLI_REL_PRIMAGENT&lt;/RelationRoleCode&gt;
+              &lt;/Relation&gt;
+            &lt;/OLifE&gt;
+          &lt;TXLifeRequest&gt;
+        &lt;/TXLife&gt;
+      &lt;/request&gt;
+    &lt;/SubmitNewBusinessApplication&gt;
+  &lt;/s:Body&gt;
+&lt;/s:Envelope&gt;</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>&#160;</p>
+        <p>FireLight will respond back with a TxLifeResponse indicating if the transaction succeeded or failed. The following is an example of a successful transaction.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>Successful Transaction Example</MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing"&gt;
+  &lt;s:Header&gt;
+    &lt;a:Action s:mustUnderstand="1"&gt;http://InsuranceTechnologies.com/Acord/ServiceContracts/V2_23_0/NewBusiness/SubmitNewBusinessApplicationResponse&lt;/a:Action&gt;
+    &lt;ActivityId CorrelationId="4ae5304e-814c-4fef-a9f9-e303dd4cfedd" xmlns="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics"&gt;8e3ea05f-2e0e-4ece-8c17-e99c53d7c8e5&lt;/ActivityId&gt;
+    &lt;a:RelatesTo&gt;urn:uuid:8e84c184-a95f-4007-aea7-5a1177883a50&lt;/a:RelatesTo&gt;
+  &lt;/s:Header&gt;
+  &lt;s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-Instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+    &lt;SubmitNewBusinessApplicationResponse xmlns="http://InsuranceTechnologies.com/Acord/ServiceContracts/V2_23_0/"&gt;
+      &lt;SubmitNewBusinessApplicationResult&gt;
+        &lt;TXLifeResponse xmlns="http://ACORD.org/Standards/Life/2"&gt;
+          &lt;TransRefGUID&gt;7115d746-bed5-47c8-8340-deb1d04f9a30&lt;/TransRefGUID&gt;
+          &lt;TransType tc="103"&gt;&lt;/TransType&gt;
+          &lt;TransExeDate&gt;2012-03-03&lt;/TransExeDate&gt;
+          &lt;TransExeTime&gt;16:08:45.5497374-07:00&lt;/TransExeTime&gt;
+          &lt;TransResult&gt;
+            &lt;ResultCode tc="1"&gt;RESULT_SUCCESS&lt;/ResultCode&gt;
+          &lt;/TransResult&gt;
+          &lt;OLifE&gt;
+            &lt;Holding&gt;
+              &lt;HoldingKey&gt;7666b513c9be4c1a9ca1ffaeea51db49&lt;/HoldingKey&gt;
+            &lt;/Holding&gt;
+          &lt;/OLifE&gt;
+        &lt;/TXLifeResponse&gt;
+      &lt;/SubmitNewBusinessApplicationResult&gt;
+    &lt;/SubmitNewBusinessApplicationResponse&gt;
+  &lt;/s:Body&gt;
+&lt;/s:Envelope&gt;
+  </MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>&#160;</p>
+        <p>The “tc” value within the &lt;TransResult&gt; aggregate is used to determine if the transaction succeeded or failed. Possible values returned from FireLight are shown in the following table.</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/2017-IT-Simple3.css');caption-side: top;" class="TableStyle-2017-IT-Simple3" cellspacing="0">
+            <caption class="Table">"tc" Values and Descriptions</caption>
+            <col class="TableStyle-2017-IT-Simple3-Column-Column1" style="width: 252px;" />
+            <col class="TableStyle-2017-IT-Simple3-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-2017-IT-Simple3-Head-Header1">
+                    <th class="TableStyle-2017-IT-Simple3-HeadE-Column1-Header1">Value</th>
+                    <th class="TableStyle-2017-IT-Simple3-HeadD-Column1-Header1">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-2017-IT-Simple3-Body-Row1">
+                    <td class="TableStyle-2017-IT-Simple3-BodyE-Column1-Row1"><strong>1 - RESULT_SUCCESS</strong>
+                    </td>
+                    <td class="TableStyle-2017-IT-Simple3-BodyD-Column1-Row1">The transaction was processed successfully with no additional information.</td>
+                </tr>
+                <tr class="TableStyle-2017-IT-Simple3-Body-Row1">
+                    <td class="TableStyle-2017-IT-Simple3-BodyB-Column1-Row1"><strong>5 - RESULT_FAILURE</strong>
+                    </td>
+                    <td class="TableStyle-2017-IT-Simple3-BodyA-Column1-Row1">The transaction was not processed. The reason for the failure can be identified in the &lt;ResultInfo&gt; aggregate.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <p>Following is an example of a failed transaction.</p>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>Failed Transaction Example</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: XML;">&lt;s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://www.w3.org/2005/08/addressing"&gt;
+  &lt;s:Header&gt;
+    &lt;a:Ation s:mustUnderstand="1".http://InsuranceTechnologies.com/Acord/ServiceContracts/V2_23_0/NewBusiness/SubmitNewBusinessApplicationResponse&lt;/a:Action&gt;
+    &lt;ActivityId CorrelationId="af7eb65e-bc42-42b2-96d0-54f9550b5848" xmlns="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics"&gt;c0cc87d2-07c3-4a53-83e3-435d0098e7c3&lt;/ActivityId&gt;
+  &lt;/s:Header&gt;
+  &lt;s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+    &lt;SubmitNewBusinessApplicationResponse xmlns="http://InsuranceTechnologies.com/Acord/ServiceContracts/V2_23_0/"&gt;
+      &lt;SubmitNewBusinessApplicationResult&gt;
+        &lt;TXLifeResponse xmlns="http://ACORD.org/Standards/Life/2"&gt;
+          &lt;TransResult&gt;
+            &lt;ResultCode tc="5"&gt;RESULT_FAILURE&lt;/ResultCode&gt;
+            &lt;ResultInfo&gt;
+              &lt;ResultInfoDesc&gt;Organization missing or not configured within FireLight.&lt;/ResultInfoDesc&gt;
+              &lt;ResultInfoSysMessageCode&gt;Diagnostic information.&lt;/ResultInfoSysMessageCode&gt;
+              &lt;ResultInfoSource&gt;System&lt;/ResultInfoSource&gt;
+            &lt;/ResultInfo&gt;
+          &lt;/TransResult&gt;
+        &lt;/TXLifeResponse&gt;
+      &lt;/SubmitNewBusinessApplicationResult&gt;
+    &lt;/SubmitNewBusinessApplicationResponse&gt;
+  &lt;/s:Body&gt;
+&lt;/s:Envelope&gt;</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>&#160;</p>
+        <p>Notice an explanation for the failure is stored within the first &lt;ResultInfo&gt; aggregate within the response. If the transaction failed, the external system should notify the user appropriately and not redirect to FireLight.</p>
+        <p MadCap:conditions="Default.Web"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>

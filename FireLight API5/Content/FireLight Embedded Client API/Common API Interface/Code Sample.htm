@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11226200.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>Code Sample</h1>
+        <MadCap:codeSnippet style="caption-side: ; mc-caption-repeat: ;">
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>Common API Interface Code Sample</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: JavaScript;">&lt;div&gt;
+    &lt;div style="display:flex;"&gt;
+        &lt;div style="margin:0px 5px;"&gt;
+            &lt;button id="btnRenderPDF" class="btn btn-primary"&gt;Render PDF&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div style="margin:0px 5px;"&gt;
+            &lt;button id="btnSave" class="btn btn-primary"&gt;Save app&lt;/button&gt;
+        &lt;/div&gt;
+ &lt;div style="margin:0px 5px;"&gt;
+            &lt;button id="btnReload" class="btn btn-primary"&gt;Reload&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;br /&gt;
+    &lt;div&gt;
+        &lt;label for="currentPageNumber"&gt;Current Page Number&lt;/label&gt;
+        &lt;input id="currentPageNumber" type="text" disabled="disabled" value="0" /&gt;
+    &lt;/div&gt;
+    &lt;br /&gt;
+    &lt;div id="btnNavigatePage"&gt;
+        &lt;label for="pagelbl"&gt;Go to page: &lt;/label&gt;
+        &lt;input id="pagelbl" type="number" /&gt;
+        &lt;button id="goToPage"&gt;Go&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;br /&gt;
+    &lt;div id="btnGetRuleMessages"&gt;
+        &lt;button&gt;Get Rule Messages&lt;/button&gt;
+        &lt;div id="ruleMessages"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;
+    Percent Complete: &lt;div id="activityStatus" class="percentComplete"&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;br /&gt;&lt;hr /&gt;&lt;br /&gt;
+
+&lt;p id="errMessage"&gt;&lt;/p&gt;
+
+&lt;div class="contents" id="fireLightMainDiv"&gt;
+    Loading...
+&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;
+    const token = '@(ViewBag.access_token)';
+    const activityId = '@(ViewBag.ActivityId)'; 
+    const isNew = '@(ViewBag.activity_isNew)' === 'true'; 
+    const activityStatus = document.getElementById('activityStatus');
+    const mainDiv = document.getElementById('fireLightMainDiv'); 
+    const reloadDiv = document.getElementById('btnReload');
+    const saveDiv = document.getElementById('btnSave');
+    const getRuleMsgsDiv = document.getElementById('btnGetRuleMessages'); 
+    const navigatePageDiv = document.getElementById('goToPage');
+    const renderPdfDiv = document.getElementById('btnRenderPDF');
+         
+    mainDiv.addEventListener('fireLightLoaded', (api) =&gt; {
+        FireLightAPI.init(token, activityId, isNew); 
+
+        FireLightAPI.errorEvent.subscribe(handleErrorEvent);
+        FireLightAPI.navigationEvent.subscribe(navigationChange);
+        FireLightAPI.statusEvent.subscribe(statusChange);
+        FireLightAPI.ruleMessagesEvent.subscribe(ruleMessageChange);
+        FireLightAPI.notificationsEvent.subscribe(notificationRaised);
+
+    });
+
+    function handleErrorEvent(err) {
+        var msg = err.error.ApiSource + ' - ' + err.error.ErrorMessage;
+        document.getElementById('errMessage').innerHTML = 'Error message = ' + msg;
+        console.log('errorEvent = ' + msg);
+    }
+    
+    var statusChange = function (status) {
+        console.log('statusEvent Field: percentComplete = ' + status.percentComplete + ', Field: lastDataItemUpdated = ' + status.lastDataItemUpdated);
+        activityStatus.innerText = status.percentComplete + '% Complete';
+    }
+
+    var navigationChange = function (nav) {
+        console.log(JSON.stringify(nav));
+        console.log('navigationChange = Field: module = ' + nav.module + ', Page = ' + nav.pageNumber);
+        document.getElementById('currentPageNumber').value = nav.pageNumber;    
+    }
+
+    var notificationRaised = function (notification) {
+        console.log(JSON.stringify(notification)); 
+    }
+
+
+    reloadDiv.addEventListener('click', (api) =&gt; {
+        FireLightAPI.load();
+        console.log('reloadDiv clicked - FireLightAPI.load() method called'); 
+
+        FireLightAPI.statusEvent.subscribe((status) =&gt; {
+            console.log('reloadDiv click event - statusEvent = ' + JSON.stringify(status));
+            statusChange(status);
+        });
+
+        FireLightAPI.errorEvent.subscribe((status) =&gt; {
+            handleErrorEvent(status);
+        });
+    });
+
+    saveDiv.addEventListener('click', (api) =&gt; {
+        FireLightAPI.save();
+        console.log('reloadDiv clicked - FireLightAPI.save() method called');
+
+        FireLightAPI.errorEvent.subscribe((err) =&gt; {
+            handleErrorEvent(status);
+        });
+    });
+
+    getRuleMsgsDiv.addEventListener('click', (api) =&gt; {
+        var elem = document.getElementById('ruleMessages');
+        elem.innerHTML += '';
+
+ var msgs = FireLightAPI.getRuleMessages();
+        $.each(msgs, function (item, value) {
+            $.each(value.Errors, function (key, value2) {
+                elem.innerHTML += 'Field: ' + value2.DataItemid + ' - Message: ' + value2.Message + ' - Page: ' + value.PageNumber + '&lt;br /&gt;';
+            });
+        });
+    });
+       
+    navigatePageDiv.addEventListener('click', (api) =&gt; {
+        FireLightAPI.navigateToPage(document.getElementById('pagelbl').value);
+
+        FireLightAPI.errorEvent.subscribe((status) =&gt; {
+            handleErrorEvent(status);
+        });
+    });   
+    
+    renderPdfDiv.addEventListener('click', (api) =&gt; {
+        FireLightAPI.renderPDF();
+
+        FireLightAPI.errorEvent.subscribe((err) =&gt; {
+            handleErrorEvent(status);
+        });
+    });
+&lt;/script&gt;
+&lt;script src="https://firelight.insurancetechnologies.com/EGApp/Resource/Scripts/eApp"&gt;&lt;/script&gt;
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p MadCap:conditions="Default.Web"><a href="#top" alt="Return to Top">Return to Top</a>
+        </p>
+        <MadCap:pageBreak />
+    </body>
+</html>

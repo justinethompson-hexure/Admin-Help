@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+        <link href="../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">5240000.00000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1>CreateActivity Example</h1>
+        <MadCap:codeSnippet>
+            <MadCap:codeSnippetCopyButton />
+            <MadCap:codeSnippetCaption>
+                <p>CreateActivity</p>
+            </MadCap:codeSnippetCaption>
+            <MadCap:codeSnippetBody MadCap:useLineNumbers="False" MadCap:lineNumberStart="1" MadCap:continue="False" xml:space="preserve" style="mc-code-lang: Java;">private static String CreateActivity(String token)
+    {
+        String createActivityUrl = 'https://firelight.insurancetechnologies.com/EGApp/api/Activity/CreateActivity';
+       
+       // These values need to be changed to match your environment
+       String body = '{ \'CUSIP\': \'FSETerm\', \'Jurisdiction\': 1, \'TransactionType\': 1, \'CarrierCode\': \'IT\' }';
+        HttpRequest req = new HttpRequest();
+        req.setEndpoint(createActivityUrl);
+        req.setMethod('POST');
+        req.setHeader('Authorization', 'Bearer ' + token);
+        req.setHeader('Content-Type', 'application/json');
+        req.setBody(body);         
+        Http http = new Http();
+        HTTPResponse res = http.send(req);
+        String result = res.getBody();
+        //System.debug('CreateActivity - result =' + result);
+        if (result.contains('ActivityId')) {
+             result = result.substring(15).substring(0, result.substring(15).indexOf('"'));
+             String activityId = result;
+        }      
+        return result; 
+    }
+</MadCap:codeSnippetBody>
+        </MadCap:codeSnippet>
+        <p>&#160;</p>
+    </body>
+</html>

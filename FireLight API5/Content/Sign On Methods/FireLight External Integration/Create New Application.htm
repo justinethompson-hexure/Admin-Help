@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <head>
+    
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">11272200.0000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Aaron Anstett</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101008929D749402B574EB13ADAD0319B6BEE</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+    <body>
+        <h1><a name="top"></a>Create New Application</h1>
+        <p>To create a new application within FireLight<sup MadCap:conditions="Default.Web">®</sup> from data captured from an external system requires a two-step process. First, the external system will call the FireLight New Business web service, passing in an ACORD Tx103 transaction. Second, the external system will send over a specially crafted response to the browser that will post over to FireLight an ACORD Tx1228 to authenticate and authorize the user for access to FireLight. If the authentication is successful, FireLight will redirect the user to the Edit Application view so the user can immediately start to work on the newly created application. The following diagram illustrates the steps in this process.</p>
+        <p>
+            <img src="../../Resources/Images/Capture3.png" alt="Create New Application Process" title="Create New Application Process" />
+        </p>
+        <p>The scenario assumes the user is authenticated and authorized prior to interfacing with the FireLight system. Once the user is authenticated, the external system will provide a link the user will click on to request the creation of a new application in FireLight, invoking the following sequence:</p>
+        <ol>
+            <li>
+                <p>The user is authenticated and authorized by the external system.</p>
+            </li>
+            <li>
+                <p>The user clicks on a link to launch into FireLight, creating a new application.</p>
+            </li>
+            <li>
+                <p>The external system will construct an ACORD Tx103 transaction to send over to FireLight. The response form FireLight is checked by the external system to ensure the transaction was received successfully.</p>
+            </li>
+            <li>
+                <p>The external system sends back to the user a specially crafted response to force the browser to POST an ACORD Tx1228 transaction within a hidden form field to the FireLight passive endpoint. Included within this request is a “refid” query string with a value of the TransRefGUID sent over from step 3.</p>
+            </li>
+            <li>
+                <p>FireLight authenticates with the STS using a predefined shared user login and password set up specifically for the implementation. If the credentials are valid, FireLight will impersonate the user identified within the 1228 for the remainder of the session. If the credentials are not valid, the user will be redirected to a generic error page within FireLight.</p>
+            </li>
+            <li>
+                <p>FireLight will send back a redirect to the Edit Application view with a query string containing the TransRefGUID value sent over from step 5.</p>
+            </li>
+            <li>
+                <p>FireLight will look up the Tx103 based on the TransRefGUID, create a new application, and then display the Edit Application view.</p>
+            </li>
+        </ol>
+        <p MadCap:conditions="Default.Web"><a href="#top" title="Return to Top" alt="Return to Top">Return to Top</a>
+        </p>
+    </body>
+</html>
